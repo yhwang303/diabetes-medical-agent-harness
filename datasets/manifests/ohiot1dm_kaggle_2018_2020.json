@@ -1,0 +1,165 @@
+{
+  "date": "2026-09-12",
+  "source": "https://www.kaggle.com/datasets/ryanmouton/ohio-data-set",
+  "source_type": "third-party mirror; official byte identity and original license applicability not verified",
+  "version": 1,
+  "archive": "datasets/raw/ohiot1dm/kaggle_ryanmouton_2018_2020/ohio-data-set.zip",
+  "bytes": 9673936,
+  "hashes": {
+    "sha256": "1918d2bf97579102488970a44467d8fd1b5953fb110933569542ef3ec9c99eb8",
+    "md5": "deba6a1678464792c9293a4a0925008d"
+  },
+  "server_crc32c_base64": "0lHcwQ==",
+  "file_count": 24,
+  "uncompressed_bytes": 84040109,
+  "cohort_patient_ids_from_filenames": {
+    "2018": [
+      "559",
+      "563",
+      "570",
+      "575",
+      "588",
+      "591"
+    ],
+    "2020": [
+      "540",
+      "544",
+      "552",
+      "567",
+      "584",
+      "596"
+    ]
+  },
+  "verified": {
+    "content_length": true,
+    "server_crc32c": true,
+    "all_zip_crc": true,
+    "paginated_api_names_sizes": true,
+    "both_cohorts_all_train_test_filenames": true,
+    "2018_members_identical_to_previous_download": 12
+  },
+  "patient_records_parsed": false,
+  "extracted": false,
+  "entries": [
+    {
+      "name": "OhioT1DM/2018/test/559-ws-testing.xml",
+      "bytes": 846721,
+      "crc32": "fd91bf34"
+    },
+    {
+      "name": "OhioT1DM/2018/test/563-ws-testing.xml",
+      "bytes": 873203,
+      "crc32": "4e61456e"
+    },
+    {
+      "name": "OhioT1DM/2018/test/570-ws-testing.xml",
+      "bytes": 881283,
+      "crc32": "2a243d63"
+    },
+    {
+      "name": "OhioT1DM/2018/test/575-ws-testing.xml",
+      "bytes": 860106,
+      "crc32": "055f662d"
+    },
+    {
+      "name": "OhioT1DM/2018/test/588-ws-testing.xml",
+      "bytes": 854008,
+      "crc32": "8a9ae2c9"
+    },
+    {
+      "name": "OhioT1DM/2018/test/591-ws-testing.xml",
+      "bytes": 866472,
+      "crc32": "573787a9"
+    },
+    {
+      "name": "OhioT1DM/2018/train/559-ws-training.xml",
+      "bytes": 3793192,
+      "crc32": "c6b79570"
+    },
+    {
+      "name": "OhioT1DM/2018/train/563-ws-training.xml",
+      "bytes": 3866003,
+      "crc32": "b2acf0fe"
+    },
+    {
+      "name": "OhioT1DM/2018/train/570-ws-training.xml",
+      "bytes": 3901406,
+      "crc32": "9c197de5"
+    },
+    {
+      "name": "OhioT1DM/2018/train/575-ws-training.xml",
+      "bytes": 3950889,
+      "crc32": "d9c7bb62"
+    },
+    {
+      "name": "OhioT1DM/2018/train/588-ws-training.xml",
+      "bytes": 4189430,
+      "crc32": "f8f4b761"
+    },
+    {
+      "name": "OhioT1DM/2018/train/591-ws-training.xml",
+      "bytes": 3851976,
+      "crc32": "467fde4c"
+    },
+    {
+      "name": "OhioT1DM/2020/test/540-ws-testing.xml",
+      "bytes": 1512273,
+      "crc32": "a804443d"
+    },
+    {
+      "name": "OhioT1DM/2020/test/544-ws-testing.xml",
+      "bytes": 2562885,
+      "crc32": "94380f1c"
+    },
+    {
+      "name": "OhioT1DM/2020/test/552-ws-testing.xml",
+      "bytes": 1953890,
+      "crc32": "9bb5971a"
+    },
+    {
+      "name": "OhioT1DM/2020/test/567-ws-testing.xml",
+      "bytes": 1732428,
+      "crc32": "26247ee9"
+    },
+    {
+      "name": "OhioT1DM/2020/test/584-ws-testing.xml",
+      "bytes": 2374756,
+      "crc32": "6b946ada"
+    },
+    {
+      "name": "OhioT1DM/2020/test/596-ws-testing.xml",
+      "bytes": 1660565,
+      "crc32": "e086cb37"
+    },
+    {
+      "name": "OhioT1DM/2020/train/540-ws-training.xml",
+      "bytes": 5640344,
+      "crc32": "8b6a3c26"
+    },
+    {
+      "name": "OhioT1DM/2020/train/544-ws-training.xml",
+      "bytes": 9881630,
+      "crc32": "35ddb2c3"
+    },
+    {
+      "name": "OhioT1DM/2020/train/552-ws-training.xml",
+      "bytes": 4987802,
+      "crc32": "892cdf9a"
+    },
+    {
+      "name": "OhioT1DM/2020/train/567-ws-training.xml",
+      "bytes": 7435089,
+      "crc32": "a3fbed01"
+    },
+    {
+      "name": "OhioT1DM/2020/train/584-ws-training.xml",
+      "bytes": 8883945,
+      "crc32": "3d584560"
+    },
+    {
+      "name": "OhioT1DM/2020/train/596-ws-training.xml",
+      "bytes": 6679813,
+      "crc32": "0b7064c8"
+    }
+  ]
+}

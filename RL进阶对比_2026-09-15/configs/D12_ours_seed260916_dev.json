@@ -1,0 +1,15 @@
+{
+  "name": "D12_ours_seed260916_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Anchor_ReBRAC_s260916": "results/R31_anchor_rebrac_s260916/export_0050000.npz"
+  }
+}

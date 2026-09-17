@@ -1,0 +1,87 @@
+{
+  "cohort": "adult_t1d",
+  "source": "synthetic",
+  "source_ref": "engineering-fixture-001",
+  "decision_time": "2026-09-09T10:00:00+08:00",
+  "unit": "mg/dL",
+  "sampling_minutes": 5,
+  "history": [
+    {
+      "time": "2026-09-09T09:35:00+08:00",
+      "value": 120.0
+    },
+    {
+      "time": "2026-09-09T09:40:00+08:00",
+      "value": 121.0
+    },
+    {
+      "time": "2026-09-09T09:45:00+08:00",
+      "value": 123.0
+    },
+    {
+      "time": "2026-09-09T09:50:00+08:00",
+      "value": 122.0
+    },
+    {
+      "time": "2026-09-09T09:55:00+08:00",
+      "value": 124.0
+    },
+    {
+      "time": "2026-09-09T10:00:00+08:00",
+      "value": 125.0
+    }
+  ],
+  "missing_mask": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "contract_version": "basal-research-input-v1",
+  "use_profile": "adult-t1d-basal-simulation-v1",
+  "provenance": {
+    "subject_ref": "synthetic-adult-001",
+    "source_ref": "engineering-fixture-001",
+    "source_version": "synthetic-example-v1",
+    "locator": "cgm-history",
+    "kind": "synthetic",
+    "available_at": "2026-09-09T10:00:00+08:00"
+  },
+  "treatment": {
+    "insulin": "generic_simulation_insulin",
+    "route": "subcutaneous_pump",
+    "regimen": "basal_only",
+    "provenance": {
+      "subject_ref": "synthetic-adult-001",
+      "source_ref": "engineering-fixture-001",
+      "source_version": "synthetic-example-v1",
+      "locator": "treatment",
+      "kind": "synthetic",
+      "available_at": "2026-09-09T10:00:00+08:00"
+    }
+  },
+  "insulin_history": {
+    "coverage_start": "2026-09-09T09:35:00+08:00",
+    "coverage_end": "2026-09-09T10:00:00+08:00",
+    "deliveries": [
+      {
+        "record_id": "synthetic-delivery-001",
+        "record_kind": "actual_delivery",
+        "start_time": "2026-09-09T09:35:00+08:00",
+        "end_time": "2026-09-09T10:00:00+08:00",
+        "delivered_units": 0.25,
+        "unit": "U"
+      }
+    ],
+    "provenance": {
+      "subject_ref": "synthetic-adult-001",
+      "source_ref": "engineering-fixture-001",
+      "source_version": "synthetic-example-v1",
+      "locator": "synthetic-delivery-history",
+      "kind": "synthetic",
+      "available_at": "2026-09-09T10:00:00+08:00"
+    }
+  }
+}

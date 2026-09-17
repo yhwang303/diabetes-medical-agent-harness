@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "exact_bandit_gradient_checks": [
+    {
+      "beta": 0.0,
+      "exact_gradient": 0.2287842404566573,
+      "expected_estimator_gradient": 0.22878424045665727
+    },
+    {
+      "beta": 0.4,
+      "exact_gradient": 0.283692458166255,
+      "expected_estimator_gradient": 0.28369245816625505
+    }
+  ],
+  "common_return_shift_invariance": true,
+  "frozen_patient_and_reference": true,
+  "original_status_function_no_smoothing": true,
+  "actual_model_checks": [
+    {
+      "run": "C01_response_patient_composition",
+      "histories": 128,
+      "trajectories_per_history": 4,
+      "policy_gradient_l2": 0.993340993648156,
+      "seconds_forward_backward": 0.31273984909057617,
+      "peak_gpu_gb": 0.647078912,
+      "metrics": {
+        "delayed_policy_loss": 0.04452057555317879,
+        "imagined_return": 1.0907939672470093,
+        "within_history_return_std": 0.21829445660114288,
+        "trajectory_sampled_kl": 0.0,
+        "trajectory_sampled_kl_abs": 0.0,
+        "loo_advantage_rms": 0.3653881549835205,
+        "action_mean": 0.5668534636497498,
+        "action_zero_fraction": 0.240234375,
+        "action_upper_fraction": 0.0
+      }
+    },
+    {
+      "run": "H02_prefix_sim_factual",
+      "histories": 128,
+      "trajectories_per_history": 4,
+      "policy_gradient_l2": 0.6104929382621828,
+      "seconds_forward_backward": 0.05909442901611328,
+      "peak_gpu_gb": 0.657852416,
+      "metrics": {
+        "delayed_policy_loss": 0.0266413651406765,
+        "imagined_return": 1.3003168106079102,
+        "within_history_return_std": 0.19369788467884064,
+        "trajectory_sampled_kl": 0.0,
+        "trajectory_sampled_kl_abs": 0.0,
+        "loo_advantage_rms": 0.26998084783554077,
+        "action_mean": 0.5660711526870728,
+        "action_zero_fraction": 0.240234375,
+        "action_upper_fraction": 0.0
+      }
+    }
+  ],
+  "scope": "finite-horizon estimator and engineering checks; block-policy surrogate differs from every5min replanning; no clinical or performance claim"
+}

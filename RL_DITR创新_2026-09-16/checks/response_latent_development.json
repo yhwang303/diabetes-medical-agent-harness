@@ -1,0 +1,2316 @@
+{
+  "status": "completed",
+  "checkpoint_sha256": "28bf976f305eb1b518d47ebff0b03ba2c871ab67be8ea6ae75422ce6276227e1",
+  "source_sha256": "fda0dd9af819fb6d6cd2c78eb7c3bb33e21c5bf30c72044ab09c37d71eeea746",
+  "scope": "development latent intervention generalization in frozen H02 coordinates; future observation windows are evaluation labels only, not model inputs; not control efficacy",
+  "results": [
+    {
+      "probe": "action_probe",
+      "samples_sha256": "5c895b145e831cb4ec3db164ec88c36c222841cf8842ac5f83c0b5e6613e154a",
+      "complete_histories": 28,
+      "summary": {
+        "5": {
+          "zero_mse": 4.94959103239775e-06,
+          "H02_effect_mse": 1.7240421746984274e-05,
+          "response_effect_mse": 4.93291327074985e-06
+        },
+        "30": {
+          "zero_mse": 5.5841665341306775e-06,
+          "H02_effect_mse": 5.071740562405986e-05,
+          "response_effect_mse": 3.0272081314056517e-06
+        },
+        "60": {
+          "zero_mse": 2.1248145506953214e-05,
+          "H02_effect_mse": 5.210577611640994e-05,
+          "response_effect_mse": 8.549193085270548e-06
+        },
+        "120": {
+          "zero_mse": 0.00041274504597562815,
+          "H02_effect_mse": 0.0014625287263437972,
+          "response_effect_mse": 0.00020937735046442998
+        },
+        "240": {
+          "zero_mse": 0.00668208090272466,
+          "H02_effect_mse": 0.007423302308390183,
+          "response_effect_mse": 0.0036885888725269717
+        }
+      },
+      "cases": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 3.2492582704435335e-06,
+          "H02_effect_mse": 1.5155513210629579e-05,
+          "response_effect_mse": 3.111628984697745e-06
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 5.231583600107115e-06,
+          "H02_effect_mse": 6.239844515221193e-05,
+          "response_effect_mse": 2.373184770476655e-06
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 1.0462128557264805e-05,
+          "H02_effect_mse": 4.588428419083357e-05,
+          "response_effect_mse": 3.937652763852384e-06
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 3.5271768865641207e-05,
+          "H02_effect_mse": 0.0011737169697880745,
+          "response_effect_mse": 5.75068115722388e-05
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.0006888450589030981,
+          "H02_effect_mse": 0.0020337000023573637,
+          "response_effect_mse": 0.0005407907301560044
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 2.114184098900296e-06,
+          "H02_effect_mse": 2.1125162675161846e-05,
+          "response_effect_mse": 2.081147613353096e-06
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 2.695719558687415e-06,
+          "H02_effect_mse": 3.160935375490226e-05,
+          "response_effect_mse": 8.128511126415106e-07
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 5.350049377739197e-06,
+          "H02_effect_mse": 2.842435787897557e-05,
+          "response_effect_mse": 7.396826731564943e-06
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 1.117741885536816e-05,
+          "H02_effect_mse": 0.0015219815541058779,
+          "response_effect_mse": 0.00019292067736387253
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.000634636846370995,
+          "H02_effect_mse": 0.002742697950452566,
+          "response_effect_mse": 0.0014381672954186797
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 3.126705223621684e-06,
+          "H02_effect_mse": 1.945219628396444e-05,
+          "response_effect_mse": 2.9095617719576694e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 3.4126280752388993e-06,
+          "H02_effect_mse": 4.747493949253112e-05,
+          "response_effect_mse": 8.596349516665214e-07
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 1.0295431820850354e-05,
+          "H02_effect_mse": 4.1652503568911925e-05,
+          "response_effect_mse": 2.8994759304623585e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 2.615760240587406e-05,
+          "H02_effect_mse": 0.0016995094483718276,
+          "response_effect_mse": 0.00012585950025822967
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.0005491996416822076,
+          "H02_effect_mse": 0.0021469707135111094,
+          "response_effect_mse": 0.0009788667084649205
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 5.622565367957577e-06,
+          "H02_effect_mse": 1.9681772755575366e-05,
+          "response_effect_mse": 5.676030014001299e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 2.3337320271821227e-06,
+          "H02_effect_mse": 4.562728281598538e-05,
+          "response_effect_mse": 1.0554075515756267e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 8.657569196657278e-06,
+          "H02_effect_mse": 3.771658521145582e-05,
+          "response_effect_mse": 3.5101706998830196e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 3.39960097335279e-05,
+          "H02_effect_mse": 0.0015017377445474267,
+          "response_effect_mse": 0.00016306358156725764
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.0025001228787004948,
+          "H02_effect_mse": 0.0037192581221461296,
+          "response_effect_mse": 0.005224443506449461
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 7.116388587746769e-06,
+          "H02_effect_mse": 1.6226204024860635e-05,
+          "response_effect_mse": 7.170307981141377e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 6.158502401376609e-06,
+          "H02_effect_mse": 4.739635915029794e-05,
+          "response_effect_mse": 2.5352323973493185e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 1.3272795513330493e-05,
+          "H02_effect_mse": 3.859870776068419e-05,
+          "response_effect_mse": 6.717250926158158e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 3.3495416573714465e-05,
+          "H02_effect_mse": 0.0011025193380191922,
+          "response_effect_mse": 0.00013715773820877075
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.000760923488996923,
+          "H02_effect_mse": 0.0016447214875370264,
+          "response_effect_mse": 0.0011381390504539013
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 5.037201390223345e-06,
+          "H02_effect_mse": 1.2957849321537651e-05,
+          "response_effect_mse": 4.941737643093802e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 1.1894278941326775e-05,
+          "H02_effect_mse": 6.439285789383575e-05,
+          "response_effect_mse": 8.535987944924273e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 3.876863047480583e-06,
+          "H02_effect_mse": 3.6106546758674085e-05,
+          "response_effect_mse": 8.47388946567662e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 7.682332216063514e-05,
+          "H02_effect_mse": 0.0007247361354529858,
+          "response_effect_mse": 0.00015232223086059093
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.0012946354690939188,
+          "H02_effect_mse": 0.001870161504484713,
+          "response_effect_mse": 0.0020788502879440784
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 2.779284614007338e-06,
+          "H02_effect_mse": 2.066669549094513e-05,
+          "response_effect_mse": 2.642281287990045e-06
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 2.4083017251541605e-06,
+          "H02_effect_mse": 3.6260833439882845e-05,
+          "response_effect_mse": 1.016844407786266e-06
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 6.215840585355181e-06,
+          "H02_effect_mse": 3.2835880119819194e-05,
+          "response_effect_mse": 5.709653578378493e-06
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 5.241112012299709e-05,
+          "H02_effect_mse": 0.001675218460150063,
+          "response_effect_mse": 8.05416057119146e-05
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.0007925553363747895,
+          "H02_effect_mse": 0.0027865516021847725,
+          "response_effect_mse": 0.0009752606856636703
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 3.294890575489262e-06,
+          "H02_effect_mse": 1.4524563084705733e-05,
+          "response_effect_mse": 3.164796680721338e-06
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 5.3129524530959316e-06,
+          "H02_effect_mse": 5.8804242144105956e-05,
+          "response_effect_mse": 2.600141215225449e-06
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 1.5234929378493689e-05,
+          "H02_effect_mse": 4.378962694318034e-05,
+          "response_effect_mse": 5.476490969158476e-06
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 0.00014054228086024523,
+          "H02_effect_mse": 0.0009947128128260374,
+          "response_effect_mse": 2.8123235097154975e-05
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.001763407839462161,
+          "H02_effect_mse": 0.002704534912481904,
+          "response_effect_mse": 0.00021626334637403488
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 3.3001801966747735e-06,
+          "H02_effect_mse": 1.6760273865656927e-05,
+          "response_effect_mse": 3.077746441704221e-06
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 2.7387782211008016e-06,
+          "H02_effect_mse": 5.129761848365888e-05,
+          "response_effect_mse": 9.923344350681873e-07
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 8.916355909605045e-06,
+          "H02_effect_mse": 3.599162300815806e-05,
+          "response_effect_mse": 2.7461057925393106e-06
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 0.0001046273682732135,
+          "H02_effect_mse": 0.0014294313732534647,
+          "response_effect_mse": 3.808618930634111e-05
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.0010805708589032292,
+          "H02_effect_mse": 0.002327775815501809,
+          "response_effect_mse": 0.00042057695100083947
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 5.656258508679457e-06,
+          "H02_effect_mse": 1.3864661923435051e-05,
+          "response_effect_mse": 5.504587988980347e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 4.587548573908862e-06,
+          "H02_effect_mse": 5.5397802498191595e-05,
+          "response_effect_mse": 2.1182320324442117e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 1.4777566320844926e-05,
+          "H02_effect_mse": 4.113228351343423e-05,
+          "response_effect_mse": 4.013731995655689e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 7.304159225896001e-05,
+          "H02_effect_mse": 0.0005286234663799405,
+          "response_effect_mse": 6.763546116417274e-05
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.00039854756323620677,
+          "H02_effect_mse": 0.0010036425665020943,
+          "response_effect_mse": 0.0006856959080323577
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 5.807786692457739e-06,
+          "H02_effect_mse": 1.2254417924850713e-05,
+          "response_effect_mse": 5.8971882026526146e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 3.6172830277791945e-06,
+          "H02_effect_mse": 5.1568444177974015e-05,
+          "response_effect_mse": 1.882113110696082e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 1.1890775567735545e-05,
+          "H02_effect_mse": 3.901548916473985e-05,
+          "response_effect_mse": 4.895448910247069e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 0.00011066102888435125,
+          "H02_effect_mse": 0.00047117049689404666,
+          "response_effect_mse": 7.407497469102964e-05
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.0036432058550417423,
+          "H02_effect_mse": 0.003690385026857257,
+          "response_effect_mse": 0.0026669788639992476
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 9.337545634480193e-06,
+          "H02_effect_mse": 1.844398502726108e-05,
+          "response_effect_mse": 9.83346217253711e-06
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 7.967621058924124e-06,
+          "H02_effect_mse": 5.440619133878499e-05,
+          "response_effect_mse": 2.7801606847788207e-06
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 1.1987788639089558e-05,
+          "H02_effect_mse": 3.7057605368318036e-05,
+          "response_effect_mse": 1.283361780224368e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 0.00010450569243403152,
+          "H02_effect_mse": 0.0004247950273565948,
+          "response_effect_mse": 0.00024266279069706798
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.001094506005756557,
+          "H02_effect_mse": 0.0015472007216885686,
+          "response_effect_mse": 0.002527699340134859
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 7.940937393868808e-06,
+          "H02_effect_mse": 2.0586230675689876e-05,
+          "response_effect_mse": 8.44042642711429e-06
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 1.4017805369803682e-05,
+          "H02_effect_mse": 6.185800884850323e-05,
+          "response_effect_mse": 1.3408447557594627e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 6.7821874836226925e-06,
+          "H02_effect_mse": 3.359527181601152e-05,
+          "response_effect_mse": 1.366817559755873e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 0.0002180015144404024,
+          "H02_effect_mse": 0.00039130874210968614,
+          "response_effect_mse": 0.00010312625818187371
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.002605387009680271,
+          "H02_effect_mse": 0.002536145970225334,
+          "response_effect_mse": 0.0009494659025222063
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 3.6792503124161158e-06,
+          "H02_effect_mse": 1.6634952771710232e-05,
+          "response_effect_mse": 3.3409710340492893e-06
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 2.1969599401927553e-06,
+          "H02_effect_mse": 5.289736873237416e-05,
+          "response_effect_mse": 2.982001433338155e-06
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 1.1120038834633306e-05,
+          "H02_effect_mse": 3.913931141141802e-05,
+          "response_effect_mse": 2.4379642127314582e-06
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 6.794474029447883e-05,
+          "H02_effect_mse": 0.0011646193452179432,
+          "response_effect_mse": 3.9233222196344286e-05
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.0011243934277445078,
+          "H02_effect_mse": 0.002172894310206175,
+          "response_effect_mse": 0.00032401777571067214
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 2.9438342608045787e-06,
+          "H02_effect_mse": 1.7563841538503766e-05,
+          "response_effect_mse": 2.845614744728664e-06
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 4.35563015344087e-06,
+          "H02_effect_mse": 5.4470347095048055e-05,
+          "response_effect_mse": 1.499004383731517e-06
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 2.3385082386084832e-05,
+          "H02_effect_mse": 4.860764602199197e-05,
+          "response_effect_mse": 5.7136330724461e-06
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 0.0004459043266251683,
+          "H02_effect_mse": 0.0015276058111339808,
+          "response_effect_mse": 8.399867510888726e-05
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.00574524374678731,
+          "H02_effect_mse": 0.006330608390271664,
+          "response_effect_mse": 0.0008380574290640652
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 7.008157808741089e-06,
+          "H02_effect_mse": 1.9358500139787793e-05,
+          "response_effect_mse": 7.061501491989475e-06
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 4.292402991268318e-06,
+          "H02_effect_mse": 4.419965262059122e-05,
+          "response_effect_mse": 1.682237325439928e-06
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 2.179050352424383e-05,
+          "H02_effect_mse": 4.1694809624459594e-05,
+          "response_effect_mse": 8.12689722806681e-06
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 0.00011804757377831265,
+          "H02_effect_mse": 0.001338798669166863,
+          "response_effect_mse": 7.962764357216656e-05
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.0028962737414985895,
+          "H02_effect_mse": 0.0034768639598041773,
+          "response_effect_mse": 0.00033558133873157203
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 3.4055431115120882e-06,
+          "H02_effect_mse": 1.858129871834535e-05,
+          "response_effect_mse": 3.2567022572038695e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 4.177732080279384e-06,
+          "H02_effect_mse": 3.727741932380013e-05,
+          "response_effect_mse": 1.1168417586304713e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 3.067166471737437e-05,
+          "H02_effect_mse": 4.930375871481374e-05,
+          "response_effect_mse": 5.841276561113773e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 0.0005262115155346692,
+          "H02_effect_mse": 0.0018497098935768008,
+          "response_effect_mse": 9.04308762983419e-05
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.0017828561831265688,
+          "H02_effect_mse": 0.0029862364754080772,
+          "response_effect_mse": 0.0025675881188362837
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 5.985356892779237e-06,
+          "H02_effect_mse": 2.0651212253142148e-05,
+          "response_effect_mse": 6.144251528894529e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 4.165779046161333e-06,
+          "H02_effect_mse": 2.4851548005244695e-05,
+          "response_effect_mse": 1.6984181456791703e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 2.2684625946567394e-05,
+          "H02_effect_mse": 3.665516123874113e-05,
+          "response_effect_mse": 7.483344688807847e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 0.0005783382803201675,
+          "H02_effect_mse": 0.0015972519759088755,
+          "response_effect_mse": 7.929706771392375e-05
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.0078018526546657085,
+          "H02_effect_mse": 0.008776573464274406,
+          "response_effect_mse": 0.0017951137851923704
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 7.155344974307809e-06,
+          "H02_effect_mse": 2.0386076357681304e-05,
+          "response_effect_mse": 7.293444014067063e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 8.931467164075002e-06,
+          "H02_effect_mse": 3.735602513188496e-05,
+          "response_effect_mse": 4.07081779485452e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 3.224050306016579e-05,
+          "H02_effect_mse": 4.687399268732406e-05,
+          "response_effect_mse": 1.0637160812621005e-05
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 0.0002481894916854799,
+          "H02_effect_mse": 0.0013879711041226983,
+          "response_effect_mse": 5.504328873939812e-05
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.0022946163080632687,
+          "H02_effect_mse": 0.0032854764722287655,
+          "response_effect_mse": 0.0006974072894081473
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 3.3097176128649153e-06,
+          "H02_effect_mse": 1.7952077541849576e-05,
+          "response_effect_mse": 3.144778247587965e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 6.957650839467533e-06,
+          "H02_effect_mse": 4.7624453145544976e-05,
+          "response_effect_mse": 2.794618012558203e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 1.4467775145021733e-05,
+          "H02_effect_mse": 3.5580073017627e-05,
+          "response_effect_mse": 3.312698027002625e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 0.0002737289178185165,
+          "H02_effect_mse": 0.0014904113486409187,
+          "response_effect_mse": 3.6453358916332945e-05
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.008666440844535828,
+          "H02_effect_mse": 0.009219059720635414,
+          "response_effect_mse": 0.0021251451689749956
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 3.344030346852378e-06,
+          "H02_effect_mse": 1.828166568884626e-05,
+          "response_effect_mse": 3.171884145558579e-06
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 3.56207010554499e-06,
+          "H02_effect_mse": 3.919715163647197e-05,
+          "response_effect_mse": 9.036060646394617e-07
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 2.0869851141469553e-05,
+          "H02_effect_mse": 4.151782559347339e-05,
+          "response_effect_mse": 4.661009370465763e-06
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 0.0003841635480057448,
+          "H02_effect_mse": 0.0017992784269154072,
+          "response_effect_mse": 5.878458250663243e-05
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.003413642290979624,
+          "H02_effect_mse": 0.004359498154371977,
+          "response_effect_mse": 0.0002874892088584602
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 2.5679380541987484e-06,
+          "H02_effect_mse": 1.7889273294713348e-05,
+          "response_effect_mse": 2.4841169761202764e-06
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 5.433767000795342e-06,
+          "H02_effect_mse": 6.626395042985678e-05,
+          "response_effect_mse": 1.848580950536416e-06
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 4.8195965064223856e-05,
+          "H02_effect_mse": 0.00011180350702488795,
+          "response_effect_mse": 1.5193474609986879e-05
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 0.0018759085796773434,
+          "H02_effect_mse": 0.0037988019175827503,
+          "response_effect_mse": 0.0009019053541123867
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.022250616922974586,
+          "H02_effect_mse": 0.023730050772428513,
+          "response_effect_mse": 0.009786225855350494
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 3.836603355011903e-06,
+          "H02_effect_mse": 1.2961636457475834e-05,
+          "response_effect_mse": 3.6799108329432784e-06
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 2.5326191916974494e-06,
+          "H02_effect_mse": 5.3577739890897647e-05,
+          "response_effect_mse": 1.057473014043353e-06
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 3.31551673298236e-05,
+          "H02_effect_mse": 8.050088945310563e-05,
+          "response_effect_mse": 7.563295184809249e-06
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 0.00036633305717259645,
+          "H02_effect_mse": 0.0016629323363304138,
+          "response_effect_mse": 0.0002530136553104967
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.012125538662075996,
+          "H02_effect_mse": 0.012294862419366837,
+          "response_effect_mse": 0.005261666607111692
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 6.1921500673634e-06,
+          "H02_effect_mse": 1.7422305973013863e-05,
+          "response_effect_mse": 6.356090580084128e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 7.200267646112479e-06,
+          "H02_effect_mse": 6.134519207989797e-05,
+          "response_effect_mse": 3.2130637919181027e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 3.555577131919563e-05,
+          "H02_effect_mse": 8.04705559858121e-05,
+          "response_effect_mse": 1.3882279745303094e-05
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 0.0015002860454842448,
+          "H02_effect_mse": 0.001756677869707346,
+          "response_effect_mse": 0.000989612191915512
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.00910803023725748,
+          "H02_effect_mse": 0.008717590942978859,
+          "response_effect_mse": 0.00423793587833643
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 8.0384015745949e-06,
+          "H02_effect_mse": 1.5123327102628537e-05,
+          "response_effect_mse": 8.239260750997346e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 4.056693796883337e-06,
+          "H02_effect_mse": 5.3178180678514764e-05,
+          "response_effect_mse": 1.8555557517174748e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 3.650370490504429e-05,
+          "H02_effect_mse": 8.071420597843826e-05,
+          "response_effect_mse": 1.1614995855779853e-05
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 0.0010651203338056803,
+          "H02_effect_mse": 0.001533035421743989,
+          "response_effect_mse": 0.00040586834074929357
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.033949755132198334,
+          "H02_effect_mse": 0.03294556215405464,
+          "response_effect_mse": 0.02285652793943882
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 7.067884780553868e-06,
+          "H02_effect_mse": 1.6159159713424742e-05,
+          "response_effect_mse": 7.114638719940558e-06
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 1.0312965969205834e-05,
+          "H02_effect_mse": 5.583166785072535e-05,
+          "response_effect_mse": 5.05487150803674e-06
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 6.314202619250864e-05,
+          "H02_effect_mse": 0.00010357925202697515,
+          "response_effect_mse": 3.0735314794583246e-05
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 0.0005886764265596867,
+          "H02_effect_mse": 0.0017538423417136073,
+          "response_effect_mse": 0.00029239850118756294
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.010679195635020733,
+          "H02_effect_mse": 0.011122947558760643,
+          "response_effect_mse": 0.00428919680416584
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 6.345594556478318e-06,
+          "H02_effect_mse": 1.4697796359541826e-05,
+          "response_effect_mse": 6.461729299189756e-06
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 1.3831052456225734e-05,
+          "H02_effect_mse": 6.835457315901294e-05,
+          "response_effect_mse": 1.2082724424544722e-05
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 2.139802381861955e-05,
+          "H02_effect_mse": 6.387219036696479e-05,
+          "response_effect_mse": 1.4395718608284369e-05
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 0.0010734820971265435,
+          "H02_effect_mse": 0.0014542562421411276,
+          "response_effect_mse": 0.0004011737764813006
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.032728057354688644,
+          "H02_effect_mse": 0.031878046691417694,
+          "response_effect_mse": 0.022326231002807617
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 3.3255546441068873e-06,
+          "H02_effect_mse": 1.736915874062106e-05,
+          "response_effect_mse": 3.0757737476960756e-06
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 1.9728695406229235e-06,
+          "H02_effect_mse": 5.516970850294456e-05,
+          "response_effect_mse": 1.931441147462465e-06
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 5.2047089411644265e-05,
+          "H02_effect_mse": 0.00010684778681024909,
+          "response_effect_mse": 1.5499852452194318e-05
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 0.0014238142175599933,
+          "H02_effect_mse": 0.003196150064468384,
+          "response_effect_mse": 0.0006326442235149443
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.014725208282470703,
+          "H02_effect_mse": 0.015802446752786636,
+          "response_effect_mse": 0.005711105652153492
+        }
+      ]
+    },
+    {
+      "probe": "action_probe_dynamic",
+      "samples_sha256": "bceeb9c84a85b4c339ff373094656bb0d092ef4472bc5d032a3fc3b3d2957dbc",
+      "complete_histories": 28,
+      "summary": {
+        "5": {
+          "zero_mse": 5.276994532518334e-06,
+          "H02_effect_mse": 1.8367817801845376e-05,
+          "response_effect_mse": 5.259248926644691e-06
+        },
+        "30": {
+          "zero_mse": 5.960994777914104e-06,
+          "H02_effect_mse": 5.3637097542897596e-05,
+          "response_effect_mse": 3.2314201925081373e-06
+        },
+        "60": {
+          "zero_mse": 2.2694320786545825e-05,
+          "H02_effect_mse": 5.581258899058282e-05,
+          "response_effect_mse": 9.13091014353995e-06
+        },
+        "120": {
+          "zero_mse": 0.0004409602189688095,
+          "H02_effect_mse": 0.0015318590074977173,
+          "response_effect_mse": 0.0002241468061713801
+        },
+        "240": {
+          "zero_mse": 0.0032374180887667797,
+          "H02_effect_mse": 0.004645798426021689,
+          "response_effect_mse": 0.0017461662498265338
+        }
+      },
+      "cases": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 3.4689037420321256e-06,
+          "H02_effect_mse": 1.6128868082887493e-05,
+          "response_effect_mse": 3.3213118513231166e-06
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 5.5737268667144235e-06,
+          "H02_effect_mse": 6.524223135784268e-05,
+          "response_effect_mse": 2.5304943847004324e-06
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 1.115393388317898e-05,
+          "H02_effect_mse": 4.945175533066504e-05,
+          "response_effect_mse": 4.2054675759573e-06
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 3.75763738702517e-05,
+          "H02_effect_mse": 0.0011865193955600262,
+          "response_effect_mse": 6.141103222034872e-05
+        },
+        {
+          "patient": 1,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.00038808336830697954,
+          "H02_effect_mse": 0.001848366460762918,
+          "response_effect_mse": 0.00018615541921462864
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 2.2591407287109178e-06,
+          "H02_effect_mse": 2.2542917577084154e-05,
+          "response_effect_mse": 2.224199988631881e-06
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 2.8714744075841736e-06,
+          "H02_effect_mse": 3.3765099942684174e-05,
+          "response_effect_mse": 8.667703923492809e-07
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 5.703084752894938e-06,
+          "H02_effect_mse": 3.112047124886885e-05,
+          "response_effect_mse": 7.893864676589146e-06
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 1.1916466974071227e-05,
+          "H02_effect_mse": 0.0015670990105718374,
+          "response_effect_mse": 0.0002057498786598444
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.00035808802931569517,
+          "H02_effect_mse": 0.002522499766200781,
+          "response_effect_mse": 0.0005547372857108712
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 3.33451021106157e-06,
+          "H02_effect_mse": 2.0721510736620985e-05,
+          "response_effect_mse": 3.1029226192913484e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 3.635735083662439e-06,
+          "H02_effect_mse": 5.022993718739599e-05,
+          "response_effect_mse": 9.15660962164111e-07
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 1.1045613064197823e-05,
+          "H02_effect_mse": 4.5793010940542445e-05,
+          "response_effect_mse": 3.0896742373442976e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 2.7801323085441254e-05,
+          "H02_effect_mse": 0.0017604953609406948,
+          "response_effect_mse": 0.00013436723384074867
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.00033090333454310894,
+          "H02_effect_mse": 0.002355725970119238,
+          "response_effect_mse": 0.0003528037923388183
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 5.92598007642664e-06,
+          "H02_effect_mse": 2.083329309243709e-05,
+          "response_effect_mse": 5.97920279687969e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 2.499162746971706e-06,
+          "H02_effect_mse": 4.80194685223978e-05,
+          "response_effect_mse": 1.1269752349107875e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 9.249398317479063e-06,
+          "H02_effect_mse": 4.1190109186572954e-05,
+          "response_effect_mse": 3.7445934140123427e-06
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 3.625504905357957e-05,
+          "H02_effect_mse": 0.0015702517703175545,
+          "response_effect_mse": 0.00017406209371984005
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.0013236026279628277,
+          "H02_effect_mse": 0.002898511243984103,
+          "response_effect_mse": 0.002656469587236643
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 7.570545676571783e-06,
+          "H02_effect_mse": 1.7252845282200724e-05,
+          "response_effect_mse": 7.627933882758953e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 6.622978617087938e-06,
+          "H02_effect_mse": 4.9897891585715115e-05,
+          "response_effect_mse": 2.7322082587488694e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 1.4220808225218207e-05,
+          "H02_effect_mse": 4.188399179838598e-05,
+          "response_effect_mse": 7.164241651480552e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 3.575169830583036e-05,
+          "H02_effect_mse": 0.0011734019499272108,
+          "response_effect_mse": 0.00014638389984611422
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.0004291929944884032,
+          "H02_effect_mse": 0.0015030272770673037,
+          "response_effect_mse": 0.0004059994826093316
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 5.3783437579113524e-06,
+          "H02_effect_mse": 1.3818069419357926e-05,
+          "response_effect_mse": 5.276365754980361e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 1.269466429221211e-05,
+          "H02_effect_mse": 6.814754306105897e-05,
+          "response_effect_mse": 9.106653124035802e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 4.134508344577625e-06,
+          "H02_effect_mse": 3.855414979625493e-05,
+          "response_effect_mse": 9.038297321239952e-06
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 8.183097816072404e-05,
+          "H02_effect_mse": 0.0007752756937406957,
+          "response_effect_mse": 0.00016243175195995718
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.0005911288317292929,
+          "H02_effect_mse": 0.00172199378721416,
+          "response_effect_mse": 0.0009556993609294295
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 2.9610982892336324e-06,
+          "H02_effect_mse": 2.205165583291091e-05,
+          "response_effect_mse": 2.817195081661339e-06
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 2.572112634879886e-06,
+          "H02_effect_mse": 3.8395293813664466e-05,
+          "response_effect_mse": 1.0872470284084557e-06
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 6.6242660068382975e-06,
+          "H02_effect_mse": 3.580575139494613e-05,
+          "response_effect_mse": 6.0965448938077316e-06
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 5.6079657952068374e-05,
+          "H02_effect_mse": 0.00172285211738199,
+          "response_effect_mse": 8.571591752115637e-05
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.00044811051338911057,
+          "H02_effect_mse": 0.0025904688518494368,
+          "response_effect_mse": 0.00035527354339137673
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 3.515371645335108e-06,
+          "H02_effect_mse": 1.5487426935578696e-05,
+          "response_effect_mse": 3.3760538826754782e-06
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 5.695349500456359e-06,
+          "H02_effect_mse": 6.178599869599566e-05,
+          "response_effect_mse": 2.7915036753256572e-06
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 1.6313369997078553e-05,
+          "H02_effect_mse": 4.7650286433054134e-05,
+          "response_effect_mse": 5.863833848707145e-06
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 0.00014998033293522894,
+          "H02_effect_mse": 0.0010202557314187288,
+          "response_effect_mse": 2.9999020625837147e-05
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.0008546483004465699,
+          "H02_effect_mse": 0.0021995441056787968,
+          "response_effect_mse": 8.124217129079625e-05
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 3.526695309119532e-06,
+          "H02_effect_mse": 1.788311237760354e-05,
+          "response_effect_mse": 3.2900777569011552e-06
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 2.9240136427688412e-06,
+          "H02_effect_mse": 5.402870010584593e-05,
+          "response_effect_mse": 1.059239707501547e-06
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 9.549459718982689e-06,
+          "H02_effect_mse": 3.9300310163525864e-05,
+          "response_effect_mse": 2.925203716586111e-06
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 0.00011168973287567496,
+          "H02_effect_mse": 0.0014663705369457603,
+          "response_effect_mse": 4.0604085370432585e-05
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.00047361699398607016,
+          "H02_effect_mse": 0.002022232860326767,
+          "response_effect_mse": 0.00018248047854285687
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 6.021572971803835e-06,
+          "H02_effect_mse": 1.4760556041437667e-05,
+          "response_effect_mse": 5.860061264684191e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 4.916591933579184e-06,
+          "H02_effect_mse": 5.824600157211535e-05,
+          "response_effect_mse": 2.272863412144943e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 1.5729496226413175e-05,
+          "H02_effect_mse": 4.428405372891575e-05,
+          "response_effect_mse": 4.286666353436885e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 7.805639324942604e-05,
+          "H02_effect_mse": 0.0005722856149077415,
+          "response_effect_mse": 7.244134758366272e-05
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.00017557413957547396,
+          "H02_effect_mse": 0.0012118369340896606,
+          "response_effect_mse": 0.00027961781597696245
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 6.1850223573856056e-06,
+          "H02_effect_mse": 1.2938128747919109e-05,
+          "response_effect_mse": 6.279947683651699e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 3.860935066768434e-06,
+          "H02_effect_mse": 5.455497739603743e-05,
+          "response_effect_mse": 2.0107881937292404e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 1.2677728591370396e-05,
+          "H02_effect_mse": 4.213210195302963e-05,
+          "response_effect_mse": 5.215938472247217e-06
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 0.00011850002920255065,
+          "H02_effect_mse": 0.000505677133332938,
+          "response_effect_mse": 7.88546894909814e-05
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.0015343105187639594,
+          "H02_effect_mse": 0.002461277414113283,
+          "response_effect_mse": 0.001232983311638236
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 9.9548815342132e-06,
+          "H02_effect_mse": 1.9537590560503304e-05,
+          "response_effect_mse": 1.0483696314622648e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 8.486420483677648e-06,
+          "H02_effect_mse": 5.7068406022153795e-05,
+          "response_effect_mse": 2.9651710065081716e-06
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 1.2813150533474982e-05,
+          "H02_effect_mse": 3.976158768637106e-05,
+          "response_effect_mse": 1.3674733054358512e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 0.0001112962345359847,
+          "H02_effect_mse": 0.00044688262278214097,
+          "response_effect_mse": 0.00025933035067282617
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.0004901401698589325,
+          "H02_effect_mse": 0.0010698679834604263,
+          "response_effect_mse": 0.0009613402071408927
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 8.506542144459672e-06,
+          "H02_effect_mse": 2.1948086214251816e-05,
+          "response_effect_mse": 9.04082025954267e-06
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 1.49435563798761e-05,
+          "H02_effect_mse": 6.510579260066152e-05,
+          "response_effect_mse": 1.4292418200057e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 7.25256722944323e-06,
+          "H02_effect_mse": 3.5739656595978886e-05,
+          "response_effect_mse": 1.456014251743909e-05
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 0.00023157300893217325,
+          "H02_effect_mse": 0.00041806610533967614,
+          "response_effect_mse": 0.00011013077892130241
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.00110087008215487,
+          "H02_effect_mse": 0.0015262665692716837,
+          "response_effect_mse": 0.0004098811186850071
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 3.9239603211171925e-06,
+          "H02_effect_mse": 1.7737320376909338e-05,
+          "response_effect_mse": 3.5632488106784876e-06
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 2.3498243990616174e-06,
+          "H02_effect_mse": 5.5486318160546944e-05,
+          "response_effect_mse": 3.182789441780187e-06
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 1.1951591659453698e-05,
+          "H02_effect_mse": 4.2747193219838664e-05,
+          "response_effect_mse": 2.6036484541691607e-06
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 7.281603029696271e-05,
+          "H02_effect_mse": 0.0011866544373333454,
+          "response_effect_mse": 4.173178967903368e-05
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.0005120784626342356,
+          "H02_effect_mse": 0.002078385092318058,
+          "response_effect_mse": 0.00013368591316975653
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 3.1327285796578508e-06,
+          "H02_effect_mse": 1.875049201771617e-05,
+          "response_effect_mse": 3.028621449630009e-06
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 4.683340193878394e-06,
+          "H02_effect_mse": 5.760945350630209e-05,
+          "response_effect_mse": 1.6162879319381318e-06
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 2.4970044250949286e-05,
+          "H02_effect_mse": 5.265230720397085e-05,
+          "response_effect_mse": 6.106693035690114e-06
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 0.00047635752707719803,
+          "H02_effect_mse": 0.0015806712908670306,
+          "response_effect_mse": 8.980224811239168e-05
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.0029966875445097685,
+          "H02_effect_mse": 0.004706171341240406,
+          "response_effect_mse": 0.0005431220633909106
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 7.472674042219296e-06,
+          "H02_effect_mse": 2.0644070900743827e-05,
+          "response_effect_mse": 7.52949472371256e-06
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 4.594235178956296e-06,
+          "H02_effect_mse": 4.68262514914386e-05,
+          "response_effect_mse": 1.8012495957009378e-06
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 2.3403188606607728e-05,
+          "H02_effect_mse": 4.5128130295779556e-05,
+          "response_effect_mse": 8.722644452063832e-06
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 0.00012598320608958602,
+          "H02_effect_mse": 0.00139343598857522,
+          "response_effect_mse": 8.496103691868484e-05
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.0014509701868519187,
+          "H02_effect_mse": 0.002790114376693964,
+          "response_effect_mse": 0.00013891997514292598
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 3.6380447454575915e-06,
+          "H02_effect_mse": 1.9879764295183122e-05,
+          "response_effect_mse": 3.4801118999894243e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 4.455203452380374e-06,
+          "H02_effect_mse": 4.026033275295049e-05,
+          "response_effect_mse": 1.191195451610838e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 3.279296652181074e-05,
+          "H02_effect_mse": 5.3193401981843635e-05,
+          "response_effect_mse": 6.257508175622206e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 0.0005610212101601064,
+          "H02_effect_mse": 0.0019194954074919224,
+          "response_effect_mse": 9.645707905292511e-05
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.0007886292296461761,
+          "H02_effect_mse": 0.0025281996931880713,
+          "response_effect_mse": 0.001143622095696628
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 6.367372407112271e-06,
+          "H02_effect_mse": 2.202493487857282e-05,
+          "response_effect_mse": 6.536236014653696e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 4.445001650310587e-06,
+          "H02_effect_mse": 2.6748279196908697e-05,
+          "response_effect_mse": 1.8120366576113156e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 2.407030842732638e-05,
+          "H02_effect_mse": 3.927840225514956e-05,
+          "response_effect_mse": 7.988007382664364e-06
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 0.0006172066787257791,
+          "H02_effect_mse": 0.001673111692070961,
+          "response_effect_mse": 8.503875869791955e-05
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.0038166651502251625,
+          "H02_effect_mse": 0.005298173986375332,
+          "response_effect_mse": 0.0008192104287445545
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 7.641283445991576e-06,
+          "H02_effect_mse": 2.1778654627269134e-05,
+          "response_effect_mse": 7.78918547439389e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 9.569370376993902e-06,
+          "H02_effect_mse": 3.986380761489272e-05,
+          "response_effect_mse": 4.366857865534257e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 3.4497086744522676e-05,
+          "H02_effect_mse": 5.0404218200128525e-05,
+          "response_effect_mse": 1.138261995947687e-05
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 0.00026482902467250824,
+          "H02_effect_mse": 0.0014446073910221457,
+          "response_effect_mse": 5.8732628531288356e-05
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.0011112322099506855,
+          "H02_effect_mse": 0.0024826331064105034,
+          "response_effect_mse": 0.00028407969512045383
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 3.537734301062301e-06,
+          "H02_effect_mse": 1.9206168872187845e-05,
+          "response_effect_mse": 3.3631195037742145e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 7.4599515755835455e-06,
+          "H02_effect_mse": 5.075197259429842e-05,
+          "response_effect_mse": 3.0034077553864336e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 1.5448582416865975e-05,
+          "H02_effect_mse": 3.846007166430354e-05,
+          "response_effect_mse": 3.532201390044065e-06
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 0.0002928079920820892,
+          "H02_effect_mse": 0.0015333567280322313,
+          "response_effect_mse": 4.028745388495736e-05
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.004600920714437962,
+          "H02_effect_mse": 0.006369592621922493,
+          "response_effect_mse": 0.0012516891583800316
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 3.568658939911984e-06,
+          "H02_effect_mse": 1.9551345758372918e-05,
+          "response_effect_mse": 3.3855335459520575e-06
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 3.79384937332361e-06,
+          "H02_effect_mse": 4.2106541513931006e-05,
+          "response_effect_mse": 9.620741820981493e-07
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 2.2358666683430783e-05,
+          "H02_effect_mse": 4.494719178183004e-05,
+          "response_effect_mse": 4.993898528482532e-06
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 0.00041095991036854684,
+          "H02_effect_mse": 0.0018617494497448206,
+          "response_effect_mse": 6.297384243225679e-05
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.0017523723654448986,
+          "H02_effect_mse": 0.003489922499284148,
+          "response_effect_mse": 0.0001417642051819712
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 5,
+          "zero_mse": 2.7359560590412e-06,
+          "H02_effect_mse": 1.898282062029466e-05,
+          "response_effect_mse": 2.646721213750425e-06
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 30,
+          "zero_mse": 5.771794349129777e-06,
+          "H02_effect_mse": 6.991456029936671e-05,
+          "response_effect_mse": 1.960162080649752e-06
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 60,
+          "zero_mse": 5.125574170961045e-05,
+          "H02_effect_mse": 0.00011792014993261546,
+          "response_effect_mse": 1.6133646568050608e-05
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 120,
+          "zero_mse": 0.0020089009776711464,
+          "H02_effect_mse": 0.004034911748021841,
+          "response_effect_mse": 0.0009674648172222078
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "minutes": 240,
+          "zero_mse": 0.012335453182458878,
+          "H02_effect_mse": 0.014292716979980469,
+          "response_effect_mse": 0.005990862380713224
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 5,
+          "zero_mse": 4.094320047443034e-06,
+          "H02_effect_mse": 1.3755833606410306e-05,
+          "response_effect_mse": 3.926557837985456e-06
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 30,
+          "zero_mse": 2.7044416128774174e-06,
+          "H02_effect_mse": 5.67945244256407e-05,
+          "response_effect_mse": 1.130072632804513e-06
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 60,
+          "zero_mse": 3.55074844264891e-05,
+          "H02_effect_mse": 8.493202039971948e-05,
+          "response_effect_mse": 8.1451034930069e-06
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 120,
+          "zero_mse": 0.0003933704865630716,
+          "H02_effect_mse": 0.0017803021473810077,
+          "response_effect_mse": 0.0002732994908001274
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "minutes": 240,
+          "zero_mse": 0.005892522633075714,
+          "H02_effect_mse": 0.0071630897000432014,
+          "response_effect_mse": 0.0025592073798179626
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 5,
+          "zero_mse": 6.595973445655545e-06,
+          "H02_effect_mse": 1.875968519016169e-05,
+          "response_effect_mse": 6.770527306798613e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 30,
+          "zero_mse": 7.67290111980401e-06,
+          "H02_effect_mse": 6.515855056932196e-05,
+          "response_effect_mse": 3.4281429179827683e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 60,
+          "zero_mse": 3.784727232414298e-05,
+          "H02_effect_mse": 8.520422852598131e-05,
+          "response_effect_mse": 1.4770695997867733e-05
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 120,
+          "zero_mse": 0.0015802178531885147,
+          "H02_effect_mse": 0.00185882649384439,
+          "response_effect_mse": 0.0010399583261460066
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "minutes": 240,
+          "zero_mse": 0.0036816741339862347,
+          "H02_effect_mse": 0.0046193040907382965,
+          "response_effect_mse": 0.0015479064313694835
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 5,
+          "zero_mse": 8.568898010707926e-06,
+          "H02_effect_mse": 1.630281622055918e-05,
+          "response_effect_mse": 8.783003067946993e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 30,
+          "zero_mse": 4.3230384108028375e-06,
+          "H02_effect_mse": 5.623991455649957e-05,
+          "response_effect_mse": 1.978171439986909e-06
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 60,
+          "zero_mse": 3.897203350788914e-05,
+          "H02_effect_mse": 8.510914631187916e-05,
+          "response_effect_mse": 1.248735497938469e-05
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 120,
+          "zero_mse": 0.0011534640798345208,
+          "H02_effect_mse": 0.0016397885046899319,
+          "response_effect_mse": 0.0004500248469412327
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "minutes": 240,
+          "zero_mse": 0.01492376159876585,
+          "H02_effect_mse": 0.016024399548768997,
+          "response_effect_mse": 0.00989664625376463
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 5,
+          "zero_mse": 7.558640845672926e-06,
+          "H02_effect_mse": 1.7176880646729842e-05,
+          "response_effect_mse": 7.6097503551864065e-06
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 30,
+          "zero_mse": 1.0967800335492939e-05,
+          "H02_effect_mse": 5.9202891861787066e-05,
+          "response_effect_mse": 5.374791726353578e-06
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 60,
+          "zero_mse": 6.729289452778175e-05,
+          "H02_effect_mse": 0.00010956534970318899,
+          "response_effect_mse": 3.277322684880346e-05
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 120,
+          "zero_mse": 0.000627174274995923,
+          "H02_effect_mse": 0.0018576821312308311,
+          "response_effect_mse": 0.0003120090696029365
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "minutes": 240,
+          "zero_mse": 0.004607606679201126,
+          "H02_effect_mse": 0.005729908123612404,
+          "response_effect_mse": 0.0016699874540790915
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 5,
+          "zero_mse": 6.769001629436389e-06,
+          "H02_effect_mse": 1.5409174011438154e-05,
+          "response_effect_mse": 6.893301815580344e-06
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 30,
+          "zero_mse": 1.4718580132466741e-05,
+          "H02_effect_mse": 7.222515705507249e-05,
+          "response_effect_mse": 1.2857621186412871e-05
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 60,
+          "zero_mse": 2.293592842761427e-05,
+          "H02_effect_mse": 6.730045424774289e-05,
+          "response_effect_mse": 1.538608194096014e-05
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 120,
+          "zero_mse": 0.001158344792202115,
+          "H02_effect_mse": 0.0015560092870146036,
+          "response_effect_mse": 0.0004389465902931988
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "minutes": 240,
+          "zero_mse": 0.01620112732052803,
+          "H02_effect_mse": 0.017254900187253952,
+          "response_effect_mse": 0.011173883453011513
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 5,
+          "zero_mse": 3.5419916457613e-06,
+          "H02_effect_mse": 1.843487552832812e-05,
+          "response_effect_mse": 3.2737677884142613e-06
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 30,
+          "zero_mse": 2.1017999642936047e-06,
+          "H02_effect_mse": 5.816283373860642e-05,
+          "response_effect_mse": 2.0569109437929e-06
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 60,
+          "zero_mse": 5.566980689764023e-05,
+          "H02_effect_mse": 0.00011324298975523561,
+          "response_effect_mse": 1.6622951079625636e-05
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 120,
+          "zero_mse": 0.0015151248080655932,
+          "H02_effect_mse": 0.003386016469448805,
+          "response_effect_mse": 0.0006729405140504241
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "minutes": 240,
+          "zero_mse": 0.007477735169231892,
+          "H02_effect_mse": 0.009323225356638432,
+          "response_effect_mse": 0.002983384532853961
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "local_links_valid": true,
+  "checked_documents": [
+    "06_RL真实联合数据集下载与构建方案.md",
+    "02_RL动态给药模型方案.md",
+    "01_项目总体方案.md",
+    "05_公开数据集与RL闭环可行性审核.md",
+    "HANDOFF.md",
+    "datasets/README.md",
+    "工作记录.md"
+  ],
+  "paper_sha256": "25a0ea4286d0da67bac9ce079827b2e1120eef9ea1f125b3a3ce7ea67df6847e",
+  "paper_pages": 30,
+  "relevant_pages_rendered_and_reviewed": [
+    11,
+    12,
+    16
+  ],
+  "raw_data_file_counts": {
+    "loop": 0,
+    "dclp3": 0,
+    "t1d_uom": 0,
+    "ohiot1dm": 0,
+    "diatrend": 0
+  },
+  "patient_split_percent": [
+    70,
+    15,
+    10,
+    5
+  ],
+  "external_source": "DiaTrend subject to pre-training eligibility",
+  "jaeb_purpose_characters": 337,
+  "M01_M02_incomplete": true,
+  "harness_completed_items": 16,
+  "patient_packages_downloaded": false,
+  "model_training_performed": false
+}

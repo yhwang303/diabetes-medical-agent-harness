@@ -1,0 +1,17 @@
+{
+  "cohort": "adult_t1d",
+  "source": "synthetic",
+  "source_ref": "engineering-fixture-001",
+  "decision_time": "2026-09-09T10:00:00+08:00",
+  "unit": "mg/dL",
+  "sampling_minutes": 5,
+  "history": [
+    {"time": "2026-09-09T09:35:00+08:00", "value": 120.0},
+    {"time": "2026-09-09T09:40:00+08:00", "value": 121.0},
+    {"time": "2026-09-09T09:45:00+08:00", "value": 123.0},
+    {"time": "2026-09-09T09:50:00+08:00", "value": 122.0},
+    {"time": "2026-09-09T09:55:00+08:00", "value": 124.0},
+    {"time": "2026-09-09T10:00:00+08:00", "value": 125.0}
+  ],
+  "missing_mask": [false, false, false, false, false, false]
+}

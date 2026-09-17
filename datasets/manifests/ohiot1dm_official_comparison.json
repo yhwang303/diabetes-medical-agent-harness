@@ -1,0 +1,253 @@
+{
+  "date": "2026-09-12",
+  "source": "https://webpages.charlotte.edu/rbunescu/data/ohiot1dm/OhioT1DM-download.html",
+  "download_url": "https://webpages.charlotte.edu/rbunescu/data/ohiot1dm/OhioT1DM.zip",
+  "archive": "datasets/raw/ohiot1dm/official/OhioT1DM.zip",
+  "bytes": 10343124,
+  "sha256": "0f326095298d46f64e07fc15d36777d276f3a1e1d278992051de2e3fdd2f0d15",
+  "content_length_matches": true,
+  "last_modified": null,
+  "file_count": 24,
+  "directory_count": 7,
+  "uncompressed_bytes": 84040109,
+  "extra_or_missing_files_vs_kaggle_combined": [],
+  "all_sizes_and_declared_crc32_match_kaggle_combined": true,
+  "all_2018_sizes_and_crc32_match_previous_mirror": true,
+  "decryption": "Supplied password rejected by Python zipfile (literal and Markdown-unescaped forms) and macOS native unzip (Markdown-unescaped form). User confirmed copied entire original email. No confirmed valid password; cause unresolved.",
+  "plaintext_sha256_comparison": "NOT PERFORMED",
+  "official_member_content_integrity": "not tested; declared CRC comparison only",
+  "registration": "POST performed as specified by form; PHP source returned, cannot confirm server-side persistence",
+  "patient_records_parsed": false,
+  "extracted": false,
+  "files": [
+    {
+      "name": "OhioT1DM/2018/test/559-ws-testing.xml",
+      "official_bytes": 846721,
+      "kaggle_bytes": 846721,
+      "official_crc32": "fd91bf34",
+      "kaggle_crc32": "fd91bf34",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/test/563-ws-testing.xml",
+      "official_bytes": 873203,
+      "kaggle_bytes": 873203,
+      "official_crc32": "4e61456e",
+      "kaggle_crc32": "4e61456e",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/test/570-ws-testing.xml",
+      "official_bytes": 881283,
+      "kaggle_bytes": 881283,
+      "official_crc32": "2a243d63",
+      "kaggle_crc32": "2a243d63",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/test/575-ws-testing.xml",
+      "official_bytes": 860106,
+      "kaggle_bytes": 860106,
+      "official_crc32": "055f662d",
+      "kaggle_crc32": "055f662d",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/test/588-ws-testing.xml",
+      "official_bytes": 854008,
+      "kaggle_bytes": 854008,
+      "official_crc32": "8a9ae2c9",
+      "kaggle_crc32": "8a9ae2c9",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/test/591-ws-testing.xml",
+      "official_bytes": 866472,
+      "kaggle_bytes": 866472,
+      "official_crc32": "573787a9",
+      "kaggle_crc32": "573787a9",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/train/559-ws-training.xml",
+      "official_bytes": 3793192,
+      "kaggle_bytes": 3793192,
+      "official_crc32": "c6b79570",
+      "kaggle_crc32": "c6b79570",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/train/563-ws-training.xml",
+      "official_bytes": 3866003,
+      "kaggle_bytes": 3866003,
+      "official_crc32": "b2acf0fe",
+      "kaggle_crc32": "b2acf0fe",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/train/570-ws-training.xml",
+      "official_bytes": 3901406,
+      "kaggle_bytes": 3901406,
+      "official_crc32": "9c197de5",
+      "kaggle_crc32": "9c197de5",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/train/575-ws-training.xml",
+      "official_bytes": 3950889,
+      "kaggle_bytes": 3950889,
+      "official_crc32": "d9c7bb62",
+      "kaggle_crc32": "d9c7bb62",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/train/588-ws-training.xml",
+      "official_bytes": 4189430,
+      "kaggle_bytes": 4189430,
+      "official_crc32": "f8f4b761",
+      "kaggle_crc32": "f8f4b761",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2018/train/591-ws-training.xml",
+      "official_bytes": 3851976,
+      "kaggle_bytes": 3851976,
+      "official_crc32": "467fde4c",
+      "kaggle_crc32": "467fde4c",
+      "size_match": true,
+      "crc32_match": true,
+      "previous_2018_size_crc_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/test/540-ws-testing.xml",
+      "official_bytes": 1512273,
+      "kaggle_bytes": 1512273,
+      "official_crc32": "a804443d",
+      "kaggle_crc32": "a804443d",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/test/544-ws-testing.xml",
+      "official_bytes": 2562885,
+      "kaggle_bytes": 2562885,
+      "official_crc32": "94380f1c",
+      "kaggle_crc32": "94380f1c",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/test/552-ws-testing.xml",
+      "official_bytes": 1953890,
+      "kaggle_bytes": 1953890,
+      "official_crc32": "9bb5971a",
+      "kaggle_crc32": "9bb5971a",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/test/567-ws-testing.xml",
+      "official_bytes": 1732428,
+      "kaggle_bytes": 1732428,
+      "official_crc32": "26247ee9",
+      "kaggle_crc32": "26247ee9",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/test/584-ws-testing.xml",
+      "official_bytes": 2374756,
+      "kaggle_bytes": 2374756,
+      "official_crc32": "6b946ada",
+      "kaggle_crc32": "6b946ada",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/test/596-ws-testing.xml",
+      "official_bytes": 1660565,
+      "kaggle_bytes": 1660565,
+      "official_crc32": "e086cb37",
+      "kaggle_crc32": "e086cb37",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/train/540-ws-training.xml",
+      "official_bytes": 5640344,
+      "kaggle_bytes": 5640344,
+      "official_crc32": "8b6a3c26",
+      "kaggle_crc32": "8b6a3c26",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/train/544-ws-training.xml",
+      "official_bytes": 9881630,
+      "kaggle_bytes": 9881630,
+      "official_crc32": "35ddb2c3",
+      "kaggle_crc32": "35ddb2c3",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/train/552-ws-training.xml",
+      "official_bytes": 4987802,
+      "kaggle_bytes": 4987802,
+      "official_crc32": "892cdf9a",
+      "kaggle_crc32": "892cdf9a",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/train/567-ws-training.xml",
+      "official_bytes": 7435089,
+      "kaggle_bytes": 7435089,
+      "official_crc32": "a3fbed01",
+      "kaggle_crc32": "a3fbed01",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/train/584-ws-training.xml",
+      "official_bytes": 8883945,
+      "kaggle_bytes": 8883945,
+      "official_crc32": "3d584560",
+      "kaggle_crc32": "3d584560",
+      "size_match": true,
+      "crc32_match": true
+    },
+    {
+      "name": "OhioT1DM/2020/train/596-ws-training.xml",
+      "official_bytes": 6679813,
+      "kaggle_bytes": 6679813,
+      "official_crc32": "0b7064c8",
+      "kaggle_crc32": "0b7064c8",
+      "size_match": true,
+      "crc32_match": true
+    }
+  ],
+  "independent_decryption_check": "macOS /usr/bin/unzip explicitly returned password incorrect; ZIP uses standard ZipCrypto/Deflate, not unsupported AES"
+}

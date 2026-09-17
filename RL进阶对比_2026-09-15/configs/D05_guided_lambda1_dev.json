@@ -1,0 +1,15 @@
+{
+  "name": "D05_guided_lambda1_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "GraphGuided_lambda1": "results/H01_graph_guided_pilot/export_0100000.npz"
+  }
+}

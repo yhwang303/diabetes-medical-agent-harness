@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>O07模型结构、论文对比与预测模型接入说明</title><style>body{font:16px/1.7 system-ui,sans-serif;max-width:1100px;margin:30px auto;padding:0 20px;color:#20313e}h2{margin-top:32px;border-bottom:1px solid #ccc}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #ccc;padding:9px;text-align:left;vertical-align:top}th{background:#eef2f5}pre{white-space:pre-wrap;background:#f3f5f7;padding:16px;overflow-wrap:anywhere}.note{border-left:4px solid #b47713;padding:12px;background:#fff4df}a{color:#075a93}</style></head><body>
+<h1>O07：固定参考有界残差 ReBRAC</h1>
+<p>2026-09-16 · 根据实际配置、训练代码及封存结果核对；本次仅澄清结构与改进报告，没有重新训练、修改权重或重跑封存测试。</p>
+<div class="note"><b>结论分开说：</b>该权重通过了本项目预定的仿真研究门槛；最终结构属于ReBRAC的任务适配和增量改进，尚不满足非incremental算法创新的要求，也没有证明SOTA。产品Core接入与真实患者安全均未完成。前一轮“完成”的范围仅限研究训练与该协议验收，不能扩展为整个RL研究创新目标或产品完成。</div>
+<h2>1. 名字对应什么</h2>
+<table><tr><th>表中方法</th><th>身份</th><th>具体含义</th></tr>
+<tr><td>ReBRAC（NeurIPS2023）</td><td>外部RL baseline 1</td><td>依据论文和固定作者代码独立实现，并适配Loop任务；ReBRAC_BC100中的100是actor行为正则系数βπ，不是100个样本，也不是另一个BC模型。</td></tr>
+<tr><td>FQL（ICML2025）</td><td>外部RL baseline 2</td><td>Flow Q-Learning；行为流模型、单步actor与Q学习。FQL_alpha100中的100是蒸馏系数α。</td></tr>
+<tr><td>BC</td><td>监督学习参照</td><td>Behavior Cloning，行为克隆：从历史观测模仿日志中的基础输注动作；最小化动作MSE，不学习长期奖励。日志动作不能一概称为医生的最优动作。</td></tr>
+<tr><td>O07：固定参考有界残差ReBRAC（我方）</td><td>最终候选</td><td>原表Ours_bound040；训练目录O07_bounded040_rl；0.4表示允许actor围绕固定历史参考调整±0.4 U/h，不是学习率或剂量总量。O07是实验编号，描述性名称不表示新发表的算法。</td></tr>
+<tr><td>固定基础率参考 / nominal</td><td>非学习参照</td><td>由公开模拟患者参数取得固定基础率；共同餐时bolus模块仍工作。没有训练，不计为第三个RL baseline。</td></tr>
+<tr><td>O07去RL / Bound040_noRL</td><td>我方消融</td><td>保留同一输入、固定参考和±0.4范围，移除价值学习，仅模仿历史动作，检查RL目标的贡献。</td></tr>
+<tr><td>FQL + fixed reference / Anchor_FQL</td><td>信息结构对照</td><td>向FQL加入固定历史参考；不是第三篇独立baseline论文。</td></tr></table>
+<p>严格地说，本轮完成两个公开RL算法的任务适配实现与比较，并非复现原文数据集和全部实验结果。当前没有一条成功的完整RL-DITR策略作为最终baseline；此前患者模型/图模型及模型辅助策略的失败均保留在训练报告中。</p>
+<h2>2. 为什么策略主表不用血糖MSE</h2>
+<table><tr><th>指标</th><th>测量什么</th><th>用途</th></tr>
+<tr><td>TIR ↑</td><td>血糖70–180 mg/dL的时间比例</td><td>本次闭环策略的主要效果指标</td></tr>
+<tr><td>TBR70 / TBR54 ↓</td><td>血糖低于70 / 54 mg/dL的时间比例</td><td>检验低血糖代价，不能只追求高TIR</td></tr>
+<tr><td>Mean risk ↓</td><td>对每个血糖值计算下文risk函数，再对时间取平均</td><td>高低血糖综合风险诊断，不是MSE</td></tr>
+<tr><td>终止失败数 ↓</td><td>模拟器提前终止的轨迹数</td><td>失败后的剩余时间仍按冻结吸收状态计入分母，不能删失败抬高成绩</td></tr>
+<tr><td>血糖MSE/RMSE ↓</td><td>预测血糖与事实观测的偏差</td><td>预测器/患者模型的准确性；不是改变动作后控制效果的证明</td></tr>
+<tr><td>动作MSE、critic TD loss</td><td>模仿误差与价值拟合误差</td><td>训练诊断，不作为策略疗效主排名</td></tr></table>
+<p>主表取独立模拟器真实BG；策略只能看到带传感噪声的CGM历史。TIR不是对预测结果算的准确率。每条轨迹3天，排除共同6小时预热后固定792个5分钟点。每方法6封存患者×3餐食/噪声情景×3bolus系数=54条；先平均每位患者的9情景，再对患者等权平均。±为6患者之间SD，而非训练seed SD。</p>
+<p><a href="论文对比表_封存主比较.tex">可用于论文的分组LaTeX表</a> · <a href="论文对比表_封存主比较.csv">完整数值CSV</a> · <a href="训练审核报告.html#main-comparison">HTML主比较</a></p>
+<p>现在的表满足“我方对两个baseline”的结果展示，但不能据此声称完整SOTA证明：最终权重均50k训练迭代，我方累计搜索更多；输入与输出结构不同，已单列消融；两种baseline原论文预算与任务不同；单训练seed、少量模拟患者。保留用户单seed要求，不擅自增加训练。文章应写“受限预算的任务适配比较”。</p>
+<h2>3. 实际前向结构</h2>
+<pre>最近6小时观测：72个5分钟时间点 × 22个特征
+  │ 标准化仅由train计算；缺失保留mask与记录年龄
+  ▼
+展平为1584维 ───────────────┐
+                            ├→ 拼接1585维 → MLP actor → 标量z
+最初可见6小时基础输注平均值 ┘                3×256 ReLU
+  固定参考b，归一化为b/10−1                         │
+  每个患者/情景独立；后续不滚动重算                  ▼
+                          调整量 Δa = 0.4·tanh(2z/0.4)
+                                                   │
+                          a = clip(b + Δa, 0, 20) U/h
+                                                   │
+                          接下来5分钟基础率，非单次注射剂量
+
+仅训练时：1585维状态 + 1维动作 → Q1、Q2
+         各自3×256 ReLU + LayerNorm → 长期价值标量
+         另有actor/Q目标网络用于稳定TD学习</pre>
+<p>22维分别是：CGM、过去5分钟基础输注量、bolus记录量、碳水记录量、运动事件数，共5个数值；5个观测mask；5个记录年龄；5个年龄是否已知mask；2个时间编码。运动没有记录不等于确实未运动。所有225名训练患者、1,653,421可用起点保留。</p>
+<p>actor不是Transformer或RNN，而是直接处理展平历史的MLP；没有最终接入的患者动力学模型、未来血糖预测头或beam search。actor约53.8万参数，推理只需actor。输出头以零残差初始化。数字0.4是开发集选择的结构超参数，不是医学安全界限；范围外的历史动作目标没有被裁掉。critic目标动作另加ReBRAC目标噪声，因此不能把actor输出范围描述为所有训练Q查询都受同一范围约束。</p>
+<h2>4. 与参考方法有什么不同</h2>
+<table><tr><th>维度</th><th>RL-DITR参考论文</th><th>当前O07</th></tr>
+<tr><td>任务</td><td>住院T2D胰岛素注射方案，论文临床数据</td><td>公开Loop历史离线训练；成人T1D模拟器5分钟基础输注，任务/人群/动作均不同</td></tr>
+<tr><td>环境模型</td><td>学习患者表示、动作条件转移与状态预测</td><td>最终策略没有使用学得的患者模型；直接使用历史转移做离线Q学习</td></tr>
+<tr><td>策略学习</td><td>患者模型中的rollout，与监督目标联合学习</td><td>ReBRAC双Q + 行为正则；固定历史参考 + 有界残差actor</td></tr>
+<tr><td>决策过程</td><td>论文的模型式多步规划</td><td>actor每5分钟给出一个动作；闭环更新观测，没有显式未来搜索</td></tr>
+<tr><td>证据</td><td>原论文的回顾性及临床研究</td><td>本任务的公开独立仿真，不能继承原论文临床结论</td></tr></table>
+<p><b>相对ReBRAC，改动集中在策略参数化：</b>把单纯历史→绝对动作改为“历史+固定参考→有界调整”；使用原始全量目标、双Q、行为正则和TD更新。不是提出了新的RL损失或新的risk理论。相对RL-DITR变化大是因为换了算法路线；“换路线”不能自动当作论文创新。</p>
+<h2>5. 损失、reward与risk的实际定义</h2>
+<p>以下动作u均是归一化动作a/10−1。V表示合法TD转移，全部起点仍可用于模仿项；未知后续动作/缺口不伪造终止或补零来训练TD。</p>
+<pre>Actor：Lπ = 100·E_all[(π(s) − u_data)²] − λ·E_V[min(Q1,Q2)(s,π(s))]
+λ = stop_gradient(1 / max(E_V|Q_min|, 10⁻⁶))
+
+下一目标动作：u′ = clip(π_target(s′) + clipped_noise, −1, 1)
+TD目标：y = r + γ[min Q_target(s′,u′) − 1·(u′ − u′_data)²]
+Critic：LQ = E_V[(Q1(s,u_data)−y)² + (Q2(s,u_data)−y)²]
+
+γ = 0.9^(1/12) = 0.991258389
+actor_lr = 1e−4；critic_lr = 3e−4；batch = 256；τ = 0.005
+目标噪声σ = 0.02，截断±0.05（归一化单位）
+训练迭代50,000；critic更新50,000；actor每2次更新，累计25,000。</pre>
+<p>Actor损失含动作MSE，但其第二项追求长期价值；BC只有第一种模仿目标。最终O07和主表ReBRAC采用相同βπ=100、βQ=1，并没有为O07另造一套新损失。先前尝试过图患者模型的排序CE、方向hinge以及模型辅助actor项，但对应策略结果不佳，最终O07未保留它们。</p>
+<pre>令BG为mg/dL：
+risk(BG) = 10 · [1.509 · ((ln BG)^1.084 − 5.381)]²
+
+status(BG) = −1                                  当BG &lt; 70
+             1 − clip(risk(BG),0,15.5)/7.75       其他情况
+r_t = status(BG_(t+1)) / 12</pre>
+<p>risk/status沿用此前按固定作者代码核对后的RL-DITR奖励定义；除以12及γ的换算适配5分钟步长。本轮最终模型没有修改这个risk形状或低血糖惩罚，所有RL比较组共用同一奖励。不能把继承的risk函数列为我方创新。开发与评价使用共同定义，但评价BG来自独立模拟器，训练reward来自日志下一CGM，不共享一个学得的环境模型。</p>
+<h2>6. 是否incremental、是否SOTA、是否已经做完</h2>
+<p><b>当前应判为incremental。</b>残差RL、参考控制和有界输出都有已有研究基础；将其组合进ReBRAC并调出有效范围，是有价值的任务适配，但没有建立新的普遍方法贡献或理论。O07比同结构去RL的封存TIR高21.78pp支持“该配置中RL价值目标有收益”，不能单独证明组合方法的新颖性。</p>
+<p><b>没有证明SOTA。</b>封存TIR我方94.97%、ReBRAC69.96%、FQL55.08%；我方TBR70 2.05%高于ReBRAC0.96%。优势集中在本任务的控制效果，并非所有指标均最好，也不是对整个领域的充分比较。adult009的TBR70/TBR54为9.20%/3.13%，总体门槛通过不是逐患者安全通过。</p>
+<p>已经完成的是这份真实离线RL权重、所选baseline/消融、冻结仿真研究评价与推理交付。尚未完成非incremental方法创新、真实预测器接入、Core真实双模型产品闭环及临床验证。</p>
+<h2>7. ICML预测模型怎样接、效果差怎样退</h2>
+<p>要先取得代码、权重、网络配置、归一化、输入输出时间窗、单位、论文说明及训练患者/数据划分。核对它是历史条件的未来CGM预测器，还是具有可信动作响应的患者动力学模型；不能因为它来自ICML，就假定能预测未执行剂量的后果。</p>
+<table><tr><th>接法</th><th>影响</th><th>必要验证</th></tr>
+<tr><td>第一步：作为独立预测服务F，与冻结O07并行</td><td>预测器输出和RL输出分别作为Core证据。O07没有预测输入通道，同一历史的原始RL动作应保持一致。</td><td>窗口、归一化、患者训练重叠、预测误差、域适配；模型/输入/父预测绑定与失败路径；单测不足以替代真实联调。</td></tr>
+<tr><td>把F预测/表示作为RL新输入</td><td>改变策略输入和分布，需要训练或有验证的适配；不能直接拼接到现有1585维模型。</td><td>冻结开发协议、重训候选、相同场景成对闭环比较，检查低血糖/失败/覆盖率。</td></tr>
+<tr><td>用F作为RL训练环境或动作筛选器</td><td>要求F具备动作条件、反事实响应与长展开能力；普通预测器没有自动满足这些要求。</td><td>同状态动作干预响应和独立生理评价；不能只凭较小MSE接入并宣称更好。</td></tr></table>
+<p>保留V0＝现有O07权重/归一化/输入合同/评价器。新增预测器作为独立版本，先shadow/离线运行，不覆盖V0。接入后分开评价：预测误差、原始RL动作一致性、拒收/覆盖率、实际执行闭环TIR/TBR。若只做旁路预测，原始O07动作变化属于需调查的集成差异；若预测参与闸门，实际执行结果与覆盖率可能变化，需要单独测。</p>
+<p>候选变差则不晋升，撤回新增数值输入/控制逻辑，保留原始研究配置及失败证据。<b>现有状态只有研究RL，没有已验收的完整双模型产品，所以“退回”是回到研究基线，不是允许绕过预测模型继续发布给药。</b>没有有效预测或合格RL时，Core仍需拒绝个体化给药发布，不能以零剂量或“维持”冒充模型结果。</p>
+<p>本次T01已被查看，以后可用于回归测试，但不能拿同一批结果反复调参后再称盲测。新候选须先冻结新评价协议；新场景只证明新场景泛化，若要未见患者证据还需独立患者/公开资源，不能混称。</p>
+<h2>实现与来源</h2>
+<ul><li><a href="rl_algorithms.py">实际网络与损失</a> · <a href="results/O07_bounded040_rl/config.json">最终训练配置</a> · <a href="prepare_rl.py">奖励与转移构建</a> · <a href="anchor_data.py">固定参考构建</a></li>
+<li><a href="https://arxiv.org/abs/2305.09836">ReBRAC原论文</a> · <a href="https://proceedings.mlr.press/v267/park25f.html">FQL原论文</a> · <a href="https://arxiv.org/abs/1812.03201">Residual RL原论文</a> · <a href="../参考论文/RL-DITR_NatureMedicine_2023.pdf">本地RL-DITR原论文</a></li></ul>
+</body></html>

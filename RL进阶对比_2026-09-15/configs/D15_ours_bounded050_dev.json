@@ -1,0 +1,15 @@
+{
+  "name": "D15_ours_bounded050_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Ours_bound050": "results/O02_bounded050_rl/export_0050000.npz"
+  }
+}

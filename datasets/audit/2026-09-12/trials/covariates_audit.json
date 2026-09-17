@@ -1,0 +1,750 @@
+{
+  "dclp3": {
+    "AdvEvent_a.txt": {
+      "Weight": {
+        "nonmissing_rows": 3,
+        "patients_nonmissing": 3,
+        "adult_patients_nonmissing": 1,
+        "numeric_positive_rows": 3,
+        "adult_patients_positive": 1,
+        "values_if_small_cardinality": {
+          "<MISSING>": 17,
+          "65.0": 1,
+          "67.0": 1,
+          "53.0": 1
+        },
+        "numeric_quantiles": {
+          "0.0": 53.0,
+          "0.01": 53.24,
+          "0.25": 59.0,
+          "0.5": 65.0,
+          "0.75": 66.0,
+          "0.95": 66.8,
+          "0.99": 66.96,
+          "1.0": 67.0
+        }
+      },
+      "WeightMeas": {
+        "nonmissing_rows": 3,
+        "patients_nonmissing": 3,
+        "adult_patients_nonmissing": 1,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 17,
+          "kgs": 3
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightNotAvail": {
+        "nonmissing_rows": 1,
+        "patients_nonmissing": 1,
+        "adult_patients_nonmissing": 1,
+        "numeric_positive_rows": 1,
+        "adult_patients_positive": 1,
+        "values_if_small_cardinality": {
+          "<MISSING>": 19,
+          "1.0": 1
+        },
+        "numeric_quantiles": {
+          "0.0": 1.0,
+          "0.01": 1.0,
+          "0.25": 1.0,
+          "0.5": 1.0,
+          "0.75": 1.0,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      }
+    },
+    "DiabPhysExam_a.txt": {
+      "Weight": {
+        "nonmissing_rows": 170,
+        "patients_nonmissing": 170,
+        "adult_patients_nonmissing": 122,
+        "numeric_positive_rows": 170,
+        "adult_patients_positive": 122,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {
+          "0.0": 45.4,
+          "0.01": 51.204,
+          "0.25": 69.525,
+          "0.5": 86.1,
+          "0.75": 145.325,
+          "0.95": 211.03499999999994,
+          "0.99": 240.72000000000003,
+          "1.0": 293.0
+        }
+      },
+      "WeightUnits": {
+        "nonmissing_rows": 170,
+        "patients_nonmissing": 170,
+        "adult_patients_nonmissing": 122,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "kg": 109,
+          "lbs": 61
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightUnk": {
+        "nonmissing_rows": 0,
+        "patients_nonmissing": 0,
+        "adult_patients_nonmissing": 0,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 170
+        },
+        "numeric_quantiles": {}
+      }
+    },
+    "DiabScreening_a.txt": {
+      "Weight": {
+        "nonmissing_rows": 0,
+        "patients_nonmissing": 0,
+        "adult_patients_nonmissing": 0,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 170
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightUnits": {
+        "nonmissing_rows": 0,
+        "patients_nonmissing": 0,
+        "adult_patients_nonmissing": 0,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 170
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightUnk": {
+        "nonmissing_rows": 0,
+        "patients_nonmissing": 0,
+        "adult_patients_nonmissing": 0,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 170
+        },
+        "numeric_quantiles": {}
+      }
+    },
+    "FollowUpCTV_a.txt": {
+      "Weight": {
+        "nonmissing_rows": 168,
+        "patients_nonmissing": 168,
+        "adult_patients_nonmissing": 120,
+        "numeric_positive_rows": 168,
+        "adult_patients_positive": 120,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {
+          "0.0": 45.5,
+          "0.01": 53.974999999999994,
+          "0.25": 70.8,
+          "0.5": 88.19999999999999,
+          "0.75": 144.25,
+          "0.95": 213.95000000000002,
+          "0.99": 239.58300000000006,
+          "1.0": 244.0
+        }
+      },
+      "WeightUnits": {
+        "nonmissing_rows": 168,
+        "patients_nonmissing": 168,
+        "adult_patients_nonmissing": 120,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 1556,
+          "kg": 110,
+          "lbs": 58
+        },
+        "numeric_quantiles": {}
+      }
+    },
+    "RocheMeter_a.txt": {
+      "Carbs": {
+        "nonmissing_rows": 0,
+        "patients_nonmissing": 0,
+        "adult_patients_nonmissing": 0,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 25344
+        },
+        "numeric_quantiles": {}
+      }
+    },
+    "hyperglycemiaAvoidance.txt": {
+      "miss_meals": {
+        "nonmissing_rows": 502,
+        "patients_nonmissing": 168,
+        "adult_patients_nonmissing": 120,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "Rarely_1": 170,
+          "Sometimes_2": 148,
+          "Never_0": 132,
+          "Often_3": 41,
+          "Always_4": 11
+        },
+        "numeric_quantiles": {}
+      }
+    },
+    "insulin_summary": {
+      "all_name_rows": {
+        "Humalog (Lispro)": 121,
+        "Novolog (Aspart)": 92,
+        "Lantus (Glargine) 1 time per day": 18,
+        "Basaglar (Glargine, U100)": 7,
+        "Degludec (Tresiba)": 6,
+        "Lantus (Glargine) 2 times per day": 5,
+        "Levemir (Detemir) 1 time per day": 2,
+        "Toujeo (Glargine, U300)": 1,
+        "Novolog Fiasp": 1,
+        "Regular (R) (Humulin R or Novolin R)": 1,
+        "Admelog": 1
+      },
+      "adult_name_rows": {
+        "Humalog (Lispro)": 86,
+        "Novolog (Aspart)": 67,
+        "Lantus (Glargine) 1 time per day": 10,
+        "Degludec (Tresiba)": 6,
+        "Lantus (Glargine) 2 times per day": 5,
+        "Basaglar (Glargine, U100)": 4,
+        "Levemir (Detemir) 1 time per day": 2,
+        "Toujeo (Glargine, U300)": 1,
+        "Novolog Fiasp": 1,
+        "Regular (R) (Humulin R or Novolin R)": 1,
+        "Admelog": 1
+      },
+      "routes": {
+        "Pump": 177,
+        "Injection": 78
+      },
+      "adult_pump_names_unique_patients": {
+        "Admelog": 1,
+        "Humalog (Lispro)": 69,
+        "Novolog (Aspart)": 56
+      },
+      "start_unknown_rows": 206,
+      "stop_unknown_rows": 171
+    }
+  },
+  "iobp2": {
+    "IOBP2AdvEvent.txt": {
+      "Weight": {
+        "nonmissing_rows": 9,
+        "patients_nonmissing": 9,
+        "adult_patients_nonmissing": 6,
+        "numeric_positive_rows": 9,
+        "adult_patients_positive": 6,
+        "values_if_small_cardinality": {
+          "<MISSING>": 341,
+          "189.0": 2,
+          "71.0": 1,
+          "153.0": 1,
+          "267.0": 1,
+          "182.0": 1,
+          "114.0": 1,
+          "133.0": 1,
+          "127.0": 1
+        },
+        "numeric_quantiles": {
+          "0.0": 71.0,
+          "0.01": 74.44,
+          "0.25": 127.0,
+          "0.5": 153.0,
+          "0.75": 189.0,
+          "0.95": 235.79999999999998,
+          "0.99": 260.76,
+          "1.0": 267.0
+        }
+      },
+      "WeightMeas": {
+        "nonmissing_rows": 9,
+        "patients_nonmissing": 9,
+        "adult_patients_nonmissing": 6,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "<MISSING>": 341,
+          "lbs": 8,
+          "kgs": 1
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightNotAvail": {
+        "nonmissing_rows": 17,
+        "patients_nonmissing": 16,
+        "adult_patients_nonmissing": 12,
+        "numeric_positive_rows": 17,
+        "adult_patients_positive": 12,
+        "values_if_small_cardinality": {
+          "<MISSING>": 333,
+          "1.0": 17
+        },
+        "numeric_quantiles": {
+          "0.0": 1.0,
+          "0.01": 1.0,
+          "0.25": 1.0,
+          "0.5": 1.0,
+          "0.75": 1.0,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      }
+    },
+    "IOBP2HeightWeight.txt": {
+      "Weight": {
+        "nonmissing_rows": 2185,
+        "patients_nonmissing": 440,
+        "adult_patients_nonmissing": 275,
+        "numeric_positive_rows": 2185,
+        "adult_patients_positive": 275,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {
+          "0.0": 22.0,
+          "0.01": 24.7,
+          "0.25": 73.9,
+          "0.5": 146.0,
+          "0.75": 190.2,
+          "0.95": 240.95999999999995,
+          "0.99": 293.4,
+          "1.0": 350.4
+        }
+      },
+      "WeightUnits": {
+        "nonmissing_rows": 2185,
+        "patients_nonmissing": 440,
+        "adult_patients_nonmissing": 275,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "lbs": 1537,
+          "kg": 648,
+          "<MISSING>": 3
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightUnk": {
+        "nonmissing_rows": 2,
+        "patients_nonmissing": 2,
+        "adult_patients_nonmissing": 1,
+        "numeric_positive_rows": 2,
+        "adult_patients_positive": 1,
+        "values_if_small_cardinality": {
+          "<MISSING>": 2186,
+          "1.0": 2
+        },
+        "numeric_quantiles": {
+          "0.0": 1.0,
+          "0.01": 1.0,
+          "0.25": 1.0,
+          "0.5": 1.0,
+          "0.75": 1.0,
+          "0.95": 1.0,
+          "0.99": 1.0,
+          "1.0": 1.0
+        }
+      },
+      "WeightAssessBy": {
+        "nonmissing_rows": 2185,
+        "patients_nonmissing": 440,
+        "adult_patients_nonmissing": 275,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "By study personnel in clinic": 1808,
+          "By participant outside of clinic": 377,
+          "<MISSING>": 3
+        },
+        "numeric_quantiles": {}
+      },
+      "WeightAssessDt": {
+        "nonmissing_rows": 2185,
+        "patients_nonmissing": 440,
+        "adult_patients_nonmissing": 275,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {}
+      }
+    },
+    "IOBP2MealDose.txt": {
+      "MealDoseDt": {
+        "nonmissing_rows": 1158,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {}
+      },
+      "MealDoseHr": {
+        "nonmissing_rows": 1158,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 1158,
+        "adult_patients_positive": 89,
+        "values_if_small_cardinality": {
+          "7": 162,
+          "8": 147,
+          "6": 144,
+          "12": 117,
+          "1": 104,
+          "9": 97,
+          "5": 85,
+          "11": 82,
+          "10": 71,
+          "2": 57,
+          "3": 47,
+          "4": 45
+        },
+        "numeric_quantiles": {
+          "0.0": 1.0,
+          "0.01": 1.0,
+          "0.25": 5.0,
+          "0.5": 7.0,
+          "0.75": 9.0,
+          "0.95": 12.0,
+          "0.99": 12.0,
+          "1.0": 12.0
+        }
+      },
+      "MealDoseMin": {
+        "nonmissing_rows": 1158,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 925,
+        "adult_patients_positive": 87,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.25": 6.0,
+          "0.5": 27.5,
+          "0.75": 40.0,
+          "0.95": 53.149999999999864,
+          "0.99": 58.0,
+          "1.0": 59.0
+        }
+      },
+      "MealDoseAmPm": {
+        "nonmissing_rows": 1156,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "PM": 813,
+          "AM": 343,
+          "<MISSING>": 2
+        },
+        "numeric_quantiles": {}
+      },
+      "MealDoseType": {
+        "nonmissing_rows": 1155,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "Main meal": 946,
+          "Snack": 209,
+          "<MISSING>": 3
+        },
+        "numeric_quantiles": {}
+      },
+      "MealDoseAnnounceTm": {
+        "nonmissing_rows": 1157,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "Dinner": 419,
+          "Lunch": 363,
+          "Breakfast": 270,
+          "Would not have announced": 105,
+          "<MISSING>": 1
+        },
+        "numeric_quantiles": {}
+      },
+      "MealDoseAnnounceAmt": {
+        "nonmissing_rows": 1052,
+        "patients_nonmissing": 129,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 0,
+        "adult_patients_positive": 0,
+        "values_if_small_cardinality": {
+          "Usual": 637,
+          "Less than usual": 243,
+          "More than usual": 172,
+          "<MISSING>": 106
+        },
+        "numeric_quantiles": {}
+      }
+    },
+    "IOBP2PSTransDailyQuest.txt": {
+      "DlySurvLowBGCarbTimes": {
+        "nonmissing_rows": 228,
+        "patients_nonmissing": 145,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 216,
+        "adult_patients_positive": 85,
+        "values_if_small_cardinality": {
+          "<MISSING>": 205,
+          "1": 140,
+          "2": 52,
+          "3": 13,
+          "0": 9,
+          "4": 7,
+          ">10": 3,
+          "5": 3,
+          "6": 1
+        },
+        "numeric_quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.25": 1.0,
+          "0.5": 1.0,
+          "0.75": 2.0,
+          "0.95": 3.0,
+          "0.99": 5.0,
+          "1.0": 6.0
+        }
+      },
+      "DlySurvLowBGCarbGrams": {
+        "nonmissing_rows": 228,
+        "patients_nonmissing": 145,
+        "adult_patients_nonmissing": 89,
+        "numeric_positive_rows": 219,
+        "adult_patients_positive": 87,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.25": 15.0,
+          "0.5": 16.0,
+          "0.75": 27.75,
+          "0.95": 56.49999999999977,
+          "0.99": 100.0,
+          "1.0": 100.0
+        }
+      }
+    },
+    "IOBP2PSWeeklyQuest.txt": {
+      "WkSurvLowBGCarbTimes": {
+        "nonmissing_rows": 2754,
+        "patients_nonmissing": 420,
+        "adult_patients_nonmissing": 260,
+        "numeric_positive_rows": 2640,
+        "adult_patients_positive": 259,
+        "values_if_small_cardinality": {
+          "<MISSING>": 2174,
+          "1": 1520,
+          "2": 712,
+          "3": 261,
+          "0": 109,
+          "4": 91,
+          "5": 33,
+          "6": 16,
+          ">10": 5,
+          "7": 4,
+          "8": 3
+        },
+        "numeric_quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.25": 1.0,
+          "0.5": 1.0,
+          "0.75": 2.0,
+          "0.95": 4.0,
+          "0.99": 5.0,
+          "1.0": 8.0
+        }
+      },
+      "WkSurvLowBGCarbGrams": {
+        "nonmissing_rows": 2754,
+        "patients_nonmissing": 420,
+        "adult_patients_nonmissing": 260,
+        "numeric_positive_rows": 2659,
+        "adult_patients_positive": 258,
+        "values_if_small_cardinality": null,
+        "numeric_quantiles": {
+          "0.0": 0.0,
+          "0.01": 0.0,
+          "0.25": 15.0,
+          "0.5": 17.0,
+          "0.75": 30.0,
+          "0.95": 50.0,
+          "0.99": 100.0,
+          "1.0": 100.0
+        }
+      }
+    },
+    "insulin_summary": {
+      "all_name_rows": {
+        "Humalog (Lispro)": 377,
+        "Novolog (Aspart)": 313,
+        "Novolog Fiasp": 135,
+        "Lantus (Glargine) 1 time per day": 106,
+        "Degludec (Tresiba)": 68,
+        "Basaglar (Glargine, U100)": 39,
+        "Lantus (Glargine) 2 times per day": 23,
+        "Admelog": 15,
+        "Toujeo (Glargine, U300)": 11,
+        "Levemir (Detemir) 1 time per day": 6,
+        "Levemir (Detemir) 2 times per day": 5,
+        "Humulin 70/30": 3,
+        "Afrezza (insulin human)": 2,
+        "Regular (R) (Humulin R or Novolin R)": 2,
+        "Humulin N (NPH)": 1,
+        "Humalog 50/50": 1
+      },
+      "adult_name_rows": {
+        "Humalog (Lispro)": 237,
+        "Novolog (Aspart)": 202,
+        "Novolog Fiasp": 130,
+        "Lantus (Glargine) 1 time per day": 56,
+        "Degludec (Tresiba)": 49,
+        "Basaglar (Glargine, U100)": 16,
+        "Lantus (Glargine) 2 times per day": 16,
+        "Toujeo (Glargine, U300)": 9,
+        "Admelog": 5,
+        "Levemir (Detemir) 2 times per day": 4,
+        "Levemir (Detemir) 1 time per day": 3,
+        "Humulin 70/30": 3,
+        "Afrezza (insulin human)": 2,
+        "Regular (R) (Humulin R or Novolin R)": 2,
+        "Humulin N (NPH)": 1,
+        "Humalog 50/50": 1
+      },
+      "routes": {
+        "Pump": 582,
+        "Injection": 523,
+        "Inhaled": 2
+      },
+      "adult_pump_names_unique_patients": {
+        "Admelog": 3,
+        "Humalog (Lispro)": 123,
+        "Humalog 50/50": 1,
+        "Novolog (Aspart)": 97,
+        "Novolog Fiasp": 121
+      },
+      "start_unknown_rows": 610,
+      "stop_unknown_rows": 565
+    },
+    "IOBP2ManualInsulinInj.txt": {
+      "rows": 197,
+      "patients": 72,
+      "adult_patients": 37,
+      "nonmissing_counts": {
+        "RecID": 197,
+        "PtID": 197,
+        "InsInjDt": 197,
+        "InsInjHr": 197,
+        "InsInjMin": 197,
+        "InsInjAMPM": 197,
+        "InsInjTimeApprox": 110,
+        "InsInjAmt": 197,
+        "InsInjAmtApprox": 24
+      }
+    },
+    "IOBP2DiscontiLet.txt": {
+      "rows": 30,
+      "patients": 30,
+      "adult_patients": 22,
+      "nonmissing_counts": {
+        "RecID": 30,
+        "PtID": 30,
+        "ILetDiscDt": 30,
+        "ILetDiscHr": 27,
+        "ILetDiscMin": 27,
+        "ILetDiscAMPM": 27,
+        "ILetTmDiscApprox": 16,
+        "ILetTmDiscUnk": 3
+      }
+    },
+    "IOBP2BasalRtChg.txt": {
+      "rows": 5,
+      "patients": 3,
+      "adult_patients": 1,
+      "nonmissing_counts": {
+        "RecID": 5,
+        "PtID": 5,
+        "BasRtChgDt": 5,
+        "BasRtChgStHr": 5,
+        "BasRtChgStMin": 5,
+        "BasRtChgStAmPm": 5,
+        "BasRtChgEndHr": 5,
+        "BasRtChgEndMin": 5,
+        "BasRtChgEndAmPm": 5,
+        "BasRtChgNewRt": 5
+      }
+    },
+    "IOBP2DeviceDtTmVer.txt": {
+      "rows": 1638,
+      "patients": 332,
+      "adult_patients": 220,
+      "nonmissing_counts": {
+        "RecID": 1638,
+        "PtID": 1638,
+        "ParentLoginVisitID": 1638,
+        "Visit": 1638,
+        "DtTm1MinCell": 1511,
+        "DtTm1MinCellUnk": 127,
+        "CellDt": 568,
+        "CellHr": 568,
+        "CellMin": 568,
+        "CellAmPm": 568,
+        "BGMDt": 445,
+        "BGMHr": 445,
+        "BGMMin": 445,
+        "BGMAmPm": 445,
+        "BGMNotAtVis": 126,
+        "KetoneMetDt": 422,
+        "KetoneMetHr": 422,
+        "KetoneMetMin": 422,
+        "KetoneMetAmPm": 422,
+        "KetoneMetNotAtVis": 149,
+        "iLetDt": 543,
+        "iLetHr": 543,
+        "iLetMin": 543,
+        "iLetAmPm": 543,
+        "iLetDiscont": 28
+      }
+    },
+    "IOBP2ContDeviceDtTmVer.txt": {
+      "rows": 535,
+      "patients": 107,
+      "adult_patients": 54,
+      "nonmissing_counts": {
+        "RecID": 535,
+        "PtID": 535,
+        "ParentLoginVisitID": 535,
+        "Visit": 535,
+        "DtTm1MinCell": 347,
+        "DtTm1MinCellNA": 188,
+        "CellDt": 63,
+        "CellHr": 63,
+        "CellMin": 63,
+        "CellAmPm": 63,
+        "PumpDt": 63,
+        "PumpHr": 63,
+        "PumpMin": 63,
+        "PumpAmPm": 63
+      }
+    }
+  }
+}

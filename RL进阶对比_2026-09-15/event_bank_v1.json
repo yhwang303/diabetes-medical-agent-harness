@@ -1,0 +1,19 @@
+{
+  "sha256": "ff898ece8e868be777dccd54148821fd252d04e89bec7fe4449ea5681f626535",
+  "seed": 61791,
+  "source_split": "train",
+  "library_size": 8192,
+  "source_complete60_origins": 318341,
+  "training_actor_origins_unchanged": 1653421,
+  "context": [
+    "normalized current CGM",
+    "30min CGM change",
+    "last-hour mean normalized basal",
+    "last-hour bolus record count /3",
+    "last-hour carb record count /3",
+    "last-hour exercise record count /3"
+  ],
+  "events": "joint next-60min normalized bolus/carb/exercise values and observed masks; logged absence remains unknown",
+  "limitations": "Empirical conditional event scenarios from training observations, not a calibrated generative or causal model; no actual future evaluation events read",
+  "clinical_ready": false
+}

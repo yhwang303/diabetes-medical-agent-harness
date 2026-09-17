@@ -1,0 +1,22 @@
+{
+  "name": "D10_rebrac_saved_checkpoints_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Anchor_ReBRAC_10k": "results/R31_anchor_rebrac/export_0010000.npz",
+    "Anchor_ReBRAC_20k": "results/R31_anchor_rebrac/export_0020000.npz",
+    "Anchor_ReBRAC_30k": "results/R31_anchor_rebrac/export_0030000.npz",
+    "Anchor_ReBRAC_40k": "results/R31_anchor_rebrac/export_0040000.npz",
+    "ReBRAC_BC100_10k": "results/R21_rebrac_bc100/export_0010000.npz",
+    "ReBRAC_BC100_20k": "results/R21_rebrac_bc100/export_0020000.npz",
+    "ReBRAC_BC100_30k": "results/R21_rebrac_bc100/export_0030000.npz",
+    "ReBRAC_BC100_40k": "results/R21_rebrac_bc100/export_0040000.npz"
+  }
+}

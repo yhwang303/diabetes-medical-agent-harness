@@ -1,0 +1,15 @@
+{
+  "name": "D19_ours_bound025_beta10_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Ours_bound025_beta10": "results/O05_bounded025_beta10/export_0050000.npz"
+  }
+}

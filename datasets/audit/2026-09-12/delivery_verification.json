@@ -1,0 +1,15 @@
+{
+  "scope": "Metadata/links/syntax only. Does not rerun data quality processing, models or engineering tests.",
+  "extracted_file_counts": {
+    "loop": 47,
+    "dclp3": 87,
+    "iobp2": 227,
+    "ohio": 24,
+    "uom": 127
+  },
+  "extracted_files_size_checked": 512,
+  "json_files_readable": 18,
+  "python_files_syntax_checked": 10,
+  "local_links_checked": 33,
+  "issues": []
+}

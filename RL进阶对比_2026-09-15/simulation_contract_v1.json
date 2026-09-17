@@ -1,0 +1,91 @@
+{
+  "version": "sim-eval-v1",
+  "frozen_before_first_closed_loop_result": true,
+  "simulator_commit": "a6f6777586c860457a2a1e6cce6d0bd3fd33d1cc",
+  "dev_patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "dev_seeds": [
+    3101,
+    3102,
+    3103
+  ],
+  "sealed_patients": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sealed_seeds": [
+    73101,
+    73102,
+    73103
+  ],
+  "days": 3,
+  "warmup_hours": 6,
+  "sample_minutes": 5,
+  "sensor": "GuardianRT",
+  "pump": "Insulet",
+  "bolus_factors": [
+    1.0,
+    0.8,
+    1.2
+  ],
+  "meals": {
+    "hours": [
+      8,
+      13,
+      19
+    ],
+    "grams": [
+      45,
+      65,
+      70
+    ],
+    "jitter_minutes": [
+      -30,
+      30
+    ],
+    "gram_noise_sd": 10,
+    "gram_clip": [
+      20,
+      120
+    ]
+  },
+  "common_bolus": "Current announced meal grams / published patient CR * bolus_factor; no correction bolus; identical across methods",
+  "policy_information": "72x22 observable history only; no future meals, patient parameters, true BG or private states. Published nominal-basal reference and common bolus use published static parameters; this advantage is explicit.",
+  "normalization_sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f",
+  "failure_accounting": "Fixed denominator after warmup. BG>600/nonfinite terminates with remaining BG=600; BG<10 with BG=10. Any termination reported, not discarded.",
+  "primary_metric": "Patient-equally-weighted TIR 70-180 mg/dL, averaged over paired scenario seeds and all bolus factors",
+  "secondary_metrics": [
+    "TBR70",
+    "TBR54",
+    "TAR180",
+    "TAR250",
+    "mean_risk",
+    "mean_BG",
+    "BG_SD",
+    "insulin_per_day",
+    "terminal_failures"
+  ],
+  "research_acceptance": {
+    "delta_TIR_vs_BC_min_pp": 2,
+    "delta_TIR_vs_nominal_min_pp": -2,
+    "delta_TIR_vs_best_recent_RL_min_pp": -2,
+    "TBR70_increase_vs_nominal_and_BC_max_pp": 1,
+    "TBR54_increase_vs_nominal_and_BC_max_pp": 0.5,
+    "terminal_failures_allowed": 0,
+    "training_seeds_min": 3,
+    "seeds_with_TIR_improvement_vs_BC_min": 2,
+    "paired_patient_bootstrap95_delta_TIR_vs_BC_lower_min_pp": -2
+  },
+  "interpretation": "Research thresholds chosen for this experiment, not clinical standards; one-sided descriptive tolerance. Report exact differences and cluster CI including failure. No claim of superiority unless estimates support it. Does not approve clinical or product deployment.",
+  "checkpoint_selection": "Dev only: remove terminal-failure candidates if any nonfailed alternatives; prefer satisfying relative low-glucose tolerances then highest patient-mean TIR. If none satisfy, report failure and investigate without changing frozen test thresholds.",
+  "comparison_training": "Loop-only zero-shot transfer first. Any additional simulation training uses separate rows and equal data/budget for all RL methods.",
+  "ci": "Paired patient cluster bootstrap, 10000 resamples seed 9981. Average scenarios and training seeds within patient first. Also show each training seed and worst patient."
+}

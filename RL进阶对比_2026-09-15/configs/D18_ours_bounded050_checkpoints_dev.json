@@ -1,0 +1,18 @@
+{
+  "name": "D18_ours_bounded050_checkpoints_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Ours_bound050_10k": "results/O02_bounded050_rl/export_0010000.npz",
+    "Ours_bound050_20k": "results/O02_bounded050_rl/export_0020000.npz",
+    "Ours_bound050_30k": "results/O02_bounded050_rl/export_0030000.npz",
+    "Ours_bound050_40k": "results/O02_bounded050_rl/export_0040000.npz"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "patient_id": "LOOP_000606",
+  "split": "train",
+  "row_index": 35852,
+  "episode_id": 1,
+  "timestamp_ns": 1552563900000000000,
+  "action_u_h": 1.0499999523162842,
+  "action_duration_minutes": 5.0,
+  "basal_interval_u": 0.08749999850988388,
+  "reward": 0.07256157696247101,
+  "discount": 0.9912583827972412,
+  "terminated": false,
+  "truncated": false,
+  "bootstrap_valid": true,
+  "end_reason": "continues",
+  "target_glucose_mmol_l": [
+    5.273210048675537
+  ],
+  "target_wtr": [
+    1.0
+  ],
+  "outcome_bolus_logged_u": [
+    0.0
+  ],
+  "outcome_bolus_record_present": [
+    false
+  ],
+  "outcome_bolus_actual_absence_verified": [
+    false
+  ],
+  "state_shape": [
+    72,
+    14
+  ],
+  "feature_order": [
+    "cgm_mmol_l",
+    "basal_u_prev_5min",
+    "bolus_recorded_u_prev_5min",
+    "cgm_mmol_l__observed",
+    "basal_u_prev_5min__observed",
+    "bolus_recorded_u_prev_5min__observed",
+    "cgm_mmol_l__age_log_hours",
+    "basal_u_prev_5min__age_log_hours",
+    "bolus_recorded_u_prev_5min__age_log_hours",
+    "cgm_mmol_l__age_known",
+    "basal_u_prev_5min__age_known",
+    "bolus_recorded_u_prev_5min__age_known",
+    "elapsed_grid_hours",
+    "relative_to_decision_hours"
+  ],
+  "last_state_row": [
+    -0.8087210059165955,
+    -0.08268194645643234,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.000832986319437623,
+    0.0,
+    2.3902907371520996,
+    1.0,
+    1.0,
+    1.0,
+    0.0833333358168602,
+    0.0
+  ],
+  "CSV_line_including_header": 35854
+}

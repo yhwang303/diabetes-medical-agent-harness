@@ -1,0 +1,53 @@
+% All completed development experiments. Repeated tuning on dev; not sealed test.
+% Mean +/- patient SD; training budgets and input groups are separate.
+\begin{tabular}{lllrrrrrr}
+\hline
+Method & Input & Residual bound & Updates & TIR (\%) & TBR70 (\%) & TBR54 (\%) & Risk & Failures \\
+\hline
+nominal & parameter\_reference & none & 0 & 95.30 $\pm$ 4.85 & 0.40 $\pm$ 0.80 & 0.00 $\pm$ 0.00 & 2.13 $\pm$ 0.66 & 0/12 \\
+BC & history\_only & none & 50000 & 50.97 $\pm$ 9.67 & 6.17 $\pm$ 5.36 & 0.89 $\pm$ 1.04 & 22.92 $\pm$ 14.31 & 5/12 \\
+ReBRAC & history\_only & none & 50000 & 7.12 $\pm$ 3.87 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 33.39 $\pm$ 10.85 & 0/12 \\
+FQL & history\_only & none & 50000 & 9.25 $\pm$ 5.92 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 43.79 $\pm$ 28.18 & 3/12 \\
+ReBRAC100k & history\_only & none & 100000 & 16.59 $\pm$ 12.92 & 6.43 $\pm$ 12.86 & 5.10 $\pm$ 10.21 & 30.47 $\pm$ 10.83 & 1/12 \\
+ReBRAC200k & history\_only & none & 200000 & 34.02 $\pm$ 11.79 & 57.74 $\pm$ 19.91 & 51.89 $\pm$ 17.37 & 69.61 $\pm$ 30.79 & 7/12 \\
+ReBRAC\_BC100 & history\_only & none & 50000 & 81.91 $\pm$ 20.23 & 0.15 $\pm$ 0.29 & 0.00 $\pm$ 0.00 & 3.90 $\pm$ 2.42 & 0/12 \\
+GraphGuided\_lambda1 & history\_only & none & 100000 & 6.34 $\pm$ 4.00 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 50.80 $\pm$ 30.57 & 6/12 \\
+FQL\_alpha100 & history\_only & none & 50000 & 30.77 $\pm$ 18.43 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 17.94 $\pm$ 8.90 & 0/12 \\
+Anchor\_ReBRAC & observed\_reference & unbounded & 50000 & 92.08 $\pm$ 8.07 & 0.13 $\pm$ 0.25 & 0.00 $\pm$ 0.00 & 2.52 $\pm$ 1.05 & 0/12 \\
+Anchor\_BC & observed\_reference & unbounded & 50000 & 26.52 $\pm$ 7.56 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 27.01 $\pm$ 19.40 & 2/12 \\
+Guided\_lambda3 & history\_only & none & 100000 & 12.72 $\pm$ 8.78 & 4.84 $\pm$ 7.11 & 3.82 $\pm$ 5.91 & 29.89 $\pm$ 6.27 & 0/12 \\
+Observed\_reference\_only & observed\_reference & none & 0 & 95.30 $\pm$ 4.85 & 0.40 $\pm$ 0.80 & 0.00 $\pm$ 0.00 & 2.13 $\pm$ 0.66 & 0/12 \\
+Anchor\_ReBRAC\_10k & observed\_reference & unbounded & 10000 & 61.74 $\pm$ 36.14 & 1.50 $\pm$ 1.74 & 0.51 $\pm$ 0.60 & 22.57 $\pm$ 35.65 & 3/12 \\
+Anchor\_ReBRAC\_20k & observed\_reference & unbounded & 20000 & 66.29 $\pm$ 40.21 & 2.15 $\pm$ 2.49 & 1.16 $\pm$ 1.35 & 22.34 $\pm$ 37.15 & 3/12 \\
+Anchor\_ReBRAC\_30k & observed\_reference & unbounded & 30000 & 79.65 $\pm$ 19.34 & 6.49 $\pm$ 6.08 & 1.13 $\pm$ 1.31 & 8.72 $\pm$ 7.94 & 2/12 \\
+Anchor\_ReBRAC\_40k & observed\_reference & unbounded & 40000 & 24.71 $\pm$ 9.19 & 0.77 $\pm$ 1.32 & 0.21 $\pm$ 0.42 & 36.32 $\pm$ 30.04 & 4/12 \\
+ReBRAC\_BC100\_10k & history\_only & none & 10000 & 20.18 $\pm$ 3.04 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 24.16 $\pm$ 7.82 & 0/12 \\
+ReBRAC\_BC100\_20k & history\_only & none & 20000 & 24.08 $\pm$ 3.15 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 21.29 $\pm$ 3.97 & 0/12 \\
+ReBRAC\_BC100\_30k & history\_only & none & 30000 & 10.83 $\pm$ 6.16 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 47.07 $\pm$ 29.18 & 5/12 \\
+ReBRAC\_BC100\_40k & history\_only & none & 40000 & 17.39 $\pm$ 3.17 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 20.94 $\pm$ 4.91 & 0/12 \\
+FQL200k & history\_only & none & 200000 & 6.13 $\pm$ 2.88 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 44.91 $\pm$ 27.49 & 3/12 \\
+Anchor\_FQL & observed\_reference & unbounded & 50000 & 73.24 $\pm$ 37.99 & 0.05 $\pm$ 0.11 & 0.00 $\pm$ 0.00 & 17.78 $\pm$ 29.59 & 3/12 \\
+Anchor\_ReBRAC\_s260916 & observed\_reference & unbounded & 50000 & 21.64 $\pm$ 7.96 & 2.00 $\pm$ 2.33 & 0.85 $\pm$ 1.32 & 42.95 $\pm$ 27.61 & 6/12 \\
+BC200k & history\_only & none & 200000 & 17.55 $\pm$ 5.13 & 82.39 $\pm$ 5.10 & 79.24 $\pm$ 4.95 & 137.57 $\pm$ 4.23 & 12/12 \\
+Ours\_bound025 & observed\_reference & 0.25 & 50000 & 92.22 $\pm$ 11.92 & 0.14 $\pm$ 0.27 & 0.00 $\pm$ 0.00 & 2.74 $\pm$ 1.84 & 0/12 \\
+Ours\_bound050 & observed\_reference & 0.5 & 50000 & 95.02 $\pm$ 5.31 & 1.78 $\pm$ 2.95 & 0.00 $\pm$ 0.00 & 2.08 $\pm$ 0.94 & 0/12 \\
+Bound025\_noRL & observed\_reference & 0.25 & 50000 & 85.43 $\pm$ 13.74 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 3.75 $\pm$ 2.05 & 0/12 \\
+Bound050\_noRL & observed\_reference & 0.5 & 50000 & 66.59 $\pm$ 25.01 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 6.36 $\pm$ 3.56 & 0/12 \\
+Anchor\_ReBRAC\_s260917 & observed\_reference & unbounded & 50000 & 86.62 $\pm$ 16.63 & 5.87 $\pm$ 4.17 & 0.82 $\pm$ 0.96 & 5.92 $\pm$ 7.14 & 1/12 \\
+Ours\_bound050\_10k & observed\_reference & 0.5 & 10000 & 77.34 $\pm$ 30.40 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 5.46 $\pm$ 5.12 & 0/12 \\
+Ours\_bound050\_20k & observed\_reference & 0.5 & 20000 & 95.69 $\pm$ 3.23 & 2.58 $\pm$ 3.20 & 0.00 $\pm$ 0.00 & 1.92 $\pm$ 0.65 & 0/12 \\
+Ours\_bound050\_30k & observed\_reference & 0.5 & 30000 & 94.53 $\pm$ 4.28 & 3.64 $\pm$ 4.70 & 0.00 $\pm$ 0.00 & 2.03 $\pm$ 0.77 & 0/12 \\
+Ours\_bound050\_40k & observed\_reference & 0.5 & 40000 & 81.06 $\pm$ 26.32 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 4.82 $\pm$ 4.62 & 0/12 \\
+Ours\_bound025\_beta10 & observed\_reference & 0.25 & 50000 & 79.92 $\pm$ 23.54 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 4.71 $\pm$ 3.91 & 0/12 \\
+Ours\_bound050\_beta10 & observed\_reference & 0.5 & 50000 & 80.44 $\pm$ 13.17 & 19.37 $\pm$ 12.93 & 3.22 $\pm$ 4.35 & 4.15 $\pm$ 1.82 & 0/12 \\
+Ours\_bound040 & observed\_reference & 0.4 & 50000 & 95.10 $\pm$ 7.69 & 0.22 $\pm$ 0.44 & 0.00 $\pm$ 0.00 & 2.08 $\pm$ 1.12 & 0/12 \\
+Bound040\_noRL & observed\_reference & 0.4 & 50000 & 77.96 $\pm$ 18.74 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 4.69 $\pm$ 2.83 & 0/12 \\
+nominal & parameter\_reference & none & 0 & 95.66 $\pm$ 4.34 & 0.51 $\pm$ 0.77 & 0.00 $\pm$ 0.00 & 2.07 $\pm$ 0.63 & 0/36 \\
+BC & history\_only & none & 50000 & 50.40 $\pm$ 10.77 & 6.25 $\pm$ 6.47 & 0.99 $\pm$ 1.38 & 23.07 $\pm$ 14.26 & 14/36 \\
+ReBRAC\_BC100 & history\_only & none & 50000 & 82.38 $\pm$ 20.60 & 0.06 $\pm$ 0.12 & 0.00 $\pm$ 0.00 & 3.86 $\pm$ 2.48 & 0/36 \\
+FQL\_alpha100 & history\_only & none & 50000 & 46.10 $\pm$ 17.17 & 4.25 $\pm$ 2.46 & 1.51 $\pm$ 1.32 & 14.49 $\pm$ 7.61 & 0/36 \\
+Anchor\_FQL & observed\_reference & unbounded & 50000 & 82.00 $\pm$ 21.14 & 0.03 $\pm$ 0.06 & 0.00 $\pm$ 0.00 & 10.03 $\pm$ 14.31 & 4/36 \\
+Ours\_bound040 & observed\_reference & 0.4 & 50000 & 95.13 $\pm$ 7.88 & 0.28 $\pm$ 0.55 & 0.00 $\pm$ 0.00 & 2.05 $\pm$ 1.19 & 0/36 \\
+Bound040\_noRL & observed\_reference & 0.4 & 50000 & 78.48 $\pm$ 18.71 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 4.63 $\pm$ 2.86 & 0/36 \\
+\hline
+\end{tabular}

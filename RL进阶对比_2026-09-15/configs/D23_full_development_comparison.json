@@ -1,0 +1,24 @@
+{
+  "name": "D23_full_development_comparison",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101,
+    3102,
+    3103
+  ],
+  "protocol_extension": "simulation_contract_v3_single_seed.json",
+  "policies": {
+    "nominal": null,
+    "BC": "results/R00_bc_pilot/export_0050000.npz",
+    "ReBRAC_BC100": "results/R21_rebrac_bc100/export_0050000.npz",
+    "FQL_alpha100": "results/R22_fql_alpha100/export_0050000.npz",
+    "Anchor_FQL": "results/R32_anchor_fql/export_0050000.npz",
+    "Ours_bound040": "results/O07_bounded040_rl/export_0050000.npz",
+    "Bound040_noRL": "results/O08_bounded040_noRL/export_0050000.npz"
+  }
+}

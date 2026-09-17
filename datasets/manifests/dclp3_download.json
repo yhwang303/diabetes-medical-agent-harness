@@ -1,0 +1,466 @@
+{
+  "source_form": "https://public.jaeb.org/dataset/573",
+  "source_url": "https://live-jchrpublicdatasets.s3.amazonaws.com/Diabetes/Public%20Datasets/DCLP3%20Public%20Dataset%20-%20Release%203%20-%202022-08-04.zip",
+  "archive": "datasets/raw/dclp3/DCLP3 Public Dataset - Release 3 - 2022-08-04.zip",
+  "response_headers": {
+    "x-amz-id-2": "/UItYLJx0OaVdGARo/QjrZYX+4z9B7t0bGbP2HF0HXVnAVFTl5amRggiErza5dQdl4VlEanf9ms=",
+    "x-amz-request-id": "85FGMNS9QW94S32Q",
+    "Date": "Sat, 12 Sep 2026 04:24:48 GMT",
+    "Last-Modified": "Thu, 04 Aug 2022 18:08:08 GMT",
+    "ETag": "\"6ac948c533176049215762d6fd84998c\"",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "RFjtnZ3pDlo95Ht1b_tYZkDeBgmjEhRn",
+    "Accept-Ranges": "bytes",
+    "Content-Type": "multipart/form-data",
+    "Content-Length": "195304936",
+    "Server": "AmazonS3",
+    "Connection": "close"
+  },
+  "status": "downloaded_and_archive_verified",
+  "verified_at": "2026-09-12T04:26:38.031790+00:00",
+  "bytes": 195304936,
+  "sha256": "6dbe8580fe38612622f0ebf5da58fed04b4ed556d1e06bf3a67813791222f5dc",
+  "zip_crc": "passed",
+  "member_count": 87,
+  "members": [
+    {
+      "name": "Case Report Forms/00 - README - DCLP3 CRFs Summary.pdf",
+      "bytes": 224463,
+      "crc32": "93348356"
+    },
+    {
+      "name": "Case Report Forms/01a-Visit Information - Worksheet Variation A.pdf",
+      "bytes": 32531,
+      "crc32": "bdc759bb"
+    },
+    {
+      "name": "Case Report Forms/01b-Visit Information - Worksheet Variation B.pdf",
+      "bytes": 41404,
+      "crc32": "e0736c60"
+    },
+    {
+      "name": "Case Report Forms/01c-Visit Information - Worksheet Variation C.pdf",
+      "bytes": 38713,
+      "crc32": "b75ba9f7"
+    },
+    {
+      "name": "Case Report Forms/01d-Visit Information (Phone Call) - Worksheet Variation D.pdf",
+      "bytes": 41414,
+      "crc32": "14a8a02f"
+    },
+    {
+      "name": "Case Report Forms/01e-Visit Information (Unscheduled Contact) - Worksheet Variation E.pdf",
+      "bytes": 7635,
+      "crc32": "544b3a54"
+    },
+    {
+      "name": "Case Report Forms/02-Diabetes Screening (A) - Worksheet.pdf",
+      "bytes": 237687,
+      "crc32": "7bb64ccd"
+    },
+    {
+      "name": "Case Report Forms/03-Diabetes Physical Exam Worksheet.pdf",
+      "bytes": 57894,
+      "crc32": "23017eff"
+    },
+    {
+      "name": "Case Report Forms/04-Diabetes Local HbA1c (B) - Worksheet.pdf",
+      "bytes": 9317,
+      "crc32": "a213a77e"
+    },
+    {
+      "name": "Case Report Forms/05-Insulin - Worksheet.pdf",
+      "bytes": 42921,
+      "crc32": "f0f94f02"
+    },
+    {
+      "name": "Case Report Forms/06-Diabetes Socioeconomic Information (A) - Worksheet.pdf",
+      "bytes": 77861,
+      "crc32": "729cdf9c"
+    },
+    {
+      "name": "Case Report Forms/07-Device Quality Control Testing - Worksheet.pdf",
+      "bytes": 140133,
+      "crc32": "1f98506f"
+    },
+    {
+      "name": "Case Report Forms/08-Complete the Visit - Screening Worksheet.pdf",
+      "bytes": 191498,
+      "crc32": "8a191332"
+    },
+    {
+      "name": "Case Report Forms/10-Diabetes Medical History Updates (A) - Worksheet.pdf",
+      "bytes": 89661,
+      "crc32": "be9da59c"
+    },
+    {
+      "name": "Case Report Forms/11-Adverse Event (A) - Worksheet.pdf",
+      "bytes": 231401,
+      "crc32": "a504be23"
+    },
+    {
+      "name": "Case Report Forms/12-Run-In Review Visit Worksheet.pdf",
+      "bytes": 26154,
+      "crc32": "03ea9a97"
+    },
+    {
+      "name": "Case Report Forms/13-Complete the Visit - Randomization Worksheet.pdf",
+      "bytes": 172466,
+      "crc32": "e9cfb643"
+    },
+    {
+      "name": "Case Report Forms/14-Study Device Training - Worksheet.pdf",
+      "bytes": 84839,
+      "crc32": "7900bbf4"
+    },
+    {
+      "name": "Case Report Forms/15-Insulin Pump Settings - Worksheet.pdf",
+      "bytes": 95555,
+      "crc32": "99535cf0"
+    },
+    {
+      "name": "Case Report Forms/17-Medical Condition (A) - Worksheet.pdf",
+      "bytes": 118310,
+      "crc32": "e555e2e4"
+    },
+    {
+      "name": "Case Report Forms/18-Medications (C) - Worksheet.pdf",
+      "bytes": 143233,
+      "crc32": "74f403b7"
+    },
+    {
+      "name": "Case Report Forms/19-Diabetes Pregnancy Test (A) - Worksheet.pdf",
+      "bytes": 13903,
+      "crc32": "03957048"
+    },
+    {
+      "name": "Case Report Forms/20-Device Issue - Worksheet Variation A.pdf",
+      "bytes": 43349,
+      "crc32": "efb05624"
+    },
+    {
+      "name": "Case Report Forms/21-Complete the Visit - Follow-Up Worksheet.pdf",
+      "bytes": 430862,
+      "crc32": "1ddd75fd"
+    },
+    {
+      "name": "Case Report Forms/21a-Complete the Visit - Follow-Up (A) Worksheet.pdf",
+      "bytes": 432363,
+      "crc32": "07a368b2"
+    },
+    {
+      "name": "Case Report Forms/21b-Complete the Visit - Follow-Up (B) Worksheet.pdf",
+      "bytes": 253005,
+      "crc32": "fa23b5ab"
+    },
+    {
+      "name": "Case Report Forms/21c-Complete the Visit - Follow-Up (C) Worksheet.pdf",
+      "bytes": 440747,
+      "crc32": "0f50d9a6"
+    },
+    {
+      "name": "Case Report Forms/22-Diabetes Hypoglycemic Event (A) - Worksheet.pdf",
+      "bytes": 92578,
+      "crc32": "e8ff1776"
+    },
+    {
+      "name": "Case Report Forms/23-Diabetes Severe Hyper or DKA Event (A) - Worksheet.pdf",
+      "bytes": 89844,
+      "crc32": "dc941e49"
+    },
+    {
+      "name": "Case Report Forms/24-Final Status Worksheet - Variation A.pdf",
+      "bytes": 132079,
+      "crc32": "be139da7"
+    },
+    {
+      "name": "Case Report Forms/25-Final Status Worksheet - Variation B.pdf",
+      "bytes": 132468,
+      "crc32": "3633c830"
+    },
+    {
+      "name": "Data Files/AdvEvent_a.txt",
+      "bytes": 12426,
+      "crc32": "977bd23f"
+    },
+    {
+      "name": "Data Files/cgm.txt",
+      "bytes": 420701744,
+      "crc32": "a006e9cf"
+    },
+    {
+      "name": "Data Files/clarkeHypoAwarness.txt",
+      "bytes": 63992,
+      "crc32": "0ceeab7f"
+    },
+    {
+      "name": "Data Files/DeviceIssue_a.txt",
+      "bytes": 84796,
+      "crc32": "d9fc161c"
+    },
+    {
+      "name": "Data Files/DexcomClarityCGM_a.txt",
+      "bytes": 766707918,
+      "crc32": "967f3ee5"
+    },
+    {
+      "name": "Data Files/DexcomClarityMeter_a.txt",
+      "bytes": 534378,
+      "crc32": "5f3e6fd7"
+    },
+    {
+      "name": "Data Files/DiabDKAEvent_a.txt",
+      "bytes": 4620,
+      "crc32": "9dd2050d"
+    },
+    {
+      "name": "Data Files/diabetesDistressAdult.txt",
+      "bytes": 226180,
+      "crc32": "960b57ab"
+    },
+    {
+      "name": "Data Files/diabetesDistressParent.txt",
+      "bytes": 30360,
+      "crc32": "91cb329f"
+    },
+    {
+      "name": "Data Files/diabetesPersonality.txt",
+      "bytes": 79835,
+      "crc32": "50384933"
+    },
+    {
+      "name": "Data Files/DiabLocalHbA1c_a.txt",
+      "bytes": 75160,
+      "crc32": "eaf2ddab"
+    },
+    {
+      "name": "Data Files/DiabMedHistory_a.txt",
+      "bytes": 157662,
+      "crc32": "24a8fd5c"
+    },
+    {
+      "name": "Data Files/DiabPhysExam_a.txt",
+      "bytes": 24814,
+      "crc32": "a1b3cf3f"
+    },
+    {
+      "name": "Data Files/DiabPregnancyTest_a.txt",
+      "bytes": 42074,
+      "crc32": "b62213ec"
+    },
+    {
+      "name": "Data Files/DiabScreening_a.txt",
+      "bytes": 68282,
+      "crc32": "637a6ce3"
+    },
+    {
+      "name": "Data Files/DiabSocioEcon_a.txt",
+      "bytes": 29274,
+      "crc32": "00a1743c"
+    },
+    {
+      "name": "Data Files/DiabUnschedContact_a.txt",
+      "bytes": 62290,
+      "crc32": "1e67a64e"
+    },
+    {
+      "name": "Data Files/DiasendCGM_a.txt",
+      "bytes": 226834,
+      "crc32": "9edc8abe"
+    },
+    {
+      "name": "Data Files/FollowUpCTV_a.txt",
+      "bytes": 197976,
+      "crc32": "d7cfa543"
+    },
+    {
+      "name": "Data Files/gluIndices.txt",
+      "bytes": 252899,
+      "crc32": "61591f67"
+    },
+    {
+      "name": "Data Files/hyperglycemiaAvoidance.txt",
+      "bytes": 111484,
+      "crc32": "8294d8bc"
+    },
+    {
+      "name": "Data Files/hypoglycemiaConfidence.txt",
+      "bytes": 59170,
+      "crc32": "8b8431ca"
+    },
+    {
+      "name": "Data Files/hypoglycemiaFearAdult.txt",
+      "bytes": 85911,
+      "crc32": "29b2680d"
+    },
+    {
+      "name": "Data Files/hypoglycemiaFearTeen.txt",
+      "bytes": 41924,
+      "crc32": "cc5c7e82"
+    },
+    {
+      "name": "Data Files/hypoglycemiaFearTeenParent.txt",
+      "bytes": 36352,
+      "crc32": "7201366e"
+    },
+    {
+      "name": "Data Files/inspireAdult.txt",
+      "bytes": 151933,
+      "crc32": "c62d9245"
+    },
+    {
+      "name": "Data Files/inspireTeen.txt",
+      "bytes": 54561,
+      "crc32": "ce456da9"
+    },
+    {
+      "name": "Data Files/inspireTeenParent.txt",
+      "bytes": 57466,
+      "crc32": "8911a7f1"
+    },
+    {
+      "name": "Data Files/InsulinPumpSettings_a.txt",
+      "bytes": 836144,
+      "crc32": "2cec720a"
+    },
+    {
+      "name": "Data Files/Insulin_a.txt",
+      "bytes": 42104,
+      "crc32": "b0c457bd"
+    },
+    {
+      "name": "Data Files/Ketone_a.txt",
+      "bytes": 215908,
+      "crc32": "24f62304"
+    },
+    {
+      "name": "Data Files/MedicalCondition_a.txt",
+      "bytes": 77866,
+      "crc32": "949b31d0"
+    },
+    {
+      "name": "Data Files/Medication_a.txt",
+      "bytes": 243854,
+      "crc32": "616ec65a"
+    },
+    {
+      "name": "Data Files/OtherCGM_a.txt",
+      "bytes": 17519890,
+      "crc32": "431add70"
+    },
+    {
+      "name": "Data Files/PtFinalStat_a.txt",
+      "bytes": 860,
+      "crc32": "84128354"
+    },
+    {
+      "name": "Data Files/PtRoster_a.txt",
+      "bytes": 23886,
+      "crc32": "f67dd823"
+    },
+    {
+      "name": "Data Files/Pump_BasalRateChange.txt",
+      "bytes": 133817061,
+      "crc32": "db03c523"
+    },
+    {
+      "name": "Data Files/Pump_BolusDelivered.txt",
+      "bytes": 12777338,
+      "crc32": "a3c5f4cb"
+    },
+    {
+      "name": "Data Files/Pump_CGMGlucoseValue.txt",
+      "bytes": 223401886,
+      "crc32": "da6f40ee"
+    },
+    {
+      "name": "Data Files/QCTest_a.txt",
+      "bytes": 43018,
+      "crc32": "d6b132b2"
+    },
+    {
+      "name": "Data Files/RandomizationCTV_a.txt",
+      "bytes": 5456,
+      "crc32": "ee64e33f"
+    },
+    {
+      "name": "Data Files/RocheMeter_a.txt",
+      "bytes": 2354140,
+      "crc32": "8a5c54bf"
+    },
+    {
+      "name": "Data Files/RunInReview_a.txt",
+      "bytes": 10334,
+      "crc32": "448803a6"
+    },
+    {
+      "name": "Data Files/SampleResults_a.txt",
+      "bytes": 61820,
+      "crc32": "61085eb1"
+    },
+    {
+      "name": "Data Files/ScreeningCTV_a.txt",
+      "bytes": 5238,
+      "crc32": "8153777d"
+    },
+    {
+      "name": "Data Files/systemUsability.txt",
+      "bytes": 35706,
+      "crc32": "6e9aa602"
+    },
+    {
+      "name": "Data Files/technologyAcceptance.txt",
+      "bytes": 146059,
+      "crc32": "0ec9d062"
+    },
+    {
+      "name": "Data Files/technologyExpectations.txt",
+      "bytes": 71169,
+      "crc32": "580658fe"
+    },
+    {
+      "name": "Data Files/Training_a.txt",
+      "bytes": 39866,
+      "crc32": "9f0370c4"
+    },
+    {
+      "name": "Data Files/VisitInfo_a.txt",
+      "bytes": 325526,
+      "crc32": "043cf04d"
+    },
+    {
+      "name": "DCLP3_Clinical_Protocol_Pivotal_Study_v10.0 5 NOV 2018.pdf",
+      "bytes": 620786,
+      "crc32": "1acb4d72"
+    },
+    {
+      "name": "Participant Questionnaires/Hypoglycemia Confidence Scale.pdf",
+      "bytes": 15696,
+      "crc32": "e6fd5e9e"
+    },
+    {
+      "name": "Participant Questionnaires/System Usability Scale.pdf",
+      "bytes": 177462,
+      "crc32": "1e9f3194"
+    },
+    {
+      "name": "Participant Questionnaires/Technology Acceptance Questionnaire.pdf",
+      "bytes": 144621,
+      "crc32": "f2f1002c"
+    },
+    {
+      "name": "Participant Questionnaires/Technology Expectations Questionnaire.pdf",
+      "bytes": 146651,
+      "crc32": "1acced0c"
+    },
+    {
+      "name": "ReadMe.rtf",
+      "bytes": 1566070,
+      "crc32": "5bbc52c0"
+    }
+  ],
+  "extracted": false,
+  "patient_data_parsed": false,
+  "md5": "6ac948c533176049215762d6fd84998c",
+  "md5_matches_server_etag": true
+}

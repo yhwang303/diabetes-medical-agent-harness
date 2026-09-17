@@ -1,0 +1,11 @@
+.venv/
+.cache/
+.pytest_cache/
+runtime/
+__pycache__/
+*.egg-info/
+.DS_Store
+app/node_modules/
+app/dist/
+app/src-tauri/target/
+app/src-tauri/gen/

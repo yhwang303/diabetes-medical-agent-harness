@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "common_logged_steps": 65,
+  "through_step": 1625,
+  "maximum_absolute_loss_difference": 0.0,
+  "replay_last_step": 2000,
+  "training_seed": 260915,
+  "scope": "exact same RNG continuation to archive failed policy; not an independent repetition"
+}

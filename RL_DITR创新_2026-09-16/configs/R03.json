@@ -1,0 +1,41 @@
+{
+  "name": "R03_reference_categorical",
+  "seed": 260915,
+  "model": {
+    "width": 256,
+    "layers": 3,
+    "heads": 8,
+    "ff": 2048,
+    "dropout": 0.4,
+    "categorical_heads": true
+  },
+  "batch_size": 256,
+  "horizon": 12,
+  "amp": true,
+  "mu": 0.1,
+  "weight_decay": 0.0001,
+  "target_tau": 0.005,
+  "log_every": 25,
+  "validation_per_patient": 32,
+  "final_validation_per_patient": 128,
+  "patient": {
+    "lr": 0.001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 1000
+  },
+  "policy": {
+    "lr": 0.001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 2000
+  },
+  "adaptations": [
+    "continuous censored Gaussian; supervised action MSE replaces categorical supervised CE",
+    "n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal",
+    "reward auxiliary regresses unscaled status before 1/12 time conversion",
+    "one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained",
+    "Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3."
+  ],
+  "selection": "fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation"
+}

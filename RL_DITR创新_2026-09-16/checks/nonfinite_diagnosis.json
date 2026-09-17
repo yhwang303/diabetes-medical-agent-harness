@@ -1,0 +1,41 @@
+{
+  "weights_all_finite": true,
+  "cases": [
+    {
+      "patient": "LOOP_000264",
+      "bad_outputs": {
+        "glucose": 27,
+        "wtr": 54,
+        "states": 6912,
+        "reward": 24
+      },
+      "inputs_finite": true,
+      "modes": {
+        "math_fp32": {
+          "glucose": 0,
+          "wtr": 0,
+          "states": 0,
+          "reward": 0,
+          "memory": 0,
+          "initial_value": 0
+        },
+        "default_bf16": {
+          "glucose": 0,
+          "wtr": 0,
+          "states": 0,
+          "reward": 0,
+          "memory": 0,
+          "initial_value": 0
+        },
+        "math_bf16": {
+          "glucose": 0,
+          "wtr": 0,
+          "states": 0,
+          "reward": 0,
+          "memory": 0,
+          "initial_value": 0
+        }
+      }
+    }
+  ]
+}

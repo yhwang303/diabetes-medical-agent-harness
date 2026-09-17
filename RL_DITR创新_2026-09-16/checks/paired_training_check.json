@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "groups": 504,
+  "arms": 2520,
+  "scenario_count": 72,
+  "data_hashes_verified": true,
+  "shared_observed_histories_identical": true,
+  "future_history_index_exact": true,
+  "paired_zero_error": 6.103448367371367e-16,
+  "paired_shared_offset_invariance": 3.1271463690014586e-14,
+  "loop_patients": 225,
+  "loop_origins": 1653421,
+  "checks": [
+    {
+      "mode": "recursive",
+      "real_loss": 1.9314544200897217,
+      "sim_factual_loss": 7.899258613586426,
+      "pair_loss": 0.18286532163619995,
+      "gradient_norm": 109.99616241455078,
+      "peak_gpu_gb": 7.072497152,
+      "seconds": 0.9793100357055664,
+      "patient_transition_gradient": true,
+      "policy_and_target_frozen": true
+    },
+    {
+      "mode": "action_prefix",
+      "real_loss": 1.384332299232483,
+      "sim_factual_loss": 6.449040412902832,
+      "pair_loss": 0.026494529098272324,
+      "gradient_norm": 85.345703125,
+      "peak_gpu_gb": 3.0956544,
+      "seconds": 0.08112120628356934,
+      "patient_transition_gradient": true,
+      "policy_and_target_frozen": true
+    }
+  ],
+  "not_efficacy_evidence": true
+}

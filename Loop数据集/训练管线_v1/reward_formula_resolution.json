@@ -1,0 +1,32 @@
+{
+  "source_commit": "5080fdbe43979f9b8a9616fbc120aae4ac25842a",
+  "glucose_mg_dl": [
+    60.0,
+    70.0,
+    108.0,
+    112.5,
+    120.0,
+    180.0,
+    250.0
+  ],
+  "printed_grouping_score": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0
+  ],
+  "author_implementation_score": [
+    -1.0,
+    -0.000671686530251181,
+    0.992481032536979,
+    0.9999998930054682,
+    0.9814024098833557,
+    0.0026694825106380327,
+    -1.0
+  ],
+  "reference_sha256": "a893c812b9aaf1aca98061adec21d03e60068f9dac2263b9b45cb76b007bc7e0",
+  "trigger": "Interval with an intervening low glucose must receive a lower reward; printed grouping failed this regression."
+}

@@ -1,0 +1,1372 @@
+{
+  "source": "datasets/raw/iobp2/IOBP2 RCT Public Dataset.zip",
+  "archive_sha256": "f5e70d356c2a154d872de85259a08fdeafc415dd37c5c694e5a884b4864bbab4",
+  "safe_paths": true,
+  "all_crc_and_size_valid": true,
+  "files": [
+    {
+      "path": "CRFs/IOBP2AdvEvent.pdf",
+      "bytes": 286065,
+      "crc32": "2ca1aeb4",
+      "sha256": "4430b175efedfac9343ae77f85453cf353ef83b35b5f5a4a578fe26e7a3031dc"
+    },
+    {
+      "path": "CRFs/IOBP2BasalRtChg.pdf",
+      "bytes": 42964,
+      "crc32": "a1c8051b",
+      "sha256": "eba21224a2fb2d7231567a94a4eb74f211f9cb2997f05033301367640cea3775"
+    },
+    {
+      "path": "CRFs/IOBP2BGRuniLetComp.pdf",
+      "bytes": 18328,
+      "crc32": "f5a93c3c",
+      "sha256": "0525a6e8e23f6146bc69e724e7d0b140a6a942d899529663e5ce76cf8953840b"
+    },
+    {
+      "path": "CRFs/IOBP2BGRuniLetInit.pdf",
+      "bytes": 18917,
+      "crc32": "e98850b2",
+      "sha256": "7696cf420f0bb1ed2bb5f96c6e53cefed9bac37f6e5d7d64f6bb11aa7c01c0a0"
+    },
+    {
+      "path": "CRFs/IOBP2CGMAssess.pdf",
+      "bytes": 68557,
+      "crc32": "4cb8cc1f",
+      "sha256": "86bd90ded0b0063dbb51ddb6c69893ac574f166bc5a02710aa6efb22181cfa9b"
+    },
+    {
+      "path": "CRFs/IOBP2CGMUse.pdf",
+      "bytes": 73518,
+      "crc32": "8ded0bf8",
+      "sha256": "fce0d044a26ec747876cb8c186882c212dc7e609d9bc93a5ca8e8e9c81ca5309"
+    },
+    {
+      "path": "CRFs/IOBP2CompVisit.pdf",
+      "bytes": 58373,
+      "crc32": "d338f729",
+      "sha256": "7404225ac537bc6b17e7dc2cf35f949f3879c76d0e9424ecea623e9590587237"
+    },
+    {
+      "path": "CRFs/IOBP2ContDeviceDtTmVer.pdf",
+      "bytes": 71027,
+      "crc32": "7ef2f8d8",
+      "sha256": "5b1eb8f2c555732769789ec37867ab00eb137ee0baa1be9a09c0606dff5f31f1"
+    },
+    {
+      "path": "CRFs/IOBP2CorrectDose.pdf",
+      "bytes": 42119,
+      "crc32": "388fdf4a",
+      "sha256": "862efced3bfc6b7df70fd586d2a74c81f31eadbb5c250196cdd1f231eb813791"
+    },
+    {
+      "path": "CRFs/IOBP2DeviceDtTmVer.pdf",
+      "bytes": 74958,
+      "crc32": "51130264",
+      "sha256": "82953b9d002d0896bdead2541b72d1e158cd4c59b8d56652d7e1c16b7c41ea03"
+    },
+    {
+      "path": "CRFs/IOBP2DeviceIssue.pdf",
+      "bytes": 128049,
+      "crc32": "63d4f2a8",
+      "sha256": "568af5da032c5b7a24a42593f250366f7a76dac4418f5683f64c4c24179adb1e"
+    },
+    {
+      "path": "CRFs/IOBP2DexcomTrain.pdf",
+      "bytes": 17335,
+      "crc32": "f4c65577",
+      "sha256": "a03f8f0fd9c19e32d642aadc00d31f3a13e877d29877de5e7d6da166f0814de1"
+    },
+    {
+      "path": "CRFs/IOBP2DiabDKAEvent.pdf",
+      "bytes": 66997,
+      "crc32": "3e688587",
+      "sha256": "9a91a954fded06660e33c75d954a2974d92eeb74f55b824054485294a387bbec"
+    },
+    {
+      "path": "CRFs/IOBP2DiabHypoEvent.pdf",
+      "bytes": 120215,
+      "crc32": "f5d3adbb",
+      "sha256": "3fe3d06c383b0cc2ee5238ad3c69f1c824de83ec2f6f4539c03c909eb53ca859"
+    },
+    {
+      "path": "CRFs/IOBP2DiabLocalHbA1c.pdf",
+      "bytes": 12374,
+      "crc32": "0f8d591b",
+      "sha256": "c42c8624248b14275f059abeaa9e2ea218ef12f9f1ed4e0149a8e6d8600b9256"
+    },
+    {
+      "path": "CRFs/IOBP2DiabMedHistory.pdf",
+      "bytes": 87649,
+      "crc32": "90349cb8",
+      "sha256": "424d2c9626573f68717a3ce32dbb2b9846554217e827e22a04e16bd593f65e97"
+    },
+    {
+      "path": "CRFs/IOBP2DiabScreening.pdf",
+      "bytes": 192091,
+      "crc32": "1bed80f8",
+      "sha256": "72c62d7a28c15874fc61f6edc3159d30d13a6b85793e15e6561416511c39bbda"
+    },
+    {
+      "path": "CRFs/IOBP2DiabSocioEcon.pdf",
+      "bytes": 68436,
+      "crc32": "a97b7eca",
+      "sha256": "3a454a177c536b35e6458b510c21cff2fd3b18c66ab273bd7612f00c85212b8e"
+    },
+    {
+      "path": "CRFs/IOBP2DiabTreatment.pdf",
+      "bytes": 23208,
+      "crc32": "10a9d8d5",
+      "sha256": "6985e9636f91528bcce98ca9adf5a30ae48b17da58452674a1eba9a93f0bb3a3"
+    },
+    {
+      "path": "CRFs/IOBP2DiabUnschedContact.pdf",
+      "bytes": 47040,
+      "crc32": "7ee95794",
+      "sha256": "355a9ec90ba2459c19f41e5654d4e251f62bce6b27408167f88fbf89b1300d49"
+    },
+    {
+      "path": "CRFs/IOBP2DiscontiLet.pdf",
+      "bytes": 56597,
+      "crc32": "f603f848",
+      "sha256": "fb6e010a8a30fbba4a83f7a0ccba676584858cc2f76f363c978476217352a5fd"
+    },
+    {
+      "path": "CRFs/IOBP2eGFR.pdf",
+      "bytes": 10022,
+      "crc32": "e5a255ce",
+      "sha256": "6ee85ae656dd23ac353be06977258c04145b0d66688a94972650c3ae6b8c540c"
+    },
+    {
+      "path": "CRFs/IOBP2EligConfirm.pdf",
+      "bytes": 8332,
+      "crc32": "533232d1",
+      "sha256": "5f95514d336018dbfc84057120d963442d8e404ba77b321a88f64a22a48b0fb0"
+    },
+    {
+      "path": "CRFs/IOBP2Eligibility.pdf",
+      "bytes": 186217,
+      "crc32": "d9430bf6",
+      "sha256": "73dd071808620b38db7dedd3c47659946564a041ad9979fcafe5624c1f1c797f"
+    },
+    {
+      "path": "CRFs/IOBP2ExtStatus.pdf",
+      "bytes": 86892,
+      "crc32": "c4cb5fc0",
+      "sha256": "4ce29bb695199ee5d08b25a7a5f1e5ab0ee482c4b8d22ce114cf52989ef28d56"
+    },
+    {
+      "path": "CRFs/IOBP2HeightWeight.pdf",
+      "bytes": 44850,
+      "crc32": "29cc0718",
+      "sha256": "56632eaf2e32b8c8e907ca2fc26b3834c815c59b52a8e6d928e1ef3981a76a2c"
+    },
+    {
+      "path": "CRFs/IOBP2iLetRcmndDose.pdf",
+      "bytes": 16480,
+      "crc32": "6b57220c",
+      "sha256": "68e8edef410b0448c37860e3f3a0b29085c2af7ab9fb0ae5ce777fbbf3334671"
+    },
+    {
+      "path": "CRFs/IOBP2iLetTrain.pdf",
+      "bytes": 81023,
+      "crc32": "ac38b7d6",
+      "sha256": "d17bc59d0b967029f1f6dc62c6ae000af6ef8e52738d17ef2b898088363c2ae2"
+    },
+    {
+      "path": "CRFs/IOBP2Insulin.pdf",
+      "bytes": 39284,
+      "crc32": "6ce564df",
+      "sha256": "fe29b4cc5da621ba70b88b396bd565da0313492acf648bc5d27e335995f3baf2"
+    },
+    {
+      "path": "CRFs/IOBP2ManualInsulinInj.pdf",
+      "bytes": 12637,
+      "crc32": "26186941",
+      "sha256": "9d8587f82d734e5e84bfedb02e62acdda3e796b26e0d3bc0d24850dff3d52d84"
+    },
+    {
+      "path": "CRFs/IOBP2MealDoses.pdf",
+      "bytes": 48078,
+      "crc32": "23cf02da",
+      "sha256": "01210dc471b8b765330a4f59c32c803e094cf8f78d19b07b6752c60feff5f79a"
+    },
+    {
+      "path": "CRFs/IOBP2MedicalCondition.pdf",
+      "bytes": 91686,
+      "crc32": "e3c7e6e1",
+      "sha256": "bb6f7f8374544ea48eaf837324738f1936e16b0ca5176e9f45d0ea05a7ee6883"
+    },
+    {
+      "path": "CRFs/IOBP2Medication.pdf",
+      "bytes": 113102,
+      "crc32": "fb9aec85",
+      "sha256": "32cfb73d6b9fc64131bdb71beb38ec29fc233678f7889849d03c7536754cbd0b"
+    },
+    {
+      "path": "CRFs/IOBP2PregMenstrInfo.pdf",
+      "bytes": 107292,
+      "crc32": "c1fd4a36",
+      "sha256": "74396da57ee7debbe8bfd7c56f3ad9ba28da8a120e7cfbdbded6294452226347"
+    },
+    {
+      "path": "CRFs/IOBP2PSBPUOS.pdf",
+      "bytes": 146714,
+      "crc32": "1607c557",
+      "sha256": "90779ac92079a0e050ceff9f11f4727b9b98d3c3ee3c6084a16c1de46fa99a1c"
+    },
+    {
+      "path": "CRFs/IOBP2PSBPUOSParent.pdf",
+      "bytes": 132093,
+      "crc32": "f2c76301",
+      "sha256": "3a00fb989b82b89b905fed93eda27e523298024f4d9631b760c37dfc92e33f8d"
+    },
+    {
+      "path": "CRFs/IOBP2PSClarke.pdf",
+      "bytes": 110446,
+      "crc32": "c572bb01",
+      "sha256": "f4002e786e7989b0fc68757d65a9db5f948505108bad72fd82a48644296fa5cc"
+    },
+    {
+      "path": "CRFs/IOBP2PSClarkeParent.pdf",
+      "bytes": 111267,
+      "crc32": "50f54163",
+      "sha256": "d9bea253a5c1091a499dd4bf9f204836761d87c18adede22113ceeb7461f9761"
+    },
+    {
+      "path": "CRFs/IOBP2PSDiabTech.pdf",
+      "bytes": 147418,
+      "crc32": "152fc8c2",
+      "sha256": "2329344d3da6393100aabab8af5321e3ba1c1e39a087828d0f818c23b8d174e2"
+    },
+    {
+      "path": "CRFs/IOBP2PSHFSAdultNoPart2.pdf",
+      "bytes": 123764,
+      "crc32": "40625d0c",
+      "sha256": "1c8b6f486ef8fecd8f9833f2b7f9b35d98166089da1524647cd3075ff5ba005e"
+    },
+    {
+      "path": "CRFs/IOBP2PSHFSChildNoPart2.pdf",
+      "bytes": 165305,
+      "crc32": "b42ca5c6",
+      "sha256": "2bc2a95f72bc509dae56f15be14c11406288cc0921458636126e1e260a557987"
+    },
+    {
+      "path": "CRFs/IOBP2PSHFSParentNoPart2.pdf",
+      "bytes": 164892,
+      "crc32": "77101165",
+      "sha256": "7ee9857a6f6fde992689174562b68f7da6c3bceb1d5c06eb6d76842a30fcd30c"
+    },
+    {
+      "path": "CRFs/IOBP2PSHypoConf.pdf",
+      "bytes": 62166,
+      "crc32": "3dee846f",
+      "sha256": "377c0afb128a87e82da4327217948511781a9db1de8214dfa9d12489b73daea9"
+    },
+    {
+      "path": "CRFs/IOBP2PSINSPAdultBase.pdf",
+      "bytes": 154669,
+      "crc32": "9b5f23ab",
+      "sha256": "6da3136f6e49234e0aede1472d06229c2fa435a8262bc52385d315c8c256bcab"
+    },
+    {
+      "path": "CRFs/IOBP2PSINSPAdultPost.pdf",
+      "bytes": 147677,
+      "crc32": "d4fb2649",
+      "sha256": "824ecc5c4e9762c94fb3f069c1b3b369af00c09f9df5d7fdb08778d0d224a3d1"
+    },
+    {
+      "path": "CRFs/IOBP2PSINSPParentBase.pdf",
+      "bytes": 175688,
+      "crc32": "a8fec8de",
+      "sha256": "7f2b87699379d53258bbcb2731715d8a2381c6c1136124a008a5e4581771b207"
+    },
+    {
+      "path": "CRFs/IOBP2PSINSPParentPost.pdf",
+      "bytes": 169792,
+      "crc32": "4890ad9b",
+      "sha256": "1a059f0c28807141202dd589aeb649acb340ea0d0397e686093d9e7566e16c34"
+    },
+    {
+      "path": "CRFs/IOBP2PSINSPYouthBase.pdf",
+      "bytes": 143888,
+      "crc32": "689549b1",
+      "sha256": "6a33ceaf65fa0aaa29e12fd1ff01c55c23642364f3a64bf3c77e5d26c7971753"
+    },
+    {
+      "path": "CRFs/IOBP2PSINSPYouthPost.pdf",
+      "bytes": 141329,
+      "crc32": "6a58e154",
+      "sha256": "825e6b1029978d4195a4c8f8ae643a48d6e1547815bd22c0d9aac1a66ec4d0eb"
+    },
+    {
+      "path": "CRFs/IOBP2PSPAIDCChild.pdf",
+      "bytes": 127950,
+      "crc32": "629c8d16",
+      "sha256": "b5d8bdedf16a82f99df16764094d213937a99eba6fba95b547745edeb758af4d"
+    },
+    {
+      "path": "CRFs/IOBP2PSPAIDTTeen.pdf",
+      "bytes": 131778,
+      "crc32": "1dc36106",
+      "sha256": "585f30d509f79ea5fc455d67d43ac8ce1c6210f5aba62d361f03e276811a1b38"
+    },
+    {
+      "path": "CRFs/IOBP2PSPastExpAP.pdf",
+      "bytes": 119164,
+      "crc32": "6f6a6c27",
+      "sha256": "57c36b5e99059cc89b9c69fa981664ea2595b84cfa68baade69aceabb5fae238"
+    },
+    {
+      "path": "CRFs/IOBP2PSPastExpAPParent.pdf",
+      "bytes": 150159,
+      "crc32": "2bd080b5",
+      "sha256": "733f9aa873cc1919ae3fc5566fb92a4c54708845cee304a0c8f62074f1d6a7e0"
+    },
+    {
+      "path": "CRFs/IOBP2PSPPAIDCParent.pdf",
+      "bytes": 134224,
+      "crc32": "031861e7",
+      "sha256": "315d9d9eb6524a2a5d265252a280572fcd5780ddeded4dcc52bc773fbece21a3"
+    },
+    {
+      "path": "CRFs/IOBP2PSPPAIDTParent.pdf",
+      "bytes": 133437,
+      "crc32": "8b5bd598",
+      "sha256": "0cbd6094e759afde1264e546803ffde72b9a469071537c5572b1476ac4afef33"
+    },
+    {
+      "path": "CRFs/IOBP2PST1DDS.pdf",
+      "bytes": 156476,
+      "crc32": "40d00f64",
+      "sha256": "fb232cdcf696dcd2922d8b31cfa0ab20423cf02ce95b667223dffca1b66edc45"
+    },
+    {
+      "path": "CRFs/IOBP2PSTransDailyQuest.pdf",
+      "bytes": 100219,
+      "crc32": "71557c25",
+      "sha256": "70dc251dd1893cc9e6bf223063c7cf9047cd9d9518a246a9984a404b0615ee65"
+    },
+    {
+      "path": "CRFs/IOBP2PSWeeklyQuest.pdf",
+      "bytes": 136833,
+      "crc32": "0bc7279a",
+      "sha256": "0d0365bf8fee041cec43fe5fc441f321d6324d3357343b0ac5de3662a5d9fbe0"
+    },
+    {
+      "path": "CRFs/IOBP2PSWHO5.pdf",
+      "bytes": 73397,
+      "crc32": "86ae1001",
+      "sha256": "9db4d1f7e223a82eeb13d0b627994a9ca2c0f2e870891a6e626532ea08599f24"
+    },
+    {
+      "path": "CRFs/IOBP2PtFinalStat.pdf",
+      "bytes": 137133,
+      "crc32": "725846cc",
+      "sha256": "9d0fdacce7536610fccb2a863ad6a0c32006120ad6f20f93f6309b5363bb4832"
+    },
+    {
+      "path": "CRFs/IOBP2RandBaseInfo.pdf",
+      "bytes": 66508,
+      "crc32": "10efc382",
+      "sha256": "e4fc2394301d3eb502ef1e1e9e0cdaddb12f5d6e48017dec0f6276c6908f88e4"
+    },
+    {
+      "path": "CRFs/IOBP2RunInRev.pdf",
+      "bytes": 51784,
+      "crc32": "3704783d",
+      "sha256": "cc6e5347f01e6388251bb728e1db0d0b10fb1f575ae530351b2f561080351e53"
+    },
+    {
+      "path": "CRFs/IOBP2VirtVisInfo.pdf",
+      "bytes": 48176,
+      "crc32": "ab2d5148",
+      "sha256": "1c0a47d4f23d1b70c28900173cacdabb1eb4abeb6da0b0dbc8f65007aa79cb40"
+    },
+    {
+      "path": "CRFs/IOBP2VisitInfo.pdf",
+      "bytes": 37856,
+      "crc32": "521a8cb2",
+      "sha256": "66f65b66f867290af4d78e5271ce73e4644f8fdbd26efedda8544f09fdc7fd21"
+    },
+    {
+      "path": "Data Tables/IOBP2AdvEvent.txt",
+      "bytes": 71310,
+      "crc32": "c70b4c25",
+      "sha256": "f0afe5f5dbb91acc6f401b2dfccc3b281243e78c0bb559d0a4bd0cb704349b60"
+    },
+    {
+      "path": "Data Tables/IOBP2BasalRtChg.txt",
+      "bytes": 307,
+      "crc32": "e78bd530",
+      "sha256": "1836ba436f958ec0727536a30c98877ee8174248a9be1ec6b9759b9770220d5b"
+    },
+    {
+      "path": "Data Tables/IOBP2BGRuniLetComp.txt",
+      "bytes": 897,
+      "crc32": "877c2ab4",
+      "sha256": "21fab5cafd2fb7b3bc9efaa7bae5a8d095c588a12bd2266d98e1fa134ccf6c4f"
+    },
+    {
+      "path": "Data Tables/IOBP2BGRuniLetInit.txt",
+      "bytes": 897,
+      "crc32": "265ad03c",
+      "sha256": "d78cfafe5adad8418bcf4f9fc585961c0945fad671be3e5e5031d59b4e0824a3"
+    },
+    {
+      "path": "Data Tables/IOBP2CGMAssess.txt",
+      "bytes": 13951,
+      "crc32": "2301407f",
+      "sha256": "a06a51e163210e2be7c66d3ba894f113fb93e5cd7fcd63584b8f4039fc96373a"
+    },
+    {
+      "path": "Data Tables/IOBP2CGMUse.txt",
+      "bytes": 6388,
+      "crc32": "491e1cae",
+      "sha256": "8f18036dbcf13adf33849b515df02a205ee3f6780c30925d765392d8cc8ee5e5"
+    },
+    {
+      "path": "Data Tables/IOBP2CompVisit.txt",
+      "bytes": 92078,
+      "crc32": "ac95767b",
+      "sha256": "588f36bfb6d38b5b0bfe4f34a7921f4ac2df7e4bb7d911307dd508671044f73c"
+    },
+    {
+      "path": "Data Tables/IOBP2ContDeviceDtTmVer.txt",
+      "bytes": 15524,
+      "crc32": "f38ac142",
+      "sha256": "b870d4800b304d71ff3ac4712adec7f59b0fc374bb21480610de6d36254676d9"
+    },
+    {
+      "path": "Data Tables/IOBP2CorrectDose.txt",
+      "bytes": 16282,
+      "crc32": "bbe83166",
+      "sha256": "6c8def279fd517ecd646cf5356f4516c1d597a9122903444a8b97911f4176907"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceBGM.txt",
+      "bytes": 519741,
+      "crc32": "5cf6df45",
+      "sha256": "6f0444bfc09aa76a457a81f0da025a4b73bf8f19c2861b51c16abe786b35d07c"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceCGM.txt",
+      "bytes": 822215233,
+      "crc32": "044bc289",
+      "sha256": "1b3e6301227064877676704aead5c329f69bee8ea679263f068b5d1722e83c8a"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceCGMAlertSet.txt",
+      "bytes": 512086,
+      "crc32": "2a4c00e5",
+      "sha256": "565523688ed3129b6f03613232d924ecda796935a06fd7e3c5e62b84aa61889e"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceDtTmVer.txt",
+      "bytes": 80156,
+      "crc32": "47d363c7",
+      "sha256": "0c0f8d265736fdcc9385a1bd3fb14abb062ed710f975b4430c4ebce4de095f46"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceiLet.txt",
+      "bytes": 1152217869,
+      "crc32": "78af64b1",
+      "sha256": "7a7f1f0841928a68ee750befa57549c462a49e8e3c617ecbc213d7d1c1630e83"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceIssue.txt",
+      "bytes": 53574,
+      "crc32": "fc8c4c83",
+      "sha256": "cb96f3536ff7141e919d867ed903431936a3b3f1f1e241abcf607118ef5e07b1"
+    },
+    {
+      "path": "Data Tables/IOBP2DeviceKetone.txt",
+      "bytes": 96204,
+      "crc32": "995cd6fa",
+      "sha256": "20b70e3a1f1213757902f18ef4d911a11f9478b3e00ff9249cd4695b21aa9661"
+    },
+    {
+      "path": "Data Tables/IOBP2DexcomTrain.txt",
+      "bytes": 2341,
+      "crc32": "2ffa1e48",
+      "sha256": "2a6dc51681cf50d4feafb434f0786b3be92f46642bf9c7791eef0c70d24e10e4"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabDKAEvent.txt",
+      "bytes": 32888,
+      "crc32": "155a2088",
+      "sha256": "f0e6e4cf4521fa437f63e4fdd417d42f47b931f8c17cb16f4f2804dfa1ce7df9"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabHypoEvent.txt",
+      "bytes": 2735,
+      "crc32": "85d4331b",
+      "sha256": "ce1c7f80d8f1c15cedc28ca4d40b981c9532f7db5dc0bba6a460b7fb8d79b765"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabLocalHbA1c.txt",
+      "bytes": 17374,
+      "crc32": "310f13d9",
+      "sha256": "c250d7b75d33d8c37508d3205c88f6201dff3609dd82468cddec29efe45d95e6"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabMedHistory.txt",
+      "bytes": 142160,
+      "crc32": "ab16cb89",
+      "sha256": "01866a8fc2e3f0aad52f6a159ed4fb3c58bf40fa1282f0d40bee85e7ba4a60fa"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabScreening.txt",
+      "bytes": 79401,
+      "crc32": "9d57f15c",
+      "sha256": "6285b63016b5c3888eff8ceb445cab6326d4a89ba073e22e453a4f995a0d06f9"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabSocioEcon.txt",
+      "bytes": 33344,
+      "crc32": "a6ec59a6",
+      "sha256": "4190c1b6afe2da1d159e5f00d42ded954ed068cc7c40e5b6aa0d090170c477c3"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabTreatment.txt",
+      "bytes": 39301,
+      "crc32": "9acfc215",
+      "sha256": "b66f0caf8c4df8ac89b921333bb89366b60bb24a233b52e283fffe44a893990b"
+    },
+    {
+      "path": "Data Tables/IOBP2DiabUnschedContact.txt",
+      "bytes": 31355,
+      "crc32": "175cd2fb",
+      "sha256": "d2d1b40b6f19416ec1e92da3d26272210b9941b95e8ec480070fc101a9348394"
+    },
+    {
+      "path": "Data Tables/IOBP2DiscontiLet.txt",
+      "bytes": 871,
+      "crc32": "28583e1a",
+      "sha256": "589793ab87a694035bae612ab0a14dd3af8c74f88ad07a6b0efa0ef788502b07"
+    },
+    {
+      "path": "Data Tables/IOBP2eGFR.txt",
+      "bytes": 9943,
+      "crc32": "33620fad",
+      "sha256": "48e2a1020b077b8113ec3a46cb88f5c529fb6f1cda9181b49b34ed6f96a001a6"
+    },
+    {
+      "path": "Data Tables/IOBP2EligConfirm.txt",
+      "bytes": 13079,
+      "crc32": "38678ea0",
+      "sha256": "abbc11ece41ec07973845bbe71422f858f3277d3802cfd494faa9d0d653c1a51"
+    },
+    {
+      "path": "Data Tables/IOBP2Eligibility.txt",
+      "bytes": 51172,
+      "crc32": "ee71cc5d",
+      "sha256": "54e7bf24ef5f480f97b584e436b8e0d6774a10c8012b0d26ee7ad25f43c6b43e"
+    },
+    {
+      "path": "Data Tables/IOBP2ExtensionStat.txt",
+      "bytes": 1830,
+      "crc32": "206dd637",
+      "sha256": "f9bd52e84b812378831308b6c9581f75de4b9b5fb6a122d7b434b5b38521c723"
+    },
+    {
+      "path": "Data Tables/IOBP2HeightWeight.txt",
+      "bytes": 267813,
+      "crc32": "4626d443",
+      "sha256": "f58dc21a29e30e49843e9dcf0cd7e78f38ebf879253ff9bc4607fd03fb2bc423"
+    },
+    {
+      "path": "Data Tables/IOBP2iLetRcmndDose.txt",
+      "bytes": 9657,
+      "crc32": "240f24f6",
+      "sha256": "6ac44379bea3474eb9b79dfdd716e964bd21b34167965729c3536b39725709d6"
+    },
+    {
+      "path": "Data Tables/IOBP2iLetTrain.txt",
+      "bytes": 5382,
+      "crc32": "c3c77398",
+      "sha256": "71e90ee9a62221170fe95c06338441c97671bff0dc9daaced327d4c022d04953"
+    },
+    {
+      "path": "Data Tables/IOBP2Insulin.txt",
+      "bytes": 82555,
+      "crc32": "2ec05db4",
+      "sha256": "8308f31f36aea9d415ebd05104678b2eb5f526566f4e63edc5eb2bdc85ceef08"
+    },
+    {
+      "path": "Data Tables/IOBP2ManualInsulinInj.txt",
+      "bytes": 6433,
+      "crc32": "6a34c075",
+      "sha256": "9f5fe502877be11b4aa3348f9b43cb44699e73f855ce9ca214d50d9349cb710e"
+    },
+    {
+      "path": "Data Tables/IOBP2MealDose.txt",
+      "bytes": 66634,
+      "crc32": "bbd6f85a",
+      "sha256": "563a8aa8cd3b2ead1872d6667523a1ad787ffeed13bfebe8edb15589eac34f53"
+    },
+    {
+      "path": "Data Tables/IOBP2MedicalCondition.txt",
+      "bytes": 210835,
+      "crc32": "31d19080",
+      "sha256": "cada7ec523448735b2b493d31df623d934664ec08f94cba8d5b302a5002edf8e"
+    },
+    {
+      "path": "Data Tables/IOBP2Medication.txt",
+      "bytes": 273117,
+      "crc32": "071cfc17",
+      "sha256": "974f069c274ba61a0f68863c75a91b59bf8a5b8590776a4be0b4b73a49cef0fb"
+    },
+    {
+      "path": "Data Tables/IOBP2PregMenstrInfo.txt",
+      "bytes": 102857,
+      "crc32": "d1aaa951",
+      "sha256": "0e2dc5e3c37f7795754f3d17c955e96954699799c1cd9209eff36c78845c6813"
+    },
+    {
+      "path": "Data Tables/IOBP2PSBPUOS.txt",
+      "bytes": 62852,
+      "crc32": "032b0503",
+      "sha256": "7a223fe6f4545d6a3e813dbc7b472260ab34cfb4564d26bcff78546ce9477dd2"
+    },
+    {
+      "path": "Data Tables/IOBP2PSBPUOSParent.txt",
+      "bytes": 23146,
+      "crc32": "f8c40034",
+      "sha256": "2db96e3c621dab9c16bce5f0c660547e1e3f7ace3d67e12dcf5857afbc35665d"
+    },
+    {
+      "path": "Data Tables/IOBP2PSClarke.txt",
+      "bytes": 94535,
+      "crc32": "1d22b5cb",
+      "sha256": "bb8f615ed64ba0b7e2538dc0c0ef15bb8e935eb8819f7bfc9edc47ae71baa003"
+    },
+    {
+      "path": "Data Tables/IOBP2PSClarkeParent.txt",
+      "bytes": 9676,
+      "crc32": "d7df693a",
+      "sha256": "f6f59d7566aab77dbf09368af247dcfa2a23a722c996ffb52d8d67bd205e36c8"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDiabTech.txt",
+      "bytes": 31716,
+      "crc32": "a2e73b6b",
+      "sha256": "36bd42351dd2c327f797c8db9093414b4cfd26d554ef92dc6e8b571b893b0c0f"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDTSQcAdult.txt",
+      "bytes": 12594,
+      "crc32": "2ab05074",
+      "sha256": "e878e5b9a1c32f85ce925be35971a000ddd72d1b8a222889b2d35d6851a2b8b1"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDTSQcParent.txt",
+      "bytes": 10219,
+      "crc32": "82b40022",
+      "sha256": "7351fe1b82b4bcfce290439ad761de79631d8e1b6873ad0ef61f4847647d3759"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDTSQcTeen.txt",
+      "bytes": 4040,
+      "crc32": "e113df0b",
+      "sha256": "f06b9a8939fb79c6fb9dcea4ddd8ae9b087cfd881acd59446b7d37b4d2b90e8f"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDTSQsAdult.txt",
+      "bytes": 13802,
+      "crc32": "d5c24541",
+      "sha256": "ff4aa6957ebc43a5e5755f6c3498f641bc89128e1f8b840fffdab65af202827c"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDTSQsParent.txt",
+      "bytes": 10783,
+      "crc32": "aa42d8e6",
+      "sha256": "aeee3d72c561db83a3f58a3a073e105808a5700370e52ac934042dd09e33864b"
+    },
+    {
+      "path": "Data Tables/IOBP2PSDTSQsTeen.txt",
+      "bytes": 4293,
+      "crc32": "67bde2d9",
+      "sha256": "25be9a792727a072a257b4110c3e7def093e3370e576e21fc08dc0b080c4a76a"
+    },
+    {
+      "path": "Data Tables/IOBP2PSEQ5D5L.txt",
+      "bytes": 34167,
+      "crc32": "e73582af",
+      "sha256": "70a66142e56832e9205b98a85fb6554f142faa2b9af3d3480bcb72f81b4dc725"
+    },
+    {
+      "path": "Data Tables/IOBP2PSEQ5DY.txt",
+      "bytes": 18557,
+      "crc32": "146f1974",
+      "sha256": "1acc7d25e0677fa8c72591b5ac6d9adeca8f3991d8e2160462bf87d72072e42a"
+    },
+    {
+      "path": "Data Tables/IOBP2PSHFSAdultNoPart2.txt",
+      "bytes": 76679,
+      "crc32": "8ce80c07",
+      "sha256": "eced6696e59b8eac099a88c224043d67f940a84b6eea1ab1e48f875ae2235e73"
+    },
+    {
+      "path": "Data Tables/IOBP2PSHFSChildNoPart2.txt",
+      "bytes": 34792,
+      "crc32": "ca3e0b59",
+      "sha256": "a2585b6bbba0f52dc0996a0ec629f656ddd1f2e5d7a94d8fcf1545a53b3310d5"
+    },
+    {
+      "path": "Data Tables/IOBP2PSHFSParentNoPart2.txt",
+      "bytes": 39807,
+      "crc32": "6f80e7fc",
+      "sha256": "4e51f4f8b7b230451f62d55705bc3230c5d5ad3bc7db594cf1b6218ec96cb0c8"
+    },
+    {
+      "path": "Data Tables/IOBP2PSHypoConf.txt",
+      "bytes": 38474,
+      "crc32": "17471228",
+      "sha256": "c2c0b21e13addc987489779f2856857e4f9a686e1d47c66e878d64b729abb798"
+    },
+    {
+      "path": "Data Tables/IOBP2PSINSPAdultBase.txt",
+      "bytes": 22341,
+      "crc32": "59d420ba",
+      "sha256": "3c81bbc4e7375ee64b252eaf3a2280f07dad47fd0219218cc889b9a23c81a8ac"
+    },
+    {
+      "path": "Data Tables/IOBP2PSINSPAdultPost.txt",
+      "bytes": 16952,
+      "crc32": "f57887e8",
+      "sha256": "8d37e561ca4474872375089ff52d69c5926df265e514173dc26d76460ee0a153"
+    },
+    {
+      "path": "Data Tables/IOBP2PSINSPParentBase.txt",
+      "bytes": 13473,
+      "crc32": "58cc87bb",
+      "sha256": "09eb79f5bdc3a2701e088056c491bc9233f9ac30a6e104cf341fc66fd74969f3"
+    },
+    {
+      "path": "Data Tables/IOBP2PSINSPParentPost.txt",
+      "bytes": 9114,
+      "crc32": "781bb4f3",
+      "sha256": "d3991ff1c50bf93e8dc222e6548a8ac7959d5edc1321bad0ed51b532b58bb0ab"
+    },
+    {
+      "path": "Data Tables/IOBP2PSINSPYouthBase.txt",
+      "bytes": 10481,
+      "crc32": "a529ae7a",
+      "sha256": "c7b6cfa864a48728bca2fa48086c2a286fce2cbb02772c815904cfdfc88c2f9c"
+    },
+    {
+      "path": "Data Tables/IOBP2PSINSPYouthPost.txt",
+      "bytes": 6595,
+      "crc32": "d6b752a5",
+      "sha256": "9c36c003cd8fedb70389cdb4363baf402076c24741f94e296c229b23613c5ab0"
+    },
+    {
+      "path": "Data Tables/IOBP2PSPAIDCChild.txt",
+      "bytes": 11952,
+      "crc32": "6c2b804a",
+      "sha256": "5cca62decae1f9f6c4dd896692724acbc2e4690d6c52a4e87f614ebc67d76954"
+    },
+    {
+      "path": "Data Tables/IOBP2PSPAIDTTeen.txt",
+      "bytes": 11884,
+      "crc32": "b7621c9e",
+      "sha256": "946bcc75a6ee5417da978ac30b1e44dc41328cbde37b66bdf5184efa0a4ef62d"
+    },
+    {
+      "path": "Data Tables/IOBP2PSPastExpAP.txt",
+      "bytes": 16343,
+      "crc32": "d141b614",
+      "sha256": "caf08330d56e5f0f7648784538f3ad21a7343a038445d6d8ed925db648980f40"
+    },
+    {
+      "path": "Data Tables/IOBP2PSPastExpAPParent.txt",
+      "bytes": 5815,
+      "crc32": "17b484fc",
+      "sha256": "e31ee77ed6ae251ecb9cfc3a7f5cfa4464ac39b96c6a934111c2859444077ed0"
+    },
+    {
+      "path": "Data Tables/IOBP2PSPPAIDCParent.txt",
+      "bytes": 17382,
+      "crc32": "0208e6cf",
+      "sha256": "4cc3c399fb89587b698a236f2dc7a2b07fa5a95b969423a6d14d7b460ca04182"
+    },
+    {
+      "path": "Data Tables/IOBP2PSPPAIDTParent.txt",
+      "bytes": 12504,
+      "crc32": "47ba74bc",
+      "sha256": "c2a87a2b657a22643503a78135ab2fc6545174dd7c280fc9f9ea89998d282c98"
+    },
+    {
+      "path": "Data Tables/IOBP2PST1DDS.txt",
+      "bytes": 68581,
+      "crc32": "e11b68c9",
+      "sha256": "8c8317a5432ff5a77265c1d89e013252ccc1564c50c99f3a439df5ae49fb59ac"
+    },
+    {
+      "path": "Data Tables/IOBP2PSTransDailyQuest.txt",
+      "bytes": 29383,
+      "crc32": "5d8ed52d",
+      "sha256": "b072aba8d478d8c919322ce2b9a2ab785ad66a5400d4ee9df8f36b5fd1c8d19d"
+    },
+    {
+      "path": "Data Tables/IOBP2PSWeeklyQuest.txt",
+      "bytes": 324767,
+      "crc32": "1c6b647c",
+      "sha256": "8583a560985db22e3ed50d611599a6f48967a0a48886d4ec10318fdaeec6e19c"
+    },
+    {
+      "path": "Data Tables/IOBP2PSWHO5.txt",
+      "bytes": 49177,
+      "crc32": "71192131",
+      "sha256": "0af57ee262807310954f33a5366c0f957d5c6752cf74e38b9731eb5619ac64ad"
+    },
+    {
+      "path": "Data Tables/IOBP2PtFinalStat.txt",
+      "bytes": 27413,
+      "crc32": "a2980d11",
+      "sha256": "0a5803b553de105dcce7f40d88877277e3b6ce265a3ade67efa3d8ec0d588fd0"
+    },
+    {
+      "path": "Data Tables/IOBP2PtRoster.txt",
+      "bytes": 38427,
+      "crc32": "79d1632a",
+      "sha256": "9adb6a447b550eb6cb34dc1e59c3ce157e6e786107e6f03a41a1c33241a4ec25"
+    },
+    {
+      "path": "Data Tables/IOBP2RandBaseInfo.txt",
+      "bytes": 30168,
+      "crc32": "2292a79e",
+      "sha256": "26fecdc4994cd2df53d4226c5a63bb65c764a210aea12d2e7c7dec8a72deb813"
+    },
+    {
+      "path": "Data Tables/IOBP2RunInRev.txt",
+      "bytes": 5313,
+      "crc32": "99b50376",
+      "sha256": "057b946e6eee624961741b053092f0c16dd8ec27b91a5842d359e37afc6f675c"
+    },
+    {
+      "path": "Data Tables/IOBP2VirtVisInfo.txt",
+      "bytes": 79321,
+      "crc32": "84cd206f",
+      "sha256": "cf61c8499c3e82fb8fff52554905e6f1f695983f8119e611031858f18047b3db"
+    },
+    {
+      "path": "Data Tables/IOBP2VisitInfo.txt",
+      "bytes": 226143,
+      "crc32": "eae25d8e",
+      "sha256": "25f21f2e1612cfd6067e34eea2bdb5d9c290109f73b654a863071afcc07d894a"
+    },
+    {
+      "path": "Data Tables/STASampleResults.txt",
+      "bytes": 138047,
+      "crc32": "9656842d",
+      "sha256": "11673de1604c46a034dc8198a1ca6e75b743ac876b73f7a7d875a52763affc1d"
+    },
+    {
+      "path": "Data Tables in SAS/convert txt to SAS 3-2-22.sas",
+      "bytes": 2037,
+      "crc32": "9aa8b286",
+      "sha256": "761fb7f070fc45238b4d0ca9e7d4d3c2872d640abccab4d640425dd5f3f465e0"
+    },
+    {
+      "path": "Data Tables in SAS/convert updated sampleresults txt to SAS 5-3-22.sas",
+      "bytes": 2261,
+      "crc32": "0b9625ec",
+      "sha256": "64d96f20092ba2c30c43a860e500aace98ca389d48929e6098bc89a1d8fbcc02"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2advevent.sas7bdat",
+      "bytes": 262144,
+      "crc32": "314be51a",
+      "sha256": "c82b72a6a45bb258d60267d366512d03d2770b57ae4f0bcd4ccb37183369f2a0"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2basalrtchg.sas7bdat",
+      "bytes": 131072,
+      "crc32": "fe3c5836",
+      "sha256": "aa3113d440bf609aab35847879288cf9bc839044977060419ca6081fe3f258fb"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2bgruniletcomp.sas7bdat",
+      "bytes": 131072,
+      "crc32": "c3b65a7c",
+      "sha256": "fc780475c5e81497ea4b19dbfacaf789d33610a8d2b031e430830ec17791d40e"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2bgruniletinit.sas7bdat",
+      "bytes": 131072,
+      "crc32": "0792a101",
+      "sha256": "7bf61c8607beb88a7f5ecfe9703bbc57df4a0297607fb1582a9992572f5ab31d"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2cgmassess.sas7bdat",
+      "bytes": 131072,
+      "crc32": "dac107f1",
+      "sha256": "f7fed06621f628152a4195b02ea8f8119df8269ba629b390e6bf4f75e2f84c31"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2cgmuse.sas7bdat",
+      "bytes": 131072,
+      "crc32": "b6f38941",
+      "sha256": "125e1e52f62fbc130ebd6a63f33edab056c931452111a6440999b569c1279173"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2compvisit.sas7bdat",
+      "bytes": 589824,
+      "crc32": "dc12afdf",
+      "sha256": "038f5c75ef4d41c0d3c098c9b4d51608be5c909a07c7473866c8314c845723eb"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2contdevicedttmver.sas7bdat",
+      "bytes": 131072,
+      "crc32": "6beeb6de",
+      "sha256": "306cfe8daafabc3c7c0a8782c769301086dd7021f0cc44fd61e80282eaf14c80"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2correctdose.sas7bdat",
+      "bytes": 131072,
+      "crc32": "3f0b0239",
+      "sha256": "08d7b75af86a872bd7606e2a413c0855e3aa5af5b22c05687a22e9c75edf1c4a"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2devicebgm.sas7bdat",
+      "bytes": 786432,
+      "crc32": "773ccad7",
+      "sha256": "06dea829445ce23adfc6498d45380239078572de205d13854de0f7efcb46c75d"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2devicecgm.sas7bdat",
+      "bytes": 920125440,
+      "crc32": "6a1634a4",
+      "sha256": "64c48db92ae84b5276e765131838a100d5930c43bbc987625dc06177bc6facb5"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2devicecgmalertset.sas7bdat",
+      "bytes": 1310720,
+      "crc32": "f3d9e61c",
+      "sha256": "af7e8e423f242b59c2ff1722d8f9d12e740cf9e52fed96af5510482a0861ce85"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2devicedttmver.sas7bdat",
+      "bytes": 393216,
+      "crc32": "b11492ca",
+      "sha256": "6ffb3ba1b66e54f2684a83419404658e88313353138e7c3c13675c0ad1139e52"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2deviceilet.sas7bdat",
+      "bytes": 1665662976,
+      "crc32": "3d4cbada",
+      "sha256": "19d5685fcf7ae8ee7ed6602c58ccc928254f139098b07a4cbba68c9b140eae9d"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2deviceissue.sas7bdat",
+      "bytes": 196608,
+      "crc32": "1d9a62aa",
+      "sha256": "7333f3e943aae186d919e5bd5c0a080f757f81121cef9762fd0eadc4bddec89f"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2deviceketone.sas7bdat",
+      "bytes": 262144,
+      "crc32": "283aa0dd",
+      "sha256": "6c8fec6d586d4016094128ea7f6b464b8dfed55fe517c47df7846ecc3077fe86"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2dexcomtrain.sas7bdat",
+      "bytes": 131072,
+      "crc32": "60de34fd",
+      "sha256": "27db3c1ee32b722fdeb48ba8438df33987be03f147baa0bac1deb6af024047e9"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabdkaevent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "57f2667a",
+      "sha256": "6de34239e353f10e2154518dcc552d87144eb5b0b32bb31288e47a9e9bd803d5"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabhypoevent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "765d8705",
+      "sha256": "797c8fdf263193598db02b472c71a9adc05eeaa4885cdbd6ec38e56a412d728e"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diablocalhba1c.sas7bdat",
+      "bytes": 131072,
+      "crc32": "b701248f",
+      "sha256": "386de42438c5b0c0281296ff59d6259845753b0fd5cc87820b31ffdb9de81dbc"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabmedhistory.sas7bdat",
+      "bytes": 327680,
+      "crc32": "d5cca9c9",
+      "sha256": "d1189ee3c25776d9db01cbc04ec9eb62323022c694093011bdf0fc6d5d053072"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabscreening.sas7bdat",
+      "bytes": 327680,
+      "crc32": "016a4eec",
+      "sha256": "e06e58f6e713d226c85d8f37057d633c59b7352723a71847463b5e28b9c15d50"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabsocioecon.sas7bdat",
+      "bytes": 196608,
+      "crc32": "a0b6d679",
+      "sha256": "af93e74b67ffb08c5fe145271b56b120b2ee2828eb310891ecf32e80108d5b80"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabtreatment.sas7bdat",
+      "bytes": 196608,
+      "crc32": "f326e88c",
+      "sha256": "01c737e697a6a935457fd5c1d0fc70fd4a58d64b1aada6a35177f007991a1d5c"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2diabunschedcontact.sas7bdat",
+      "bytes": 196608,
+      "crc32": "a11c9418",
+      "sha256": "83afcb63235099d797453c0d8ab30bb4b728de6c8aa9936c5a973d5e49bcced5"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2discontilet.sas7bdat",
+      "bytes": 131072,
+      "crc32": "472dff07",
+      "sha256": "cd63f6306132e45dce0beadce86afc8b51ea40ee70bc073ebcecb73501c49fe9"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2egfr.sas7bdat",
+      "bytes": 131072,
+      "crc32": "cf62a247",
+      "sha256": "7809c299095e495a45dabedee8fb29d4a758a34b992e3be4c34c39d40d98c676"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2eligconfirm.sas7bdat",
+      "bytes": 131072,
+      "crc32": "5b6fd915",
+      "sha256": "ebd7b00266df281883bc99f03774bc44e424f8a8d8802cc36ff0abb321154dce"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2eligibility.sas7bdat",
+      "bytes": 262144,
+      "crc32": "1e385b02",
+      "sha256": "295fd16b794cb42afa76d10be418d49edcfb9338f4150b89a2e39f61bf0f5c6c"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2extensionstat.sas7bdat",
+      "bytes": 131072,
+      "crc32": "da692f5b",
+      "sha256": "c6963bc7d1eb5080c1809c6a51468d1dfbea50faaf79c863129ded7b5598fe5e"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2heightweight.sas7bdat",
+      "bytes": 458752,
+      "crc32": "1dc1f000",
+      "sha256": "63aa32b960cf97f7a4a11411f3447ff9d220220db084b540fe7429bad88b987c"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2iletrcmnddose.sas7bdat",
+      "bytes": 131072,
+      "crc32": "6a7f5315",
+      "sha256": "294665de6a29e135ff4c05dca0da834f8d9056e4ffa95955c83bbcb44ef31afa"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2ilettrain.sas7bdat",
+      "bytes": 131072,
+      "crc32": "85d385b5",
+      "sha256": "1df84f1d11246dd0a71911cf2958589cc992ed179ce8daa76a5ace9b3b6bf6ea"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2insulin.sas7bdat",
+      "bytes": 262144,
+      "crc32": "c7aaed38",
+      "sha256": "f459b0f352a6fda44eedba2619103a10558145a45142cca78a20a5609e8f92e1"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2manualinsulininj.sas7bdat",
+      "bytes": 131072,
+      "crc32": "82b3a8e8",
+      "sha256": "7763a9140069416cae719cd138684c726b8459f55729d4ef6c7f9f8d02f4b705"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2mealdose.sas7bdat",
+      "bytes": 196608,
+      "crc32": "2245cede",
+      "sha256": "73f4ae0ec09448ebff6ae6400733eb5f9419a16ece9a36a320713db9feb51abc"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2medicalcondition.sas7bdat",
+      "bytes": 589824,
+      "crc32": "70596aa9",
+      "sha256": "f824c89bf19064e0e973160a5f4f4f6030465251c8257781da95859fd90db285"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2medication.sas7bdat",
+      "bytes": 917504,
+      "crc32": "0c8c8975",
+      "sha256": "ef5d4215b25c9efa93c2d30bf467ae92d9d9d15bd353bde5c0b6f5297e6a76db"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pregmenstrinfo.sas7bdat",
+      "bytes": 327680,
+      "crc32": "73b07d0f",
+      "sha256": "60d0f73ab3ed0c7fee60efbc1c57c4da2834585c5c37b9561fc5296eaeec34ed"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psbpuos.sas7bdat",
+      "bytes": 327680,
+      "crc32": "1ca4b167",
+      "sha256": "926475c98c7ec77bd446b04b6702847f6125f75d5a2d181cfd9a699c0ff9d06e"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psbpuosparent.sas7bdat",
+      "bytes": 196608,
+      "crc32": "4085e1c9",
+      "sha256": "158d310769b816831291783fb4862c55dc2550a876de8223468f0bdc87011325"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psclarke.sas7bdat",
+      "bytes": 262144,
+      "crc32": "6801da49",
+      "sha256": "5e4f280126ac959eeaee8daef4103ffcd3359443e824478c0436381147f1c409"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psclarkeparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "78074bd5",
+      "sha256": "4525fd1ec14f09bfb04a71b9dfe329381a3a42f62b6a7d8028b769d7d0202715"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdiabtech.sas7bdat",
+      "bytes": 196608,
+      "crc32": "dd4dcce7",
+      "sha256": "68263ceec2b9cc2a9adc6c2743e72823064e38f1082fe5ea226b8694e86e4527"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdtsqcadult.sas7bdat",
+      "bytes": 131072,
+      "crc32": "3ae446b4",
+      "sha256": "e5a8ffdaa3887efc162451bb3394ea27c92c4cd91207eeac2d003e531582e440"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdtsqcparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "9c899b04",
+      "sha256": "07c5335009eef59fdc3bb40af6712737369d9d6d481717e822731a758b460500"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdtsqcteen.sas7bdat",
+      "bytes": 131072,
+      "crc32": "755276e3",
+      "sha256": "90d8aec7af473de92bbf6adb3e1a1bb40dad2d0ba452abe9176be8b2e67fa2a4"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdtsqsadult.sas7bdat",
+      "bytes": 131072,
+      "crc32": "f3040371",
+      "sha256": "1377d0c7613f5217b1c01bda070862871a7c9df9d5a6bdabfd1701171766d935"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdtsqsparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "9eb34618",
+      "sha256": "50d6565027ca9d5be6fa7da6cfc83b36a286791094cbd53c1947b493598bce58"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psdtsqsteen.sas7bdat",
+      "bytes": 131072,
+      "crc32": "a5770e08",
+      "sha256": "8495c57c7b9fd96d4d915d892adde4225f6f8e46e4ab990b827df2161d88038d"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pseq5d5l.sas7bdat",
+      "bytes": 196608,
+      "crc32": "a6b1a430",
+      "sha256": "3a4136c67efa4ac9a6b6ae961146d67a6d3b3d406f5acab262ef24a0c0a2da8d"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pseq5dy.sas7bdat",
+      "bytes": 131072,
+      "crc32": "1bbde46d",
+      "sha256": "86e9cdddd96bae55211437efb28501afd016777b715fcbb96843acedcabb9a3a"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pshfsadultnopart2.sas7bdat",
+      "bytes": 327680,
+      "crc32": "64ef5aa2",
+      "sha256": "dfc9294fbc2d05bb079dc8ca518a829c5f362a9e34c599764457b0e53bce997c"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pshfschildnopart2.sas7bdat",
+      "bytes": 196608,
+      "crc32": "5a86b6be",
+      "sha256": "2db5ebe0ed94141ff8ebdebfcd0a9ab325350510566cd9ddbbbc8bc6d2262822"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pshfsparentnopart2.sas7bdat",
+      "bytes": 196608,
+      "crc32": "23ceb275",
+      "sha256": "fefed173a5ec67cc2761e7a83a32c3469ec7a91a2ec40e31a04de5191dc0ca9b"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pshypoconf.sas7bdat",
+      "bytes": 196608,
+      "crc32": "cd7cface",
+      "sha256": "c589d8ef6a65e809a2615e6f41dd3b1d485def546b92984277773267e66b5d48"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psinspadultbase.sas7bdat",
+      "bytes": 131072,
+      "crc32": "347f5592",
+      "sha256": "62b57e0be7da265d47326b17df2b6d75aeb64b212d28c8c7f2d2a701174085c5"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psinspadultpost.sas7bdat",
+      "bytes": 131072,
+      "crc32": "817dba96",
+      "sha256": "6d0aa9395dc1c99cb8add6b0a39325f5287feafc4cf607f0df3f37c2357398dc"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psinspparentbase.sas7bdat",
+      "bytes": 131072,
+      "crc32": "b9a46b38",
+      "sha256": "db5e03aba98a2d5042dbda0d681435322d56d2a75b2706ea92661db3984c99b2"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psinspparentpost.sas7bdat",
+      "bytes": 131072,
+      "crc32": "4f580e16",
+      "sha256": "62ad5766cd30629d2de43c51552dc62637692afbfc9d064b2bae85e63a156ea8"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psinspyouthbase.sas7bdat",
+      "bytes": 131072,
+      "crc32": "39426a1b",
+      "sha256": "a6b541fbb188a61835c35c4fa3a18e0d001540aa32798d08f5712522c9612bf8"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psinspyouthpost.sas7bdat",
+      "bytes": 131072,
+      "crc32": "65f4d523",
+      "sha256": "c035ce67046689471df6e859961b549f0246cae2991ef83e5b365db8e6fcd175"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pspaidcchild.sas7bdat",
+      "bytes": 131072,
+      "crc32": "096570a8",
+      "sha256": "6cf892c1a30e1b93f1adfb6f603801e133d6ac2dd9bdecf47ebac10430070de4"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pspaidtteen.sas7bdat",
+      "bytes": 131072,
+      "crc32": "586dae50",
+      "sha256": "a34e2cb9c0c9a261c581c8a18a0cf111ab255eb951ea89f14d331c08aef19b06"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pspastexpap.sas7bdat",
+      "bytes": 131072,
+      "crc32": "756c05f2",
+      "sha256": "6baeb63bf316d7daf8d5dadec1237726cb8ceaa9dc3cdb7854eb84c6addbcc2c"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pspastexpapparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "ea3195a1",
+      "sha256": "e32d745551255b3687945380f7545a492d21c806be72efe77a04be131b6cde11"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psppaidcparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "97b0b170",
+      "sha256": "3bdacb1bda27f9fc4615ec105ed06dbb291a9c930febda9a9a7f34502fe126b7"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psppaidtparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "2028b67c",
+      "sha256": "66f0166907baf4f64de0f6bbcf8ff0a15fb884b7185cab3052298e86a3a37b39"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pst1dds.sas7bdat",
+      "bytes": 327680,
+      "crc32": "52fd9f7d",
+      "sha256": "a96bd5bb7bec16506893c27d1d17a9177d590a56dce631406250e4e5f3844d21"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pstransdailyquest.sas7bdat",
+      "bytes": 131072,
+      "crc32": "ce9534c0",
+      "sha256": "609662e0780746b4bc8655ccba9f5bfa4c7d7a7cbc2e95c1126818c19ae33a3d"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2psweeklyquest.sas7bdat",
+      "bytes": 589824,
+      "crc32": "2f865f0b",
+      "sha256": "67619f3845845095ad4d30ba628cfb5885620191de776f672345dc4b6eb7bb59"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2pswho5.sas7bdat",
+      "bytes": 196608,
+      "crc32": "9c18f7f2",
+      "sha256": "0f7094b46bc64dfebfb6a1e8a9f3e2def2b42f1fd0628355f40f44649c701868"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2ptfinalstat.sas7bdat",
+      "bytes": 131072,
+      "crc32": "6c7c4b29",
+      "sha256": "6b9e5841d8ea24fedd119b6598fd4cb1c0df1dccbe8228acd765895c20eb037c"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2ptroster.sas7bdat",
+      "bytes": 131072,
+      "crc32": "69dbd250",
+      "sha256": "e1b6c35dd649022a8d40f56d4289d4634782f154fc0c895fe38a5f01e1932e4f"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2randbaseinfo.sas7bdat",
+      "bytes": 131072,
+      "crc32": "712ad601",
+      "sha256": "a41eaee122ea38add2034bf42c41466da156710f7c3bc2b1fa36cc2f523c2cdc"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2runinrev.sas7bdat",
+      "bytes": 131072,
+      "crc32": "ec9075c8",
+      "sha256": "d86efe49f4887e605fb1c904bfd9656b5d2834e24a0af4b2a62eea327d2adcd8"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2virtvisinfo.sas7bdat",
+      "bytes": 327680,
+      "crc32": "23f6db46",
+      "sha256": "0d57c0d907c9551125cf829398d932e32362276d286c1d1a476a041f0df9ed21"
+    },
+    {
+      "path": "Data Tables in SAS/iobp2visitinfo.sas7bdat",
+      "bytes": 1048576,
+      "crc32": "986e32ca",
+      "sha256": "4382e17cf977ad3062edfc47e15e0db423e488f68422869e55b7e2ade6f1e6e8"
+    },
+    {
+      "path": "Data Tables in SAS/stasampleresults.sas7bdat",
+      "bytes": 262144,
+      "crc32": "85d9e872",
+      "sha256": "15cea13272cf87f0cb2655832799694f5b1d4637755a4b8dc6229d1a935b6611"
+    },
+    {
+      "path": "DataGlossary.rtf",
+      "bytes": 2715351,
+      "crc32": "37160228",
+      "sha256": "3fb5afce10db9bca7cd960ff6d37dffdc8b4faacc8e8148f7df831c04ea81157"
+    },
+    {
+      "path": "IOBP2 Dataset ReadMe.rtf",
+      "bytes": 57819,
+      "crc32": "1c6ff25c",
+      "sha256": "e0e4882be4ca9b629a440c03ad6ad9a6902140d4b6b072b8582b61204a96637f"
+    },
+    {
+      "path": "IOBP_PIVOTAL_PROTOCOL_V8.5_26JAN2021.pdf",
+      "bytes": 1274904,
+      "crc32": "061be565",
+      "sha256": "36d1ef7c588555602b503f16e84dc575d5801ea4a7949566fba720e03bd05c13"
+    }
+  ],
+  "files_count": 227,
+  "uncompressed_bytes": 4593597672
+}

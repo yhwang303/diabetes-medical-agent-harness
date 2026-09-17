@@ -1,0 +1,15 @@
+{
+  "name": "D08_guided_lambda3_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Guided_lambda3": "results/H02_graph_guided_weight3/export_0100000.npz"
+  }
+}

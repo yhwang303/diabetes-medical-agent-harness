@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "training_seed": 260915,
+  "steps": 6580,
+  "samples": 1653421,
+  "all_patient_parameters_and_buffers_unchanged": true,
+  "policy_parameter_l2_change": 6.764494936941543,
+  "all_state_finite": true,
+  "checkpoint_sha256": "84776e5379dea8dd280f23e92391523d26ca937b457fc1bfcd7fce3117127794",
+  "initialization_sha256": "28bf976f305eb1b518d47ebff0b03ba2c871ab67be8ea6ae75422ce6276227e1",
+  "scope": "optimizer and provenance verification, not control efficacy"
+}

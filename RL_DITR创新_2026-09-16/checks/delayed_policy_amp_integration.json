@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "scope": "disposable three-update AMP integration check; no weights reused in training",
+  "initial_failure": "Torch2.0 autocast reused no-grad actor weight casts from first sampling forward; loss lacked grad_fn. Fixed by sampling with grad enabled then detach, matching existing DITRAgent.imagine.",
+  "rows": [
+    {
+      "code": "H05",
+      "batch": 256,
+      "discarded_updates": 3,
+      "metrics": [
+        {
+          "loss": -0.09059588611125946,
+          "gradient": 2.0353009700775146,
+          "delayed_policy_loss": -0.09059588611125946,
+          "imagined_return": 2.065323829650879,
+          "within_history_return_std": 0.25281453132629395,
+          "trajectory_sampled_kl": 0.0,
+          "trajectory_sampled_kl_abs": 0.0,
+          "loo_advantage_rms": 0.3876560628414154,
+          "action_mean": 0.8207216262817383,
+          "action_zero_fraction": 0.14453125,
+          "action_upper_fraction": 0.0
+        },
+        {
+          "loss": -0.11645903438329697,
+          "gradient": 13.098711967468262,
+          "delayed_policy_loss": -0.11645903438329697,
+          "imagined_return": 2.1769909858703613,
+          "within_history_return_std": 0.21555888652801514,
+          "trajectory_sampled_kl": 0.4266709089279175,
+          "trajectory_sampled_kl_abs": 0.6736400723457336,
+          "loo_advantage_rms": 0.9492177367210388,
+          "action_mean": 0.6669671535491943,
+          "action_zero_fraction": 0.185546875,
+          "action_upper_fraction": 0.0
+        },
+        {
+          "loss": -0.008804745972156525,
+          "gradient": 7.070080280303955,
+          "delayed_policy_loss": -0.008804745972156525,
+          "imagined_return": 2.1643896102905273,
+          "within_history_return_std": 0.21559709310531616,
+          "trajectory_sampled_kl": 0.13483959436416626,
+          "trajectory_sampled_kl_abs": 0.3537307381629944,
+          "loo_advantage_rms": 0.5464006066322327,
+          "action_mean": 0.738294780254364,
+          "action_zero_fraction": 0.1575520932674408,
+          "action_upper_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "code": "R08",
+      "batch": 256,
+      "discarded_updates": 3,
+      "metrics": [
+        {
+          "loss": -0.03657229244709015,
+          "gradient": 0.9189319014549255,
+          "delayed_policy_loss": -0.03657229244709015,
+          "imagined_return": 1.3638019561767578,
+          "within_history_return_std": 0.2293575555086136,
+          "trajectory_sampled_kl": 0.0,
+          "trajectory_sampled_kl_abs": 0.0,
+          "loo_advantage_rms": 0.3104623854160309,
+          "action_mean": 0.9234285354614258,
+          "action_zero_fraction": 0.1171875,
+          "action_upper_fraction": 0.0
+        },
+        {
+          "loss": -0.07449601590633392,
+          "gradient": 5.957243919372559,
+          "delayed_policy_loss": -0.07449601590633392,
+          "imagined_return": 1.3827760219573975,
+          "within_history_return_std": 0.22249430418014526,
+          "trajectory_sampled_kl": 0.09779548645019531,
+          "trajectory_sampled_kl_abs": 0.2681378722190857,
+          "loo_advantage_rms": 0.5713666677474976,
+          "action_mean": 0.9947289824485779,
+          "action_zero_fraction": 0.1194661483168602,
+          "action_upper_fraction": 0.0
+        },
+        {
+          "loss": -0.008924929425120354,
+          "gradient": 1.7809648513793945,
+          "delayed_policy_loss": -0.008924929425120354,
+          "imagined_return": 1.3769569396972656,
+          "within_history_return_std": 0.2111775428056717,
+          "trajectory_sampled_kl": 0.030327577143907547,
+          "trajectory_sampled_kl_abs": 0.20916447043418884,
+          "loo_advantage_rms": 0.31996795535087585,
+          "action_mean": 0.9012839198112488,
+          "action_zero_fraction": 0.119140625,
+          "action_upper_fraction": 0.0
+        }
+      ]
+    }
+  ]
+}

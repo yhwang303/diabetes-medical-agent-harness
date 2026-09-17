@@ -1,0 +1,18 @@
+{
+  "name": "D01_pilot50k_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "nominal": null,
+    "BC": "results/R00_bc_pilot/export_0050000.npz",
+    "ReBRAC": "results/R01_rebrac_pilot/export_0050000.npz",
+    "FQL": "results/R02_fql_pilot/export_0050000.npz"
+  }
+}

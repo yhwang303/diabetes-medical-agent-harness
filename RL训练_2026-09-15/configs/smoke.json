@@ -1,0 +1,1 @@
+{"name":"S00_smoke","seed":260915,"model":{"width":256,"layers":3,"ff":2048,"dropout":0.4,"residual":false},"lr":0.001,"weight_decay":0.0001,"mu":0.1,"batch_size":128,"unroll":6,"epochs":1,"max_steps":30,"max_seconds":300,"eval_every":30,"eval_per_patient":16,"final_eval_per_patient":16,"log_every":5,"amp":true}

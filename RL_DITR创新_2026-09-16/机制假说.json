@@ -1,0 +1,84 @@
+{
+  "status": "response_mechanism_improved_extra_behavior_training_negative_delayed_objective_matched_trial_running",
+  "backbone": "RL-DITR fR/fT/fP + learned reward/value + historical/imagination/supervised policy losses + beam",
+  "training_seed": 260915,
+  "H1": {
+    "question": "Does eliminating predicted-patient-latent feedback improve action-plan ranking at long horizons, under equal data and parameter count?",
+    "change": "Initial observed history plus causal action/time prefix determines each predicted latent; predicted latent is not fed back as a transition input. Keep per-5min glucose/WTR/reward outputs.",
+    "control": "same encoder/decoder width/layers/heads; same losses, reward function, origins and 12step budget first",
+    "required_ablation": "recursive vs anchored action-prefix computation; identical budget; distinguish full path from endpoint-only objective",
+    "not_a_novelty_claim": "ADM-v2 and MAC already provide related ideas; novelty must be assessed from distinct risk-path mechanism and evidence"
+  },
+  "H2": {
+    "status": "R05/H02/H03 complete; H03 paired loss does not improve TIR over H02 and both fail equal-dose timing direction probes",
+    "question": "Does paired same-state intervention supervision reduce action ranking errors beyond equal-budget unpaired simulator factual supervision?",
+    "data_constraint": "If simulator data are added, RL-DITR comparator and ablations receive exactly the same factual arms; same full Loop set remains. Existing FQL/ReBRAC stay old-data reference only.",
+    "required_ablation": "same factual arms with and without paired objective; no evaluation probe labels used for training",
+    "not_a_novelty_claim": "counterfactual differences/value-equivalence have prior art; simulated calibration is not proof of human causal identification",
+    "matched_models": [
+      "R05",
+      "H02",
+      "H03"
+    ]
+  },
+  "completion_requires": [
+    "complete reference control result",
+    "mechanism effect vs original base and essential ablations",
+    "joint TIR/TBR/failure patient-level evidence",
+    "explicit review of closest prior work",
+    "HTML with every attempted method and parameter set"
+  ],
+  "H3": {
+    "question": "Does separating observational reference dynamics from intervention-trained causal glucose and latent response improve temporally reordered action identification and independent control?",
+    "assumptions": [
+      "local history-conditioned linear time-invariant response over 4 hours",
+      "same-state simulator branches share exogenous events",
+      "point-forecast risk is not uncertainty-calibrated expected risk"
+    ],
+    "mechanism_results": {
+      "P01_conditioned_timing_direction": 1.0,
+      "P02_global_timing_direction": 1.0,
+      "H02_H03_timing_direction": 0.0,
+      "P03_training_latent_effect_mse_reduction": 0.4709241135495177,
+      "P04_matched_mlp_timing_direction": 0.0
+    },
+    "control_trials": {
+      "H04": "composed patient + extra full Loop policy epoch",
+      "R07": "unchanged H02 + identical extra policy epoch",
+      "C01": "composed patient + inherited H02 policy, before new policy optimization"
+    },
+    "limitations": [
+      "global kernel also fixes direction; conditional personalization contribution unproven",
+      "additional response parameters and training budget disclosed separately",
+      "causal convolution alone is not an originality claim",
+      "final new-scenario evaluation not yet run"
+    ],
+    "training_data": "original constant intervention 504 groups; full Loop pretraining retained; new temporal data not used by these prototypes",
+    "control_results": {
+      "C01_1h_tir": 90.803872,
+      "C01_4h_tir": 89.551768,
+      "H04_1h_tir_lower": 80.734428,
+      "H04_1h_failures": 1,
+      "H04_4h_tir": 84.017256,
+      "R07_1h_tir": 85.984848,
+      "R07_4h_tir_lower": 4.713805,
+      "R07_4h_failures": 6
+    }
+  },
+  "H4": {
+    "question": "Does full delayed trajectory return with independent LOO and frozen-policy KL improve real simulator control beyond extra historical behavior fitting?",
+    "matched_trials": [
+      "H05",
+      "R08"
+    ],
+    "training_data": "same full225patients/1653421origins; one extraepoch seed260915; initialization before H04/R07",
+    "predeclared_selection": "final epoch, no development checkpoint search",
+    "no_novelty_claim": "known estimator and regularization adaptations; not standalone original contribution",
+    "limitations": [
+      "80min blocks differ from actual5min closed-loop policy",
+      "soft sampled KL is not hard trust region",
+      "model returns can still exploit forecast errors",
+      "point-forecast status is not calibrated risk"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "D07_anchor_rebrac_bc_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Anchor_ReBRAC": "results/R31_anchor_rebrac/export_0050000.npz",
+    "Anchor_BC": "results/R30_anchor_bc/export_0050000.npz"
+  }
+}

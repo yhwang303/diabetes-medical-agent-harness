@@ -1,0 +1,33 @@
+{
+  "model_id": "loop-reference-bounded-rebrac-O07-step50000-seed260915",
+  "accepted_for": "fixed public-simulator research benchmark and subsequent controlled integration work",
+  "research_benchmark_passed": true,
+  "clinical_ready": false,
+  "registered_with_harness_core": false,
+  "training_seed": 260915,
+  "training_updates": 50000,
+  "training_patients": 225,
+  "training_origins": 1653421,
+  "sparse_food_exercise_retained": true,
+  "sealed_patients": 6,
+  "paired_scenarios_per_method": 54,
+  "metrics": {
+    "tir_pct": 94.96586232697344,
+    "tbr70_pct": 2.0482603815937153,
+    "tbr54_pct": 0.5214178825289936,
+    "mean_risk": 2.1583079323819927,
+    "failures": 0
+  },
+  "constraints": [
+    "6h fixed observed basal reference",
+    "5min continuous basal rate, not injection bolus",
+    "reference +/-0.4 U/h then clipped0..20",
+    "one training seed; no seed robustness claim",
+    "nominal warmup and published CR common bolus advantage",
+    "simulator has no exercise physiology",
+    "adult009 TBR70 9.20%,TBR54 3.13%; no clinical safety claim",
+    "full Loop held-out policy efficacy not established"
+  ],
+  "manifest_sha256": "dd31a5d24540d0a1ba5c6347abca529f8345f4549a7361b4a7e68511a76fbae6",
+  "frozen_plan_sha256": "44e8c1fe19a8236ee048e87196d7f31191ba6665cadad319419ee08696b9b137"
+}

@@ -1,0 +1,61 @@
+{
+  "name": "H03_prefix_sim_paired",
+  "seed": 260915,
+  "model": {
+    "width": 256,
+    "layers": 3,
+    "heads": 8,
+    "ff": 2048,
+    "dropout": 0.4,
+    "categorical_heads": true,
+    "transition_mode": "action_prefix"
+  },
+  "batch_size": 256,
+  "horizon": 12,
+  "amp": true,
+  "mu": 0.1,
+  "weight_decay": 0.0001,
+  "target_tau": 0.005,
+  "log_every": 25,
+  "validation_per_patient": 32,
+  "final_validation_per_patient": 128,
+  "patient": {
+    "lr": 0.0001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 1000
+  },
+  "policy": {
+    "lr": 0.001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 2000
+  },
+  "adaptations": [
+    "continuous censored Gaussian; supervised action MSE replaces categorical supervised CE",
+    "n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal",
+    "reward auxiliary regresses unscaled status before 1/12 time conversion",
+    "one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained",
+    "Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.",
+    "H1 mechanism test: anchored initial latent plus causal action prefix; no predicted-latent feedback into next transition token. All other R03 architecture, losses, reward, data, seed and updates identical. No originality conclusion in advance.",
+    "Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.",
+    "Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.",
+    "Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.",
+    "Before any H02/H03 training began, replace pathological legacy continuous policy objective with the same bounded-return/NLL repair used by R05. Preserve prior proposed config separately; no completed result overwritten."
+  ],
+  "selection": "fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation",
+  "initialize_checkpoint": "results/H01_action_prefix/patient_best.pt",
+  "simulation": {
+    "every_steps": 8,
+    "groups_per_update": 4,
+    "factual_weight": 1.0,
+    "paired_weight": 1,
+    "horizon": 48,
+    "dropout": false,
+    "training_scenario_seeds": [
+      40101,
+      40102
+    ]
+  },
+  "policy_loss_variant": "bounded_return_nll"
+}

@@ -1,0 +1,3685 @@
+{
+  "contract_version": "harness-engineering-v1",
+  "clinical_use": false,
+  "input_profiles": {
+    "adult-t1d-basal-simulation-v1": {
+      "input_contract": "basal-research-input-v1",
+      "clinical_use": false,
+      "execution_status": "not_configured",
+      "allowed_sources": [
+        "synthetic",
+        "simulation"
+      ],
+      "cohort": "adult_t1d",
+      "action_scope": "pump_basal_infusion",
+      "prediction_window": null,
+      "required_insulin_history_minutes": null,
+      "consumers": {
+        "history": [
+          "prediction",
+          "policy",
+          "input_checks"
+        ],
+        "treatment": [
+          "applicability_checks",
+          "policy"
+        ],
+        "insulin_history": [
+          "policy",
+          "input_checks"
+        ],
+        "provenance": [
+          "source_checks"
+        ]
+      },
+      "consumer_status": "planned_only_no_model_or_medical_rule_binding"
+    }
+  },
+  "data_policy": {
+    "version": "engineering-data-policy-v1",
+    "real_personal_data_enabled": false,
+    "provider": "deepseek_official",
+    "model": "deepseek-flash",
+    "permission_scope": [
+      "case",
+      "snapshot",
+      "purpose",
+      "policy_hash",
+      "service_instance"
+    ],
+    "data_scope": "synthetic_engineering_only",
+    "default": "deny",
+    "restart": "new_permission_required",
+    "local_core": [
+      "snapshot",
+      "import_filename_hash",
+      "model_artifacts",
+      "drafts",
+      "reviews",
+      "releases",
+      "permission_records",
+      "audit_metadata"
+    ],
+    "outbound": {
+      "rl": [
+        "fixed_prompts",
+        "tool_schemas",
+        "job_status_and_error_codes",
+        "job_id",
+        "candidate_artifact_reference_hash_origin_producer_version",
+        "model_generated_conversation",
+        "sdk_protocol_metadata"
+      ],
+      "prediction": [
+        "fixed_prompts",
+        "tool_schemas",
+        "job_status_and_error_codes",
+        "job_id",
+        "artifact_reference_hash_origin_producer_version",
+        "model_generated_conversation",
+        "sdk_protocol_metadata"
+      ],
+      "report": [
+        "fixed_prompts",
+        "tool_schemas",
+        "template_version",
+        "evidence_hash",
+        "controlled_task_status",
+        "section_proposal",
+        "model_generated_conversation",
+        "sdk_protocol_metadata"
+      ],
+      "medical_review": [
+        "fixed_prompts",
+        "tool_schemas",
+        "bound_engineering_report",
+        "report_evidence_hashes",
+        "run_case_snapshot_draft_revision_config_binding",
+        "structured_review",
+        "model_generated_conversation",
+        "sdk_protocol_metadata"
+      ],
+      "ethics_review": [
+        "fixed_prompts",
+        "tool_schemas",
+        "bound_engineering_report",
+        "report_evidence_hashes",
+        "run_case_snapshot_draft_revision_config_binding",
+        "structured_review",
+        "model_generated_conversation",
+        "sdk_protocol_metadata"
+      ]
+    },
+    "never_provided_to_llm": [
+      "raw_snapshot",
+      "import_filename",
+      "source_locator",
+      "other_case_records",
+      "provider_key",
+      "permission_management"
+    ],
+    "observation": {
+      "enabled": false,
+      "raw_upload": false
+    },
+    "logs": "controlled_metadata_only_no_raw_input_or_model_prose",
+    "retention": {
+      "version": "engineering-lifecycle-v1",
+      "case_content": "retained_until_explicit_owner_delete",
+      "delete_scope": [
+        "all_case_snapshots",
+        "import_metadata",
+        "artifacts",
+        "drafts",
+        "reviews",
+        "releases",
+        "run_profiles",
+        "review_configs",
+        "outbound_permissions"
+      ],
+      "retained": [
+        "ownership_and_deletion_receipt",
+        "run_job_task_identifiers_and_status",
+        "controlled_audit_metadata_and_hashes",
+        "aggregate_provider_budget"
+      ],
+      "audit_retention": "until_P16_retention_policy_no_automatic_expiry",
+      "sdk": "registered_prediction_rl_report_review_directories_removed_after_worker_returns",
+      "sdk_recovery": "exclusive_service_startup_retries_own_ledger_directories",
+      "legacy_sdk": "unmapped_historical_smoke_directories_not_automatically_deleted",
+      "backups": "no_automatic_backup_existing_copies_not_erased_by_case_delete",
+      "restore": "new_service_permission_required_deletion_receipts_preserved_if_present",
+      "pre_deletion_backup": "may_restore_content_requires_deletion_reconciliation_before_real_data",
+      "external_provider": "retention_and_deletion_unverified_local_withdrawal_is_not_remote_erasure",
+      "physical_erasure": false,
+      "memory_erasure": false,
+      "real_personal_data_enabled": false
+    }
+  },
+  "engineering_execution_profiles": {
+    "basal-fixture-profile-v1": {
+      "version": "basal-fixture-profile-v1",
+      "input_contract": "basal-research-input-v1",
+      "use_profile": "adult-t1d-basal-simulation-v1",
+      "mode": "eval",
+      "source": "synthetic",
+      "origin": "fixture",
+      "clinical_use": false,
+      "time_basis": "synthetic_replay",
+      "max_wall_seconds": 300,
+      "action_minutes": 5,
+      "rate_quantum": "0.000001",
+      "engineering_max_rate": "0.05",
+      "input_minimum": {
+        "cgm_points": 6,
+        "insulin_history_minutes": 25
+      },
+      "prediction": {
+        "identity": "fixture.basal-predictor",
+        "version": "basal-prediction-v1",
+        "interval_minutes": 5,
+        "points": 6,
+        "uncertainty": "unavailable",
+        "preprocessing": "no-transform-v1",
+        "reads": [
+          "history[-1].value"
+        ]
+      },
+      "policy": {
+        "identity": "fixture.basal-policy",
+        "version": "basal-policy-v1",
+        "preprocessing": "no-transform-v1",
+        "training_dependencies": [],
+        "behavior": "constant_fixture_not_trained",
+        "reads": [
+          "decision_time",
+          "input_digest",
+          "prediction_hash",
+          "profile_hash"
+        ]
+      },
+      "input_checks": [
+        "cohort",
+        "source",
+        "use_profile",
+        "history",
+        "missing_mask",
+        "treatment",
+        "insulin_history",
+        "provenance"
+      ],
+      "rule_version": "basal-fixture-rules-v1",
+      "template_version": "basal-fixture-template-v1",
+      "real_model_configuration": null,
+      "medical_validation": false
+    },
+    "basal-fixture-profile-v2": {
+      "version": "basal-fixture-profile-v2",
+      "input_contract": "basal-research-input-v1",
+      "use_profile": "adult-t1d-basal-simulation-v1",
+      "mode": "eval",
+      "source": "synthetic",
+      "origin": "fixture",
+      "clinical_use": false,
+      "time_basis": "synthetic_replay",
+      "max_wall_seconds": 300,
+      "action_minutes": 5,
+      "rate_quantum": null,
+      "engineering_max_rate": "0.05",
+      "input_minimum": {
+        "cgm_points": 6,
+        "insulin_history_minutes": 25
+      },
+      "prediction": {
+        "identity": "fixture.basal-predictor",
+        "version": "basal-prediction-v1",
+        "interval_minutes": 5,
+        "points": 6,
+        "uncertainty": "unavailable",
+        "preprocessing": "no-transform-v1",
+        "reads": [
+          "history[-1].value"
+        ]
+      },
+      "policy": {
+        "identity": "fixture.basal-rate-policy",
+        "version": "basal-policy-v2",
+        "preprocessing": "no-transform-v1",
+        "training_dependencies": [],
+        "behavior": "constant_fixture_not_trained",
+        "reads": [
+          "decision_time",
+          "input_digest",
+          "prediction_hash",
+          "profile_hash"
+        ]
+      },
+      "input_checks": [
+        "cohort",
+        "source",
+        "use_profile",
+        "history",
+        "missing_mask",
+        "treatment",
+        "insulin_history",
+        "provenance"
+      ],
+      "rule_version": "basal-fixture-rules-v2",
+      "template_version": "basal-fixture-template-v2",
+      "real_model_configuration": null,
+      "medical_validation": false,
+      "unit_conversion": {
+        "version": "basal-rate-conversion-v1",
+        "accepted_units": [
+          "U/min",
+          "U/h"
+        ],
+        "canonical_unit": "U/min",
+        "arithmetic": "exact_rational",
+        "source_preserved": true,
+        "display_significant_digits": 28,
+        "display_rounding": "half_even",
+        "approximation_marked": true
+      }
+    }
+  },
+  "schemas": {
+    "SnapshotInput": {
+      "$defs": {
+        "Point": {
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "title": "Time",
+              "type": "string"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Value"
+            }
+          },
+          "required": [
+            "time",
+            "value"
+          ],
+          "title": "Point",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "cohort": {
+          "const": "adult_t1d",
+          "title": "Cohort",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "synthetic",
+            "historical",
+            "simulation"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "source_ref": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "decision_time": {
+          "title": "Decision Time",
+          "type": "string"
+        },
+        "unit": {
+          "const": "mg/dL",
+          "title": "Unit",
+          "type": "string"
+        },
+        "sampling_minutes": {
+          "const": 5,
+          "title": "Sampling Minutes",
+          "type": "integer"
+        },
+        "history": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "maxItems": 288,
+          "minItems": 6,
+          "title": "History",
+          "type": "array"
+        },
+        "missing_mask": {
+          "items": {
+            "type": "boolean"
+          },
+          "title": "Missing Mask",
+          "type": "array"
+        }
+      },
+      "required": [
+        "cohort",
+        "source",
+        "source_ref",
+        "decision_time",
+        "unit",
+        "sampling_minutes",
+        "history",
+        "missing_mask"
+      ],
+      "title": "SnapshotInput",
+      "type": "object"
+    },
+    "PredictionRequest": {
+      "$defs": {
+        "Point": {
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "title": "Time",
+              "type": "string"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Value"
+            }
+          },
+          "required": [
+            "time",
+            "value"
+          ],
+          "title": "Point",
+          "type": "object"
+        },
+        "SnapshotInput": {
+          "additionalProperties": false,
+          "properties": {
+            "cohort": {
+              "const": "adult_t1d",
+              "title": "Cohort",
+              "type": "string"
+            },
+            "source": {
+              "enum": [
+                "synthetic",
+                "historical",
+                "simulation"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "sampling_minutes": {
+              "const": 5,
+              "title": "Sampling Minutes",
+              "type": "integer"
+            },
+            "history": {
+              "items": {
+                "$ref": "#/$defs/Point"
+              },
+              "maxItems": 288,
+              "minItems": 6,
+              "title": "History",
+              "type": "array"
+            },
+            "missing_mask": {
+              "items": {
+                "type": "boolean"
+              },
+              "title": "Missing Mask",
+              "type": "array"
+            }
+          },
+          "required": [
+            "cohort",
+            "source",
+            "source_ref",
+            "decision_time",
+            "unit",
+            "sampling_minutes",
+            "history",
+            "missing_mask"
+          ],
+          "title": "SnapshotInput",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "snapshot": {
+          "$ref": "#/$defs/SnapshotInput"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot",
+        "snapshot_id",
+        "run_id",
+        "input_digest"
+      ],
+      "title": "PredictionRequest",
+      "type": "object"
+    },
+    "PredictionOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "status": {
+          "const": "ok",
+          "title": "Status",
+          "type": "string"
+        },
+        "unit": {
+          "const": "mg/dL",
+          "title": "Unit",
+          "type": "string"
+        },
+        "interval_minutes": {
+          "const": 5,
+          "title": "Interval Minutes",
+          "type": "integer"
+        },
+        "values": {
+          "items": {
+            "maximum": 1000,
+            "minimum": 0,
+            "type": "number"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Values",
+          "type": "array"
+        },
+        "uncertainty": {
+          "const": "unavailable",
+          "title": "Uncertainty",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_digest",
+        "status",
+        "unit",
+        "interval_minutes",
+        "values",
+        "uncertainty"
+      ],
+      "title": "PredictionOutput",
+      "type": "object"
+    },
+    "PolicyRequest": {
+      "$defs": {
+        "Point": {
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "title": "Time",
+              "type": "string"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Value"
+            }
+          },
+          "required": [
+            "time",
+            "value"
+          ],
+          "title": "Point",
+          "type": "object"
+        },
+        "PredictionOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "status": {
+              "const": "ok",
+              "title": "Status",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "interval_minutes": {
+              "const": 5,
+              "title": "Interval Minutes",
+              "type": "integer"
+            },
+            "values": {
+              "items": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number"
+              },
+              "maxItems": 6,
+              "minItems": 6,
+              "title": "Values",
+              "type": "array"
+            },
+            "uncertainty": {
+              "const": "unavailable",
+              "title": "Uncertainty",
+              "type": "string"
+            }
+          },
+          "required": [
+            "input_digest",
+            "status",
+            "unit",
+            "interval_minutes",
+            "values",
+            "uncertainty"
+          ],
+          "title": "PredictionOutput",
+          "type": "object"
+        },
+        "SnapshotInput": {
+          "additionalProperties": false,
+          "properties": {
+            "cohort": {
+              "const": "adult_t1d",
+              "title": "Cohort",
+              "type": "string"
+            },
+            "source": {
+              "enum": [
+                "synthetic",
+                "historical",
+                "simulation"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "sampling_minutes": {
+              "const": 5,
+              "title": "Sampling Minutes",
+              "type": "integer"
+            },
+            "history": {
+              "items": {
+                "$ref": "#/$defs/Point"
+              },
+              "maxItems": 288,
+              "minItems": 6,
+              "title": "History",
+              "type": "array"
+            },
+            "missing_mask": {
+              "items": {
+                "type": "boolean"
+              },
+              "title": "Missing Mask",
+              "type": "array"
+            }
+          },
+          "required": [
+            "cohort",
+            "source",
+            "source_ref",
+            "decision_time",
+            "unit",
+            "sampling_minutes",
+            "history",
+            "missing_mask"
+          ],
+          "title": "SnapshotInput",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "snapshot": {
+          "$ref": "#/$defs/SnapshotInput"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "prediction": {
+          "$ref": "#/$defs/PredictionOutput"
+        },
+        "prediction_hash": {
+          "title": "Prediction Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot",
+        "snapshot_id",
+        "run_id",
+        "input_digest",
+        "prediction",
+        "prediction_hash"
+      ],
+      "title": "PolicyRequest",
+      "type": "object"
+    },
+    "PolicyOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "forecast_parent_hash": {
+          "title": "Forecast Parent Hash",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "abstain",
+            "unsupported",
+            "error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "action_kind": {
+          "const": "basal_rate",
+          "title": "Action Kind",
+          "type": "string"
+        },
+        "action_unit": {
+          "const": "U/min",
+          "title": "Action Unit",
+          "type": "string"
+        },
+        "action_value": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Action Value"
+        },
+        "duration_minutes": {
+          "const": 5,
+          "title": "Duration Minutes",
+          "type": "integer"
+        },
+        "reason": {
+          "enum": [
+            "fixture_only",
+            "insufficient_input",
+            "unsupported",
+            "model_error"
+          ],
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_digest",
+        "forecast_parent_hash",
+        "status",
+        "action_kind",
+        "action_unit",
+        "action_value",
+        "duration_minutes",
+        "reason"
+      ],
+      "title": "PolicyOutput",
+      "type": "object"
+    },
+    "ArtifactEnvelope": {
+      "$defs": {
+        "PolicyOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "forecast_parent_hash": {
+              "title": "Forecast Parent Hash",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "candidate",
+                "abstain",
+                "unsupported",
+                "error"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "action_kind": {
+              "const": "basal_rate",
+              "title": "Action Kind",
+              "type": "string"
+            },
+            "action_unit": {
+              "const": "U/min",
+              "title": "Action Unit",
+              "type": "string"
+            },
+            "action_value": {
+              "anyOf": [
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Action Value"
+            },
+            "duration_minutes": {
+              "const": 5,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "reason": {
+              "enum": [
+                "fixture_only",
+                "insufficient_input",
+                "unsupported",
+                "model_error"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "input_digest",
+            "forecast_parent_hash",
+            "status",
+            "action_kind",
+            "action_unit",
+            "action_value",
+            "duration_minutes",
+            "reason"
+          ],
+          "title": "PolicyOutput",
+          "type": "object"
+        },
+        "PredictionOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "status": {
+              "const": "ok",
+              "title": "Status",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "interval_minutes": {
+              "const": 5,
+              "title": "Interval Minutes",
+              "type": "integer"
+            },
+            "values": {
+              "items": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number"
+              },
+              "maxItems": 6,
+              "minItems": 6,
+              "title": "Values",
+              "type": "array"
+            },
+            "uncertainty": {
+              "const": "unavailable",
+              "title": "Uncertainty",
+              "type": "string"
+            }
+          },
+          "required": [
+            "input_digest",
+            "status",
+            "unit",
+            "interval_minutes",
+            "values",
+            "uncertainty"
+          ],
+          "title": "PredictionOutput",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "prediction",
+            "policy"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "job_id": {
+          "title": "Job Id",
+          "type": "string"
+        },
+        "attempt": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Attempt",
+          "type": "integer"
+        },
+        "producer": {
+          "title": "Producer",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "model",
+            "simulator",
+            "fixture"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "parent_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Hash"
+        },
+        "payload": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PredictionOutput"
+            },
+            {
+              "$ref": "#/$defs/PolicyOutput"
+            }
+          ],
+          "title": "Payload"
+        },
+        "accepted_at": {
+          "title": "Accepted At",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "schema_version",
+        "kind",
+        "run_id",
+        "case_id",
+        "snapshot_id",
+        "job_id",
+        "attempt",
+        "producer",
+        "version",
+        "origin",
+        "input_digest",
+        "parent_hash",
+        "payload",
+        "accepted_at"
+      ],
+      "title": "ArtifactEnvelope",
+      "type": "object"
+    },
+    "Proposal": {
+      "additionalProperties": false,
+      "description": "Agent selects supported sections, never supplies prose, numbers or HTML.",
+      "properties": {
+        "sections": {
+          "items": {
+            "enum": [
+              "forecast",
+              "policy",
+              "limitations"
+            ],
+            "type": "string"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Sections",
+          "type": "array"
+        }
+      },
+      "required": [
+        "sections"
+      ],
+      "title": "Proposal",
+      "type": "object"
+    },
+    "ReviewOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "verdict": {
+          "enum": [
+            "pass",
+            "fail",
+            "abstain"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        },
+        "report_hash": {
+          "title": "Report Hash",
+          "type": "string"
+        },
+        "evidence_hash": {
+          "title": "Evidence Hash",
+          "type": "string"
+        },
+        "issues": {
+          "items": {
+            "enum": [
+              "invalid_content",
+              "fixture_review_failure",
+              "unsupported_claim",
+              "evidence_mismatch",
+              "missing_limitations",
+              "privacy_risk",
+              "unsafe_action",
+              "review_uncertain",
+              "instruction_injection"
+            ],
+            "type": "string"
+          },
+          "title": "Issues",
+          "type": "array"
+        }
+      },
+      "required": [
+        "verdict",
+        "report_hash",
+        "evidence_hash",
+        "issues"
+      ],
+      "title": "ReviewOutput",
+      "type": "object"
+    },
+    "RunRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Case Id",
+          "type": "string"
+        },
+        "mode": {
+          "default": "research",
+          "enum": [
+            "eval",
+            "research"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Idempotency Key",
+          "type": "string"
+        },
+        "expected_snapshot_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{32}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Snapshot Id"
+        },
+        "fixture_scenario": {
+          "anyOf": [
+            {
+              "enum": [
+                "candidate",
+                "abstain",
+                "unsupported",
+                "error",
+                "invalid_output",
+                "parent_mismatch",
+                "safety_rejected",
+                "timeout"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixture Scenario"
+        }
+      },
+      "required": [
+        "case_id",
+        "idempotency_key"
+      ],
+      "title": "RunRequest",
+      "type": "object"
+    },
+    "ImportRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "file_name": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "File Name",
+          "type": "string"
+        },
+        "content": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "title": "Content",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_name",
+        "content"
+      ],
+      "title": "ImportRequest",
+      "type": "object"
+    },
+    "ErrorResponse": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "maxLength": 100,
+          "pattern": "^[A-Z][A-Z0-9_]*$",
+          "title": "Error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "error"
+      ],
+      "title": "ErrorResponse",
+      "type": "object"
+    },
+    "EvidenceCard": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "input",
+            "prediction",
+            "policy",
+            "safety",
+            "reviews",
+            "release"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "waiting",
+            "blocked"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "reference_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Id"
+        },
+        "digest": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Digest"
+        },
+        "producer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Producer"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version"
+        },
+        "origin": {
+          "anyOf": [
+            {
+              "enum": [
+                "model",
+                "simulator",
+                "fixture"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Origin"
+        }
+      },
+      "required": [
+        "kind",
+        "status"
+      ],
+      "title": "EvidenceCard",
+      "type": "object"
+    },
+    "CaseEvidence": {
+      "$defs": {
+        "EvidenceCard": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "input",
+                "prediction",
+                "policy",
+                "safety",
+                "reviews",
+                "release"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "verified",
+                "waiting",
+                "blocked"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "reason": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Reason"
+            },
+            "reference_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Reference Id"
+            },
+            "digest": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Digest"
+            },
+            "producer": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Producer"
+            },
+            "version": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Version"
+            },
+            "origin": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "model",
+                    "simulator",
+                    "fixture"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Origin"
+            }
+          },
+          "required": [
+            "kind",
+            "status"
+          ],
+          "title": "EvidenceCard",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "synthetic",
+            "historical",
+            "simulation"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "missing_count": {
+          "title": "Missing Count",
+          "type": "integer"
+        },
+        "run_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Run Id"
+        },
+        "run_state": {
+          "title": "Run State",
+          "type": "string"
+        },
+        "mode": {
+          "anyOf": [
+            {
+              "enum": [
+                "eval",
+                "research"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Mode"
+        },
+        "fixture_scenario": {
+          "anyOf": [
+            {
+              "enum": [
+                "candidate",
+                "abstain",
+                "unsupported",
+                "error",
+                "invalid_output",
+                "parent_mismatch",
+                "safety_rejected",
+                "timeout"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixture Scenario"
+        },
+        "checked_at": {
+          "title": "Checked At",
+          "type": "number"
+        },
+        "release_allowed": {
+          "title": "Release Allowed",
+          "type": "boolean"
+        },
+        "clinical_validation": {
+          "const": false,
+          "default": false,
+          "title": "Clinical Validation",
+          "type": "boolean"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/EvidenceCard"
+          },
+          "title": "Cards",
+          "type": "array"
+        }
+      },
+      "required": [
+        "case_id",
+        "snapshot_id",
+        "source",
+        "missing_count",
+        "run_id",
+        "run_state",
+        "mode",
+        "checked_at",
+        "release_allowed",
+        "cards"
+      ],
+      "title": "CaseEvidence",
+      "type": "object"
+    },
+    "AgentTaskRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Case Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Idempotency Key",
+          "type": "string"
+        }
+      },
+      "required": [
+        "case_id",
+        "snapshot_id",
+        "idempotency_key"
+      ],
+      "title": "AgentTaskRequest",
+      "type": "object"
+    },
+    "BasalResearchInput": {
+      "$defs": {
+        "BasalDelivery": {
+          "additionalProperties": false,
+          "properties": {
+            "record_id": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Record Id",
+              "type": "string"
+            },
+            "record_kind": {
+              "const": "actual_delivery",
+              "title": "Record Kind",
+              "type": "string"
+            },
+            "start_time": {
+              "title": "Start Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            },
+            "delivered_units": {
+              "minimum": 0,
+              "title": "Delivered Units",
+              "type": "number"
+            },
+            "unit": {
+              "const": "U",
+              "title": "Unit",
+              "type": "string"
+            }
+          },
+          "required": [
+            "record_id",
+            "record_kind",
+            "start_time",
+            "end_time",
+            "delivered_units",
+            "unit"
+          ],
+          "title": "BasalDelivery",
+          "type": "object"
+        },
+        "Point": {
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "title": "Time",
+              "type": "string"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Value"
+            }
+          },
+          "required": [
+            "time",
+            "value"
+          ],
+          "title": "Point",
+          "type": "object"
+        },
+        "ResearchInsulinHistory": {
+          "additionalProperties": false,
+          "properties": {
+            "coverage_start": {
+              "title": "Coverage Start",
+              "type": "string"
+            },
+            "coverage_end": {
+              "title": "Coverage End",
+              "type": "string"
+            },
+            "deliveries": {
+              "items": {
+                "$ref": "#/$defs/BasalDelivery"
+              },
+              "maxItems": 288,
+              "minItems": 1,
+              "title": "Deliveries",
+              "type": "array"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            }
+          },
+          "required": [
+            "coverage_start",
+            "coverage_end",
+            "deliveries",
+            "provenance"
+          ],
+          "title": "ResearchInsulinHistory",
+          "type": "object"
+        },
+        "ResearchSource": {
+          "additionalProperties": false,
+          "properties": {
+            "subject_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Subject Ref",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "source_version": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Version",
+              "type": "string"
+            },
+            "locator": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Locator",
+              "type": "string"
+            },
+            "kind": {
+              "enum": [
+                "synthetic",
+                "simulator"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "available_at": {
+              "title": "Available At",
+              "type": "string"
+            }
+          },
+          "required": [
+            "subject_ref",
+            "source_ref",
+            "source_version",
+            "locator",
+            "kind",
+            "available_at"
+          ],
+          "title": "ResearchSource",
+          "type": "object"
+        },
+        "ResearchTreatment": {
+          "additionalProperties": false,
+          "properties": {
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "regimen": {
+              "const": "basal_only",
+              "title": "Regimen",
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            }
+          },
+          "required": [
+            "insulin",
+            "route",
+            "regimen",
+            "provenance"
+          ],
+          "title": "ResearchTreatment",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "cohort": {
+          "const": "adult_t1d",
+          "title": "Cohort",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "synthetic",
+            "simulation"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "source_ref": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "decision_time": {
+          "title": "Decision Time",
+          "type": "string"
+        },
+        "unit": {
+          "const": "mg/dL",
+          "title": "Unit",
+          "type": "string"
+        },
+        "sampling_minutes": {
+          "const": 5,
+          "title": "Sampling Minutes",
+          "type": "integer"
+        },
+        "history": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "maxItems": 288,
+          "minItems": 6,
+          "title": "History",
+          "type": "array"
+        },
+        "missing_mask": {
+          "items": {
+            "type": "boolean"
+          },
+          "title": "Missing Mask",
+          "type": "array"
+        },
+        "contract_version": {
+          "const": "basal-research-input-v1",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "use_profile": {
+          "const": "adult-t1d-basal-simulation-v1",
+          "title": "Use Profile",
+          "type": "string"
+        },
+        "provenance": {
+          "$ref": "#/$defs/ResearchSource"
+        },
+        "treatment": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ResearchTreatment"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "insulin_history": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ResearchInsulinHistory"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "cohort",
+        "source",
+        "source_ref",
+        "decision_time",
+        "unit",
+        "sampling_minutes",
+        "history",
+        "missing_mask",
+        "contract_version",
+        "use_profile",
+        "provenance",
+        "treatment",
+        "insulin_history"
+      ],
+      "title": "BasalResearchInput",
+      "type": "object"
+    },
+    "BasalAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_kind": {
+          "const": "basal_rate",
+          "title": "Action Kind",
+          "type": "string"
+        },
+        "insulin": {
+          "const": "generic_simulation_insulin",
+          "title": "Insulin",
+          "type": "string"
+        },
+        "route": {
+          "const": "subcutaneous_pump",
+          "title": "Route",
+          "type": "string"
+        },
+        "action_unit": {
+          "const": "U/min",
+          "title": "Action Unit",
+          "type": "string"
+        },
+        "action_value": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Action Value",
+          "type": "number"
+        },
+        "duration_minutes": {
+          "const": 5,
+          "title": "Duration Minutes",
+          "type": "integer"
+        },
+        "decision_time": {
+          "title": "Decision Time",
+          "type": "string"
+        },
+        "end_time": {
+          "title": "End Time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_kind",
+        "insulin",
+        "route",
+        "action_unit",
+        "action_value",
+        "duration_minutes",
+        "decision_time",
+        "end_time"
+      ],
+      "title": "BasalAction",
+      "type": "object"
+    },
+    "BasalPolicyOutput": {
+      "$defs": {
+        "BasalAction": {
+          "additionalProperties": false,
+          "properties": {
+            "action_kind": {
+              "const": "basal_rate",
+              "title": "Action Kind",
+              "type": "string"
+            },
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "action_unit": {
+              "const": "U/min",
+              "title": "Action Unit",
+              "type": "string"
+            },
+            "action_value": {
+              "maximum": 1,
+              "minimum": 0,
+              "title": "Action Value",
+              "type": "number"
+            },
+            "duration_minutes": {
+              "const": 5,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "action_kind",
+            "insulin",
+            "route",
+            "action_unit",
+            "action_value",
+            "duration_minutes",
+            "decision_time",
+            "end_time"
+          ],
+          "title": "BasalAction",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "basal-policy-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "forecast_parent_hash": {
+          "title": "Forecast Parent Hash",
+          "type": "string"
+        },
+        "profile_hash": {
+          "title": "Profile Hash",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "abstain",
+            "unsupported",
+            "error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "fixture_only",
+            "insufficient_input",
+            "unsupported",
+            "model_error"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "action": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BasalAction"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "input_digest",
+        "forecast_parent_hash",
+        "profile_hash",
+        "status",
+        "reason",
+        "action"
+      ],
+      "title": "BasalPolicyOutput",
+      "type": "object"
+    },
+    "BasalPredictionOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "status": {
+          "const": "ok",
+          "title": "Status",
+          "type": "string"
+        },
+        "unit": {
+          "const": "mg/dL",
+          "title": "Unit",
+          "type": "string"
+        },
+        "interval_minutes": {
+          "const": 5,
+          "title": "Interval Minutes",
+          "type": "integer"
+        },
+        "values": {
+          "items": {
+            "maximum": 1000,
+            "minimum": 0,
+            "type": "number"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Values",
+          "type": "array"
+        },
+        "uncertainty": {
+          "const": "unavailable",
+          "title": "Uncertainty",
+          "type": "string"
+        },
+        "profile_hash": {
+          "title": "Profile Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_digest",
+        "status",
+        "unit",
+        "interval_minutes",
+        "values",
+        "uncertainty",
+        "profile_hash"
+      ],
+      "title": "BasalPredictionOutput",
+      "type": "object"
+    },
+    "BasalPredictionRequest": {
+      "$defs": {
+        "BasalDelivery": {
+          "additionalProperties": false,
+          "properties": {
+            "record_id": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Record Id",
+              "type": "string"
+            },
+            "record_kind": {
+              "const": "actual_delivery",
+              "title": "Record Kind",
+              "type": "string"
+            },
+            "start_time": {
+              "title": "Start Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            },
+            "delivered_units": {
+              "minimum": 0,
+              "title": "Delivered Units",
+              "type": "number"
+            },
+            "unit": {
+              "const": "U",
+              "title": "Unit",
+              "type": "string"
+            }
+          },
+          "required": [
+            "record_id",
+            "record_kind",
+            "start_time",
+            "end_time",
+            "delivered_units",
+            "unit"
+          ],
+          "title": "BasalDelivery",
+          "type": "object"
+        },
+        "BasalResearchInput": {
+          "additionalProperties": false,
+          "properties": {
+            "cohort": {
+              "const": "adult_t1d",
+              "title": "Cohort",
+              "type": "string"
+            },
+            "source": {
+              "enum": [
+                "synthetic",
+                "simulation"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "sampling_minutes": {
+              "const": 5,
+              "title": "Sampling Minutes",
+              "type": "integer"
+            },
+            "history": {
+              "items": {
+                "$ref": "#/$defs/Point"
+              },
+              "maxItems": 288,
+              "minItems": 6,
+              "title": "History",
+              "type": "array"
+            },
+            "missing_mask": {
+              "items": {
+                "type": "boolean"
+              },
+              "title": "Missing Mask",
+              "type": "array"
+            },
+            "contract_version": {
+              "const": "basal-research-input-v1",
+              "title": "Contract Version",
+              "type": "string"
+            },
+            "use_profile": {
+              "const": "adult-t1d-basal-simulation-v1",
+              "title": "Use Profile",
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            },
+            "treatment": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ResearchTreatment"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "insulin_history": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ResearchInsulinHistory"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "cohort",
+            "source",
+            "source_ref",
+            "decision_time",
+            "unit",
+            "sampling_minutes",
+            "history",
+            "missing_mask",
+            "contract_version",
+            "use_profile",
+            "provenance",
+            "treatment",
+            "insulin_history"
+          ],
+          "title": "BasalResearchInput",
+          "type": "object"
+        },
+        "Point": {
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "title": "Time",
+              "type": "string"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Value"
+            }
+          },
+          "required": [
+            "time",
+            "value"
+          ],
+          "title": "Point",
+          "type": "object"
+        },
+        "ResearchInsulinHistory": {
+          "additionalProperties": false,
+          "properties": {
+            "coverage_start": {
+              "title": "Coverage Start",
+              "type": "string"
+            },
+            "coverage_end": {
+              "title": "Coverage End",
+              "type": "string"
+            },
+            "deliveries": {
+              "items": {
+                "$ref": "#/$defs/BasalDelivery"
+              },
+              "maxItems": 288,
+              "minItems": 1,
+              "title": "Deliveries",
+              "type": "array"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            }
+          },
+          "required": [
+            "coverage_start",
+            "coverage_end",
+            "deliveries",
+            "provenance"
+          ],
+          "title": "ResearchInsulinHistory",
+          "type": "object"
+        },
+        "ResearchSource": {
+          "additionalProperties": false,
+          "properties": {
+            "subject_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Subject Ref",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "source_version": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Version",
+              "type": "string"
+            },
+            "locator": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Locator",
+              "type": "string"
+            },
+            "kind": {
+              "enum": [
+                "synthetic",
+                "simulator"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "available_at": {
+              "title": "Available At",
+              "type": "string"
+            }
+          },
+          "required": [
+            "subject_ref",
+            "source_ref",
+            "source_version",
+            "locator",
+            "kind",
+            "available_at"
+          ],
+          "title": "ResearchSource",
+          "type": "object"
+        },
+        "ResearchTreatment": {
+          "additionalProperties": false,
+          "properties": {
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "regimen": {
+              "const": "basal_only",
+              "title": "Regimen",
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            }
+          },
+          "required": [
+            "insulin",
+            "route",
+            "regimen",
+            "provenance"
+          ],
+          "title": "ResearchTreatment",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "snapshot": {
+          "$ref": "#/$defs/BasalResearchInput"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "profile_hash": {
+          "title": "Profile Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot",
+        "snapshot_id",
+        "run_id",
+        "input_digest",
+        "profile_hash"
+      ],
+      "title": "BasalPredictionRequest",
+      "type": "object"
+    },
+    "BasalPolicyRequest": {
+      "$defs": {
+        "BasalDelivery": {
+          "additionalProperties": false,
+          "properties": {
+            "record_id": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Record Id",
+              "type": "string"
+            },
+            "record_kind": {
+              "const": "actual_delivery",
+              "title": "Record Kind",
+              "type": "string"
+            },
+            "start_time": {
+              "title": "Start Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            },
+            "delivered_units": {
+              "minimum": 0,
+              "title": "Delivered Units",
+              "type": "number"
+            },
+            "unit": {
+              "const": "U",
+              "title": "Unit",
+              "type": "string"
+            }
+          },
+          "required": [
+            "record_id",
+            "record_kind",
+            "start_time",
+            "end_time",
+            "delivered_units",
+            "unit"
+          ],
+          "title": "BasalDelivery",
+          "type": "object"
+        },
+        "BasalPredictionOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "status": {
+              "const": "ok",
+              "title": "Status",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "interval_minutes": {
+              "const": 5,
+              "title": "Interval Minutes",
+              "type": "integer"
+            },
+            "values": {
+              "items": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number"
+              },
+              "maxItems": 6,
+              "minItems": 6,
+              "title": "Values",
+              "type": "array"
+            },
+            "uncertainty": {
+              "const": "unavailable",
+              "title": "Uncertainty",
+              "type": "string"
+            },
+            "profile_hash": {
+              "title": "Profile Hash",
+              "type": "string"
+            }
+          },
+          "required": [
+            "input_digest",
+            "status",
+            "unit",
+            "interval_minutes",
+            "values",
+            "uncertainty",
+            "profile_hash"
+          ],
+          "title": "BasalPredictionOutput",
+          "type": "object"
+        },
+        "BasalResearchInput": {
+          "additionalProperties": false,
+          "properties": {
+            "cohort": {
+              "const": "adult_t1d",
+              "title": "Cohort",
+              "type": "string"
+            },
+            "source": {
+              "enum": [
+                "synthetic",
+                "simulation"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "sampling_minutes": {
+              "const": 5,
+              "title": "Sampling Minutes",
+              "type": "integer"
+            },
+            "history": {
+              "items": {
+                "$ref": "#/$defs/Point"
+              },
+              "maxItems": 288,
+              "minItems": 6,
+              "title": "History",
+              "type": "array"
+            },
+            "missing_mask": {
+              "items": {
+                "type": "boolean"
+              },
+              "title": "Missing Mask",
+              "type": "array"
+            },
+            "contract_version": {
+              "const": "basal-research-input-v1",
+              "title": "Contract Version",
+              "type": "string"
+            },
+            "use_profile": {
+              "const": "adult-t1d-basal-simulation-v1",
+              "title": "Use Profile",
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            },
+            "treatment": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ResearchTreatment"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "insulin_history": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ResearchInsulinHistory"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "cohort",
+            "source",
+            "source_ref",
+            "decision_time",
+            "unit",
+            "sampling_minutes",
+            "history",
+            "missing_mask",
+            "contract_version",
+            "use_profile",
+            "provenance",
+            "treatment",
+            "insulin_history"
+          ],
+          "title": "BasalResearchInput",
+          "type": "object"
+        },
+        "Point": {
+          "additionalProperties": false,
+          "properties": {
+            "time": {
+              "title": "Time",
+              "type": "string"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Value"
+            }
+          },
+          "required": [
+            "time",
+            "value"
+          ],
+          "title": "Point",
+          "type": "object"
+        },
+        "ResearchInsulinHistory": {
+          "additionalProperties": false,
+          "properties": {
+            "coverage_start": {
+              "title": "Coverage Start",
+              "type": "string"
+            },
+            "coverage_end": {
+              "title": "Coverage End",
+              "type": "string"
+            },
+            "deliveries": {
+              "items": {
+                "$ref": "#/$defs/BasalDelivery"
+              },
+              "maxItems": 288,
+              "minItems": 1,
+              "title": "Deliveries",
+              "type": "array"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            }
+          },
+          "required": [
+            "coverage_start",
+            "coverage_end",
+            "deliveries",
+            "provenance"
+          ],
+          "title": "ResearchInsulinHistory",
+          "type": "object"
+        },
+        "ResearchSource": {
+          "additionalProperties": false,
+          "properties": {
+            "subject_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Subject Ref",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "source_version": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Version",
+              "type": "string"
+            },
+            "locator": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Locator",
+              "type": "string"
+            },
+            "kind": {
+              "enum": [
+                "synthetic",
+                "simulator"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "available_at": {
+              "title": "Available At",
+              "type": "string"
+            }
+          },
+          "required": [
+            "subject_ref",
+            "source_ref",
+            "source_version",
+            "locator",
+            "kind",
+            "available_at"
+          ],
+          "title": "ResearchSource",
+          "type": "object"
+        },
+        "ResearchTreatment": {
+          "additionalProperties": false,
+          "properties": {
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "regimen": {
+              "const": "basal_only",
+              "title": "Regimen",
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/ResearchSource"
+            }
+          },
+          "required": [
+            "insulin",
+            "route",
+            "regimen",
+            "provenance"
+          ],
+          "title": "ResearchTreatment",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "snapshot": {
+          "$ref": "#/$defs/BasalResearchInput"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "profile_hash": {
+          "title": "Profile Hash",
+          "type": "string"
+        },
+        "prediction": {
+          "$ref": "#/$defs/BasalPredictionOutput"
+        },
+        "prediction_hash": {
+          "title": "Prediction Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot",
+        "snapshot_id",
+        "run_id",
+        "input_digest",
+        "profile_hash",
+        "prediction",
+        "prediction_hash"
+      ],
+      "title": "BasalPolicyRequest",
+      "type": "object"
+    },
+    "BasalArtifactEnvelope": {
+      "$defs": {
+        "BasalAction": {
+          "additionalProperties": false,
+          "properties": {
+            "action_kind": {
+              "const": "basal_rate",
+              "title": "Action Kind",
+              "type": "string"
+            },
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "action_unit": {
+              "const": "U/min",
+              "title": "Action Unit",
+              "type": "string"
+            },
+            "action_value": {
+              "maximum": 1,
+              "minimum": 0,
+              "title": "Action Value",
+              "type": "number"
+            },
+            "duration_minutes": {
+              "const": 5,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "action_kind",
+            "insulin",
+            "route",
+            "action_unit",
+            "action_value",
+            "duration_minutes",
+            "decision_time",
+            "end_time"
+          ],
+          "title": "BasalAction",
+          "type": "object"
+        },
+        "BasalPolicyOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "schema_version": {
+              "const": "basal-policy-v1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "forecast_parent_hash": {
+              "title": "Forecast Parent Hash",
+              "type": "string"
+            },
+            "profile_hash": {
+              "title": "Profile Hash",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "candidate",
+                "abstain",
+                "unsupported",
+                "error"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "reason": {
+              "enum": [
+                "fixture_only",
+                "insufficient_input",
+                "unsupported",
+                "model_error"
+              ],
+              "title": "Reason",
+              "type": "string"
+            },
+            "action": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/BasalAction"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "schema_version",
+            "input_digest",
+            "forecast_parent_hash",
+            "profile_hash",
+            "status",
+            "reason",
+            "action"
+          ],
+          "title": "BasalPolicyOutput",
+          "type": "object"
+        },
+        "BasalPredictionOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "status": {
+              "const": "ok",
+              "title": "Status",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "interval_minutes": {
+              "const": 5,
+              "title": "Interval Minutes",
+              "type": "integer"
+            },
+            "values": {
+              "items": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number"
+              },
+              "maxItems": 6,
+              "minItems": 6,
+              "title": "Values",
+              "type": "array"
+            },
+            "uncertainty": {
+              "const": "unavailable",
+              "title": "Uncertainty",
+              "type": "string"
+            },
+            "profile_hash": {
+              "title": "Profile Hash",
+              "type": "string"
+            }
+          },
+          "required": [
+            "input_digest",
+            "status",
+            "unit",
+            "interval_minutes",
+            "values",
+            "uncertainty",
+            "profile_hash"
+          ],
+          "title": "BasalPredictionOutput",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "prediction",
+            "policy"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "job_id": {
+          "title": "Job Id",
+          "type": "string"
+        },
+        "attempt": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Attempt",
+          "type": "integer"
+        },
+        "producer": {
+          "title": "Producer",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "model",
+            "simulator",
+            "fixture"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "parent_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Hash"
+        },
+        "payload": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BasalPredictionOutput"
+            },
+            {
+              "$ref": "#/$defs/BasalPolicyOutput"
+            }
+          ],
+          "title": "Payload"
+        },
+        "accepted_at": {
+          "title": "Accepted At",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "schema_version",
+        "kind",
+        "run_id",
+        "case_id",
+        "snapshot_id",
+        "job_id",
+        "attempt",
+        "producer",
+        "version",
+        "origin",
+        "input_digest",
+        "parent_hash",
+        "payload",
+        "accepted_at"
+      ],
+      "title": "BasalArtifactEnvelope",
+      "type": "object"
+    },
+    "BasalRateAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_kind": {
+          "const": "basal_rate",
+          "title": "Action Kind",
+          "type": "string"
+        },
+        "insulin": {
+          "const": "generic_simulation_insulin",
+          "title": "Insulin",
+          "type": "string"
+        },
+        "route": {
+          "const": "subcutaneous_pump",
+          "title": "Route",
+          "type": "string"
+        },
+        "action_unit": {
+          "enum": [
+            "U/min",
+            "U/h"
+          ],
+          "title": "Action Unit",
+          "type": "string"
+        },
+        "action_value": {
+          "maximum": 60,
+          "minimum": 0,
+          "title": "Action Value",
+          "type": "number"
+        },
+        "duration_minutes": {
+          "const": 5,
+          "title": "Duration Minutes",
+          "type": "integer"
+        },
+        "decision_time": {
+          "title": "Decision Time",
+          "type": "string"
+        },
+        "end_time": {
+          "title": "End Time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_kind",
+        "insulin",
+        "route",
+        "action_unit",
+        "action_value",
+        "duration_minutes",
+        "decision_time",
+        "end_time"
+      ],
+      "title": "BasalRateAction",
+      "type": "object"
+    },
+    "BasalRatePolicyOutput": {
+      "$defs": {
+        "BasalRateAction": {
+          "additionalProperties": false,
+          "properties": {
+            "action_kind": {
+              "const": "basal_rate",
+              "title": "Action Kind",
+              "type": "string"
+            },
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "action_unit": {
+              "enum": [
+                "U/min",
+                "U/h"
+              ],
+              "title": "Action Unit",
+              "type": "string"
+            },
+            "action_value": {
+              "maximum": 60,
+              "minimum": 0,
+              "title": "Action Value",
+              "type": "number"
+            },
+            "duration_minutes": {
+              "const": 5,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "action_kind",
+            "insulin",
+            "route",
+            "action_unit",
+            "action_value",
+            "duration_minutes",
+            "decision_time",
+            "end_time"
+          ],
+          "title": "BasalRateAction",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "basal-policy-v2",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "forecast_parent_hash": {
+          "title": "Forecast Parent Hash",
+          "type": "string"
+        },
+        "profile_hash": {
+          "title": "Profile Hash",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "abstain",
+            "unsupported",
+            "error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "fixture_only",
+            "insufficient_input",
+            "unsupported",
+            "model_error"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "action": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BasalRateAction"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "input_digest",
+        "forecast_parent_hash",
+        "profile_hash",
+        "status",
+        "reason",
+        "action"
+      ],
+      "title": "BasalRatePolicyOutput",
+      "type": "object"
+    },
+    "BasalRateArtifactEnvelope": {
+      "$defs": {
+        "BasalPredictionOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "status": {
+              "const": "ok",
+              "title": "Status",
+              "type": "string"
+            },
+            "unit": {
+              "const": "mg/dL",
+              "title": "Unit",
+              "type": "string"
+            },
+            "interval_minutes": {
+              "const": 5,
+              "title": "Interval Minutes",
+              "type": "integer"
+            },
+            "values": {
+              "items": {
+                "maximum": 1000,
+                "minimum": 0,
+                "type": "number"
+              },
+              "maxItems": 6,
+              "minItems": 6,
+              "title": "Values",
+              "type": "array"
+            },
+            "uncertainty": {
+              "const": "unavailable",
+              "title": "Uncertainty",
+              "type": "string"
+            },
+            "profile_hash": {
+              "title": "Profile Hash",
+              "type": "string"
+            }
+          },
+          "required": [
+            "input_digest",
+            "status",
+            "unit",
+            "interval_minutes",
+            "values",
+            "uncertainty",
+            "profile_hash"
+          ],
+          "title": "BasalPredictionOutput",
+          "type": "object"
+        },
+        "BasalRateAction": {
+          "additionalProperties": false,
+          "properties": {
+            "action_kind": {
+              "const": "basal_rate",
+              "title": "Action Kind",
+              "type": "string"
+            },
+            "insulin": {
+              "const": "generic_simulation_insulin",
+              "title": "Insulin",
+              "type": "string"
+            },
+            "route": {
+              "const": "subcutaneous_pump",
+              "title": "Route",
+              "type": "string"
+            },
+            "action_unit": {
+              "enum": [
+                "U/min",
+                "U/h"
+              ],
+              "title": "Action Unit",
+              "type": "string"
+            },
+            "action_value": {
+              "maximum": 60,
+              "minimum": 0,
+              "title": "Action Value",
+              "type": "number"
+            },
+            "duration_minutes": {
+              "const": 5,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "decision_time": {
+              "title": "Decision Time",
+              "type": "string"
+            },
+            "end_time": {
+              "title": "End Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "action_kind",
+            "insulin",
+            "route",
+            "action_unit",
+            "action_value",
+            "duration_minutes",
+            "decision_time",
+            "end_time"
+          ],
+          "title": "BasalRateAction",
+          "type": "object"
+        },
+        "BasalRatePolicyOutput": {
+          "additionalProperties": false,
+          "properties": {
+            "schema_version": {
+              "const": "basal-policy-v2",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "input_digest": {
+              "title": "Input Digest",
+              "type": "string"
+            },
+            "forecast_parent_hash": {
+              "title": "Forecast Parent Hash",
+              "type": "string"
+            },
+            "profile_hash": {
+              "title": "Profile Hash",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "candidate",
+                "abstain",
+                "unsupported",
+                "error"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "reason": {
+              "enum": [
+                "fixture_only",
+                "insufficient_input",
+                "unsupported",
+                "model_error"
+              ],
+              "title": "Reason",
+              "type": "string"
+            },
+            "action": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/BasalRateAction"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "schema_version",
+            "input_digest",
+            "forecast_parent_hash",
+            "profile_hash",
+            "status",
+            "reason",
+            "action"
+          ],
+          "title": "BasalRatePolicyOutput",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "prediction",
+            "policy"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "job_id": {
+          "title": "Job Id",
+          "type": "string"
+        },
+        "attempt": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Attempt",
+          "type": "integer"
+        },
+        "producer": {
+          "title": "Producer",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "model",
+            "simulator",
+            "fixture"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "input_digest": {
+          "title": "Input Digest",
+          "type": "string"
+        },
+        "parent_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Hash"
+        },
+        "payload": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BasalPredictionOutput"
+            },
+            {
+              "$ref": "#/$defs/BasalRatePolicyOutput"
+            }
+          ],
+          "title": "Payload"
+        },
+        "accepted_at": {
+          "title": "Accepted At",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "schema_version",
+        "kind",
+        "run_id",
+        "case_id",
+        "snapshot_id",
+        "job_id",
+        "attempt",
+        "producer",
+        "version",
+        "origin",
+        "input_digest",
+        "parent_hash",
+        "payload",
+        "accepted_at"
+      ],
+      "title": "BasalRateArtifactEnvelope",
+      "type": "object"
+    },
+    "DataPermissionRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "purpose": {
+          "enum": [
+            "report",
+            "medical_review",
+            "ethics_review",
+            "prediction",
+            "rl"
+          ],
+          "title": "Purpose",
+          "type": "string"
+        },
+        "allowed": {
+          "title": "Allowed",
+          "type": "boolean"
+        },
+        "policy_version": {
+          "const": "engineering-data-policy-v1",
+          "title": "Policy Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "purpose",
+        "allowed",
+        "policy_version"
+      ],
+      "title": "DataPermissionRequest",
+      "type": "object"
+    },
+    "DeleteCaseRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "contract_version": {
+          "const": "engineering-lifecycle-v1",
+          "title": "Contract Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "contract_version"
+      ],
+      "title": "DeleteCaseRequest",
+      "type": "object"
+    },
+    "PredictionJobQuery": {
+      "additionalProperties": false,
+      "properties": {
+        "job_id": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Job Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "job_id"
+      ],
+      "title": "PredictionJobQuery",
+      "type": "object"
+    },
+    "RLJobQuery": {
+      "additionalProperties": false,
+      "properties": {
+        "job_id": {
+          "pattern": "^[0-9a-f]{32}$",
+          "title": "Job Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "job_id"
+      ],
+      "title": "RLJobQuery",
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "patients": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "total_minutes": 10440,
+  "groups": [
+    {
+      "name": "normal",
+      "seeds": [
+        81101,
+        81102,
+        81103
+      ],
+      "bolus_factor": 1.0
+    },
+    {
+      "name": "under_bolus",
+      "seeds": [
+        81201
+      ],
+      "bolus_factor": 0.8
+    },
+    {
+      "name": "over_bolus",
+      "seeds": [
+        81201
+      ],
+      "bolus_factor": 1.2
+    }
+  ],
+  "comparison_status": "planned final known-patient new-scenario panel; methods and scenario uniqueness must be frozen before execution; no FQL/ReBRAC reruns"
+}

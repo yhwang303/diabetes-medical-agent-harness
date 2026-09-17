@@ -1,0 +1,1701 @@
+{
+  "run": "H03_prefix_sim_paired",
+  "checkpoint_sha256": "cb995a46a3c5e14549994e30d15cef08d30f61987d3f22fd406f2a471397afd4",
+  "samples_sha256": "bceeb9c84a85b4c339ff373094656bb0d092ef4472bc5d032a3fc3b3d2957dbc",
+  "source_sha256": "3ce7d2ce2f2f0832204c1204f44264783f31c1aeb2b1934322cb92b4149f7e3e",
+  "scope": "exposed development only; reordered equal-dose plans absent from constant-arm training; no retraining or clinical causal claim",
+  "summary": {
+    "histories": 28,
+    "shortened_arms": 0,
+    "equal_dose_pairs": 84,
+    "path_effect_mae_mg_dl": 7.822766695703779,
+    "final_direction_pairs_above_1mg_dl": 84,
+    "final_direction_agreement": 0.0,
+    "complete_candidate_sets": 28,
+    "reward_choice_agreement": 0.0,
+    "reward_regret": 0.2916168274818452,
+    "glucose_implied_regret": 0.18471000828531578
+  },
+  "cases": [
+    {
+      "patient": 1,
+      "minute": 360,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.0238993167877197,
+          "final_true_effect_mg_dl": -5.058963775634766,
+          "final_predicted_effect_mg_dl": 1.7642669677734375
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.391901969909668,
+          "final_true_effect_mg_dl": 5.225046157836914,
+          "final_predicted_effect_mg_dl": -3.8661575317382812
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.403783321380615,
+          "final_true_effect_mg_dl": -10.285795211791992,
+          "final_predicted_effect_mg_dl": 5.635866165161133
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.1256289963011039,
+      "glucose_implied_regret": 0.10889765164106735,
+      "true_status_returns": [
+        1.804065742229731,
+        1.9212936211115255,
+        1.8123959694704581,
+        1.6805393631507357,
+        1.7956646248104216,
+        1.9134191662020403,
+        1.6893898573505077
+      ],
+      "reward_head_returns": [
+        2.850215421126798,
+        2.8307616577409043,
+        2.797349128845262,
+        2.8832348890700983,
+        2.9003620603443316,
+        2.8813328431616387,
+        2.831177291255621
+      ]
+    },
+    {
+      "patient": 1,
+      "minute": 720,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.655721426010132,
+          "final_true_effect_mg_dl": -4.804630279541016,
+          "final_predicted_effect_mg_dl": 3.5747365951538086
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 4.230343818664551,
+          "final_true_effect_mg_dl": 4.994024276733398,
+          "final_predicted_effect_mg_dl": -7.204010009765625
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.860248565673828,
+          "final_true_effect_mg_dl": -9.798894882202148,
+          "final_predicted_effect_mg_dl": 10.784600257873535
+        }
+      ],
+      "reward_best": 6,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.24149067751811715,
+      "glucose_implied_regret": 0.1142053636457886,
+      "true_status_returns": [
+        0.820027076614584,
+        0.9414626798899361,
+        0.8272573162441476,
+        0.6921702614257699,
+        0.8127185600724949,
+        0.9347369417366703,
+        0.699972002371819
+      ],
+      "reward_head_returns": [
+        2.0091194557620415,
+        1.9777003529343058,
+        2.0131980483029928,
+        2.0359627595252627,
+        2.0096055270106925,
+        1.977941843280089,
+        2.039709977885293
+      ]
+    },
+    {
+      "patient": 1,
+      "minute": 1080,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.1945066452026367,
+          "final_true_effect_mg_dl": -4.204587936401367,
+          "final_predicted_effect_mg_dl": 1.9228219985961914
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.757672071456909,
+          "final_true_effect_mg_dl": 4.39193058013916,
+          "final_predicted_effect_mg_dl": -6.350852966308594
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.94024133682251,
+          "final_true_effect_mg_dl": -8.596243858337402,
+          "final_predicted_effect_mg_dl": 8.297269821166992
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.08093346591584405,
+      "glucose_implied_regret": 0.07029679919542975,
+      "true_status_returns": [
+        2.4927547692344394,
+        2.5683292357770764,
+        2.4980324365816466,
+        2.410608444704158,
+        2.4873957698612323,
+        2.5635689407219506,
+        2.4164817287419815
+      ],
+      "reward_head_returns": [
+        2.7196775481530193,
+        2.691722241294941,
+        2.696641663774862,
+        2.751800495577463,
+        2.7564050913122387,
+        2.7283647381104625,
+        2.7278973377656377
+      ]
+    },
+    {
+      "patient": 1,
+      "minute": 1440,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.7775142192840576,
+          "final_true_effect_mg_dl": -3.38558292388916,
+          "final_predicted_effect_mg_dl": 2.643259048461914
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.0606117248535156,
+          "final_true_effect_mg_dl": 3.591756820678711,
+          "final_predicted_effect_mg_dl": -4.917815208435059
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.827427387237549,
+          "final_true_effect_mg_dl": -6.976507186889648,
+          "final_predicted_effect_mg_dl": 7.569399833679199
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 3,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.10036905449419287,
+      "glucose_implied_regret": 0.11605458399224045,
+      "true_status_returns": [
+        2.6803859035547513,
+        2.559089090584691,
+        2.672488405285792,
+        2.7885429892780325,
+        2.6881739347838396,
+        2.5679291741737997,
+        2.781709781215995
+      ],
+      "reward_head_returns": [
+        2.8438729520936623,
+        2.8206583630846476,
+        2.807783972786794,
+        2.876433685037897,
+        2.8818330763441935,
+        2.858492325909328,
+        2.8411704170405105
+      ]
+    },
+    {
+      "patient": 1,
+      "minute": 2160,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.8000171184539795,
+          "final_true_effect_mg_dl": -4.433601379394531,
+          "final_predicted_effect_mg_dl": 2.469881057739258
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.83616042137146,
+          "final_true_effect_mg_dl": 4.632333755493164,
+          "final_predicted_effect_mg_dl": -3.147531509399414
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.628389835357666,
+          "final_true_effect_mg_dl": -9.065694808959961,
+          "final_predicted_effect_mg_dl": 5.611146926879883
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.09775246622885048,
+      "glucose_implied_regret": 0.08748086897681584,
+      "true_status_returns": [
+        1.9552018248199534,
+        2.047777377267245,
+        1.9602965082904291,
+        1.855383360868613,
+        1.9500249110383945,
+        2.043243537826258,
+        1.8611180661678777
+      ],
+      "reward_head_returns": [
+        2.8882175609313423,
+        2.8642557465345666,
+        2.8398757292245493,
+        2.9215839405323223,
+        2.9288189387212715,
+        2.9051959077062066,
+        2.874217079049671
+      ]
+    },
+    {
+      "patient": 1,
+      "minute": 2880,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.2562978267669678,
+          "final_true_effect_mg_dl": -3.376373291015625,
+          "final_predicted_effect_mg_dl": 1.8290863037109375
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.426931142807007,
+          "final_true_effect_mg_dl": 3.5800323486328125,
+          "final_predicted_effect_mg_dl": -2.6688194274902344
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 4.67462682723999,
+          "final_true_effect_mg_dl": -6.95559024810791,
+          "final_predicted_effect_mg_dl": 4.503218650817871
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 3,
+      "glucose_implied_best": 6,
+      "reward_regret": 0.10234206203861751,
+      "glucose_implied_regret": 0.006294996316498214,
+      "true_status_returns": [
+        2.5205259303924636,
+        2.3985578942608807,
+        2.5132105324323186,
+        2.630075658156213,
+        2.5277335961175953,
+        2.406772428360359,
+        2.6237806618397146
+      ],
+      "reward_head_returns": [
+        2.8213898784633997,
+        2.796045440321031,
+        2.7617180090360582,
+        2.859914936118415,
+        2.8707349110542535,
+        2.845600292370264,
+        2.8020890344690894
+      ]
+    },
+    {
+      "patient": 1,
+      "minute": 3600,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.4174067974090576,
+          "final_true_effect_mg_dl": -4.556631088256836,
+          "final_predicted_effect_mg_dl": 2.6593265533447266
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 4.022710800170898,
+          "final_true_effect_mg_dl": 4.7561187744140625,
+          "final_predicted_effect_mg_dl": -6.952594757080078
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.419260501861572,
+          "final_true_effect_mg_dl": -9.312543869018555,
+          "final_predicted_effect_mg_dl": 9.625328063964844
+        }
+      ],
+      "reward_best": 6,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.18678246453506064,
+      "glucose_implied_regret": 0.08725617834907151,
+      "true_status_returns": [
+        2.131093977182637,
+        2.224105255948131,
+        2.1368490775990594,
+        2.0309368032334874,
+        2.1252547583168537,
+        2.2189026704805332,
+        2.0373227914130703
+      ],
+      "reward_head_returns": [
+        2.3357932727021624,
+        2.3043290183784593,
+        2.3361818792063165,
+        2.3681993442091924,
+        2.355064359645746,
+        2.322993817196858,
+        2.3684993800846716
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 360,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.8998374938964844,
+          "final_true_effect_mg_dl": -5.523324966430664,
+          "final_predicted_effect_mg_dl": 1.1873903274536133
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 4.208951473236084,
+          "final_true_effect_mg_dl": 6.155433654785156,
+          "final_predicted_effect_mg_dl": -3.509702682495117
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.9525299072265625,
+          "final_true_effect_mg_dl": -11.672235488891602,
+          "final_predicted_effect_mg_dl": 4.709804534912109
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.16481524516061175,
+      "glucose_implied_regret": 0.13761573215969314,
+      "true_status_returns": [
+        2.4037000525101706,
+        2.554695494542588,
+        2.417079762382895,
+        2.22821132106633,
+        2.389880249381976,
+        2.5431864458575033,
+        2.244001492752138
+      ],
+      "reward_head_returns": [
+        2.8330600455805874,
+        2.815900576759407,
+        2.7829566862426534,
+        2.8645278960916203,
+        2.8861488183987234,
+        2.869593808978522,
+        2.8151570676434883
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 720,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.511155843734741,
+          "final_true_effect_mg_dl": -4.086742401123047,
+          "final_predicted_effect_mg_dl": 1.2062387466430664
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.922337770462036,
+          "final_true_effect_mg_dl": 4.542022705078125,
+          "final_predicted_effect_mg_dl": -4.535731315612793
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.210011959075928,
+          "final_true_effect_mg_dl": -8.62291145324707,
+          "final_predicted_effect_mg_dl": 5.755788803100586
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.11890194656657949,
+      "glucose_implied_regret": 0.10050526250459324,
+      "true_status_returns": [
+        2.5414545618811406,
+        2.6509763229211356,
+        2.5504710604165424,
+        2.415061513692356,
+        2.532074376354556,
+        2.643346682490107,
+        2.4259318364386964
+      ],
+      "reward_head_returns": [
+        2.835629162380342,
+        2.8183248846092117,
+        2.791489919588705,
+        2.865518947620281,
+        2.8832182422950385,
+        2.866249409424557,
+        2.8220986593538675
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 1080,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.838482141494751,
+          "final_true_effect_mg_dl": -3.554497718811035,
+          "final_predicted_effect_mg_dl": 1.2173795700073242
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.082291841506958,
+          "final_true_effect_mg_dl": 3.9606828689575195,
+          "final_predicted_effect_mg_dl": -2.7293901443481445
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.791114807128906,
+          "final_true_effect_mg_dl": -7.509429931640625,
+          "final_predicted_effect_mg_dl": 3.9661760330200195
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 3,
+      "reward_regret": 0.053790734646109506,
+      "glucose_implied_regret": 0.11134891856136075,
+      "true_status_returns": [
+        3.09760388921314,
+        3.1454111599607497,
+        3.103261098845773,
+        3.034062241399389,
+        3.09162042531464,
+        3.140998390093529,
+        3.0414021461263165
+      ],
+      "reward_head_returns": [
+        2.7900060625290153,
+        2.7690973458097776,
+        2.7323500504385234,
+        2.8269963614175913,
+        2.846310890390293,
+        2.82614323423946,
+        2.7708935556061274
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 1440,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.902444839477539,
+          "final_true_effect_mg_dl": -4.737957000732422,
+          "final_predicted_effect_mg_dl": 1.2725343704223633
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.1552016735076904,
+          "final_true_effect_mg_dl": 5.406723976135254,
+          "final_predicted_effect_mg_dl": -2.3415298461914062
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.943544864654541,
+          "final_true_effect_mg_dl": -10.135196685791016,
+          "final_predicted_effect_mg_dl": 3.63043212890625
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 3,
+      "glucose_implied_best": 4,
+      "reward_regret": 0.15495289264443945,
+      "glucose_implied_regret": 0.15495289264443945,
+      "true_status_returns": [
+        2.677322744805924,
+        2.4717368478031454,
+        2.6611376495118266,
+        2.847882253567817,
+        2.6929293609233778,
+        2.4910229463419093,
+        2.8356519374356353
+      ],
+      "reward_head_returns": [
+        2.691101298634232,
+        2.6679162265405214,
+        2.6314398625889077,
+        2.7312667666890693,
+        2.7508319151778897,
+        2.7281958543752056,
+        2.672860627263843
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 2160,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.536973237991333,
+          "final_true_effect_mg_dl": -3.7635555267333984,
+          "final_predicted_effect_mg_dl": 1.395615577697754
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.6730899810791016,
+          "final_true_effect_mg_dl": 4.184117317199707,
+          "final_predicted_effect_mg_dl": -2.0122060775756836
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.124868392944336,
+          "final_true_effect_mg_dl": -7.941999435424805,
+          "final_predicted_effect_mg_dl": 3.42608642578125
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 4,
+      "reward_regret": 0.0723194837463974,
+      "glucose_implied_regret": 0.0723194837463974,
+      "true_status_returns": [
+        2.9851173476099797,
+        3.051035632843864,
+        2.991160878593508,
+        2.9042492242284226,
+        2.9787161490974667,
+        3.046314460402143,
+        2.912082915030262
+      ],
+      "reward_head_returns": [
+        2.5112970552083236,
+        2.4836883989018252,
+        2.44868723864712,
+        2.553558725094271,
+        2.5729263901172934,
+        2.545688556785345,
+        2.4918981004866945
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 2880,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.6902244091033936,
+          "final_true_effect_mg_dl": -4.737064361572266,
+          "final_predicted_effect_mg_dl": 0.892064094543457
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 2.9203593730926514,
+          "final_true_effect_mg_dl": 5.403436660766602,
+          "final_predicted_effect_mg_dl": -1.976363182067871
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.554173946380615,
+          "final_true_effect_mg_dl": -10.131102561950684,
+          "final_predicted_effect_mg_dl": 2.8823060989379883
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 3,
+      "glucose_implied_best": 4,
+      "reward_regret": 0.15759499829387957,
+      "glucose_implied_regret": 0.15759499829387957,
+      "true_status_returns": [
+        2.4415597599305263,
+        2.2350538127025423,
+        2.4262300088169724,
+        2.6139095316578547,
+        2.456314533363975,
+        2.2534171216667214,
+        2.602460127145621
+      ],
+      "reward_head_returns": [
+        2.2907648614661484,
+        2.2629450806744305,
+        2.229830004834085,
+        2.3364189230947927,
+        2.3550112578552445,
+        2.328266801955266,
+        2.2767935679937743
+      ]
+    },
+    {
+      "patient": 2,
+      "minute": 3600,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.4071919918060303,
+          "final_true_effect_mg_dl": -4.014962196350098,
+          "final_predicted_effect_mg_dl": 1.1174297332763672
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 3.8640823364257812,
+          "final_true_effect_mg_dl": 4.482936859130859,
+          "final_predicted_effect_mg_dl": -4.392986297607422
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.060092926025391,
+          "final_true_effect_mg_dl": -8.491616249084473,
+          "final_predicted_effect_mg_dl": 5.5256853103637695
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.06182001664549608,
+      "glucose_implied_regret": 0.05070214783439608,
+      "true_status_returns": [
+        3.114634218824125,
+        3.170707002093557,
+        3.120004854259161,
+        3.040612303242771,
+        3.108886985448061,
+        3.1668344876806556,
+        3.047982483156881
+      ],
+      "reward_head_returns": [
+        2.834222137424513,
+        2.817504171008604,
+        2.7881516854922905,
+        2.8643520599912877,
+        2.8838458348309937,
+        2.8675134728212575,
+        2.818973953486646
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 360,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.763139247894287,
+          "final_true_effect_mg_dl": -10.00730037689209,
+          "final_predicted_effect_mg_dl": 0.7633180618286133
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.21577262878418,
+          "final_true_effect_mg_dl": 11.46749496459961,
+          "final_predicted_effect_mg_dl": -4.427945137023926
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 13.936690330505371,
+          "final_true_effect_mg_dl": -21.441734313964844,
+          "final_predicted_effect_mg_dl": 5.214351654052734
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.35105460206537,
+      "glucose_implied_regret": 0.297582496841609,
+      "true_status_returns": [
+        1.7985444212071133,
+        2.1220335534476207,
+        1.8244510566060117,
+        1.3985429032103398,
+        1.7709789513822507,
+        2.1027266504542625,
+        1.4329138589556136
+      ],
+      "reward_head_returns": [
+        2.817988623952701,
+        2.799878482012339,
+        2.775532689326088,
+        2.847108206928998,
+        2.8674545613200975,
+        2.849883017835764,
+        2.80531235682657
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 720,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.286671161651611,
+          "final_true_effect_mg_dl": -7.329030990600586,
+          "final_predicted_effect_mg_dl": 1.518937110900879
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.370981216430664,
+          "final_true_effect_mg_dl": 8.254405975341797,
+          "final_predicted_effect_mg_dl": -4.027244567871094
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.619039535522461,
+          "final_true_effect_mg_dl": -15.55949878692627,
+          "final_predicted_effect_mg_dl": 5.554086685180664
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 5,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.162453044938621,
+      "glucose_implied_regret": 0.15027934558354783,
+      "true_status_returns": [
+        2.208624952455186,
+        2.364159799789734,
+        2.214036979614539,
+        1.9944300256768872,
+        2.2018632802594658,
+        2.3643163251980868,
+        2.0069390949365338
+      ],
+      "reward_head_returns": [
+        2.849937452198408,
+        2.834355989042335,
+        2.807233598459567,
+        2.8801380662768983,
+        2.8949839252051546,
+        2.879443377499962,
+        2.8382373283696642
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 1080,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.547380447387695,
+          "final_true_effect_mg_dl": -7.21940803527832,
+          "final_predicted_effect_mg_dl": 1.0782651901245117
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.860507965087891,
+          "final_true_effect_mg_dl": 8.120819091796875,
+          "final_predicted_effect_mg_dl": -5.663091659545898
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 11.238871574401855,
+          "final_true_effect_mg_dl": -15.317361831665039,
+          "final_predicted_effect_mg_dl": 6.768479347229004
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.18314308642978627,
+      "glucose_implied_regret": 0.16146050054955996,
+      "true_status_returns": [
+        2.4993654428166234,
+        2.671044252173048,
+        2.509583751623488,
+        2.271878380521744,
+        2.4879011657432617,
+        2.6658025575539703,
+        2.2885321763631756
+      ],
+      "reward_head_returns": [
+        2.7058732511087857,
+        2.6801581192032895,
+        2.687086370340283,
+        2.736210270429277,
+        2.7410685142735534,
+        2.715242169428886,
+        2.7166295227478052
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 1440,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.548369884490967,
+          "final_true_effect_mg_dl": -11.908578872680664,
+          "final_predicted_effect_mg_dl": 3.165264129638672
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.951841831207275,
+          "final_true_effect_mg_dl": 13.95849895477295,
+          "final_predicted_effect_mg_dl": -5.2648115158081055
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 13.333972930908203,
+          "final_true_effect_mg_dl": -25.81635284423828,
+          "final_predicted_effect_mg_dl": 8.440418243408203
+        }
+      ],
+      "reward_best": 3,
+      "actual_best": 5,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.23283274381949548,
+      "glucose_implied_regret": 0.045825503567626935,
+      "true_status_returns": [
+        2.9391845387485107,
+        2.9908118717052576,
+        2.9478534617039216,
+        2.760846221452053,
+        2.9280772439229423,
+        2.9936789652715485,
+        2.7835333285443054
+      ],
+      "reward_head_returns": [
+        2.4931241262534565,
+        2.4598638383630855,
+        2.4767868544863116,
+        2.526211480863635,
+        2.524009303431331,
+        2.4902807950355106,
+        2.5092218573637175
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 2160,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.055837154388428,
+          "final_true_effect_mg_dl": -7.368152618408203,
+          "final_predicted_effect_mg_dl": 2.6503400802612305
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.136726379394531,
+          "final_true_effect_mg_dl": 8.306118965148926,
+          "final_predicted_effect_mg_dl": -4.8835601806640625
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.052741050720215,
+          "final_true_effect_mg_dl": -15.649500846862793,
+          "final_predicted_effect_mg_dl": 7.5466461181640625
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 5,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.10657901304728234,
+      "glucose_implied_regret": 0.10460496284074239,
+      "true_status_returns": [
+        2.159020524232303,
+        2.258005326870841,
+        2.1592782873149714,
+        1.9988755324772238,
+        2.1573042371084314,
+        2.263883250155714,
+        2.0068709330824754
+      ],
+      "reward_head_returns": [
+        2.7614757023768264,
+        2.737528959511452,
+        2.7354052029096225,
+        2.791002275115766,
+        2.7946733331008096,
+        2.7705106532962738,
+        2.7650402745117044
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 2880,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.772529602050781,
+          "final_true_effect_mg_dl": -12.18867015838623,
+          "final_predicted_effect_mg_dl": 0.9643335342407227
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 7.29401159286499,
+          "final_true_effect_mg_dl": 14.27274227142334,
+          "final_predicted_effect_mg_dl": -5.206043243408203
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 13.930816650390625,
+          "final_true_effect_mg_dl": -26.41114044189453,
+          "final_predicted_effect_mg_dl": 6.193448066711426
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.1097496371212312,
+      "glucose_implied_regret": 0.07997549478946198,
+      "true_status_returns": [
+        3.0684938874978966,
+        3.1621368478006096,
+        3.0821613530111476,
+        2.853057548231766,
+        3.0523872106793783,
+        3.15962897712756,
+        2.88039071007665
+      ],
+      "reward_head_returns": [
+        2.7745946220743942,
+        2.7526256457293514,
+        2.748987086512131,
+        2.8061032981165024,
+        2.813110023446614,
+        2.791246419687805,
+        2.7799524213273727
+      ]
+    },
+    {
+      "patient": 3,
+      "minute": 3600,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 5.877319812774658,
+          "final_true_effect_mg_dl": -8.128406524658203,
+          "final_predicted_effect_mg_dl": 1.0004940032958984
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 6.184467315673828,
+          "final_true_effect_mg_dl": 9.232438087463379,
+          "final_predicted_effect_mg_dl": -5.4166975021362305
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 11.938305854797363,
+          "final_true_effect_mg_dl": -17.332460403442383,
+          "final_predicted_effect_mg_dl": 6.441275596618652
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.19422574183146946,
+      "glucose_implied_regret": 0.17381341201988354,
+      "true_status_returns": [
+        2.3147298980789226,
+        2.498005954450469,
+        2.3241925424305854,
+        2.064610897968967,
+        2.3037802126189995,
+        2.494714855274756,
+        2.081945694051159
+      ],
+      "reward_head_returns": [
+        2.743486226653445,
+        2.720337986216421,
+        2.7208806593554944,
+        2.774920230574171,
+        2.780141655895621,
+        2.756995789403479,
+        2.7516191300655874
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 360,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 13.145671844482422,
+          "final_true_effect_mg_dl": -20.936336517333984,
+          "final_predicted_effect_mg_dl": 5.145292282104492
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 14.639008522033691,
+          "final_true_effect_mg_dl": 28.571508407592773,
+          "final_predicted_effect_mg_dl": -5.2334489822387695
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 27.76311683654785,
+          "final_true_effect_mg_dl": -49.45764923095703,
+          "final_predicted_effect_mg_dl": 10.357292175292969
+        }
+      ],
+      "reward_best": 3,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 1.76048813196055,
+      "glucose_implied_regret": 0.7473494631814641,
+      "true_status_returns": [
+        0.9805152964080968,
+        1.8062218265057202,
+        1.058872363324256,
+        0.045733694545170095,
+        0.895098751563049,
+        1.7553143913452196,
+        0.12434851864772044
+      ],
+      "reward_head_returns": [
+        2.8558431501438983,
+        2.8240426605892806,
+        2.8157321258462007,
+        2.8894159342765793,
+        2.888473648641434,
+        2.856614368434745,
+        2.8495814806107527
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 720,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 9.367623329162598,
+          "final_true_effect_mg_dl": -12.593713760375977,
+          "final_predicted_effect_mg_dl": 3.185305595397949
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.588395118713379,
+          "final_true_effect_mg_dl": 18.309188842773438,
+          "final_predicted_effect_mg_dl": -3.145608901977539
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 19.9261417388916,
+          "final_true_effect_mg_dl": -30.6965389251709,
+          "final_predicted_effect_mg_dl": 6.323138236999512
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 5,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.4242575193178586,
+      "glucose_implied_regret": 0.3786554677352787,
+      "true_status_returns": [
+        1.8953676187132822,
+        2.289231528559348,
+        1.9147059738685042,
+        1.251609795142923,
+        1.8691039222859243,
+        2.293361441603783,
+        1.3049933268123375
+      ],
+      "reward_head_returns": [
+        2.9250210863868933,
+        2.8941542374295466,
+        2.876345621902754,
+        2.958587187737166,
+        2.959556208988829,
+        2.928833734538552,
+        2.9110329333736926
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 1080,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 8.797693252563477,
+          "final_true_effect_mg_dl": -12.47900104522705,
+          "final_predicted_effect_mg_dl": 2.2215213775634766
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.139887809753418,
+          "final_true_effect_mg_dl": 17.82421875,
+          "final_predicted_effect_mg_dl": -1.9036130905151367
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 18.914220809936523,
+          "final_true_effect_mg_dl": -30.122983932495117,
+          "final_predicted_effect_mg_dl": 4.120182037353516
+        }
+      ],
+      "reward_best": 4,
+      "actual_best": 1,
+      "glucose_implied_best": 4,
+      "reward_regret": 0.4381795857284687,
+      "glucose_implied_regret": 0.4381795857284687,
+      "true_status_returns": [
+        2.1291976736794367,
+        2.524564070683888,
+        2.1655633507069445,
+        1.506585242892449,
+        2.086384484955419,
+        2.508602222770293,
+        1.5725482655967369
+      ],
+      "reward_head_returns": [
+        2.611807307372107,
+        2.5728716942709777,
+        2.5454496955145505,
+        2.6582528354859662,
+        2.659817011793776,
+        2.6208226265725525,
+        2.5934949143341965
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 1440,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.039456367492676,
+          "final_true_effect_mg_dl": -19.622594833374023,
+          "final_predicted_effect_mg_dl": 2.4520797729492188
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 12.132466316223145,
+          "final_true_effect_mg_dl": 28.879581451416016,
+          "final_predicted_effect_mg_dl": -2.285808563232422
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 22.147438049316406,
+          "final_true_effect_mg_dl": -48.35186004638672,
+          "final_predicted_effect_mg_dl": 4.721357345581055
+        }
+      ],
+      "reward_best": 3,
+      "actual_best": 0,
+      "glucose_implied_best": 3,
+      "reward_regret": 0.17033506875086335,
+      "glucose_implied_regret": 0.17033506875086335,
+      "true_status_returns": [
+        3.2100138256615285,
+        2.809567167717706,
+        3.2013914884741164,
+        3.039678756910665,
+        3.206896577030409,
+        2.8706227257209704,
+        3.094695350179507
+      ],
+      "reward_head_returns": [
+        2.8521648364014274,
+        2.8150981362737237,
+        2.7998346453339162,
+        2.886670770277838,
+        2.884156397820697,
+        2.846929457895828,
+        2.8362438019386134
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 2160,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 8.921419143676758,
+          "final_true_effect_mg_dl": -12.157788276672363,
+          "final_predicted_effect_mg_dl": 3.227182388305664
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.227873802185059,
+          "final_true_effect_mg_dl": 18.028959274291992,
+          "final_predicted_effect_mg_dl": -2.782716751098633
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 19.116411209106445,
+          "final_true_effect_mg_dl": -29.958282470703125,
+          "final_predicted_effect_mg_dl": 6.002371788024902
+        }
+      ],
+      "reward_best": 3,
+      "actual_best": 5,
+      "glucose_implied_best": 2,
+      "reward_regret": 0.8227521628478118,
+      "glucose_implied_regret": 0.2882461305011561,
+      "true_status_returns": [
+        1.6487408248735131,
+        1.912322421713792,
+        1.6490358122134683,
+        1.1145297798668126,
+        1.6411557478957066,
+        1.9372819427146244,
+        1.1522894612374823
+      ],
+      "reward_head_returns": [
+        2.946004094981096,
+        2.914199626114786,
+        2.903318393713489,
+        2.9783931945183726,
+        2.975681796024401,
+        2.944292808537107,
+        2.9365017451055206
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 2880,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.69424819946289,
+          "final_true_effect_mg_dl": -21.21372413635254,
+          "final_predicted_effect_mg_dl": 2.2857227325439453
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 12.840418815612793,
+          "final_true_effect_mg_dl": 30.682462692260742,
+          "final_predicted_effect_mg_dl": -2.1626930236816406
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 23.517087936401367,
+          "final_true_effect_mg_dl": -51.78669357299805,
+          "final_predicted_effect_mg_dl": 4.426863670349121
+        }
+      ],
+      "reward_best": 3,
+      "actual_best": 2,
+      "glucose_implied_best": 3,
+      "reward_regret": 0.3693252712459141,
+      "glucose_implied_regret": 0.3693252712459141,
+      "true_status_returns": [
+        3.2408177280885466,
+        3.0348605968809745,
+        3.2491059006535266,
+        2.8797806294076125,
+        3.2210706014486843,
+        3.078961235414649,
+        2.9492899667878696
+      ],
+      "reward_head_returns": [
+        2.7805636735127477,
+        2.741353694066329,
+        2.7225248785587084,
+        2.818664603002989,
+        2.817019623829933,
+        2.7777740024789384,
+        2.7623909282625094
+      ]
+    },
+    {
+      "patient": 4,
+      "minute": 3600,
+      "shortened_arms": 0,
+      "pairs": [
+        {
+          "plans": [
+            "early_plus",
+            "late_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 10.271334648132324,
+          "final_true_effect_mg_dl": -14.506218910217285,
+          "final_predicted_effect_mg_dl": 5.186147689819336
+        },
+        {
+          "plans": [
+            "early_minus",
+            "late_minus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 11.456049919128418,
+          "final_true_effect_mg_dl": 20.872976303100586,
+          "final_predicted_effect_mg_dl": -4.619939804077148
+        },
+        {
+          "plans": [
+            "plus_then_minus",
+            "minus_then_plus"
+          ],
+          "valid_steps": 48,
+          "path_effect_mae_mg_dl": 21.695810317993164,
+          "final_true_effect_mg_dl": -35.193355560302734,
+          "final_predicted_effect_mg_dl": 9.785093307495117
+        }
+      ],
+      "reward_best": 3,
+      "actual_best": 1,
+      "glucose_implied_best": 2,
+      "reward_regret": 1.1204010556516426,
+      "glucose_implied_regret": 0.39072165079159404,
+      "true_status_returns": [
+        2.1908637185463062,
+        2.6112992984749672,
+        2.220577647683373,
+        1.4908982428233246,
+        2.153607443494676,
+        2.60807112725106,
+        1.5571707376798312
+      ],
+      "reward_head_returns": [
+        2.869019711546824,
+        2.8376323368167817,
+        2.829498464850094,
+        2.9022460543310755,
+        2.9013834269338887,
+        2.869986205509088,
+        2.863004801444223
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+% Requires \usepackage{booktabs}. SD is across patients, not training seeds.
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Development closed-loop comparison after offline training on the same Loop data. Mean $\pm$ SD across 4 virtual adult patients, each averaged over nine paired scenarios.}
+\label{tab:rl-dev}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+Method & TIR (\%) $\uparrow$ & TBR70 (\%) $\downarrow$ & TBR54 (\%) $\downarrow$ & Risk $\downarrow$ & Failures $\downarrow$ \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Learned policy comparison}} \\
+Behavior cloning (BC) & 50.40 $\pm$ 10.77 & 6.25 $\pm$ 6.47 & 0.99 $\pm$ 1.38 & 23.07 $\pm$ 14.26 & 14/36 \\
+ReBRAC (NeurIPS 2023) & 82.38 $\pm$ 20.60 & 0.06 $\pm$ 0.12 & 0.00 $\pm$ 0.00 & 3.86 $\pm$ 2.48 & 0/36 \\
+FQL (ICML 2025) & 46.10 $\pm$ 17.17 & 4.25 $\pm$ 2.46 & 1.51 $\pm$ 1.32 & 14.49 $\pm$ 7.61 & 0/36 \\
+Ref-bounded ReBRAC (Ours, O07) & 95.13 $\pm$ 7.88 & 0.28 $\pm$ 0.55 & 0.00 $\pm$ 0.00 & 2.05 $\pm$ 1.19 & 0/36 \\
+\midrule
+\multicolumn{6}{l}{\textit{B. Non-learning reference}} \\
+Fixed basal reference & 95.66 $\pm$ 4.34 & 0.51 $\pm$ 0.77 & 0.00 $\pm$ 0.00 & 2.07 $\pm$ 0.63 & 0/36 \\
+\midrule
+\multicolumn{6}{l}{\textit{C. Architecture controls / ablations}} \\
+FQL + fixed reference & 82.00 $\pm$ 21.14 & 0.03 $\pm$ 0.06 & 0.00 $\pm$ 0.00 & 10.03 $\pm$ 14.31 & 4/36 \\
+Ours w/o RL & 78.48 $\pm$ 18.71 & 0.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 & 4.63 $\pm$ 2.86 & 0/36 \\
+\bottomrule
+\end{tabular*}
+\vspace{2pt}
+\begin{minipage}{\textwidth}\scriptsize
+All learned models use one training seed (260915) and 50,000 training iterations; optimizer schedules and network capacities follow each implementation. ReBRAC uses $\beta_\pi=100$ and FQL uses $\alpha=100$. ReBRAC/FQL are task-adapted implementations, not reproductions of the original benchmark results. All methods share meal boluses and a 6-hour nominal warm-up, excluded from scored time. O07 and the reference controls retain a scalar from the initial observed basal history; O07 and Ours w/o RL constrain actor outputs to $\pm0.4$ U/h around that reference. The fixed reference uses published simulator parameters. O07 received more development search; equal final iterations do not imply equal search or compute budgets. TIR: BG 70--180 mg/dL; TBR70/TBR54: BG below70/54 mg/dL. Risk is the prespecified glucose risk index. Terminal trajectories remain in the fixed evaluation denominator. Single-seed, simulator-only results do not establish SOTA or clinical safety.
+\end{minipage}
+\end{table*}

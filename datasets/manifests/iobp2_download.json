@@ -1,0 +1,1160 @@
+{
+  "date": "2026-09-12",
+  "source": "https://public.jaeb.org/dataset/579",
+  "source_type": "official Jaeb package obtained after form registration",
+  "archive": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/datasets/raw/iobp2/IOBP2 RCT Public Dataset.zip",
+  "bytes": 523361924,
+  "hashes": {
+    "sha256": "f5e70d356c2a154d872de85259a08fdeafc415dd37c5c694e5a884b4864bbab4",
+    "md5": "5c59d1115431050c407bfc94f3a2ce89"
+  },
+  "file_count": 227,
+  "uncompressed_bytes": 4593597672,
+  "last_modified": "Thu, 08 Jun 2023 14:19:35 GMT",
+  "verified": {
+    "content_length": true,
+    "server_etag_md5": true,
+    "all_zip_crc": true,
+    "official_remote_inventory_names_and_sizes": true
+  },
+  "patient_records_parsed": false,
+  "extracted": false,
+  "rl_qualification": "pending; metadata shortlist only",
+  "entries": [
+    {
+      "name": "CRFs/IOBP2AdvEvent.pdf",
+      "bytes": 286065,
+      "crc32": "2ca1aeb4"
+    },
+    {
+      "name": "CRFs/IOBP2BasalRtChg.pdf",
+      "bytes": 42964,
+      "crc32": "a1c8051b"
+    },
+    {
+      "name": "CRFs/IOBP2BGRuniLetComp.pdf",
+      "bytes": 18328,
+      "crc32": "f5a93c3c"
+    },
+    {
+      "name": "CRFs/IOBP2BGRuniLetInit.pdf",
+      "bytes": 18917,
+      "crc32": "e98850b2"
+    },
+    {
+      "name": "CRFs/IOBP2CGMAssess.pdf",
+      "bytes": 68557,
+      "crc32": "4cb8cc1f"
+    },
+    {
+      "name": "CRFs/IOBP2CGMUse.pdf",
+      "bytes": 73518,
+      "crc32": "8ded0bf8"
+    },
+    {
+      "name": "CRFs/IOBP2CompVisit.pdf",
+      "bytes": 58373,
+      "crc32": "d338f729"
+    },
+    {
+      "name": "CRFs/IOBP2ContDeviceDtTmVer.pdf",
+      "bytes": 71027,
+      "crc32": "7ef2f8d8"
+    },
+    {
+      "name": "CRFs/IOBP2CorrectDose.pdf",
+      "bytes": 42119,
+      "crc32": "388fdf4a"
+    },
+    {
+      "name": "CRFs/IOBP2DeviceDtTmVer.pdf",
+      "bytes": 74958,
+      "crc32": "51130264"
+    },
+    {
+      "name": "CRFs/IOBP2DeviceIssue.pdf",
+      "bytes": 128049,
+      "crc32": "63d4f2a8"
+    },
+    {
+      "name": "CRFs/IOBP2DexcomTrain.pdf",
+      "bytes": 17335,
+      "crc32": "f4c65577"
+    },
+    {
+      "name": "CRFs/IOBP2DiabDKAEvent.pdf",
+      "bytes": 66997,
+      "crc32": "3e688587"
+    },
+    {
+      "name": "CRFs/IOBP2DiabHypoEvent.pdf",
+      "bytes": 120215,
+      "crc32": "f5d3adbb"
+    },
+    {
+      "name": "CRFs/IOBP2DiabLocalHbA1c.pdf",
+      "bytes": 12374,
+      "crc32": "0f8d591b"
+    },
+    {
+      "name": "CRFs/IOBP2DiabMedHistory.pdf",
+      "bytes": 87649,
+      "crc32": "90349cb8"
+    },
+    {
+      "name": "CRFs/IOBP2DiabScreening.pdf",
+      "bytes": 192091,
+      "crc32": "1bed80f8"
+    },
+    {
+      "name": "CRFs/IOBP2DiabSocioEcon.pdf",
+      "bytes": 68436,
+      "crc32": "a97b7eca"
+    },
+    {
+      "name": "CRFs/IOBP2DiabTreatment.pdf",
+      "bytes": 23208,
+      "crc32": "10a9d8d5"
+    },
+    {
+      "name": "CRFs/IOBP2DiabUnschedContact.pdf",
+      "bytes": 47040,
+      "crc32": "7ee95794"
+    },
+    {
+      "name": "CRFs/IOBP2DiscontiLet.pdf",
+      "bytes": 56597,
+      "crc32": "f603f848"
+    },
+    {
+      "name": "CRFs/IOBP2eGFR.pdf",
+      "bytes": 10022,
+      "crc32": "e5a255ce"
+    },
+    {
+      "name": "CRFs/IOBP2EligConfirm.pdf",
+      "bytes": 8332,
+      "crc32": "533232d1"
+    },
+    {
+      "name": "CRFs/IOBP2Eligibility.pdf",
+      "bytes": 186217,
+      "crc32": "d9430bf6"
+    },
+    {
+      "name": "CRFs/IOBP2ExtStatus.pdf",
+      "bytes": 86892,
+      "crc32": "c4cb5fc0"
+    },
+    {
+      "name": "CRFs/IOBP2HeightWeight.pdf",
+      "bytes": 44850,
+      "crc32": "29cc0718"
+    },
+    {
+      "name": "CRFs/IOBP2iLetRcmndDose.pdf",
+      "bytes": 16480,
+      "crc32": "6b57220c"
+    },
+    {
+      "name": "CRFs/IOBP2iLetTrain.pdf",
+      "bytes": 81023,
+      "crc32": "ac38b7d6"
+    },
+    {
+      "name": "CRFs/IOBP2Insulin.pdf",
+      "bytes": 39284,
+      "crc32": "6ce564df"
+    },
+    {
+      "name": "CRFs/IOBP2ManualInsulinInj.pdf",
+      "bytes": 12637,
+      "crc32": "26186941"
+    },
+    {
+      "name": "CRFs/IOBP2MealDoses.pdf",
+      "bytes": 48078,
+      "crc32": "23cf02da"
+    },
+    {
+      "name": "CRFs/IOBP2MedicalCondition.pdf",
+      "bytes": 91686,
+      "crc32": "e3c7e6e1"
+    },
+    {
+      "name": "CRFs/IOBP2Medication.pdf",
+      "bytes": 113102,
+      "crc32": "fb9aec85"
+    },
+    {
+      "name": "CRFs/IOBP2PregMenstrInfo.pdf",
+      "bytes": 107292,
+      "crc32": "c1fd4a36"
+    },
+    {
+      "name": "CRFs/IOBP2PSBPUOS.pdf",
+      "bytes": 146714,
+      "crc32": "1607c557"
+    },
+    {
+      "name": "CRFs/IOBP2PSBPUOSParent.pdf",
+      "bytes": 132093,
+      "crc32": "f2c76301"
+    },
+    {
+      "name": "CRFs/IOBP2PSClarke.pdf",
+      "bytes": 110446,
+      "crc32": "c572bb01"
+    },
+    {
+      "name": "CRFs/IOBP2PSClarkeParent.pdf",
+      "bytes": 111267,
+      "crc32": "50f54163"
+    },
+    {
+      "name": "CRFs/IOBP2PSDiabTech.pdf",
+      "bytes": 147418,
+      "crc32": "152fc8c2"
+    },
+    {
+      "name": "CRFs/IOBP2PSHFSAdultNoPart2.pdf",
+      "bytes": 123764,
+      "crc32": "40625d0c"
+    },
+    {
+      "name": "CRFs/IOBP2PSHFSChildNoPart2.pdf",
+      "bytes": 165305,
+      "crc32": "b42ca5c6"
+    },
+    {
+      "name": "CRFs/IOBP2PSHFSParentNoPart2.pdf",
+      "bytes": 164892,
+      "crc32": "77101165"
+    },
+    {
+      "name": "CRFs/IOBP2PSHypoConf.pdf",
+      "bytes": 62166,
+      "crc32": "3dee846f"
+    },
+    {
+      "name": "CRFs/IOBP2PSINSPAdultBase.pdf",
+      "bytes": 154669,
+      "crc32": "9b5f23ab"
+    },
+    {
+      "name": "CRFs/IOBP2PSINSPAdultPost.pdf",
+      "bytes": 147677,
+      "crc32": "d4fb2649"
+    },
+    {
+      "name": "CRFs/IOBP2PSINSPParentBase.pdf",
+      "bytes": 175688,
+      "crc32": "a8fec8de"
+    },
+    {
+      "name": "CRFs/IOBP2PSINSPParentPost.pdf",
+      "bytes": 169792,
+      "crc32": "4890ad9b"
+    },
+    {
+      "name": "CRFs/IOBP2PSINSPYouthBase.pdf",
+      "bytes": 143888,
+      "crc32": "689549b1"
+    },
+    {
+      "name": "CRFs/IOBP2PSINSPYouthPost.pdf",
+      "bytes": 141329,
+      "crc32": "6a58e154"
+    },
+    {
+      "name": "CRFs/IOBP2PSPAIDCChild.pdf",
+      "bytes": 127950,
+      "crc32": "629c8d16"
+    },
+    {
+      "name": "CRFs/IOBP2PSPAIDTTeen.pdf",
+      "bytes": 131778,
+      "crc32": "1dc36106"
+    },
+    {
+      "name": "CRFs/IOBP2PSPastExpAP.pdf",
+      "bytes": 119164,
+      "crc32": "6f6a6c27"
+    },
+    {
+      "name": "CRFs/IOBP2PSPastExpAPParent.pdf",
+      "bytes": 150159,
+      "crc32": "2bd080b5"
+    },
+    {
+      "name": "CRFs/IOBP2PSPPAIDCParent.pdf",
+      "bytes": 134224,
+      "crc32": "031861e7"
+    },
+    {
+      "name": "CRFs/IOBP2PSPPAIDTParent.pdf",
+      "bytes": 133437,
+      "crc32": "8b5bd598"
+    },
+    {
+      "name": "CRFs/IOBP2PST1DDS.pdf",
+      "bytes": 156476,
+      "crc32": "40d00f64"
+    },
+    {
+      "name": "CRFs/IOBP2PSTransDailyQuest.pdf",
+      "bytes": 100219,
+      "crc32": "71557c25"
+    },
+    {
+      "name": "CRFs/IOBP2PSWeeklyQuest.pdf",
+      "bytes": 136833,
+      "crc32": "0bc7279a"
+    },
+    {
+      "name": "CRFs/IOBP2PSWHO5.pdf",
+      "bytes": 73397,
+      "crc32": "86ae1001"
+    },
+    {
+      "name": "CRFs/IOBP2PtFinalStat.pdf",
+      "bytes": 137133,
+      "crc32": "725846cc"
+    },
+    {
+      "name": "CRFs/IOBP2RandBaseInfo.pdf",
+      "bytes": 66508,
+      "crc32": "10efc382"
+    },
+    {
+      "name": "CRFs/IOBP2RunInRev.pdf",
+      "bytes": 51784,
+      "crc32": "3704783d"
+    },
+    {
+      "name": "CRFs/IOBP2VirtVisInfo.pdf",
+      "bytes": 48176,
+      "crc32": "ab2d5148"
+    },
+    {
+      "name": "CRFs/IOBP2VisitInfo.pdf",
+      "bytes": 37856,
+      "crc32": "521a8cb2"
+    },
+    {
+      "name": "Data Tables/IOBP2AdvEvent.txt",
+      "bytes": 71310,
+      "crc32": "c70b4c25"
+    },
+    {
+      "name": "Data Tables/IOBP2BasalRtChg.txt",
+      "bytes": 307,
+      "crc32": "e78bd530"
+    },
+    {
+      "name": "Data Tables/IOBP2BGRuniLetComp.txt",
+      "bytes": 897,
+      "crc32": "877c2ab4"
+    },
+    {
+      "name": "Data Tables/IOBP2BGRuniLetInit.txt",
+      "bytes": 897,
+      "crc32": "265ad03c"
+    },
+    {
+      "name": "Data Tables/IOBP2CGMAssess.txt",
+      "bytes": 13951,
+      "crc32": "2301407f"
+    },
+    {
+      "name": "Data Tables/IOBP2CGMUse.txt",
+      "bytes": 6388,
+      "crc32": "491e1cae"
+    },
+    {
+      "name": "Data Tables/IOBP2CompVisit.txt",
+      "bytes": 92078,
+      "crc32": "ac95767b"
+    },
+    {
+      "name": "Data Tables/IOBP2ContDeviceDtTmVer.txt",
+      "bytes": 15524,
+      "crc32": "f38ac142"
+    },
+    {
+      "name": "Data Tables/IOBP2CorrectDose.txt",
+      "bytes": 16282,
+      "crc32": "bbe83166"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceBGM.txt",
+      "bytes": 519741,
+      "crc32": "5cf6df45"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceCGM.txt",
+      "bytes": 822215233,
+      "crc32": "044bc289"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceCGMAlertSet.txt",
+      "bytes": 512086,
+      "crc32": "2a4c00e5"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceDtTmVer.txt",
+      "bytes": 80156,
+      "crc32": "47d363c7"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceiLet.txt",
+      "bytes": 1152217869,
+      "crc32": "78af64b1"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceIssue.txt",
+      "bytes": 53574,
+      "crc32": "fc8c4c83"
+    },
+    {
+      "name": "Data Tables/IOBP2DeviceKetone.txt",
+      "bytes": 96204,
+      "crc32": "995cd6fa"
+    },
+    {
+      "name": "Data Tables/IOBP2DexcomTrain.txt",
+      "bytes": 2341,
+      "crc32": "2ffa1e48"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabDKAEvent.txt",
+      "bytes": 32888,
+      "crc32": "155a2088"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabHypoEvent.txt",
+      "bytes": 2735,
+      "crc32": "85d4331b"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabLocalHbA1c.txt",
+      "bytes": 17374,
+      "crc32": "310f13d9"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabMedHistory.txt",
+      "bytes": 142160,
+      "crc32": "ab16cb89"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabScreening.txt",
+      "bytes": 79401,
+      "crc32": "9d57f15c"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabSocioEcon.txt",
+      "bytes": 33344,
+      "crc32": "a6ec59a6"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabTreatment.txt",
+      "bytes": 39301,
+      "crc32": "9acfc215"
+    },
+    {
+      "name": "Data Tables/IOBP2DiabUnschedContact.txt",
+      "bytes": 31355,
+      "crc32": "175cd2fb"
+    },
+    {
+      "name": "Data Tables/IOBP2DiscontiLet.txt",
+      "bytes": 871,
+      "crc32": "28583e1a"
+    },
+    {
+      "name": "Data Tables/IOBP2eGFR.txt",
+      "bytes": 9943,
+      "crc32": "33620fad"
+    },
+    {
+      "name": "Data Tables/IOBP2EligConfirm.txt",
+      "bytes": 13079,
+      "crc32": "38678ea0"
+    },
+    {
+      "name": "Data Tables/IOBP2Eligibility.txt",
+      "bytes": 51172,
+      "crc32": "ee71cc5d"
+    },
+    {
+      "name": "Data Tables/IOBP2ExtensionStat.txt",
+      "bytes": 1830,
+      "crc32": "206dd637"
+    },
+    {
+      "name": "Data Tables/IOBP2HeightWeight.txt",
+      "bytes": 267813,
+      "crc32": "4626d443"
+    },
+    {
+      "name": "Data Tables/IOBP2iLetRcmndDose.txt",
+      "bytes": 9657,
+      "crc32": "240f24f6"
+    },
+    {
+      "name": "Data Tables/IOBP2iLetTrain.txt",
+      "bytes": 5382,
+      "crc32": "c3c77398"
+    },
+    {
+      "name": "Data Tables/IOBP2Insulin.txt",
+      "bytes": 82555,
+      "crc32": "2ec05db4"
+    },
+    {
+      "name": "Data Tables/IOBP2ManualInsulinInj.txt",
+      "bytes": 6433,
+      "crc32": "6a34c075"
+    },
+    {
+      "name": "Data Tables/IOBP2MealDose.txt",
+      "bytes": 66634,
+      "crc32": "bbd6f85a"
+    },
+    {
+      "name": "Data Tables/IOBP2MedicalCondition.txt",
+      "bytes": 210835,
+      "crc32": "31d19080"
+    },
+    {
+      "name": "Data Tables/IOBP2Medication.txt",
+      "bytes": 273117,
+      "crc32": "071cfc17"
+    },
+    {
+      "name": "Data Tables/IOBP2PregMenstrInfo.txt",
+      "bytes": 102857,
+      "crc32": "d1aaa951"
+    },
+    {
+      "name": "Data Tables/IOBP2PSBPUOS.txt",
+      "bytes": 62852,
+      "crc32": "032b0503"
+    },
+    {
+      "name": "Data Tables/IOBP2PSBPUOSParent.txt",
+      "bytes": 23146,
+      "crc32": "f8c40034"
+    },
+    {
+      "name": "Data Tables/IOBP2PSClarke.txt",
+      "bytes": 94535,
+      "crc32": "1d22b5cb"
+    },
+    {
+      "name": "Data Tables/IOBP2PSClarkeParent.txt",
+      "bytes": 9676,
+      "crc32": "d7df693a"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDiabTech.txt",
+      "bytes": 31716,
+      "crc32": "a2e73b6b"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDTSQcAdult.txt",
+      "bytes": 12594,
+      "crc32": "2ab05074"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDTSQcParent.txt",
+      "bytes": 10219,
+      "crc32": "82b40022"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDTSQcTeen.txt",
+      "bytes": 4040,
+      "crc32": "e113df0b"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDTSQsAdult.txt",
+      "bytes": 13802,
+      "crc32": "d5c24541"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDTSQsParent.txt",
+      "bytes": 10783,
+      "crc32": "aa42d8e6"
+    },
+    {
+      "name": "Data Tables/IOBP2PSDTSQsTeen.txt",
+      "bytes": 4293,
+      "crc32": "67bde2d9"
+    },
+    {
+      "name": "Data Tables/IOBP2PSEQ5D5L.txt",
+      "bytes": 34167,
+      "crc32": "e73582af"
+    },
+    {
+      "name": "Data Tables/IOBP2PSEQ5DY.txt",
+      "bytes": 18557,
+      "crc32": "146f1974"
+    },
+    {
+      "name": "Data Tables/IOBP2PSHFSAdultNoPart2.txt",
+      "bytes": 76679,
+      "crc32": "8ce80c07"
+    },
+    {
+      "name": "Data Tables/IOBP2PSHFSChildNoPart2.txt",
+      "bytes": 34792,
+      "crc32": "ca3e0b59"
+    },
+    {
+      "name": "Data Tables/IOBP2PSHFSParentNoPart2.txt",
+      "bytes": 39807,
+      "crc32": "6f80e7fc"
+    },
+    {
+      "name": "Data Tables/IOBP2PSHypoConf.txt",
+      "bytes": 38474,
+      "crc32": "17471228"
+    },
+    {
+      "name": "Data Tables/IOBP2PSINSPAdultBase.txt",
+      "bytes": 22341,
+      "crc32": "59d420ba"
+    },
+    {
+      "name": "Data Tables/IOBP2PSINSPAdultPost.txt",
+      "bytes": 16952,
+      "crc32": "f57887e8"
+    },
+    {
+      "name": "Data Tables/IOBP2PSINSPParentBase.txt",
+      "bytes": 13473,
+      "crc32": "58cc87bb"
+    },
+    {
+      "name": "Data Tables/IOBP2PSINSPParentPost.txt",
+      "bytes": 9114,
+      "crc32": "781bb4f3"
+    },
+    {
+      "name": "Data Tables/IOBP2PSINSPYouthBase.txt",
+      "bytes": 10481,
+      "crc32": "a529ae7a"
+    },
+    {
+      "name": "Data Tables/IOBP2PSINSPYouthPost.txt",
+      "bytes": 6595,
+      "crc32": "d6b752a5"
+    },
+    {
+      "name": "Data Tables/IOBP2PSPAIDCChild.txt",
+      "bytes": 11952,
+      "crc32": "6c2b804a"
+    },
+    {
+      "name": "Data Tables/IOBP2PSPAIDTTeen.txt",
+      "bytes": 11884,
+      "crc32": "b7621c9e"
+    },
+    {
+      "name": "Data Tables/IOBP2PSPastExpAP.txt",
+      "bytes": 16343,
+      "crc32": "d141b614"
+    },
+    {
+      "name": "Data Tables/IOBP2PSPastExpAPParent.txt",
+      "bytes": 5815,
+      "crc32": "17b484fc"
+    },
+    {
+      "name": "Data Tables/IOBP2PSPPAIDCParent.txt",
+      "bytes": 17382,
+      "crc32": "0208e6cf"
+    },
+    {
+      "name": "Data Tables/IOBP2PSPPAIDTParent.txt",
+      "bytes": 12504,
+      "crc32": "47ba74bc"
+    },
+    {
+      "name": "Data Tables/IOBP2PST1DDS.txt",
+      "bytes": 68581,
+      "crc32": "e11b68c9"
+    },
+    {
+      "name": "Data Tables/IOBP2PSTransDailyQuest.txt",
+      "bytes": 29383,
+      "crc32": "5d8ed52d"
+    },
+    {
+      "name": "Data Tables/IOBP2PSWeeklyQuest.txt",
+      "bytes": 324767,
+      "crc32": "1c6b647c"
+    },
+    {
+      "name": "Data Tables/IOBP2PSWHO5.txt",
+      "bytes": 49177,
+      "crc32": "71192131"
+    },
+    {
+      "name": "Data Tables/IOBP2PtFinalStat.txt",
+      "bytes": 27413,
+      "crc32": "a2980d11"
+    },
+    {
+      "name": "Data Tables/IOBP2PtRoster.txt",
+      "bytes": 38427,
+      "crc32": "79d1632a"
+    },
+    {
+      "name": "Data Tables/IOBP2RandBaseInfo.txt",
+      "bytes": 30168,
+      "crc32": "2292a79e"
+    },
+    {
+      "name": "Data Tables/IOBP2RunInRev.txt",
+      "bytes": 5313,
+      "crc32": "99b50376"
+    },
+    {
+      "name": "Data Tables/IOBP2VirtVisInfo.txt",
+      "bytes": 79321,
+      "crc32": "84cd206f"
+    },
+    {
+      "name": "Data Tables/IOBP2VisitInfo.txt",
+      "bytes": 226143,
+      "crc32": "eae25d8e"
+    },
+    {
+      "name": "Data Tables/STASampleResults.txt",
+      "bytes": 138047,
+      "crc32": "9656842d"
+    },
+    {
+      "name": "Data Tables in SAS/convert txt to SAS 3-2-22.sas",
+      "bytes": 2037,
+      "crc32": "9aa8b286"
+    },
+    {
+      "name": "Data Tables in SAS/convert updated sampleresults txt to SAS 5-3-22.sas",
+      "bytes": 2261,
+      "crc32": "0b9625ec"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2advevent.sas7bdat",
+      "bytes": 262144,
+      "crc32": "314be51a"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2basalrtchg.sas7bdat",
+      "bytes": 131072,
+      "crc32": "fe3c5836"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2bgruniletcomp.sas7bdat",
+      "bytes": 131072,
+      "crc32": "c3b65a7c"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2bgruniletinit.sas7bdat",
+      "bytes": 131072,
+      "crc32": "0792a101"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2cgmassess.sas7bdat",
+      "bytes": 131072,
+      "crc32": "dac107f1"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2cgmuse.sas7bdat",
+      "bytes": 131072,
+      "crc32": "b6f38941"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2compvisit.sas7bdat",
+      "bytes": 589824,
+      "crc32": "dc12afdf"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2contdevicedttmver.sas7bdat",
+      "bytes": 131072,
+      "crc32": "6beeb6de"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2correctdose.sas7bdat",
+      "bytes": 131072,
+      "crc32": "3f0b0239"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2devicebgm.sas7bdat",
+      "bytes": 786432,
+      "crc32": "773ccad7"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2devicecgm.sas7bdat",
+      "bytes": 920125440,
+      "crc32": "6a1634a4"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2devicecgmalertset.sas7bdat",
+      "bytes": 1310720,
+      "crc32": "f3d9e61c"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2devicedttmver.sas7bdat",
+      "bytes": 393216,
+      "crc32": "b11492ca"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2deviceilet.sas7bdat",
+      "bytes": 1665662976,
+      "crc32": "3d4cbada"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2deviceissue.sas7bdat",
+      "bytes": 196608,
+      "crc32": "1d9a62aa"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2deviceketone.sas7bdat",
+      "bytes": 262144,
+      "crc32": "283aa0dd"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2dexcomtrain.sas7bdat",
+      "bytes": 131072,
+      "crc32": "60de34fd"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabdkaevent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "57f2667a"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabhypoevent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "765d8705"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diablocalhba1c.sas7bdat",
+      "bytes": 131072,
+      "crc32": "b701248f"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabmedhistory.sas7bdat",
+      "bytes": 327680,
+      "crc32": "d5cca9c9"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabscreening.sas7bdat",
+      "bytes": 327680,
+      "crc32": "016a4eec"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabsocioecon.sas7bdat",
+      "bytes": 196608,
+      "crc32": "a0b6d679"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabtreatment.sas7bdat",
+      "bytes": 196608,
+      "crc32": "f326e88c"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2diabunschedcontact.sas7bdat",
+      "bytes": 196608,
+      "crc32": "a11c9418"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2discontilet.sas7bdat",
+      "bytes": 131072,
+      "crc32": "472dff07"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2egfr.sas7bdat",
+      "bytes": 131072,
+      "crc32": "cf62a247"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2eligconfirm.sas7bdat",
+      "bytes": 131072,
+      "crc32": "5b6fd915"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2eligibility.sas7bdat",
+      "bytes": 262144,
+      "crc32": "1e385b02"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2extensionstat.sas7bdat",
+      "bytes": 131072,
+      "crc32": "da692f5b"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2heightweight.sas7bdat",
+      "bytes": 458752,
+      "crc32": "1dc1f000"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2iletrcmnddose.sas7bdat",
+      "bytes": 131072,
+      "crc32": "6a7f5315"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2ilettrain.sas7bdat",
+      "bytes": 131072,
+      "crc32": "85d385b5"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2insulin.sas7bdat",
+      "bytes": 262144,
+      "crc32": "c7aaed38"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2manualinsulininj.sas7bdat",
+      "bytes": 131072,
+      "crc32": "82b3a8e8"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2mealdose.sas7bdat",
+      "bytes": 196608,
+      "crc32": "2245cede"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2medicalcondition.sas7bdat",
+      "bytes": 589824,
+      "crc32": "70596aa9"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2medication.sas7bdat",
+      "bytes": 917504,
+      "crc32": "0c8c8975"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pregmenstrinfo.sas7bdat",
+      "bytes": 327680,
+      "crc32": "73b07d0f"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psbpuos.sas7bdat",
+      "bytes": 327680,
+      "crc32": "1ca4b167"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psbpuosparent.sas7bdat",
+      "bytes": 196608,
+      "crc32": "4085e1c9"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psclarke.sas7bdat",
+      "bytes": 262144,
+      "crc32": "6801da49"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psclarkeparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "78074bd5"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdiabtech.sas7bdat",
+      "bytes": 196608,
+      "crc32": "dd4dcce7"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdtsqcadult.sas7bdat",
+      "bytes": 131072,
+      "crc32": "3ae446b4"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdtsqcparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "9c899b04"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdtsqcteen.sas7bdat",
+      "bytes": 131072,
+      "crc32": "755276e3"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdtsqsadult.sas7bdat",
+      "bytes": 131072,
+      "crc32": "f3040371"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdtsqsparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "9eb34618"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psdtsqsteen.sas7bdat",
+      "bytes": 131072,
+      "crc32": "a5770e08"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pseq5d5l.sas7bdat",
+      "bytes": 196608,
+      "crc32": "a6b1a430"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pseq5dy.sas7bdat",
+      "bytes": 131072,
+      "crc32": "1bbde46d"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pshfsadultnopart2.sas7bdat",
+      "bytes": 327680,
+      "crc32": "64ef5aa2"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pshfschildnopart2.sas7bdat",
+      "bytes": 196608,
+      "crc32": "5a86b6be"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pshfsparentnopart2.sas7bdat",
+      "bytes": 196608,
+      "crc32": "23ceb275"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pshypoconf.sas7bdat",
+      "bytes": 196608,
+      "crc32": "cd7cface"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psinspadultbase.sas7bdat",
+      "bytes": 131072,
+      "crc32": "347f5592"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psinspadultpost.sas7bdat",
+      "bytes": 131072,
+      "crc32": "817dba96"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psinspparentbase.sas7bdat",
+      "bytes": 131072,
+      "crc32": "b9a46b38"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psinspparentpost.sas7bdat",
+      "bytes": 131072,
+      "crc32": "4f580e16"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psinspyouthbase.sas7bdat",
+      "bytes": 131072,
+      "crc32": "39426a1b"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psinspyouthpost.sas7bdat",
+      "bytes": 131072,
+      "crc32": "65f4d523"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pspaidcchild.sas7bdat",
+      "bytes": 131072,
+      "crc32": "096570a8"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pspaidtteen.sas7bdat",
+      "bytes": 131072,
+      "crc32": "586dae50"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pspastexpap.sas7bdat",
+      "bytes": 131072,
+      "crc32": "756c05f2"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pspastexpapparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "ea3195a1"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psppaidcparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "97b0b170"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psppaidtparent.sas7bdat",
+      "bytes": 131072,
+      "crc32": "2028b67c"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pst1dds.sas7bdat",
+      "bytes": 327680,
+      "crc32": "52fd9f7d"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pstransdailyquest.sas7bdat",
+      "bytes": 131072,
+      "crc32": "ce9534c0"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2psweeklyquest.sas7bdat",
+      "bytes": 589824,
+      "crc32": "2f865f0b"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2pswho5.sas7bdat",
+      "bytes": 196608,
+      "crc32": "9c18f7f2"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2ptfinalstat.sas7bdat",
+      "bytes": 131072,
+      "crc32": "6c7c4b29"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2ptroster.sas7bdat",
+      "bytes": 131072,
+      "crc32": "69dbd250"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2randbaseinfo.sas7bdat",
+      "bytes": 131072,
+      "crc32": "712ad601"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2runinrev.sas7bdat",
+      "bytes": 131072,
+      "crc32": "ec9075c8"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2virtvisinfo.sas7bdat",
+      "bytes": 327680,
+      "crc32": "23f6db46"
+    },
+    {
+      "name": "Data Tables in SAS/iobp2visitinfo.sas7bdat",
+      "bytes": 1048576,
+      "crc32": "986e32ca"
+    },
+    {
+      "name": "Data Tables in SAS/stasampleresults.sas7bdat",
+      "bytes": 262144,
+      "crc32": "85d9e872"
+    },
+    {
+      "name": "DataGlossary.rtf",
+      "bytes": 2715351,
+      "crc32": "37160228"
+    },
+    {
+      "name": "IOBP2 Dataset ReadMe.rtf",
+      "bytes": 57819,
+      "crc32": "1c6ff25c"
+    },
+    {
+      "name": "IOBP_PIVOTAL_PROTOCOL_V8.5_26JAN2021.pdf",
+      "bytes": 1274904,
+      "crc32": "061be565"
+    }
+  ]
+}

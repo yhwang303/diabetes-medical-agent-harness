@@ -1,0 +1,42 @@
+{
+  "scope": "training diagnostic, no optimizer updates; fixed4 origins per225 patients and common action-sampling seed; does not by itself prove which objective improves control",
+  "patients": 225,
+  "origins": 895,
+  "source_sha256": "63a4cbbb36cf362de02aa19fa21a75009c2580621c322ad444815952506e40c7",
+  "results": [
+    {
+      "run": "H02_prefix_sim_factual",
+      "checkpoint_sha256": "48dd6a16dfa2cd0a15b6538a020d4f41e7cf1d9cc6e9d713d241f4b872a92dff",
+      "losses": {
+        "historical_policy_loss": 0.8179786801338196,
+        "imagined_policy_loss": -0.004692044109106064,
+        "supervised_training_loss": 2.1543734073638916
+      },
+      "gradient_l2": {
+        "historical_policy_loss": 3.5951051712036133,
+        "imagined_policy_loss": 0.005090581253170967,
+        "supervised_training_loss": 8.841564178466797
+      },
+      "imagined_over_behavior_gradient_norm": 0.00040942488703876734,
+      "imagined_behavior_cosine": 0.5316326022148132,
+      "imagination_minutes": 60
+    },
+    {
+      "run": "H04_response_patient_rl",
+      "checkpoint_sha256": "84776e5379dea8dd280f23e92391523d26ca937b457fc1bfcd7fce3117127794",
+      "losses": {
+        "historical_policy_loss": 1.0069363117218018,
+        "imagined_policy_loss": -0.000714254507329315,
+        "supervised_training_loss": 2.5917844772338867
+      },
+      "gradient_l2": {
+        "historical_policy_loss": 5.579174518585205,
+        "imagined_policy_loss": 0.007442713715136051,
+        "supervised_training_loss": 13.352631568908691
+      },
+      "imagined_over_behavior_gradient_norm": 0.00039329269202426076,
+      "imagined_behavior_cosine": 0.28831976652145386,
+      "imagination_minutes": 60
+    }
+  ]
+}

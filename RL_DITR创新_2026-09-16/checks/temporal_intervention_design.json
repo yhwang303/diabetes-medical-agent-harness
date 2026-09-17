@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "local linear counterexample, not a theorem identifying the nonlinear patient model",
+  "constant_plan_rank": 1,
+  "three_block_pulse_rank": 3,
+  "horizon_steps": 48,
+  "full48dim_identification_claim": false,
+  "causal_null_on_constant_example": true,
+  "dynamic_plan_difference": 1.0
+}

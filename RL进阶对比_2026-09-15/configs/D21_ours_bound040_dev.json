@@ -1,0 +1,15 @@
+{
+  "name": "D21_ours_bound040_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Ours_bound040": "results/O07_bounded040_rl/export_0050000.npz"
+  }
+}

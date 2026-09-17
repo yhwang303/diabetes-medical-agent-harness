@@ -1,0 +1,990 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RL-DITR基底与创新：训练审核报告</title><style>body{font:16px/1.65 system-ui;max-width:1250px;margin:30px auto;padding:0 24px;color:#18222b}h1,h2,h3{line-height:1.3}table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px}td,th{border:1px solid #cbd3da;padding:8px;text-align:left}th{background:#eef2f5}pre{overflow:auto;background:#f1f4f6;padding:16px}details{border:1px solid #ccd5dc;padding:12px;margin:14px 0}.status{padding:16px;border-left:5px solid #9b6118;background:#fff5df}.small{font-size:13px;color:#52606b}</style><body><h1>RL-DITR基底与创新：训练审核报告</h1>
+<p class="small">生成于 2026-09-16 17:44:43。依据本地同步证据；远端中断后的完成状态以恢复核验为准。</p><div class="status"><b>已暂停，尚未完成新目标。</b> R05/H02/H03已完成全量单seed训练和一小时开发闭环；H02/H03均未超过固定基础率参考，等总量时序识别失败。响应结构P01/P02改善了探针方向，但C01尚未超过固定基础率参考；H04/R07额外旧目标训练没有改善控制。H05已完成新目标训练，R08及后续控制最终状态待恢复核对。尚无已验证的非incremental创新或SOTA结论。旧O07属于上一轮ReBRAC适配。</div>
+<h2>1. 当前模型到底是什么</h2><p><b>读表顺序：</b>先看当前同数据组R05/H02/H03，再看Loop-only的R03/H01机制实验。R开头是参考或适配修正，H开头是研究候选；E开头只是评价作业编号。还没有定稿的“我方最终模型”。</p>
+<div style="overflow-x:auto"><table><thead><tr><th>名字</th><th>身份</th><th>与主线关系</th></tr></thead><tbody><tr><td>H05 / R08</td><td>当前目标消融：响应结构 / H02结构，统一延迟回报+KL</td><td>同初始化与新增一轮预算；尚无最终我方模型</td></tr><tr><td>H04</td><td>参考轨迹+血糖/latent因果响应，额外旧目标策略轮次</td><td>机制改善；额外策略训练使开发控制变差</td></tr><tr><td>C01</td><td>H04的患者结构，直接继承原H02策略</td><td>0次新增策略更新，区分结构和额外训练影响</td></tr><tr><td>R07</td><td>H02保持结构，多训练相同一轮策略</td><td>控制H04额外策略训练预算，非响应参数预算</td></tr><tr><td>P01/P02/P03/P04</td><td>血糖/latent响应机制原型、全局核及同容量MLP消融</td><td>不是独立RL控制器</td></tr><tr><td>R05</td><td>当前递归RL-DITR参考：Loop+仿真事实，修正连续策略目标</td><td>继承R04患者模型；与H02/H03统一数据和策略目标</td></tr><tr><td>H02</td><td>动作prefix结构候选：相同Loop+仿真事实</td><td>与R05比较转移结构</td></tr><tr><td>H03</td><td>H02 + 配对动作效应/风险路径监督</td><td>与H02比较配对目标；不预先声称非增量原创</td></tr><tr><td>R03 / H01</td><td>已完成的Loop-only参考 / prefix结构实验</td><td>同容量、数据、目标；H01尚未超过固定基础率参考</td></tr><tr><td>R01/R01b/R02/R04</td><td>数值后端、输出支持和策略目标探索</td><td>保留失败及技术修正，不能作为创新数量</td></tr><tr><td>旧ReBRAC / FQL</td><td>上一轮外部强化学习baseline</td><td>不再训练或仿真，只补算已有轨迹指标</td></tr><tr><td>旧BC</td><td>行为克隆：监督拟合历史动作</td><td>不是另一个强化学习算法</td></tr><tr><td>旧O07</td><td>固定参考、有界残差ReBRAC</td><td>历史结果，不再充当本轮我方主线</td></tr></tbody></table></div>
+<div class="status"><b>用户要求暂停：AutoDL余额不足。</b> 2026-09-16约17:40后SSH拒绝连接。仅在用户明确说“任务开始”后恢复，不再提交训练或评价。当前远端进程状态未核实。<a href="阶段总结与恢复交接_2026-09-16.md">完整阶段总结与恢复顺序</a></div>
+<p><b>晚于本地完整快照的已确认事实：</b>H05已完成6580更新、1653421起点访问，225人完整一轮，患者权重冻结检查通过；R08最后看到2550步。H05/R08及C02新控制分数尚未取得。<a href="checks/remote_disconnect_observation.json">MCP返回值摘录（不是完整远端文件下载）</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>已完成原型</th><th>训练数据</th><th>参数</th><th>更新数</th><th>动态240min效应MAE</th><th>时序方向%</th><th>时序终点MAE</th></tr></thead><tbody><tr><td>P05_temporal_conditioned_response</td><td>分时七臂504组</td><td>17480</td><td>3200</td><td>5.164</td><td>100.000</td><td>7.353</td></tr><tr><td>P06_temporal_direct_prefix</td><td>分时七臂504组</td><td>17469</td><td>3200</td><td>5.010</td><td>100.000</td><td>6.846</td></tr></tbody></table></div>
+<p>两者均100%说明普通MLP在更丰富干预覆盖下也能识别时序；卷积先验的独有优势尚未建立。单位mg/dL，开发诊断，非控制分数。</p>
+<h3>结构与梯度</h3><pre>72×22历史（数值、缺失标记、记录年龄、时间）
+  → fR：3层Transformer / hidden256 / 8heads
+  → 初始患者latent z0 + 历史memory
+候选基础率a（U/h）+ 时间 + 当前latent
+  → fT：3层Transformer decoder，cross-attend历史
+  → 下一个latent → fP：血糖 / WTR概率
+  → reward头，value头
+π：3层MLP → 连续有界高斯的均值/尺度
+  → 真实历史回报项 + 模型生成回报项 + 行为监督
+  → B10、K12 beam：累计折扣reward + 末端V
+  → 每5分钟执行首个基础率动作，再观察重规划</pre><p>患者训练时更新fR/fT/fP/reward/V；策略训练时冻结患者模型，只有π接收梯度。R02的status范围为[-1,1]，每5分钟reward=status/12；γ=0.9^(1/12)，价值范围按几何级数界限制。奖励形状未为追求成绩修改。</p>
+<h3>损失与不能省略的适配</h3><pre>L_patient = MSE_glucose + CE_WTR + 0.1·MSE_consistency
+            + L_reward + L_value
+R01/R02: L_reward/L_value是标量MSE
+R03: 作者式two-hot分布交叉熵，按bins取mean（3/41 bins）
+L_policy = −mean(R_logged·logπ(a_logged|z))
+           −mean(R_imagined·logπ(a_sampled|z))
+           + MSE(policy_mean, a_logged)</pre><p>原论文是住院T2D离散注射，这里是成人T1D连续基础输注；时间、概率策略、SL和value目标均有显式适配。原文“V代替R”的稳定化细节未由公开policy trainer完整核实，本轮采用其明确列出的回报公式及尾端V，不冒称作者代码逐位复现。</p><p><a href="任务与复现合同.md">完整映射、原文/源码差异与适配清单</a> · <a href="近期方法依据.md">近期创新依据与近邻工作</a></p>
+<p><a href="模型结构与实验代号.md">完整结构详解：输入、计算图、参数量、loss、step/epoch与后续预测器接入</a></p>
+<h3>当前候选H04的结构变化</h3><pre>历史 → 冻结H02 fR → z0
+最后记录基础率 → H02参考转移 → G_ref、z_ref
+候选动作差Δa → 学习的因果卷积 → ΔG、Δz
+G = G_ref + ΔG；z = z_ref + Δz
+原status(G)/12 → 回报；干预后的z → 策略π / 价值V</pre><p>响应只用原504组恒定干预训练，未用开发标签或新增分时数据；全Loop预训练保留。P01条件核和P02全局8参数核均在84对时序探针达到100%方向一致，因此方向收益不能归功于个体化。幅度仍有误差，控制效果独立评价。</p><p>H04策略额外训练一轮；R07保持H02结构，执行同一额外轮次。该对照不消除新增响应参数和响应训练预算差异。局部线性/时间不变及点预测风险均为明确假设，尚非已验证的非增量创新。</p>
+<h2>2. 训练数据与预算</h2><p>所有新训练只用seed 260915；全量225位训练患者、1,653,421个起点，验证55位患者、424,866个起点。food/exercise缺失是输入特征，不按模态存在性筛样本。每阶段先以1次全量遍历为预算，不冒称论文100 epoch。一步是一次优化器更新；一个epoch是每个原有起点访问一次。恢复作业不是新的seed。</p>
+<p>train有效未来监督数量（其他起点仍保留）：</p>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>有效起点数</th></tr></thead><tbody><tr><td>5</td><td>1653421</td></tr><tr><td>15</td><td>988686</td></tr><tr><td>30</td><td>610842</td></tr><tr><td>60</td><td>318341</td></tr><tr><td>120</td><td>142912</td></tr><tr><td>240</td><td>65365</td></tr></tbody></table></div>
+<p>validation有效未来监督数量（其他起点仍保留）：</p>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>有效起点数</th></tr></thead><tbody><tr><td>5</td><td>424866</td></tr><tr><td>15</td><td>264297</td></tr><tr><td>30</td><td>166866</td></tr><tr><td>60</td><td>89186</td></tr><tr><td>120</td><td>40435</td></tr><tr><td>240</td><td>18559</td></tr></tbody></table></div>
+<h3>仿真扩展的同数据消融</h3><p>当前匹配组为R05/H02/H03。R05继承R04完成训练并经验证选择的递归患者模型，只重新训练策略；H02=动作prefix+相同仿真事实；H03=H02+逐时点ΔCGM/Δstatus配对差目标。三者统一采用下述修正策略目标，H02/H03在开始训练前完成配置修订。使用相同训练专用情景40101/40102；每8次患者更新混入4组×5臂、最多4小时监督。原Loop全量保留，开发探针及最终场景不用于训练。新增数据意味着不能拿旧FQL/ReBRAC结果声称公平算法胜出。此组仍是机制假说，不预先宣称足够新颖。</p><h3>R04失败与连续策略目标修正</h3><p>R04旧目标在1625步出现loss −14630.88、动作MSE 39.37。原作业在首次策略保存前停止；从完整患者阶段RNG精确重放至2000步以归档失败权重，65个共同日志点（至1625步）loss差均为0。这是恢复同一次轨迹，不是新增seed。</p><pre>B = (1/12)/(1−γ) ≈ 9.533
+L_policy_repaired = −E[(1 + clip(R_logged/B, −1, 1)) logπ(a_logged|z)]
+                    −E[stopgrad((G_imagined−V(z))/B) logπ(a_sampled|z)]</pre><p>行为监督由动作MSE改为正确的连续分布负对数似然，历史回报有界归一化后联合系数非负；想象回报加入状态价值baseline。动作MSE仅保留诊断。原status/reward形状和γ不变。这是连续目标的技术修正，不算结构创新；已验证解析反例、225位患者抽样和梯度，开发闭环仍有明显失败，技术修正不等于有效控制。</p>
+<p>已生成72个训练情景、504组同状态、2520条分支、120960个5分钟监督标签。它们存在组内/时间关联，不能当作独立患者数量。<a href="paired_sim_train/manifest.json">完整生成清单与哈希</a></p>
+<p>C01组合来源已经逐权重哈希核验：H02完整患者/策略、P01血糖响应、P03潜在响应。组合操作是0次优化更新，不能把它标成重新完成一轮训练。<a href="results/C01_response_patient_composition/manifest.json">组合来源与参数量</a></p>
+<h3>C02：奖励一致性单因素对照</h3><p>H02全部权重、转移与策略保持精确相同；只将独立奖励头改成status(原预测血糖)/12，0次训练更新。用于隔离C01的响应结构与奖励映射改变，点预测风险仍未经不确定性校准。</p><h3>H05/R08：延迟策略目标</h3><pre>每个原Loop历史 → 4条独立4小时轨迹（3个80分钟动作块）
+J = Σ γ^t · 原status(G_t)/12
+Z = J − 1·Σ_blocks(logπ − logπ_ref)
+A_i = Z_i − mean(Z_j, j≠i)
+L = −mean(stopgrad(A_i) · Σ_blocks logπ_i)</pre><p>患者模型及初始化策略π_ref冻结。该额外阶段用软KL替代历史动作NLL，仍遍历全部Loop历史；有限目标不加V尾端，原规划与V头保留。最终epoch预先指定。LOO/KL为已知方法适配，不称原创；块策略与实际5分钟重规划不同，软惩罚没有硬约束保证。</p>
+<p>旧目标诊断：225人、895固定训练起点；想象项梯度范数约为行为联合项的0.04%。这只是抽样诊断，不证明新目标必然有效。<a href="checks/policy_gradient_balance.json">原始梯度分解</a></p>
+<h2>3. 全部新训练尝试</h2>
+<div style="overflow-x:auto"><table><thead><tr><th>训练代号</th><th>数据/目标</th><th>状态</th><th>最近阶段与步数</th><th>策略采用的患者检查点</th></tr></thead><tbody><tr><td>H01_action_prefix</td><td>Loop</td><td>two_stage_training_completed_control_evaluation_pending</td><td>training_complete </td><td>6580步 / 1653421访问</td></tr><tr><td>H02_prefix_sim_factual</td><td>Loop+仿真事实</td><td>two_stage_training_completed_control_evaluation_pending</td><td>training_complete </td><td>2000步 / 493772访问</td></tr><tr><td>H02_prefix_sim_factual</td><td>Loop+仿真事实</td><td>infrastructure_oom_before_first_update</td><td>patient </td><td>待选</td></tr><tr><td>H03_prefix_sim_paired</td><td>Loop+仿真事实+配对</td><td>two_stage_training_completed_control_evaluation_pending</td><td>training_complete </td><td>2000步 / 493772访问</td></tr><tr><td>H04_response_patient_rl</td><td>继承H02_prefix_sim_factual患者模型；策略用Loop</td><td>policy_budget_completed_control_evaluation_pending</td><td>training_complete </td><td>待选</td></tr><tr><td>H05_response_delayed_policy</td><td>继承H02_prefix_sim_factual患者模型；策略用Loop</td><td>快照中未见完成记录</td><td>policy 375</td><td>待选</td></tr><tr><td>P01_conditioned_response_operator</td><td>冻结H02编码器 + paired_sim_train</td><td>mechanism_experiment_completed_not_policy_or_control</td><td>响应模块 3200步</td><td>共享已完成H02编码器；非新患者/策略训练</td></tr><tr><td>P02_global_response_ablation</td><td>冻结H02编码器 + paired_sim_train</td><td>mechanism_experiment_completed_not_policy_or_control</td><td>响应模块 3200步</td><td>共享已完成H02编码器；非新患者/策略训练</td></tr><tr><td>P03_latent_response_operator</td><td>冻结H02编码器 + paired_sim_train</td><td>latent_mechanism_completed_not_control</td><td>响应模块 3200步</td><td>共享已完成H02编码器；非新患者/策略训练</td></tr><tr><td>P04_direct_prefix_response</td><td>冻结H02编码器 + paired_sim_train</td><td>mechanism_experiment_completed_not_policy_or_control</td><td>响应模块 3200步</td><td>共享已完成H02编码器；非新患者/策略训练</td></tr><tr><td>R01_reference_paper_lr</td><td>Loop</td><td>中断：ValueError(&#x27;Out of range float values are not JSON compliant&#x27;)</td><td>patient 2000</td><td>待选</td></tr><tr><td>R01b_reference_math_eval_resume</td><td>Loop</td><td>two_stage_training_completed_control_evaluation_pending</td><td>training_complete </td><td>6000步 / 1508192访问</td></tr><tr><td>R02_reference_bounded_support</td><td>Loop</td><td>stopped_policy_divergence</td><td>policy 2975</td><td>6580步 / 1653421访问</td></tr><tr><td>R03_reference_categorical</td><td>Loop</td><td>two_stage_training_completed_control_evaluation_pending</td><td>training_complete </td><td>5000步 / 1254892访问</td></tr><tr><td>R04_policy_failure_replay</td><td>Loop</td><td>policy_budget_completed_control_evaluation_pending</td><td>training_complete </td><td>待选</td></tr><tr><td>R04_recursive_sim_factual</td><td>Loop+仿真事实</td><td>interrupted_due_to_negative_return_density_objective_pathology</td><td>policy 1625</td><td>6000步 / 1508192访问</td></tr><tr><td>R05_recursive_sim_stable_policy</td><td>继承R04_recursive_sim_factual患者模型；策略用Loop</td><td>policy_budget_completed_control_evaluation_pending</td><td>training_complete </td><td>待选</td></tr><tr><td>R07_H02_extra_policy_control</td><td>继承H02_prefix_sim_factual患者模型；策略用Loop</td><td>policy_budget_completed_control_evaluation_pending</td><td>training_complete </td><td>待选</td></tr></tbody></table></div><p>“访问”是该患者阶段在选中检查点之前的样本访问数；完整训练预算与选中检查点实际经历的更新分别记录。选择较早检查点不等于按food/exercise缺失筛掉资料。</p>
+<details><summary><b>H01_action_prefix</b> — two_stage_training_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 1236.0226039886475}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>6.381</td><td>0.536</td><td>1.268</td></tr><tr><td>patient</td><td>2000</td><td>6.838</td><td>0.515</td><td>1.268</td></tr><tr><td>patient</td><td>3000</td><td>6.614</td><td>0.523</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>4.324</td><td>0.180</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>4.119</td><td>0.196</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>3.729</td><td>0.179</td><td>1.268</td></tr><tr><td>policy</td><td>2000</td><td>3.704</td><td>0.188</td><td>1.243</td></tr><tr><td>policy</td><td>4000</td><td>3.704</td><td>0.188</td><td>1.262</td></tr><tr><td>policy</td><td>6000</td><td>3.704</td><td>0.188</td><td>1.261</td></tr></tbody></table></div>
+<p><a href="results/H01_action_prefix/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;H01_action_prefix&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;H1 mechanism test: anchored initial latent plus causal action prefix; no predicted-latent feedback into next transition token. All other R03 architecture, losses, reward, data, seed and updates identical. No originality conclusion in advance.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;
+}</pre></details>
+<details><summary><b>H02_prefix_sim_factual</b> — two_stage_training_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 885.1168119907379}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>3.413</td><td>0.177</td><td>1.268</td></tr><tr><td>patient</td><td>2000</td><td>3.229</td><td>0.174</td><td>1.268</td></tr><tr><td>patient</td><td>3000</td><td>3.381</td><td>0.167</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>3.400</td><td>0.168</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>3.385</td><td>0.165</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>3.329</td><td>0.166</td><td>1.268</td></tr><tr><td>policy</td><td>2000</td><td>3.229</td><td>0.174</td><td>1.288</td></tr><tr><td>policy</td><td>4000</td><td>3.229</td><td>0.174</td><td>1.315</td></tr><tr><td>policy</td><td>6000</td><td>3.229</td><td>0.174</td><td>1.298</td></tr></tbody></table></div>
+<p><a href="results/H02_prefix_sim_factual/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;H02_prefix_sim_factual&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;H1 mechanism test: anchored initial latent plus causal action prefix; no predicted-latent feedback into next transition token. All other R03 architecture, losses, reward, data, seed and updates identical. No originality conclusion in advance.&quot;,
+    &quot;Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.&quot;,
+    &quot;Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.&quot;,
+    &quot;Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.&quot;,
+    &quot;Before any H02/H03 training began, replace pathological legacy continuous policy objective with the same bounded-return/NLL repair used by R05. Preserve prior proposed config separately; no completed result overwritten.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/H01_action_prefix/patient_best.pt&quot;,
+  &quot;simulation&quot;: {
+    &quot;every_steps&quot;: 8,
+    &quot;groups_per_update&quot;: 4,
+    &quot;factual_weight&quot;: 1.0,
+    &quot;paired_weight&quot;: 0,
+    &quot;horizon&quot;: 48,
+    &quot;dropout&quot;: false,
+    &quot;training_scenario_seeds&quot;: [
+      40101,
+      40102
+    ]
+  },
+  &quot;policy_loss_variant&quot;: &quot;bounded_return_nll&quot;
+}</pre></details>
+<details><summary><b>H02_prefix_sim_factual</b> — infrastructure_oom_before_first_update</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;stage_start&quot;, &quot;stage&quot;: &quot;patient&quot;, &quot;patients&quot;: 225, &quot;origins&quot;: 1653421, &quot;elapsed_seconds&quot;: 0.0011196136474609375}</p>
+<p><a href="results/H02_prefix_sim_factual_oom_before_update/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;H02_prefix_sim_factual&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;H1 mechanism test: anchored initial latent plus causal action prefix; no predicted-latent feedback into next transition token. All other R03 architecture, losses, reward, data, seed and updates identical. No originality conclusion in advance.&quot;,
+    &quot;Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.&quot;,
+    &quot;Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.&quot;,
+    &quot;Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.&quot;,
+    &quot;Before any H02/H03 training began, replace pathological legacy continuous policy objective with the same bounded-return/NLL repair used by R05. Preserve prior proposed config separately; no completed result overwritten.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/H01_action_prefix/patient_best.pt&quot;,
+  &quot;simulation&quot;: {
+    &quot;every_steps&quot;: 8,
+    &quot;groups_per_update&quot;: 4,
+    &quot;factual_weight&quot;: 1.0,
+    &quot;paired_weight&quot;: 0,
+    &quot;horizon&quot;: 48,
+    &quot;dropout&quot;: false,
+    &quot;training_scenario_seeds&quot;: [
+      40101,
+      40102
+    ]
+  },
+  &quot;policy_loss_variant&quot;: &quot;bounded_return_nll&quot;
+}</pre></details>
+<details><summary><b>H03_prefix_sim_paired</b> — two_stage_training_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 915.8536219596863}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>3.412</td><td>0.177</td><td>1.268</td></tr><tr><td>patient</td><td>2000</td><td>3.231</td><td>0.174</td><td>1.268</td></tr><tr><td>patient</td><td>3000</td><td>3.396</td><td>0.167</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>3.398</td><td>0.167</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>3.411</td><td>0.166</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>3.345</td><td>0.167</td><td>1.268</td></tr><tr><td>policy</td><td>2000</td><td>3.231</td><td>0.174</td><td>1.274</td></tr><tr><td>policy</td><td>4000</td><td>3.231</td><td>0.174</td><td>1.311</td></tr><tr><td>policy</td><td>6000</td><td>3.231</td><td>0.174</td><td>1.294</td></tr></tbody></table></div>
+<p><a href="results/H03_prefix_sim_paired/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;H03_prefix_sim_paired&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;H1 mechanism test: anchored initial latent plus causal action prefix; no predicted-latent feedback into next transition token. All other R03 architecture, losses, reward, data, seed and updates identical. No originality conclusion in advance.&quot;,
+    &quot;Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.&quot;,
+    &quot;Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.&quot;,
+    &quot;Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.&quot;,
+    &quot;Before any H02/H03 training began, replace pathological legacy continuous policy objective with the same bounded-return/NLL repair used by R05. Preserve prior proposed config separately; no completed result overwritten.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/H01_action_prefix/patient_best.pt&quot;,
+  &quot;simulation&quot;: {
+    &quot;every_steps&quot;: 8,
+    &quot;groups_per_update&quot;: 4,
+    &quot;factual_weight&quot;: 1.0,
+    &quot;paired_weight&quot;: 1,
+    &quot;horizon&quot;: 48,
+    &quot;dropout&quot;: false,
+    &quot;training_scenario_seeds&quot;: [
+      40101,
+      40102
+    ]
+  },
+  &quot;policy_loss_variant&quot;: &quot;bounded_return_nll&quot;
+}</pre></details>
+<details><summary><b>H04_response_patient_rl</b> — policy_budget_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 902.4518246650696}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>policy</td><td>2000</td><td>3.257</td><td>0.314</td><td>1.245</td></tr><tr><td>policy</td><td>4000</td><td>3.257</td><td>0.314</td><td>1.296</td></tr><tr><td>policy</td><td>6000</td><td>3.257</td><td>0.314</td><td>1.289</td></tr></tbody></table></div>
+<p><a href="results/H04_response_patient_rl/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;H04_response_patient_rl&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;,
+    &quot;response_config&quot;: {
+      &quot;conditioned&quot;: true,
+      &quot;basal_mean&quot;: 0.09945811581924525,
+      &quot;basal_scale&quot;: 0.14462788945609448,
+      &quot;reward&quot;: &quot;unchanged status function of point glucose forecast; not E[r(G)] under predictive uncertainty&quot;
+    }
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;fR and reference fT/fP retain full-Loop and matched simulator training from H02; no original data removed&quot;,
+    &quot;fT decomposes reference trajectory and learned causal convolution responses of glucose and latent state; local conditional linear time-invariance is a testable assumption&quot;,
+    &quot;response coefficients trained only from same-state paired intervention labels, not confounded factual action correlations&quot;,
+    &quot;reward uses unchanged status function applied to predicted point glucose, removing independent head inconsistency; nonlinear expected-risk calibration not established&quot;,
+    &quot;pi initialized from H02 full policy epoch; one additional full Loop policy epoch at same seed with bounded-return NLL objective; matched unchanged-H02 extra-policy control&quot;,
+    &quot;reference basal reconstructed from last recorded history in original units, never simulator nominal parameters; missing reference is only a coordinate origin, not a fallback dose&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed response100epochs without development checkpoint selection; full additional policy epoch; control assessed independently&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/C01_response_patient_composition/patient_composed.pt&quot;,
+  &quot;policy_loss_variant&quot;: &quot;bounded_return_nll&quot;,
+  &quot;stages&quot;: [
+    &quot;policy&quot;
+  ],
+  &quot;patient_training_origin&quot;: &quot;H02_prefix_sim_factual&quot;,
+  &quot;policy_rng_seed&quot;: 260915,
+  &quot;response_sources&quot;: {
+    &quot;glucose&quot;: &quot;results/P01_conditioned_response_operator/response_last.pt&quot;,
+    &quot;latent&quot;: &quot;results/P03_latent_response_operator/state_response_last.pt&quot;
+  }
+}</pre></details>
+<details><summary><b>H05_response_delayed_policy</b> — 快照中未见完成记录</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;train&quot;, &quot;stage&quot;: &quot;policy&quot;, &quot;step&quot;: 375, &quot;samples&quot;: 83073, &quot;patients_seen&quot;: 225, &quot;seconds_per_step&quot;: 0.04917895317077637, &quot;peak_gpu_gb&quot;: 0.824545792, &quot;loss&quot;: -0.0008715149480849505, &quot;delayed_policy_loss&quot;: -0.0008715149480849505, &quot;imagined_return&quot;: 1.5157783149182797, &quot;within_history_return_std&quot;: 0.1873801079392433, &quot;trajectory_sampled_kl&quot;: 0.02668348788516596, &quot;trajectory_sampled_kl_abs&quot;: 0.1554231286048889, &quot;loo_advantage_rms&quot;: 0.22470661848783494, &quot;action_mean&quot;: 0.7361433482170106, &quot;action_zero_fraction&quot;: 0.18169045686721802, &quot;action_upper_fraction&quot;: 1.3020833721384406e-05, &quot;elapsed_seconds&quot;: 18.695135831832886}</p>
+<p><a href="results/H05_response_delayed_policy/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;H05_response_delayed_policy&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;,
+    &quot;response_config&quot;: {
+      &quot;conditioned&quot;: true,
+      &quot;basal_mean&quot;: 0.09945811581924525,
+      &quot;basal_scale&quot;: 0.14462788945609448,
+      &quot;reward&quot;: &quot;unchanged status function of point glucose forecast; not E[r(G)] under predictive uncertainty&quot;
+    }
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;fR and reference fT/fP retain full-Loop and matched simulator training from H02; no original data removed&quot;,
+    &quot;fT decomposes reference trajectory and learned causal convolution responses of glucose and latent state; local conditional linear time-invariance is a testable assumption&quot;,
+    &quot;response coefficients trained only from same-state paired intervention labels, not confounded factual action correlations&quot;,
+    &quot;reward uses unchanged status function applied to predicted point glucose, removing independent head inconsistency; nonlinear expected-risk calibration not established&quot;,
+    &quot;reference basal reconstructed from last recorded history in original units, never simulator nominal parameters; missing reference is only a coordinate origin, not a fallback dose&quot;,
+    &quot;Matched initialization from C01/H02 before any extra policy epoch; all 225 Loop patients and 1653421 origins retained; seed260915.&quot;,
+    &quot;Frozen patient and inherited reference policy; original unsmoothed status reward; independent leave-one-out REINFORCE on 4h sampled trajectories.&quot;,
+    &quot;Three 80min action blocks approximate delayed effects; this surrogate differs from every5min closed-loop replanning.&quot;,
+    &quot;Soft trajectory KL penalty beta1 replaces direct historical-action NLL in this fine-tuning stage; no hard trust-region or safety guarantee.&quot;,
+    &quot;No critic bootstrap in finite4h actor objective; original value head and planning implementation retained.&quot;,
+    &quot;Known variance-reduction and policy-regularization adaptations, not claimed as original contributions.&quot;
+  ],
+  &quot;selection&quot;: &quot;predeclared final one-full-epoch policy; no development checkpoint selection&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/C01_response_patient_composition/patient_composed.pt&quot;,
+  &quot;policy_loss_variant&quot;: &quot;delayed_trajectory_kl&quot;,
+  &quot;stages&quot;: [
+    &quot;policy&quot;
+  ],
+  &quot;patient_training_origin&quot;: &quot;H02_prefix_sim_factual&quot;,
+  &quot;policy_rng_seed&quot;: 260915,
+  &quot;response_sources&quot;: {
+    &quot;glucose&quot;: &quot;results/P01_conditioned_response_operator/response_last.pt&quot;,
+    &quot;latent&quot;: &quot;results/P03_latent_response_operator/state_response_last.pt&quot;
+  },
+  &quot;delayed_policy&quot;: {
+    &quot;horizon&quot;: 48,
+    &quot;block_steps&quot;: 16,
+    &quot;trajectories&quot;: 4,
+    &quot;kl_beta&quot;: 1.0
+  },
+  &quot;method_sources&quot;: [
+    &quot;https://aclanthology.org/2024.acl-long.662/&quot;,
+    &quot;https://arxiv.org/abs/2502.03550&quot;
+  ]
+}</pre></details>
+<details><summary>P01_conditioned_response_operator：响应结构原型（尚非RL控制器）</summary><p>原Loop全量训练编码器冻结。数据为 paired_sim_train；constant五臂与temporal七臂分别成组比较，不是等标签数的跨数据比较。开发标签不参与训练。结构假设须实测，不能凭机械检查声称生理真实。</p><pre>{
+  &quot;name&quot;: &quot;P01_conditioned_response_operator&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;epochs&quot;: 100,
+  &quot;groups_per_batch&quot;: 16,
+  &quot;learning_rate&quot;: 0.001,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;basis_degree&quot;: 7,
+  &quot;response_hidden&quot;: 64,
+  &quot;conditioned&quot;: true,
+  &quot;encoder_checkpoint&quot;: &quot;results/H02_prefix_sim_factual/patient_best.pt&quot;,
+  &quot;training_data&quot;: &quot;paired_sim_train&quot;,
+  &quot;scope&quot;: &quot;response-operator mechanism prototype only; all Loop data already used by frozen encoder, no Loop retraining in this stage; not an RL controller or established innovation&quot;
+}</pre>
+<p>等总量时序方向一致率：1.000；终点效应MAE：6.928 mg/dL。<a href="results/P01_conditioned_response_operator/response_evaluation.json">完整机制结果</a></p>
+</details>
+<details><summary>P02_global_response_ablation：响应结构原型（尚非RL控制器）</summary><p>原Loop全量训练编码器冻结。数据为 paired_sim_train；constant五臂与temporal七臂分别成组比较，不是等标签数的跨数据比较。开发标签不参与训练。结构假设须实测，不能凭机械检查声称生理真实。</p><pre>{
+  &quot;name&quot;: &quot;P02_global_response_ablation&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;epochs&quot;: 100,
+  &quot;groups_per_batch&quot;: 16,
+  &quot;learning_rate&quot;: 0.001,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;basis_degree&quot;: 7,
+  &quot;response_hidden&quot;: 64,
+  &quot;conditioned&quot;: false,
+  &quot;encoder_checkpoint&quot;: &quot;results/H02_prefix_sim_factual/patient_best.pt&quot;,
+  &quot;training_data&quot;: &quot;paired_sim_train&quot;,
+  &quot;scope&quot;: &quot;response-operator mechanism prototype only; all Loop data already used by frozen encoder, no Loop retraining in this stage; not an RL controller or established innovation&quot;
+}</pre>
+<p>等总量时序方向一致率：1.000；终点效应MAE：7.312 mg/dL。<a href="results/P02_global_response_ablation/response_evaluation.json">完整机制结果</a></p>
+</details>
+<details><summary>P03_latent_response_operator：响应结构原型（尚非RL控制器）</summary><p>原Loop全量训练编码器冻结。数据为 paired_sim_train；constant五臂与temporal七臂分别成组比较，不是等标签数的跨数据比较。开发标签不参与训练。结构假设须实测，不能凭机械检查声称生理真实。</p><pre>{
+  &quot;name&quot;: &quot;P03_latent_response_operator&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;epochs&quot;: 100,
+  &quot;groups_per_batch&quot;: 16,
+  &quot;learning_rate&quot;: 0.001,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;basis_degree&quot;: 7,
+  &quot;latent_rank&quot;: 16,
+  &quot;encoder_checkpoint&quot;: &quot;results/H02_prefix_sim_factual/patient_best.pt&quot;,
+  &quot;training_data&quot;: &quot;paired_sim_train&quot;,
+  &quot;target_steps&quot;: [
+    1,
+    6,
+    12,
+    24,
+    48
+  ],
+  &quot;scope&quot;: &quot;latent response mechanism; supervised differences of frozen observed encodings; not independently evaluated control&quot;
+}</pre>
+<p>潜在状态响应训练MSE：0.001；零响应MSE：0.002。<a href="results/P03_latent_response_operator/state_response_evaluation.json">潜在状态响应训练结果（不是控制效果）</a></p>
+</details>
+<details><summary>P04_direct_prefix_response：响应结构原型（尚非RL控制器）</summary><p>原Loop全量训练编码器冻结。数据为 paired_sim_train；constant五臂与temporal七臂分别成组比较，不是等标签数的跨数据比较。开发标签不参与训练。结构假设须实测，不能凭机械检查声称生理真实。</p><pre>{
+  &quot;name&quot;: &quot;P04_direct_prefix_response&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;epochs&quot;: 100,
+  &quot;groups_per_batch&quot;: 16,
+  &quot;learning_rate&quot;: 0.001,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;basis_degree&quot;: 7,
+  &quot;response_hidden&quot;: 54,
+  &quot;conditioned&quot;: true,
+  &quot;encoder_checkpoint&quot;: &quot;results/H02_prefix_sim_factual/patient_best.pt&quot;,
+  &quot;training_data&quot;: &quot;paired_sim_train&quot;,
+  &quot;scope&quot;: &quot;response-operator mechanism prototype only; all Loop data already used by frozen encoder, no Loop retraining in this stage; not an RL controller or established innovation&quot;,
+  &quot;architecture&quot;: &quot;direct_prefix_response&quot;,
+  &quot;capacity_control&quot;: &quot;17469 versus P01 17480 parameters; same data, epochs, batches, optimizer and seed; causal prefix but no convolution restriction&quot;
+}</pre>
+<p>等总量时序方向一致率：0.000；终点效应MAE：23.824 mg/dL。<a href="results/P04_direct_prefix_response/response_evaluation.json">完整机制结果</a></p>
+</details>
+<details><summary><b>R01_reference_paper_lr</b> — 中断：ValueError(&#x27;Out of range float values are not JSON compliant&#x27;)</summary><p>seed 260915，batch 256，患者/策略学习率 0.001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;train&quot;, &quot;stage&quot;: &quot;patient&quot;, &quot;step&quot;: 2000, &quot;samples&quot;: 493772, &quot;patients_seen&quot;: 225, &quot;seconds_per_step&quot;: 0.14828369140625, &quot;peak_gpu_gb&quot;: 5.149753344, &quot;loss&quot;: 10.838185653686523, &quot;glucose_mse&quot;: 9.584241371154786, &quot;wtr_ce&quot;: 0.5535811257362365, &quot;consistency&quot;: 0.5225396943092346, &quot;reward_status_mse&quot;: 0.5013917827606201, &quot;value_mse&quot;: 0.14671726286411285, &quot;elapsed_seconds&quot;: 297.5387327671051}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>6.414</td><td>0.531</td><td>1.268</td></tr></tbody></table></div>
+<p><a href="results/R01_reference_paper_lr/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R01_reference_paper_lr&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;
+}</pre></details>
+<details><summary><b>R01b_reference_math_eval_resume</b> — two_stage_training_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 1766.024409532547}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>3000</td><td>4.741</td><td>0.268</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>6.088</td><td>0.338</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>4.783</td><td>0.191</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>4.350</td><td>0.234</td><td>1.268</td></tr><tr><td>policy</td><td>2000</td><td>4.350</td><td>0.234</td><td>1.008</td></tr><tr><td>policy</td><td>4000</td><td>4.350</td><td>0.234</td><td>1.026</td></tr><tr><td>policy</td><td>6000</td><td>4.350</td><td>0.234</td><td>0.993</td></tr></tbody></table></div>
+<p><a href="results/R01b_reference_math_eval_resume/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R01b_reference_math_eval_resume&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;FP32 evaluation math SDPA; same finite inputs/weights fail only fused FP32 on LOOP_000264, no learning-rate change; resume same optimizer/RNG at2000&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;resume_checkpoint&quot;: &quot;results/R01_reference_paper_lr/patient_002000.pt&quot;
+}</pre></details>
+<details><summary><b>R02_reference_bounded_support</b> — stopped_policy_divergence</summary><p>seed 260915，batch 256，患者/策略学习率 0.001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;train&quot;, &quot;stage&quot;: &quot;policy&quot;, &quot;step&quot;: 2975, &quot;samples&quot;: 742184, &quot;patients_seen&quot;: 225, &quot;seconds_per_step&quot;: 0.23093099594116212, &quot;peak_gpu_gb&quot;: 5.153085952, &quot;loss&quot;: -64473.3795134449, &quot;historical_policy_loss&quot;: -64492.167058877945, &quot;imagined_policy_loss&quot;: 0.520507713155821, &quot;supervised_action_mse&quot;: 18.268031891584396, &quot;mean_std&quot;: 0.9262280631065368, &quot;imagined_return&quot;: 3.080625, &quot;elapsed_seconds&quot;: 1723.3592004776}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>6.691</td><td>0.540</td><td>1.268</td></tr><tr><td>patient</td><td>2000</td><td>6.375</td><td>0.529</td><td>1.268</td></tr><tr><td>patient</td><td>3000</td><td>6.678</td><td>0.515</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>6.670</td><td>0.451</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>4.438</td><td>0.197</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>5.117</td><td>0.191</td><td>1.268</td></tr><tr><td>policy</td><td>2000</td><td>4.180</td><td>0.196</td><td>26.480</td></tr></tbody></table></div>
+<p><a href="results/R02_reference_bounded_support/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R02_reference_bounded_support&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;bounded_heads&quot;: true
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Restore bounded reward/value support from original categorical heads: tanh status in[-1,1], value within ±((1/12)/(1-gamma)); R01 unbounded scalar adaptation allowed impossible values and remains a negative implementation experiment&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;
+}</pre></details>
+<details><summary><b>R03_reference_categorical</b> — two_stage_training_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 1826.879925251007}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>6.569</td><td>0.517</td><td>1.268</td></tr><tr><td>patient</td><td>2000</td><td>6.440</td><td>0.536</td><td>1.268</td></tr><tr><td>patient</td><td>3000</td><td>6.387</td><td>0.522</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>6.509</td><td>0.525</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>4.221</td><td>0.237</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>6.389</td><td>0.235</td><td>1.268</td></tr><tr><td>policy</td><td>2000</td><td>4.221</td><td>0.237</td><td>1.312</td></tr><tr><td>policy</td><td>4000</td><td>4.221</td><td>0.237</td><td>1.296</td></tr><tr><td>policy</td><td>6000</td><td>4.221</td><td>0.237</td><td>1.320</td></tr></tbody></table></div>
+<p><a href="results/R03_reference_categorical/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R03_reference_categorical&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;
+}</pre></details>
+<details><summary><b>R04_policy_failure_replay</b> — policy_budget_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 193.15405082702637}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>policy</td><td>2000</td><td>3.665</td><td>0.244</td><td>29.750</td></tr></tbody></table></div>
+<p><a href="results/R04_policy_failure_replay/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R04_policy_failure_replay&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 2000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.&quot;,
+    &quot;Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.&quot;,
+    &quot;Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.&quot;,
+    &quot;Same-seed replay from exact end-of-patient RNG; original policy interrupted before first saved policy checkpoint. Preserve a2000step failed-policy weight and compare replay logs. Not a second independent seed.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/R04_recursive_sim_factual/patient_best.pt&quot;,
+  &quot;stages&quot;: [
+    &quot;policy&quot;
+  ],
+  &quot;rng_checkpoint&quot;: &quot;results/R04_recursive_sim_factual/patient_last.pt&quot;
+}</pre></details>
+<details><summary><b>R04_recursive_sim_factual</b> — interrupted_due_to_negative_return_density_objective_pathology</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;train&quot;, &quot;stage&quot;: &quot;policy&quot;, &quot;step&quot;: 1625, &quot;samples&quot;: 398569, &quot;patients_seen&quot;: 225, &quot;seconds_per_step&quot;: 0.08280137062072754, &quot;peak_gpu_gb&quot;: 6.707638784, &quot;loss&quot;: -14630.878942871093, &quot;historical_policy_loss&quot;: -14669.865224609375, &quot;imagined_policy_loss&quot;: -0.3831602793931961, &quot;supervised_action_mse&quot;: 39.369347686767576, &quot;mean_std&quot;: 2.1830968475341797, &quot;imagined_return&quot;: 0.5561890703439712, &quot;elapsed_seconds&quot;: 1573.9156031608582}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>patient</td><td>1000</td><td>4.627</td><td>0.193</td><td>1.268</td></tr><tr><td>patient</td><td>2000</td><td>3.665</td><td>0.233</td><td>1.268</td></tr><tr><td>patient</td><td>3000</td><td>3.864</td><td>0.235</td><td>1.268</td></tr><tr><td>patient</td><td>4000</td><td>3.723</td><td>0.200</td><td>1.268</td></tr><tr><td>patient</td><td>5000</td><td>3.762</td><td>0.213</td><td>1.268</td></tr><tr><td>patient</td><td>6000</td><td>3.665</td><td>0.244</td><td>1.268</td></tr></tbody></table></div>
+<p><a href="results/R04_recursive_sim_factual/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R04_recursive_sim_factual&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.&quot;,
+    &quot;Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.&quot;,
+    &quot;Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/R03_reference_categorical/patient_best.pt&quot;,
+  &quot;simulation&quot;: {
+    &quot;every_steps&quot;: 8,
+    &quot;groups_per_update&quot;: 4,
+    &quot;factual_weight&quot;: 1.0,
+    &quot;paired_weight&quot;: 0,
+    &quot;horizon&quot;: 48,
+    &quot;dropout&quot;: false,
+    &quot;training_scenario_seeds&quot;: [
+      40101,
+      40102
+    ]
+  }
+}</pre></details>
+<details><summary><b>R05_recursive_sim_stable_policy</b> — policy_budget_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 611.3062133789062}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>policy</td><td>2000</td><td>3.665</td><td>0.244</td><td>1.366</td></tr><tr><td>policy</td><td>4000</td><td>3.665</td><td>0.244</td><td>1.362</td></tr><tr><td>policy</td><td>6000</td><td>3.665</td><td>0.244</td><td>1.427</td></tr></tbody></table></div>
+<p><a href="results/R05_recursive_sim_stable_policy/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R05_recursive_sim_stable_policy&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;continuous censored Gaussian; supervised action MSE replaces categorical supervised CE&quot;,
+    &quot;n-step value targets bootstrap actual observed final history using EMA target patient; data gaps are not terminal&quot;,
+    &quot;reward auxiliary regresses unscaled status before 1/12 time conversion&quot;,
+    &quot;one full pass per stage; batch256 not paper batch32/100epochs; all original eligible origins retained&quot;,
+    &quot;Author-style two-hot categorical reward/value losses: 3/41 bins, mean over bins per author utils.py. Value support rescaled to physical geometric return bound. R01/R02 scalar-MSE adaptations kept as negative controls. Learning rate remains original1e-3.&quot;,
+    &quot;Additional full Loop patient epoch and full policy epoch; initialize the selected same-seed original patient checkpoint; restart optimizer at1e-4 for patient only.&quot;,
+    &quot;Every8 patient updates, 4paired groups=20 factual simulator arms, up to48steps; real Loop training retains all225 patients and1653421 origins with12step masked targets. No dev probe/final scenario labels consumed.&quot;,
+    &quot;Exactly same simulator factual arrays, schedule, seed and observed features across R04/H02/H03. H03 alone adds coefficient1 squared difference losses of glucose and status paths relative to same-state zero-delta arm. Prior art exists; this is a mechanism ablation, not an established originality claim.&quot;,
+    &quot;Patient weights from completed R04; policy-only full Loop epoch with bounded-return historical weighting plus proper censored-Gaussian supervised NLL; model imagination uses state-value baseline. This is a continuous-objective repair, not claimed innovation.&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/R04_recursive_sim_factual/patient_best.pt&quot;,
+  &quot;stages&quot;: [
+    &quot;policy&quot;
+  ],
+  &quot;policy_loss_variant&quot;: &quot;bounded_return_nll&quot;,
+  &quot;patient_training_origin&quot;: &quot;R04_recursive_sim_factual&quot;
+}</pre></details>
+<details><summary><b>R07_H02_extra_policy_control</b> — policy_budget_completed_control_evaluation_pending</summary><p>seed 260915，batch 256，患者/策略学习率 0.0001 / 0.001</p>
+<p>最新日志：{&quot;event&quot;: &quot;training_complete&quot;, &quot;elapsed_seconds&quot;: 548.7572183609009}</p>
+<div style="overflow-x:auto"><table><thead><tr><th>阶段</th><th>step</th><th>RMSE30+60 (mmol/L)</th><th>reward误差</th><th>动作模仿MSE</th></tr></thead><tbody><tr><td>policy</td><td>2000</td><td>3.229</td><td>0.174</td><td>1.246</td></tr><tr><td>policy</td><td>4000</td><td>3.229</td><td>0.174</td><td>1.292</td></tr><tr><td>policy</td><td>6000</td><td>3.229</td><td>0.174</td><td>1.288</td></tr></tbody></table></div>
+<p><a href="results/R07_H02_extra_policy_control/config.json">完整配置</a></p><pre>{
+  &quot;name&quot;: &quot;R07_H02_extra_policy_control&quot;,
+  &quot;seed&quot;: 260915,
+  &quot;model&quot;: {
+    &quot;width&quot;: 256,
+    &quot;layers&quot;: 3,
+    &quot;heads&quot;: 8,
+    &quot;ff&quot;: 2048,
+    &quot;dropout&quot;: 0.4,
+    &quot;categorical_heads&quot;: true,
+    &quot;transition_mode&quot;: &quot;action_prefix&quot;
+  },
+  &quot;batch_size&quot;: 256,
+  &quot;horizon&quot;: 12,
+  &quot;amp&quot;: true,
+  &quot;mu&quot;: 0.1,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;target_tau&quot;: 0.005,
+  &quot;log_every&quot;: 25,
+  &quot;validation_per_patient&quot;: 32,
+  &quot;final_validation_per_patient&quot;: 128,
+  &quot;patient&quot;: {
+    &quot;lr&quot;: 0.0001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 1000
+  },
+  &quot;policy&quot;: {
+    &quot;lr&quot;: 0.001,
+    &quot;epochs&quot;: 1,
+    &quot;max_steps&quot;: 100000,
+    &quot;eval_every&quot;: 2000
+  },
+  &quot;adaptations&quot;: [
+    &quot;H02 patient and policy initialization unchanged; same extra full Loop policy epoch as H04, same seed and policy RNG reset; controls additional policy optimization, not response-branch parameter budget&quot;
+  ],
+  &quot;selection&quot;: &quot;fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation&quot;,
+  &quot;initialize_checkpoint&quot;: &quot;results/H02_prefix_sim_factual/policy_last.pt&quot;,
+  &quot;policy_loss_variant&quot;: &quot;bounded_return_nll&quot;,
+  &quot;stages&quot;: [
+    &quot;policy&quot;
+  ],
+  &quot;allow_policy_initialization&quot;: true,
+  &quot;patient_training_origin&quot;: &quot;H02_prefix_sim_factual&quot;,
+  &quot;policy_rng_seed&quot;: 260915
+}</pre></details>
+<h2>4. 指标和论文比较设计</h2><p>主效果量为相对完整RL-DITR的配对ΔTIR（70–180 mg/dL）。TBR&lt;54、TBR&lt;70、提前终止必须并列；同时报告TAR、CV、LBGI/HBGI、低糖事件时长、剂量、动作变化与计算代价。预测MSE不是控制成绩，奖励值也不能替代独立仿真。</p><p>真实拟合按15/30/60/120/240分钟报告患者宏平均MAE/RMSE、持续值参考、WTR Brier和缺失模态分层；共同状态/扰动动作探针报告效应误差与有限候选池遗憾。超过训练时长的预测明确标为外推。</p><p>新场景只比较RL-DITR、我方和必要消融/固定参考，FQL/ReBRAC记N/A；已有10名虚拟成人均已曝光，不能称未见患者。单训练seed的情景/患者置信区间不含训练随机性。</p><p><a href="评价文献与协议建议.md">论文来源、定义、统计及失败处理</a></p>
+<h3>预测总览：患者宏平均RMSE，mg/dL</h3>
+<div style="overflow-x:auto"><table><thead><tr><th>患者模型/权重</th><th>15min</th><th>30min</th><th>60min</th><th>120min</th><th>240min</th><th>240min有效患者</th></tr></thead><tbody><tr><td>R01b_reference_math_eval_resume / patient_best.pt</td><td>30.437</td><td>33.553</td><td>40.331</td><td>54.767</td><td>52.905</td><td>29</td></tr><tr><td>H01_action_prefix / patient_best.pt</td><td>19.301</td><td>25.930</td><td>36.437</td><td>49.638</td><td>51.933</td><td>29</td></tr><tr><td>R03_reference_categorical / patient_best.pt</td><td>24.074</td><td>30.102</td><td>40.082</td><td>51.930</td><td>49.998</td><td>29</td></tr><tr><td>R01b_reference_math_eval_resume / patient_best.pt</td><td>30.437</td><td>33.553</td><td>40.331</td><td>54.767</td><td>52.905</td><td>29</td></tr><tr><td>R03_reference_categorical / patient_best.pt</td><td>24.074</td><td>30.102</td><td>40.082</td><td>51.930</td><td>49.998</td><td>29</td></tr><tr><td>H01_action_prefix / patient_best.pt</td><td>19.301</td><td>25.930</td><td>36.437</td><td>49.638</td><td>51.933</td><td>29</td></tr><tr><td>R05_recursive_sim_stable_policy / policy_last.pt</td><td>16.365</td><td>22.474</td><td>33.548</td><td>50.326</td><td>52.735</td><td>29</td></tr><tr><td>H02_prefix_sim_factual / policy_last.pt</td><td>14.161</td><td>20.725</td><td>30.449</td><td>46.713</td><td>52.773</td><td>29</td></tr><tr><td>H03_prefix_sim_paired / policy_last.pt</td><td>14.268</td><td>20.700</td><td>30.405</td><td>46.655</td><td>52.595</td><td>29</td></tr><tr><td>R04_recursive_sim_factual / patient_002000.pt</td><td>17.407</td><td>23.602</td><td>34.377</td><td>48.778</td><td>50.145</td><td>29</td></tr><tr><td>H04_response_patient_rl / policy_last.pt</td><td>14.265</td><td>20.860</td><td>30.908</td><td>46.692</td><td>52.715</td><td>29</td></tr><tr><td>R07_H02_extra_policy_control / policy_last.pt</td><td>14.161</td><td>20.725</td><td>30.449</td><td>46.713</td><td>52.773</td><td>29</td></tr><tr><td>C01_response_patient_composition / patient_composed.pt</td><td>14.265</td><td>20.860</td><td>30.908</td><td>46.692</td><td>52.715</td><td>29</td></tr></tbody></table></div>
+<p>当前为固定开发抽样诊断，不是最终封存集成绩。先前动作探针使用请求剂量，v2改为实际泵送剂量；总览优先v2，旧版完整保留在下方展开记录。</p>
+<details><summary>E01_R01_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>30.437</td><td>13.695</td><td>0.083</td></tr><tr><td>30</td><td>52</td><td>33.553</td><td>24.052</td><td>0.115</td></tr><tr><td>60</td><td>51</td><td>40.331</td><td>38.174</td><td>0.156</td></tr><tr><td>120</td><td>43</td><td>54.767</td><td>49.060</td><td>0.245</td></tr><tr><td>240</td><td>29</td><td>52.905</td><td>51.897</td><td>0.200</td></tr></tbody></table></div>
+<p><a href="results/E01_R01_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E05_H01_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>19.301</td><td>13.695</td><td>0.050</td></tr><tr><td>30</td><td>52</td><td>25.930</td><td>24.052</td><td>0.097</td></tr><tr><td>60</td><td>51</td><td>36.437</td><td>38.174</td><td>0.145</td></tr><tr><td>120</td><td>43</td><td>49.638</td><td>49.060</td><td>0.246</td></tr><tr><td>240</td><td>29</td><td>51.933</td><td>51.897</td><td>0.192</td></tr></tbody></table></div>
+<p><a href="results/E05_H01_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E06_R03_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>24.074</td><td>13.695</td><td>0.079</td></tr><tr><td>30</td><td>52</td><td>30.102</td><td>24.052</td><td>0.113</td></tr><tr><td>60</td><td>51</td><td>40.082</td><td>38.174</td><td>0.159</td></tr><tr><td>120</td><td>43</td><td>51.930</td><td>49.060</td><td>0.232</td></tr><tr><td>240</td><td>29</td><td>49.998</td><td>51.897</td><td>0.206</td></tr></tbody></table></div>
+<p><a href="results/E06_R03_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E13_R01_dynamics_delivered</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>30.437</td><td>13.695</td><td>0.083</td></tr><tr><td>30</td><td>52</td><td>33.553</td><td>24.052</td><td>0.115</td></tr><tr><td>60</td><td>51</td><td>40.331</td><td>38.174</td><td>0.156</td></tr><tr><td>120</td><td>43</td><td>54.767</td><td>49.060</td><td>0.245</td></tr><tr><td>240</td><td>29</td><td>52.905</td><td>51.897</td><td>0.200</td></tr></tbody></table></div>
+<p><a href="results/E13_R01_dynamics_delivered/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E14_R03_dynamics_delivered</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>24.074</td><td>13.695</td><td>0.079</td></tr><tr><td>30</td><td>52</td><td>30.102</td><td>24.052</td><td>0.113</td></tr><tr><td>60</td><td>51</td><td>40.082</td><td>38.174</td><td>0.159</td></tr><tr><td>120</td><td>43</td><td>51.930</td><td>49.060</td><td>0.232</td></tr><tr><td>240</td><td>29</td><td>49.998</td><td>51.897</td><td>0.206</td></tr></tbody></table></div>
+<p><a href="results/E14_R03_dynamics_delivered/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E15_H01_dynamics_delivered</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>19.301</td><td>13.695</td><td>0.050</td></tr><tr><td>30</td><td>52</td><td>25.930</td><td>24.052</td><td>0.097</td></tr><tr><td>60</td><td>51</td><td>36.437</td><td>38.174</td><td>0.145</td></tr><tr><td>120</td><td>43</td><td>49.638</td><td>49.060</td><td>0.246</td></tr><tr><td>240</td><td>29</td><td>51.933</td><td>51.897</td><td>0.192</td></tr></tbody></table></div>
+<p><a href="results/E15_H01_dynamics_delivered/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E17_R05_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>16.365</td><td>13.695</td><td>0.070</td></tr><tr><td>30</td><td>52</td><td>22.474</td><td>24.052</td><td>0.115</td></tr><tr><td>60</td><td>51</td><td>33.548</td><td>38.174</td><td>0.152</td></tr><tr><td>120</td><td>43</td><td>50.326</td><td>49.060</td><td>0.242</td></tr><tr><td>240</td><td>29</td><td>52.735</td><td>51.897</td><td>0.198</td></tr></tbody></table></div>
+<p><a href="results/E17_R05_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E19_H02_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>14.161</td><td>13.695</td><td>0.052</td></tr><tr><td>30</td><td>52</td><td>20.725</td><td>24.052</td><td>0.098</td></tr><tr><td>60</td><td>51</td><td>30.449</td><td>38.174</td><td>0.143</td></tr><tr><td>120</td><td>43</td><td>46.713</td><td>49.060</td><td>0.230</td></tr><tr><td>240</td><td>29</td><td>52.773</td><td>51.897</td><td>0.188</td></tr></tbody></table></div>
+<p><a href="results/E19_H02_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E21_H03_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>14.268</td><td>13.695</td><td>0.052</td></tr><tr><td>30</td><td>52</td><td>20.700</td><td>24.052</td><td>0.097</td></tr><tr><td>60</td><td>51</td><td>30.405</td><td>38.174</td><td>0.143</td></tr><tr><td>120</td><td>43</td><td>46.655</td><td>49.060</td><td>0.232</td></tr><tr><td>240</td><td>29</td><td>52.595</td><td>51.897</td><td>0.193</td></tr></tbody></table></div>
+<p><a href="results/E21_H03_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E23_R04_patient2k_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>17.407</td><td>13.695</td><td>0.073</td></tr><tr><td>30</td><td>52</td><td>23.602</td><td>24.052</td><td>0.115</td></tr><tr><td>60</td><td>51</td><td>34.377</td><td>38.174</td><td>0.162</td></tr><tr><td>120</td><td>43</td><td>48.778</td><td>49.060</td><td>0.245</td></tr><tr><td>240</td><td>29</td><td>50.145</td><td>51.897</td><td>0.224</td></tr></tbody></table></div>
+<p><a href="results/E23_R04_patient2k_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E30_H04_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>14.265</td><td>13.695</td><td>0.052</td></tr><tr><td>30</td><td>52</td><td>20.860</td><td>24.052</td><td>0.099</td></tr><tr><td>60</td><td>51</td><td>30.908</td><td>38.174</td><td>0.144</td></tr><tr><td>120</td><td>43</td><td>46.692</td><td>49.060</td><td>0.230</td></tr><tr><td>240</td><td>29</td><td>52.715</td><td>51.897</td><td>0.188</td></tr></tbody></table></div>
+<p><a href="results/E30_H04_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E32_R07_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>14.161</td><td>13.695</td><td>0.052</td></tr><tr><td>30</td><td>52</td><td>20.725</td><td>24.052</td><td>0.098</td></tr><tr><td>60</td><td>51</td><td>30.449</td><td>38.174</td><td>0.143</td></tr><tr><td>120</td><td>43</td><td>46.713</td><td>49.060</td><td>0.230</td></tr><tr><td>240</td><td>29</td><td>52.773</td><td>51.897</td><td>0.188</td></tr></tbody></table></div>
+<p><a href="results/E32_R07_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<details><summary>E37_C01_dynamics</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>分钟</th><th>患者数</th><th>宏RMSE mg/dL</th><th>持续值RMSE</th><th>WTR Brier</th></tr></thead><tbody><tr><td>15</td><td>54</td><td>14.265</td><td>13.695</td><td>0.052</td></tr><tr><td>30</td><td>52</td><td>20.860</td><td>24.052</td><td>0.099</td></tr><tr><td>60</td><td>51</td><td>30.908</td><td>38.174</td><td>0.144</td></tr><tr><td>120</td><td>43</td><td>46.692</td><td>49.060</td><td>0.230</td></tr><tr><td>240</td><td>29</td><td>52.715</td><td>51.897</td><td>0.188</td></tr></tbody></table></div>
+<p><a href="results/E37_C01_dynamics/dynamics.json">逐患者/分层/动作效应结果</a></p></details>
+<h3>独立共同动作探针（开发诊断）</h3>
+<div style="overflow-x:auto"><table><thead><tr><th>实验</th><th>30min效应MAE</th><th>60min</th><th>120min</th><th>240min</th><th>候选选择一致%</th><th>候选池平均regret</th></tr></thead><tbody><tr><td>E01_R01_dynamics</td><td>1.188</td><td>3.093</td><td>2.237</td><td>11.084</td><td>78.571</td><td>0.073</td></tr><tr><td>E05_H01_dynamics</td><td>0.024</td><td>0.285</td><td>2.836</td><td>12.218</td><td>32.143</td><td>0.302</td></tr><tr><td>E06_R03_dynamics</td><td>2.345</td><td>3.746</td><td>6.189</td><td>15.975</td><td>28.571</td><td>0.251</td></tr><tr><td>E13_R01_dynamics_delivered</td><td>1.188</td><td>3.091</td><td>2.237</td><td>11.084</td><td>78.571</td><td>0.073</td></tr><tr><td>E14_R03_dynamics_delivered</td><td>2.345</td><td>3.745</td><td>6.188</td><td>15.975</td><td>28.571</td><td>0.251</td></tr><tr><td>E15_H01_dynamics_delivered</td><td>0.024</td><td>0.285</td><td>2.836</td><td>12.218</td><td>32.143</td><td>0.302</td></tr><tr><td>E17_R05_dynamics</td><td>1.414</td><td>2.523</td><td>3.389</td><td>12.306</td><td>25.000</td><td>0.316</td></tr><tr><td>E19_H02_dynamics</td><td>0.098</td><td>0.173</td><td>1.852</td><td>9.417</td><td>14.286</td><td>0.420</td></tr><tr><td>E21_H03_dynamics</td><td>0.167</td><td>0.196</td><td>1.981</td><td>9.684</td><td>14.286</td><td>0.420</td></tr><tr><td>E23_R04_patient2k_dynamics</td><td>1.013</td><td>2.123</td><td>4.137</td><td>13.627</td><td>25.000</td><td>0.318</td></tr><tr><td>E30_H04_dynamics</td><td>0.061</td><td>0.193</td><td>1.831</td><td>7.352</td><td>75.000</td><td>0.050</td></tr><tr><td>E32_R07_dynamics</td><td>0.098</td><td>0.173</td><td>1.852</td><td>9.417</td><td>14.286</td><td>0.420</td></tr><tr><td>E37_C01_dynamics</td><td>0.061</td><td>0.193</td><td>1.831</td><td>7.352</td><td>75.000</td><td>0.050</td></tr></tbody></table></div>
+<p>效应误差单位mg/dL；28个同状态探针，每个5个基础率计划，共同餐食/bolus与随机流。regret只在此候选池、此固定status效用下成立，不是全局最优差距，也不替代低糖指标。</p>
+<details><summary>动作效应的时间响应：逐时长训练/开发诊断</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>患者模型</th><th>数据</th><th>分钟</th><th>动作对</th><th>真实效应RMS</th><th>预测效应RMS</th><th>效应MAE</th><th>方向一致率</th></tr></thead><tbody><tr><td>H02_prefix_sim_factual</td><td>训练干预</td><td>30</td><td>256</td><td>0.012</td><td>0.647</td><td>0.158</td><td>—</td></tr><tr><td>H02_prefix_sim_factual</td><td>训练干预</td><td>60</td><td>256</td><td>0.299</td><td>1.489</td><td>0.312</td><td>0.500</td></tr><tr><td>H02_prefix_sim_factual</td><td>训练干预</td><td>120</td><td>256</td><td>3.327</td><td>2.307</td><td>1.849</td><td>1.000</td></tr><tr><td>H02_prefix_sim_factual</td><td>训练干预</td><td>240</td><td>256</td><td>14.769</td><td>2.726</td><td>7.679</td><td>1.000</td></tr><tr><td>H02_prefix_sim_factual</td><td>开发干预</td><td>30</td><td>112</td><td>0.014</td><td>0.120</td><td>0.098</td><td>—</td></tr><tr><td>H02_prefix_sim_factual</td><td>开发干预</td><td>60</td><td>112</td><td>0.347</td><td>0.224</td><td>0.173</td><td>—</td></tr><tr><td>H02_prefix_sim_factual</td><td>开发干预</td><td>120</td><td>112</td><td>3.809</td><td>2.663</td><td>1.852</td><td>1.000</td></tr><tr><td>H02_prefix_sim_factual</td><td>开发干预</td><td>240</td><td>112</td><td>16.194</td><td>3.093</td><td>9.417</td><td>1.000</td></tr><tr><td>H03_prefix_sim_paired</td><td>训练干预</td><td>30</td><td>256</td><td>0.012</td><td>0.583</td><td>0.203</td><td>—</td></tr><tr><td>H03_prefix_sim_paired</td><td>训练干预</td><td>60</td><td>256</td><td>0.299</td><td>1.294</td><td>0.325</td><td>0.000</td></tr><tr><td>H03_prefix_sim_paired</td><td>训练干预</td><td>120</td><td>256</td><td>3.327</td><td>2.648</td><td>1.945</td><td>0.939</td></tr><tr><td>H03_prefix_sim_paired</td><td>训练干预</td><td>240</td><td>256</td><td>14.769</td><td>3.376</td><td>7.435</td><td>0.992</td></tr><tr><td>H03_prefix_sim_paired</td><td>开发干预</td><td>30</td><td>112</td><td>0.014</td><td>0.192</td><td>0.167</td><td>—</td></tr><tr><td>H03_prefix_sim_paired</td><td>开发干预</td><td>60</td><td>112</td><td>0.347</td><td>0.223</td><td>0.196</td><td>—</td></tr><tr><td>H03_prefix_sim_paired</td><td>开发干预</td><td>120</td><td>112</td><td>3.809</td><td>2.793</td><td>1.981</td><td>1.000</td></tr><tr><td>H03_prefix_sim_paired</td><td>开发干预</td><td>240</td><td>112</td><td>16.194</td><td>3.034</td><td>9.684</td><td>1.000</td></tr><tr><td>R04_recursive_sim_factual</td><td>训练干预</td><td>30</td><td>256</td><td>0.012</td><td>3.088</td><td>1.784</td><td>—</td></tr><tr><td>R04_recursive_sim_factual</td><td>训练干预</td><td>60</td><td>256</td><td>0.299</td><td>6.263</td><td>3.266</td><td>0.000</td></tr><tr><td>R04_recursive_sim_factual</td><td>训练干预</td><td>120</td><td>256</td><td>3.327</td><td>1.295</td><td>2.922</td><td>0.129</td></tr><tr><td>R04_recursive_sim_factual</td><td>训练干预</td><td>240</td><td>256</td><td>14.769</td><td>0.468</td><td>10.149</td><td>0.438</td></tr><tr><td>R04_recursive_sim_factual</td><td>开发干预</td><td>30</td><td>112</td><td>0.014</td><td>2.260</td><td>1.414</td><td>—</td></tr><tr><td>R04_recursive_sim_factual</td><td>开发干预</td><td>60</td><td>112</td><td>0.347</td><td>4.035</td><td>2.523</td><td>—</td></tr><tr><td>R04_recursive_sim_factual</td><td>开发干预</td><td>120</td><td>112</td><td>3.809</td><td>0.880</td><td>3.389</td><td>0.056</td></tr><tr><td>R04_recursive_sim_factual</td><td>开发干预</td><td>240</td><td>112</td><td>16.194</td><td>0.225</td><td>12.306</td><td>0.446</td></tr></tbody></table></div>
+<p>单位mg/dL。训练诊断固定抽64组，开发为28组；所有有效对进入误差统计。方向只在真实差值超过1 mg/dL时计算，近零效应不强行判正负。R04在训练组已出现短时效应过大、长时效应消失，不能仅归因为测试泛化。阈值只用于解释方向，不参与模型训练或通过标准。</p></details>
+<h3>同训练预算的响应结构消融</h3>
+<div style="overflow-x:auto"><table><thead><tr><th>响应模块</th><th>训练干预数据</th><th>参数量（不含共享编码器）</th><th>更新数</th><th>恒定训练效应MAE</th><th>恒定开发效应MAE</th><th>重排方向一致%</th><th>重排终点效应MAE</th></tr></thead><tbody><tr><td>P01_conditioned_response_operator</td><td>paired_sim_train</td><td>17480</td><td>3200</td><td>7.591</td><td>7.352</td><td>100.000</td><td>6.928</td></tr><tr><td>P02_global_response_ablation</td><td>paired_sim_train</td><td>8</td><td>3200</td><td>8.590</td><td>7.788</td><td>100.000</td><td>7.312</td></tr><tr><td>P04_direct_prefix_response</td><td>paired_sim_train</td><td>17469</td><td>3200</td><td>7.539</td><td>7.347</td><td>0.000</td><td>23.824</td></tr></tbody></table></div>
+<p>效应误差为mg/dL；同一冻结H02编码器、504组、100轮/3200更新、seed260915；P01/P02/P04用原恒定五臂，P05/P06用分时七臂。同数据内部参数/更新预算可比，跨数据标签量不相同。P04为直接因果prefix MLP，与P01参数差11个；没有卷积/时间不变约束。P02只有8个共享参数，同样达到正确方向，因此个体化条件不是方向收益的必要解释。该消融只支持当前时间结构假说，不自动建立原创性或临床有效性。</p>
+<h3>同总剂量、不同时间：独立开发探针</h3>
+<div style="overflow-x:auto"><table><thead><tr><th>模型</th><th>等总量计划对</th><th>路径效应MAE mg/dL</th><th>终点方向一致率</th><th>reward选择一致率</th><th>平均regret</th><th>提前终止分支</th></tr></thead><tbody><tr><td>C01_response_patient_composition</td><td>84</td><td>3.927</td><td>1.000</td><td>0.500</td><td>0.061</td><td>0</td></tr><tr><td>H02_prefix_sim_factual</td><td>84</td><td>7.615</td><td>0.000</td><td>0.000</td><td>0.320</td><td>0</td></tr><tr><td>H03_prefix_sim_paired</td><td>84</td><td>7.823</td><td>0.000</td><td>0.000</td><td>0.292</td><td>0</td></tr><tr><td>H04_response_patient_rl</td><td>84</td><td>3.927</td><td>1.000</td><td>0.500</td><td>0.061</td><td>0</td></tr><tr><td>R05_recursive_sim_stable_policy</td><td>84</td><td>7.619</td><td>0.214</td><td>0.143</td><td>0.276</td><td>0</td></tr><tr><td>R07_H02_extra_policy_control</td><td>84</td><td>7.615</td><td>0.000</td><td>0.000</td><td>0.320</td><td>0</td></tr></tbody></table></div>
+<p>28个共同历史，每个7条计划；84对实际输送总量相同、时间顺序不同的干预。它们不用于训练。H02在恒定动作上方向正确，但时序重排失败，不能只凭前一项宣布动作效应已识别。<a href="时间干预识别诊断.md">数据设计、有限线性反例与近期近邻边界</a></p>
+<h3>当前同数据组：已完成的开发闭环（非封存）</h3><p>R05/H02/H03、响应结构及目标消融与固定参数参考。H04/R07/H05/R08在继承6580步策略上各额外训练一轮，不能按相同总预算与前三者解释。H05/R08从额外训练前初始化，不继承H04/R07。未完成的方法不填分数。</p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法 / 推理方式 / 策略检查点</th><th>训练数据</th><th>患者</th><th>轨迹</th><th>TIR下界%</th><th>TIR上界%</th><th>覆盖%</th><th>观测BG TIR%</th><th>TBR70%</th><th>TBR54%</th><th>CV%</th><th>失败数</th></tr></thead><tbody><tr><td>固定基础率（仿真参数参考）</td><td>仿真器参数参考</td><td>4</td><td>12</td><td>95.297</td><td>95.297</td><td>100.000</td><td>95.297</td><td>0.400</td><td>0.000</td><td>18.380</td><td>0</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>4.135</td><td>30.840</td><td>73.295</td><td>6.789</td><td>0.000</td><td>0.000</td><td>24.590</td><td>6</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>91.067</td><td>91.067</td><td>100.000</td><td>91.067</td><td>0.116</td><td>0.000</td><td>18.337</td><td>0</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>89.205</td><td>89.205</td><td>100.000</td><td>89.205</td><td>0.000</td><td>0.000</td><td>17.585</td><td>0</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>4.714</td><td>31.324</td><td>73.390</td><td>7.415</td><td>0.000</td><td>0.000</td><td>24.896</td><td>6</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>4.651</td><td>31.292</td><td>73.359</td><td>7.366</td><td>0.000</td><td>0.000</td><td>24.843</td><td>6</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>7.197</td><td>33.838</td><td>73.359</td><td>10.078</td><td>0.000</td><td>0.000</td><td>26.357</td><td>6</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>80.734</td><td>82.955</td><td>97.780</td><td>81.101</td><td>0.000</td><td>0.000</td><td>18.825</td><td>1</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>85.985</td><td>85.985</td><td>100.000</td><td>85.985</td><td>0.000</td><td>0.000</td><td>17.403</td><td>0</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>84.017</td><td>84.017</td><td>100.000</td><td>84.017</td><td>0.000</td><td>0.000</td><td>18.575</td><td>0</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>Loop + 训练仿真</td><td>4</td><td>12</td><td>4.714</td><td>31.261</td><td>73.453</td><td>7.402</td><td>0.000</td><td>0.000</td><td>24.789</td><td>6</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>继承完整H02 + 原恒定干预响应训练</td><td>4</td><td>12</td><td>90.804</td><td>90.804</td><td>100.000</td><td>90.804</td><td>0.000</td><td>0.000</td><td>17.241</td><td>0</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>继承完整H02 + 原恒定干预响应训练</td><td>4</td><td>12</td><td>89.552</td><td>89.552</td><td>100.000</td><td>89.552</td><td>0.000</td><td>0.000</td><td>19.029</td><td>0</td></tr></tbody></table></div>
+<p>步数读取实际策略记录；完整epoch为6580步，失败重放只有2000步。患者模型另按固定验证集选择。不同训练数据的行不能用于公平算法胜出声明。BC只模仿历史动作；表中“仅策略”仍经过RL训练，不能与BC混称。固定基础率来自仿真器患者参数，是已知参数的简单控制参考。</p><p>这是已曝光开发场景；主表为模拟器BG。失败后未观测血糖不填造数据，因此须一起看覆盖率、TIR上下界和失败数；低糖/风险只针对实际观测。R03最终beam的3条提前终止由持续高糖触发，低TBR不能证明安全。R01即使TIR较高也有已知价值头缺陷。</p>
+<details><summary>前序结构实验、推理消融与失败版本的全部开发闭环</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>方法 / 推理方式 / 策略检查点</th><th>训练数据</th><th>患者</th><th>轨迹</th><th>TIR下界%</th><th>TIR上界%</th><th>覆盖%</th><th>观测BG TIR%</th><th>TBR70%</th><th>TBR54%</th><th>CV%</th><th>失败数</th></tr></thead><tbody><tr><td>R01b 无界标量参考 / 策略+1小时逐步规划 / 2000步</td><td>Loop</td><td>4</td><td>12</td><td>95.307</td><td>95.307</td><td>100.000</td><td>95.307</td><td>3.167</td><td>0.000</td><td>21.907</td><td>0</td></tr><tr><td>R01b 无界标量参考 / 仅策略 / 2000步</td><td>Loop</td><td>4</td><td>12</td><td>74.548</td><td>74.548</td><td>100.000</td><td>74.548</td><td>0.000</td><td>0.000</td><td>15.040</td><td>0</td></tr><tr><td>R02 有界标量参考 / 策略+1小时逐步规划 / 2000步</td><td>Loop</td><td>4</td><td>12</td><td>94.939</td><td>94.939</td><td>100.000</td><td>94.939</td><td>3.672</td><td>0.484</td><td>22.596</td><td>0</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>Loop</td><td>4</td><td>12</td><td>86.869</td><td>86.869</td><td>100.000</td><td>86.869</td><td>0.347</td><td>0.000</td><td>17.935</td><td>0</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>Loop</td><td>4</td><td>12</td><td>4.303</td><td>19.634</td><td>84.670</td><td>5.556</td><td>0.000</td><td>0.000</td><td>21.798</td><td>3</td></tr><tr><td>R03 RL-DITR分类头参考 / 仅策略 / 6580步</td><td>Loop</td><td>4</td><td>12</td><td>34.785</td><td>34.785</td><td>100.000</td><td>34.785</td><td>0.000</td><td>0.000</td><td>15.942</td><td>0</td></tr><tr><td>H01 动作prefix结构实验 / 仅策略 / 6580步</td><td>Loop</td><td>4</td><td>12</td><td>28.998</td><td>28.998</td><td>100.000</td><td>28.998</td><td>0.000</td><td>0.000</td><td>15.373</td><td>0</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>Loop</td><td>4</td><td>12</td><td>4.261</td><td>28.620</td><td>75.642</td><td>6.728</td><td>0.000</td><td>0.000</td><td>24.032</td><td>5</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 2000步</td><td>Loop</td><td>4</td><td>12</td><td>73.338</td><td>73.338</td><td>100.000</td><td>73.338</td><td>26.662</td><td>14.710</td><td>29.672</td><td>0</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>Loop</td><td>4</td><td>12</td><td>7.155</td><td>62.437</td><td>44.718</td><td>23.145</td><td>16.104</td><td>13.672</td><td>41.968</td><td>9</td></tr></tbody></table></div>
+</details>
+<figure><img style="width:100%" src="figures/response_mechanism_and_control.svg" alt="响应结构的时序机制改善与尚未改善的一小时控制分别展示"><figcaption>机制改善与独立控制分开呈现；C01继承H02策略，未执行额外策略训练。4位已曝光虚拟患者、同训练seed，不是未见患者或临床验证。</figcaption></figure>
+<figure><img style="width:100%" src="figures/development_patient_comparison.svg" alt="R03、H01和固定基础率的逐患者TIR及低血糖对比"><figcaption>每人3个相同开发情景。左图线段为提前终止造成的TIR未知结局范围，不是置信区间；右图低糖仅计算已观测时间。PNG/SVG图已单独检查，完整HTML浏览器渲染仍未验证。</figcaption></figure>
+<details><summary>R01_planning_ablation_development：可导出多维比较表</summary><p><a href="paper_tables/R01_planning_ablation_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/R01_planning_ablation_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>R01b 无界标量参考 / 策略+1小时逐步规划 / 2000步</td><td>dev_normal</td><td>95.20 ± 6.03</td><td>3.12 ± 3.99</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.73 ± 8.24</td><td>1.02 ± 1.08</td><td>0.98 ± 0.33</td><td>32.60 ± 4.26</td><td>0/4</td></tr><tr><td>R01b 无界标量参考 / 策略+1小时逐步规划 / 2000步</td><td>dev_over_bolus</td><td>93.37 ± 8.38</td><td>5.68 ± 6.98</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>23.16 ± 8.09</td><td>1.49 ± 1.31</td><td>0.78 ± 0.32</td><td>30.49 ± 3.73</td><td>0/4</td></tr><tr><td>R01b 无界标量参考 / 策略+1小时逐步规划 / 2000步</td><td>dev_under_bolus</td><td>97.35 ± 3.83</td><td>0.69 ± 1.39</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.83 ± 8.68</td><td>0.73 ± 0.90</td><td>1.27 ± 0.32</td><td>34.82 ± 4.77</td><td>0/4</td></tr><tr><td>R01b 无界标量参考 / 仅策略 / 2000步</td><td>dev_normal</td><td>75.44 ± 24.06</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>14.72 ± 4.82</td><td>0.00 ± 0.01</td><td>4.95 ± 2.20</td><td>21.46 ± 1.93</td><td>0/4</td></tr><tr><td>R01b 无界标量参考 / 仅策略 / 2000步</td><td>dev_over_bolus</td><td>85.13 ± 14.29</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.73 ± 5.45</td><td>0.04 ± 0.08</td><td>3.73 ± 1.96</td><td>20.07 ± 1.67</td><td>0/4</td></tr><tr><td>R01b 无界标量参考 / 仅策略 / 2000步</td><td>dev_under_bolus</td><td>63.07 ± 27.41</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.16 ± 0.32</td><td>13.67 ± 4.38</td><td>0.00 ± 0.00</td><td>6.58 ± 2.47</td><td>22.98 ± 2.24</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>R03_H01_fixed_basal_development：可导出多维比较表</summary><p><a href="paper_tables/R03_H01_fixed_basal_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/R03_H01_fixed_basal_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>3.88 ± 0.75</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>72.17 ± 22.94</td><td>21.47 ± 7.30</td><td>0.00 ± 0.00</td><td>35.09 ± 13.06</td><td>2.31 ± 1.45</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>5.24 ± 2.19</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>51.72 ± 26.52</td><td>23.84 ± 9.15</td><td>0.00 ± 0.00</td><td>28.69 ± 11.44</td><td>1.79 ± 1.33</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>3.79 ± 0.63</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>86.60 ± 6.91</td><td>20.09 ± 5.91</td><td>0.00 ± 0.00</td><td>42.95 ± 16.50</td><td>3.11 ± 1.35</td><td>1/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>89.74 ± 13.01</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>17.66 ± 7.35</td><td>0.41 ± 0.79</td><td>2.93 ± 2.29</td><td>26.05 ± 0.29</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>93.72 ± 6.50</td><td>1.04 ± 2.08</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.29 ± 7.19</td><td>0.91 ± 1.46</td><td>1.80 ± 1.56</td><td>25.97 ± 0.37</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>77.15 ± 27.09</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.85 ± 6.92</td><td>0.12 ± 0.24</td><td>4.59 ± 3.17</td><td>26.27 ± 0.43</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>R03_H01_full_training_development：可导出多维比较表</summary><p><a href="paper_tables/R03_H01_full_training_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/R03_H01_full_training_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>3.88 ± 0.75</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>72.17 ± 22.94</td><td>21.47 ± 7.30</td><td>0.00 ± 0.00</td><td>35.09 ± 13.06</td><td>2.31 ± 1.45</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>5.24 ± 2.19</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>51.72 ± 26.52</td><td>23.84 ± 9.15</td><td>0.00 ± 0.00</td><td>28.69 ± 11.44</td><td>1.79 ± 1.33</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>3.79 ± 0.63</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>86.60 ± 6.91</td><td>20.09 ± 5.91</td><td>0.00 ± 0.00</td><td>42.95 ± 16.50</td><td>3.11 ± 1.35</td><td>1/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>89.74 ± 13.01</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>17.66 ± 7.35</td><td>0.41 ± 0.79</td><td>2.93 ± 2.29</td><td>26.05 ± 0.29</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>93.72 ± 6.50</td><td>1.04 ± 2.08</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.29 ± 7.19</td><td>0.91 ± 1.46</td><td>1.80 ± 1.56</td><td>25.97 ± 0.37</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>77.15 ± 27.09</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.85 ± 6.92</td><td>0.12 ± 0.24</td><td>4.59 ± 3.17</td><td>26.27 ± 0.43</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>matched_long_planning_development：可导出多维比较表</summary><p><a href="paper_tables/matched_long_planning_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/matched_long_planning_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>5.59 ± 3.33</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>68.97 ± 17.88</td><td>25.31 ± 8.82</td><td>0.00 ± 0.00</td><td>38.42 ± 16.15</td><td>0.73 ± 0.20</td><td>2/4</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>11.55 ± 12.25</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>52.07 ± 28.81</td><td>26.72 ± 9.81</td><td>0.00 ± 0.00</td><td>29.66 ± 13.85</td><td>1.27 ± 0.88</td><td>2/4</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>4.45 ± 1.53</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>76.51 ± 8.37</td><td>27.03 ± 10.71</td><td>0.00 ± 0.00</td><td>40.17 ± 10.97</td><td>0.84 ± 0.25</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>4.48 ± 1.77</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>73.11 ± 19.18</td><td>23.58 ± 8.08</td><td>0.00 ± 0.00</td><td>39.04 ± 16.01</td><td>0.35 ± 0.35</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>5.74 ± 3.68</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>55.49 ± 27.44</td><td>25.08 ± 9.55</td><td>0.00 ± 0.00</td><td>31.67 ± 14.03</td><td>0.18 ± 0.06</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>3.91 ± 0.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>80.85 ± 5.15</td><td>26.03 ± 10.71</td><td>0.00 ± 0.00</td><td>41.90 ± 12.07</td><td>0.23 ± 0.06</td><td>2/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>4.45 ± 1.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>73.49 ± 19.37</td><td>23.56 ± 8.13</td><td>0.00 ± 0.00</td><td>39.22 ± 16.15</td><td>0.29 ± 0.29</td><td>2/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>5.59 ± 3.58</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>55.55 ± 27.44</td><td>25.01 ± 9.54</td><td>0.00 ± 0.00</td><td>31.73 ± 14.08</td><td>0.16 ± 0.05</td><td>2/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>3.91 ± 0.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>80.88 ± 5.07</td><td>25.96 ± 10.69</td><td>0.00 ± 0.00</td><td>41.94 ± 12.08</td><td>0.20 ± 0.04</td><td>2/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>matched_sim_factual_development：可导出多维比较表</summary><p><a href="paper_tables/matched_sim_factual_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/matched_sim_factual_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>3.88 ± 0.75</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>75.27 ± 20.31</td><td>23.59 ± 8.63</td><td>0.00 ± 0.00</td><td>40.19 ± 17.05</td><td>0.00 ± 0.00</td><td>2/4</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>4.73 ± 2.35</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>56.59 ± 28.16</td><td>24.61 ± 9.53</td><td>0.00 ± 0.00</td><td>32.05 ± 14.20</td><td>0.00 ± 0.00</td><td>2/4</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>3.79 ± 0.63</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>81.48 ± 4.63</td><td>25.56 ± 10.68</td><td>0.00 ± 0.00</td><td>42.47 ± 12.43</td><td>0.01 ± 0.00</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>92.23 ± 6.59</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.12 ± 6.93</td><td>0.25 ± 0.40</td><td>2.62 ± 1.45</td><td>26.21 ± 1.97</td><td>0/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>93.75 ± 5.12</td><td>0.35 ± 0.69</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.03 ± 6.40</td><td>0.50 ± 0.69</td><td>1.88 ± 1.17</td><td>25.17 ± 1.53</td><td>0/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>87.22 ± 9.59</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.86 ± 7.36</td><td>0.15 ± 0.28</td><td>3.72 ± 1.77</td><td>27.50 ± 2.29</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>91.41 ± 6.85</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>17.58 ± 6.93</td><td>0.15 ± 0.24</td><td>3.08 ± 1.51</td><td>24.91 ± 2.19</td><td>0/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>91.92 ± 7.76</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>19.31 ± 7.25</td><td>0.30 ± 0.47</td><td>2.37 ± 1.20</td><td>23.47 ± 1.95</td><td>0/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>84.28 ± 10.25</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 6.72</td><td>0.03 ± 0.06</td><td>4.23 ± 1.75</td><td>26.49 ± 2.53</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>policy_planning_checkpoint_ablation_development：可导出多维比较表</summary><p><a href="paper_tables/policy_planning_checkpoint_ablation_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/policy_planning_checkpoint_ablation_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>3.88 ± 0.75</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>72.17 ± 22.94</td><td>21.47 ± 7.30</td><td>0.00 ± 0.00</td><td>35.09 ± 13.06</td><td>2.31 ± 1.45</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>5.24 ± 2.19</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>51.72 ± 26.52</td><td>23.84 ± 9.15</td><td>0.00 ± 0.00</td><td>28.69 ± 11.44</td><td>1.79 ± 1.33</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>3.79 ± 0.63</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>86.60 ± 6.91</td><td>20.09 ± 5.91</td><td>0.00 ± 0.00</td><td>42.95 ± 16.50</td><td>3.11 ± 1.35</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 仅策略 / 6580步</td><td>dev_normal</td><td>36.49 ± 17.89</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>12.59 ± 12.40</td><td>15.62 ± 5.20</td><td>0.00 ± 0.00</td><td>12.12 ± 3.92</td><td>14.54 ± 1.14</td><td>0/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 仅策略 / 6580步</td><td>dev_over_bolus</td><td>56.63 ± 23.91</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>7.64 ± 8.84</td><td>18.39 ± 7.28</td><td>0.00 ± 0.00</td><td>9.01 ± 3.60</td><td>13.89 ± 0.93</td><td>0/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 仅策略 / 6580步</td><td>dev_under_bolus</td><td>11.24 ± 5.20</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.28 ± 20.77</td><td>13.82 ± 3.39</td><td>0.00 ± 0.00</td><td>15.79 ± 4.08</td><td>15.50 ± 1.48</td><td>0/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>dev_normal</td><td>3.88 ± 0.75</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>75.22 ± 20.27</td><td>23.05 ± 8.18</td><td>0.00 ± 0.00</td><td>39.26 ± 16.32</td><td>0.49 ± 0.35</td><td>2/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>dev_over_bolus</td><td>5.11 ± 2.19</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>56.58 ± 28.56</td><td>24.08 ± 8.94</td><td>0.00 ± 0.00</td><td>31.21 ± 13.39</td><td>0.45 ± 0.42</td><td>1/4</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>dev_under_bolus</td><td>3.79 ± 0.63</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>81.66 ± 4.56</td><td>24.96 ± 10.36</td><td>0.00 ± 0.00</td><td>41.90 ± 12.56</td><td>0.60 ± 0.26</td><td>2/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>89.74 ± 13.01</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>17.66 ± 7.35</td><td>0.41 ± 0.79</td><td>2.93 ± 2.29</td><td>26.05 ± 0.29</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>93.72 ± 6.50</td><td>1.04 ± 2.08</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.29 ± 7.19</td><td>0.91 ± 1.46</td><td>1.80 ± 1.56</td><td>25.97 ± 0.37</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>77.15 ± 27.09</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.85 ± 6.92</td><td>0.12 ± 0.24</td><td>4.59 ± 3.17</td><td>26.27 ± 0.43</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 仅策略 / 6580步</td><td>dev_normal</td><td>29.70 ± 16.12</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.26 ± 15.84</td><td>15.05 ± 4.77</td><td>0.00 ± 0.00</td><td>13.35 ± 4.41</td><td>13.73 ± 0.92</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 仅策略 / 6580步</td><td>dev_over_bolus</td><td>51.36 ± 25.02</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>10.64 ± 11.68</td><td>17.39 ± 6.50</td><td>0.00 ± 0.00</td><td>10.11 ± 4.13</td><td>12.97 ± 0.64</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 仅策略 / 6580步</td><td>dev_under_bolus</td><td>5.93 ± 2.54</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>26.99 ± 25.63</td><td>13.68 ± 3.26</td><td>0.00 ± 0.00</td><td>17.07 ± 4.53</td><td>14.74 ± 1.35</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 2000步</td><td>dev_normal</td><td>73.61 ± 31.37</td><td>26.39 ± 31.37</td><td>15.56 ± 22.26</td><td>0.00 ± 0.00</td><td>29.48 ± 13.35</td><td>6.54 ± 7.88</td><td>0.30 ± 0.15</td><td>42.12 ± 1.11</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 2000步</td><td>dev_over_bolus</td><td>68.40 ± 29.80</td><td>31.60 ± 29.80</td><td>19.67 ± 27.86</td><td>0.00 ± 0.00</td><td>32.12 ± 12.79</td><td>8.54 ± 8.65</td><td>0.22 ± 0.11</td><td>41.68 ± 1.36</td><td>0/4</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 2000步</td><td>dev_under_bolus</td><td>78.00 ± 32.05</td><td>22.00 ± 32.05</td><td>8.90 ± 17.80</td><td>0.00 ± 0.00</td><td>27.42 ± 13.57</td><td>5.00 ± 7.05</td><td>0.48 ± 0.22</td><td>42.62 ± 1.03</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>response_extra_policy_long_development：可导出多维比较表</summary><p><a href="paper_tables/response_extra_policy_long_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/response_extra_policy_long_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>4.48 ± 1.77</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>73.11 ± 19.18</td><td>23.58 ± 8.08</td><td>0.00 ± 0.00</td><td>39.04 ± 16.01</td><td>0.35 ± 0.35</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>5.74 ± 3.68</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>55.49 ± 27.44</td><td>25.08 ± 9.55</td><td>0.00 ± 0.00</td><td>31.67 ± 14.03</td><td>0.18 ± 0.06</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>3.91 ± 0.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>80.85 ± 5.15</td><td>26.03 ± 10.71</td><td>0.00 ± 0.00</td><td>41.90 ± 12.07</td><td>0.23 ± 0.06</td><td>2/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>dev_normal</td><td>90.40 ± 7.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.13 ± 0.25</td><td>19.14 ± 8.45</td><td>0.13 ± 0.16</td><td>3.16 ± 1.07</td><td>25.44 ± 3.23</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>dev_over_bolus</td><td>92.08 ± 6.19</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.55 ± 8.18</td><td>0.23 ± 0.31</td><td>2.59 ± 1.03</td><td>23.29 ± 2.85</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>dev_under_bolus</td><td>86.17 ± 10.57</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.35 ± 0.69</td><td>17.40 ± 8.63</td><td>0.06 ± 0.09</td><td>3.95 ± 1.17</td><td>27.37 ± 3.60</td><td>0/4</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>dev_normal</td><td>85.13 ± 10.48</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.06 ± 0.13</td><td>18.28 ± 8.13</td><td>0.07 ± 0.11</td><td>3.75 ± 1.26</td><td>24.12 ± 2.87</td><td>0/4</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>dev_over_bolus</td><td>86.84 ± 9.90</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.37 ± 7.70</td><td>0.18 ± 0.23</td><td>3.04 ± 1.21</td><td>22.35 ± 2.58</td><td>0/4</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>dev_under_bolus</td><td>80.08 ± 12.94</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.32 ± 0.63</td><td>17.07 ± 8.48</td><td>0.04 ± 0.07</td><td>4.79 ± 1.48</td><td>25.97 ± 3.08</td><td>0/4</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>dev_normal</td><td>4.48 ± 1.77</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>73.41 ± 19.36</td><td>23.29 ± 7.76</td><td>0.00 ± 0.00</td><td>38.20 ± 15.17</td><td>0.53 ± 0.72</td><td>2/4</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>dev_over_bolus</td><td>5.74 ± 3.68</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>55.49 ± 27.44</td><td>25.06 ± 9.53</td><td>0.00 ± 0.00</td><td>31.69 ± 14.07</td><td>0.18 ± 0.06</td><td>2/4</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>dev_under_bolus</td><td>3.91 ± 0.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>80.82 ± 5.15</td><td>26.01 ± 10.68</td><td>0.00 ± 0.00</td><td>41.87 ± 12.04</td><td>0.22 ± 0.04</td><td>2/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>response_extra_policy_matched_development：可导出多维比较表</summary><p><a href="paper_tables/response_extra_policy_matched_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/response_extra_policy_matched_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>92.23 ± 6.59</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.12 ± 6.93</td><td>0.25 ± 0.40</td><td>2.62 ± 1.45</td><td>26.21 ± 1.97</td><td>0/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>93.75 ± 5.12</td><td>0.35 ± 0.69</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.03 ± 6.40</td><td>0.50 ± 0.69</td><td>1.88 ± 1.17</td><td>25.17 ± 1.53</td><td>0/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>87.22 ± 9.59</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.86 ± 7.36</td><td>0.15 ± 0.28</td><td>3.72 ± 1.77</td><td>27.50 ± 2.29</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>dev_normal</td><td>92.14 ± 5.57</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.85 ± 6.32</td><td>0.08 ± 0.08</td><td>2.85 ± 1.27</td><td>25.44 ± 3.16</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>dev_over_bolus</td><td>94.41 ± 4.02</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>19.33 ± 6.30</td><td>0.23 ± 0.21</td><td>2.19 ± 1.07</td><td>23.92 ± 3.13</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>dev_under_bolus</td><td>85.86 ± 11.47</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.55 ± 6.54</td><td>0.03 ± 0.04</td><td>4.02 ± 1.77</td><td>27.00 ± 2.77</td><td>0/4</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>dev_normal</td><td>86.90 ± 10.52</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.68 ± 5.39</td><td>0.02 ± 0.03</td><td>3.63 ± 1.74</td><td>23.72 ± 2.52</td><td>0/4</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>dev_over_bolus</td><td>89.49 ± 8.97</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.29 ± 5.58</td><td>0.11 ± 0.11</td><td>2.78 ± 1.41</td><td>22.23 ± 2.57</td><td>0/4</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>dev_under_bolus</td><td>65.81 ± 37.96</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>12.31 ± 24.61</td><td>22.52 ± 13.69</td><td>0.00 ± 0.00</td><td>12.12 ± 16.09</td><td>20.93 ± 6.88</td><td>1/4</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>dev_normal</td><td>88.32 ± 11.48</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>17.19 ± 6.37</td><td>0.12 ± 0.21</td><td>3.39 ± 1.78</td><td>24.19 ± 2.07</td><td>0/4</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>dev_over_bolus</td><td>90.66 ± 9.96</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>19.19 ± 6.15</td><td>0.30 ± 0.45</td><td>2.47 ± 1.51</td><td>23.25 ± 1.58</td><td>0/4</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>dev_under_bolus</td><td>78.98 ± 15.62</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.83 ± 6.69</td><td>0.05 ± 0.10</td><td>4.62 ± 2.17</td><td>25.82 ± 2.21</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>response_structure_inherited_policy_development：可导出多维比较表</summary><p><a href="paper_tables/response_structure_inherited_policy_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/response_structure_inherited_policy_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>92.23 ± 6.59</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.12 ± 6.93</td><td>0.25 ± 0.40</td><td>2.62 ± 1.45</td><td>26.21 ± 1.97</td><td>0/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>93.75 ± 5.12</td><td>0.35 ± 0.69</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.03 ± 6.40</td><td>0.50 ± 0.69</td><td>1.88 ± 1.17</td><td>25.17 ± 1.53</td><td>0/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>87.22 ± 9.59</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.86 ± 7.36</td><td>0.15 ± 0.28</td><td>3.72 ± 1.77</td><td>27.50 ± 2.29</td><td>0/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>dev_normal</td><td>91.41 ± 6.85</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>17.58 ± 6.93</td><td>0.15 ± 0.24</td><td>3.08 ± 1.51</td><td>24.91 ± 2.19</td><td>0/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>dev_over_bolus</td><td>91.92 ± 7.76</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>19.31 ± 7.25</td><td>0.30 ± 0.47</td><td>2.37 ± 1.20</td><td>23.47 ± 1.95</td><td>0/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>dev_under_bolus</td><td>84.28 ± 10.25</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 6.72</td><td>0.03 ± 0.06</td><td>4.23 ± 1.75</td><td>26.49 ± 2.53</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>dev_normal</td><td>92.14 ± 5.57</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>16.85 ± 6.32</td><td>0.08 ± 0.08</td><td>2.85 ± 1.27</td><td>25.44 ± 3.16</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>dev_over_bolus</td><td>94.41 ± 4.02</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>19.33 ± 6.30</td><td>0.23 ± 0.21</td><td>2.19 ± 1.07</td><td>23.92 ± 3.13</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>dev_under_bolus</td><td>85.86 ± 11.47</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.55 ± 6.54</td><td>0.03 ± 0.04</td><td>4.02 ± 1.77</td><td>27.00 ± 2.77</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>response_structure_long_planning_development：可导出多维比较表</summary><p><a href="paper_tables/response_structure_long_planning_development/main.csv">完整CSV（含全部指标）</a> · <a href="paper_tables/response_structure_long_planning_development/paired_comparisons.json">配对差与95%区间</a></p>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>情景</th><th>TIR下界%</th><th>TBR70%</th><th>TBR54%</th><th>TAR250%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>基础量U/日</th><th>失败</th></tr></thead><tbody><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>5.59 ± 3.33</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>68.97 ± 17.88</td><td>25.31 ± 8.82</td><td>0.00 ± 0.00</td><td>38.42 ± 16.15</td><td>0.73 ± 0.20</td><td>2/4</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>11.55 ± 12.25</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>52.07 ± 28.81</td><td>26.72 ± 9.81</td><td>0.00 ± 0.00</td><td>29.66 ± 13.85</td><td>1.27 ± 0.88</td><td>2/4</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>4.45 ± 1.53</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>76.51 ± 8.37</td><td>27.03 ± 10.71</td><td>0.00 ± 0.00</td><td>40.17 ± 10.97</td><td>0.84 ± 0.25</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>4.48 ± 1.77</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>73.11 ± 19.18</td><td>23.58 ± 8.08</td><td>0.00 ± 0.00</td><td>39.04 ± 16.01</td><td>0.35 ± 0.35</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>5.74 ± 3.68</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>55.49 ± 27.44</td><td>25.08 ± 9.55</td><td>0.00 ± 0.00</td><td>31.67 ± 14.03</td><td>0.18 ± 0.06</td><td>2/4</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>3.91 ± 0.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>80.85 ± 5.15</td><td>26.03 ± 10.71</td><td>0.00 ± 0.00</td><td>41.90 ± 12.07</td><td>0.23 ± 0.06</td><td>2/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>dev_normal</td><td>4.45 ± 1.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>73.49 ± 19.37</td><td>23.56 ± 8.13</td><td>0.00 ± 0.00</td><td>39.22 ± 16.15</td><td>0.29 ± 0.29</td><td>2/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>dev_over_bolus</td><td>5.59 ± 3.58</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>55.55 ± 27.44</td><td>25.01 ± 9.54</td><td>0.00 ± 0.00</td><td>31.73 ± 14.08</td><td>0.16 ± 0.05</td><td>2/4</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>dev_under_bolus</td><td>3.91 ± 0.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>80.88 ± 5.07</td><td>25.96 ± 10.69</td><td>0.00 ± 0.00</td><td>41.94 ± 12.08</td><td>0.20 ± 0.04</td><td>2/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>dev_normal</td><td>90.40 ± 7.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.13 ± 0.25</td><td>19.14 ± 8.45</td><td>0.13 ± 0.16</td><td>3.16 ± 1.07</td><td>25.44 ± 3.23</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>dev_over_bolus</td><td>92.08 ± 6.19</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>20.55 ± 8.18</td><td>0.23 ± 0.31</td><td>2.59 ± 1.03</td><td>23.29 ± 2.85</td><td>0/4</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>dev_under_bolus</td><td>86.17 ± 10.57</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.35 ± 0.69</td><td>17.40 ± 8.63</td><td>0.06 ± 0.09</td><td>3.95 ± 1.17</td><td>27.37 ± 3.60</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_normal</td><td>96.59 ± 4.71</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>18.09 ± 4.55</td><td>0.26 ± 0.27</td><td>1.52 ± 0.67</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_over_bolus</td><td>97.25 ± 3.19</td><td>1.20 ± 2.40</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>21.19 ± 4.41</td><td>0.86 ± 0.54</td><td>0.89 ± 0.46</td><td>29.70 ± 5.81</td><td>0/4</td></tr><tr><td>固定基础率（仿真参数参考）</td><td>dev_under_bolus</td><td>92.05 ± 7.27</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>0.00 ± 0.00</td><td>15.86 ± 4.30</td><td>0.05 ± 0.06</td><td>2.81 ± 1.05</td><td>29.70 ± 5.81</td><td>0/4</td></tr></tbody></table></div>
+<p>均值±患者标准差；开发情景每组4位已曝光虚拟患者。TIR下界包含提前终止影响，其余风险、剂量仅按观测期计算；覆盖率、TIR上界、CGM指标、动作变化及配对区间见完整CSV/JSON。单seed不提供训练随机性区间。</p></details>
+<details><summary>计算代价：实测推理批次时间</summary>
+<div style="overflow-x:auto"><table><thead><tr><th>方法</th><th>同时推理患者数</th><th>批次数</th><th>中位毫秒/批</th><th>P95毫秒/批</th></tr></thead><tbody><tr><td>H01 动作prefix结构实验 / 策略+4小时动作块规划 / 6580步</td><td>2</td><td>6</td><td>18.634</td><td>282.058</td></tr><tr><td>R03 RL-DITR分类头参考 / 仅策略 / 6580步</td><td>12</td><td>792</td><td>2.255</td><td>2.950</td></tr><tr><td>H01 动作prefix结构实验 / 仅策略 / 6580步</td><td>12</td><td>792</td><td>2.183</td><td>2.737</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>12</td><td>169</td><td>114.498</td><td>118.918</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>11</td><td>97</td><td>108.271</td><td>114.640</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>10</td><td>23</td><td>101.985</td><td>104.339</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>9</td><td>25</td><td>91.243</td><td>95.981</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>8</td><td>293</td><td>84.311</td><td>90.449</td></tr><tr><td>R03 RL-DITR分类头参考 / 策略+1小时逐步规划 / 2000步</td><td>7</td><td>185</td><td>76.606</td><td>82.533</td></tr><tr><td>H01 动作prefix结构实验 / 策略+1小时逐步规划 / 2000步</td><td>12</td><td>792</td><td>116.490</td><td>208.005</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>12</td><td>166</td><td>629.872</td><td>658.561</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>11</td><td>90</td><td>610.735</td><td>644.054</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>10</td><td>22</td><td>598.788</td><td>624.322</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>9</td><td>30</td><td>91.955</td><td>539.930</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>8</td><td>291</td><td>85.407</td><td>90.644</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>7</td><td>8</td><td>79.902</td><td>80.606</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+1小时逐步规划 / 6580步</td><td>6</td><td>185</td><td>140.804</td><td>167.398</td></tr><tr><td>H02 prefix+仿真事实 / 策略+1小时逐步规划 / 6580步</td><td>12</td><td>792</td><td>219.621</td><td>241.394</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+1小时逐步规划 / 6580步</td><td>12</td><td>792</td><td>349.389</td><td>496.941</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>4</td><td>709</td><td>31.033</td><td>36.746</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>3</td><td>805</td><td>25.644</td><td>31.495</td></tr><tr><td>H02 prefix+仿真事实 / 策略+4小时动作块规划 / 6580步</td><td>2</td><td>862</td><td>21.268</td><td>26.353</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>4</td><td>706</td><td>30.981</td><td>36.713</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>3</td><td>808</td><td>25.462</td><td>29.999</td></tr><tr><td>H03 prefix+事实+配对目标 / 策略+4小时动作块规划 / 6580步</td><td>2</td><td>862</td><td>21.026</td><td>26.244</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>12</td><td>137</td><td>162.342</td><td>170.792</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>11</td><td>3</td><td>141.763</td><td>148.871</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>10</td><td>10</td><td>142.660</td><td>156.855</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>7</td><td>49</td><td>117.885</td><td>123.079</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>6</td><td>16</td><td>106.034</td><td>111.040</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>5</td><td>18</td><td>101.179</td><td>108.181</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>4</td><td>267</td><td>87.995</td><td>99.829</td></tr><tr><td>R04 递归+仿真事实（旧目标） / 策略+1小时逐步规划 / 2000步</td><td>3</td><td>292</td><td>76.101</td><td>113.297</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>4</td><td>705</td><td>399.332</td><td>508.831</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>3</td><td>810</td><td>363.698</td><td>387.415</td></tr><tr><td>R05 递归+仿真事实（目标修正） / 策略+4小时动作块规划 / 6580步</td><td>2</td><td>861</td><td>260.618</td><td>292.816</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>4</td><td>2165</td><td>73.889</td><td>82.647</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>3</td><td>211</td><td>76.299</td><td>82.900</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+1小时逐步规划 / 继承6580 + 新增6580步</td><td>4</td><td>2376</td><td>54.391</td><td>61.087</td></tr><tr><td>H04 参考轨迹+因果响应 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>4</td><td>2376</td><td>26.315</td><td>28.030</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>4</td><td>715</td><td>23.794</td><td>24.923</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>3</td><td>799</td><td>18.892</td><td>20.455</td></tr><tr><td>R07 H02额外策略轮次对照 / 策略+4小时动作块规划 / 继承6580 + 新增6580步</td><td>2</td><td>862</td><td>15.497</td><td>17.371</td></tr><tr><td>C01 响应结构+继承策略 / 策略+1小时逐步规划 / 继承6580（未新增策略训练）步</td><td>4</td><td>2376</td><td>121.064</td><td>145.079</td></tr><tr><td>C01 响应结构+继承策略 / 策略+4小时动作块规划 / 继承6580（未新增策略训练）步</td><td>4</td><td>2376</td><td>30.634</td><td>35.473</td></tr></tbody></table></div>
+<p>GPU worker内计算，含结果取回，不含JSON传输和仿真器；训练/其他评测可能共享GPU，批量也不同，因此是实际资源记录，不是受控吞吐排名。最终效率比较仍需相同硬件与空闲条件。</p></details>
+<h2>5. 旧T01：只离线补算，不是新封存实验</h2><p>下表均来自既有54条/方法的相同历史情景。失败后的未知时间没有填伪造血糖；CV/风险等只计算实际观测，因此必须结合覆盖率和失败数阅读，不能单独据此排名。保留旧固定分母惩罚TIR。</p>
+<div style="overflow-x:auto"><table><thead><tr><th>历史方法</th><th>旧惩罚TIR%</th><th>覆盖率%</th><th>观测TIR%</th><th>TBR70%</th><th>TBR54%</th><th>CV%</th><th>LBGI</th><th>HBGI</th><th>失败/54</th></tr></thead><tbody><tr><td>Anchor_FQL</td><td>67.852</td><td>95.560</td><td>70.268</td><td>1.393</td><td>0.058</td><td>24.786</td><td>0.496</td><td>6.895</td><td>6/54</td></tr><tr><td>BC</td><td>50.671</td><td>86.366</td><td>58.232</td><td>7.362</td><td>2.488</td><td>47.684</td><td>1.804</td><td>10.424</td><td>18/54</td></tr><tr><td>Bound040_noRL</td><td>73.186</td><td>100.000</td><td>73.186</td><td>0.685</td><td>0.082</td><td>19.086</td><td>0.165</td><td>6.568</td><td>0/54</td></tr><tr><td>FQL_alpha100</td><td>55.083</td><td>84.830</td><td>62.537</td><td>3.484</td><td>1.282</td><td>35.996</td><td>0.852</td><td>12.138</td><td>18/54</td></tr><tr><td>Ours_bound040</td><td>94.966</td><td>100.000</td><td>94.966</td><td>2.048</td><td>0.521</td><td>19.720</td><td>0.762</td><td>1.396</td><td>0/54</td></tr><tr><td>ReBRAC_BC100</td><td>69.964</td><td>100.000</td><td>69.964</td><td>0.959</td><td>0.217</td><td>17.991</td><td>0.250</td><td>6.558</td><td>0/54</td></tr><tr><td>nominal</td><td>93.837</td><td>100.000</td><td>93.837</td><td>1.866</td><td>0.825</td><td>18.977</td><td>0.711</td><td>1.712</td><td>0/54</td></tr></tbody></table></div>
+<p><a href="legacy_panel/observed_metrics.csv">完整新增指标CSV</a> · <a href="legacy_panel/summary.json">来源说明</a></p>
+<h2>6. 已知失败、验证和未完成项</h2><ul><li>R01融合FP32 attention出现NaN，有限数据/权重下已对照数学后端与BF16定位；R01b恢复原状态。</li><li>首版无界reward/value回归偏离原输出支持范围；R02修正，不列为算法创新。</li><li>批量beam初版缩进错误已修复并保留日志；数值检查不代表策略有效。</li><li>延迟目标首次BF16烟测因autocast复用no-grad采样权重而断梯度；改为有梯度采样后detach，batch256三次更新通过。烟测未形成正式权重。</li><li>新四小时索引首用仿真环境缺pyarrow，改用已装pyarrow的原生数据环境，无新增依赖。</li><li>R02策略因固定验证动作MSE恶化至26.48而提前停止；负历史回报×连续log密度存在鼓励降低历史动作密度的病态方向。原检查点和独立失败评价保留。</li><li>完整按作者目标对齐的基底、创新训练、机制消融、新冻结主结果及最终Harness研究结论仍未完成。</li><li>没有声称SOTA、顶会原创性或临床安全；尚未接入Core和用户ICML预测器。</li></ul>
+<details><summary>检查证据</summary><ul><li><a href="checks/C01_response_patient_composition_dynamic_actions.json">C01_response_patient_composition_dynamic_actions.json</a></li><li><a href="checks/C01_response_patient_composition_plan_components.json">C01_response_patient_composition_plan_components.json</a></li><li><a href="checks/H01_action_prefix_plan_components.json">H01_action_prefix_plan_components.json</a></li><li><a href="checks/H02_prefix_sim_factual_action_identification.json">H02_prefix_sim_factual_action_identification.json</a></li><li><a href="checks/H02_prefix_sim_factual_dynamic_actions.json">H02_prefix_sim_factual_dynamic_actions.json</a></li><li><a href="checks/H02_prefix_sim_factual_plan_timing.json">H02_prefix_sim_factual_plan_timing.json</a></li><li><a href="checks/H03_prefix_sim_paired_action_identification.json">H03_prefix_sim_paired_action_identification.json</a></li><li><a href="checks/H03_prefix_sim_paired_dynamic_actions.json">H03_prefix_sim_paired_dynamic_actions.json</a></li><li><a href="checks/H04_response_patient_rl_dynamic_actions.json">H04_response_patient_rl_dynamic_actions.json</a></li><li><a href="checks/H04_training_integrity.json">H04_training_integrity.json</a></li><li><a href="checks/R03_reference_categorical_plan_components.json">R03_reference_categorical_plan_components.json</a></li><li><a href="checks/R04_recursive_sim_factual_action_identification.json">R04_recursive_sim_factual_action_identification.json</a></li><li><a href="checks/R04_recursive_sim_factual_plan_components.json">R04_recursive_sim_factual_plan_components.json</a></li><li><a href="checks/R05_recursive_sim_stable_policy_dynamic_actions.json">R05_recursive_sim_stable_policy_dynamic_actions.json</a></li><li><a href="checks/R07_H02_extra_policy_control_dynamic_actions.json">R07_H02_extra_policy_control_dynamic_actions.json</a></li><li><a href="checks/action_prefix.json">action_prefix.json</a></li><li><a href="checks/batched_planning.json">batched_planning.json</a></li><li><a href="checks/bounded_policy_objective.json">bounded_policy_objective.json</a></li><li><a href="checks/chunk_planning_check.json">chunk_planning_check.json</a></li><li><a href="checks/delayed_policy_amp_integration.json">delayed_policy_amp_integration.json</a></li><li><a href="checks/delayed_policy_mechanics.json">delayed_policy_mechanics.json</a></li><li><a href="checks/direct_prefix_response_mechanics.json">direct_prefix_response_mechanics.json</a></li><li><a href="checks/final_scenario_identity_audit.json">final_scenario_identity_audit.json</a></li><li><a href="checks/metric_checks.json">metric_checks.json</a></li><li><a href="checks/nonfinite_diagnosis.json">nonfinite_diagnosis.json</a></li><li><a href="checks/paired_training_check.json">paired_training_check.json</a></li><li><a href="checks/paired_training_coverage.json">paired_training_coverage.json</a></li><li><a href="checks/policy_candidate_support.json">policy_candidate_support.json</a></li><li><a href="checks/policy_gradient_balance.json">policy_gradient_balance.json</a></li><li><a href="checks/r04_failure_replay_equivalence.json">r04_failure_replay_equivalence.json</a></li><li><a href="checks/reference_forecast_diagnosis.json">reference_forecast_diagnosis.json</a></li><li><a href="checks/reference_smoke.json">reference_smoke.json</a></li><li><a href="checks/remote_disconnect_observation.json">remote_disconnect_observation.json</a></li><li><a href="checks/response_latent_development.json">response_latent_development.json</a></li><li><a href="checks/response_operator_mechanics.json">response_operator_mechanics.json</a></li><li><a href="checks/response_patient_mechanics.json">response_patient_mechanics.json</a></li><li><a href="checks/temporal_intervention_design.json">temporal_intervention_design.json</a></li><li><a href="checks/temporal_training_check.json">temporal_training_check.json</a></li><li><a href="checks/temporal_training_partial.json">temporal_training_partial.json</a></li></ul></details><p class="small">HTML已生成；完整浏览器视觉渲染未验证。所有临床、工程与研究结论分别记录。</p></body></html>

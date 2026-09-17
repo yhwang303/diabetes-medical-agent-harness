@@ -1,0 +1,15 @@
+{
+  "name": "D04_rebrac_bc100_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "ReBRAC_BC100": "results/R21_rebrac_bc100/export_0050000.npz"
+  }
+}

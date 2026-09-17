@@ -1,0 +1,15 @@
+{
+  "name": "D02_rebrac100k_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "ReBRAC100k": "results/R11_rebrac_200k/export_0100000.npz"
+  }
+}

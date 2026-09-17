@@ -1,0 +1,48 @@
+{
+  "retrieved_date": "2026-09-11",
+  "scope": "Small public documentation and two UOM basal samples only; no full dataset download or model training.",
+  "files": [
+    {
+      "file": "uom-LICENSE.md",
+      "source": "https://raw.githubusercontent.com/sharpic/ManchesterCSCoordinatedDiabetesStudy/V1.0.4/LICENSE.md",
+      "bytes": 18650,
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    },
+    {
+      "file": "uom-README.md",
+      "source": "https://raw.githubusercontent.com/sharpic/ManchesterCSCoordinatedDiabetesStudy/V1.0.4/README.md",
+      "bytes": 10634,
+      "sha256": "edf20e7b7e2b68c7ba34d8eba10e45de804fcfc1fb8a477eeb459d0193c4ca61"
+    },
+    {
+      "file": "uom-UoMBasal2302.csv",
+      "source": "https://raw.githubusercontent.com/sharpic/ManchesterCSCoordinatedDiabetesStudy/V1.0.4/Insulin%20Data/Basal%20Data/UoMBasal2302.csv",
+      "bytes": 788,
+      "sha256": "c384b76b40e0ee3560fc402907becdf401a4a422f6da6364909ac5f9a58b3493"
+    },
+    {
+      "file": "uom-UoMBasal2304.csv",
+      "source": "https://raw.githubusercontent.com/sharpic/ManchesterCSCoordinatedDiabetesStudy/V1.0.4/Insulin%20Data/Basal%20Data/UoMBasal2304.csv",
+      "bytes": 5513,
+      "sha256": "21bc64fd4cd173376e658cec133bb5fa8d1f336e40f2b023bbb658c7d512d5e4"
+    },
+    {
+      "file": "uom-UoMBMI.csv",
+      "source": "https://raw.githubusercontent.com/sharpic/ManchesterCSCoordinatedDiabetesStudy/V1.0.4/Demographics/UoMBMI.csv",
+      "bytes": 410,
+      "sha256": "2f41f21413b1fcf0baf5797bd3781918f67e8830f4276ea65190a87fbc11133c"
+    },
+    {
+      "file": "brist1d-README.txt",
+      "source": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/README.txt",
+      "bytes": 5496,
+      "sha256": "ba313accd3de3b6ec220f38029db2101e636f3d0e87a982068aab7205b08d635"
+    },
+    {
+      "file": "brist1d-LICENCE.txt",
+      "source": "https://data.bris.ac.uk/datasets/33z5jc8fa6tob21ptrugzqog08/LICENCE.txt",
+      "bytes": 19051,
+      "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+    }
+  ]
+}

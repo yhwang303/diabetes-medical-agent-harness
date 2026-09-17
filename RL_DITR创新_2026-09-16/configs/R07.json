@@ -1,0 +1,46 @@
+{
+  "name": "R07_H02_extra_policy_control",
+  "seed": 260915,
+  "model": {
+    "width": 256,
+    "layers": 3,
+    "heads": 8,
+    "ff": 2048,
+    "dropout": 0.4,
+    "categorical_heads": true,
+    "transition_mode": "action_prefix"
+  },
+  "batch_size": 256,
+  "horizon": 12,
+  "amp": true,
+  "mu": 0.1,
+  "weight_decay": 0.0001,
+  "target_tau": 0.005,
+  "log_every": 25,
+  "validation_per_patient": 32,
+  "final_validation_per_patient": 128,
+  "patient": {
+    "lr": 0.0001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 1000
+  },
+  "policy": {
+    "lr": 0.001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 2000
+  },
+  "adaptations": [
+    "H02 patient and policy initialization unchanged; same extra full Loop policy epoch as H04, same seed and policy RNG reset; controls additional policy optimization, not response-branch parameter budget"
+  ],
+  "selection": "fixed-validation RMSE30+RMSE60 selects patient checkpoint; policy checkpoints require independent development control evaluation",
+  "initialize_checkpoint": "results/H02_prefix_sim_factual/policy_last.pt",
+  "policy_loss_variant": "bounded_return_nll",
+  "stages": [
+    "policy"
+  ],
+  "allow_policy_initialization": true,
+  "patient_training_origin": "H02_prefix_sim_factual",
+  "policy_rng_seed": 260915
+}

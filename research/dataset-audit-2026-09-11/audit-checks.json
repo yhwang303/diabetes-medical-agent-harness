@@ -1,0 +1,37 @@
+{
+  "source_files_sha256_verified": [
+    "uom-LICENSE.md",
+    "uom-README.md",
+    "uom-UoMBasal2302.csv",
+    "uom-UoMBasal2304.csv",
+    "uom-UoMBMI.csv",
+    "brist1d-README.txt",
+    "brist1d-LICENCE.txt"
+  ],
+  "uom_pump_sample_rows": 228,
+  "uom_longacting_sample_rows": 34,
+  "uom_conflicting_timestamps": {
+    "02/01/2024 09:14": [
+      "1.7",
+      "0"
+    ],
+    "10/01/2024 04:30": [
+      "0",
+      "1.4"
+    ],
+    "21/01/2024 10:00": [
+      "0",
+      "1.4"
+    ],
+    "30/01/2024 22:56": [
+      "0",
+      "1.45"
+    ]
+  },
+  "date_format_conflict_confirmed": true,
+  "local_links_valid": true,
+  "harness_completed_list_items": 16,
+  "M01_M02_remain_incomplete": true,
+  "model_training_performed": false,
+  "full_dataset_eligibility_verified": false
+}

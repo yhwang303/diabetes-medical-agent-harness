@@ -1,0 +1,16 @@
+{
+  "name": "D11_remaining_single_seed_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "FQL200k": "results/R12_fql_200k/export_0200000.npz",
+    "Anchor_FQL": "results/R32_anchor_fql/export_0050000.npz"
+  }
+}

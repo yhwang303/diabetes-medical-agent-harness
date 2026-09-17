@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+umask 077
+export LC_ALL=C
+task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+project_dir="$(cd "$task_dir/../.." && pwd)"
+export AUTODL_REMOTE_APP_DIR="$task_dir/private"
+# Keep Unix socket paths short enough for macOS, inside this project.
+# A relative socket path avoids macOS sun_path limits with this Chinese project name.
+cd "$project_dir"
+export AUTODL_REMOTE_CONTROL_DIR=".adlc"
+export TMPDIR="$task_dir/runtime/tmp"
+mkdir -p "$AUTODL_REMOTE_APP_DIR" "$AUTODL_REMOTE_CONTROL_DIR" "$TMPDIR"
+exec "$task_dir/vendor/AutoDL-Remote/plugins/autodl-remote/bin/autodl-remote" "$@"

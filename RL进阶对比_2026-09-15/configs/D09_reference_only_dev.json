@@ -1,0 +1,15 @@
+{
+  "name": "D09_reference_only_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Observed_reference_only": "results/C01_reference_only/export_0000000.npz"
+  }
+}

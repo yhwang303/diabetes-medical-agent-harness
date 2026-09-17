@@ -1,0 +1,147 @@
+{
+  "scope": "exposed development only; diagnosing fixed short-horizon checkpoint selection versus final patient weights, not selecting a winner or rerunning baseline control",
+  "histories": 28,
+  "source_sha256": "976d43d97c72ede49e28ead3eb4084ec505a79ce15ed497ea248e10711f92d3b",
+  "results": [
+    {
+      "run": "H02_prefix_sim_factual",
+      "weight": "patient_best.pt",
+      "checkpoint_sha256": "18ecdc57a60fd656cfd239348dd5e0677c78744d15b75a12218febfe9719f012",
+      "patient_steps": 2000,
+      "summary": {
+        "15": {
+          "reference_bias_mg_dl": 4.446587504158036,
+          "reference_rmse_mg_dl": 8.77982823853742,
+          "effect_mae_mg_dl": 0.0640484664629478
+        },
+        "30": {
+          "reference_bias_mg_dl": 3.750901071883125,
+          "reference_rmse_mg_dl": 13.467965119375883,
+          "effect_mae_mg_dl": 0.09823531804690244
+        },
+        "60": {
+          "reference_bias_mg_dl": -0.757727613636077,
+          "reference_rmse_mg_dl": 8.520666195320828,
+          "effect_mae_mg_dl": 0.1733501322641208
+        },
+        "120": {
+          "reference_bias_mg_dl": -16.37773598701262,
+          "reference_rmse_mg_dl": 37.07186533253182,
+          "effect_mae_mg_dl": 1.8522246733670689
+        },
+        "240": {
+          "reference_bias_mg_dl": -3.3032296568396267,
+          "reference_rmse_mg_dl": 24.594733682352594,
+          "effect_mae_mg_dl": 9.41673820029355
+        }
+      },
+      "reward_choice_agreement": 0.14285714285714285,
+      "reward_regret": 0.4200363393340792
+    },
+    {
+      "run": "H02_prefix_sim_factual",
+      "weight": "patient_last.pt",
+      "checkpoint_sha256": "70c585bd524ad55d0b52d456e95ec93aeb31496cd3f189520c071056160e81b9",
+      "patient_steps": 6580,
+      "summary": {
+        "15": {
+          "reference_bias_mg_dl": 7.814383175893527,
+          "reference_rmse_mg_dl": 10.459119572170078,
+          "effect_mae_mg_dl": 0.2572773924403822
+        },
+        "30": {
+          "reference_bias_mg_dl": 5.937808976371825,
+          "reference_rmse_mg_dl": 13.69999706934983,
+          "effect_mae_mg_dl": 0.294805945820696
+        },
+        "60": {
+          "reference_bias_mg_dl": 3.4791917894400948,
+          "reference_rmse_mg_dl": 8.015274922985503,
+          "effect_mae_mg_dl": 0.6746393282925256
+        },
+        "120": {
+          "reference_bias_mg_dl": -5.569941961046523,
+          "reference_rmse_mg_dl": 33.060265877275896,
+          "effect_mae_mg_dl": 2.0312928456676214
+        },
+        "240": {
+          "reference_bias_mg_dl": 9.13188234267209,
+          "reference_rmse_mg_dl": 24.742259142082982,
+          "effect_mae_mg_dl": 9.65034769783378
+        }
+      },
+      "reward_choice_agreement": 0.4642857142857143,
+      "reward_regret": 0.2502445706299373
+    },
+    {
+      "run": "H03_prefix_sim_paired",
+      "weight": "patient_best.pt",
+      "checkpoint_sha256": "cb995a46a3c5e14549994e30d15cef08d30f61987d3f22fd406f2a471397afd4",
+      "patient_steps": 2000,
+      "summary": {
+        "15": {
+          "reference_bias_mg_dl": 4.728689816518527,
+          "reference_rmse_mg_dl": 8.985204735616604,
+          "effect_mae_mg_dl": 0.03214743651440077
+        },
+        "30": {
+          "reference_bias_mg_dl": 3.734880433281005,
+          "reference_rmse_mg_dl": 13.514318769668767,
+          "effect_mae_mg_dl": 0.16661104174946942
+        },
+        "60": {
+          "reference_bias_mg_dl": -0.6115375152822823,
+          "reference_rmse_mg_dl": 8.506521549070778,
+          "effect_mae_mg_dl": 0.19595896292630158
+        },
+        "120": {
+          "reference_bias_mg_dl": -15.878460507014713,
+          "reference_rmse_mg_dl": 36.83861940088663,
+          "effect_mae_mg_dl": 1.9806485379767333
+        },
+        "240": {
+          "reference_bias_mg_dl": -4.005684904991133,
+          "reference_rmse_mg_dl": 24.509250349218686,
+          "effect_mae_mg_dl": 9.683563574730735
+        }
+      },
+      "reward_choice_agreement": 0.14285714285714285,
+      "reward_regret": 0.4200363393340792
+    },
+    {
+      "run": "C01_response_patient_composition",
+      "weight": "patient_composed.pt",
+      "checkpoint_sha256": "28bf976f305eb1b518d47ebff0b03ba2c871ab67be8ea6ae75422ce6276227e1",
+      "patient_steps": 0,
+      "summary": {
+        "15": {
+          "reference_bias_mg_dl": 4.446587504158036,
+          "reference_rmse_mg_dl": 8.77982823853742,
+          "effect_mae_mg_dl": 0.035619094492907344
+        },
+        "30": {
+          "reference_bias_mg_dl": 3.750901616839877,
+          "reference_rmse_mg_dl": 13.467963359208603,
+          "effect_mae_mg_dl": 0.06126872873141347
+        },
+        "60": {
+          "reference_bias_mg_dl": -0.757727613636077,
+          "reference_rmse_mg_dl": 8.520666848520309,
+          "effect_mae_mg_dl": 0.1934825242145302
+        },
+        "120": {
+          "reference_bias_mg_dl": -16.377736259490998,
+          "reference_rmse_mg_dl": 37.07186625101071,
+          "effect_mae_mg_dl": 1.8308618123912994
+        },
+        "240": {
+          "reference_bias_mg_dl": -3.303230201796379,
+          "reference_rmse_mg_dl": 24.594733933694993,
+          "effect_mae_mg_dl": 7.352360998185915
+        }
+      },
+      "reward_choice_agreement": 0.75,
+      "reward_regret": 0.050103068351745605
+    }
+  ]
+}

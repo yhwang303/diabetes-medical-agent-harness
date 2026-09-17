@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "local_links_checked": 104,
+  "missing_links": [],
+  "table_tag_balance": 0,
+  "pause_resume_wording_checked": true,
+  "handoff_exists": true,
+  "worklog_final_inventory_heading_preserved": true,
+  "python_syntax_checked": 7,
+  "full_html_browser_render": "not verified; prior file URL access blocked; no bypass attempted",
+  "no_new_remote_operations_after_user_pause": true
+}

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "run": "R03_reference_categorical",
+      "one_step_blocks_match_original_beam": true,
+      "full48step_plan_and16step_blocks_valid": true,
+      "patient_isolation_verified": true,
+      "batch2_4h_seconds_shared_gpu": 0.45334339141845703,
+      "actions": [
+        0.15554994344711304,
+        0.0
+      ],
+      "mechanical_check_only": true
+    },
+    {
+      "run": "H01_action_prefix",
+      "one_step_blocks_match_original_beam": true,
+      "full48step_plan_and16step_blocks_valid": true,
+      "patient_isolation_verified": true,
+      "batch2_4h_seconds_shared_gpu": 0.024305105209350586,
+      "actions": [
+        1.0244195461273193,
+        0.0
+      ],
+      "mechanical_check_only": true
+    }
+  ],
+  "risk_function_unchanged": true,
+  "no_future_observations_or_hidden_states_given": true,
+  "current_weights_untrained_beyond60min_not_efficacy_evidence": true
+}

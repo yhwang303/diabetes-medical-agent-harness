@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "causal_prefix": true,
+  "zero_response_exact": true,
+  "partial_full_parity": true,
+  "finite_gradients": true,
+  "direct_parameters": 17469,
+  "convolution_parameters": 17480
+}

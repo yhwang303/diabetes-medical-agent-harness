@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "analytic_negative_return_example": [
+    {
+      "std": 0.5,
+      "legacy_historical_plus_mse": -0.11289572715759277,
+      "repaired_historical_plus_nll": 2.1090495586395264
+    },
+    {
+      "std": 0.1,
+      "legacy_historical_plus_mse": -23.30817413330078,
+      "repaired_historical_plus_nll": 46.066436767578125
+    },
+    {
+      "std": 0.02,
+      "legacy_historical_plus_mse": -622.5034790039062,
+      "repaired_historical_plus_nll": 1181.6019287109375
+    }
+  ],
+  "physical_return_bound": 9.53294922013885,
+  "real_training_patients_sampled": 225,
+  "real_training_origins_sampled": 6968,
+  "negative_return_fraction": 0.14480482204362802,
+  "return_min": -1.0313199758529663,
+  "effective_weight_range": [
+    0.8918152240154338,
+    1.250458488361199
+  ],
+  "policy_gradient_norm": 17.870826721191406,
+  "patient_frozen": true,
+  "loss_parts": {
+    "historical_policy_loss": 0.6423571109771729,
+    "imagined_policy_loss": 0.0020962697453796864,
+    "supervised_action_mse": 1.0391905307769775,
+    "supervised_training_loss": 6.334407806396484,
+    "mean_std": 0.3002544343471527,
+    "imagined_return": 0.5360664129257202,
+    "historical_return_min": -0.8899901509284973,
+    "historical_negative_fraction": 0.1875,
+    "combined_history_weight_min": 0.9066406488418579
+  },
+  "not_innovation_or_efficacy_evidence": true
+}

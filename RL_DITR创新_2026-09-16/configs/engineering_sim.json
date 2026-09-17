@@ -1,0 +1,17 @@
+{
+  "patients": [
+    1,
+    2
+  ],
+  "total_minutes": 390,
+  "groups": [
+    {
+      "name": "engineering",
+      "seeds": [
+        3101
+      ],
+      "bolus_factor": 1.0
+    }
+  ],
+  "comparison_status": "engineering wiring smoke with partially trained patient model; not policy efficacy"
+}

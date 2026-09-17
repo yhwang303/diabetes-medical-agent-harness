@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "scope": "D01b data pipeline only",
+  "source_patient_files": 329,
+  "normalization_training_patients": 225,
+  "unit_tests_passed": 14,
+  "real_sample_checks": 3272,
+  "future_mutation_patient_checks": 280,
+  "local_document_links_verified": 11,
+  "models_trained": false,
+  "cuda_tested": false,
+  "clinical_ready": false,
+  "reward_source_commit": "5080fdbe43979f9b8a9616fbc120aae4ac25842a"
+}

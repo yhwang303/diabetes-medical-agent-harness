@@ -1,0 +1,13 @@
+{
+  "status": "partial_verified",
+  "files_checked": 8,
+  "groups_checked": 56,
+  "complete_group_action_ranks": [
+    3
+  ],
+  "equal_total_complete_pairs": 336,
+  "reference_arm_matches_previous_data_exactly": true,
+  "same_observed_history_across_arms": true,
+  "future_features_for_labels_only": true,
+  "full_manifest_available": false
+}

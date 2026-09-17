@@ -1,0 +1,6208 @@
+{
+  "IOBP2AdvEvent.txt": {
+    "rows": 350,
+    "patients": 194,
+    "columns": [
+      "RecID",
+      "PtID",
+      "AENotifiedDt",
+      "MedicalConditionMM",
+      "AEOnsetDt",
+      "AEPrEnroll",
+      "AENotedStdyVisExam",
+      "AEIntensity",
+      "AERelStdyTrt",
+      "AERelStdyTrtUncertain",
+      "AERelStdyProc",
+      "AEEffectTrt",
+      "AESerious",
+      "AETrt",
+      "AESurg",
+      "AESurgDt",
+      "AEOthTrt",
+      "AEOutcome",
+      "AEResDt",
+      "AEDeathCause",
+      "AEDeathDt",
+      "AEDeath",
+      "AEConAnomaly",
+      "AELifeThreat",
+      "AEHosp",
+      "AEDisability",
+      "AEOther",
+      "Weight",
+      "WeightMeas",
+      "WeightNotAvail",
+      "AERelLabData",
+      "AEOthRelHx",
+      "AEMedProd",
+      "MMAERelStdyTrt",
+      "MMAESerious",
+      "MMUnexpected",
+      "AERelStdyDrugDevice",
+      "AERelStdyDrugDeviceUncertain",
+      "MMHospDiscRptObtained",
+      "AERelStdyTrtHighLvl",
+      "AERelStdyTrtWhich",
+      "AERelStdyDrugDeviceHighLvl",
+      "AERelStdyDrugDeviceWhich",
+      "MMAERelStdyTrtHighLvl",
+      "MMInitialCmtsDt",
+      "AECCNarrative",
+      "AECCNarrativeDt",
+      "AEMedEvent"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "AENotifiedDt": 0,
+      "MedicalConditionMM": 0,
+      "AEOnsetDt": 0,
+      "AEPrEnroll": 0,
+      "AENotedStdyVisExam": 0,
+      "AEIntensity": 0,
+      "AERelStdyTrt": 0,
+      "AERelStdyTrtUncertain": 350,
+      "AERelStdyProc": 350,
+      "AEEffectTrt": 0,
+      "AESerious": 0,
+      "AETrt": 0,
+      "AESurg": 194,
+      "AESurgDt": 346,
+      "AEOthTrt": 194,
+      "AEOutcome": 0,
+      "AEResDt": 9,
+      "AEDeathCause": 350,
+      "AEDeathDt": 350,
+      "AEDeath": 350,
+      "AEConAnomaly": 350,
+      "AELifeThreat": 333,
+      "AEHosp": 342,
+      "AEDisability": 348,
+      "AEOther": 347,
+      "Weight": 341,
+      "WeightMeas": 341,
+      "WeightNotAvail": 333,
+      "AERelLabData": 324,
+      "AEOthRelHx": 324,
+      "AEMedProd": 324,
+      "MMAERelStdyTrt": 0,
+      "MMAESerious": 0,
+      "MMUnexpected": 120,
+      "AERelStdyDrugDevice": 350,
+      "AERelStdyDrugDeviceUncertain": 350,
+      "MMHospDiscRptObtained": 0,
+      "AERelStdyTrtHighLvl": 116,
+      "AERelStdyTrtWhich": 350,
+      "AERelStdyDrugDeviceHighLvl": 350,
+      "AERelStdyDrugDeviceWhich": 350,
+      "MMAERelStdyTrtHighLvl": 121,
+      "MMInitialCmtsDt": 12,
+      "AECCNarrative": 350,
+      "AECCNarrativeDt": 350,
+      "AEMedEvent": 350
+    },
+    "low_cardinality_values": {
+      "MedicalConditionMM": {
+        "Ketosis": 187,
+        "Hyperglycemia": 102,
+        "Hypoglycemia": 20,
+        "Fall": 3,
+        "Suicidal ideation": 2,
+        "Diabetic ketoacidosis": 2,
+        "Injection site discomfort": 2,
+        "Gastroenteritis": 2,
+        "Attempted suicide": 2,
+        "Pyelonephritis": 1,
+        "Urinary tract infection": 1,
+        "Vomiting": 1,
+        "Ingrown toe nail": 1,
+        "Laceration": 1,
+        "Vaginal bleeding": 1,
+        "Injection site irritation": 1,
+        "Epiglottitis": 1,
+        "Catheter infection": 1,
+        "Allergic skin reaction": 1,
+        "Primary spontaneous pneumothorax": 1,
+        "Kidney stones": 1,
+        "Chest pain": 1,
+        "Leg fracture": 1,
+        "Sciatica": 1,
+        "Constipation": 1,
+        "Food poisoning": 1,
+        "Nausea": 1,
+        "Syncope": 1,
+        "Skin bacterial infection": 1,
+        "Vasovagal attack": 1,
+        "Transient ischemic attacks": 1,
+        "Headache": 1,
+        "Concussion": 1,
+        "Neck pain": 1,
+        "Catheter site pain": 1,
+        "Foot fracture": 1,
+        "Bronchitis": 1
+      },
+      "AEPrEnroll": {
+        "No": 302,
+        "Yes": 48
+      },
+      "AENotedStdyVisExam": {
+        "No": 341,
+        "Yes": 9
+      },
+      "AEIntensity": {
+        "Moderate": 194,
+        "Mild": 133,
+        "Severe": 23
+      },
+      "AERelStdyTrt": {
+        "Yes": 234,
+        "No": 116
+      },
+      "AERelStdyTrtUncertain": {
+        "<MISSING>": 350
+      },
+      "AERelStdyProc": {
+        "<MISSING>": 350
+      },
+      "AEEffectTrt": {
+        "No change": 280,
+        "Discontinued temporarily": 55,
+        "Discontinued permanently": 14,
+        "Reduced dose": 1
+      },
+      "AESerious": {
+        "No": 324,
+        "Yes": 26
+      },
+      "AETrt": {
+        "No": 194,
+        "Yes": 156
+      },
+      "AESurg": {
+        "<MISSING>": 194,
+        "No": 152,
+        "Yes": 4
+      },
+      "AESurgDt": {
+        "<MISSING>": 346,
+        "9/2/2020": 1,
+        "6/21/2020": 1,
+        "7/2/2021": 1,
+        "3/16/2021": 1
+      },
+      "AEOthTrt": {
+        "<MISSING>": 194,
+        "No": 79,
+        "Yes": 77
+      },
+      "AEOutcome": {
+        "Complete Recovery": 338,
+        "Ongoing, medically stable": 7,
+        "Recovered with Sequelae": 3,
+        "Ongoing (further improvement / worsening possible)": 2
+      },
+      "AEDeathCause": {
+        "<MISSING>": 350
+      },
+      "AEDeathDt": {
+        "<MISSING>": 350
+      },
+      "AEDeath": {
+        "<MISSING>": 350
+      },
+      "AEConAnomaly": {
+        "<MISSING>": 350
+      },
+      "AELifeThreat": {
+        "<MISSING>": 333,
+        "1.0": 17
+      },
+      "AEHosp": {
+        "<MISSING>": 342,
+        "1.0": 8
+      },
+      "AEDisability": {
+        "<MISSING>": 348,
+        "1.0": 2
+      },
+      "AEOther": {
+        "<MISSING>": 347,
+        "1.0": 3
+      },
+      "Weight": {
+        "<MISSING>": 341,
+        "189.0": 2,
+        "71.0": 1,
+        "153.0": 1,
+        "267.0": 1,
+        "182.0": 1,
+        "114.0": 1,
+        "133.0": 1,
+        "127.0": 1
+      },
+      "WeightMeas": {
+        "<MISSING>": 341,
+        "lbs": 8,
+        "kgs": 1
+      },
+      "WeightNotAvail": {
+        "<MISSING>": 333,
+        "1.0": 17
+      },
+      "AERelLabData": {
+        "<MISSING>": 324,
+        "No": 19,
+        "Yes": 7
+      },
+      "AEOthRelHx": {
+        "<MISSING>": 324,
+        "No": 17,
+        "Yes": 9
+      },
+      "AEMedProd": {
+        "<MISSING>": 324,
+        "No": 14,
+        "Yes": 12
+      },
+      "MMAERelStdyTrt": {
+        "Yes": 229,
+        "No": 121
+      },
+      "MMAESerious": {
+        "No": 324,
+        "Yes": 26
+      },
+      "MMUnexpected": {
+        "No": 230,
+        "<MISSING>": 120
+      },
+      "AERelStdyDrugDevice": {
+        "<MISSING>": 350
+      },
+      "AERelStdyDrugDeviceUncertain": {
+        "<MISSING>": 350
+      },
+      "MMHospDiscRptObtained": {
+        "No, Not Requested": 350
+      },
+      "AERelStdyTrtHighLvl": {
+        "Study device (function)": 180,
+        "<MISSING>": 116,
+        "Administration of study drug/device": 39,
+        "Study drug (drug effect)": 6,
+        "More than one of the above": 4,
+        "Prep for the administration of study drug": 3,
+        "Other study treatment": 2
+      },
+      "AERelStdyTrtWhich": {
+        "<MISSING>": 350
+      },
+      "AERelStdyDrugDeviceHighLvl": {
+        "<MISSING>": 350
+      },
+      "AERelStdyDrugDeviceWhich": {
+        "<MISSING>": 350
+      },
+      "MMAERelStdyTrtHighLvl": {
+        "Study device (function)": 216,
+        "<MISSING>": 121,
+        "Administration of study drug/device": 9,
+        "Study drug (drug effect)": 2,
+        "Other study treatment": 1,
+        "Study diagnostic procedure": 1
+      },
+      "AECCNarrative": {
+        "<MISSING>": 350
+      },
+      "AECCNarrativeDt": {
+        "<MISSING>": 350
+      },
+      "AEMedEvent": {
+        "<MISSING>": 350
+      }
+    }
+  },
+  "IOBP2BGRuniLetComp.txt": {
+    "rows": 58,
+    "patients": 58,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "BGRunCompConfirm"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "BGRunCompConfirm": 0
+    },
+    "low_cardinality_values": {
+      "BGRunCompConfirm": {
+        "1": 58
+      }
+    }
+  },
+  "IOBP2BGRuniLetInit.txt": {
+    "rows": 58,
+    "patients": 58,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "BGRunInitConfirm"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "BGRunInitConfirm": 0
+    },
+    "low_cardinality_values": {
+      "BGRunInitConfirm": {
+        "1": 58
+      }
+    }
+  },
+  "IOBP2BasalRtChg.txt": {
+    "rows": 5,
+    "patients": 3,
+    "columns": [
+      "RecID",
+      "PtID",
+      "BasRtChgDt",
+      "BasRtChgStHr",
+      "BasRtChgStMin",
+      "BasRtChgStAmPm",
+      "BasRtChgEndHr",
+      "BasRtChgEndMin",
+      "BasRtChgEndAmPm",
+      "BasRtChgNewRt"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "BasRtChgDt": 0,
+      "BasRtChgStHr": 0,
+      "BasRtChgStMin": 0,
+      "BasRtChgStAmPm": 0,
+      "BasRtChgEndHr": 0,
+      "BasRtChgEndMin": 0,
+      "BasRtChgEndAmPm": 0,
+      "BasRtChgNewRt": 0
+    },
+    "low_cardinality_values": {
+      "BasRtChgDt": {
+        "9/5/2020": 3,
+        "12/31/2020": 1,
+        "4/17/2020": 1
+      },
+      "BasRtChgStHr": {
+        "12": 3,
+        "6": 1,
+        "7": 1
+      },
+      "BasRtChgStMin": {
+        "0": 5
+      },
+      "BasRtChgStAmPm": {
+        "AM": 3,
+        "PM": 2
+      },
+      "BasRtChgEndHr": {
+        "6": 2,
+        "12": 2,
+        "1": 1
+      },
+      "BasRtChgEndMin": {
+        "0": 4,
+        "15": 1
+      },
+      "BasRtChgEndAmPm": {
+        "AM": 3,
+        "PM": 2
+      },
+      "BasRtChgNewRt": {
+        "0.75": 1,
+        "0.4": 1,
+        "0.9": 1,
+        "0.2": 1,
+        "1.3": 1
+      }
+    }
+  },
+  "IOBP2CGMAssess.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "CGMMinUse"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "CGMMinUse": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "CGM Assessment": 440
+      },
+      "CGMMinUse": {
+        "Yes": 294,
+        "No": 146
+      }
+    }
+  },
+  "IOBP2CGMUse.txt": {
+    "rows": 266,
+    "patients": 81,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "CGMUseDays",
+      "CGMUseSkinIrrit",
+      "CGMUseBreak",
+      "CGMUseHesitant",
+      "CGMUseUncomfPain",
+      "CGMUseAlarms",
+      "CGMUseNotAccurate",
+      "CGMUseDiffOperate",
+      "CGMUseTooBusy",
+      "CGMUseForget",
+      "CGMUseNoHelp",
+      "CGMUseTooBig",
+      "CGMUseOth",
+      "CGMUseDisc"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "CGMUseDays": 0,
+      "CGMUseSkinIrrit": 266,
+      "CGMUseBreak": 266,
+      "CGMUseHesitant": 266,
+      "CGMUseUncomfPain": 266,
+      "CGMUseAlarms": 266,
+      "CGMUseNotAccurate": 266,
+      "CGMUseDiffOperate": 266,
+      "CGMUseTooBusy": 266,
+      "CGMUseForget": 266,
+      "CGMUseNoHelp": 266,
+      "CGMUseTooBig": 266,
+      "CGMUseOth": 264,
+      "CGMUseDisc": 266
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Week 10": 81,
+        "Week 13": 81,
+        "Week 6": 66,
+        "Week 2": 38
+      },
+      "CGMUseDays": {
+        "7": 259,
+        "6": 5,
+        "5": 1,
+        "3": 1
+      },
+      "CGMUseSkinIrrit": {
+        "<MISSING>": 266
+      },
+      "CGMUseBreak": {
+        "<MISSING>": 266
+      },
+      "CGMUseHesitant": {
+        "<MISSING>": 266
+      },
+      "CGMUseUncomfPain": {
+        "<MISSING>": 266
+      },
+      "CGMUseAlarms": {
+        "<MISSING>": 266
+      },
+      "CGMUseNotAccurate": {
+        "<MISSING>": 266
+      },
+      "CGMUseDiffOperate": {
+        "<MISSING>": 266
+      },
+      "CGMUseTooBusy": {
+        "<MISSING>": 266
+      },
+      "CGMUseForget": {
+        "<MISSING>": 266
+      },
+      "CGMUseNoHelp": {
+        "<MISSING>": 266
+      },
+      "CGMUseTooBig": {
+        "<MISSING>": 266
+      },
+      "CGMUseOth": {
+        "<MISSING>": 264,
+        "1.0": 2
+      },
+      "CGMUseDisc": {
+        "<MISSING>": 266
+      }
+    }
+  },
+  "IOBP2CompVisit.txt": {
+    "rows": 2614,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "DataTrans",
+      "DataTransSourceDoc",
+      "DataTransSourceEMR",
+      "DataTransSourcePtChart",
+      "DataTransSourceTestResult",
+      "DataTransSourceOth",
+      "KeyDataTrans",
+      "DataTransHbA1c",
+      "DataTransHbA1cSource",
+      "DataTransPreg",
+      "DataTransPregSource"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "DataTrans": 0,
+      "DataTransSourceDoc": 2187,
+      "DataTransSourceEMR": 2119,
+      "DataTransSourcePtChart": 2572,
+      "DataTransSourceTestResult": 2430,
+      "DataTransSourceOth": 2577,
+      "KeyDataTrans": 1732,
+      "DataTransHbA1c": 2431,
+      "DataTransHbA1cSource": 2431,
+      "DataTransPreg": 2469,
+      "DataTransPregSource": 2469
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 440,
+        "Randomization": 440,
+        "Week 2": 435,
+        "Week 13": 435,
+        "Week 6": 434,
+        "Week 10": 430
+      },
+      "DataTrans": {
+        "No": 1732,
+        "Yes": 882
+      },
+      "DataTransSourceDoc": {
+        "<MISSING>": 2187,
+        "1.0": 427
+      },
+      "DataTransSourceEMR": {
+        "<MISSING>": 2119,
+        "1.0": 495
+      },
+      "DataTransSourcePtChart": {
+        "<MISSING>": 2572,
+        "1.0": 42
+      },
+      "DataTransSourceTestResult": {
+        "<MISSING>": 2430,
+        "1.0": 184
+      },
+      "DataTransSourceOth": {
+        "<MISSING>": 2577,
+        "1.0": 37
+      },
+      "KeyDataTrans": {
+        "<MISSING>": 1732,
+        "Not Applicable": 489,
+        "Yes": 311,
+        "No": 82
+      },
+      "DataTransHbA1c": {
+        "<MISSING>": 2431,
+        "1.0": 183
+      },
+      "DataTransHbA1cSource": {
+        "<MISSING>": 2431,
+        "Test/Lab result": 103,
+        "Electronic medical record (EMR)": 76,
+        "CRF worksheet": 3,
+        "Written patient chart": 1
+      },
+      "DataTransPreg": {
+        "<MISSING>": 2469,
+        "1.0": 145
+      },
+      "DataTransPregSource": {
+        "<MISSING>": 2469,
+        "CRF worksheet": 79,
+        "Written patient chart": 54,
+        "Test/Lab result": 6,
+        "Visual confirmation of test via video conference": 5,
+        "Electronic medical record (EMR)": 1
+      }
+    }
+  },
+  "IOBP2ContDeviceDtTmVer.txt": {
+    "rows": 535,
+    "patients": 107,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "DtTm1MinCell",
+      "DtTm1MinCellNA",
+      "CellDt",
+      "CellHr",
+      "CellMin",
+      "CellAmPm",
+      "PumpDt",
+      "PumpHr",
+      "PumpMin",
+      "PumpAmPm"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "DtTm1MinCell": 188,
+      "DtTm1MinCellNA": 347,
+      "CellDt": 472,
+      "CellHr": 472,
+      "CellMin": 472,
+      "CellAmPm": 472,
+      "PumpDt": 472,
+      "PumpHr": 472,
+      "PumpMin": 472,
+      "PumpAmPm": 472
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Day 0": 107,
+        "Week 2": 107,
+        "Week 6": 107,
+        "Week 10": 107,
+        "Week 13": 107
+      },
+      "DtTm1MinCell": {
+        "Yes": 284,
+        "<MISSING>": 188,
+        "No": 63
+      },
+      "DtTm1MinCellNA": {
+        "<MISSING>": 347,
+        "1.0": 188
+      },
+      "CellHr": {
+        "<MISSING>": 472,
+        "10.0": 12,
+        "3.0": 9,
+        "9.0": 8,
+        "11.0": 7,
+        "1.0": 6,
+        "4.0": 6,
+        "8.0": 5,
+        "2.0": 4,
+        "7.0": 2,
+        "12.0": 2,
+        "5.0": 2
+      },
+      "CellMin": {
+        "<MISSING>": 472,
+        "19.0": 4,
+        "7.0": 4,
+        "11.0": 3,
+        "18.0": 3,
+        "43.0": 3,
+        "52.0": 2,
+        "37.0": 2,
+        "26.0": 2,
+        "9.0": 2,
+        "59.0": 2,
+        "20.0": 2,
+        "49.0": 2,
+        "14.0": 2,
+        "4.0": 2,
+        "21.0": 2,
+        "22.0": 2,
+        "25.0": 2,
+        "16.0": 2,
+        "28.0": 1,
+        "24.0": 1,
+        "13.0": 1,
+        "33.0": 1,
+        "31.0": 1,
+        "35.0": 1,
+        "17.0": 1,
+        "12.0": 1,
+        "51.0": 1,
+        "34.0": 1,
+        "5.0": 1,
+        "38.0": 1,
+        "39.0": 1,
+        "10.0": 1,
+        "23.0": 1,
+        "15.0": 1,
+        "41.0": 1,
+        "45.0": 1,
+        "50.0": 1,
+        "3.0": 1
+      },
+      "CellAmPm": {
+        "<MISSING>": 472,
+        "AM": 33,
+        "PM": 30
+      },
+      "PumpHr": {
+        "<MISSING>": 472,
+        "10.0": 13,
+        "3.0": 10,
+        "9.0": 9,
+        "1.0": 6,
+        "11.0": 6,
+        "2.0": 5,
+        "4.0": 5,
+        "8.0": 4,
+        "7.0": 2,
+        "6.0": 1,
+        "12.0": 1,
+        "5.0": 1
+      },
+      "PumpMin": {
+        "<MISSING>": 472,
+        "17.0": 8,
+        "40.0": 3,
+        "8.0": 3,
+        "7.0": 3,
+        "25.0": 3,
+        "47.0": 2,
+        "14.0": 2,
+        "50.0": 2,
+        "21.0": 2,
+        "5.0": 2,
+        "51.0": 2,
+        "1.0": 2,
+        "24.0": 2,
+        "12.0": 2,
+        "58.0": 1,
+        "56.0": 1,
+        "27.0": 1,
+        "33.0": 1,
+        "39.0": 1,
+        "22.0": 1,
+        "19.0": 1,
+        "18.0": 1,
+        "46.0": 1,
+        "28.0": 1,
+        "57.0": 1,
+        "16.0": 1,
+        "45.0": 1,
+        "35.0": 1,
+        "41.0": 1,
+        "55.0": 1,
+        "49.0": 1,
+        "2.0": 1,
+        "43.0": 1,
+        "9.0": 1,
+        "15.0": 1,
+        "36.0": 1,
+        "13.0": 1,
+        "23.0": 1,
+        "32.0": 1
+      },
+      "PumpAmPm": {
+        "<MISSING>": 472,
+        "AM": 34,
+        "PM": 29
+      }
+    }
+  },
+  "IOBP2CorrectDose.txt": {
+    "rows": 535,
+    "patients": 95,
+    "columns": [
+      "RecID",
+      "PtID",
+      "CorrDoseDt",
+      "CorrDoseHr",
+      "CorrDoseMin",
+      "CorrDoseAmPm",
+      "CorrDoseAsRcmnd"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "CorrDoseDt": 0,
+      "CorrDoseHr": 0,
+      "CorrDoseMin": 0,
+      "CorrDoseAmPm": 1,
+      "CorrDoseAsRcmnd": 1
+    },
+    "low_cardinality_values": {
+      "CorrDoseHr": {
+        "9": 56,
+        "10": 54,
+        "8": 52,
+        "5": 50,
+        "7": 50,
+        "6": 49,
+        "12": 46,
+        "3": 42,
+        "11": 42,
+        "1": 35,
+        "4": 31,
+        "2": 28
+      },
+      "CorrDoseAmPm": {
+        "PM": 337,
+        "AM": 197,
+        "<MISSING>": 1
+      },
+      "CorrDoseAsRcmnd": {
+        "Yes": 460,
+        "No": 74,
+        "<MISSING>": 1
+      }
+    }
+  },
+  "IOBP2DeviceBGM.txt": {
+    "rows": 14850,
+    "patients": 330,
+    "columns": [
+      "RecID",
+      "PtID",
+      "DeviceDtTm",
+      "BGMVal"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "DeviceDtTm": 0,
+      "BGMVal": 0
+    },
+    "low_cardinality_values": {}
+  },
+  "IOBP2DeviceCGMAlertSet.txt": {
+    "rows": 19309,
+    "patients": 439,
+    "columns": [
+      "RecID",
+      "PtID",
+      "AlertType",
+      "GlucValue",
+      "GlucChgRt",
+      "Duration",
+      "SortOrd"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "AlertType": 0,
+      "GlucValue": 8278,
+      "GlucChgRt": 13791,
+      "Duration": 16549,
+      "SortOrd": 0
+    },
+    "low_cardinality_values": {
+      "AlertType": {
+        "High": 2760,
+        "Low": 2760,
+        "Signal Loss": 2760,
+        "Urgent Low": 2760,
+        "Fall": 2759,
+        "Rise": 2759,
+        "Urgent Low Soon": 2751
+      },
+      "GlucValue": {
+        "<MISSING>": 8278,
+        "55.0": 5511,
+        "70.0": 1266,
+        "250.0": 878,
+        "300.0": 559,
+        "80.0": 501,
+        "75.0": 490,
+        "200.0": 336,
+        "180.0": 213,
+        "60.0": 159,
+        "65.0": 138,
+        "400.0": 138,
+        "85.0": 104,
+        "220.0": 101,
+        "170.0": 60,
+        "270.0": 59,
+        "90.0": 56,
+        "280.0": 48,
+        "350.0": 48,
+        "160.0": 45,
+        "100.0": 44,
+        "150.0": 42,
+        "230.0": 41,
+        "190.0": 32,
+        "260.0": 29,
+        "240.0": 28,
+        "210.0": 20,
+        "290.0": 16,
+        "310.0": 14,
+        "370.0": 12,
+        "330.0": 11,
+        "340.0": 8,
+        "320.0": 7,
+        "120.0": 7,
+        "95.0": 2,
+        "390.0": 2,
+        "380.0": 2,
+        "130.0": 2,
+        "360.0": 1,
+        "140.0": 1
+      },
+      "GlucChgRt": {
+        "<MISSING>": 13791,
+        "3.0": 5401,
+        "2.0": 117
+      },
+      "Duration": {
+        "<MISSING>": 16549,
+        "0:20:00": 2240,
+        "00:20:00": 241,
+        "0:30:00": 163,
+        "0:45:00": 18,
+        "1:00:00": 17,
+        "0:25:00": 16,
+        "4:00:00": 11,
+        "0:55:00": 11,
+        "2:00:00": 9,
+        "00:30:00": 7,
+        "1:10:00": 7,
+        "3:00:00": 4,
+        "02:00:00": 3,
+        "2:20:00": 3,
+        "1:30:00": 2,
+        "0:35:00": 2,
+        "00:45:00": 2,
+        "01:00:00": 2,
+        "0:40:00": 1,
+        "00:40:00": 1
+      },
+      "SortOrd": {
+        "7": 2660,
+        "8": 2660,
+        "9": 2660,
+        "10": 2659,
+        "6": 2653,
+        "11": 2536,
+        "5": 1521,
+        "12": 1143,
+        "4": 118,
+        "16": 96,
+        "17": 96,
+        "15": 96,
+        "14": 96,
+        "18": 95,
+        "19": 89,
+        "13": 66,
+        "20": 37,
+        "21": 4,
+        "22": 4,
+        "23": 4,
+        "24": 4,
+        "25": 4,
+        "26": 4,
+        "27": 4
+      }
+    }
+  },
+  "IOBP2DeviceDtTmVer.txt": {
+    "rows": 1638,
+    "patients": 332,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "DtTm1MinCell",
+      "DtTm1MinCellUnk",
+      "CellDt",
+      "CellHr",
+      "CellMin",
+      "CellAmPm",
+      "BGMDt",
+      "BGMHr",
+      "BGMMin",
+      "BGMAmPm",
+      "BGMNotAtVis",
+      "KetoneMetDt",
+      "KetoneMetHr",
+      "KetoneMetMin",
+      "KetoneMetAmPm",
+      "KetoneMetNotAtVis",
+      "iLetDt",
+      "iLetHr",
+      "iLetMin",
+      "iLetAmPm",
+      "iLetDiscont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "DtTm1MinCell": 127,
+      "DtTm1MinCellUnk": 1511,
+      "CellDt": 1070,
+      "CellHr": 1070,
+      "CellMin": 1070,
+      "CellAmPm": 1070,
+      "BGMDt": 1193,
+      "BGMHr": 1193,
+      "BGMMin": 1193,
+      "BGMAmPm": 1193,
+      "BGMNotAtVis": 1512,
+      "KetoneMetDt": 1216,
+      "KetoneMetHr": 1216,
+      "KetoneMetMin": 1216,
+      "KetoneMetAmPm": 1216,
+      "KetoneMetNotAtVis": 1489,
+      "iLetDt": 1095,
+      "iLetHr": 1095,
+      "iLetMin": 1095,
+      "iLetAmPm": 1095,
+      "iLetDiscont": 1610
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Day 0": 332,
+        "Week 2": 328,
+        "Week 13": 328,
+        "Week 6": 327,
+        "Week 10": 323
+      },
+      "DtTm1MinCell": {
+        "Yes": 1067,
+        "No": 444,
+        "<MISSING>": 127
+      },
+      "DtTm1MinCellUnk": {
+        "<MISSING>": 1511,
+        "1.0": 127
+      },
+      "CellHr": {
+        "<MISSING>": 1070,
+        "10.0": 97,
+        "9.0": 89,
+        "1.0": 69,
+        "2.0": 66,
+        "8.0": 56,
+        "11.0": 50,
+        "3.0": 42,
+        "12.0": 40,
+        "4.0": 33,
+        "5.0": 12,
+        "7.0": 9,
+        "6.0": 5
+      },
+      "CellAmPm": {
+        "<MISSING>": 1070,
+        "AM": 302,
+        "PM": 266
+      },
+      "BGMHr": {
+        "<MISSING>": 1193,
+        "10.0": 75,
+        "9.0": 71,
+        "1.0": 52,
+        "8.0": 51,
+        "2.0": 50,
+        "3.0": 34,
+        "11.0": 32,
+        "12.0": 30,
+        "4.0": 27,
+        "7.0": 11,
+        "5.0": 10,
+        "6.0": 2
+      },
+      "BGMAmPm": {
+        "<MISSING>": 1193,
+        "AM": 241,
+        "PM": 204
+      },
+      "BGMNotAtVis": {
+        "<MISSING>": 1512,
+        "1.0": 126
+      },
+      "KetoneMetHr": {
+        "<MISSING>": 1216,
+        "10.0": 72,
+        "9.0": 65,
+        "8.0": 50,
+        "1.0": 50,
+        "2.0": 41,
+        "3.0": 31,
+        "11.0": 31,
+        "12.0": 26,
+        "4.0": 23,
+        "7.0": 17,
+        "5.0": 10,
+        "6.0": 6
+      },
+      "KetoneMetAmPm": {
+        "<MISSING>": 1216,
+        "AM": 232,
+        "PM": 190
+      },
+      "KetoneMetNotAtVis": {
+        "<MISSING>": 1489,
+        "1.0": 149
+      },
+      "iLetHr": {
+        "<MISSING>": 1095,
+        "10.0": 91,
+        "9.0": 84,
+        "1.0": 65,
+        "2.0": 60,
+        "8.0": 55,
+        "11.0": 47,
+        "12.0": 45,
+        "3.0": 43,
+        "4.0": 31,
+        "5.0": 11,
+        "7.0": 8,
+        "6.0": 3
+      },
+      "iLetAmPm": {
+        "<MISSING>": 1095,
+        "AM": 286,
+        "PM": 257
+      },
+      "iLetDiscont": {
+        "<MISSING>": 1610,
+        "1.0": 28
+      }
+    }
+  },
+  "IOBP2DeviceIssue.txt": {
+    "rows": 491,
+    "patients": 244,
+    "columns": [
+      "RecID",
+      "PtID",
+      "InvDevice",
+      "DevIssueType",
+      "DevIssueOnsetDt",
+      "DevIssueLocation",
+      "DevIssueFrequency",
+      "DevIssueEffect",
+      "DevIssueReplacedDt",
+      "DevIssueAE",
+      "DevIssueAELikely",
+      "DevIssueUADE",
+      "DevIssueAELikelyHypo",
+      "DevIssueAELikelyHyper",
+      "DevIssueAELikelyOth"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "InvDevice": 0,
+      "DevIssueType": 0,
+      "DevIssueOnsetDt": 0,
+      "DevIssueLocation": 0,
+      "DevIssueFrequency": 0,
+      "DevIssueEffect": 0,
+      "DevIssueReplacedDt": 206,
+      "DevIssueAE": 0,
+      "DevIssueAELikely": 229,
+      "DevIssueUADE": 0,
+      "DevIssueAELikelyHypo": 437,
+      "DevIssueAELikelyHyper": 348,
+      "DevIssueAELikelyOth": 483
+    },
+    "low_cardinality_values": {
+      "InvDevice": {
+        "Infusion Set for iLet": 216,
+        "iLet BP System": 148,
+        "Other": 118,
+        "Decom G6 Receiver": 6,
+        "Dexcom G6 Pro": 2,
+        "Precision Xtra Ketone Meter": 1
+      },
+      "DevIssueType": {
+        "Device malfunction": 401,
+        "User error": 79,
+        "Skin reaction": 6,
+        "Device-related, but not malfunction": 4,
+        "Study staff user error": 1
+      },
+      "DevIssueLocation": {
+        "Home": 432,
+        "Other": 40,
+        "Clinic (outpatient)": 19
+      },
+      "DevIssueFrequency": {
+        "Single Event": 408,
+        "Intermittent": 56,
+        "Continuous": 27
+      },
+      "DevIssueEffect": {
+        "Study device replaced": 263,
+        "No change": 174,
+        "Study device modified/adjusted": 22,
+        "Discontinued temporarily": 19,
+        "Discontinued permanently": 13
+      },
+      "DevIssueAE": {
+        "No": 262,
+        "Yes": 229
+      },
+      "DevIssueAELikely": {
+        "<MISSING>": 229,
+        "Possibly": 105,
+        "Unlikely": 83,
+        "Probably": 28,
+        "Not possible": 19,
+        "Certainly": 15,
+        "Not assessable": 12
+      },
+      "DevIssueUADE": {
+        "No": 479,
+        "Yes": 6,
+        "Uncertain": 6
+      },
+      "DevIssueAELikelyHypo": {
+        "<MISSING>": 437,
+        "1.0": 54
+      },
+      "DevIssueAELikelyHyper": {
+        "<MISSING>": 348,
+        "1.0": 143
+      },
+      "DevIssueAELikelyOth": {
+        "<MISSING>": 483,
+        "1.0": 8
+      }
+    }
+  },
+  "IOBP2DeviceKetone.txt": {
+    "rows": 2696,
+    "patients": 307,
+    "columns": [
+      "RecID",
+      "PtID",
+      "DeviceDtTm",
+      "KetoneVal"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "DeviceDtTm": 0,
+      "KetoneVal": 0
+    },
+    "low_cardinality_values": {}
+  },
+  "IOBP2DexcomTrain.txt": {
+    "rows": 146,
+    "patients": 146,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "PersDexcomG6",
+      "DexcomTrainConfirm"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "PersDexcomG6": 146,
+      "DexcomTrainConfirm": 0
+    },
+    "low_cardinality_values": {
+      "PersDexcomG6": {
+        "<MISSING>": 146
+      },
+      "DexcomTrainConfirm": {
+        "1": 146
+      }
+    }
+  },
+  "IOBP2DiabDKAEvent.txt": {
+    "rows": 290,
+    "patients": 162,
+    "columns": [
+      "RecID",
+      "PtID",
+      "DKAOccurDt",
+      "DKAOccurDtApprox",
+      "DKAOccurDtUnk",
+      "DKAMetCriteria",
+      "GlucLevel",
+      "GlucLevelUnits",
+      "GlucLevelUnk",
+      "KetoneResUnk",
+      "KetoneSerum",
+      "KetoneSerumUnits",
+      "KetoneUrine",
+      "HCO3",
+      "HCO3Unk",
+      "pH",
+      "pHSample",
+      "pHUnk",
+      "BUN",
+      "BUNUnk",
+      "CerebEdema",
+      "EventCauseStdyDev",
+      "EventCauseNonStdy",
+      "DKAOutcome",
+      "SensorWear",
+      "SensorGluc",
+      "SensorGlucUnits",
+      "SensorGlucUnk",
+      "AutoInsDelivWear",
+      "AutoInsDelivMode",
+      "InvFeelSafeToContinue"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "DKAOccurDt": 0,
+      "DKAOccurDtApprox": 280,
+      "DKAOccurDtUnk": 290,
+      "DKAMetCriteria": 0,
+      "GlucLevel": 70,
+      "GlucLevelUnits": 70,
+      "GlucLevelUnk": 220,
+      "KetoneResUnk": 242,
+      "KetoneSerum": 52,
+      "KetoneSerumUnits": 52,
+      "KetoneUrine": 285,
+      "HCO3": 290,
+      "HCO3Unk": 0,
+      "pH": 290,
+      "pHSample": 290,
+      "pHUnk": 0,
+      "BUN": 290,
+      "BUNUnk": 0,
+      "CerebEdema": 0,
+      "EventCauseStdyDev": 49,
+      "EventCauseNonStdy": 0,
+      "DKAOutcome": 0,
+      "SensorWear": 0,
+      "SensorGluc": 59,
+      "SensorGlucUnits": 59,
+      "SensorGlucUnk": 238,
+      "AutoInsDelivWear": 0,
+      "AutoInsDelivMode": 12,
+      "InvFeelSafeToContinue": 242
+    },
+    "low_cardinality_values": {
+      "DKAOccurDtApprox": {
+        "<MISSING>": 280,
+        "1.0": 10
+      },
+      "DKAOccurDtUnk": {
+        "<MISSING>": 290
+      },
+      "DKAMetCriteria": {
+        "No": 263,
+        "Cant deter": 17,
+        "Probably": 8,
+        "Definitely": 2
+      },
+      "GlucLevelUnits": {
+        "mg/dL": 220,
+        "<MISSING>": 70
+      },
+      "GlucLevelUnk": {
+        "<MISSING>": 220,
+        "1.0": 70
+      },
+      "KetoneResUnk": {
+        "<MISSING>": 242,
+        "1.0": 48
+      },
+      "KetoneSerum": {
+        "<MISSING>": 52,
+        "1.1": 23,
+        "1.2": 19,
+        "1.6": 18,
+        "0.1": 17,
+        "1.0": 15,
+        "0.8": 14,
+        "0.6": 13,
+        "0.2": 11,
+        "1.3": 10,
+        "1.4": 9,
+        "1.7": 8,
+        "0.9": 8,
+        "0.3": 7,
+        "1.8": 7,
+        "0.7": 6,
+        "1.9": 6,
+        "2.1": 5,
+        "3.5": 3,
+        "0.4": 3,
+        "0.5": 3,
+        "2.6": 3,
+        "2.4": 3,
+        "2.2": 2,
+        "3.2": 2,
+        "4.4": 2,
+        "3.8": 2,
+        "3.1": 2,
+        "2.0": 2,
+        "4.3": 1,
+        "4.1": 1,
+        "2.3": 1,
+        "5.6": 1,
+        "26.0": 1,
+        "4.9": 1,
+        "3.3": 1,
+        "1.5": 1,
+        "2.9": 1,
+        "0.0": 1,
+        "4.0": 1,
+        "3.0": 1,
+        "2.7": 1,
+        "3.7": 1,
+        "6.1": 1
+      },
+      "KetoneSerumUnits": {
+        "mmol/L": 182,
+        "mg/dL": 56,
+        "<MISSING>": 52
+      },
+      "KetoneUrine": {
+        "<MISSING>": 285,
+        "Small": 2,
+        "Large": 2,
+        "Medium": 1
+      },
+      "HCO3": {
+        "<MISSING>": 290
+      },
+      "HCO3Unk": {
+        "1": 290
+      },
+      "pH": {
+        "<MISSING>": 290
+      },
+      "pHSample": {
+        "<MISSING>": 290
+      },
+      "pHUnk": {
+        "1": 290
+      },
+      "BUN": {
+        "<MISSING>": 290
+      },
+      "BUNUnk": {
+        "1": 290
+      },
+      "CerebEdema": {
+        "No": 197,
+        "Unknown": 93
+      },
+      "EventCauseStdyDev": {
+        "Yes": 200,
+        "<MISSING>": 49,
+        "No": 41
+      },
+      "EventCauseNonStdy": {
+        "No": 193,
+        "Yes": 97
+      },
+      "DKAOutcome": {
+        "Fully recovered": 276,
+        "Other": 13,
+        "Unknown": 1
+      },
+      "SensorWear": {
+        "Yes": 283,
+        "No": 6,
+        "Unknown": 1
+      },
+      "SensorGlucUnits": {
+        "mg/dL": 224,
+        "<MISSING>": 59,
+        "mmol/L": 7
+      },
+      "SensorGlucUnk": {
+        "<MISSING>": 238,
+        "1.0": 52
+      },
+      "AutoInsDelivWear": {
+        "Yes": 278,
+        "No": 12
+      },
+      "AutoInsDelivMode": {
+        "Auto Mode": 270,
+        "<MISSING>": 12,
+        "Manual Mode": 6,
+        "Unknown": 2
+      },
+      "InvFeelSafeToContinue": {
+        "<MISSING>": 242,
+        "Yes": 48
+      }
+    }
+  },
+  "IOBP2DiabHypoEvent.txt": {
+    "rows": 21,
+    "patients": 19,
+    "columns": [
+      "RecID",
+      "PtID",
+      "HypoOccurDt",
+      "HypoOccurDtApprox",
+      "HypoOccurDtUnk",
+      "HypoApproxTm",
+      "GlucMeterCk",
+      "GlucMeterRes",
+      "GlucMeterResUnits",
+      "GlucMeterResUnk",
+      "SensorWear",
+      "SensorGluc",
+      "SensorGlucUnits",
+      "SensorGlucUnk",
+      "HypoSeizure",
+      "HypoLossCons",
+      "HypoReqAssist",
+      "HypoAmbulance",
+      "HypoEMT",
+      "HypoHthCareProv",
+      "GlucGiven",
+      "HospOrER",
+      "HospERTreatLoc",
+      "HospNumDays",
+      "HospNumDaysUnk",
+      "EventCauseStdyDev",
+      "EventCauseNonStdy",
+      "HypoEventOutcome",
+      "AutoInsDelivWear",
+      "AutoInsDelivMode"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "HypoOccurDt": 0,
+      "HypoOccurDtApprox": 17,
+      "HypoOccurDtUnk": 21,
+      "HypoApproxTm": 0,
+      "GlucMeterCk": 0,
+      "GlucMeterRes": 13,
+      "GlucMeterResUnits": 13,
+      "GlucMeterResUnk": 21,
+      "SensorWear": 0,
+      "SensorGluc": 2,
+      "SensorGlucUnits": 2,
+      "SensorGlucUnk": 21,
+      "HypoSeizure": 19,
+      "HypoLossCons": 16,
+      "HypoReqAssist": 2,
+      "HypoAmbulance": 17,
+      "HypoEMT": 19,
+      "HypoHthCareProv": 21,
+      "GlucGiven": 0,
+      "HospOrER": 0,
+      "HospERTreatLoc": 20,
+      "HospNumDays": 21,
+      "HospNumDaysUnk": 21,
+      "EventCauseStdyDev": 0,
+      "EventCauseNonStdy": 0,
+      "HypoEventOutcome": 0,
+      "AutoInsDelivWear": 0,
+      "AutoInsDelivMode": 3
+    },
+    "low_cardinality_values": {
+      "HypoOccurDt": {
+        "9/20/2020": 2,
+        "1/11/2021": 2,
+        "2/19/2021": 1,
+        "1/9/2021": 1,
+        "7/17/2021": 1,
+        "2/1/2021": 1,
+        "6/28/2020": 1,
+        "9/1/2020": 1,
+        "4/21/2021": 1,
+        "10/5/2020": 1,
+        "12/5/2020": 1,
+        "12/17/2020": 1,
+        "7/29/2020": 1,
+        "7/23/2020": 1,
+        "12/3/2020": 1,
+        "5/17/2020": 1,
+        "6/15/2020": 1,
+        "11/13/2020": 1,
+        "11/3/2020": 1
+      },
+      "HypoOccurDtApprox": {
+        "<MISSING>": 17,
+        "1.0": 4
+      },
+      "HypoOccurDtUnk": {
+        "<MISSING>": 21
+      },
+      "HypoApproxTm": {
+        "03:01 - 06:00": 6,
+        "00:01 - 03:00": 4,
+        "18:01 - 21:00": 3,
+        "21:01 - 00:00": 2,
+        "09:01 - 12:00": 2,
+        "Unknown": 1,
+        "12:01 - 15:00": 1,
+        "15:01 - 18:00": 1,
+        "06:01 - 09:00": 1
+      },
+      "GlucMeterCk": {
+        "No": 12,
+        "Yes": 8,
+        "Unknown": 1
+      },
+      "GlucMeterRes": {
+        "<MISSING>": 13,
+        "49.0": 1,
+        "40.0": 1,
+        "44.0": 1,
+        "34.0": 1,
+        "45.0": 1,
+        "55.0": 1,
+        "38.0": 1,
+        "28.0": 1
+      },
+      "GlucMeterResUnits": {
+        "<MISSING>": 13,
+        "mg/dL": 8
+      },
+      "GlucMeterResUnk": {
+        "<MISSING>": 21
+      },
+      "SensorWear": {
+        "Yes": 19,
+        "No": 2
+      },
+      "SensorGluc": {
+        "39": 10,
+        "43": 2,
+        "<MISSING>": 2,
+        "55": 1,
+        "47": 1,
+        "in the 30s": 1,
+        "46": 1,
+        "51": 1,
+        "42": 1,
+        "44": 1
+      },
+      "SensorGlucUnits": {
+        "mg/dL": 19,
+        "<MISSING>": 2
+      },
+      "SensorGlucUnk": {
+        "<MISSING>": 21
+      },
+      "HypoSeizure": {
+        "<MISSING>": 19,
+        "1.0": 2
+      },
+      "HypoLossCons": {
+        "<MISSING>": 16,
+        "1.0": 5
+      },
+      "HypoReqAssist": {
+        "1.0": 19,
+        "<MISSING>": 2
+      },
+      "HypoAmbulance": {
+        "<MISSING>": 17,
+        "1.0": 4
+      },
+      "HypoEMT": {
+        "<MISSING>": 19,
+        "1.0": 2
+      },
+      "HypoHthCareProv": {
+        "<MISSING>": 21
+      },
+      "GlucGiven": {
+        "No": 16,
+        "Yes": 4,
+        "Unknown": 1
+      },
+      "HospOrER": {
+        "No": 20,
+        "Yes": 1
+      },
+      "HospERTreatLoc": {
+        "<MISSING>": 20,
+        "Emergency Room only": 1
+      },
+      "HospNumDays": {
+        "<MISSING>": 21
+      },
+      "HospNumDaysUnk": {
+        "<MISSING>": 21
+      },
+      "EventCauseStdyDev": {
+        "No": 13,
+        "Yes": 8
+      },
+      "EventCauseNonStdy": {
+        "Yes": 13,
+        "No": 8
+      },
+      "HypoEventOutcome": {
+        "Fully recovered": 21
+      },
+      "AutoInsDelivWear": {
+        "Yes": 18,
+        "No": 3
+      },
+      "AutoInsDelivMode": {
+        "Auto Mode": 17,
+        "<MISSING>": 3,
+        "Manual Mode": 1
+      }
+    }
+  },
+  "IOBP2DiabLocalHbA1c.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "HbA1cNotDone",
+      "HbA1cTestDt",
+      "HbA1cTestMeth",
+      "HbA1cTestRes"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "HbA1cNotDone": 237,
+      "HbA1cTestDt": 203,
+      "HbA1cTestMeth": 203,
+      "HbA1cTestRes": 203
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 440
+      },
+      "HbA1cNotDone": {
+        "<MISSING>": 237,
+        "1.0": 203
+      },
+      "HbA1cTestMeth": {
+        "<MISSING>": 203,
+        "DCA point of care": 126,
+        "Lab": 81,
+        "Afinion point of care": 30
+      }
+    }
+  },
+  "IOBP2DiabMedHistory.txt": {
+    "rows": 3091,
+    "patients": 439,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "SHSinceLastVis",
+      "DKASinceLastVis",
+      "OthAESinceLastVis",
+      "MedCondSinceLastVis",
+      "DevProbSinceLastVis",
+      "MedSinceLastVis",
+      "InsulinSinceLastVis"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "SHSinceLastVis": 0,
+      "DKASinceLastVis": 0,
+      "OthAESinceLastVis": 0,
+      "MedCondSinceLastVis": 0,
+      "DevProbSinceLastVis": 0,
+      "MedSinceLastVis": 0,
+      "InsulinSinceLastVis": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Week 2": 435,
+        "Week 13": 435,
+        "Day 2 Call": 434,
+        "Week 6": 434,
+        "Week 10": 430,
+        "Week 1 Call": 427,
+        "End of Transition": 290,
+        "Run-In Review": 146,
+        "BG Run iLet Day 2 Call": 49,
+        "Repeat Run-In Review": 11
+      },
+      "SHSinceLastVis": {
+        "No": 3073,
+        "Yes": 18
+      },
+      "DKASinceLastVis": {
+        "No": 2983,
+        "Yes": 108
+      },
+      "OthAESinceLastVis": {
+        "No": 3015,
+        "Yes": 76
+      },
+      "MedCondSinceLastVis": {
+        "No": 3021,
+        "Yes": 70
+      },
+      "DevProbSinceLastVis": {
+        "No": 2899,
+        "Yes": 192
+      },
+      "MedSinceLastVis": {
+        "No": 2916,
+        "Yes": 175
+      },
+      "InsulinSinceLastVis": {
+        "No": 3048,
+        "Yes": 43
+      }
+    }
+  },
+  "IOBP2DiabScreening.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Sex",
+      "Ethnicity",
+      "Race",
+      "DiagDt",
+      "DiagDtApprox",
+      "DiagDtUnk",
+      "DiagAge",
+      "DiagAgeApprox",
+      "DiagAgeUnk",
+      "SHMostRecent",
+      "SHNumLast12Months",
+      "SHSeizComa",
+      "SHSeizComaLast12Months",
+      "DKAMostRecent",
+      "DKANumLast12Months",
+      "InsModPump",
+      "InsModInjections",
+      "InsModInhaled",
+      "InsModNone",
+      "PumpUse",
+      "PumpType",
+      "PumpTypeUnk",
+      "UnitsInsTotal",
+      "UnitsInsUnk",
+      "UnitsInsBasilOrLongAct",
+      "UnitsInsBasilOrLongActUnk",
+      "NumPumpBolusOrShortAct",
+      "NumPumpBolusOrShortActUnk",
+      "BGTestAvgNumMeter",
+      "BGTestMetDatNotAvail",
+      "BGTestAvgNumPtRep",
+      "BGTestPtRepNotAvail",
+      "CGMUseStat",
+      "CGMUseDur",
+      "CGMUseDevice",
+      "CGMUseLast1Month",
+      "CGMUseLast1MonthUnk",
+      "PtCurrMed",
+      "SHNumEverB",
+      "SHMostRecentB",
+      "SHLast12MonthsB",
+      "SHSeizComaNumB",
+      "SHSeizComaLast12MonthsB",
+      "DKANumEverB",
+      "DKAMostRecentB",
+      "DKALast12MonthsB",
+      "BGTestMeterFreq",
+      "BGTestPtRepFreq"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Sex": 0,
+      "Ethnicity": 0,
+      "Race": 0,
+      "DiagDt": 417,
+      "DiagDtApprox": 439,
+      "DiagDtUnk": 440,
+      "DiagAge": 0,
+      "DiagAgeApprox": 379,
+      "DiagAgeUnk": 440,
+      "SHMostRecent": 440,
+      "SHNumLast12Months": 440,
+      "SHSeizComa": 440,
+      "SHSeizComaLast12Months": 440,
+      "DKAMostRecent": 440,
+      "DKANumLast12Months": 440,
+      "InsModPump": 149,
+      "InsModInjections": 291,
+      "InsModInhaled": 438,
+      "InsModNone": 440,
+      "PumpUse": 149,
+      "PumpType": 149,
+      "PumpTypeUnk": 440,
+      "UnitsInsTotal": 7,
+      "UnitsInsUnk": 433,
+      "UnitsInsBasilOrLongAct": 7,
+      "UnitsInsBasilOrLongActUnk": 433,
+      "NumPumpBolusOrShortAct": 7,
+      "NumPumpBolusOrShortActUnk": 433,
+      "BGTestAvgNumMeter": 364,
+      "BGTestMetDatNotAvail": 76,
+      "BGTestAvgNumPtRep": 120,
+      "BGTestPtRepNotAvail": 320,
+      "CGMUseStat": 0,
+      "CGMUseDur": 57,
+      "CGMUseDevice": 57,
+      "CGMUseLast1Month": 61,
+      "CGMUseLast1MonthUnk": 436,
+      "PtCurrMed": 0,
+      "SHNumEverB": 0,
+      "SHMostRecentB": 278,
+      "SHLast12MonthsB": 422,
+      "SHSeizComaNumB": 278,
+      "SHSeizComaLast12MonthsB": 324,
+      "DKANumEverB": 0,
+      "DKAMostRecentB": 255,
+      "DKALast12MonthsB": 429,
+      "BGTestMeterFreq": 364,
+      "BGTestPtRepFreq": 120
+    },
+    "low_cardinality_values": {
+      "Sex": {
+        "M": 230,
+        "F": 210
+      },
+      "Ethnicity": {
+        "Not Hispanic or Latino": 399,
+        "Hispanic or Latino": 40,
+        "Unknown/not reported": 1
+      },
+      "Race": {
+        "White": 365,
+        "Black/African American": 46,
+        "More than one race": 15,
+        "Asian": 6,
+        "American Indian/Alaskan Native": 4,
+        "Unknown/not reported": 4
+      },
+      "DiagDt": {
+        "<MISSING>": 417,
+        "3/20/2017": 1,
+        "6/19/2019": 1,
+        "11/11/2018": 1,
+        "8/2/2018": 1,
+        "9/29/2018": 1,
+        "12/9/2017": 1,
+        "7/16/2018": 1,
+        "10/23/2018": 1,
+        "1/3/2018": 1,
+        "7/19/2019": 1,
+        "7/18/2018": 1,
+        "11/29/2018": 1,
+        "9/24/2018": 1,
+        "2/27/2018": 1,
+        "12/1/2018": 1,
+        "11/4/2017": 1,
+        "11/17/2017": 1,
+        "11/10/2018": 1,
+        "2/24/2018": 1,
+        "11/13/2018": 1,
+        "1/18/2019": 1,
+        "4/15/2018": 1,
+        "10/2/2019": 1
+      },
+      "DiagDtApprox": {
+        "<MISSING>": 439,
+        "1.0": 1
+      },
+      "DiagDtUnk": {
+        "<MISSING>": 440
+      },
+      "DiagAgeApprox": {
+        "<MISSING>": 379,
+        "1.0": 61
+      },
+      "DiagAgeUnk": {
+        "<MISSING>": 440
+      },
+      "SHMostRecent": {
+        "<MISSING>": 440
+      },
+      "SHNumLast12Months": {
+        "<MISSING>": 440
+      },
+      "SHSeizComa": {
+        "<MISSING>": 440
+      },
+      "SHSeizComaLast12Months": {
+        "<MISSING>": 440
+      },
+      "DKAMostRecent": {
+        "<MISSING>": 440
+      },
+      "DKANumLast12Months": {
+        "<MISSING>": 440
+      },
+      "InsModPump": {
+        "1.0": 291,
+        "<MISSING>": 149
+      },
+      "InsModInjections": {
+        "<MISSING>": 291,
+        "1.0": 149
+      },
+      "InsModInhaled": {
+        "<MISSING>": 438,
+        "1.0": 2
+      },
+      "InsModNone": {
+        "<MISSING>": 440
+      },
+      "PumpUse": {
+        ">= 5 years": 182,
+        "<MISSING>": 149,
+        "2-<5 years": 70,
+        "1-<2 years": 23,
+        "6 months-<1 year": 13,
+        "3-<6 months": 3
+      },
+      "PumpType": {
+        "<MISSING>": 149,
+        "Tandem t:slim X2 with Control:IQ": 80,
+        "Insulet OmniPod Insulin Management System": 71,
+        "Medtronic 670G": 70,
+        "Tandem t:slim X2 with Basal:IQ": 18,
+        "Tandem t:slim": 15,
+        "Medtronic 630G": 11,
+        "Tandem t:slim X2": 9,
+        "Medtronic Paradigm 723 (Revel)": 5,
+        "Medtronic 551 (530G)": 3,
+        "Tandem t:flex": 2,
+        "Medtronic 751 (530G)": 2,
+        "Other": 2,
+        "Animas One Touch Ping": 1,
+        "Medtronic 507": 1,
+        "MiniMed 770G": 1
+      },
+      "PumpTypeUnk": {
+        "<MISSING>": 440
+      },
+      "UnitsInsUnk": {
+        "<MISSING>": 433,
+        "1.0": 7
+      },
+      "UnitsInsBasilOrLongActUnk": {
+        "<MISSING>": 433,
+        "1.0": 7
+      },
+      "NumPumpBolusOrShortAct": {
+        "4.0": 119,
+        "5.0": 99,
+        "3.0": 73,
+        "6.0": 54,
+        "7.0": 21,
+        "8.0": 21,
+        "10.0": 12,
+        "2.0": 7,
+        "<MISSING>": 7,
+        "9.0": 5,
+        "1.0": 4,
+        "11.0": 4,
+        "15.0": 4,
+        "12.0": 2,
+        "20.0": 1,
+        "14.0": 1,
+        "23.0": 1,
+        "18.0": 1,
+        "0.0": 1,
+        "16.0": 1,
+        "45.0": 1,
+        "13.0": 1
+      },
+      "NumPumpBolusOrShortActUnk": {
+        "<MISSING>": 433,
+        "1.0": 7
+      },
+      "BGTestAvgNumMeter": {
+        "<MISSING>": 364,
+        "0.0": 40,
+        "3.0": 8,
+        "4.0": 8,
+        "2.0": 5,
+        "1.0": 4,
+        "5.0": 2,
+        "10.0": 2,
+        "1.4": 1,
+        "6.0": 1,
+        "3.1": 1,
+        "3.7": 1,
+        "30.0": 1,
+        "9.0": 1,
+        "3.6": 1
+      },
+      "BGTestMetDatNotAvail": {
+        "1.0": 364,
+        "<MISSING>": 76
+      },
+      "BGTestAvgNumPtRep": {
+        "0.0": 128,
+        "<MISSING>": 120,
+        "4.0": 43,
+        "3.0": 41,
+        "1.0": 38,
+        "2.0": 20,
+        "5.0": 17,
+        "6.0": 14,
+        "7.0": 4,
+        "8.0": 4,
+        "10.0": 3,
+        "1.5": 1,
+        "9.3": 1,
+        "15.0": 1,
+        "3.1": 1,
+        "2.5": 1,
+        "9.0": 1,
+        "21.0": 1,
+        "17.0": 1
+      },
+      "BGTestPtRepNotAvail": {
+        "<MISSING>": 320,
+        "1.0": 120
+      },
+      "CGMUseStat": {
+        "Current": 383,
+        "In past, but not current": 33,
+        "Never": 24
+      },
+      "CGMUseDur": {
+        "2-<5 years": 156,
+        ">= 5 years": 124,
+        "1-<2 years": 67,
+        "<MISSING>": 57,
+        "6 months-<1 year": 27,
+        "3-<6 months": 6,
+        "<3 months": 3
+      },
+      "CGMUseDevice": {
+        "Dexcom": 323,
+        "<MISSING>": 57,
+        "Medtronic": 42,
+        "Abbott": 17,
+        "Senseonics": 1
+      },
+      "CGMUseLast1Month": {
+        "30.0": 302,
+        "<MISSING>": 61,
+        "28.0": 18,
+        "29.0": 9,
+        "20.0": 7,
+        "27.0": 7,
+        "14.0": 6,
+        "25.0": 6,
+        "10.0": 3,
+        "15.0": 3,
+        "24.0": 3,
+        "2.0": 2,
+        "18.0": 2,
+        "22.0": 2,
+        "12.0": 2,
+        "7.0": 2,
+        "23.0": 1,
+        "21.0": 1,
+        "5.0": 1,
+        "26.0": 1,
+        "8.0": 1
+      },
+      "CGMUseLast1MonthUnk": {
+        "<MISSING>": 436,
+        "1.0": 4
+      },
+      "PtCurrMed": {
+        "Yes": 310,
+        "No": 130
+      },
+      "SHNumEverB": {
+        "0": 278,
+        "1": 63,
+        ">10": 27,
+        "2": 26,
+        "5-10": 21,
+        "3": 13,
+        "4": 12
+      },
+      "SHMostRecentB": {
+        "<MISSING>": 278,
+        ">=10 years ago": 62,
+        "1-<5 years ago": 51,
+        "5-<10 years ago": 31,
+        "< 3 months ago": 8,
+        "6-<12 months ago": 5,
+        "3-<6 months ago": 5
+      },
+      "SHLast12MonthsB": {
+        "<MISSING>": 422,
+        "1": 8,
+        "3": 4,
+        ">10": 3,
+        "2": 2,
+        "5-10": 1
+      },
+      "SHSeizComaNumB": {
+        "<MISSING>": 278,
+        "0": 57,
+        "1": 54,
+        "2": 18,
+        "5-10": 12,
+        ">10": 11,
+        "4": 7,
+        "3": 3
+      },
+      "SHSeizComaLast12MonthsB": {
+        "<MISSING>": 324,
+        "0.0": 110,
+        "1.0": 4,
+        "3.0": 1,
+        "2.0": 1
+      },
+      "DKANumEverB": {
+        "0": 255,
+        "1": 113,
+        "2": 44,
+        "3": 11,
+        "4": 7,
+        "5-10": 6,
+        ">10": 4
+      },
+      "DKAMostRecentB": {
+        "<MISSING>": 255,
+        ">=10 years ago": 66,
+        "1-<5 years ago": 60,
+        "5-<10 years ago": 48,
+        "6-<12 months ago": 6,
+        "< 3 months ago": 3,
+        "3-<6 months ago": 2
+      },
+      "DKALast12MonthsB": {
+        "<MISSING>": 429,
+        "1": 9,
+        "5-10": 1,
+        "2": 1
+      },
+      "BGTestMeterFreq": {
+        "<MISSING>": 364,
+        "per day": 72,
+        "per week": 4
+      },
+      "BGTestPtRepFreq": {
+        "per day": 250,
+        "<MISSING>": 120,
+        "per week": 70
+      }
+    }
+  },
+  "IOBP2DiabSocioEcon.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "EducationLevel",
+      "AnnualIncome",
+      "InsPrivate",
+      "InsMedicare",
+      "InsMediGap",
+      "InsMedicaid",
+      "InsSCHIP",
+      "InsMilitary",
+      "InsIndian",
+      "InsState",
+      "InsOtherGov",
+      "InsSingleService",
+      "InsNoCoverage",
+      "InsUnk",
+      "InsNoAns"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "EducationLevel": 0,
+      "AnnualIncome": 0,
+      "InsPrivate": 73,
+      "InsMedicare": 413,
+      "InsMediGap": 436,
+      "InsMedicaid": 405,
+      "InsSCHIP": 433,
+      "InsMilitary": 434,
+      "InsIndian": 440,
+      "InsState": 436,
+      "InsOtherGov": 435,
+      "InsSingleService": 425,
+      "InsNoCoverage": 437,
+      "InsUnk": 439,
+      "InsNoAns": 436
+    },
+    "low_cardinality_values": {
+      "EducationLevel": {
+        "Bachelor's Degree (BS,BA,AB)": 119,
+        "Master's Degree (MA, MS, MSW, MBA, MPH)": 63,
+        "Some college but no degree": 58,
+        "High school graduate/diploma/GED": 51,
+        "College Graduate (Bachelor's Degree or Equivalent)": 43,
+        "Associate Degree (AA)": 41,
+        "Advanced Degree (e.g. Masters, PhD, MD)": 29,
+        "Professional Degree (MD, DDS, DVM, LLB, JD)": 12,
+        "Doctorate Degree (PhD, EdD)": 11,
+        "Does not wish to provide": 4,
+        "Technical/Vocational": 4,
+        "Unknown": 3,
+        "Less than High School": 2
+      },
+      "AnnualIncome": {
+        "$100,000 to less than $200,000": 143,
+        "$200,000 or more": 86,
+        "$75,000 to less than $100,000": 62,
+        "$50,000 to less than $75,000": 49,
+        "Does not wish to provide": 38,
+        "$25,000 to less than $35,000": 20,
+        "$35,000 to less than $50,000": 19,
+        "Unknown": 14,
+        "Less than $25,000": 9
+      },
+      "InsPrivate": {
+        "1.0": 367,
+        "<MISSING>": 73
+      },
+      "InsMedicare": {
+        "<MISSING>": 413,
+        "1.0": 27
+      },
+      "InsMediGap": {
+        "<MISSING>": 436,
+        "1.0": 4
+      },
+      "InsMedicaid": {
+        "<MISSING>": 405,
+        "1.0": 35
+      },
+      "InsSCHIP": {
+        "<MISSING>": 433,
+        "1.0": 7
+      },
+      "InsMilitary": {
+        "<MISSING>": 434,
+        "1.0": 6
+      },
+      "InsIndian": {
+        "<MISSING>": 440
+      },
+      "InsState": {
+        "<MISSING>": 436,
+        "1.0": 4
+      },
+      "InsOtherGov": {
+        "<MISSING>": 435,
+        "1.0": 5
+      },
+      "InsSingleService": {
+        "<MISSING>": 425,
+        "1.0": 15
+      },
+      "InsNoCoverage": {
+        "<MISSING>": 437,
+        "1.0": 3
+      },
+      "InsUnk": {
+        "<MISSING>": 439,
+        "1.0": 1
+      },
+      "InsNoAns": {
+        "<MISSING>": 436,
+        "1.0": 4
+      }
+    }
+  },
+  "IOBP2DiabTreatment.txt": {
+    "rows": 496,
+    "patients": 175,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "InsModPump",
+      "InsModInjections",
+      "InsModInhaled",
+      "InsModNone",
+      "PumpUse",
+      "PumpType",
+      "PumpTypeUnk",
+      "UnitsInsTotal",
+      "UnitsInsUnk",
+      "UnitsInsBasilOrLongAct",
+      "UnitsInsBasilOrLongActUnk",
+      "NumPumpBolusOrShortAct",
+      "NumPumpBolusOrShortActUnk",
+      "BGTestAvgNumMeter",
+      "BGTestMetDatNotAvail",
+      "BGTestAvgNumPtRep",
+      "BGTestPtRepNotAvail",
+      "BGTestMeterFreq",
+      "BGTestPtRepFreq"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "InsModPump": 157,
+      "InsModInjections": 339,
+      "InsModInhaled": 495,
+      "InsModNone": 496,
+      "PumpUse": 496,
+      "PumpType": 158,
+      "PumpTypeUnk": 495,
+      "UnitsInsTotal": 11,
+      "UnitsInsUnk": 485,
+      "UnitsInsBasilOrLongAct": 32,
+      "UnitsInsBasilOrLongActUnk": 464,
+      "NumPumpBolusOrShortAct": 14,
+      "NumPumpBolusOrShortActUnk": 482,
+      "BGTestAvgNumMeter": 386,
+      "BGTestMetDatNotAvail": 110,
+      "BGTestAvgNumPtRep": 124,
+      "BGTestPtRepNotAvail": 372,
+      "BGTestMeterFreq": 386,
+      "BGTestPtRepFreq": 124
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Week 2": 175,
+        "Week 6": 107,
+        "Week 10": 107,
+        "Week 13": 107
+      },
+      "InsModPump": {
+        "1.0": 339,
+        "<MISSING>": 157
+      },
+      "InsModInjections": {
+        "<MISSING>": 339,
+        "1.0": 157
+      },
+      "InsModInhaled": {
+        "<MISSING>": 495,
+        "1.0": 1
+      },
+      "InsModNone": {
+        "<MISSING>": 496
+      },
+      "PumpUse": {
+        "<MISSING>": 496
+      },
+      "PumpType": {
+        "<MISSING>": 158,
+        "Tandem t:slim X2 with Control:IQ": 71,
+        "Insulet OmniPod Insulin Management System": 71,
+        "Beta Bionics Gen 4 iLet": 60,
+        "Medtronic 670G": 54,
+        "Tandem t:slim X2 with Basal:IQ": 28,
+        "Tandem t:slim X2": 12,
+        "Tandem t:slim": 12,
+        "MiniMed 770G": 10,
+        "Other": 7,
+        "Medtronic 630G": 4,
+        "Medtronic 551 (530G)": 3,
+        "Medtronic Paradigm 512": 2,
+        "Medtronic 751 (530G)": 2,
+        "Medtronic 640G": 1,
+        "Medtronic Paradigm 723 (Revel)": 1
+      },
+      "PumpTypeUnk": {
+        "<MISSING>": 495,
+        "1.0": 1
+      },
+      "UnitsInsUnk": {
+        "<MISSING>": 485,
+        "1.0": 11
+      },
+      "UnitsInsBasilOrLongActUnk": {
+        "<MISSING>": 464,
+        "1.0": 32
+      },
+      "NumPumpBolusOrShortAct": {
+        "4.0": 122,
+        "5.0": 101,
+        "3.0": 83,
+        "6.0": 58,
+        "7.0": 36,
+        "2.0": 23,
+        "8.0": 18,
+        "<MISSING>": 14,
+        "9.0": 12,
+        "12.0": 8,
+        "11.0": 6,
+        "10.0": 6,
+        "1.0": 2,
+        "35.0": 1,
+        "21.0": 1,
+        "19.0": 1,
+        "32.0": 1,
+        "15.0": 1,
+        "28.0": 1,
+        "20.0": 1
+      },
+      "NumPumpBolusOrShortActUnk": {
+        "<MISSING>": 482,
+        "1.0": 14
+      },
+      "BGTestAvgNumMeter": {
+        "<MISSING>": 386,
+        "0.0": 69,
+        "1.0": 14,
+        "2.0": 7,
+        "3.0": 6,
+        "8.0": 3,
+        "7.0": 3,
+        "14.0": 2,
+        "6.0": 2,
+        "15.0": 1,
+        "4.0": 1,
+        "30.0": 1,
+        "0.4": 1
+      },
+      "BGTestMetDatNotAvail": {
+        "1.0": 386,
+        "<MISSING>": 110
+      },
+      "BGTestAvgNumPtRep": {
+        "0.0": 166,
+        "<MISSING>": 124,
+        "1.0": 92,
+        "2.0": 39,
+        "3.0": 24,
+        "4.0": 15,
+        "6.0": 9,
+        "5.0": 7,
+        "8.0": 6,
+        "7.0": 3,
+        "10.0": 2,
+        "15.0": 2,
+        "9.0": 2,
+        "20.0": 1,
+        "5.3": 1,
+        "3.7": 1,
+        "12.0": 1,
+        "13.0": 1
+      },
+      "BGTestPtRepNotAvail": {
+        "<MISSING>": 372,
+        "1.0": 124
+      },
+      "BGTestMeterFreq": {
+        "<MISSING>": 386,
+        "per day": 68,
+        "per week": 42
+      },
+      "BGTestPtRepFreq": {
+        "per day": 197,
+        "per week": 175,
+        "<MISSING>": 124
+      }
+    }
+  },
+  "IOBP2DiabUnschedContact.txt": {
+    "rows": 897,
+    "patients": 301,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "ContType",
+      "ContReasDevTrain",
+      "ContReasProtTrain",
+      "ContReasDiabMgmt",
+      "ContReasAE",
+      "ContReasDevIssue",
+      "ContReasSupplies",
+      "ContReasOth",
+      "ContPersPartic",
+      "ContPersParent",
+      "ContPersSpouse",
+      "ContPersOth"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "ContType": 0,
+      "ContReasDevTrain": 811,
+      "ContReasProtTrain": 853,
+      "ContReasDiabMgmt": 652,
+      "ContReasAE": 774,
+      "ContReasDevIssue": 656,
+      "ContReasSupplies": 774,
+      "ContReasOth": 660,
+      "ContPersPartic": 272,
+      "ContPersParent": 561,
+      "ContPersSpouse": 896,
+      "ContPersOth": 886
+    },
+    "low_cardinality_values": {
+      "ContType": {
+        "Phone call": 564,
+        "Clinic visit": 115,
+        "Email": 108,
+        "Text": 79,
+        "Video chat/Skype": 21,
+        "Home visit": 10
+      },
+      "ContReasDevTrain": {
+        "<MISSING>": 811,
+        "1.0": 86
+      },
+      "ContReasProtTrain": {
+        "<MISSING>": 853,
+        "1.0": 44
+      },
+      "ContReasDiabMgmt": {
+        "<MISSING>": 652,
+        "1.0": 245
+      },
+      "ContReasAE": {
+        "<MISSING>": 774,
+        "1.0": 123
+      },
+      "ContReasDevIssue": {
+        "<MISSING>": 656,
+        "1.0": 241
+      },
+      "ContReasSupplies": {
+        "<MISSING>": 774,
+        "1.0": 123
+      },
+      "ContReasOth": {
+        "<MISSING>": 660,
+        "1.0": 237
+      },
+      "ContPersPartic": {
+        "1.0": 625,
+        "<MISSING>": 272
+      },
+      "ContPersParent": {
+        "<MISSING>": 561,
+        "1.0": 336
+      },
+      "ContPersSpouse": {
+        "<MISSING>": 896,
+        "1.0": 1
+      },
+      "ContPersOth": {
+        "<MISSING>": 886,
+        "1.0": 11
+      }
+    }
+  },
+  "IOBP2DiscontiLet.txt": {
+    "rows": 30,
+    "patients": 30,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ILetDiscDt",
+      "ILetDiscHr",
+      "ILetDiscMin",
+      "ILetDiscAMPM",
+      "ILetTmDiscApprox",
+      "ILetTmDiscUnk"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ILetDiscDt": 0,
+      "ILetDiscHr": 3,
+      "ILetDiscMin": 3,
+      "ILetDiscAMPM": 3,
+      "ILetTmDiscApprox": 14,
+      "ILetTmDiscUnk": 27
+    },
+    "low_cardinality_values": {
+      "ILetDiscDt": {
+        "10/11/2020": 1,
+        "1/22/2021": 1,
+        "6/5/2021": 1,
+        "12/22/2020": 1,
+        "7/5/2021": 1,
+        "11/9/2020": 1,
+        "8/11/2020": 1,
+        "5/24/2021": 1,
+        "10/25/2020": 1,
+        "2/4/2021": 1,
+        "1/8/2021": 1,
+        "9/21/2020": 1,
+        "8/20/2020": 1,
+        "9/12/2020": 1,
+        "7/18/2021": 1,
+        "4/7/2021": 1,
+        "10/7/2020": 1,
+        "8/27/2020": 1,
+        "9/10/2020": 1,
+        "5/9/2021": 1,
+        "9/14/2020": 1,
+        "2/21/2021": 1,
+        "9/1/2020": 1,
+        "6/1/2021": 1,
+        "10/19/2020": 1,
+        "2/19/2021": 1,
+        "9/24/2020": 1,
+        "1/28/2021": 1,
+        "5/17/2020": 1,
+        "12/4/2020": 1
+      },
+      "ILetDiscHr": {
+        "6.0": 4,
+        "11.0": 4,
+        "3.0": 3,
+        "12.0": 3,
+        "10.0": 3,
+        "4.0": 3,
+        "<MISSING>": 3,
+        "8.0": 2,
+        "1.0": 2,
+        "9.0": 1,
+        "2.0": 1,
+        "5.0": 1
+      },
+      "ILetDiscMin": {
+        "0.0": 14,
+        "30.0": 3,
+        "<MISSING>": 3,
+        "38.0": 2,
+        "45.0": 2,
+        "58.0": 1,
+        "41.0": 1,
+        "15.0": 1,
+        "55.0": 1,
+        "40.0": 1,
+        "20.0": 1
+      },
+      "ILetDiscAMPM": {
+        "PM": 16,
+        "AM": 11,
+        "<MISSING>": 3
+      },
+      "ILetTmDiscApprox": {
+        "1.0": 16,
+        "<MISSING>": 14
+      },
+      "ILetTmDiscUnk": {
+        "<MISSING>": 27,
+        "1.0": 3
+      }
+    }
+  },
+  "IOBP2EligConfirm.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "EligConfirm"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "EligConfirm": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Randomization": 440
+      },
+      "EligConfirm": {
+        "1": 440
+      }
+    }
+  },
+  "IOBP2Eligibility.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "EligNoNewNonInsAgent",
+      "EligParentGuardKnowSH",
+      "EligPtSafeUseiLet",
+      "EligDiscGLP1Agonist",
+      "ExclAbsUnabInformCons",
+      "ExclAbsUnabComplStdyProc",
+      "ExclAbsUnabSpeakReadEng",
+      "ExclAbsChngDiabRegimen",
+      "ExclAbsUseApidra",
+      "ExclAbsOthDiabTrial",
+      "ExclAbsBetaBioRelated",
+      "EligSrcT1DIns1Yr",
+      "EligSrcDiabRegOver3Mon",
+      "EligSrcAge6OrOver",
+      "EligSrcCGMOrBGMinUse",
+      "EligSrcNotPregBreastfd",
+      "EligSrceGFR",
+      "ExclAbsNonFDALOOP",
+      "ExclAbsHemoglob",
+      "ExclAbsSFPancr",
+      "ExclAbsElectricImplant",
+      "ExclAbsAdhesAllergy",
+      "ExclAbsSGLT2Inhib",
+      "ExclAbsRenFailDialys",
+      "ExclAbsMedCond"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "EligNoNewNonInsAgent": 0,
+      "EligParentGuardKnowSH": 0,
+      "EligPtSafeUseiLet": 0,
+      "EligDiscGLP1Agonist": 0,
+      "ExclAbsUnabInformCons": 0,
+      "ExclAbsUnabComplStdyProc": 0,
+      "ExclAbsUnabSpeakReadEng": 0,
+      "ExclAbsChngDiabRegimen": 0,
+      "ExclAbsUseApidra": 0,
+      "ExclAbsOthDiabTrial": 0,
+      "ExclAbsBetaBioRelated": 0,
+      "EligSrcT1DIns1Yr": 0,
+      "EligSrcDiabRegOver3Mon": 0,
+      "EligSrcAge6OrOver": 0,
+      "EligSrcCGMOrBGMinUse": 0,
+      "EligSrcNotPregBreastfd": 0,
+      "EligSrceGFR": 0,
+      "ExclAbsNonFDALOOP": 0,
+      "ExclAbsHemoglob": 0,
+      "ExclAbsSFPancr": 0,
+      "ExclAbsElectricImplant": 0,
+      "ExclAbsAdhesAllergy": 0,
+      "ExclAbsSGLT2Inhib": 0,
+      "ExclAbsRenFailDialys": 0,
+      "ExclAbsMedCond": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 440
+      },
+      "EligNoNewNonInsAgent": {
+        "1": 440
+      },
+      "EligParentGuardKnowSH": {
+        "1": 440
+      },
+      "EligPtSafeUseiLet": {
+        "1": 440
+      },
+      "EligDiscGLP1Agonist": {
+        "1": 440
+      },
+      "ExclAbsUnabInformCons": {
+        "1": 440
+      },
+      "ExclAbsUnabComplStdyProc": {
+        "1": 440
+      },
+      "ExclAbsUnabSpeakReadEng": {
+        "1": 440
+      },
+      "ExclAbsChngDiabRegimen": {
+        "1": 440
+      },
+      "ExclAbsUseApidra": {
+        "1": 440
+      },
+      "ExclAbsOthDiabTrial": {
+        "1": 440
+      },
+      "ExclAbsBetaBioRelated": {
+        "1": 440
+      },
+      "EligSrcT1DIns1Yr": {
+        "Medical record": 420,
+        "Solely participant/LAR report": 15,
+        "Investigator judgment": 5
+      },
+      "EligSrcDiabRegOver3Mon": {
+        "Medical record": 397,
+        "Investigator judgment": 22,
+        "Solely participant/LAR report": 21
+      },
+      "EligSrcAge6OrOver": {
+        "1": 440
+      },
+      "EligSrcCGMOrBGMinUse": {
+        "Medical record": 376,
+        "Investigator judgment": 34,
+        "Solely participant/LAR report": 30
+      },
+      "EligSrcNotPregBreastfd": {
+        "1": 440
+      },
+      "EligSrceGFR": {
+        "1": 440
+      },
+      "ExclAbsNonFDALOOP": {
+        "1": 440
+      },
+      "ExclAbsHemoglob": {
+        "1": 440
+      },
+      "ExclAbsSFPancr": {
+        "1": 440
+      },
+      "ExclAbsElectricImplant": {
+        "1": 440
+      },
+      "ExclAbsAdhesAllergy": {
+        "1": 440
+      },
+      "ExclAbsSGLT2Inhib": {
+        "1": 440
+      },
+      "ExclAbsRenFailDialys": {
+        "1": 440
+      },
+      "ExclAbsMedCond": {
+        "1": 440
+      }
+    }
+  },
+  "IOBP2ExtensionStat.txt": {
+    "rows": 107,
+    "patients": 107,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "ContToExtension"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "ContToExtension": 0
+    },
+    "low_cardinality_values": {
+      "ContToExtension": {
+        "Yes": 90,
+        "No": 17
+      }
+    }
+  },
+  "IOBP2HeightWeight.txt": {
+    "rows": 2188,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "Weight",
+      "WeightUnits",
+      "WeightUnk",
+      "WeightAssessBy",
+      "WeightAssessDt",
+      "Height",
+      "HeightUnits",
+      "HeightUnk",
+      "HeightAssessBy",
+      "HeightAssessDt"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "Weight": 3,
+      "WeightUnits": 3,
+      "WeightUnk": 2186,
+      "WeightAssessBy": 3,
+      "WeightAssessDt": 3,
+      "Height": 48,
+      "HeightUnits": 48,
+      "HeightUnk": 2141,
+      "HeightAssessBy": 48,
+      "HeightAssessDt": 48
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 440,
+        "Randomization": 440,
+        "Day 0": 439,
+        "Week 13": 435,
+        "Week 6": 434
+      },
+      "WeightUnits": {
+        "lbs": 1537,
+        "kg": 648,
+        "<MISSING>": 3
+      },
+      "WeightUnk": {
+        "<MISSING>": 2186,
+        "1.0": 2
+      },
+      "WeightAssessBy": {
+        "By study personnel in clinic": 1808,
+        "By participant outside of clinic": 377,
+        "<MISSING>": 3
+      },
+      "HeightUnits": {
+        "cm": 1158,
+        "in": 982,
+        "<MISSING>": 48
+      },
+      "HeightUnk": {
+        "<MISSING>": 2141,
+        "1.0": 47
+      },
+      "HeightAssessBy": {
+        "By study personnel in clinic": 1799,
+        "By participant outside of clinic": 341,
+        "<MISSING>": 48
+      }
+    }
+  },
+  "IOBP2Insulin.txt": {
+    "rows": 1107,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "InsulinName",
+      "InsRoute",
+      "InsInjectionFreq",
+      "InsTypeStart",
+      "InsTypeStartDt",
+      "InsTypeStartUnknown",
+      "InsTypeStopDt",
+      "InsTypeStopUnknown",
+      "InsTypeStartEstimate",
+      "InsTypeStopEstimate"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "InsulinName": 0,
+      "InsRoute": 0,
+      "InsInjectionFreq": 582,
+      "InsTypeStart": 0,
+      "InsTypeStartDt": 610,
+      "InsTypeStartUnknown": 1107,
+      "InsTypeStopDt": 565,
+      "InsTypeStopUnknown": 1107,
+      "InsTypeStartEstimate": 1103,
+      "InsTypeStopEstimate": 1100
+    },
+    "low_cardinality_values": {
+      "InsulinName": {
+        "Humalog (Lispro)": 377,
+        "Novolog (Aspart)": 313,
+        "Novolog Fiasp": 135,
+        "Lantus (Glargine) 1 time per day": 106,
+        "Degludec (Tresiba)": 68,
+        "Basaglar (Glargine, U100)": 39,
+        "Lantus (Glargine) 2 times per day": 23,
+        "Admelog": 15,
+        "Toujeo (Glargine, U300)": 11,
+        "Levemir (Detemir) 1 time per day": 6,
+        "Levemir (Detemir) 2 times per day": 5,
+        "Humulin 70/30": 3,
+        "Afrezza (insulin human)": 2,
+        "Regular (R) (Humulin R or Novolin R)": 2,
+        "Humulin N (NPH)": 1,
+        "Humalog 50/50": 1
+      },
+      "InsRoute": {
+        "Pump": 582,
+        "Injection": 523,
+        "Inhaled": 2
+      },
+      "InsInjectionFreq": {
+        "<MISSING>": 582,
+        "1": 217,
+        "3": 98,
+        "4": 69,
+        "5": 51,
+        "2": 48,
+        "Unknown": 20,
+        "6": 13,
+        "7": 6,
+        "8": 3
+      },
+      "InsTypeStart": {
+        "In use at time of enrollment": 609,
+        "Started after enrollment": 497,
+        "Unknown": 1
+      },
+      "InsTypeStartUnknown": {
+        "<MISSING>": 1107
+      },
+      "InsTypeStopUnknown": {
+        "<MISSING>": 1107
+      },
+      "InsTypeStartEstimate": {
+        "<MISSING>": 1103,
+        "1.0": 4
+      },
+      "InsTypeStopEstimate": {
+        "<MISSING>": 1100,
+        "1.0": 7
+      }
+    }
+  },
+  "IOBP2ManualInsulinInj.txt": {
+    "rows": 197,
+    "patients": 72,
+    "columns": [
+      "RecID",
+      "PtID",
+      "InsInjDt",
+      "InsInjHr",
+      "InsInjMin",
+      "InsInjAMPM",
+      "InsInjTimeApprox",
+      "InsInjAmt",
+      "InsInjAmtApprox"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "InsInjDt": 0,
+      "InsInjHr": 0,
+      "InsInjMin": 0,
+      "InsInjAMPM": 0,
+      "InsInjTimeApprox": 87,
+      "InsInjAmt": 0,
+      "InsInjAmtApprox": 173
+    },
+    "low_cardinality_values": {
+      "InsInjHr": {
+        "8": 26,
+        "9": 21,
+        "12": 20,
+        "7": 19,
+        "3": 18,
+        "1": 17,
+        "10": 16,
+        "11": 15,
+        "6": 13,
+        "5": 12,
+        "4": 12,
+        "2": 8
+      },
+      "InsInjMin": {
+        "0": 98,
+        "30": 39,
+        "5": 6,
+        "20": 6,
+        "15": 5,
+        "45": 5,
+        "50": 3,
+        "40": 3,
+        "10": 3,
+        "35": 3,
+        "32": 3,
+        "17": 2,
+        "11": 2,
+        "36": 2,
+        "55": 2,
+        "38": 1,
+        "1": 1,
+        "27": 1,
+        "48": 1,
+        "39": 1,
+        "12": 1,
+        "4": 1,
+        "16": 1,
+        "34": 1,
+        "59": 1,
+        "43": 1,
+        "54": 1,
+        "25": 1,
+        "7": 1,
+        "44": 1
+      },
+      "InsInjAMPM": {
+        "PM": 106,
+        "AM": 91
+      },
+      "InsInjTimeApprox": {
+        "1.0": 110,
+        "<MISSING>": 87
+      },
+      "InsInjAmt": {
+        "5.0": 22,
+        "2.0": 22,
+        "3.0": 20,
+        "4.0": 14,
+        "8.0": 12,
+        "6.0": 11,
+        "10.0": 11,
+        "15.0": 10,
+        "7.0": 10,
+        "12.0": 8,
+        "20.0": 7,
+        "1.0": 5,
+        "16.0": 5,
+        "17.0": 4,
+        "9.0": 4,
+        "7.5": 3,
+        "11.0": 3,
+        "14.0": 3,
+        "22.0": 3,
+        "6.5": 2,
+        "4.5": 2,
+        "13.0": 2,
+        "50.0": 2,
+        "40.0": 1,
+        "55.0": 1,
+        "5.5": 1,
+        "2.5": 1,
+        "25.0": 1,
+        "26.0": 1,
+        "1.5": 1,
+        "3.5": 1,
+        "8.5": 1,
+        "18.0": 1,
+        "28.0": 1,
+        "3.2": 1
+      },
+      "InsInjAmtApprox": {
+        "<MISSING>": 173,
+        "1.0": 24
+      }
+    }
+  },
+  "IOBP2MealDose.txt": {
+    "rows": 1158,
+    "patients": 129,
+    "columns": [
+      "RecID",
+      "PtID",
+      "MealDoseDt",
+      "MealDoseHr",
+      "MealDoseMin",
+      "MealDoseAmPm",
+      "MealDoseType",
+      "MealDoseAnnounceTm",
+      "MealDoseAnnounceAmt",
+      "FollowRecDose"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "MealDoseDt": 0,
+      "MealDoseHr": 0,
+      "MealDoseMin": 0,
+      "MealDoseAmPm": 2,
+      "MealDoseType": 3,
+      "MealDoseAnnounceTm": 1,
+      "MealDoseAnnounceAmt": 106,
+      "FollowRecDose": 121
+    },
+    "low_cardinality_values": {
+      "MealDoseHr": {
+        "7": 162,
+        "8": 147,
+        "6": 144,
+        "12": 117,
+        "1": 104,
+        "9": 97,
+        "5": 85,
+        "11": 82,
+        "10": 71,
+        "2": 57,
+        "3": 47,
+        "4": 45
+      },
+      "MealDoseAmPm": {
+        "PM": 813,
+        "AM": 343,
+        "<MISSING>": 2
+      },
+      "MealDoseType": {
+        "Main meal": 946,
+        "Snack": 209,
+        "<MISSING>": 3
+      },
+      "MealDoseAnnounceTm": {
+        "Dinner": 419,
+        "Lunch": 363,
+        "Breakfast": 270,
+        "Would not have announced": 105,
+        "<MISSING>": 1
+      },
+      "MealDoseAnnounceAmt": {
+        "Usual": 637,
+        "Less than usual": 243,
+        "More than usual": 172,
+        "<MISSING>": 106
+      },
+      "FollowRecDose": {
+        "Yes": 888,
+        "No": 149,
+        "<MISSING>": 121
+      }
+    }
+  },
+  "IOBP2MedicalCondition.txt": {
+    "rows": 2172,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "MedicalCondition",
+      "MedCondPreStart",
+      "MedCondPreStartCat",
+      "MedCondPreStartTreat",
+      "MedCondDiagDt",
+      "MedCondDiagDtApprox",
+      "MedCondDiagDtUnk",
+      "MedCondTrt",
+      "MedCondResDt",
+      "MedCondResDtApprox",
+      "MedCondStatus",
+      "MedCondDiagMonth",
+      "MedCondDiagYear",
+      "MedCondCurrTreatMed"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "MedicalCondition": 0,
+      "MedCondPreStart": 0,
+      "MedCondPreStartCat": 157,
+      "MedCondPreStartTreat": 2172,
+      "MedCondDiagDt": 2031,
+      "MedCondDiagDtApprox": 2172,
+      "MedCondDiagDtUnk": 2172,
+      "MedCondTrt": 2049,
+      "MedCondResDt": 2025,
+      "MedCondResDtApprox": 2113,
+      "MedCondStatus": 0,
+      "MedCondDiagMonth": 2156,
+      "MedCondDiagYear": 2156,
+      "MedCondCurrTreatMed": 157
+    },
+    "low_cardinality_values": {
+      "MedCondPreStart": {
+        "Yes": 2015,
+        "No": 157
+      },
+      "MedCondPreStartCat": {
+        ">=10 years": 785,
+        "1 year to < 5 years": 540,
+        "5 years to < 10 years": 524,
+        "<MISSING>": 157,
+        "6 months to < 1 year": 71,
+        "Unknown": 31,
+        ">30 days to < 3 months": 28,
+        "3 months to < 6 months": 28,
+        "<=30 days": 8
+      },
+      "MedCondPreStartTreat": {
+        "<MISSING>": 2172
+      },
+      "MedCondDiagDtApprox": {
+        "<MISSING>": 2172
+      },
+      "MedCondDiagDtUnk": {
+        "<MISSING>": 2172
+      },
+      "MedCondTrt": {
+        "<MISSING>": 2049,
+        "Medication": 96,
+        "Other": 15,
+        "Surgery": 8,
+        "Medication and Surgery": 2,
+        "Dietary Management": 2
+      },
+      "MedCondResDtApprox": {
+        "<MISSING>": 2113,
+        "1.0": 59
+      },
+      "MedCondStatus": {
+        "Ongoing, medically stable": 1165,
+        "Ongoing (further improvement / worsening possible)": 860,
+        "Complete Recovery": 136,
+        "Recovered with Sequelae": 11
+      },
+      "MedCondDiagMonth": {
+        "<MISSING>": 2156,
+        "5.0": 4,
+        "12.0": 4,
+        "11.0": 3,
+        "2.0": 2,
+        "1.0": 1,
+        "4.0": 1,
+        "6.0": 1
+      },
+      "MedCondDiagYear": {
+        "<MISSING>": 2156,
+        "2020.0": 10,
+        "2019.0": 3,
+        "2021.0": 3
+      },
+      "MedCondCurrTreatMed": {
+        "Yes": 1219,
+        "No": 796,
+        "<MISSING>": 157
+      }
+    }
+  },
+  "IOBP2Medication.txt": {
+    "rows": 1808,
+    "patients": 364,
+    "columns": [
+      "RecID",
+      "PtID",
+      "MedDose",
+      "MedUnit",
+      "MedDoseUnk",
+      "MedRoute",
+      "MedLocSide",
+      "MedFreqType",
+      "MedFreqNum",
+      "MedFreqPer",
+      "MedFreqUnk",
+      "MedInd",
+      "MedicalCondition1",
+      "AdvEvent1",
+      "MedStartTrtCat",
+      "MedStartDt",
+      "MedStartDtApprox",
+      "MedStopDt",
+      "MedStopDtApprox",
+      "MedOngoing",
+      "MedStartPreEnrRange",
+      "MedStartMonth",
+      "MedStartYear",
+      "MedStopMonth",
+      "MedStopYear",
+      "MedStopDtUnk",
+      "ParentLogInIDPreExisting",
+      "MedStartDtUnk",
+      "MedCondNotReqd",
+      "PreExistCondNotReqd",
+      "DrugName",
+      "AdvEventNotReqd",
+      "MedicalCondition2",
+      "ParentLogInIDPreExisting2",
+      "AdvEvent2"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "MedDose": 145,
+      "MedUnit": 145,
+      "MedDoseUnk": 1663,
+      "MedRoute": 0,
+      "MedLocSide": 1779,
+      "MedFreqType": 0,
+      "MedFreqNum": 448,
+      "MedFreqPer": 448,
+      "MedFreqUnk": 1794,
+      "MedInd": 0,
+      "MedicalCondition1": 613,
+      "AdvEvent1": 1752,
+      "MedStartTrtCat": 0,
+      "MedStartDt": 1505,
+      "MedStartDtApprox": 1808,
+      "MedStopDt": 1602,
+      "MedStopDtApprox": 1808,
+      "MedOngoing": 273,
+      "MedStartPreEnrRange": 349,
+      "MedStartMonth": 1766,
+      "MedStartYear": 1764,
+      "MedStopMonth": 1754,
+      "MedStopYear": 1752,
+      "MedStopDtUnk": 1797,
+      "ParentLogInIDPreExisting": 1808,
+      "MedStartDtUnk": 1806,
+      "MedCondNotReqd": 1748,
+      "PreExistCondNotReqd": 1808,
+      "DrugName": 0,
+      "AdvEventNotReqd": 1808,
+      "MedicalCondition2": 1763,
+      "ParentLogInIDPreExisting2": 1808,
+      "AdvEvent2": 1808
+    },
+    "low_cardinality_values": {
+      "MedUnit": {
+        "mg": 1086,
+        "<MISSING>": 145,
+        "tablet": 138,
+        "mcg": 125,
+        "IU": 59,
+        "mL": 41,
+        "units": 35,
+        "cream": 32,
+        "capsules": 31,
+        "puff": 25,
+        "gtt-drops": 24,
+        "Ointment": 22,
+        "g": 18,
+        "pills": 12,
+        "meq": 5,
+        "tsp": 4,
+        "aerosol": 4,
+        "ounces": 1,
+        "tbs": 1
+      },
+      "MedDoseUnk": {
+        "<MISSING>": 1663,
+        "1.0": 145
+      },
+      "MedRoute": {
+        "PO": 1513,
+        "Topical - skin": 66,
+        "Other": 47,
+        "SC": 36,
+        "Oral Inhalation": 35,
+        "Nasal": 35,
+        "Gtt": 23,
+        "IM": 21,
+        "IV": 18,
+        "Topical - ocular": 14
+      },
+      "MedLocSide": {
+        "<MISSING>": 1779,
+        "Both": 21,
+        "Right": 7,
+        "Left": 1
+      },
+      "MedFreqType": {
+        "Fixed Regimen": 1374,
+        "As Needed": 364,
+        "One Time Treatment": 70
+      },
+      "MedFreqNum": {
+        "1.0": 1153,
+        "<MISSING>": 448,
+        "2.0": 143,
+        "3.0": 34,
+        "4.0": 16,
+        "5.0": 5,
+        "7.0": 5,
+        "6.0": 3,
+        "24.0": 1
+      },
+      "MedFreqPer": {
+        "Day": 1295,
+        "<MISSING>": 448,
+        "Week": 41,
+        "Month": 18,
+        "Year": 6
+      },
+      "MedFreqUnk": {
+        "<MISSING>": 1794,
+        "1.0": 14
+      },
+      "MedInd": {
+        "Prior to enrollment": 1116,
+        "Prevention": 497,
+        "New": 195
+      },
+      "AdvEvent1": {
+        "<MISSING>": 1752,
+        "Cellulitis of hand": 8,
+        "Appendicitis": 6,
+        "Primary spontaneous pneumothorax": 4,
+        "Pyelonephritis": 4,
+        "Sciatica": 4,
+        "Diabetic ketoacidosis": 4,
+        "Epiglottitis": 3,
+        "Neck pain": 2,
+        "Kidney stones": 2,
+        "Syncope": 2,
+        "COVID-19": 2,
+        "Gastroenteritis": 2,
+        "Food poisoning": 2,
+        "Hyperglycemia": 1,
+        "Ingrown toe nail": 1,
+        "Catheter infection": 1,
+        "Leg fracture": 1,
+        "Skin bacterial infection": 1,
+        "Abdominal pain": 1,
+        "Constipation": 1,
+        "Urinary tract infection": 1,
+        "Hypoglycemia": 1,
+        "Nausea": 1,
+        "Vomiting": 1
+      },
+      "MedStartTrtCat": {
+        "On treatment at time of enrollment": 1459,
+        "Treatment started after enrollment": 349
+      },
+      "MedStartDtApprox": {
+        "<MISSING>": 1808
+      },
+      "MedStopDtApprox": {
+        "<MISSING>": 1808
+      },
+      "MedOngoing": {
+        "1.0": 1535,
+        "<MISSING>": 273
+      },
+      "MedStartPreEnrRange": {
+        "1 year to < 5 years": 492,
+        ">=10 years": 384,
+        "<MISSING>": 349,
+        "5 years to < 10 years": 292,
+        "6 months to < 1 year": 110,
+        "3 months to < 6 months": 58,
+        ">30 days to < 3 months": 48,
+        "<=30 days": 43,
+        "Unknown": 32
+      },
+      "MedStartMonth": {
+        "<MISSING>": 1766,
+        "3.0": 9,
+        "6.0": 6,
+        "11.0": 4,
+        "1.0": 4,
+        "7.0": 3,
+        "8.0": 3,
+        "4.0": 3,
+        "10.0": 3,
+        "5.0": 3,
+        "12.0": 2,
+        "2.0": 2
+      },
+      "MedStartYear": {
+        "<MISSING>": 1764,
+        "2020.0": 34,
+        "2021.0": 7,
+        "2019.0": 3
+      },
+      "MedStopMonth": {
+        "<MISSING>": 1754,
+        "12.0": 7,
+        "10.0": 6,
+        "2.0": 6,
+        "5.0": 6,
+        "3.0": 5,
+        "8.0": 5,
+        "7.0": 5,
+        "4.0": 5,
+        "6.0": 3,
+        "11.0": 3,
+        "1.0": 3
+      },
+      "MedStopYear": {
+        "<MISSING>": 1752,
+        "2020.0": 37,
+        "2021.0": 11,
+        "2019.0": 6,
+        "2018.0": 2
+      },
+      "MedStopDtUnk": {
+        "<MISSING>": 1797,
+        "1.0": 11
+      },
+      "ParentLogInIDPreExisting": {
+        "<MISSING>": 1808
+      },
+      "MedStartDtUnk": {
+        "<MISSING>": 1806,
+        "1.0": 2
+      },
+      "MedCondNotReqd": {
+        "<MISSING>": 1748,
+        "1.0": 60
+      },
+      "PreExistCondNotReqd": {
+        "<MISSING>": 1808
+      },
+      "AdvEventNotReqd": {
+        "<MISSING>": 1808
+      },
+      "MedicalCondition2": {
+        "<MISSING>": 1763,
+        "Leg pain": 4,
+        "Microalbuminuria": 3,
+        "Depression": 3,
+        "Mixed connective tissue disease": 2,
+        "Allergy NOS": 2,
+        "Trigger finger": 2,
+        "Coronary artery disease": 2,
+        "Hypertension": 2,
+        "Allergic dermatitis": 2,
+        "Anxiety": 2,
+        "Adjustment reaction with mixed emotional features": 1,
+        "Bipolar disorder": 1,
+        "Chronic kidney disease": 1,
+        "Head injury": 1,
+        "Laceration of leg": 1,
+        "Tooth abscess": 1,
+        "Proteinuria": 1,
+        "Autism": 1,
+        "Osteopenia": 1,
+        "Dyslipidemia": 1,
+        "Seasonal allergy": 1,
+        "Nausea": 1,
+        "Pain in hip": 1,
+        "Celiac disease": 1,
+        "Diabetic nephropathy": 1,
+        "Muscle spasms": 1,
+        "Atherosclerosis": 1,
+        "Vaginal dryness": 1,
+        "Neck pain": 1,
+        "Knee pain": 1,
+        "Fibromyalgia": 1
+      },
+      "ParentLogInIDPreExisting2": {
+        "<MISSING>": 1808
+      },
+      "AdvEvent2": {
+        "<MISSING>": 1808
+      }
+    }
+  },
+  "IOBP2PSBPUOS.txt": {
+    "rows": 630,
+    "patients": 318,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "BPUOSDailyHassle",
+      "BPUOSSensChg",
+      "BPUOSPeacMind",
+      "BPUOSFoodChoice",
+      "BPUOSDoThings",
+      "BPUOSLessThink",
+      "BPUOSWorryLessBG",
+      "BPUOSWorryLessIns",
+      "BPUOSMoreFree",
+      "BPUOSIntrusive",
+      "BPUOSRespTmLowBG",
+      "BPUOSRespTmHighBG",
+      "BPUOSNoComfDiabCare",
+      "BPUOSHardToTrust",
+      "BPUOSLessBurden",
+      "BPUOSSleepTrouble",
+      "BPUOSMoreTime",
+      "BPUOSThinkTooMuch",
+      "BPUOSTaughtThings",
+      "BPUOSPreventLowBG",
+      "BPUOSManyBugs",
+      "BPUOSHelpRelax",
+      "BPUOSUncomfortWear",
+      "BPUOSMoreTrouble",
+      "BPUOSPreventBGProbs",
+      "BPUOSWorryLessLowBG",
+      "BPUOSWorryLessHighBG",
+      "BPUOSKeepUsing",
+      "BPUOSChallengeDev",
+      "BPUOSDevRespConf",
+      "BPUOSTrustDev",
+      "BPUOSRecommend",
+      "BPUOSSleepWorryLow",
+      "BPUOSAnnoyAlarm",
+      "BPUOSHardGiveUpDev"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "BPUOSDailyHassle": 2,
+      "BPUOSSensChg": 2,
+      "BPUOSPeacMind": 2,
+      "BPUOSFoodChoice": 2,
+      "BPUOSDoThings": 3,
+      "BPUOSLessThink": 2,
+      "BPUOSWorryLessBG": 2,
+      "BPUOSWorryLessIns": 2,
+      "BPUOSMoreFree": 2,
+      "BPUOSIntrusive": 2,
+      "BPUOSRespTmLowBG": 3,
+      "BPUOSRespTmHighBG": 3,
+      "BPUOSNoComfDiabCare": 2,
+      "BPUOSHardToTrust": 2,
+      "BPUOSLessBurden": 2,
+      "BPUOSSleepTrouble": 2,
+      "BPUOSMoreTime": 2,
+      "BPUOSThinkTooMuch": 2,
+      "BPUOSTaughtThings": 2,
+      "BPUOSPreventLowBG": 2,
+      "BPUOSManyBugs": 3,
+      "BPUOSHelpRelax": 3,
+      "BPUOSUncomfortWear": 2,
+      "BPUOSMoreTrouble": 2,
+      "BPUOSPreventBGProbs": 2,
+      "BPUOSWorryLessLowBG": 3,
+      "BPUOSWorryLessHighBG": 2,
+      "BPUOSKeepUsing": 2,
+      "BPUOSChallengeDev": 2,
+      "BPUOSDevRespConf": 2,
+      "BPUOSTrustDev": 2,
+      "BPUOSRecommend": 2,
+      "BPUOSSleepWorryLow": 3,
+      "BPUOSAnnoyAlarm": 2,
+      "BPUOSHardGiveUpDev": 2
+    }
+  },
+  "IOBP2PSBPUOSParent.txt": {
+    "rows": 224,
+    "patients": 112,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "BPUOSParentDailyHassle",
+      "BPUOSParentSensChg",
+      "BPUOSParentPeacMind",
+      "BPUOSParentFoodChoice",
+      "BPUOSParentDoThings",
+      "BPUOSParentLessThink",
+      "BPUOSParentWorryLessBG",
+      "BPUOSParentWorryLessIns",
+      "BPUOSParentMoreFree",
+      "BPUOSParentIntrusive",
+      "BPUOSParentRespTmLowBG",
+      "BPUOSParentRespTmHighBG",
+      "BPUOSParentNoComfDiabCare",
+      "BPUOSParentHardToTrust",
+      "BPUOSParentLessBurden",
+      "BPUOSParentSleepTrouble",
+      "BPUOSParentMoreTime",
+      "BPUOSParentThinkTooMuch",
+      "BPUOSParentTaughtThings",
+      "BPUOSParentPreventLowBG",
+      "BPUOSParentManyBugs",
+      "BPUOSParentHelpRelax",
+      "BPUOSParentUncomfortWear",
+      "BPUOSParentMoreTrouble",
+      "BPUOSParentPreventBGProbs",
+      "BPUOSParentWorryLessLowBG",
+      "BPUOSParentWorryLessHighBG",
+      "BPUOSParentKeepUsing",
+      "BPUOSParentChallengeDev",
+      "BPUOSParentDevRespConf",
+      "BPUOSParentTrustDev",
+      "BPUOSParentRecommend",
+      "BPUOSParentSleepWorryLow",
+      "BPUOSParentAnnoyAlarm",
+      "BPUOSParentHardGiveUpDev"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "BPUOSParentDailyHassle": 0,
+      "BPUOSParentSensChg": 0,
+      "BPUOSParentPeacMind": 0,
+      "BPUOSParentFoodChoice": 0,
+      "BPUOSParentDoThings": 0,
+      "BPUOSParentLessThink": 1,
+      "BPUOSParentWorryLessBG": 0,
+      "BPUOSParentWorryLessIns": 0,
+      "BPUOSParentMoreFree": 0,
+      "BPUOSParentIntrusive": 0,
+      "BPUOSParentRespTmLowBG": 0,
+      "BPUOSParentRespTmHighBG": 0,
+      "BPUOSParentNoComfDiabCare": 0,
+      "BPUOSParentHardToTrust": 0,
+      "BPUOSParentLessBurden": 0,
+      "BPUOSParentSleepTrouble": 0,
+      "BPUOSParentMoreTime": 0,
+      "BPUOSParentThinkTooMuch": 0,
+      "BPUOSParentTaughtThings": 0,
+      "BPUOSParentPreventLowBG": 0,
+      "BPUOSParentManyBugs": 0,
+      "BPUOSParentHelpRelax": 0,
+      "BPUOSParentUncomfortWear": 0,
+      "BPUOSParentMoreTrouble": 0,
+      "BPUOSParentPreventBGProbs": 0,
+      "BPUOSParentWorryLessLowBG": 0,
+      "BPUOSParentWorryLessHighBG": 0,
+      "BPUOSParentKeepUsing": 0,
+      "BPUOSParentChallengeDev": 0,
+      "BPUOSParentDevRespConf": 0,
+      "BPUOSParentTrustDev": 0,
+      "BPUOSParentRecommend": 0,
+      "BPUOSParentSleepWorryLow": 0,
+      "BPUOSParentAnnoyAlarm": 0,
+      "BPUOSParentHardGiveUpDev": 0
+    }
+  },
+  "IOBP2PSClarke.txt": {
+    "rows": 796,
+    "patients": 401,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "ClarkeLowBGSymp",
+      "ClarkeSympLostLowBG",
+      "ClarkeModerateHypo",
+      "ClarkeSevereHypo",
+      "ClarkeLowBGLastMon",
+      "ClarkeLowBGNoSymp",
+      "ClarkeLowBGFeelSymp",
+      "ClarkeLowBGSenseSymp",
+      "ClarkeScore"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "ClarkeLowBGSymp": 1,
+      "ClarkeSympLostLowBG": 1,
+      "ClarkeModerateHypo": 1,
+      "ClarkeSevereHypo": 1,
+      "ClarkeLowBGLastMon": 1,
+      "ClarkeLowBGNoSymp": 1,
+      "ClarkeLowBGFeelSymp": 1,
+      "ClarkeLowBGSenseSymp": 1,
+      "ClarkeScore": 1
+    }
+  },
+  "IOBP2PSClarkeParent.txt": {
+    "rows": 78,
+    "patients": 39,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "ClarkeParentLowBGSymp",
+      "ClarkeParentSympLostLowBG",
+      "ClarkeParentModerateHypo",
+      "ClarkeParentSevereHypo",
+      "ClarkeParentLowBGLastMon",
+      "ClarkeParentLowBGNOSymp",
+      "ClarkeParentLowBGFeelSymp",
+      "ClarkeParentLowBGSenseSymp",
+      "ClarkeParentScore"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "ClarkeParentLowBGSymp": 0,
+      "ClarkeParentSympLostLowBG": 0,
+      "ClarkeParentModerateHypo": 0,
+      "ClarkeParentSevereHypo": 0,
+      "ClarkeParentLowBGLastMon": 0,
+      "ClarkeParentLowBGNOSymp": 0,
+      "ClarkeParentLowBGFeelSymp": 0,
+      "ClarkeParentLowBGSenseSymp": 0,
+      "ClarkeParentScore": 0
+    }
+  },
+  "IOBP2PSDTSQcAdult.txt": {
+    "rows": 271,
+    "patients": 271,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DTSQcAdultTrtSatisfact",
+      "DTSQcAdultHighBG",
+      "DTSQcAdultLowBG",
+      "DTSQcAdultTrtConven",
+      "DTSQcAdultTrtFlex",
+      "DTSQcAdultDiabKnowSatisf",
+      "DTSQcAdultTrtRecomnd",
+      "DTSQcAdultTrtCont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DTSQcAdultTrtSatisfact": 1,
+      "DTSQcAdultHighBG": 1,
+      "DTSQcAdultLowBG": 2,
+      "DTSQcAdultTrtConven": 1,
+      "DTSQcAdultTrtFlex": 1,
+      "DTSQcAdultDiabKnowSatisf": 1,
+      "DTSQcAdultTrtRecomnd": 1,
+      "DTSQcAdultTrtCont": 1
+    }
+  },
+  "IOBP2PSDTSQcParent.txt": {
+    "rows": 165,
+    "patients": 165,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DTSQcParentTrtSatisfact",
+      "DTSQcParentDiabControl",
+      "DTSQcParentHighBG",
+      "DTSQcParentLowBG",
+      "DTSQcParentTrtEasyDiff",
+      "DTSQcParentTrtFlex",
+      "DTSQcParentSchoolSatisf",
+      "DTSQcParentNoSchool",
+      "DTSQcParentLikesDoing",
+      "DTSQcParentFamLife",
+      "DTSQcParentOwnLife",
+      "DTSQcParentTrtUnderstand",
+      "DTSQcParentDiscomfPain",
+      "DTSQcParentSupport",
+      "DTSQcParentTrtCont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DTSQcParentTrtSatisfact": 0,
+      "DTSQcParentDiabControl": 0,
+      "DTSQcParentHighBG": 0,
+      "DTSQcParentLowBG": 0,
+      "DTSQcParentTrtEasyDiff": 0,
+      "DTSQcParentTrtFlex": 0,
+      "DTSQcParentSchoolSatisf": 7,
+      "DTSQcParentNoSchool": 158,
+      "DTSQcParentLikesDoing": 0,
+      "DTSQcParentFamLife": 0,
+      "DTSQcParentOwnLife": 0,
+      "DTSQcParentTrtUnderstand": 0,
+      "DTSQcParentDiscomfPain": 0,
+      "DTSQcParentSupport": 0,
+      "DTSQcParentTrtCont": 0
+    }
+  },
+  "IOBP2PSDTSQcTeen.txt": {
+    "rows": 71,
+    "patients": 71,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DTSQcTeenTrtSatisfact",
+      "DTSQcTeenDiabControl",
+      "DTSQcTeenHighBG",
+      "DTSQcTeenLowBG",
+      "DTSQcTeenTrtEasyDiff",
+      "DTSQcTeenTrtFlex",
+      "DTSQcTeenSchoolSatisf",
+      "DTSQcTeenLikeDoing",
+      "DTSQcTeenTrtUnderstand",
+      "DTSQcTeenDiscomfPain",
+      "DTSQcTeenSupport",
+      "DTSQcTeenTrtCont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DTSQcTeenTrtSatisfact": 0,
+      "DTSQcTeenDiabControl": 0,
+      "DTSQcTeenHighBG": 0,
+      "DTSQcTeenLowBG": 0,
+      "DTSQcTeenTrtEasyDiff": 1,
+      "DTSQcTeenTrtFlex": 0,
+      "DTSQcTeenSchoolSatisf": 0,
+      "DTSQcTeenLikeDoing": 0,
+      "DTSQcTeenTrtUnderstand": 0,
+      "DTSQcTeenDiscomfPain": 0,
+      "DTSQcTeenSupport": 0,
+      "DTSQcTeenTrtCont": 0
+    }
+  },
+  "IOBP2PSDTSQsAdult.txt": {
+    "rows": 275,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DTSQsAdultTrtSatisfact",
+      "DTSQsAdultHighBG",
+      "DTSQsAdultLowBG",
+      "DTSQsAdultTrtConven",
+      "DTSQsAdultTrtFlex",
+      "DTSQsAdultDiabKnowSatisf",
+      "DTSQsAdultTrtRecomnd",
+      "DTSQsAdultTrtCont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DTSQsAdultTrtSatisfact": 0,
+      "DTSQsAdultHighBG": 0,
+      "DTSQsAdultLowBG": 0,
+      "DTSQsAdultTrtConven": 0,
+      "DTSQsAdultTrtFlex": 0,
+      "DTSQsAdultDiabKnowSatisf": 0,
+      "DTSQsAdultTrtRecomnd": 0,
+      "DTSQsAdultTrtCont": 0
+    }
+  },
+  "IOBP2PSDTSQsParent.txt": {
+    "rows": 165,
+    "patients": 165,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DTSQsParentTrtSatisfact",
+      "DTSQsParentDiabControl",
+      "DTSQsParentHighBG",
+      "DTSQsParentLowBG",
+      "DTSQsParentTrtEasyDiff",
+      "DTSQsParentTrtFlex",
+      "DTSQsParentSchoolSatisf",
+      "DTSQsParentNoSchool",
+      "DTSQsParentLikesDoing",
+      "DTSQsParentFamLife",
+      "DTSQsParentOwnLife",
+      "DTSQsParentTrtUnderstand",
+      "DTSQsParentDiscomfPain",
+      "DTSQsParentSupport",
+      "DTSQsParentTrtCont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DTSQsParentTrtSatisfact": 0,
+      "DTSQsParentDiabControl": 0,
+      "DTSQsParentHighBG": 0,
+      "DTSQsParentLowBG": 0,
+      "DTSQsParentTrtEasyDiff": 0,
+      "DTSQsParentTrtFlex": 0,
+      "DTSQsParentSchoolSatisf": 14,
+      "DTSQsParentNoSchool": 151,
+      "DTSQsParentLikesDoing": 0,
+      "DTSQsParentFamLife": 0,
+      "DTSQsParentOwnLife": 0,
+      "DTSQsParentTrtUnderstand": 0,
+      "DTSQsParentDiscomfPain": 0,
+      "DTSQsParentSupport": 0,
+      "DTSQsParentTrtCont": 0
+    }
+  },
+  "IOBP2PSDTSQsTeen.txt": {
+    "rows": 71,
+    "patients": 71,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DTSQsTeenTrtSatisfact",
+      "DTSQsTeenDiabControl",
+      "DTSQsTeenHighBG",
+      "DTSQsTeenLowBG",
+      "DTSQsTeenTrtEasyDiff",
+      "DTSQsTeenTrtFlex",
+      "DTSQsTeenSchoolSatisf",
+      "DTSQsTeenLikeDoing",
+      "DTSQsTeenTrtUnderstand",
+      "DTSQsTeenDiscomfPain",
+      "DTSQsTeenSupport",
+      "DTSQsTeenTrtCont"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DTSQsTeenTrtSatisfact": 0,
+      "DTSQsTeenDiabControl": 0,
+      "DTSQsTeenHighBG": 0,
+      "DTSQsTeenLowBG": 0,
+      "DTSQsTeenTrtEasyDiff": 0,
+      "DTSQsTeenTrtFlex": 0,
+      "DTSQsTeenSchoolSatisf": 0,
+      "DTSQsTeenLikeDoing": 0,
+      "DTSQsTeenTrtUnderstand": 0,
+      "DTSQsTeenDiscomfPain": 0,
+      "DTSQsTeenSupport": 0,
+      "DTSQsTeenTrtCont": 0
+    }
+  },
+  "IOBP2PSDiabTech.txt": {
+    "rows": 794,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DiabTechBetterLife",
+      "DiabTechEasierLife",
+      "DiabTechBetterHealth",
+      "DiabTechMoreGood",
+      "DiabTechLucky"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DiabTechBetterLife": 2,
+      "DiabTechEasierLife": 2,
+      "DiabTechBetterHealth": 2,
+      "DiabTechMoreGood": 2,
+      "DiabTechLucky": 2
+    }
+  },
+  "IOBP2PSEQ5D5L.txt": {
+    "rows": 795,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "EQ5D5LMobility",
+      "EQ5D5LSelfCare",
+      "EQ5D5LUsualActiv",
+      "EQ5D5LPainDiscomf",
+      "EQ5D5LAnxDepres",
+      "EQ5D5LHealthToday"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "EQ5D5LMobility": 2,
+      "EQ5D5LSelfCare": 2,
+      "EQ5D5LUsualActiv": 2,
+      "EQ5D5LPainDiscomf": 2,
+      "EQ5D5LAnxDepres": 2,
+      "EQ5D5LHealthToday": 2
+    }
+  },
+  "IOBP2PSEQ5DY.txt": {
+    "rows": 430,
+    "patients": 149,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "EQ5DYMobility",
+      "EQ5DYSelfCare",
+      "EQ5DYUsualActiv",
+      "EQ5DYPainDiscomf",
+      "EQ5DYWorriedSad",
+      "EQ5DYHealthToday"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "EQ5DYMobility": 0,
+      "EQ5DYSelfCare": 0,
+      "EQ5DYUsualActiv": 0,
+      "EQ5DYPainDiscomf": 0,
+      "EQ5DYWorriedSad": 0,
+      "EQ5DYHealthToday": 0
+    }
+  },
+  "IOBP2PSHFSAdultNoPart2.txt": {
+    "rows": 795,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "HFSAdultLargeSnk",
+      "HFSAdultBGAbov150",
+      "HFSAdultRedInsLowBG",
+      "HFSAdultMeas6OrMore",
+      "HFSAdultOutWSomeone",
+      "HFSAdultLimitTravel",
+      "HFSAdultLimitDriving",
+      "HFSAdultAvoidVisits",
+      "HFSAdultStayHome",
+      "HFSAdultLimitPhysAct",
+      "HFSAdultOthersAround",
+      "HFSAdultAvoidSex",
+      "HFSAdultSocialHighBG",
+      "HFSAdultTasksHighBG",
+      "HFSAdultCheckOnMe",
+      "HFSAdultNotRecLowBG",
+      "HFSAdultNoFoodLowBG",
+      "HFSAdultPassOutPublic",
+      "HFSAdultEmbarrass",
+      "HFSAdultHypoAlone",
+      "HFSAdultLookStupid",
+      "HFSAdultLoseCntrl",
+      "HFSAdultNoHelp",
+      "HFSAdultHypoDriving",
+      "HFSAdultMistake",
+      "HFSAdultBadEval",
+      "HFSAdultDiffThinkResp",
+      "HFSAdultDizzy",
+      "HFSAdultAccidInj",
+      "HFSAdultPermInj",
+      "HFSAdultLowBGInterfer",
+      "HFSAdultHypoSleep",
+      "HFSAdultUpsetDiff"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "HFSAdultLargeSnk": 3,
+      "HFSAdultBGAbov150": 3,
+      "HFSAdultRedInsLowBG": 4,
+      "HFSAdultMeas6OrMore": 3,
+      "HFSAdultOutWSomeone": 3,
+      "HFSAdultLimitTravel": 3,
+      "HFSAdultLimitDriving": 3,
+      "HFSAdultAvoidVisits": 3,
+      "HFSAdultStayHome": 3,
+      "HFSAdultLimitPhysAct": 3,
+      "HFSAdultOthersAround": 3,
+      "HFSAdultAvoidSex": 3,
+      "HFSAdultSocialHighBG": 4,
+      "HFSAdultTasksHighBG": 3,
+      "HFSAdultCheckOnMe": 3,
+      "HFSAdultNotRecLowBG": 2,
+      "HFSAdultNoFoodLowBG": 2,
+      "HFSAdultPassOutPublic": 2,
+      "HFSAdultEmbarrass": 2,
+      "HFSAdultHypoAlone": 2,
+      "HFSAdultLookStupid": 2,
+      "HFSAdultLoseCntrl": 2,
+      "HFSAdultNoHelp": 2,
+      "HFSAdultHypoDriving": 2,
+      "HFSAdultMistake": 2,
+      "HFSAdultBadEval": 2,
+      "HFSAdultDiffThinkResp": 2,
+      "HFSAdultDizzy": 2,
+      "HFSAdultAccidInj": 2,
+      "HFSAdultPermInj": 2,
+      "HFSAdultLowBGInterfer": 2,
+      "HFSAdultHypoSleep": 2,
+      "HFSAdultUpsetDiff": 2
+    }
+  },
+  "IOBP2PSHFSChildNoPart2.txt": {
+    "rows": 430,
+    "patients": 149,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "HFSChildLargeSnk",
+      "HFSChildNotAloneLowBG",
+      "HFSChildKeepHighBG",
+      "HFSChildAloneHighBG",
+      "HFSChildEatLowBG",
+      "HFSChildLessInsLowBG",
+      "HFSChildAwayHighBG",
+      "HFSChildCarryFood",
+      "HFSChildNoExerLowBG",
+      "HFSChildAwayOftCheckBG",
+      "HFSChildNotRecLowBG",
+      "HFSChildNoFoodLowBG",
+      "HFSChildDizzyPublic",
+      "HFSChildSleepLowBG",
+      "HFSChildEmbarrass",
+      "HFSChildAloneLowBG",
+      "HFSChildLookStupid",
+      "HFSChildLoseCntrl",
+      "HFSChildNoHelp",
+      "HFSChildMistakeSchool",
+      "HFSChildSchoolTrouble",
+      "HFSChildSeizure",
+      "HFSChildComplLowBG",
+      "HFSChildDizzyLowBG",
+      "HFSChildHaveLowBG"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "HFSChildLargeSnk": 1,
+      "HFSChildNotAloneLowBG": 0,
+      "HFSChildKeepHighBG": 0,
+      "HFSChildAloneHighBG": 3,
+      "HFSChildEatLowBG": 0,
+      "HFSChildLessInsLowBG": 0,
+      "HFSChildAwayHighBG": 0,
+      "HFSChildCarryFood": 1,
+      "HFSChildNoExerLowBG": 0,
+      "HFSChildAwayOftCheckBG": 0,
+      "HFSChildNotRecLowBG": 0,
+      "HFSChildNoFoodLowBG": 0,
+      "HFSChildDizzyPublic": 0,
+      "HFSChildSleepLowBG": 0,
+      "HFSChildEmbarrass": 0,
+      "HFSChildAloneLowBG": 0,
+      "HFSChildLookStupid": 0,
+      "HFSChildLoseCntrl": 0,
+      "HFSChildNoHelp": 0,
+      "HFSChildMistakeSchool": 0,
+      "HFSChildSchoolTrouble": 0,
+      "HFSChildSeizure": 1,
+      "HFSChildComplLowBG": 0,
+      "HFSChildDizzyLowBG": 1,
+      "HFSChildHaveLowBG": 0
+    }
+  },
+  "IOBP2PSHFSParentNoPart2.txt": {
+    "rows": 475,
+    "patients": 165,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "HFSParentLargeSnk",
+      "HFSParentNotAloneLowBG",
+      "HFSParentKeepHighBG",
+      "HFSParentAloneHighBG",
+      "HFSParentEatLowBG",
+      "HFSParentLessInsLowBG",
+      "HFSParentAwayHighBG",
+      "HFSParentCarrySugar",
+      "HFSParentNoExerLowBG",
+      "HFSParentAwayOftCheckBG",
+      "HFSParentNightCheckBG",
+      "HFSParentNotRecLowBG",
+      "HFSParentNoFoodLowBG",
+      "HFSParentDizzyPublic",
+      "HFSParentSleepLowBG",
+      "HFSParentEmbarrass",
+      "HFSParentAloneLowBG",
+      "HFSParentLookStupid",
+      "HFSParentLoseCntrl",
+      "HFSParentNoHelp",
+      "HFSParentMistakeSchool",
+      "HFSParentSchoolBadEval",
+      "HFSParentSeizure",
+      "HFSParentComplLowBG",
+      "HFSParentFaint",
+      "HFSParentHaveLowBG"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "HFSParentLargeSnk": 1,
+      "HFSParentNotAloneLowBG": 1,
+      "HFSParentKeepHighBG": 1,
+      "HFSParentAloneHighBG": 1,
+      "HFSParentEatLowBG": 2,
+      "HFSParentLessInsLowBG": 1,
+      "HFSParentAwayHighBG": 1,
+      "HFSParentCarrySugar": 1,
+      "HFSParentNoExerLowBG": 3,
+      "HFSParentAwayOftCheckBG": 1,
+      "HFSParentNightCheckBG": 1,
+      "HFSParentNotRecLowBG": 2,
+      "HFSParentNoFoodLowBG": 1,
+      "HFSParentDizzyPublic": 1,
+      "HFSParentSleepLowBG": 1,
+      "HFSParentEmbarrass": 1,
+      "HFSParentAloneLowBG": 1,
+      "HFSParentLookStupid": 1,
+      "HFSParentLoseCntrl": 1,
+      "HFSParentNoHelp": 1,
+      "HFSParentMistakeSchool": 1,
+      "HFSParentSchoolBadEval": 1,
+      "HFSParentSeizure": 1,
+      "HFSParentComplLowBG": 1,
+      "HFSParentFaint": 1,
+      "HFSParentHaveLowBG": 1
+    }
+  },
+  "IOBP2PSHypoConf.txt": {
+    "rows": 795,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "HypoConfExer",
+      "HypoConfSleep",
+      "HypoConfDrive",
+      "HypoConfSocial",
+      "HypoConfAlone",
+      "HypoConfAvoidProb",
+      "HypoConfRespToHypo",
+      "HypoConfDoThings",
+      "HypoConfPartnerConf"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "HypoConfExer": 2,
+      "HypoConfSleep": 2,
+      "HypoConfDrive": 2,
+      "HypoConfSocial": 2,
+      "HypoConfAlone": 2,
+      "HypoConfAvoidProb": 2,
+      "HypoConfRespToHypo": 2,
+      "HypoConfDoThings": 2,
+      "HypoConfPartnerConf": 2
+    }
+  },
+  "IOBP2PSINSPAdultBase.txt": {
+    "rows": 275,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "INSPAdultBaseMoreHope",
+      "INSPAdultBaseWorryLess",
+      "INSPAdultBaseRedConcern",
+      "INSPAdultBaseEasierDo",
+      "INSPAdultBaseDecrLowBG",
+      "INSPAdultBaseDecrHighBG",
+      "INSPAdultBaseStayTarg",
+      "INSPAdultBaseImprA1c",
+      "INSPAdultBaseEasyEat",
+      "INSPAdultBaseEasyExer",
+      "INSPAdultBaseManSchWrk",
+      "INSPAdultBaseManSocLife",
+      "INSPAdultBaseManSickDay",
+      "INSPAdultBaseSleepBet",
+      "INSPAdultBaseFewONLows",
+      "INSPAdultBaseImprQOL",
+      "INSPAdultBaseImprFamQOL",
+      "INSPAdultBaseDriving",
+      "INSPAdultBaseSexLife",
+      "INSPAdultBaseAlcohol",
+      "INSPAdultBasePregnant",
+      "INSPAdultBaseRedLTComp"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "INSPAdultBaseMoreHope": 0,
+      "INSPAdultBaseWorryLess": 0,
+      "INSPAdultBaseRedConcern": 0,
+      "INSPAdultBaseEasierDo": 0,
+      "INSPAdultBaseDecrLowBG": 0,
+      "INSPAdultBaseDecrHighBG": 0,
+      "INSPAdultBaseStayTarg": 0,
+      "INSPAdultBaseImprA1c": 0,
+      "INSPAdultBaseEasyEat": 0,
+      "INSPAdultBaseEasyExer": 0,
+      "INSPAdultBaseManSchWrk": 0,
+      "INSPAdultBaseManSocLife": 0,
+      "INSPAdultBaseManSickDay": 0,
+      "INSPAdultBaseSleepBet": 0,
+      "INSPAdultBaseFewONLows": 0,
+      "INSPAdultBaseImprQOL": 0,
+      "INSPAdultBaseImprFamQOL": 0,
+      "INSPAdultBaseDriving": 0,
+      "INSPAdultBaseSexLife": 0,
+      "INSPAdultBaseAlcohol": 0,
+      "INSPAdultBasePregnant": 0,
+      "INSPAdultBaseRedLTComp": 0
+    }
+  },
+  "IOBP2PSINSPAdultPost.txt": {
+    "rows": 217,
+    "patients": 217,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "INSPAdultPostMoreHope",
+      "INSPAdultPostWorryLess",
+      "INSPAdultPostRedConcern",
+      "INSPAdultPostEasierDo",
+      "INSPAdultPostDecrLowBG",
+      "INSPAdultPostDecrHighBG",
+      "INSPAdultPostStayTarg",
+      "INSPAdultPostImprA1c",
+      "INSPAdultPostEasyEat",
+      "INSPAdultPostEasyExer",
+      "INSPAdultPostManSchWrk",
+      "INSPAdultPostManSocLife",
+      "INSPAdultPostManSickDay",
+      "INSPAdultPostSleepBet",
+      "INSPAdultPostFewONLows",
+      "INSPAdultPostImprQOL",
+      "INSPAdultPostImprFamQOL",
+      "INSPAdultPostDriving",
+      "INSPAdultPostSexLife",
+      "INSPAdultPostAlcohol",
+      "INSPAdultPostPregnant",
+      "INSPAdultPostRedLTComp"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "INSPAdultPostMoreHope": 1,
+      "INSPAdultPostWorryLess": 1,
+      "INSPAdultPostRedConcern": 1,
+      "INSPAdultPostEasierDo": 2,
+      "INSPAdultPostDecrLowBG": 1,
+      "INSPAdultPostDecrHighBG": 2,
+      "INSPAdultPostStayTarg": 1,
+      "INSPAdultPostImprA1c": 1,
+      "INSPAdultPostEasyEat": 1,
+      "INSPAdultPostEasyExer": 1,
+      "INSPAdultPostManSchWrk": 2,
+      "INSPAdultPostManSocLife": 1,
+      "INSPAdultPostManSickDay": 1,
+      "INSPAdultPostSleepBet": 2,
+      "INSPAdultPostFewONLows": 1,
+      "INSPAdultPostImprQOL": 1,
+      "INSPAdultPostImprFamQOL": 1,
+      "INSPAdultPostDriving": 1,
+      "INSPAdultPostSexLife": 1,
+      "INSPAdultPostAlcohol": 1,
+      "INSPAdultPostPregnant": 1,
+      "INSPAdultPostRedLTComp": 1
+    }
+  },
+  "IOBP2PSINSPParentBase.txt": {
+    "rows": 165,
+    "patients": 165,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "INSPParentBaseMoreHope",
+      "INSPParentBaseWorryLess",
+      "INSPParentBaseRedConcern",
+      "INSPParentBaseEasierDo",
+      "INSPParentBaseDecrLowBG",
+      "INSPParentBaseDecrHighBG",
+      "INSPParentBaseStayTarg",
+      "INSPParentBaseImprA1c",
+      "INSPParentBaseEasyEat",
+      "INSPParentBaseEasyExer",
+      "INSPParentBaseManSchWrk",
+      "INSPParentBaseManSocLife",
+      "INSPParentBaseManSickDay",
+      "INSPParentBaseSleepBet",
+      "INSPParentBaseFewONLows",
+      "INSPParentBaseImprQOL",
+      "INSPParentBaseImprFamQOL",
+      "INSPParentBaseDriving",
+      "INSPParentBaseAlcohol",
+      "INSPParentBasePregnant",
+      "INSPParentBaseRedLTComp"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "INSPParentBaseMoreHope": 0,
+      "INSPParentBaseWorryLess": 0,
+      "INSPParentBaseRedConcern": 0,
+      "INSPParentBaseEasierDo": 0,
+      "INSPParentBaseDecrLowBG": 0,
+      "INSPParentBaseDecrHighBG": 0,
+      "INSPParentBaseStayTarg": 0,
+      "INSPParentBaseImprA1c": 0,
+      "INSPParentBaseEasyEat": 0,
+      "INSPParentBaseEasyExer": 0,
+      "INSPParentBaseManSchWrk": 0,
+      "INSPParentBaseManSocLife": 0,
+      "INSPParentBaseManSickDay": 0,
+      "INSPParentBaseSleepBet": 0,
+      "INSPParentBaseFewONLows": 0,
+      "INSPParentBaseImprQOL": 0,
+      "INSPParentBaseImprFamQOL": 0,
+      "INSPParentBaseDriving": 0,
+      "INSPParentBaseAlcohol": 0,
+      "INSPParentBasePregnant": 0,
+      "INSPParentBaseRedLTComp": 0
+    }
+  },
+  "IOBP2PSINSPParentPost.txt": {
+    "rows": 112,
+    "patients": 112,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "INSPParentPostMoreHope",
+      "INSPParentPostWorryLess",
+      "INSPParentPostRedConcern",
+      "INSPParentPostEasierDo",
+      "INSPParentPostDecrLowBG",
+      "INSPParentPostDecrHighBG",
+      "INSPParentPostStayTarg",
+      "INSPParentPostImprA1c",
+      "INSPParentPostEasyEat",
+      "INSPParentPostEasyExer",
+      "INSPParentPostManSchWrk",
+      "INSPParentPostManSocLife",
+      "INSPParentPostManSickDay",
+      "INSPParentPostSleepBet",
+      "INSPParentPostFewONLows",
+      "INSPParentPostImprQOL",
+      "INSPParentPostImprFamQOL",
+      "INSPParentPostDriving",
+      "INSPParentPostAlcohol",
+      "INSPParentPostPregnant",
+      "INSPParentPostRedLTComp"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "INSPParentPostMoreHope": 0,
+      "INSPParentPostWorryLess": 0,
+      "INSPParentPostRedConcern": 0,
+      "INSPParentPostEasierDo": 1,
+      "INSPParentPostDecrLowBG": 0,
+      "INSPParentPostDecrHighBG": 0,
+      "INSPParentPostStayTarg": 0,
+      "INSPParentPostImprA1c": 0,
+      "INSPParentPostEasyEat": 0,
+      "INSPParentPostEasyExer": 0,
+      "INSPParentPostManSchWrk": 0,
+      "INSPParentPostManSocLife": 0,
+      "INSPParentPostManSickDay": 0,
+      "INSPParentPostSleepBet": 0,
+      "INSPParentPostFewONLows": 0,
+      "INSPParentPostImprQOL": 0,
+      "INSPParentPostImprFamQOL": 0,
+      "INSPParentPostDriving": 0,
+      "INSPParentPostAlcohol": 0,
+      "INSPParentPostPregnant": 0,
+      "INSPParentPostRedLTComp": 0
+    }
+  },
+  "IOBP2PSINSPYouthBase.txt": {
+    "rows": 149,
+    "patients": 149,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "INSPYouthBaseMoreHope",
+      "INSPYouthBaseWorryLess",
+      "INSPYouthBaseRedConcern",
+      "INSPYouthBaseEasierDo",
+      "INSPYouthBaseDecrLowBG",
+      "INSPYouthBaseDecrHighBG",
+      "INSPYouthBaseStayTarg",
+      "INSPYouthBaseImprA1c",
+      "INSPYouthBaseEasyEat",
+      "INSPYouthBaseEasyExer",
+      "INSPYouthBaseManSchWrk",
+      "INSPYouthBaseManSocLife",
+      "INSPYouthBaseManSickDay",
+      "INSPYouthBaseSleepBet",
+      "INSPYouthBaseFewONLows",
+      "INSPYouthBaseImprQOL",
+      "INSPYouthBaseImprFamQOL"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "INSPYouthBaseMoreHope": 0,
+      "INSPYouthBaseWorryLess": 0,
+      "INSPYouthBaseRedConcern": 0,
+      "INSPYouthBaseEasierDo": 0,
+      "INSPYouthBaseDecrLowBG": 0,
+      "INSPYouthBaseDecrHighBG": 0,
+      "INSPYouthBaseStayTarg": 0,
+      "INSPYouthBaseImprA1c": 0,
+      "INSPYouthBaseEasyEat": 0,
+      "INSPYouthBaseEasyExer": 0,
+      "INSPYouthBaseManSchWrk": 0,
+      "INSPYouthBaseManSocLife": 0,
+      "INSPYouthBaseManSickDay": 0,
+      "INSPYouthBaseSleepBet": 0,
+      "INSPYouthBaseFewONLows": 0,
+      "INSPYouthBaseImprQOL": 0,
+      "INSPYouthBaseImprFamQOL": 0
+    }
+  },
+  "IOBP2PSINSPYouthPost.txt": {
+    "rows": 98,
+    "patients": 98,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "INSPYouthPostMoreHope",
+      "INSPYouthPostWorryLess",
+      "INSPYouthPostRedConcern",
+      "INSPYouthPostEasierDo",
+      "INSPYouthPostDecrLowBG",
+      "INSPYouthPostDecrHighBG",
+      "INSPYouthPostStayTarg",
+      "INSPYouthPostImprA1c",
+      "INSPYouthPostEasyEat",
+      "INSPYouthPostEasyExer",
+      "INSPYouthPostManSchWrk",
+      "INSPYouthPostManSocLife",
+      "INSPYouthPostManSickDay",
+      "INSPYouthPostSleepBet",
+      "INSPYouthPostFewONLows",
+      "INSPYouthPostImprQOL",
+      "INSPYouthPostImprFamQOL"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "INSPYouthPostMoreHope": 0,
+      "INSPYouthPostWorryLess": 0,
+      "INSPYouthPostRedConcern": 0,
+      "INSPYouthPostEasierDo": 0,
+      "INSPYouthPostDecrLowBG": 0,
+      "INSPYouthPostDecrHighBG": 0,
+      "INSPYouthPostStayTarg": 0,
+      "INSPYouthPostImprA1c": 0,
+      "INSPYouthPostEasyEat": 0,
+      "INSPYouthPostEasyExer": 0,
+      "INSPYouthPostManSchWrk": 0,
+      "INSPYouthPostManSocLife": 0,
+      "INSPYouthPostManSickDay": 0,
+      "INSPYouthPostSleepBet": 0,
+      "INSPYouthPostFewONLows": 0,
+      "INSPYouthPostImprQOL": 0,
+      "INSPYouthPostImprFamQOL": 0
+    }
+  },
+  "IOBP2PSPAIDCChild.txt": {
+    "rows": 228,
+    "patients": 78,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "PAIDCSad",
+      "PAIDCStressed",
+      "PAIDCAngry",
+      "PAIDCTiredCare",
+      "PAIDCNagAboutFoodBG",
+      "PAIDCParentNoTrust",
+      "PAIDCMustBePerfect",
+      "PAIDCBGUpDownTryHard",
+      "PAIDCBlamedForBG",
+      "PAIDCNoUnderstand",
+      "PAIDCParentsWorry"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "PAIDCSad": 0,
+      "PAIDCStressed": 0,
+      "PAIDCAngry": 0,
+      "PAIDCTiredCare": 0,
+      "PAIDCNagAboutFoodBG": 0,
+      "PAIDCParentNoTrust": 0,
+      "PAIDCMustBePerfect": 0,
+      "PAIDCBGUpDownTryHard": 0,
+      "PAIDCBlamedForBG": 0,
+      "PAIDCNoUnderstand": 1,
+      "PAIDCParentsWorry": 0
+    }
+  },
+  "IOBP2PSPAIDTTeen.txt": {
+    "rows": 202,
+    "patients": 71,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "PAIDTSad",
+      "PAIDTOverhwelm",
+      "PAIDTAngry",
+      "PAIDTBurnedOut",
+      "PAIDTNotCheckBGEnough",
+      "PAIDTNotMotivated",
+      "PAIDTDiabPolice",
+      "PAIDTParentNoTrust",
+      "PAIDTSkipBGCks",
+      "PAIDTFailRegimen",
+      "PAIDTBlamedforBG",
+      "PAIDTNoUnderstand",
+      "PAIDTInWayOfFun",
+      "PAIDTParentsWorry"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "PAIDTSad": 0,
+      "PAIDTOverhwelm": 0,
+      "PAIDTAngry": 0,
+      "PAIDTBurnedOut": 0,
+      "PAIDTNotCheckBGEnough": 0,
+      "PAIDTNotMotivated": 0,
+      "PAIDTDiabPolice": 0,
+      "PAIDTParentNoTrust": 0,
+      "PAIDTSkipBGCks": 0,
+      "PAIDTFailRegimen": 0,
+      "PAIDTBlamedforBG": 0,
+      "PAIDTNoUnderstand": 0,
+      "PAIDTInWayOfFun": 0,
+      "PAIDTParentsWorry": 0
+    }
+  },
+  "IOBP2PSPPAIDCParent.txt": {
+    "rows": 273,
+    "patients": 94,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "PPAIDCSad",
+      "PPAIDCOverwhelm",
+      "PPAIDCAngry",
+      "PPAIDCConcernFood",
+      "PPAIDCWorryFuture",
+      "PPAIDCUpsetOffTrack",
+      "PPAIDCBurnedOut",
+      "PPAIDCNotCheckBG",
+      "PPAIDCDefeated",
+      "PPAIDCDiabPolice",
+      "PPAIDCCannotTrust",
+      "PPAIDCMustBePerfect",
+      "PPAIDCWorryBGCks",
+      "PPAIDCBGSwing",
+      "PPAIDCOftenFail",
+      "PPAIDCWorryTooMuch"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "PPAIDCSad": 0,
+      "PPAIDCOverwhelm": 0,
+      "PPAIDCAngry": 0,
+      "PPAIDCConcernFood": 0,
+      "PPAIDCWorryFuture": 0,
+      "PPAIDCUpsetOffTrack": 0,
+      "PPAIDCBurnedOut": 0,
+      "PPAIDCNotCheckBG": 0,
+      "PPAIDCDefeated": 0,
+      "PPAIDCDiabPolice": 0,
+      "PPAIDCCannotTrust": 0,
+      "PPAIDCMustBePerfect": 0,
+      "PPAIDCWorryBGCks": 0,
+      "PPAIDCBGSwing": 0,
+      "PPAIDCOftenFail": 0,
+      "PPAIDCWorryTooMuch": 0
+    }
+  },
+  "IOBP2PSPPAIDTParent.txt": {
+    "rows": 202,
+    "patients": 71,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "PPAIDTSad",
+      "PPAIDTOverwhelm",
+      "PPAIDTAngry",
+      "PPAIDTConcernFood",
+      "PPAIDTWorryFuture",
+      "PPAIDTUpsetOffTrack",
+      "PPAIDTBurnedOut",
+      "PPAIDTNotCheckBG",
+      "PPAIDTDefeated",
+      "PPAIDTDiabPolice",
+      "PPAIDTCannotTrust",
+      "PPAIDTWorryBGCks",
+      "PPAIDTBGSwing",
+      "PPAIDTOftenFail",
+      "PPAIDTWorryTooMuch"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "PPAIDTSad": 0,
+      "PPAIDTOverwhelm": 0,
+      "PPAIDTAngry": 0,
+      "PPAIDTConcernFood": 0,
+      "PPAIDTWorryFuture": 0,
+      "PPAIDTUpsetOffTrack": 0,
+      "PPAIDTBurnedOut": 0,
+      "PPAIDTNotCheckBG": 0,
+      "PPAIDTDefeated": 0,
+      "PPAIDTDiabPolice": 0,
+      "PPAIDTCannotTrust": 0,
+      "PPAIDTWorryBGCks": 0,
+      "PPAIDTBGSwing": 0,
+      "PPAIDTOftenFail": 0,
+      "PPAIDTWorryTooMuch": 0
+    }
+  },
+  "IOBP2PSPastExpAP.txt": {
+    "rows": 315,
+    "patients": 315,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "PastExpAPPastUse",
+      "PastExpAPUseTandBasIQ",
+      "PastExpAPUseTandCntrIQ",
+      "PastExpAPUseDIYLoop",
+      "PastExpAPUseMedtr670G",
+      "PastExpAPUseMedtr640G",
+      "PastExpAPUseMedtr630G",
+      "PastExpAPUseMedtr530G",
+      "PastExpAPUseOth",
+      "PastExpAPMostRec",
+      "PastExpAPiLetComp",
+      "PastExpAPPrefer"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "PastExpAPPastUse": 1,
+      "PastExpAPUseTandBasIQ": 277,
+      "PastExpAPUseTandCntrIQ": 254,
+      "PastExpAPUseDIYLoop": 311,
+      "PastExpAPUseMedtr670G": 264,
+      "PastExpAPUseMedtr640G": 313,
+      "PastExpAPUseMedtr630G": 308,
+      "PastExpAPUseMedtr530G": 308,
+      "PastExpAPUseOth": 308,
+      "PastExpAPMostRec": 195,
+      "PastExpAPiLetComp": 195,
+      "PastExpAPPrefer": 195
+    }
+  },
+  "IOBP2PSPastExpAPParent.txt": {
+    "rows": 112,
+    "patients": 112,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "PastExpAPParentPastUse",
+      "PastExpAPParentUseTandBasIQ",
+      "PastExpAPParentUseTandCntrIQ",
+      "PastExpAPParentUseDIYLoop",
+      "PastExpAPParentUseMedtr670G",
+      "PastExpAPParentUseMedtr640G",
+      "PastExpAPParentUseMedtr630G",
+      "PastExpAPParentUseMedtr530G",
+      "PastExpAPParentUseOth",
+      "PastExpAPParentMostRec",
+      "PastExpAPParentiLetComp",
+      "PastExpAPParentPrefer"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "PastExpAPParentPastUse": 0,
+      "PastExpAPParentUseTandBasIQ": 102,
+      "PastExpAPParentUseTandCntrIQ": 92,
+      "PastExpAPParentUseDIYLoop": 111,
+      "PastExpAPParentUseMedtr670G": 100,
+      "PastExpAPParentUseMedtr640G": 111,
+      "PastExpAPParentUseMedtr630G": 111,
+      "PastExpAPParentUseMedtr530G": 111,
+      "PastExpAPParentUseOth": 109,
+      "PastExpAPParentMostRec": 75,
+      "PastExpAPParentiLetComp": 75,
+      "PastExpAPParentPrefer": 75
+    }
+  },
+  "IOBP2PST1DDS.txt": {
+    "rows": 794,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "T1DDSNotSkilled",
+      "T1DDSNotCarefulEat",
+      "T1DDSDontNoticHypo",
+      "T1DDSTreatDiff",
+      "T1DDSDiscHighBG",
+      "T1DDSFamBigDeal",
+      "T1DDSCantTellDoc",
+      "T1DDSNotEnoughIns",
+      "T1DDSTooMuchEquip",
+      "T1DDSHideDiab",
+      "T1DDSFamHypoWorry",
+      "T1DDSBGCheckNotOft",
+      "T1DDSLongTermCompl",
+      "T1DDSNoHelpDoc",
+      "T1DDSSerHypoSleep",
+      "T1DDSFoodContrLife",
+      "T1DDSFamTreatSick",
+      "T1DDSDocDoesntUnderstand",
+      "T1DDSLessAttractEmploy",
+      "T1DDSFamDiabPolice",
+      "T1DDSPerfectDiabMgmt",
+      "T1DDSSerHypoDriving",
+      "T1DDSEatOutOfControl",
+      "T1DDSPplThinkLess",
+      "T1DDSNotGoodEnough",
+      "T1DDSDocDosntKnow",
+      "T1DDSNotSafeSerHypo",
+      "T1DDSDiabNotEnoughAttent"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "T1DDSNotSkilled": 2,
+      "T1DDSNotCarefulEat": 2,
+      "T1DDSDontNoticHypo": 2,
+      "T1DDSTreatDiff": 3,
+      "T1DDSDiscHighBG": 2,
+      "T1DDSFamBigDeal": 2,
+      "T1DDSCantTellDoc": 3,
+      "T1DDSNotEnoughIns": 2,
+      "T1DDSTooMuchEquip": 2,
+      "T1DDSHideDiab": 2,
+      "T1DDSFamHypoWorry": 2,
+      "T1DDSBGCheckNotOft": 2,
+      "T1DDSLongTermCompl": 3,
+      "T1DDSNoHelpDoc": 2,
+      "T1DDSSerHypoSleep": 2,
+      "T1DDSFoodContrLife": 2,
+      "T1DDSFamTreatSick": 3,
+      "T1DDSDocDoesntUnderstand": 2,
+      "T1DDSLessAttractEmploy": 2,
+      "T1DDSFamDiabPolice": 2,
+      "T1DDSPerfectDiabMgmt": 2,
+      "T1DDSSerHypoDriving": 2,
+      "T1DDSEatOutOfControl": 2,
+      "T1DDSPplThinkLess": 2,
+      "T1DDSNotGoodEnough": 2,
+      "T1DDSDocDosntKnow": 2,
+      "T1DDSNotSafeSerHypo": 2,
+      "T1DDSDiabNotEnoughAttent": 2
+    }
+  },
+  "IOBP2PSTransDailyQuest.txt": {
+    "rows": 433,
+    "patients": 220,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "DlySurvComplBy",
+      "DlySurvLowBG",
+      "DlySurvLowBGCarbTimes",
+      "DlySurvLowBGHelp",
+      "DlySurvLowBGCarbGrams",
+      "DlySurvLowBGOtherTrt"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "DlySurvComplBy": 4,
+      "DlySurvLowBG": 4,
+      "DlySurvLowBGCarbTimes": 205,
+      "DlySurvLowBGHelp": 205,
+      "DlySurvLowBGCarbGrams": 205,
+      "DlySurvLowBGOtherTrt": 205
+    }
+  },
+  "IOBP2PSWHO5.txt": {
+    "rows": 1225,
+    "patients": 424,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "WHOCheer",
+      "WHOCalm",
+      "WHOVigor",
+      "WHORest",
+      "WHOLifeInterest"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "WHOCheer": 2,
+      "WHOCalm": 2,
+      "WHOVigor": 3,
+      "WHORest": 4,
+      "WHOLifeInterest": 2
+    }
+  },
+  "IOBP2PSWeeklyQuest.txt": {
+    "rows": 4928,
+    "patients": 431,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SurveyName",
+      "SurveyVisit",
+      "WkSurvComplBy",
+      "WkSurvLowBG",
+      "WkSurvLowBGCarbTimes",
+      "WkSurvLowBGHelp",
+      "WkSurvLowBGCarbGrams",
+      "WkSurvLowBGOtherTrt"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SurveyName": 0,
+      "SurveyVisit": 0,
+      "WkSurvComplBy": 25,
+      "WkSurvLowBG": 25,
+      "WkSurvLowBGCarbTimes": 2174,
+      "WkSurvLowBGHelp": 2174,
+      "WkSurvLowBGCarbGrams": 2174,
+      "WkSurvLowBGOtherTrt": 2174
+    }
+  },
+  "IOBP2PregMenstrInfo.txt": {
+    "rows": 1484,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "PregTstNotDone",
+      "PregTstNotDoneReas",
+      "PregTstDt",
+      "PregTstResult",
+      "PregTstType",
+      "PregTstMaterial",
+      "PregTstExpDt",
+      "LastMenstrDt",
+      "LastMenstrDtApprox",
+      "LastMenstrDtNA",
+      "PregTstLoc",
+      "PregTstKitInfoUnk",
+      "PregTstIDNA"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "PregTstNotDone": 725,
+      "PregTstNotDoneReas": 725,
+      "PregTstDt": 759,
+      "PregTstResult": 759,
+      "PregTstType": 759,
+      "PregTstMaterial": 757,
+      "PregTstExpDt": 823,
+      "LastMenstrDt": 776,
+      "LastMenstrDtApprox": 1255,
+      "LastMenstrDtNA": 708,
+      "PregTstLoc": 759,
+      "PregTstKitInfoUnk": 1483,
+      "PregTstIDNA": 1264
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 440,
+        "Week 6": 209,
+        "Week 2": 207,
+        "Week 13": 207,
+        "Randomization": 206,
+        "Week 10": 204,
+        "Test-Run Day 0": 11
+      },
+      "PregTstNotDone": {
+        "1.0": 759,
+        "<MISSING>": 725
+      },
+      "PregTstNotDoneReas": {
+        "<MISSING>": 725,
+        "Participant is male": 230,
+        "Post-menopausal": 203,
+        "Pre-pubertal": 182,
+        "Surgically sterile": 100,
+        "Other": 44
+      },
+      "PregTstResult": {
+        "<MISSING>": 759,
+        "Negative": 725
+      },
+      "PregTstType": {
+        "<MISSING>": 759,
+        "Urine": 724,
+        "Blood": 1
+      },
+      "PregTstMaterial": {
+        "<MISSING>": 757,
+        "OTC Kit": 664,
+        "Local Lab": 63
+      },
+      "LastMenstrDtApprox": {
+        "<MISSING>": 1255,
+        "1.0": 229
+      },
+      "LastMenstrDtNA": {
+        "1.0": 776,
+        "<MISSING>": 708
+      },
+      "PregTstLoc": {
+        "<MISSING>": 759,
+        "In clinic": 506,
+        "Home": 219
+      },
+      "PregTstKitInfoUnk": {
+        "<MISSING>": 1483,
+        "1.0": 1
+      },
+      "PregTstIDNA": {
+        "<MISSING>": 1264,
+        "1.0": 220
+      }
+    }
+  },
+  "IOBP2PtFinalStat.txt": {
+    "rows": 431,
+    "patients": 431,
+    "columns": [
+      "RecID",
+      "PtID",
+      "PtFinalStatusReason",
+      "PtWithdrawAE",
+      "PtWithdrawChgDr",
+      "PtWithdrawNoStdyTrt",
+      "PtWithdrawFin",
+      "PtWithdrawChgIns",
+      "PtWithdrawMoved",
+      "PtWithdrawOthTrtReq",
+      "PtWithdrawPoorHealth",
+      "PtWithdrawPoorOut",
+      "PtWithdrawSched",
+      "PtWithdrawTravDiff",
+      "PtWithdrawVisLen",
+      "PtWithdrawUnk",
+      "PtWithdrawOth",
+      "WithdrawDt",
+      "DeathDt",
+      "NoOngoingAE"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "PtFinalStatusReason": 0,
+      "PtWithdrawAE": 431,
+      "PtWithdrawChgDr": 431,
+      "PtWithdrawNoStdyTrt": 428,
+      "PtWithdrawFin": 431,
+      "PtWithdrawChgIns": 431,
+      "PtWithdrawMoved": 431,
+      "PtWithdrawOthTrtReq": 431,
+      "PtWithdrawPoorHealth": 431,
+      "PtWithdrawPoorOut": 431,
+      "PtWithdrawSched": 431,
+      "PtWithdrawTravDiff": 431,
+      "PtWithdrawVisLen": 431,
+      "PtWithdrawUnk": 431,
+      "PtWithdrawOth": 429,
+      "WithdrawDt": 427,
+      "DeathDt": 431,
+      "NoOngoingAE": 0
+    },
+    "low_cardinality_values": {
+      "PtFinalStatusReason": {
+        "Participant has completed the study": 427,
+        "Requests to withdraw not in writing": 4
+      },
+      "PtWithdrawAE": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawChgDr": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawNoStdyTrt": {
+        "<MISSING>": 428,
+        "1.0": 3
+      },
+      "PtWithdrawFin": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawChgIns": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawMoved": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawOthTrtReq": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawPoorHealth": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawPoorOut": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawSched": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawTravDiff": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawVisLen": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawUnk": {
+        "<MISSING>": 431
+      },
+      "PtWithdrawOth": {
+        "<MISSING>": 429,
+        "1.0": 2
+      },
+      "WithdrawDt": {
+        "<MISSING>": 427,
+        "3/7/2021": 1,
+        "2/10/2021": 1,
+        "5/17/2020": 1,
+        "9/24/2020": 1
+      },
+      "DeathDt": {
+        "<MISSING>": 431
+      },
+      "NoOngoingAE": {
+        "1": 431
+      }
+    }
+  },
+  "IOBP2PtRoster.txt": {
+    "rows": 440,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "SiteID",
+      "EnrollDt",
+      "RandDt",
+      "VisitSchedStartDt",
+      "TrtGroup",
+      "AgeAsofEnrollDt",
+      "RCTPtStatus",
+      "TransRandDt",
+      "TransTrtGroup"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "SiteID": 0,
+      "EnrollDt": 0,
+      "RandDt": 0,
+      "VisitSchedStartDt": 0,
+      "TrtGroup": 0,
+      "AgeAsofEnrollDt": 0,
+      "RCTPtStatus": 0,
+      "TransRandDt": 143,
+      "TransTrtGroup": 143
+    },
+    "low_cardinality_values": {
+      "SiteID": {
+        "6": 44,
+        "1": 38,
+        "2": 35,
+        "3": 35,
+        "8": 30,
+        "12": 30,
+        "14": 30,
+        "16": 27,
+        "7": 26,
+        "9": 23,
+        "15": 20,
+        "10": 19,
+        "4": 18,
+        "5": 18,
+        "11": 18,
+        "17": 16,
+        "13": 13
+      },
+      "TrtGroup": {
+        "BP": 219,
+        "BPFiasp": 114,
+        "Control": 107
+      },
+      "RCTPtStatus": {
+        "Completed": 436,
+        "Dropped": 4
+      },
+      "TransTrtGroup": {
+        "UC": 149,
+        "BP": 148,
+        "<MISSING>": 143
+      }
+    }
+  },
+  "IOBP2RandBaseInfo.txt": {
+    "rows": 388,
+    "patients": 388,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "SHMostRec",
+      "DKAMostRec",
+      "DiabTrt",
+      "TotDlyIns",
+      "TotDlyInsUnk",
+      "TotDlyBasOrLongIns",
+      "TotDlyBasOrLongInsUnk",
+      "DlyBolShortInhNbr",
+      "DlyBolShortInhNbrUnk",
+      "CGMType"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 285,
+      "SHMostRec": 0,
+      "DKAMostRec": 0,
+      "DiabTrt": 0,
+      "TotDlyIns": 11,
+      "TotDlyInsUnk": 377,
+      "TotDlyBasOrLongIns": 13,
+      "TotDlyBasOrLongInsUnk": 375,
+      "DlyBolShortInhNbr": 17,
+      "DlyBolShortInhNbrUnk": 371,
+      "CGMType": 51
+    },
+    "low_cardinality_values": {
+      "SHMostRec": {
+        "Never": 217,
+        ">=6 months ago": 163,
+        "< 3 months ago": 6,
+        "3-<6 months ago": 2
+      },
+      "DKAMostRec": {
+        ">=6 months ago": 194,
+        "Never": 192,
+        "3-<6 months ago": 1,
+        "< 3 months ago": 1
+      },
+      "DiabTrt": {
+        "Multiple daily injections": 134,
+        "Tandem Control IQ": 80,
+        "Conventional pump without automation": 60,
+        "Patch pump": 59,
+        "Medtronic 670G/770G using automode": 38,
+        "Tandem Basal IQ": 17
+      },
+      "TotDlyInsUnk": {
+        "<MISSING>": 377,
+        "1.0": 11
+      },
+      "TotDlyBasOrLongInsUnk": {
+        "<MISSING>": 375,
+        "1.0": 13
+      },
+      "DlyBolShortInhNbr": {
+        "4.0": 109,
+        "5.0": 80,
+        "3.0": 59,
+        "6.0": 42,
+        "7.0": 22,
+        "<MISSING>": 17,
+        "8.0": 17,
+        "2.0": 14,
+        "9.0": 11,
+        "10.0": 5,
+        "11.0": 4,
+        "12.0": 2,
+        "1.0": 2,
+        "23.0": 1,
+        "13.0": 1,
+        "34.0": 1,
+        "17.0": 1
+      },
+      "DlyBolShortInhNbrUnk": {
+        "<MISSING>": 371,
+        "1.0": 17
+      },
+      "CGMType": {
+        "Dexcom": 276,
+        "<MISSING>": 51,
+        "Medtronic": 45,
+        "Abbott": 15,
+        "Senseonics": 1
+      }
+    }
+  },
+  "IOBP2RunInRev.txt": {
+    "rows": 157,
+    "patients": 146,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "CGMMinUse",
+      "PtRunInStat"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "CGMMinUse": 0,
+      "PtRunInStat": 146
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Run-In Review": 146,
+        "Repeat Run-In Review": 11
+      },
+      "CGMMinUse": {
+        "Yes": 146,
+        "No": 11
+      },
+      "PtRunInStat": {
+        "<MISSING>": 146,
+        "Participant will repeat CGM use": 11
+      }
+    }
+  },
+  "IOBP2VirtVisInfo.txt": {
+    "rows": 2613,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "VisitVirt",
+      "VisitVirtFormat",
+      "PtA1cSampKitShipDt",
+      "PtA1cSampCollectDt"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "VisitVirt": 0,
+      "VisitVirtFormat": 1949,
+      "PtA1cSampKitShipDt": 2485,
+      "PtA1cSampCollectDt": 2485
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Randomization": 440,
+        "Day 0": 439,
+        "Week 2": 435,
+        "Week 13": 435,
+        "Week 6": 434,
+        "Week 10": 430
+      },
+      "VisitVirt": {
+        "No": 1949,
+        "Yes": 664
+      },
+      "VisitVirtFormat": {
+        "<MISSING>": 1949,
+        "Video only": 449,
+        "Telephone only": 171,
+        "Partial video and partial telephone": 34,
+        "Other": 10
+      }
+    }
+  },
+  "IOBP2VisitInfo.txt": {
+    "rows": 6012,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "VisitDt",
+      "OutOfWin",
+      "OutOfWinReason",
+      "VisitMiss",
+      "VisitMissReason",
+      "VisitVirtual"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "VisitDt": 41,
+      "OutOfWin": 5936,
+      "OutOfWinReason": 5936,
+      "VisitMiss": 5971,
+      "VisitMissReason": 5971,
+      "VisitVirtual": 4576
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Unscheduled": 897,
+        "Randomization": 440,
+        "Week 1 Call": 439,
+        "Week 2": 439,
+        "Week 6": 439,
+        "Day 0": 439,
+        "Day 2 Call": 439,
+        "Week 10": 436,
+        "Week 13": 435,
+        "Screening": 422,
+        "CGM Assessment": 420,
+        "End of Transition": 290,
+        "Run-In Review": 146,
+        "Run-In Initiation": 146,
+        "BG Run iLet Initiation (Day 1)": 58,
+        "BG Run iLet Day 2 Call": 58,
+        "BG Run iLet Completion (Day 3)": 58,
+        "Repeat Run-In Review": 11
+      },
+      "OutOfWin": {
+        "<MISSING>": 5936,
+        "1.0": 76
+      },
+      "OutOfWinReason": {
+        "<MISSING>": 5936,
+        "Other": 17,
+        "Work issue": 15,
+        "Bad weather": 11,
+        "Difficulty contacting subject": 11,
+        "Subject on vacation": 7,
+        "Site forgot to schedule": 6,
+        "Personal issue": 3,
+        "Clinic appointment not available": 3,
+        "Travel difficulty": 2,
+        "Poor health": 1
+      },
+      "VisitMiss": {
+        "<MISSING>": 5971,
+        "1.0": 41
+      },
+      "VisitMissReason": {
+        "<MISSING>": 5971,
+        "Other": 21,
+        "Site forgot to schedule": 9,
+        "Difficulty contacting subject": 4,
+        "Adverse event": 3,
+        "Work issue": 2,
+        "Subject on vacation": 1,
+        "COVID-19 pandemic": 1
+      },
+      "VisitVirtual": {
+        "<MISSING>": 4576,
+        "1.0": 1436
+      }
+    }
+  },
+  "IOBP2eGFR.txt": {
+    "rows": 275,
+    "patients": 275,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "Visit",
+      "EGFRDt",
+      "EGFRResult"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "Visit": 0,
+      "EGFRDt": 0,
+      "EGFRResult": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 275
+      }
+    }
+  },
+  "IOBP2iLetRcmndDose.txt": {
+    "rows": 141,
+    "patients": 141,
+    "columns": [
+      "RecID",
+      "PtID",
+      "TotalInsUnts",
+      "AmDoseIns",
+      "PmDoseIns",
+      "BasalRt12amTo6am",
+      "BasalRt6amTo12pm",
+      "BasalRt12pmTo6pm",
+      "BasalRt6pmTo12am",
+      "CorrectFact",
+      "BkstLessDose",
+      "BkstUsualDose",
+      "BkstMoreDose",
+      "LunchLessDose",
+      "LunchUsualDose",
+      "LunchMoreDose",
+      "DinnerLessDose",
+      "DinnerUsualDose",
+      "DinnerMoreDose"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "TotalInsUnts": 95,
+      "AmDoseIns": 119,
+      "PmDoseIns": 104,
+      "BasalRt12amTo6am": 46,
+      "BasalRt6amTo12pm": 46,
+      "BasalRt12pmTo6pm": 46,
+      "BasalRt6pmTo12am": 46,
+      "CorrectFact": 0,
+      "BkstLessDose": 0,
+      "BkstUsualDose": 0,
+      "BkstMoreDose": 0,
+      "LunchLessDose": 0,
+      "LunchUsualDose": 0,
+      "LunchMoreDose": 0,
+      "DinnerLessDose": 0,
+      "DinnerUsualDose": 0,
+      "DinnerMoreDose": 0
+    },
+    "low_cardinality_values": {
+      "TotalInsUnts": {
+        "<MISSING>": 95,
+        "23.0": 6,
+        "17.0": 3,
+        "61.0": 3,
+        "11.0": 2,
+        "49.0": 2,
+        "26.0": 2,
+        "31.0": 2,
+        "27.0": 2,
+        "42.0": 2,
+        "25.0": 2,
+        "14.0": 2,
+        "22.0": 2,
+        "29.0": 1,
+        "19.0": 1,
+        "41.0": 1,
+        "50.0": 1,
+        "47.0": 1,
+        "7.0": 1,
+        "21.0": 1,
+        "10.0": 1,
+        "28.0": 1,
+        "12.0": 1,
+        "20.0": 1,
+        "13.0": 1,
+        "40.0": 1,
+        "52.0": 1,
+        "46.0": 1,
+        "38.0": 1
+      },
+      "AmDoseIns": {
+        "<MISSING>": 119,
+        "0.0": 4,
+        "20.0": 2,
+        "6.0": 2,
+        "14.0": 2,
+        "61.0": 2,
+        "11.0": 1,
+        "29.0": 1,
+        "23.0": 1,
+        "27.0": 1,
+        "26.0": 1,
+        "25.0": 1,
+        "17.0": 1,
+        "42.0": 1,
+        "49.0": 1,
+        "22.0": 1
+      },
+      "PmDoseIns": {
+        "<MISSING>": 104,
+        "23.0": 4,
+        "14.0": 2,
+        "13.0": 2,
+        "31.0": 2,
+        "0.0": 2,
+        "11.0": 2,
+        "25.0": 2,
+        "17.0": 2,
+        "42.0": 1,
+        "38.0": 1,
+        "41.0": 1,
+        "50.0": 1,
+        "47.0": 1,
+        "7.0": 1,
+        "21.0": 1,
+        "10.0": 1,
+        "24.0": 1,
+        "12.0": 1,
+        "20.0": 1,
+        "26.0": 1,
+        "52.0": 1,
+        "19.0": 1,
+        "8.0": 1,
+        "22.0": 1,
+        "46.0": 1,
+        "6.0": 1,
+        "61.0": 1
+      },
+      "BasalRt12amTo6am": {
+        "<MISSING>": 46,
+        "0.7": 11,
+        "1.0": 10,
+        "0.6": 9,
+        "1.4": 8,
+        "0.8": 8,
+        "1.3": 7,
+        "0.5": 7,
+        "0.9": 6,
+        "1.2": 5,
+        "1.1": 5,
+        "1.6": 4,
+        "0.4": 3,
+        "0.3": 3,
+        "1.5": 2,
+        "1.7": 2,
+        "2.1": 2,
+        "1.9": 1,
+        "0.2": 1,
+        "2.3": 1
+      },
+      "BasalRt6amTo12pm": {
+        "<MISSING>": 46,
+        "0.8": 13,
+        "0.7": 9,
+        "1.0": 9,
+        "0.4": 8,
+        "0.9": 8,
+        "0.6": 8,
+        "1.2": 7,
+        "1.1": 6,
+        "1.3": 5,
+        "0.5": 5,
+        "1.4": 4,
+        "1.7": 4,
+        "1.6": 2,
+        "1.5": 2,
+        "0.2": 2,
+        "1.9": 1,
+        "2.2": 1,
+        "1.8": 1
+      },
+      "BasalRt12pmTo6pm": {
+        "<MISSING>": 46,
+        "1.1": 11,
+        "0.8": 11,
+        "1.0": 8,
+        "1.2": 8,
+        "0.9": 7,
+        "0.5": 7,
+        "1.3": 6,
+        "1.4": 6,
+        "0.7": 5,
+        "0.6": 5,
+        "1.5": 4,
+        "1.9": 3,
+        "1.7": 3,
+        "0.4": 2,
+        "2.0": 2,
+        "0.3": 2,
+        "1.8": 2,
+        "1.6": 1,
+        "0.2": 1,
+        "2.5": 1
+      },
+      "BasalRt6pmTo12am": {
+        "<MISSING>": 46,
+        "0.9": 12,
+        "0.8": 10,
+        "0.5": 9,
+        "1.5": 8,
+        "1.4": 7,
+        "1.2": 7,
+        "1.1": 7,
+        "1.0": 5,
+        "1.6": 5,
+        "0.6": 5,
+        "0.3": 4,
+        "1.3": 4,
+        "2.2": 2,
+        "0.7": 2,
+        "1.8": 2,
+        "1.7": 2,
+        "2.4": 2,
+        "0.4": 1,
+        "0.2": 1
+      }
+    }
+  },
+  "IOBP2iLetTrain.txt": {
+    "rows": 332,
+    "patients": 332,
+    "columns": [
+      "RecID",
+      "PtID",
+      "ParentLoginVisitID",
+      "iLetConfirm",
+      "DexTransSerNumNA"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "ParentLoginVisitID": 0,
+      "iLetConfirm": 0,
+      "DexTransSerNumNA": 258
+    },
+    "low_cardinality_values": {
+      "iLetConfirm": {
+        "1": 332
+      },
+      "DexTransSerNumNA": {
+        "<MISSING>": 258,
+        "1.0": 74
+      }
+    }
+  },
+  "STASampleResults.txt": {
+    "rows": 2167,
+    "patients": 440,
+    "columns": [
+      "RecID",
+      "PtID",
+      "Visit",
+      "CollectionDt",
+      "AnalysisDt",
+      "ResultName",
+      "Value",
+      "Units",
+      "STAResultStatus"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "Visit": 0,
+      "CollectionDt": 0,
+      "AnalysisDt": 0,
+      "ResultName": 0,
+      "Value": 0,
+      "Units": 0,
+      "STAResultStatus": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Randomization": 1304,
+        "Week 6": 436,
+        "Week 13": 427
+      },
+      "ResultName": {
+        "GLYHB": 1301,
+        "CPEP": 433,
+        "GLU": 433
+      },
+      "Units": {
+        "%": 1301,
+        "nmol/L": 433,
+        "mg/dL": 433
+      },
+      "STAResultStatus": {
+        "Complete": 2167
+      }
+    }
+  }
+}

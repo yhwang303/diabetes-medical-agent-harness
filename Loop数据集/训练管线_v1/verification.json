@@ -1,0 +1,31 @@
+{
+  "sample_checks": 3272,
+  "trajectory_checks": 280,
+  "future_mutation_checks": 280,
+  "duration_splits_checked": [
+    "train_5min",
+    "train_15min",
+    "train_30min",
+    "train_60min",
+    "validation_5min",
+    "validation_15min",
+    "validation_30min",
+    "validation_60min"
+  ],
+  "failures": [],
+  "cuda_tested": false,
+  "batch_shape": [
+    32,
+    72,
+    14
+  ],
+  "seconds": 40.966213583014905,
+  "prepared_audit_sha256": "14f262a2098d394140e1bc986377fec5071fd60951b3d4e6f3858d1c780a6142",
+  "code_sha256": {
+    "benchmark_cuda.py": "872c933a77bc1d7e4d8189a012ac7cee23b2e1ebb1bf0fdf2d63cee38c1dba04",
+    "verify_pipeline.py": "ed52d587ae19def3b25ee925dfc10c3d21ce2ad6d41c71837b33b20e053119eb",
+    "pipeline.py": "db003db3ae10bbe81bb7fe3516be130159369b12c5b3fc611401363978f53fa6",
+    "test_pipeline.py": "f6486b7accf49db8b062ebe38981e8fdf272ebe5ec874be12e8520765aad4018"
+  },
+  "scope": "Data loader correctness only; not policy efficacy or counterfactual validity"
+}

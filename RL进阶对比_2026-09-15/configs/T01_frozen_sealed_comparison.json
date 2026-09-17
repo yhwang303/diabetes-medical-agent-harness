@@ -1,0 +1,80 @@
+{
+  "created_utc": "2026-09-15T14:01:06.645632+00:00",
+  "name": "T01_frozen_sealed_comparison",
+  "contract": "simulation_contract_v3_single_seed.json",
+  "contract_sha256": "28918475457934d78ec7fd1a111b721e39d37961a937e1de190292f3add9e96b",
+  "candidate": "Ours_bound040",
+  "policies": {
+    "nominal": null,
+    "BC": "results/R00_bc_pilot/export_0050000.npz",
+    "ReBRAC_BC100": "results/R21_rebrac_bc100/export_0050000.npz",
+    "FQL_alpha100": "results/R22_fql_alpha100/export_0050000.npz",
+    "Anchor_FQL": "results/R32_anchor_fql/export_0050000.npz",
+    "Ours_bound040": "results/O07_bounded040_rl/export_0050000.npz",
+    "Bound040_noRL": "results/O08_bounded040_noRL/export_0050000.npz"
+  },
+  "weights": {
+    "BC": {
+      "path": "results/R00_bc_pilot/export_0050000.npz",
+      "sha256": "9c73bb2bc386a5a3c740365dbe2b36a01c42d00f62109b00d45197c129ae7101",
+      "metadata_sha256": "ce4c5275bfb30cc8ef577017ba407ec9d75e6252b69303a0804b167f969de393"
+    },
+    "ReBRAC_BC100": {
+      "path": "results/R21_rebrac_bc100/export_0050000.npz",
+      "sha256": "5f60fe4d82dda41be7998b21915bfdbd03f544bee090aae934b312e4268a3a42",
+      "metadata_sha256": "423410cba0c4ade389c86b562138dda58f4f8951e25ca86ca851b886d464a1bd"
+    },
+    "FQL_alpha100": {
+      "path": "results/R22_fql_alpha100/export_0050000.npz",
+      "sha256": "419bf7dff6aa0d479eb0908b0614e8e52767e878d3ea5ca9fb324f2b19f084c7",
+      "metadata_sha256": "f5aea698070b09b76d604500259b09813ca40ad76145eb0a8054523f3c4bae36"
+    },
+    "Anchor_FQL": {
+      "path": "results/R32_anchor_fql/export_0050000.npz",
+      "sha256": "cec18488561c9e2ee4ae592ac5bc7240ace11362418314f27eb939bd164f1a2f",
+      "metadata_sha256": "3e524958e38c52a019f048f048781f9ff6f0a049a01770e5e8b587a59c2485a1"
+    },
+    "Ours_bound040": {
+      "path": "results/O07_bounded040_rl/export_0050000.npz",
+      "sha256": "2f3e71a534839aeda9e03f6b52ea34e207bc2e447b0d570bddab3bc1192cb19f",
+      "metadata_sha256": "717eada8e15f2cc74f520097271561c06376a64f579de1dd3d9cffc6be4b1cae"
+    },
+    "Bound040_noRL": {
+      "path": "results/O08_bounded040_noRL/export_0050000.npz",
+      "sha256": "b3cae3e4bf0bd389d90a31c97955f26b98a3e60c3be690064441aa41a4a77582",
+      "metadata_sha256": "a3905d1a5e72d8bb32a3491dc01b5acaf7653ed2f56df0760b1c9330306e742a"
+    }
+  },
+  "source_sha256": {
+    "sim_eval.py": "4374a43744f3438c12ffb20eb6d6345d0521dc89608bed0da25234359e8e6e8d",
+    "observable_history.py": "c1b0d1b83071bf76443f69157358571eae144a396ff7d0a8b984e8d66d70f75d",
+    "numpy_policy.py": "6db3344a414ec898f9ced5a069b9cafe629a3c8810c6e2002c0b57fe2c108024",
+    "batch_sim.py": "62284e436a4a99bc8d92b0b8b1c6159cac5270f49b068b40182fe0ae021ea526",
+    "final_evaluation.py": "47b880ed68ec5878efc33fbbabfa44b500b8d4aaa52c69332497d80223eccd7a"
+  },
+  "patients": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "seeds": [
+    73101,
+    73102,
+    73103
+  ],
+  "bolus_factors": [
+    1.0,
+    0.8,
+    1.2
+  ],
+  "training_seed": 260915,
+  "training_steps_all": 50000,
+  "selection_evidence_sha256": "600fbf822a0a8fe357832c8d85afcdbd70acd5a52e6281cc3350c696399a42a1",
+  "development_assessment_sha256": "2fb26888e91efa8b4ba65754d1f76fa838c83136605bb6adb8d9c6ebc3da0366",
+  "repeated_pilot_trajectories_exact": 48,
+  "test_tuning_allowed": false,
+  "clinical_ready": false
+}

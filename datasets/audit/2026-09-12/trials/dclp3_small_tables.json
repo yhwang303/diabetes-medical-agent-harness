@@ -1,0 +1,4492 @@
+{
+  "AdvEvent_a.txt": {
+    "rows": 20,
+    "patients": 19,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "AENotifiedDt",
+      "ParentMedCondListID",
+      "ParentMedCondListIDAdmin",
+      "AEOnsetDt",
+      "AEPrEnroll",
+      "AENotedStdyVisExam",
+      "AEIntensity",
+      "AERelStdyTrt",
+      "AERelStdyTrtUncertain",
+      "AERelStdyProc",
+      "AEEffectTrt",
+      "AESerious",
+      "AETrt",
+      "AESurg",
+      "AESurgDt",
+      "AEMedsList",
+      "AEOthTrt",
+      "AEOutcome",
+      "AEResDt",
+      "AEDeathCause",
+      "AEDeathDt",
+      "AEDeath",
+      "AEConAnomaly",
+      "AELifeThreat",
+      "AEHosp",
+      "AEDisability",
+      "AEOther",
+      "Weight",
+      "WeightMeas",
+      "WeightNotAvail",
+      "AERelLabData",
+      "AEOthRelHx",
+      "AEMedProd",
+      "MMAERelStdyTrt",
+      "MMAESerious",
+      "MMUnexpected",
+      "AERelStdyDrugDevice",
+      "AERelStdyDrugDeviceUncertain",
+      "MMHospDiscRptObtained",
+      "AERelStdyTrtHighLvl",
+      "AERelStdyTrtWhich",
+      "AERelStdyDrugDeviceHighLvl",
+      "AERelStdyDrugDeviceWhich",
+      "MMAERelStdyTrtHighLvl",
+      "MMCodingForAnalysis"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 20,
+      "PtID": 0,
+      "RecID": 0,
+      "AENotifiedDt": 0,
+      "ParentMedCondListID": 0,
+      "ParentMedCondListIDAdmin": 0,
+      "AEOnsetDt": 0,
+      "AEPrEnroll": 0,
+      "AENotedStdyVisExam": 0,
+      "AEIntensity": 0,
+      "AERelStdyTrt": 0,
+      "AERelStdyTrtUncertain": 20,
+      "AERelStdyProc": 16,
+      "AEEffectTrt": 0,
+      "AESerious": 0,
+      "AETrt": 0,
+      "AESurg": 9,
+      "AESurgDt": 19,
+      "AEMedsList": 16,
+      "AEOthTrt": 9,
+      "AEOutcome": 0,
+      "AEResDt": 1,
+      "AEDeathCause": 20,
+      "AEDeathDt": 20,
+      "AEDeath": 20,
+      "AEConAnomaly": 20,
+      "AELifeThreat": 19,
+      "AEHosp": 17,
+      "AEDisability": 20,
+      "AEOther": 20,
+      "Weight": 17,
+      "WeightMeas": 17,
+      "WeightNotAvail": 19,
+      "AERelLabData": 16,
+      "AEOthRelHx": 16,
+      "AEMedProd": 16,
+      "MMAERelStdyTrt": 0,
+      "MMAESerious": 0,
+      "MMUnexpected": 8,
+      "AERelStdyDrugDevice": 20,
+      "AERelStdyDrugDeviceUncertain": 20,
+      "MMHospDiscRptObtained": 0,
+      "AERelStdyTrtHighLvl": 10,
+      "AERelStdyTrtWhich": 19,
+      "AERelStdyDrugDeviceHighLvl": 20,
+      "AERelStdyDrugDeviceWhich": 20,
+      "MMAERelStdyTrtHighLvl": 9,
+      "MMCodingForAnalysis": 0
+    },
+    "low_cardinality_values": {
+      "AENotifiedDt": {
+        "2018-09-06 00:00:00": 1,
+        "2017-11-05 00:00:00": 1,
+        "2018-07-06 00:00:00": 1,
+        "2018-04-05 00:00:00": 1,
+        "2019-03-23 00:00:00": 1,
+        "2018-08-10 00:00:00": 1,
+        "2017-10-06 00:00:00": 1,
+        "2018-08-22 00:00:00": 1,
+        "2018-02-02 00:00:00": 1,
+        "2017-12-19 00:00:00": 1,
+        "2018-04-23 00:00:00": 1,
+        "2018-11-07 00:00:00": 1,
+        "2017-09-26 00:00:00": 1,
+        "2018-01-15 00:00:00": 1,
+        "2018-10-18 00:00:00": 1,
+        "2018-05-06 00:00:00": 1,
+        "2018-05-09 00:00:00": 1,
+        "2018-11-18 00:00:00": 1,
+        "2018-03-22 00:00:00": 1,
+        "2018-05-24 00:00:00": 1
+      },
+      "ParentMedCondListID": {
+        "Hyperglycemia": 11,
+        "Ketosis": 5,
+        "Concussion": 1,
+        "Otitis externa": 1,
+        "Diabetic ketoacidosis": 1,
+        "Bypass surgery": 1
+      },
+      "ParentMedCondListIDAdmin": {
+        "Ketosis": 9,
+        "Hyperglycemia": 6,
+        "Concussion": 1,
+        "Otitis externa": 1,
+        "Ketonemia": 1,
+        "Diabetic ketoacidosis": 1,
+        "Bypass surgery": 1
+      },
+      "AEOnsetDt": {
+        "2018-09-06 00:00:00": 1,
+        "2017-11-05 00:00:00": 1,
+        "2018-07-02 00:00:00": 1,
+        "2018-03-30 00:00:00": 1,
+        "2018-12-14 00:00:00": 1,
+        "2018-08-07 00:00:00": 1,
+        "2017-10-06 00:00:00": 1,
+        "2018-08-01 00:00:00": 1,
+        "2018-02-02 00:00:00": 1,
+        "2017-12-19 00:00:00": 1,
+        "2018-04-14 00:00:00": 1,
+        "2018-11-07 00:00:00": 1,
+        "2017-09-26 00:00:00": 1,
+        "2018-01-15 00:00:00": 1,
+        "2018-10-18 00:00:00": 1,
+        "2018-04-15 00:00:00": 1,
+        "2018-05-09 00:00:00": 1,
+        "2018-11-18 00:00:00": 1,
+        "2018-03-22 00:00:00": 1,
+        "2018-05-24 00:00:00": 1
+      },
+      "AEPrEnroll": {
+        "No": 16,
+        "Yes": 4
+      },
+      "AENotedStdyVisExam": {
+        "No": 20
+      },
+      "AEIntensity": {
+        "Moderate": 9,
+        "Mild": 7,
+        "Severe": 4
+      },
+      "AERelStdyTrt": {
+        "Yes": 11,
+        "No": 9
+      },
+      "AERelStdyTrtUncertain": {
+        "<MISSING>": 20
+      },
+      "AERelStdyProc": {
+        "<MISSING>": 16,
+        "No": 3,
+        "Yes": 1
+      },
+      "AEEffectTrt": {
+        "No change": 14,
+        "Discontinued temporarily": 6
+      },
+      "AESerious": {
+        "No": 16,
+        "Yes": 4
+      },
+      "AETrt": {
+        "Yes": 11,
+        "No": 9
+      },
+      "AESurg": {
+        "No": 10,
+        "<MISSING>": 9,
+        "Yes": 1
+      },
+      "AESurgDt": {
+        "<MISSING>": 19,
+        "2018-07-07 00:00:00": 1
+      },
+      "AEMedsList": {
+        "<MISSING>": 16,
+        "insulin - humalog bolus via injection and increased temporary basal": 1,
+        "In ED, acetaminophen, Rocephin, Morphine, Zofran, normal saline, Vancomycin. In hospital, Tylenol, ciprodex, Ibuprofen, influenza vaccine, Lantus, humalog, zosyn, Vancomycin. Discharged with cipro, ciprodex, and Tylenol #3.": 1,
+        "IV insulin, IV fluids": 1,
+        "Lantus, and IV NS and LR": 1
+      },
+      "AEOthTrt": {
+        "<MISSING>": 9,
+        "Yes": 7,
+        "No": 4
+      },
+      "AEOutcome": {
+        "Complete Recovery": 18,
+        "Ongoing (further improvement / worsening possible)": 1,
+        "Recovered with Sequelae": 1
+      },
+      "AEResDt": {
+        "2018-09-06 00:00:00": 1,
+        "2017-11-05 00:00:00": 1,
+        "2018-07-17 00:00:00": 1,
+        "2018-03-31 00:00:00": 1,
+        "2018-12-14 00:00:00": 1,
+        "2018-08-07 00:00:00": 1,
+        "2017-10-07 00:00:00": 1,
+        "2018-08-01 00:00:00": 1,
+        "2018-02-02 00:00:00": 1,
+        "2017-12-19 00:00:00": 1,
+        "2018-04-15 00:00:00": 1,
+        "2018-11-08 00:00:00": 1,
+        "2017-09-26 00:00:00": 1,
+        "2018-01-17 00:00:00": 1,
+        "2018-10-18 00:00:00": 1,
+        "<MISSING>": 1,
+        "2018-05-09 00:00:00": 1,
+        "2018-11-18 00:00:00": 1,
+        "2018-03-22 00:00:00": 1,
+        "2018-05-25 00:00:00": 1
+      },
+      "AEDeathCause": {
+        "<MISSING>": 20
+      },
+      "AEDeathDt": {
+        "<MISSING>": 20
+      },
+      "AEDeath": {
+        "<MISSING>": 20
+      },
+      "AEConAnomaly": {
+        "<MISSING>": 20
+      },
+      "AELifeThreat": {
+        "<MISSING>": 19,
+        "1.0": 1
+      },
+      "AEHosp": {
+        "<MISSING>": 17,
+        "1.0": 3
+      },
+      "AEDisability": {
+        "<MISSING>": 20
+      },
+      "AEOther": {
+        "<MISSING>": 20
+      },
+      "Weight": {
+        "<MISSING>": 17,
+        "65.0": 1,
+        "67.0": 1,
+        "53.0": 1
+      },
+      "WeightMeas": {
+        "<MISSING>": 17,
+        "kgs": 3
+      },
+      "WeightNotAvail": {
+        "<MISSING>": 19,
+        "1.0": 1
+      },
+      "AERelLabData": {
+        "<MISSING>": 16,
+        "Yes": 4
+      },
+      "AEOthRelHx": {
+        "<MISSING>": 16,
+        "No": 3,
+        "Yes": 1
+      },
+      "AEMedProd": {
+        "<MISSING>": 16,
+        "Yes": 2,
+        "No": 2
+      },
+      "MMAERelStdyTrt": {
+        "Yes": 11,
+        "No": 9
+      },
+      "MMAESerious": {
+        "No": 16,
+        "Yes": 4
+      },
+      "MMUnexpected": {
+        "No": 12,
+        "<MISSING>": 8
+      },
+      "AERelStdyDrugDevice": {
+        "<MISSING>": 20
+      },
+      "AERelStdyDrugDeviceUncertain": {
+        "<MISSING>": 20
+      },
+      "MMHospDiscRptObtained": {
+        "No, Not Requested": 20
+      },
+      "AERelStdyTrtHighLvl": {
+        "<MISSING>": 10,
+        "Study device (function)": 9,
+        "More than one of the above": 1
+      },
+      "AERelStdyTrtWhich": {
+        "<MISSING>": 19,
+        "Study pump/infusion set": 1
+      },
+      "AERelStdyDrugDeviceHighLvl": {
+        "<MISSING>": 20
+      },
+      "AERelStdyDrugDeviceWhich": {
+        "<MISSING>": 20
+      },
+      "MMAERelStdyTrtHighLvl": {
+        "Study device (function)": 11,
+        "<MISSING>": 9
+      },
+      "MMCodingForAnalysis": {
+        "Hyperglycemia with ketosis": 15,
+        "Hyperglycemia without ketosis": 1,
+        "Concussion": 1,
+        "Otitis externa": 1,
+        "Diabetic ketoacidosis": 1,
+        "Bypass surgery": 1
+      }
+    }
+  },
+  "DeviceIssue_a.txt": {
+    "rows": 166,
+    "patients": 80,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "InvDevice",
+      "DevIssueType",
+      "DevIssueOnsetDt",
+      "DevIssueLocation",
+      "DevIssueFrequency",
+      "DevIssueEffect",
+      "DevIssueReplacedDt",
+      "DevIssueAE",
+      "DevIssueAELikely",
+      "DevIssueUADE",
+      "DevIssueAELikelyHypo",
+      "DevIssueAELikelyHyper",
+      "DevIssueAELikelyOth",
+      "Description"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 166,
+      "PtID": 0,
+      "RecID": 0,
+      "InvDevice": 0,
+      "DevIssueType": 0,
+      "DevIssueOnsetDt": 0,
+      "DevIssueLocation": 0,
+      "DevIssueFrequency": 0,
+      "DevIssueEffect": 0,
+      "DevIssueReplacedDt": 131,
+      "DevIssueAE": 0,
+      "DevIssueAELikely": 10,
+      "DevIssueUADE": 0,
+      "DevIssueAELikelyHypo": 162,
+      "DevIssueAELikelyHyper": 148,
+      "DevIssueAELikelyOth": 166,
+      "Description": 2
+    },
+    "low_cardinality_values": {
+      "InvDevice": {
+        "t:slim X2 with Control-IQ": 137,
+        "Dexcom G6 system": 21,
+        "Other": 4,
+        "Roche Accu-Chek Guide BG meter": 2,
+        "t:slim X2 SAP pump (no Control-IQ)": 2
+      },
+      "DevIssueType": {
+        "Device malfunction": 132,
+        "Other": 30,
+        "User error": 4
+      },
+      "DevIssueLocation": {
+        "Home": 156,
+        "Other": 8,
+        "Clinic (outpatient)": 2
+      },
+      "DevIssueFrequency": {
+        "Single Event": 114,
+        "Intermittent": 38,
+        "Continuous": 14
+      },
+      "DevIssueEffect": {
+        "No change": 116,
+        "Study device replaced": 30,
+        "Study device modified/adjusted": 12,
+        "Discontinued temporarily": 8
+      },
+      "DevIssueReplacedDt": {
+        "<MISSING>": 131,
+        "2018-01-16 00:00:00": 2,
+        "2018-09-16 00:00:00": 2,
+        "2018-07-10 00:00:00": 1,
+        "2018-02-14 00:00:00": 1,
+        "2018-07-06 00:00:00": 1,
+        "2018-09-01 00:00:00": 1,
+        "2018-09-13 00:00:00": 1,
+        "2017-11-19 00:00:00": 1,
+        "2018-01-25 00:00:00": 1,
+        "2018-11-07 00:00:00": 1,
+        "2018-03-06 00:00:00": 1,
+        "2018-07-16 00:00:00": 1,
+        "2018-08-23 00:00:00": 1,
+        "2018-04-14 00:00:00": 1,
+        "2018-11-30 00:00:00": 1,
+        "2017-11-04 00:00:00": 1,
+        "2017-12-04 00:00:00": 1,
+        "2018-07-30 00:00:00": 1,
+        "2017-07-30 00:00:00": 1,
+        "2018-04-23 00:00:00": 1,
+        "2018-12-04 00:00:00": 1,
+        "2018-07-11 00:00:00": 1,
+        "2017-12-21 00:00:00": 1,
+        "2017-11-07 00:00:00": 1,
+        "2018-05-05 00:00:00": 1,
+        "2018-08-27 00:00:00": 1,
+        "2018-07-18 00:00:00": 1,
+        "2018-01-31 00:00:00": 1,
+        "2018-10-02 00:00:00": 1,
+        "2018-06-15 00:00:00": 1,
+        "2018-05-30 00:00:00": 1,
+        "2018-08-26 00:00:00": 1,
+        "2018-06-25 00:00:00": 1
+      },
+      "DevIssueAE": {
+        "No": 156,
+        "Yes": 10
+      },
+      "DevIssueAELikely": {
+        "Unlikely": 126,
+        "Possibly": 17,
+        "Not possible": 11,
+        "<MISSING>": 10,
+        "Not assessable": 1,
+        "Certainly": 1
+      },
+      "DevIssueUADE": {
+        "No": 166
+      },
+      "DevIssueAELikelyHypo": {
+        "<MISSING>": 162,
+        "1.0": 4
+      },
+      "DevIssueAELikelyHyper": {
+        "<MISSING>": 148,
+        "1.0": 18
+      },
+      "DevIssueAELikelyOth": {
+        "<MISSING>": 166
+      },
+      "Description": {
+        "Irresolvable (without shelf mode) loss of CGM connectivity with \"CGM sensor session is active, but the transmitter is not communicating with the pump\" icon or \"CGM out of range alert 14\"": 63,
+        "Cartridge alarm 16, but cartridge not replaceable": 18,
+        "Infusion set failure leading to reportable hyperglycemia/ketosis": 9,
+        "Prolonged or frequent (but resolvable without shelf mode) loss of CGM connectivity with \"CGM transmitter out of range\" alert or \"CGM Unavailable\" alert or \"Sensor error temporary issue. Wait up to 3 hours\"": 9,
+        "CGM Error/Bluetooth hardware error code 255 message, followed by grayed-out CGM session and progressively incorrect IOB info": 9,
+        "Error message: \"MALFUNCTION: The pump cannot operate. Call customer support immediately. Malfunction code 12-0x2071\"": 5,
+        "Transmitter Invalid Transmitter ID message, recurring Out of Range message, or other other premature transmitter failure with undisclosed error message": 4,
+        "Insertion device failure": 4,
+        "CGM Reuse 25 message on pump, possibly preceded by \"CGM unavailable\" alerts": 4,
+        "Cartridge would not load into pump despite having a large amount of insulin remaining": 3,
+        "Calibrations required with supposedly no-cal system": 2,
+        "Malfunction codes 6-0x20BC and 15-0x215A": 2,
+        "Recurring cartridge change error not resolvable by cartridge change or pump restart": 2,
+        "Premature significant reduction in battery life": 2,
+        "Pump UI frozen, won't respond to any buttons": 2,
+        "Error message: \"Malfunction - the pump cannot operate.  Call support immediately\", later identified by Tandem as error code 1, 0x200C": 2,
+        "<MISSING>": 2,
+        "Recurring battery fail message despite new batteries": 2,
+        "Error message: \"MALFUNCTION The pump cannot operate. Call customer support immediately. Malfunction Code: 9-0x20F1\"": 2,
+        "Recurrent occlusion alarm believed only resolvable by cartridge change": 2,
+        "Recurring Altitude Alarm with no known change in altitude": 1,
+        "Invalid transmitter ID error after pump reboot following Malfunction error": 1,
+        "Recurring very low CGM value with respect to fingerstick, system will not accept calibration attempt": 1,
+        "Inappropriate insulin suspension in conjunction with unacknowledged Incomplete Bolus Alert due to Independent Insulin Delivery Monitor (IIDM) 2-hour max insulin delivery limit being reached because 2-hour calculation is based on requested (rather than actually delivered) automated correction boluses": 1,
+        "New sensor failed during warmup period": 1,
+        "(4 and 10) Irresolvable (without shelf mode) loss of CGM connectivity with \"CGM sensor session is active, but the transmitter is not communicating with the pump\" icon or \"CGM out of range alert 14\"; and Pump UI frozen, won't respond to any buttons": 1,
+        "Transmitter Error 20": 1,
+        "Alarm for insulin delivery stoppage due to no insulin in cartridge even though reservoir contained plenty of insulin.": 1,
+        "Insertion device failed to insert sensor wire": 1,
+        "Malfunction Code 0-0x2152 while chaperoning subject through software update process": 1,
+        "(4 and 18) Irresolvable (without shelf mode) loss of CGM connectivity with \"CGM sensor session is active, but the transmitter is not communicating with the pump\" icon or \"CGM out of range alert 14\"; and CGM Error/Bluetooth hardware error code 255 message, followed by grayed-out CGM session and progressively incorrect IOB info": 1,
+        "CGM Error code 42": 1,
+        "Recurring \"Invalid Transmitter ID\" message on pump despite apparently normal operation, with no error seen on phone": 1,
+        "Inaccurate battery percentage estimation displayed on pump": 1,
+        "Transmitter would not pair to receiving device": 1,
+        "Error message: \"Malfunction - the pump cannot operate.  Call support immediately\", later identified by Tandem as error code 0, 0x2193": 1,
+        "Error message about sensor number being identical to previous and therefore not usable": 1,
+        "Message indicating same sensor cannot be used twice when not stopping old sensor prior to starting new sensor": 1
+      }
+    }
+  },
+  "DexcomClarityMeter_a.txt": {
+    "rows": 6669,
+    "patients": 150,
+    "columns": [
+      "PtID",
+      "RecID",
+      "DexcomIndex",
+      "DataDtTm",
+      "EventSubType",
+      "Meter",
+      "DataDtTm_adj"
+    ],
+    "missing": {
+      "PtID": 0,
+      "RecID": 0,
+      "DexcomIndex": 0,
+      "DataDtTm": 0,
+      "EventSubType": 6669,
+      "Meter": 0,
+      "DataDtTm_adj": 6669
+    },
+    "low_cardinality_values": {
+      "EventSubType": {
+        "<MISSING>": 6669
+      },
+      "DataDtTm_adj": {
+        "<MISSING>": 6669
+      }
+    }
+  },
+  "DiabDKAEvent_a.txt": {
+    "rows": 16,
+    "patients": 15,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "DKAOccurDt",
+      "DKAOccurDtApprox",
+      "DKAOccurDtUnk",
+      "DKAMetCriteria",
+      "GlucLevel",
+      "GlucLevelUnits",
+      "GlucLevelUnk",
+      "KetoneResUnk",
+      "KetoneSerumUnits",
+      "KetoneUrine",
+      "HCO3",
+      "HCO3Unk",
+      "pH",
+      "pHSample",
+      "pHUnk",
+      "BUN",
+      "BUNUnk",
+      "CerebEdema",
+      "EventCauseStdyDev",
+      "EventCauseNonStdy",
+      "DKAOutcome",
+      "SensorWear",
+      "SensorGluc",
+      "SensorGlucUnits",
+      "SensorGlucUnk",
+      "AutoInsDelivWear",
+      "AutoInsDelivMode"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 16,
+      "PtID": 0,
+      "RecID": 0,
+      "DKAOccurDt": 0,
+      "DKAOccurDtApprox": 16,
+      "DKAOccurDtUnk": 16,
+      "DKAMetCriteria": 0,
+      "GlucLevel": 1,
+      "GlucLevelUnits": 1,
+      "GlucLevelUnk": 15,
+      "KetoneResUnk": 15,
+      "KetoneSerumUnits": 1,
+      "KetoneUrine": 14,
+      "HCO3": 14,
+      "HCO3Unk": 2,
+      "pH": 15,
+      "pHSample": 15,
+      "pHUnk": 1,
+      "BUN": 14,
+      "BUNUnk": 2,
+      "CerebEdema": 0,
+      "EventCauseStdyDev": 0,
+      "EventCauseNonStdy": 0,
+      "DKAOutcome": 0,
+      "SensorWear": 0,
+      "SensorGluc": 5,
+      "SensorGlucUnits": 5,
+      "SensorGlucUnk": 11,
+      "AutoInsDelivWear": 0,
+      "AutoInsDelivMode": 3
+    },
+    "low_cardinality_values": {
+      "DKAOccurDt": {
+        "2018-09-06 00:00:00": 1,
+        "2017-11-05 00:00:00": 1,
+        "2018-03-22 00:00:00": 1,
+        "2018-11-18 00:00:00": 1,
+        "2018-05-09 00:00:00": 1,
+        "2018-10-18 00:00:00": 1,
+        "2018-11-07 00:00:00": 1,
+        "2018-04-14 00:00:00": 1,
+        "2017-12-19 00:00:00": 1,
+        "2018-02-02 00:00:00": 1,
+        "2018-08-01 00:00:00": 1,
+        "2017-10-06 00:00:00": 1,
+        "2018-08-07 00:00:00": 1,
+        "2018-12-14 00:00:00": 1,
+        "2018-03-30 00:00:00": 1,
+        "2018-05-24 00:00:00": 1
+      },
+      "DKAOccurDtApprox": {
+        "<MISSING>": 16
+      },
+      "DKAOccurDtUnk": {
+        "<MISSING>": 16
+      },
+      "DKAMetCriteria": {
+        "No": 14,
+        "Probably": 1,
+        "Definitely": 1
+      },
+      "GlucLevel": {
+        "355.0": 2,
+        "477.0": 1,
+        "295.0": 1,
+        "381.0": 1,
+        "314.0": 1,
+        "400.0": 1,
+        "350.0": 1,
+        "527.0": 1,
+        "478.0": 1,
+        "313.0": 1,
+        "<MISSING>": 1,
+        "434.0": 1,
+        "499.0": 1,
+        "409.0": 1,
+        "570.0": 1
+      },
+      "GlucLevelUnits": {
+        "mg/dL": 15,
+        "<MISSING>": 1
+      },
+      "GlucLevelUnk": {
+        "<MISSING>": 15,
+        "1.0": 1
+      },
+      "KetoneResUnk": {
+        "<MISSING>": 15,
+        "1.0": 1
+      },
+      "KetoneSerumUnits": {
+        "mmol/L": 14,
+        "<MISSING>": 1,
+        "mg/dL": 1
+      },
+      "KetoneUrine": {
+        "<MISSING>": 14,
+        "Large": 1,
+        "Extra Large": 1
+      },
+      "HCO3": {
+        "<MISSING>": 14,
+        "8.0": 1,
+        "16.0": 1
+      },
+      "HCO3Unk": {
+        "1.0": 14,
+        "<MISSING>": 2
+      },
+      "pH": {
+        "<MISSING>": 15,
+        "7.18": 1
+      },
+      "pHSample": {
+        "<MISSING>": 15,
+        "Venous": 1
+      },
+      "pHUnk": {
+        "1.0": 15,
+        "<MISSING>": 1
+      },
+      "BUN": {
+        "<MISSING>": 14,
+        "20.0": 1,
+        "22.0": 1
+      },
+      "BUNUnk": {
+        "1.0": 14,
+        "<MISSING>": 2
+      },
+      "CerebEdema": {
+        "No": 13,
+        "Unknown": 3
+      },
+      "EventCauseStdyDev": {
+        "No": 11,
+        "Yes": 5
+      },
+      "EventCauseNonStdy": {
+        "Yes": 12,
+        "No": 4
+      },
+      "DKAOutcome": {
+        "Fully recovered": 16
+      },
+      "SensorWear": {
+        "Yes": 16
+      },
+      "SensorGluc": {
+        "<MISSING>": 5,
+        "400.0": 4,
+        "247.0": 1,
+        "328.0": 1,
+        "314.0": 1,
+        "368.0": 1,
+        "330.0": 1,
+        "279.0": 1,
+        "350.0": 1
+      },
+      "SensorGlucUnits": {
+        "mg/dL": 11,
+        "<MISSING>": 5
+      },
+      "SensorGlucUnk": {
+        "<MISSING>": 11,
+        "1.0": 5
+      },
+      "AutoInsDelivWear": {
+        "Yes": 13,
+        "No": 3
+      },
+      "AutoInsDelivMode": {
+        "Auto Mode": 11,
+        "<MISSING>": 3,
+        "Manual Mode": 1,
+        "Unknown": 1
+      }
+    }
+  },
+  "DiabLocalHbA1c_a.txt": {
+    "rows": 593,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "Visit",
+      "HbA1cNotDone",
+      "HbA1cTestDt",
+      "HbA1cTestMeth",
+      "HbA1cTestRes"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "Visit": 0,
+      "HbA1cNotDone": 593,
+      "HbA1cTestDt": 0,
+      "HbA1cTestMeth": 0,
+      "HbA1cTestRes": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 170,
+        "13-Week": 168,
+        "26-Week": 168,
+        "Randomization": 87
+      },
+      "HbA1cNotDone": {
+        "<MISSING>": 593
+      },
+      "HbA1cTestMeth": {
+        "DCA point of care": 497,
+        "Lab": 85,
+        "Other point of care": 10,
+        "Unknown": 1
+      }
+    }
+  },
+  "DiabMedHistory_a.txt": {
+    "rows": 1724,
+    "patients": 168,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "SHSinceLastVis",
+      "DKASinceLastVis",
+      "OthAESinceLastVis",
+      "MedCondSinceLastVis",
+      "DevProbSinceLastVis",
+      "MedSinceLastVis",
+      "InsulinSinceLastVis",
+      "Visit"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "SHSinceLastVis": 0,
+      "DKASinceLastVis": 0,
+      "OthAESinceLastVis": 0,
+      "MedCondSinceLastVis": 0,
+      "DevProbSinceLastVis": 0,
+      "MedSinceLastVis": 0,
+      "InsulinSinceLastVis": 0,
+      "Visit": 0
+    },
+    "low_cardinality_values": {
+      "SHSinceLastVis": {
+        "No": 1724
+      },
+      "DKASinceLastVis": {
+        "No": 1718,
+        "Yes": 6
+      },
+      "OthAESinceLastVis": {
+        "No": 1720,
+        "Yes": 4
+      },
+      "MedCondSinceLastVis": {
+        "No": 1670,
+        "Yes": 54
+      },
+      "DevProbSinceLastVis": {
+        "No": 1684,
+        "Yes": 40
+      },
+      "MedSinceLastVis": {
+        "No": 1597,
+        "Yes": 127
+      },
+      "InsulinSinceLastVis": {
+        "No": 1719,
+        "Yes": 5
+      },
+      "Visit": {
+        "1-Week Call": 168,
+        "2-Week": 168,
+        "4-Week Call": 168,
+        "6-Week": 168,
+        "9-Week Call": 168,
+        "13-Week": 168,
+        "21-Week Call": 168,
+        "26-Week": 168,
+        "17-Week Call": 167,
+        "Run-in Review": 111,
+        "Run-In 24-Hour Call": 35,
+        "Run-In 72-Hour Call": 35,
+        "Run-In 1-Week Call": 32
+      }
+    }
+  },
+  "DiabPhysExam_a.txt": {
+    "rows": 170,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "Visit",
+      "PhysExamNotDone",
+      "Weight",
+      "WeightUnits",
+      "WeightUnk",
+      "Height",
+      "HeightUnits",
+      "HeightUnk",
+      "BldPrSys",
+      "BldPrDia",
+      "BldPrUnk",
+      "PEHeartRt",
+      "PEHeartRtUnk",
+      "Temp",
+      "TempUnits",
+      "TempUnk",
+      "FingStkBG",
+      "FingStkBGUnits",
+      "FingStkBGUnk",
+      "PEAbnormal",
+      "PhysExamPerf"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "Visit": 0,
+      "PhysExamNotDone": 170,
+      "Weight": 0,
+      "WeightUnits": 0,
+      "WeightUnk": 170,
+      "Height": 1,
+      "HeightUnits": 1,
+      "HeightUnk": 169,
+      "BldPrSys": 0,
+      "BldPrDia": 0,
+      "BldPrUnk": 170,
+      "PEHeartRt": 0,
+      "PEHeartRtUnk": 170,
+      "Temp": 128,
+      "TempUnits": 128,
+      "TempUnk": 42,
+      "FingStkBG": 144,
+      "FingStkBGUnits": 144,
+      "FingStkBGUnk": 26,
+      "PEAbnormal": 0,
+      "PhysExamPerf": 170
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Screening": 170
+      },
+      "PhysExamNotDone": {
+        "<MISSING>": 170
+      },
+      "WeightUnits": {
+        "kg": 109,
+        "lbs": 61
+      },
+      "WeightUnk": {
+        "<MISSING>": 170
+      },
+      "HeightUnits": {
+        "cm": 156,
+        "in": 13,
+        "<MISSING>": 1
+      },
+      "HeightUnk": {
+        "<MISSING>": 169,
+        "1.0": 1
+      },
+      "BldPrDia": {
+        "70": 10,
+        "76": 10,
+        "68": 9,
+        "64": 9,
+        "66": 8,
+        "72": 7,
+        "73": 6,
+        "75": 6,
+        "65": 6,
+        "60": 6,
+        "82": 6,
+        "86": 6,
+        "77": 5,
+        "57": 5,
+        "59": 5,
+        "61": 5,
+        "80": 5,
+        "62": 5,
+        "78": 5,
+        "85": 4,
+        "63": 4,
+        "67": 4,
+        "74": 3,
+        "81": 3,
+        "54": 3,
+        "71": 3,
+        "88": 3,
+        "79": 3,
+        "84": 2,
+        "94": 2,
+        "92": 2,
+        "69": 2,
+        "83": 2,
+        "58": 2,
+        "90": 1,
+        "52": 1,
+        "89": 1,
+        "50": 1
+      },
+      "BldPrUnk": {
+        "<MISSING>": 170
+      },
+      "PEHeartRtUnk": {
+        "<MISSING>": 170
+      },
+      "Temp": {
+        "<MISSING>": 128,
+        "36.9": 4,
+        "97.8": 3,
+        "98.5": 3,
+        "98.4": 3,
+        "36.6": 3,
+        "36.7": 3,
+        "98.3": 3,
+        "98.8": 2,
+        "36.5": 2,
+        "98.2": 2,
+        "98.0": 2,
+        "98.1": 2,
+        "97.7": 2,
+        "37.0": 1,
+        "36.0": 1,
+        "97.9": 1,
+        "36.4": 1,
+        "98.6": 1,
+        "98.9": 1,
+        "97.6": 1,
+        "97.5": 1
+      },
+      "TempUnits": {
+        "<MISSING>": 128,
+        "Fahrenheit": 26,
+        "Celsius": 16
+      },
+      "TempUnk": {
+        "1.0": 128,
+        "<MISSING>": 42
+      },
+      "FingStkBG": {
+        "<MISSING>": 144,
+        "236.0": 3,
+        "191.0": 2,
+        "118.0": 1,
+        "83.0": 1,
+        "110.0": 1,
+        "134.0": 1,
+        "106.0": 1,
+        "189.0": 1,
+        "119.0": 1,
+        "308.0": 1,
+        "188.0": 1,
+        "180.0": 1,
+        "87.0": 1,
+        "179.0": 1,
+        "95.0": 1,
+        "232.0": 1,
+        "125.0": 1,
+        "86.0": 1,
+        "96.0": 1,
+        "103.0": 1,
+        "230.0": 1,
+        "336.0": 1,
+        "201.0": 1
+      },
+      "FingStkBGUnits": {
+        "<MISSING>": 144,
+        "mg/dL": 26
+      },
+      "FingStkBGUnk": {
+        "1.0": 144,
+        "<MISSING>": 26
+      },
+      "PEAbnormal": {
+        "No": 166,
+        "Yes": 4
+      },
+      "PhysExamPerf": {
+        "<MISSING>": 170
+      }
+    }
+  },
+  "DiabPregnancyTest_a.txt": {
+    "rows": 423,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "PregTestDt",
+      "PregTestResult",
+      "PregTestNotDone",
+      "PregTestNotDoneReas",
+      "PregTestBrand",
+      "PregTestLotNum",
+      "PregTestType",
+      "PregTestMaterial",
+      "PregTestExpDt"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "PregTestDt": 257,
+      "PregTestResult": 257,
+      "PregTestNotDone": 166,
+      "PregTestNotDoneReas": 166,
+      "PregTestBrand": 257,
+      "PregTestLotNum": 257,
+      "PregTestType": 423,
+      "PregTestMaterial": 423,
+      "PregTestExpDt": 423
+    },
+    "low_cardinality_values": {
+      "PregTestResult": {
+        "<MISSING>": 257,
+        "Negative": 166
+      },
+      "PregTestNotDone": {
+        "1.0": 257,
+        "<MISSING>": 166
+      },
+      "PregTestNotDoneReas": {
+        "Subject is male": 216,
+        "<MISSING>": 166,
+        "Post-menopausal": 28,
+        "Surgically sterile": 11,
+        "Other": 2
+      },
+      "PregTestBrand": {
+        "<MISSING>": 257,
+        "Sure-Vue": 29,
+        "QuickVue": 22,
+        "ICON 20 HCG": 18,
+        "Clinical Guard": 13,
+        "Immunostics": 11,
+        "HCG Accumed": 9,
+        "HCG Urine Test Cassette": 8,
+        "HCG AccuMed": 8,
+        "Consult": 6,
+        "Accumed HCG": 3,
+        "Immunostics Inc": 3,
+        "Quickvue": 3,
+        "Mckesson": 2,
+        "consult": 2,
+        "Accu med hcg": 2,
+        "McKesson hCG urine test cassette": 2,
+        "HCG": 2,
+        "Immunostics, Inc": 2,
+        "immunostics": 2,
+        "HCG McKESSON": 1,
+        "hCG Urine Test": 1,
+        "HCG Urince Test Cassette": 1,
+        "Consult Diagnostics": 1,
+        "HCG Urine  Test Cassette": 1,
+        "accu med": 1,
+        "ICON 20 hcg": 1,
+        "Icon 20 hCG": 1,
+        "Walgreens Pregnacy Test": 1,
+        "Walgreens Pregnancy Test": 1,
+        "HCG AccMed": 1,
+        "101170906": 1,
+        "Accused HCG": 1,
+        "AccuMed": 1,
+        "Imunostics": 1,
+        "Immunstics Inc": 1,
+        "Immunostics, Inc.": 1,
+        "Immnunostics": 1,
+        "HGC": 1
+      },
+      "PregTestLotNum": {
+        "<MISSING>": 257,
+        "101170906": 24,
+        "20157": 21,
+        "HCG7100014": 14,
+        "1039701": 12,
+        "124884": 12,
+        "HCG7090120": 11,
+        "hcg7090120": 10,
+        "037H11": 10,
+        "HCG8060056": 8,
+        "1708073": 8,
+        "038D21": 7,
+        "HCG7020188": 6,
+        "1803187": 5,
+        "20170825": 3,
+        "037h11": 2,
+        "hcg8060055": 2,
+        "101181003": 1,
+        "181212": 1,
+        "HCG Accumed": 1,
+        "038dD21": 1,
+        "1170906": 1,
+        "50157": 1,
+        "hcg7100014": 1,
+        "hcg7020188": 1,
+        "HCG70900120": 1,
+        "703418": 1,
+        "1810212": 1
+      },
+      "PregTestType": {
+        "<MISSING>": 423
+      },
+      "PregTestMaterial": {
+        "<MISSING>": 423
+      },
+      "PregTestExpDt": {
+        "<MISSING>": 423
+      }
+    }
+  },
+  "DiabScreening_a.txt": {
+    "rows": 170,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "EligCritMet",
+      "ExclCritAbsent",
+      "AgeAtEnrollment",
+      "Gender",
+      "Ethnicity",
+      "Race",
+      "RaceDs",
+      "DiagDt",
+      "DiagDtApprox",
+      "DiagDtUnk",
+      "DiagAge",
+      "DiagAgeApprox",
+      "DiagAgeUnk",
+      "SHMostRecent",
+      "SHNumLast12Months",
+      "SHSeizComa",
+      "SHSeizComaLast12Months",
+      "DKAMostRecent",
+      "DKANumLast12Months",
+      "InsModPump",
+      "InsModInjections",
+      "InsModInhaled",
+      "InsModNone",
+      "PumpUse",
+      "PumpType",
+      "PumpTypeUnk",
+      "UnitsInsTotal",
+      "UnitsInsUnk",
+      "UnitsInsBasilOrLongAct",
+      "UnitsInsBasilOrLongActUnk",
+      "NumPumpBolusOrShortAct",
+      "NumPumpBolusOrShortActUnk",
+      "BGTestAvgNumMeter",
+      "BGTestMetDatNotAvail",
+      "BGTestAvgNumPtRep",
+      "BGTestPtRepNotAvail",
+      "CGMUseStat",
+      "CGMUseDur",
+      "CGMUseDevice",
+      "CGMUseLast1Month",
+      "CGMUseLast1MonthUnk",
+      "PhysExamNotDone",
+      "Weight",
+      "WeightUnits",
+      "WeightUnk",
+      "Height",
+      "HeightUnits",
+      "HeightUnk",
+      "BldPrSys",
+      "BldPrDia",
+      "BldPrUnk",
+      "PEAbnormal",
+      "PreExistMedCond",
+      "PtCurrMed",
+      "SHNumEverB",
+      "SHMostRecentB",
+      "SHLast12MonthsB",
+      "SHSeizComaNumB",
+      "SHSeizComaLast12MonthsB",
+      "DKANumEverB",
+      "DKAMostRecentB",
+      "DKALast12MonthsB"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "EligCritMet": 0,
+      "ExclCritAbsent": 0,
+      "AgeAtEnrollment": 0,
+      "Gender": 0,
+      "Ethnicity": 0,
+      "Race": 0,
+      "RaceDs": 162,
+      "DiagDt": 163,
+      "DiagDtApprox": 168,
+      "DiagDtUnk": 170,
+      "DiagAge": 0,
+      "DiagAgeApprox": 133,
+      "DiagAgeUnk": 170,
+      "SHMostRecent": 0,
+      "SHNumLast12Months": 0,
+      "SHSeizComa": 0,
+      "SHSeizComaLast12Months": 138,
+      "DKAMostRecent": 0,
+      "DKANumLast12Months": 0,
+      "InsModPump": 35,
+      "InsModInjections": 135,
+      "InsModInhaled": 170,
+      "InsModNone": 170,
+      "PumpUse": 35,
+      "PumpType": 35,
+      "PumpTypeUnk": 170,
+      "UnitsInsTotal": 0,
+      "UnitsInsUnk": 170,
+      "UnitsInsBasilOrLongAct": 0,
+      "UnitsInsBasilOrLongActUnk": 170,
+      "NumPumpBolusOrShortAct": 0,
+      "NumPumpBolusOrShortActUnk": 170,
+      "BGTestAvgNumMeter": 99,
+      "BGTestMetDatNotAvail": 71,
+      "BGTestAvgNumPtRep": 0,
+      "BGTestPtRepNotAvail": 170,
+      "CGMUseStat": 0,
+      "CGMUseDur": 51,
+      "CGMUseDevice": 51,
+      "CGMUseLast1Month": 55,
+      "CGMUseLast1MonthUnk": 166,
+      "PhysExamNotDone": 170,
+      "Weight": 170,
+      "WeightUnits": 170,
+      "WeightUnk": 170,
+      "Height": 170,
+      "HeightUnits": 170,
+      "HeightUnk": 170,
+      "BldPrSys": 170,
+      "BldPrDia": 170,
+      "BldPrUnk": 170,
+      "PEAbnormal": 170,
+      "PreExistMedCond": 0,
+      "PtCurrMed": 0,
+      "SHNumEverB": 170,
+      "SHMostRecentB": 170,
+      "SHLast12MonthsB": 170,
+      "SHSeizComaNumB": 170,
+      "SHSeizComaLast12MonthsB": 170,
+      "DKANumEverB": 170,
+      "DKAMostRecentB": 170,
+      "DKALast12MonthsB": 170
+    },
+    "low_cardinality_values": {
+      "EligCritMet": {
+        "1": 170
+      },
+      "ExclCritAbsent": {
+        "1": 170
+      },
+      "Gender": {
+        "M": 86,
+        "F": 84
+      },
+      "Ethnicity": {
+        "Not Hispanic or Latino": 152,
+        "Hispanic or Latino": 18
+      },
+      "Race": {
+        "White": 149,
+        "More than one race": 8,
+        "Asian": 5,
+        "Black/African American": 4,
+        "Unknown/not reported": 3,
+        "Native Hawaiian/Other Pacific Islander": 1
+      },
+      "RaceDs": {
+        "<MISSING>": 162,
+        "White/Native Hawaiian/Other Pacific Islander": 1,
+        "White and Native American": 1,
+        "White and asian": 1,
+        "caucasian and hatian": 1,
+        "asian and caucasian": 1,
+        "Asian and White": 1,
+        "Vietnamese, Spanish, German": 1,
+        "Mexican and Spanish": 1
+      },
+      "DiagDt": {
+        "<MISSING>": 163,
+        "2016-11-01 00:00:00": 1,
+        "2016-02-08 00:00:00": 1,
+        "2016-08-02 00:00:00": 1,
+        "2014-11-16 00:00:00": 1,
+        "2016-08-04 00:00:00": 1,
+        "2016-12-20 00:00:00": 1,
+        "2016-04-22 00:00:00": 1
+      },
+      "DiagDtApprox": {
+        "<MISSING>": 168,
+        "1.0": 2
+      },
+      "DiagDtUnk": {
+        "<MISSING>": 170
+      },
+      "DiagAge": {
+        "6": 15,
+        "11": 14,
+        "12": 11,
+        "14": 11,
+        "10": 11,
+        "2": 10,
+        "9": 9,
+        "8": 8,
+        "4": 8,
+        "7": 7,
+        "13": 6,
+        "40": 5,
+        "5": 4,
+        "31": 4,
+        "3": 4,
+        "32": 4,
+        "16": 4,
+        "15": 4,
+        "1": 4,
+        "21": 3,
+        "23": 3,
+        "25": 2,
+        "18": 2,
+        "20": 2,
+        "28": 2,
+        "26": 2,
+        "35": 1,
+        "55": 1,
+        "36": 1,
+        "34": 1,
+        "38": 1,
+        "61": 1,
+        "50": 1,
+        "46": 1,
+        "22": 1,
+        "29": 1,
+        "17": 1
+      },
+      "DiagAgeApprox": {
+        "<MISSING>": 133,
+        "1.0": 37
+      },
+      "DiagAgeUnk": {
+        "<MISSING>": 170
+      },
+      "SHMostRecent": {
+        "Never": 112,
+        ">=10 years ago": 28,
+        "1-<5 years ago": 14,
+        "5-<10 years ago": 9,
+        "6-<12 months ago": 4,
+        "< 3 months ago": 2,
+        "3-<6 months ago": 1
+      },
+      "SHNumLast12Months": {
+        "0": 163,
+        "1": 4,
+        "2": 2,
+        "3": 1
+      },
+      "SHSeizComa": {
+        "0": 138,
+        "1": 10,
+        "2": 8,
+        ">=10": 5,
+        "3": 5,
+        "4": 3,
+        "5-10": 1
+      },
+      "SHSeizComaLast12Months": {
+        "<MISSING>": 138,
+        "0.0": 29,
+        "2.0": 2,
+        "1.0": 1
+      },
+      "DKAMostRecent": {
+        "Never": 107,
+        ">=10 years ago": 31,
+        "1-<5 years ago": 16,
+        "5-<10 years ago": 11,
+        "6-<12 months ago": 3,
+        "< 3 months ago": 1,
+        "3-<6 months ago": 1
+      },
+      "DKANumLast12Months": {
+        "0": 165,
+        "1": 4,
+        "3": 1
+      },
+      "InsModPump": {
+        "1.0": 135,
+        "<MISSING>": 35
+      },
+      "InsModInjections": {
+        "<MISSING>": 135,
+        "1.0": 35
+      },
+      "InsModInhaled": {
+        "<MISSING>": 170
+      },
+      "InsModNone": {
+        "<MISSING>": 170
+      },
+      "PumpUse": {
+        ">= 5 years": 104,
+        "<MISSING>": 35,
+        "2-<5 years": 25,
+        "1-<2 years": 3,
+        "6 months-<1 year": 3
+      },
+      "PumpType": {
+        "<MISSING>": 35,
+        "Tandem t:slim X2": 34,
+        "Tandem t:slim": 18,
+        "Insulet OmniPod Insulin Management System": 17,
+        "Medtronic 751 (530G)": 11,
+        "Medtronic 670G": 9,
+        "Medtronic 551 (530G)": 9,
+        "Animas Vibe": 8,
+        "Medtronic Paradigm 523 (Revel)": 8,
+        "Animas One Touch Ping": 6,
+        "Medtronic Paradigm 723 (Revel)": 4,
+        "Medtronic Paradigm 722": 2,
+        "Medtronic Paradigm 522": 2,
+        "Roche Accu-Chek Spirit Combo": 1,
+        "Medtronic 630G": 1,
+        "MiniMed 630G": 1,
+        "MiniMed 670G": 1,
+        "Medtronic Paradigm 515": 1,
+        "Other": 1,
+        "Tandem t:flex": 1
+      },
+      "PumpTypeUnk": {
+        "<MISSING>": 170
+      },
+      "UnitsInsUnk": {
+        "<MISSING>": 170
+      },
+      "UnitsInsBasilOrLongActUnk": {
+        "<MISSING>": 170
+      },
+      "NumPumpBolusOrShortAct": {
+        "5": 41,
+        "4": 34,
+        "3": 25,
+        "6": 24,
+        "7": 22,
+        "8": 10,
+        "9": 6,
+        "2": 3,
+        "10": 3,
+        "11": 2
+      },
+      "NumPumpBolusOrShortActUnk": {
+        "<MISSING>": 170
+      },
+      "BGTestAvgNumMeter": {
+        "<MISSING>": 99,
+        "2.0": 16,
+        "4.0": 14,
+        "3.0": 11,
+        "1.0": 7,
+        "5.0": 7,
+        "6.0": 7,
+        "8.0": 2,
+        "7.0": 2,
+        "12.0": 1,
+        "9.0": 1,
+        "10.0": 1,
+        "0.0": 1,
+        "11.0": 1
+      },
+      "BGTestMetDatNotAvail": {
+        "1.0": 99,
+        "<MISSING>": 71
+      },
+      "BGTestAvgNumPtRep": {
+        "2": 46,
+        "3": 30,
+        "4": 26,
+        "5": 21,
+        "1": 20,
+        "6": 7,
+        "9": 5,
+        "0": 5,
+        "10": 5,
+        "7": 2,
+        "8": 2,
+        "12": 1
+      },
+      "BGTestPtRepNotAvail": {
+        "<MISSING>": 170
+      },
+      "CGMUseStat": {
+        "Current": 119,
+        "In past, but not current": 37,
+        "Never": 14
+      },
+      "CGMUseDur": {
+        "<MISSING>": 51,
+        "2-<5 years": 48,
+        ">= 5 years": 40,
+        "1-<2 years": 14,
+        "6 months-<1 year": 9,
+        "<3 months": 6,
+        "3-<6 months": 2
+      },
+      "CGMUseDevice": {
+        "Dexcom": 108,
+        "<MISSING>": 51,
+        "Medtronic": 9,
+        "Abbott": 2
+      },
+      "CGMUseLast1Month": {
+        "30.0": 58,
+        "<MISSING>": 55,
+        "28.0": 21,
+        "29.0": 12,
+        "14.0": 4,
+        "20.0": 3,
+        "27.0": 3,
+        "21.0": 2,
+        "24.0": 2,
+        "26.0": 1,
+        "18.0": 1,
+        "17.0": 1,
+        "23.0": 1,
+        "25.0": 1,
+        "7.0": 1,
+        "4.0": 1,
+        "5.0": 1,
+        "10.0": 1,
+        "15.0": 1
+      },
+      "CGMUseLast1MonthUnk": {
+        "<MISSING>": 166,
+        "1.0": 4
+      },
+      "PhysExamNotDone": {
+        "<MISSING>": 170
+      },
+      "Weight": {
+        "<MISSING>": 170
+      },
+      "WeightUnits": {
+        "<MISSING>": 170
+      },
+      "WeightUnk": {
+        "<MISSING>": 170
+      },
+      "Height": {
+        "<MISSING>": 170
+      },
+      "HeightUnits": {
+        "<MISSING>": 170
+      },
+      "HeightUnk": {
+        "<MISSING>": 170
+      },
+      "BldPrSys": {
+        "<MISSING>": 170
+      },
+      "BldPrDia": {
+        "<MISSING>": 170
+      },
+      "BldPrUnk": {
+        "<MISSING>": 170
+      },
+      "PEAbnormal": {
+        "<MISSING>": 170
+      },
+      "PreExistMedCond": {
+        "Yes": 119,
+        "No": 51
+      },
+      "PtCurrMed": {
+        "Yes": 123,
+        "No": 47
+      },
+      "SHNumEverB": {
+        "<MISSING>": 170
+      },
+      "SHMostRecentB": {
+        "<MISSING>": 170
+      },
+      "SHLast12MonthsB": {
+        "<MISSING>": 170
+      },
+      "SHSeizComaNumB": {
+        "<MISSING>": 170
+      },
+      "SHSeizComaLast12MonthsB": {
+        "<MISSING>": 170
+      },
+      "DKANumEverB": {
+        "<MISSING>": 170
+      },
+      "DKAMostRecentB": {
+        "<MISSING>": 170
+      },
+      "DKALast12MonthsB": {
+        "<MISSING>": 170
+      }
+    }
+  },
+  "DiabSocioEcon_a.txt": {
+    "rows": 170,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "EducationLevel",
+      "AnnualIncome",
+      "InsPrivate",
+      "InsMedicare",
+      "InsMediGap",
+      "InsMedicaid",
+      "InsSCHIP",
+      "InsMilitary",
+      "InsIndian",
+      "InsState",
+      "InsOtherGov",
+      "InsSingleService",
+      "InsNoCoverage",
+      "InsUnk",
+      "InsNoAns"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "EducationLevel": 0,
+      "AnnualIncome": 0,
+      "InsPrivate": 16,
+      "InsMedicare": 163,
+      "InsMediGap": 170,
+      "InsMedicaid": 166,
+      "InsSCHIP": 169,
+      "InsMilitary": 168,
+      "InsIndian": 170,
+      "InsState": 167,
+      "InsOtherGov": 170,
+      "InsSingleService": 163,
+      "InsNoCoverage": 168,
+      "InsUnk": 169,
+      "InsNoAns": 167
+    },
+    "low_cardinality_values": {
+      "EducationLevel": {
+        "Bachelor's Degree (BS,BA,AB)": 73,
+        "Master's Degree (MA, MS, MSW, MBA, MPH)": 48,
+        "Some college but no degree": 15,
+        "Professional Degree (MD, DDS, DVM, LLB, JD)": 13,
+        "High school graduate/diploma/GED": 6,
+        "Associate Degree (AA)": 5,
+        "Doctorate Degree (PhD, EdD)": 5,
+        "9th grade": 2,
+        "Does not wish to provide": 1,
+        "10th grade": 1,
+        "12th grade - no diploma": 1
+      },
+      "AnnualIncome": {
+        "$100,000 to less than $200,000": 57,
+        "$200,000 or more": 30,
+        "Does not wish to provide": 27,
+        "$50,000 to less than $75,000": 23,
+        "$75,000 to less than $100,000": 19,
+        "$35,000 to less than $50,000": 5,
+        "$25,000 to less than $35,000": 4,
+        "Less than $25,000": 3,
+        "Unknown": 2
+      },
+      "InsPrivate": {
+        "1.0": 154,
+        "<MISSING>": 16
+      },
+      "InsMedicare": {
+        "<MISSING>": 163,
+        "1.0": 7
+      },
+      "InsMediGap": {
+        "<MISSING>": 170
+      },
+      "InsMedicaid": {
+        "<MISSING>": 166,
+        "1.0": 4
+      },
+      "InsSCHIP": {
+        "<MISSING>": 169,
+        "1.0": 1
+      },
+      "InsMilitary": {
+        "<MISSING>": 168,
+        "1.0": 2
+      },
+      "InsIndian": {
+        "<MISSING>": 170
+      },
+      "InsState": {
+        "<MISSING>": 167,
+        "1.0": 3
+      },
+      "InsOtherGov": {
+        "<MISSING>": 170
+      },
+      "InsSingleService": {
+        "<MISSING>": 163,
+        "1.0": 7
+      },
+      "InsNoCoverage": {
+        "<MISSING>": 168,
+        "1.0": 2
+      },
+      "InsUnk": {
+        "<MISSING>": 169,
+        "1.0": 1
+      },
+      "InsNoAns": {
+        "<MISSING>": 167,
+        "1.0": 3
+      }
+    }
+  },
+  "DiabUnschedContact_a.txt": {
+    "rows": 836,
+    "patients": 165,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "ContType",
+      "ContPers",
+      "ContReasDevTrain",
+      "ContReasProtTrain",
+      "ContReasDiabMgmt",
+      "ContReasAE",
+      "ContReasDevIssue",
+      "ContReasSupplies",
+      "ContReasOth",
+      "ContPersPartic",
+      "ContPersParent",
+      "ContPersSpouse",
+      "ContPersOth"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "ContType": 0,
+      "ContPers": 725,
+      "ContReasDevTrain": 800,
+      "ContReasProtTrain": 836,
+      "ContReasDiabMgmt": 772,
+      "ContReasAE": 824,
+      "ContReasDevIssue": 702,
+      "ContReasSupplies": 740,
+      "ContReasOth": 220,
+      "ContPersPartic": 261,
+      "ContPersParent": 651,
+      "ContPersSpouse": 836,
+      "ContPersOth": 832
+    },
+    "low_cardinality_values": {
+      "ContType": {
+        "Phone call": 306,
+        "Text": 264,
+        "Email": 179,
+        "Clinic visit": 82,
+        "Home visit": 5
+      },
+      "ContPers": {
+        "<MISSING>": 725,
+        "Participant": 88,
+        "Parent/Guardian": 23
+      },
+      "ContReasDevTrain": {
+        "<MISSING>": 800,
+        "1.0": 36
+      },
+      "ContReasProtTrain": {
+        "<MISSING>": 836
+      },
+      "ContReasDiabMgmt": {
+        "<MISSING>": 772,
+        "1.0": 64
+      },
+      "ContReasAE": {
+        "<MISSING>": 824,
+        "1.0": 12
+      },
+      "ContReasDevIssue": {
+        "<MISSING>": 702,
+        "1.0": 134
+      },
+      "ContReasSupplies": {
+        "<MISSING>": 740,
+        "1.0": 96
+      },
+      "ContReasOth": {
+        "1.0": 616,
+        "<MISSING>": 220
+      },
+      "ContPersPartic": {
+        "1.0": 575,
+        "<MISSING>": 261
+      },
+      "ContPersParent": {
+        "<MISSING>": 651,
+        "1.0": 185
+      },
+      "ContPersSpouse": {
+        "<MISSING>": 836
+      },
+      "ContPersOth": {
+        "<MISSING>": 832,
+        "1.0": 4
+      }
+    }
+  },
+  "DiasendCGM_a.txt": {
+    "rows": 3037,
+    "patients": 3,
+    "columns": [
+      "PtID",
+      "RecID",
+      "DataDtTm",
+      "DataDtTm_adjusted",
+      "CGM",
+      "IsCalibration"
+    ],
+    "missing": {
+      "PtID": 0,
+      "RecID": 0,
+      "DataDtTm": 0,
+      "DataDtTm_adjusted": 3037,
+      "CGM": 0,
+      "IsCalibration": 0
+    },
+    "low_cardinality_values": {
+      "DataDtTm_adjusted": {
+        "<MISSING>": 3037
+      },
+      "IsCalibration": {
+        "No": 3031,
+        "Yes": 6
+      }
+    }
+  },
+  "FollowUpCTV_a.txt": {
+    "rows": 1724,
+    "patients": 168,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "CGMUploaded",
+      "CGMUploadedDt",
+      "PumpSettingsChanged",
+      "PumpSettingsChangedForSafety",
+      "QuestionsAboutStudyDevices",
+      "DLCGM",
+      "DLStudyPump",
+      "DLPersonalPump",
+      "DLBGMeter",
+      "DLKetoneMeter",
+      "SuppliesAssigned",
+      "Weight",
+      "WeightUnits",
+      "Height",
+      "HeightUnits"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "CGMUploaded": 0,
+      "CGMUploadedDt": 234,
+      "PumpSettingsChanged": 0,
+      "PumpSettingsChangedForSafety": 1188,
+      "QuestionsAboutStudyDevices": 0,
+      "DLCGM": 1152,
+      "DLStudyPump": 1184,
+      "DLPersonalPump": 1514,
+      "DLBGMeter": 1033,
+      "DLKetoneMeter": 1064,
+      "SuppliesAssigned": 941,
+      "Weight": 1556,
+      "WeightUnits": 1556,
+      "Height": 1556,
+      "HeightUnits": 1556
+    },
+    "low_cardinality_values": {
+      "CGMUploaded": {
+        "Yes": 1490,
+        "No": 234
+      },
+      "PumpSettingsChanged": {
+        "No": 1188,
+        "Yes": 536
+      },
+      "PumpSettingsChangedForSafety": {
+        "<MISSING>": 1188,
+        "Yes": 323,
+        "No": 213
+      },
+      "QuestionsAboutStudyDevices": {
+        "No": 1553,
+        "Yes": 171
+      },
+      "DLCGM": {
+        "<MISSING>": 1152,
+        "1.0": 572
+      },
+      "DLStudyPump": {
+        "<MISSING>": 1184,
+        "1.0": 540
+      },
+      "DLPersonalPump": {
+        "<MISSING>": 1514,
+        "1.0": 210
+      },
+      "DLBGMeter": {
+        "<MISSING>": 1033,
+        "1.0": 691
+      },
+      "DLKetoneMeter": {
+        "<MISSING>": 1064,
+        "1.0": 660
+      },
+      "SuppliesAssigned": {
+        "<MISSING>": 941,
+        "Yes": 711,
+        "No": 72
+      },
+      "WeightUnits": {
+        "<MISSING>": 1556,
+        "kg": 110,
+        "lbs": 58
+      },
+      "HeightUnits": {
+        "<MISSING>": 1556,
+        "cm": 156,
+        "in": 12
+      }
+    }
+  },
+  "InsulinPumpSettings_a.txt": {
+    "rows": 2005,
+    "patients": 169,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "NotApplicable",
+      "InsTherapyDt",
+      "InsTherapyDtApprox",
+      "CurrTotInsDaily",
+      "CurrTotInsDailyNA",
+      "TotBasalPreced7Days",
+      "TotBasalPreced7DaysNA",
+      "InsBasal0000",
+      "InsBasal0030",
+      "InsBasal0100",
+      "InsBasal0130",
+      "InsBasal0200",
+      "InsBasal0230",
+      "InsBasal0300",
+      "InsBasal0330",
+      "InsBasal0400",
+      "InsBasal0430",
+      "InsBasal0500",
+      "InsBasal0530",
+      "InsBasal0600",
+      "InsBasal0630",
+      "InsBasal0700",
+      "InsBasal0730",
+      "InsBasal0800",
+      "InsBasal0830",
+      "InsBasal0900",
+      "InsBasal0930",
+      "InsBasal1000",
+      "InsBasal1030",
+      "InsBasal1100",
+      "InsBasal1130",
+      "InsBasal1200",
+      "InsBasal1230",
+      "InsBasal1300",
+      "InsBasal1330",
+      "InsBasal1400",
+      "InsBasal1430",
+      "InsBasal1500",
+      "InsBasal1530",
+      "InsBasal1600",
+      "InsBasal1630",
+      "InsBasal1700",
+      "InsBasal1730",
+      "InsBasal1800",
+      "InsBasal1830",
+      "InsBasal1900",
+      "InsBasal1930",
+      "InsBasal2000",
+      "InsBasal2030",
+      "InsBasal2100",
+      "InsBasal2130",
+      "InsBasal2200",
+      "InsBasal2230",
+      "InsBasal2300",
+      "InsBasal2330",
+      "InsBolusStart1Hr",
+      "InsBolusStart1Min",
+      "InsBolusEnd1Hr",
+      "InsBolusEnd1Min",
+      "CHORatio1",
+      "CorrFactor1",
+      "InsBolusStart2Hr",
+      "InsBolusStart2Min",
+      "InsBolusEnd2Hr",
+      "InsBolusEnd2Min",
+      "CHORatio2",
+      "CorrFactor2",
+      "InsBolusStart3Hr",
+      "InsBolusStart3Min",
+      "InsBolusEnd3Hr",
+      "InsBolusEnd3Min",
+      "CHORatio3",
+      "CorrFactor3",
+      "InsBolusStart4Hr",
+      "InsBolusStart4Min",
+      "InsBolusEnd4Hr",
+      "InsBolusEnd4Min",
+      "CHORatio4",
+      "CorrFactor4",
+      "InsBolusStart5Hr",
+      "InsBolusStart5Min",
+      "InsBolusEnd5Hr",
+      "InsBolusEnd5Min",
+      "CHORatio5",
+      "CorrFactor5",
+      "InsBolusStart6Hr",
+      "InsBolusStart6Min",
+      "InsBolusEnd6Hr",
+      "InsBolusEnd6Min",
+      "CHORatio6",
+      "CorrFactor6",
+      "InsBolusStart7Hr",
+      "InsBolusStart7Min",
+      "InsBolusEnd7Hr",
+      "InsBolusEnd7Min",
+      "CHORatio7",
+      "CorrFactor7",
+      "InsBolusStart8Hr",
+      "InsBolusStart8Min",
+      "InsBolusEnd8Hr",
+      "InsBolusEnd8Min",
+      "CHORatio8",
+      "CorrFactor8",
+      "InsBolusStart9Hr",
+      "InsBolusStart9Min",
+      "InsBolusEnd9Hr",
+      "InsBolusEnd9Min",
+      "CHORatio9",
+      "CorrFactor9",
+      "InsBolusStart10Hr",
+      "InsBolusStart10Min",
+      "InsBolusEnd10Hr",
+      "InsBolusEnd10Min",
+      "CHORatio10",
+      "CorrFactor10",
+      "SettingsUnchanged"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 113,
+      "PtID": 0,
+      "RecID": 0,
+      "NotApplicable": 1999,
+      "InsTherapyDt": 943,
+      "InsTherapyDtApprox": 1958,
+      "CurrTotInsDaily": 1107,
+      "CurrTotInsDailyNA": 1841,
+      "TotBasalPreced7Days": 1107,
+      "TotBasalPreced7DaysNA": 1841,
+      "InsBasal0000": 943,
+      "InsBasal0030": 1594,
+      "InsBasal0100": 1572,
+      "InsBasal0130": 1584,
+      "InsBasal0200": 1483,
+      "InsBasal0230": 1580,
+      "InsBasal0300": 1354,
+      "InsBasal0330": 1584,
+      "InsBasal0400": 1480,
+      "InsBasal0430": 1577,
+      "InsBasal0500": 1525,
+      "InsBasal0530": 1562,
+      "InsBasal0600": 1374,
+      "InsBasal0630": 1573,
+      "InsBasal0700": 1505,
+      "InsBasal0730": 1544,
+      "InsBasal0800": 1486,
+      "InsBasal0830": 1589,
+      "InsBasal0900": 1443,
+      "InsBasal0930": 1584,
+      "InsBasal1000": 1486,
+      "InsBasal1030": 1569,
+      "InsBasal1100": 1479,
+      "InsBasal1130": 1572,
+      "InsBasal1200": 1434,
+      "InsBasal1230": 1594,
+      "InsBasal1300": 1524,
+      "InsBasal1330": 1588,
+      "InsBasal1400": 1501,
+      "InsBasal1430": 1574,
+      "InsBasal1500": 1453,
+      "InsBasal1530": 1583,
+      "InsBasal1600": 1521,
+      "InsBasal1630": 1575,
+      "InsBasal1700": 1488,
+      "InsBasal1730": 1583,
+      "InsBasal1800": 1446,
+      "InsBasal1830": 1588,
+      "InsBasal1900": 1497,
+      "InsBasal1930": 1585,
+      "InsBasal2000": 1519,
+      "InsBasal2030": 1571,
+      "InsBasal2100": 1442,
+      "InsBasal2130": 1589,
+      "InsBasal2200": 1471,
+      "InsBasal2230": 1570,
+      "InsBasal2300": 1564,
+      "InsBasal2330": 1585,
+      "InsBolusStart1Hr": 943,
+      "InsBolusStart1Min": 943,
+      "InsBolusEnd1Hr": 943,
+      "InsBolusEnd1Min": 943,
+      "CHORatio1": 943,
+      "CorrFactor1": 943,
+      "InsBolusStart2Hr": 1113,
+      "InsBolusStart2Min": 1113,
+      "InsBolusEnd2Hr": 1113,
+      "InsBolusEnd2Min": 1113,
+      "CHORatio2": 1113,
+      "CorrFactor2": 1113,
+      "InsBolusStart3Hr": 1195,
+      "InsBolusStart3Min": 1195,
+      "InsBolusEnd3Hr": 1195,
+      "InsBolusEnd3Min": 1195,
+      "CHORatio3": 1195,
+      "CorrFactor3": 1195,
+      "InsBolusStart4Hr": 1425,
+      "InsBolusStart4Min": 1425,
+      "InsBolusEnd4Hr": 1425,
+      "InsBolusEnd4Min": 1425,
+      "CHORatio4": 1425,
+      "CorrFactor4": 1425,
+      "InsBolusStart5Hr": 1627,
+      "InsBolusStart5Min": 1627,
+      "InsBolusEnd5Hr": 1627,
+      "InsBolusEnd5Min": 1627,
+      "CHORatio5": 1627,
+      "CorrFactor5": 1627,
+      "InsBolusStart6Hr": 1805,
+      "InsBolusStart6Min": 1805,
+      "InsBolusEnd6Hr": 1805,
+      "InsBolusEnd6Min": 1805,
+      "CHORatio6": 1805,
+      "CorrFactor6": 1805,
+      "InsBolusStart7Hr": 1889,
+      "InsBolusStart7Min": 1889,
+      "InsBolusEnd7Hr": 1889,
+      "InsBolusEnd7Min": 1889,
+      "CHORatio7": 1889,
+      "CorrFactor7": 1889,
+      "InsBolusStart8Hr": 1955,
+      "InsBolusStart8Min": 1955,
+      "InsBolusEnd8Hr": 1955,
+      "InsBolusEnd8Min": 1955,
+      "CHORatio8": 1955,
+      "CorrFactor8": 1955,
+      "InsBolusStart9Hr": 1981,
+      "InsBolusStart9Min": 1981,
+      "InsBolusEnd9Hr": 1981,
+      "InsBolusEnd9Min": 1981,
+      "CHORatio9": 1981,
+      "CorrFactor9": 1981,
+      "InsBolusStart10Hr": 1996,
+      "InsBolusStart10Min": 1996,
+      "InsBolusEnd10Hr": 1996,
+      "InsBolusEnd10Min": 1996,
+      "CHORatio10": 1996,
+      "CorrFactor10": 1996,
+      "SettingsUnchanged": 1068
+    }
+  },
+  "Insulin_a.txt": {
+    "rows": 255,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "ParentInsulinListID",
+      "InsRoute",
+      "InsInjectionFreq",
+      "InsTypeStart",
+      "InsTypeStartDt",
+      "InsTypeStartUnknown",
+      "InsTypeStopDt",
+      "InsTypeStopUnknown",
+      "InsTypeStartEstimate",
+      "InsTypeStopEstimate"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 86,
+      "PtID": 0,
+      "RecID": 0,
+      "ParentInsulinListID": 0,
+      "InsRoute": 0,
+      "InsInjectionFreq": 177,
+      "InsTypeStart": 0,
+      "InsTypeStartDt": 206,
+      "InsTypeStartUnknown": 255,
+      "InsTypeStopDt": 171,
+      "InsTypeStopUnknown": 255,
+      "InsTypeStartEstimate": 255,
+      "InsTypeStopEstimate": 255
+    },
+    "low_cardinality_values": {
+      "ParentInsulinListID": {
+        "Humalog (Lispro)": 121,
+        "Novolog (Aspart)": 92,
+        "Lantus (Glargine) 1 time per day": 18,
+        "Basaglar (Glargine, U100)": 7,
+        "Degludec (Tresiba)": 6,
+        "Lantus (Glargine) 2 times per day": 5,
+        "Levemir (Detemir) 1 time per day": 2,
+        "Toujeo (Glargine, U300)": 1,
+        "Novolog Fiasp": 1,
+        "Regular (R) (Humulin R or Novolin R)": 1,
+        "Admelog": 1
+      },
+      "InsRoute": {
+        "Pump": 177,
+        "Injection": 78
+      },
+      "InsInjectionFreq": {
+        "<MISSING>": 177,
+        "1.0": 33,
+        "3.0": 15,
+        "4.0": 12,
+        "2.0": 7,
+        "5.0": 6,
+        "6.0": 3,
+        "7.0": 1,
+        "9.0": 1
+      },
+      "InsTypeStart": {
+        "In use at time of enrollment": 206,
+        "Started after enrollment": 49
+      },
+      "InsTypeStartDt": {
+        "<MISSING>": 206,
+        "2018-04-24 00:00:00": 2,
+        "2018-04-11 00:00:00": 2,
+        "2018-03-31 00:00:00": 2,
+        "2018-01-15 00:00:00": 2,
+        "2018-07-24 00:00:00": 2,
+        "2018-07-11 00:00:00": 1,
+        "2018-06-19 00:00:00": 1,
+        "2018-05-31 00:00:00": 1,
+        "2018-06-02 00:00:00": 1,
+        "2018-09-24 00:00:00": 1,
+        "2017-10-25 00:00:00": 1,
+        "2018-04-12 00:00:00": 1,
+        "2018-06-17 00:00:00": 1,
+        "2017-12-06 00:00:00": 1,
+        "2018-05-07 00:00:00": 1,
+        "2018-02-03 00:00:00": 1,
+        "2018-03-11 00:00:00": 1,
+        "2018-03-16 00:00:00": 1,
+        "2018-08-16 00:00:00": 1,
+        "2017-10-08 00:00:00": 1,
+        "2017-12-10 00:00:00": 1,
+        "2018-04-07 00:00:00": 1,
+        "2018-02-01 00:00:00": 1,
+        "2018-01-30 00:00:00": 1,
+        "2018-01-29 00:00:00": 1,
+        "2018-04-04 00:00:00": 1,
+        "2018-05-17 00:00:00": 1,
+        "2018-07-08 00:00:00": 1,
+        "2018-02-15 00:00:00": 1,
+        "2018-07-10 00:00:00": 1,
+        "2017-12-11 00:00:00": 1,
+        "2018-03-08 00:00:00": 1,
+        "2017-12-07 00:00:00": 1,
+        "2017-12-13 00:00:00": 1,
+        "2018-03-05 00:00:00": 1,
+        "2017-09-07 00:00:00": 1,
+        "2018-08-28 00:00:00": 1,
+        "2018-06-14 00:00:00": 1,
+        "2017-08-13 00:00:00": 1,
+        "2018-01-03 00:00:00": 1,
+        "2017-11-09 00:00:00": 1,
+        "2018-01-17 00:00:00": 1,
+        "2017-09-29 00:00:00": 1,
+        "2018-05-27 00:00:00": 1
+      },
+      "InsTypeStartUnknown": {
+        "<MISSING>": 255
+      },
+      "InsTypeStopDt": {
+        "<MISSING>": 171,
+        "2018-07-24 00:00:00": 4,
+        "2018-04-24 00:00:00": 3,
+        "2018-02-03 00:00:00": 3,
+        "2018-07-11 00:00:00": 2,
+        "2018-01-29 00:00:00": 2,
+        "2017-12-06 00:00:00": 2,
+        "2018-06-19 00:00:00": 2,
+        "2018-05-31 00:00:00": 2,
+        "2018-06-02 00:00:00": 2,
+        "2017-10-25 00:00:00": 2,
+        "2018-04-12 00:00:00": 2,
+        "2018-06-17 00:00:00": 2,
+        "2018-04-07 00:00:00": 2,
+        "2017-09-29 00:00:00": 2,
+        "2018-05-07 00:00:00": 2,
+        "2018-03-11 00:00:00": 2,
+        "2018-03-16 00:00:00": 2,
+        "2018-08-16 00:00:00": 2,
+        "2017-10-08 00:00:00": 2,
+        "2017-12-10 00:00:00": 2,
+        "2018-04-04 00:00:00": 2,
+        "2018-01-30 00:00:00": 2,
+        "2018-08-28 00:00:00": 2,
+        "2018-06-14 00:00:00": 2,
+        "2018-05-17 00:00:00": 2,
+        "2018-07-08 00:00:00": 2,
+        "2018-02-15 00:00:00": 2,
+        "2018-07-10 00:00:00": 2,
+        "2017-12-11 00:00:00": 2,
+        "2017-12-07 00:00:00": 2,
+        "2017-09-07 00:00:00": 2,
+        "2018-05-27 00:00:00": 2,
+        "2017-08-13 00:00:00": 2,
+        "2018-01-03 00:00:00": 2,
+        "2017-11-09 00:00:00": 2,
+        "2018-01-16 00:00:00": 1,
+        "2018-09-24 00:00:00": 1,
+        "2018-03-05 00:00:00": 1,
+        "2017-12-13 00:00:00": 1,
+        "2018-03-08 00:00:00": 1,
+        "2018-01-15 00:00:00": 1,
+        "2018-04-11 00:00:00": 1,
+        "2018-02-01 00:00:00": 1,
+        "2018-01-17 00:00:00": 1,
+        "2018-03-31 00:00:00": 1
+      },
+      "InsTypeStopUnknown": {
+        "<MISSING>": 255
+      },
+      "InsTypeStartEstimate": {
+        "<MISSING>": 255
+      },
+      "InsTypeStopEstimate": {
+        "<MISSING>": 255
+      }
+    }
+  },
+  "Ketone_a.txt": {
+    "rows": 2579,
+    "patients": 168,
+    "columns": [
+      "PtID",
+      "RecID",
+      "DataDtTm",
+      "DeviceModel",
+      "Ketone",
+      "IsQCtest",
+      "IsQCtestJaeb",
+      "DataDtTm_adjusted"
+    ],
+    "missing": {
+      "PtID": 0,
+      "RecID": 0,
+      "DataDtTm": 0,
+      "DeviceModel": 2579,
+      "Ketone": 0,
+      "IsQCtest": 0,
+      "IsQCtestJaeb": 2285,
+      "DataDtTm_adjusted": 2579
+    },
+    "low_cardinality_values": {
+      "DeviceModel": {
+        "<MISSING>": 2579
+      },
+      "IsQCtest": {
+        "True": 1470,
+        "False": 1109
+      },
+      "IsQCtestJaeb": {
+        "<MISSING>": 2285,
+        "1.0": 294
+      },
+      "DataDtTm_adjusted": {
+        "<MISSING>": 2579
+      }
+    }
+  },
+  "MedicalCondition_a.txt": {
+    "rows": 632,
+    "patients": 152,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "ParentMedCondListID",
+      "MedCondPreStart",
+      "MedCondPreStartCat",
+      "MedCondPreStartTreat",
+      "MedCondDiagDt",
+      "MedCondDiagDtApprox",
+      "MedCondDiagDtUnk",
+      "MedCondTrt",
+      "MedCondResDt",
+      "MedCondResDtApprox",
+      "MedCondStatus",
+      "MedCondDiagMonth",
+      "MedCondDiagYear",
+      "MedCondCurrTreatMed"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 632,
+      "PtID": 0,
+      "RecID": 0,
+      "ParentMedCondListID": 0,
+      "MedCondPreStart": 0,
+      "MedCondPreStartCat": 135,
+      "MedCondPreStartTreat": 632,
+      "MedCondDiagDt": 522,
+      "MedCondDiagDtApprox": 632,
+      "MedCondDiagDtUnk": 632,
+      "MedCondTrt": 522,
+      "MedCondResDt": 632,
+      "MedCondResDtApprox": 632,
+      "MedCondStatus": 632,
+      "MedCondDiagMonth": 607,
+      "MedCondDiagYear": 607,
+      "MedCondCurrTreatMed": 135
+    },
+    "low_cardinality_values": {
+      "MedCondPreStart": {
+        "Yes": 497,
+        "No": 135
+      },
+      "MedCondPreStartCat": {
+        ">=10 years": 164,
+        "<MISSING>": 135,
+        "5 years to < 10 years": 125,
+        "1 year to < 5 years": 122,
+        "Unknown": 42,
+        "6 months to < 1 year": 21,
+        ">30 days to < 3 months": 9,
+        "<=30 days": 8,
+        "3 months to < 6 months": 6
+      },
+      "MedCondPreStartTreat": {
+        "<MISSING>": 632
+      },
+      "MedCondDiagDtApprox": {
+        "<MISSING>": 632
+      },
+      "MedCondDiagDtUnk": {
+        "<MISSING>": 632
+      },
+      "MedCondTrt": {
+        "<MISSING>": 522,
+        "Medication": 86,
+        "Other": 12,
+        "Medication and Surgery": 7,
+        "Surgery": 3,
+        "Dietary Management": 2
+      },
+      "MedCondResDt": {
+        "<MISSING>": 632
+      },
+      "MedCondResDtApprox": {
+        "<MISSING>": 632
+      },
+      "MedCondStatus": {
+        "<MISSING>": 632
+      },
+      "MedCondDiagMonth": {
+        "<MISSING>": 607,
+        "9.0": 7,
+        "8.0": 3,
+        "11.0": 3,
+        "12.0": 3,
+        "10.0": 3,
+        "2.0": 3,
+        "1.0": 2,
+        "3.0": 1
+      },
+      "MedCondDiagYear": {
+        "<MISSING>": 607,
+        "2018.0": 19,
+        "2019.0": 6
+      },
+      "MedCondCurrTreatMed": {
+        "Yes": 302,
+        "No": 195,
+        "<MISSING>": 135
+      }
+    }
+  },
+  "Medication_a.txt": {
+    "rows": 809,
+    "patients": 144,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "MedDose",
+      "MedUnit",
+      "MedDoseUnk",
+      "MedRoute",
+      "MedLocSide",
+      "MedFreqType",
+      "MedFreqNum",
+      "MedFreqPer",
+      "MedFreqUnk",
+      "MedInd",
+      "ParentLoginIDMedCondition",
+      "ParentLoginIDAdvEvent",
+      "MedStartTrtCat",
+      "MedStartDt",
+      "MedStartDtApprox",
+      "MedStopDt",
+      "MedStopDtApprox",
+      "MedOngoing",
+      "MedStartPreEnrRange",
+      "MedStartMonth",
+      "MedStartYear",
+      "MedStopMonth",
+      "MedStopYear",
+      "MedStopDtUnk",
+      "ParentLogInIDPreExisting",
+      "MedStartDtUnk",
+      "MedCondNotReqd",
+      "PreExistCondNotReqd",
+      "ParentRxNormDrugListID",
+      "AdvEventNotReqd",
+      "ParentLoginIDMedCondition2",
+      "ParentLogInIDPreExisting2",
+      "ParentLoginIDAdvEvent2"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 809,
+      "PtID": 0,
+      "RecID": 0,
+      "MedDose": 72,
+      "MedUnit": 72,
+      "MedDoseUnk": 737,
+      "MedRoute": 0,
+      "MedLocSide": 753,
+      "MedFreqType": 0,
+      "MedFreqNum": 239,
+      "MedFreqPer": 239,
+      "MedFreqUnk": 805,
+      "MedInd": 0,
+      "ParentLoginIDMedCondition": 229,
+      "ParentLoginIDAdvEvent": 792,
+      "MedStartTrtCat": 0,
+      "MedStartDt": 540,
+      "MedStartDtApprox": 809,
+      "MedStopDt": 609,
+      "MedStopDtApprox": 809,
+      "MedOngoing": 241,
+      "MedStartPreEnrRange": 297,
+      "MedStartMonth": 782,
+      "MedStartYear": 782,
+      "MedStopMonth": 772,
+      "MedStopYear": 772,
+      "MedStopDtUnk": 805,
+      "ParentLogInIDPreExisting": 809,
+      "MedStartDtUnk": 808,
+      "MedCondNotReqd": 801,
+      "PreExistCondNotReqd": 809,
+      "ParentRxNormDrugListID": 0,
+      "AdvEventNotReqd": 809,
+      "ParentLoginIDMedCondition2": 781,
+      "ParentLogInIDPreExisting2": 809,
+      "ParentLoginIDAdvEvent2": 809
+    },
+    "low_cardinality_values": {
+      "MedUnit": {
+        "mg": 490,
+        "<MISSING>": 72,
+        "mcg": 66,
+        "IU": 38,
+        "tablet": 36,
+        "mL": 19,
+        "units": 15,
+        "Ointment": 13,
+        "cream": 13,
+        "gtt-drops": 12,
+        "puff": 11,
+        "capsules": 9,
+        "g": 6,
+        "pills": 3,
+        "meq": 2,
+        "aerosol": 2,
+        "vials": 1,
+        "elixir": 1
+      },
+      "MedDoseUnk": {
+        "<MISSING>": 737,
+        "1.0": 72
+      },
+      "MedRoute": {
+        "PO": 614,
+        "Topical - skin": 35,
+        "IM": 32,
+        "Gtt": 25,
+        "IV": 25,
+        "Nasal": 23,
+        "Oral Inhalation": 22,
+        "Other": 8,
+        "SC": 6,
+        "Topical - ocular": 6,
+        "Intrauterine": 4,
+        "Intravitreal": 3,
+        "ID": 2,
+        "Vaginal": 2,
+        "Intra-articular": 1,
+        "PR": 1
+      },
+      "MedLocSide": {
+        "<MISSING>": 753,
+        "Left": 39,
+        "Both": 13,
+        "Right": 4
+      },
+      "MedFreqType": {
+        "Fixed Regimen": 574,
+        "As Needed": 173,
+        "One Time Treatment": 62
+      },
+      "MedFreqNum": {
+        "1.0": 430,
+        "<MISSING>": 239,
+        "2.0": 92,
+        "3.0": 26,
+        "4.0": 17,
+        "6.0": 3,
+        "5.0": 1,
+        "7.0": 1
+      },
+      "MedFreqPer": {
+        "Day": 544,
+        "<MISSING>": 239,
+        "Week": 23,
+        "Month": 2,
+        "Year": 1
+      },
+      "MedFreqUnk": {
+        "<MISSING>": 805,
+        "1.0": 4
+      },
+      "MedInd": {
+        "Prior to enrollment": 419,
+        "Prevention": 204,
+        "New": 186
+      },
+      "ParentLoginIDAdvEvent": {
+        "<MISSING>": 792,
+        "8876.0": 14,
+        "10488.0": 3
+      },
+      "MedStartTrtCat": {
+        "On treatment at time of enrollment": 512,
+        "Treatment started after enrollment": 297
+      },
+      "MedStartDtApprox": {
+        "<MISSING>": 809
+      },
+      "MedStopDtApprox": {
+        "<MISSING>": 809
+      },
+      "MedOngoing": {
+        "1.0": 568,
+        "<MISSING>": 241
+      },
+      "MedStartPreEnrRange": {
+        "<MISSING>": 297,
+        ">=10 years": 165,
+        "1 year to < 5 years": 152,
+        "5 years to < 10 years": 114,
+        "6 months to < 1 year": 39,
+        "Unknown": 15,
+        ">30 days to < 3 months": 13,
+        "<=30 days": 8,
+        "3 months to < 6 months": 6
+      },
+      "MedStartMonth": {
+        "<MISSING>": 782,
+        "11.0": 12,
+        "10.0": 5,
+        "1.0": 3,
+        "9.0": 2,
+        "12.0": 2,
+        "3.0": 2,
+        "2.0": 1
+      },
+      "MedStartYear": {
+        "<MISSING>": 782,
+        "2018.0": 20,
+        "2019.0": 6,
+        "2017.0": 1
+      },
+      "MedStopMonth": {
+        "<MISSING>": 772,
+        "2.0": 9,
+        "12.0": 8,
+        "11.0": 6,
+        "10.0": 5,
+        "8.0": 4,
+        "1.0": 2,
+        "9.0": 2,
+        "3.0": 1
+      },
+      "MedStopYear": {
+        "<MISSING>": 772,
+        "2018.0": 25,
+        "2019.0": 12
+      },
+      "MedStopDtUnk": {
+        "<MISSING>": 805,
+        "1.0": 4
+      },
+      "ParentLogInIDPreExisting": {
+        "<MISSING>": 809
+      },
+      "MedStartDtUnk": {
+        "<MISSING>": 808,
+        "1.0": 1
+      },
+      "MedCondNotReqd": {
+        "<MISSING>": 801,
+        "1.0": 8
+      },
+      "PreExistCondNotReqd": {
+        "<MISSING>": 809
+      },
+      "AdvEventNotReqd": {
+        "<MISSING>": 809
+      },
+      "ParentLoginIDMedCondition2": {
+        "<MISSING>": 781,
+        "12423.0": 3,
+        "14023.0": 3,
+        "12424.0": 2,
+        "8634.0": 2,
+        "12797.0": 2,
+        "3247.0": 1,
+        "1423.0": 1,
+        "13279.0": 1,
+        "13278.0": 1,
+        "12422.0": 1,
+        "12795.0": 1,
+        "38.0": 1,
+        "10219.0": 1,
+        "4665.0": 1,
+        "4666.0": 1,
+        "8635.0": 1,
+        "5045.0": 1,
+        "14008.0": 1,
+        "3681.0": 1,
+        "1769.0": 1,
+        "10738.0": 1
+      },
+      "ParentLogInIDPreExisting2": {
+        "<MISSING>": 809
+      },
+      "ParentLoginIDAdvEvent2": {
+        "<MISSING>": 809
+      }
+    }
+  },
+  "PtFinalStat_a.txt": {
+    "rows": 2,
+    "patients": 2,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "PreRandPtFinalStatReas",
+      "PostRandPtFinalStatReas",
+      "PtFinalStatReas",
+      "PtWithdrawAE",
+      "PtWithdrawChgDr",
+      "PtWithdrawNoStdyTrt",
+      "PtWithdrawFin",
+      "PtWithdrawChgIns",
+      "PtWithdrawMoved",
+      "PtWithdrawOthTrtReq",
+      "PtWithdrawPoorHealth",
+      "PtWithdrawPoorOut",
+      "PtWithdrawSched",
+      "PtWithdrawTravDiff",
+      "PtWithdrawVisLen",
+      "PtWithdrawUnk",
+      "DeathDt"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 2,
+      "PtID": 0,
+      "RecID": 0,
+      "PreRandPtFinalStatReas": 0,
+      "PostRandPtFinalStatReas": 2,
+      "PtFinalStatReas": 2,
+      "PtWithdrawAE": 2,
+      "PtWithdrawChgDr": 2,
+      "PtWithdrawNoStdyTrt": 1,
+      "PtWithdrawFin": 2,
+      "PtWithdrawChgIns": 2,
+      "PtWithdrawMoved": 2,
+      "PtWithdrawOthTrtReq": 2,
+      "PtWithdrawPoorHealth": 2,
+      "PtWithdrawPoorOut": 2,
+      "PtWithdrawSched": 2,
+      "PtWithdrawTravDiff": 2,
+      "PtWithdrawVisLen": 2,
+      "PtWithdrawUnk": 2,
+      "DeathDt": 2
+    },
+    "low_cardinality_values": {
+      "PreRandPtFinalStatReas": {
+        "Requests to withdraw in writing": 1,
+        "Site withdraws participant": 1
+      },
+      "PostRandPtFinalStatReas": {
+        "<MISSING>": 2
+      },
+      "PtFinalStatReas": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawAE": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawChgDr": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawNoStdyTrt": {
+        "1.0": 1,
+        "<MISSING>": 1
+      },
+      "PtWithdrawFin": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawChgIns": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawMoved": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawOthTrtReq": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawPoorHealth": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawPoorOut": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawSched": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawTravDiff": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawVisLen": {
+        "<MISSING>": 2
+      },
+      "PtWithdrawUnk": {
+        "<MISSING>": 2
+      },
+      "DeathDt": {
+        "<MISSING>": 2
+      }
+    }
+  },
+  "PtRoster_a.txt": {
+    "rows": 170,
+    "patients": 170,
+    "columns": [
+      "PtID",
+      "EnrollDt",
+      "RandDt",
+      "trtGroup",
+      "PtStatus",
+      "SiteID"
+    ],
+    "missing": {
+      "PtID": 0,
+      "EnrollDt": 0,
+      "RandDt": 2,
+      "trtGroup": 2,
+      "PtStatus": 0,
+      "SiteID": 0
+    },
+    "low_cardinality_values": {
+      "trtGroup": {
+        "CLC": 112,
+        "SAP": 56,
+        "<MISSING>": 2
+      },
+      "PtStatus": {
+        "Completed": 168,
+        "Dropped": 2
+      },
+      "SiteID": {
+        "5": 25,
+        "7": 25,
+        "1": 24,
+        "4": 24,
+        "6": 24,
+        "3": 24,
+        "2": 24
+      }
+    }
+  },
+  "QCTest_a.txt": {
+    "rows": 1038,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "QCMeter",
+      "QCKetone"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "QCMeter": 0,
+      "QCKetone": 0
+    },
+    "low_cardinality_values": {
+      "QCMeter": {
+        "Yes": 967,
+        "No": 71
+      },
+      "QCKetone": {
+        "Yes": 907,
+        "No": 131
+      }
+    }
+  },
+  "RandomizationCTV_a.txt": {
+    "rows": 168,
+    "patients": 168,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "ProceduresComplete"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "ProceduresComplete": 0
+    },
+    "low_cardinality_values": {
+      "ProceduresComplete": {
+        "Yes": 168
+      }
+    }
+  },
+  "RocheMeter_a.txt": {
+    "rows": 25344,
+    "patients": 168,
+    "columns": [
+      "PtID",
+      "RecID",
+      "DataDtTm",
+      "BG",
+      "Carbs",
+      "IsQCTest",
+      "SystemDefinedEvents",
+      "UserDefinedEvents",
+      "Flags",
+      "IsQCtestJaeb",
+      "DataDtTm_adjusted"
+    ],
+    "missing": {
+      "PtID": 0,
+      "RecID": 0,
+      "DataDtTm": 0,
+      "BG": 0,
+      "Carbs": 25344,
+      "IsQCTest": 0,
+      "SystemDefinedEvents": 22947,
+      "UserDefinedEvents": 25344,
+      "Flags": 25344,
+      "IsQCtestJaeb": 25344,
+      "DataDtTm_adjusted": 25344
+    },
+    "low_cardinality_values": {
+      "Carbs": {
+        "<MISSING>": 25344
+      },
+      "IsQCTest": {
+        "False": 23578,
+        "True": 1766
+      },
+      "SystemDefinedEvents": {
+        "<MISSING>": 22947,
+        "Control": 1766,
+        "Before Meal": 374,
+        "After Meal": 112,
+        "Bedtime": 108,
+        "Other": 18,
+        "Fasting": 16,
+        "Before Dinner": 2,
+        "After Dinner": 1
+      },
+      "UserDefinedEvents": {
+        "<MISSING>": 25344
+      },
+      "Flags": {
+        "<MISSING>": 25344
+      },
+      "IsQCtestJaeb": {
+        "<MISSING>": 25344
+      },
+      "DataDtTm_adjusted": {
+        "<MISSING>": 25344
+      }
+    }
+  },
+  "RunInReview_a.txt": {
+    "rows": 111,
+    "patients": 85,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "CGMUsed11Days",
+      "PumpUsedDaily",
+      "PumpUsedDailyExplan",
+      "NeedMoreRunIn",
+      "NeedMoreRunInCGM",
+      "NeedMoreRunInPump",
+      "PumpSettingsChanged",
+      "SkinReaction",
+      "SkinReactionRedness",
+      "SkinReactionSwelling",
+      "SkinReactionPain",
+      "SkinReactionBruising"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "CGMUsed11Days": 0,
+      "PumpUsedDaily": 0,
+      "PumpUsedDailyExplan": 35,
+      "NeedMoreRunIn": 0,
+      "NeedMoreRunInCGM": 110,
+      "NeedMoreRunInPump": 87,
+      "PumpSettingsChanged": 24,
+      "SkinReaction": 0,
+      "SkinReactionRedness": 110,
+      "SkinReactionSwelling": 111,
+      "SkinReactionPain": 109,
+      "SkinReactionBruising": 110
+    },
+    "low_cardinality_values": {
+      "CGMUsed11Days": {
+        "Yes": 110,
+        "No": 1
+      },
+      "PumpUsedDaily": {
+        "No": 76,
+        "Yes": 35
+      },
+      "PumpUsedDailyExplan": {
+        "PersonalPump": 50,
+        "<MISSING>": 35,
+        "CGMNaive and MDI": 19,
+        "Other": 7
+      },
+      "NeedMoreRunIn": {
+        "No": 86,
+        "Yes": 25
+      },
+      "NeedMoreRunInCGM": {
+        "<MISSING>": 110,
+        "1.0": 1
+      },
+      "NeedMoreRunInPump": {
+        "<MISSING>": 87,
+        "1.0": 24
+      },
+      "PumpSettingsChanged": {
+        "Yes": 46,
+        "No": 41,
+        "<MISSING>": 24
+      },
+      "SkinReaction": {
+        "No": 108,
+        "Yes": 3
+      },
+      "SkinReactionRedness": {
+        "<MISSING>": 110,
+        "1.0": 1
+      },
+      "SkinReactionSwelling": {
+        "<MISSING>": 111
+      },
+      "SkinReactionPain": {
+        "<MISSING>": 109,
+        "1.0": 2
+      },
+      "SkinReactionBruising": {
+        "<MISSING>": 110,
+        "1.0": 1
+      }
+    }
+  },
+  "SampleResults_a.txt": {
+    "rows": 840,
+    "patients": 168,
+    "columns": [
+      "RecID",
+      "PtID",
+      "Visit",
+      "AnalysisDt",
+      "ResultName",
+      "Value",
+      "Units",
+      "CollectionDt"
+    ],
+    "missing": {
+      "RecID": 0,
+      "PtID": 0,
+      "Visit": 0,
+      "AnalysisDt": 0,
+      "ResultName": 0,
+      "Value": 0,
+      "Units": 0,
+      "CollectionDt": 0
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Randomization": 504,
+        "13 Week": 168,
+        "26 Week": 168
+      },
+      "ResultName": {
+        "GLYHB": 504,
+        "CPEP": 168,
+        "GLU": 168
+      },
+      "Units": {
+        "%": 504,
+        "nmol/L": 168,
+        "mg/dL": 168
+      }
+    }
+  },
+  "ScreeningCTV_a.txt": {
+    "rows": 170,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "DexcomUse"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "DexcomUse": 0
+    },
+    "low_cardinality_values": {
+      "DexcomUse": {
+        "Yes": 91,
+        "No": 79
+      }
+    }
+  },
+  "Training_a.txt": {
+    "rows": 366,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "PumpTrained",
+      "PumpTrainedPumpType",
+      "PumpTrainedReason",
+      "CGMTrained",
+      "SecondVisit",
+      "SecondVisitDt"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "PumpTrained": 0,
+      "PumpTrainedPumpType": 218,
+      "PumpTrainedReason": 158,
+      "CGMTrained": 0,
+      "SecondVisit": 254,
+      "SecondVisitDt": 365
+    },
+    "low_cardinality_values": {
+      "PumpTrained": {
+        "No": 218,
+        "Yes": 148
+      },
+      "PumpTrainedPumpType": {
+        "<MISSING>": 218,
+        "t:slim X2 with Control-IQ": 111,
+        "t:slim X2 with no automated insulin delivery": 37
+      },
+      "PumpTrainedReason": {
+        "<MISSING>": 158,
+        "PersonalPump": 139,
+        "PriorVisit": 48,
+        "CGMNaive and MDI": 21
+      },
+      "CGMTrained": {
+        "No-TrainedPriorVisit": 192,
+        "Yes": 173,
+        "No-ReasonNotListed": 1
+      },
+      "SecondVisit": {
+        "<MISSING>": 254,
+        "No": 111,
+        "Yes": 1
+      },
+      "SecondVisitDt": {
+        "<MISSING>": 365,
+        "2018-02-03 00:00:00": 1
+      }
+    }
+  },
+  "VisitInfo_a.txt": {
+    "rows": 3157,
+    "patients": 170,
+    "columns": [
+      "ParentLoginVisitID",
+      "PtID",
+      "RecID",
+      "Visit",
+      "VisitDt",
+      "OutOfWin",
+      "OutOfWinReason",
+      "VisitMiss",
+      "VisitMissReason"
+    ],
+    "missing": {
+      "ParentLoginVisitID": 0,
+      "PtID": 0,
+      "RecID": 0,
+      "Visit": 0,
+      "VisitDt": 4,
+      "OutOfWin": 3115,
+      "OutOfWinReason": 3115,
+      "VisitMiss": 3153,
+      "VisitMissReason": 3153
+    },
+    "low_cardinality_values": {
+      "Visit": {
+        "Unscheduled Contact": 836,
+        "Screening": 170,
+        "2-Week": 168,
+        "21-Week Call": 168,
+        "17-Week Call": 168,
+        "13-Week": 168,
+        "9-Week Call": 168,
+        "6-Week": 168,
+        "4-Week Call": 168,
+        "1-Week Call": 168,
+        "Training": 168,
+        "Randomization": 168,
+        "26-Week": 168,
+        "Run-in Review": 111,
+        "Run-in Initiation": 87,
+        "Run-In 1-Week Call": 35,
+        "Run-In 72-Hour Call": 35,
+        "Run-In 24-Hour Call": 35
+      },
+      "OutOfWin": {
+        "<MISSING>": 3115,
+        "1.0": 42
+      },
+      "OutOfWinReason": {
+        "<MISSING>": 3115,
+        "Difficulty contacting subject": 9,
+        "Travel difficulty": 8,
+        "Site forgot to schedule": 7,
+        "Other": 6,
+        "Subject on vacation": 3,
+        "Work issue": 3,
+        "Personal issue": 2,
+        "Poor health": 2,
+        "Investigator away": 2
+      },
+      "VisitMiss": {
+        "<MISSING>": 3153,
+        "1.0": 4
+      },
+      "VisitMissReason": {
+        "<MISSING>": 3153,
+        "Difficulty contacting subject": 3,
+        "Other": 1
+      }
+    }
+  },
+  "clarkeHypoAwarness.txt": {
+    "rows": 502,
+    "patients": 168,
+    "columns": [
+      "DeidentID",
+      "clarkeHypoQDt",
+      "symp_bg_low",
+      "lost_symp",
+      "mod_hypo_ep",
+      "severe_hypo_ep",
+      "read_70_symp",
+      "read_70_no_symp",
+      "low_bg_symp",
+      "tell_symp_low",
+      "hypo_aware_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "clarkeHypoQDt": 0,
+      "symp_bg_low": 0,
+      "lost_symp": 0,
+      "mod_hypo_ep": 0,
+      "severe_hypo_ep": 0,
+      "read_70_symp": 0,
+      "read_70_no_symp": 0,
+      "low_bg_symp": 0,
+      "tell_symp_low": 0,
+      "hypo_aware_unanswred": 502
+    }
+  },
+  "diabetesDistressAdult.txt": {
+    "rows": 486,
+    "patients": 167,
+    "columns": [
+      "DeidentID",
+      "distressAdultQDt",
+      "dds_1_1",
+      "dds_1_2",
+      "dds_1_3",
+      "dds_1_4",
+      "dds_1_5",
+      "dds_1_6",
+      "dds_1_7",
+      "dds_1_8",
+      "dds_1_9",
+      "dds_1_10",
+      "dds_2_1",
+      "dds_2_2",
+      "dds_2_3",
+      "dds_2_4",
+      "dds_2_5",
+      "dds_2_6",
+      "dds_2_7",
+      "dds_2_8",
+      "dds_2_9",
+      "dds_2_10",
+      "dds_3_1",
+      "dds_3_2",
+      "dds_3_3",
+      "dds_3_4",
+      "dds_3_5",
+      "dds_3_6",
+      "dds_3_7",
+      "dds_3_8",
+      "dds_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "distressAdultQDt": 0,
+      "dds_1_1": 0,
+      "dds_1_2": 0,
+      "dds_1_3": 0,
+      "dds_1_4": 0,
+      "dds_1_5": 0,
+      "dds_1_6": 0,
+      "dds_1_7": 0,
+      "dds_1_8": 0,
+      "dds_1_9": 0,
+      "dds_1_10": 0,
+      "dds_2_1": 0,
+      "dds_2_2": 0,
+      "dds_2_3": 0,
+      "dds_2_4": 0,
+      "dds_2_5": 0,
+      "dds_2_6": 0,
+      "dds_2_7": 0,
+      "dds_2_8": 0,
+      "dds_2_9": 0,
+      "dds_2_10": 0,
+      "dds_3_1": 0,
+      "dds_3_2": 0,
+      "dds_3_3": 0,
+      "dds_3_4": 0,
+      "dds_3_5": 0,
+      "dds_3_6": 0,
+      "dds_3_7": 0,
+      "dds_3_8": 0,
+      "dds_unanswred": 486
+    }
+  },
+  "diabetesDistressParent.txt": {
+    "rows": 139,
+    "patients": 48,
+    "columns": [
+      "DeidentID",
+      "distressParentQDt",
+      "k39_cgwrylbg",
+      "k39_cgfeelingunclear",
+      "k39_cgfrustshutout",
+      "k39_cgpartnernottryhard",
+      "k39_cgoverwhelmdemands",
+      "k39_cgwryhowbestmng",
+      "k39_cgstaysilent",
+      "k39_cgtoomuchenergy",
+      "k39_cgnoonenotices",
+      "k39_cghelpmngworsens",
+      "k39_cgguiltynotdoingenough",
+      "k39_cgfrustimproveattitude",
+      "k39_cgfailinghelp",
+      "k39_cghelpisbattle",
+      "k39_cgpartnerignores",
+      "k39_cgdiabinterruptsplans",
+      "k39_cgwrylbgsleeping",
+      "k39_cgwrylbgdriving",
+      "k39_cgwrylbgalone",
+      "k39_cgnotworkwelltogether",
+      "k39_cgneverbreakfromwry",
+      "k39_unanswered"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "distressParentQDt": 0,
+      "k39_cgwrylbg": 1,
+      "k39_cgfeelingunclear": 1,
+      "k39_cgfrustshutout": 1,
+      "k39_cgpartnernottryhard": 1,
+      "k39_cgoverwhelmdemands": 1,
+      "k39_cgwryhowbestmng": 1,
+      "k39_cgstaysilent": 1,
+      "k39_cgtoomuchenergy": 1,
+      "k39_cgnoonenotices": 2,
+      "k39_cghelpmngworsens": 1,
+      "k39_cgguiltynotdoingenough": 1,
+      "k39_cgfrustimproveattitude": 1,
+      "k39_cgfailinghelp": 1,
+      "k39_cghelpisbattle": 1,
+      "k39_cgpartnerignores": 1,
+      "k39_cgdiabinterruptsplans": 1,
+      "k39_cgwrylbgsleeping": 1,
+      "k39_cgwrylbgdriving": 2,
+      "k39_cgwrylbgalone": 1,
+      "k39_cgnotworkwelltogether": 1,
+      "k39_cgneverbreakfromwry": 1,
+      "k39_unanswered": 137
+    }
+  },
+  "diabetesPersonality.txt": {
+    "rows": 168,
+    "patients": 168,
+    "columns": [
+      "DeidentID",
+      "personalityQDt",
+      "little_help_othrs",
+      "giv_up_fun",
+      "diff_sources",
+      "check_more_often",
+      "well_org",
+      "wry_do_enough",
+      "pref_mng_myslf",
+      "remain_pat",
+      "disapt_not_excel_cntrl",
+      "follow_rules",
+      "follow_advice",
+      "mng_dia_well",
+      "read_artcles",
+      "cnnt_fnd_supp",
+      "ask_othrs_hlp",
+      "not_intrsted_new_info",
+      "waste_wry_othrs_thnk",
+      "more_effrt_dia_mngt",
+      "need_remind",
+      "not_track_resrch",
+      "put_supp_back",
+      "not_matter_othrs_thnk",
+      "wry_wrong_decisn",
+      "not_give_up",
+      "arnd_ppl_help",
+      "reg_routine",
+      "not_care_good_job",
+      "sometimes_give_up",
+      "impnt_othrs_apprve",
+      "try_diff_strategies",
+      "hndle_probs_wthout_help",
+      "thnk_care_bfre_chnge",
+      "rare_go_thru_supp",
+      "talk_othr_ppl",
+      "rare_wry_forget",
+      "trst_abilty_mang_dia",
+      "dspq_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "personalityQDt": 0,
+      "little_help_othrs": 0,
+      "giv_up_fun": 1,
+      "diff_sources": 1,
+      "check_more_often": 0,
+      "well_org": 0,
+      "wry_do_enough": 0,
+      "pref_mng_myslf": 0,
+      "remain_pat": 0,
+      "disapt_not_excel_cntrl": 0,
+      "follow_rules": 0,
+      "follow_advice": 0,
+      "mng_dia_well": 0,
+      "read_artcles": 0,
+      "cnnt_fnd_supp": 0,
+      "ask_othrs_hlp": 0,
+      "not_intrsted_new_info": 1,
+      "waste_wry_othrs_thnk": 0,
+      "more_effrt_dia_mngt": 0,
+      "need_remind": 0,
+      "not_track_resrch": 0,
+      "put_supp_back": 0,
+      "not_matter_othrs_thnk": 0,
+      "wry_wrong_decisn": 1,
+      "not_give_up": 0,
+      "arnd_ppl_help": 0,
+      "reg_routine": 0,
+      "not_care_good_job": 0,
+      "sometimes_give_up": 0,
+      "impnt_othrs_apprve": 0,
+      "try_diff_strategies": 0,
+      "hndle_probs_wthout_help": 0,
+      "thnk_care_bfre_chnge": 0,
+      "rare_go_thru_supp": 0,
+      "talk_othr_ppl": 0,
+      "rare_wry_forget": 0,
+      "trst_abilty_mang_dia": 1,
+      "dspq_unanswred": 164
+    }
+  },
+  "gluIndices.txt": {
+    "rows": 2016,
+    "patients": 168,
+    "columns": [
+      "PtID",
+      "analysis",
+      "dayTime",
+      "period",
+      "gluHours",
+      "gluBelow54",
+      "gluBelow60",
+      "gluBelow70",
+      "gluLBGI",
+      "gluHypoRate",
+      "gluInRange",
+      "gluInRange140",
+      "gluCV",
+      "gluSD",
+      "gluMean",
+      "gluAbove180",
+      "gluAbove250",
+      "gluAbove300",
+      "gluHBGI"
+    ],
+    "missing": {
+      "PtID": 0,
+      "analysis": 0,
+      "dayTime": 1344,
+      "period": 0,
+      "gluHours": 0,
+      "gluBelow54": 0,
+      "gluBelow60": 0,
+      "gluBelow70": 0,
+      "gluLBGI": 0,
+      "gluHypoRate": 0,
+      "gluInRange": 0,
+      "gluInRange140": 0,
+      "gluCV": 0,
+      "gluSD": 0,
+      "gluMean": 0,
+      "gluAbove180": 0,
+      "gluAbove250": 0,
+      "gluAbove300": 0,
+      "gluHBGI": 0
+    },
+    "low_cardinality_values": {
+      "analysis": {
+        "2. day/night": 672,
+        "1. 24hr": 336,
+        "3. first 3mo": 336,
+        "4. exclude first 2W post-rand": 336,
+        "5. safety": 336
+      },
+      "dayTime": {
+        "<MISSING>": 1344,
+        "0.0": 336,
+        "1.0": 336
+      },
+      "period": {
+        "1. Baseline": 1008,
+        "2. Post Randomization": 1008
+      }
+    }
+  },
+  "hyperglycemiaAvoidance.txt": {
+    "rows": 502,
+    "patients": 168,
+    "columns": [
+      "DeidentID",
+      "hyperAvoidQDt",
+      "try_low_bg",
+      "take_mor_insln",
+      "keep_nrml_rnge",
+      "give_xtra_insln",
+      "exrse_low_bg",
+      "avd_soc_sit_tempt",
+      "miss_meals",
+      "avd_stress_sit",
+      "check_bg_mor_oft",
+      "keep_bg_low",
+      "wry_comp_high",
+      "high_bg_serious_prob",
+      "feel_upset_high",
+      "comft_be_hypo",
+      "wry_dka",
+      "wry_lose_hlth",
+      "wry_not_recgnze_high",
+      "feel_annyd_high",
+      "unpleas_symp_high",
+      "wry_not_know",
+      "wry_doc_reactn",
+      "high_bg_comfort",
+      "high_hbac_comfort_Num",
+      "hbs_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "hyperAvoidQDt": 0,
+      "try_low_bg": 0,
+      "take_mor_insln": 0,
+      "keep_nrml_rnge": 0,
+      "give_xtra_insln": 0,
+      "exrse_low_bg": 0,
+      "avd_soc_sit_tempt": 0,
+      "miss_meals": 0,
+      "avd_stress_sit": 0,
+      "check_bg_mor_oft": 0,
+      "keep_bg_low": 2,
+      "wry_comp_high": 0,
+      "high_bg_serious_prob": 0,
+      "feel_upset_high": 0,
+      "comft_be_hypo": 0,
+      "wry_dka": 0,
+      "wry_lose_hlth": 0,
+      "wry_not_recgnze_high": 2,
+      "feel_annyd_high": 1,
+      "unpleas_symp_high": 0,
+      "wry_not_know": 0,
+      "wry_doc_reactn": 0,
+      "high_bg_comfort": 0,
+      "high_hbac_comfort_Num": 36,
+      "hbs_unanswred": 493
+    }
+  },
+  "hypoglycemiaConfidence.txt": {
+    "rows": 502,
+    "patients": 168,
+    "columns": [
+      "PtID",
+      "hypoConfQDt",
+      "when_exrcse",
+      "when_sleep",
+      "when_drive",
+      "when_soc_sit",
+      "when_alne",
+      "avd_prob_hypo",
+      "catch_respnd",
+      "cont_despite_hypo",
+      "confdt_spouse",
+      "hcs_unanswred"
+    ],
+    "missing": {
+      "PtID": 0,
+      "hypoConfQDt": 0,
+      "when_exrcse": 2,
+      "when_sleep": 2,
+      "when_drive": 18,
+      "when_soc_sit": 2,
+      "when_alne": 3,
+      "avd_prob_hypo": 0,
+      "catch_respnd": 0,
+      "cont_despite_hypo": 1,
+      "confdt_spouse": 145,
+      "hcs_unanswred": 354
+    }
+  },
+  "hypoglycemiaFearAdult.txt": {
+    "rows": 354,
+    "patients": 120,
+    "columns": [
+      "DeidentID",
+      "adultHFSQDt",
+      "hfs_1_1",
+      "hfs_1_2",
+      "hfs_1_3",
+      "hfs_1_4",
+      "hfs_1_5",
+      "hfs_1_6",
+      "hfs_1_7",
+      "hfs_1_8",
+      "hfs_1_9",
+      "hfs_1_10",
+      "hfs_2_11",
+      "hfs_2_12",
+      "hfs_2_13",
+      "hfs_2_14",
+      "hfs_2_15",
+      "hfs_2_16",
+      "hfs_2_17",
+      "hfs_2_18",
+      "hfs_2_19",
+      "hfs_2_20",
+      "hfs_2_21",
+      "hfs_2_22",
+      "hfs_2_23",
+      "hfs_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "adultHFSQDt": 0,
+      "hfs_1_1": 0,
+      "hfs_1_2": 0,
+      "hfs_1_3": 0,
+      "hfs_1_4": 0,
+      "hfs_1_5": 0,
+      "hfs_1_6": 0,
+      "hfs_1_7": 0,
+      "hfs_1_8": 0,
+      "hfs_1_9": 0,
+      "hfs_1_10": 0,
+      "hfs_2_11": 0,
+      "hfs_2_12": 0,
+      "hfs_2_13": 0,
+      "hfs_2_14": 0,
+      "hfs_2_15": 0,
+      "hfs_2_16": 0,
+      "hfs_2_17": 0,
+      "hfs_2_18": 0,
+      "hfs_2_19": 0,
+      "hfs_2_20": 0,
+      "hfs_2_21": 0,
+      "hfs_2_22": 0,
+      "hfs_2_23": 0,
+      "hfs_unanswred": 354
+    }
+  },
+  "hypoglycemiaFearTeen.txt": {
+    "rows": 115,
+    "patients": 46,
+    "columns": [
+      "DeidentID",
+      "teenHFSQDt",
+      "lrg_snk_bed",
+      "not_by_myself",
+      "keep_high",
+      "high_whn_alne",
+      "eat_frst_sign",
+      "take_les_insln",
+      "high_away_home",
+      "crry_sug_food",
+      "not_exrse",
+      "chk_often",
+      "not_recgnze_low",
+      "not_have_food",
+      "feel_dizzy",
+      "low_asleep",
+      "embrss_bc_low",
+      "low_by_myself",
+      "look_stupid",
+      "lose_ctrl",
+      "no_one_arnd",
+      "mistake_school",
+      "trble_school",
+      "have_seizure",
+      "lng_term_comp",
+      "dizzy_woozy",
+      "have_low_bld_sug",
+      "ep_severe_hypo",
+      "upset_sev_hypo",
+      "ep_mod_hypo",
+      "upset_mod_hypo",
+      "ep_mild_hypo",
+      "upset_mild_hypo",
+      "rec_hemo_read_Num",
+      "trgt_rnge_below_Num",
+      "trgt_rnge_above_Num",
+      "hfs_c_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "teenHFSQDt": 0,
+      "lrg_snk_bed": 0,
+      "not_by_myself": 0,
+      "keep_high": 0,
+      "high_whn_alne": 0,
+      "eat_frst_sign": 0,
+      "take_les_insln": 0,
+      "high_away_home": 0,
+      "crry_sug_food": 0,
+      "not_exrse": 0,
+      "chk_often": 0,
+      "not_recgnze_low": 0,
+      "not_have_food": 0,
+      "feel_dizzy": 0,
+      "low_asleep": 0,
+      "embrss_bc_low": 0,
+      "low_by_myself": 0,
+      "look_stupid": 0,
+      "lose_ctrl": 0,
+      "no_one_arnd": 0,
+      "mistake_school": 0,
+      "trble_school": 0,
+      "have_seizure": 0,
+      "lng_term_comp": 0,
+      "dizzy_woozy": 0,
+      "have_low_bld_sug": 0,
+      "ep_severe_hypo": 0,
+      "upset_sev_hypo": 0,
+      "ep_mod_hypo": 0,
+      "upset_mod_hypo": 0,
+      "ep_mild_hypo": 0,
+      "upset_mild_hypo": 0,
+      "rec_hemo_read_Num": 1,
+      "trgt_rnge_below_Num": 0,
+      "trgt_rnge_above_Num": 0,
+      "hfs_c_unanswred": 115
+    }
+  },
+  "hypoglycemiaFearTeenParent.txt": {
+    "rows": 140,
+    "patients": 48,
+    "columns": [
+      "DeidentID",
+      "teenParentHFSQDt",
+      "eat_large_snacks",
+      "not_leave_alone",
+      "allow_bg_higher",
+      "maintain_higher_bg_alone",
+      "low_bg_eat",
+      "reduce_insulin_low_bg",
+      "higher_bg_away",
+      "fast_acting_sugar",
+      "no_play_low_bg",
+      "frequently_check_outing",
+      "nightime_bg",
+      "not_recognizing",
+      "no_food_juice",
+      "dizzy_pass_out",
+      "low_bg_asleep",
+      "child_embarass",
+      "low_bg_away",
+      "child_disorinted",
+      "lose_control_low_bg",
+      "no_one_around",
+      "child_make_mistake_accident",
+      "bad_evaluation_school",
+      "child_seizures",
+      "long_term_complications",
+      "child_dizzy_weak",
+      "child_insulin_reaction",
+      "hypo_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "teenParentHFSQDt": 0,
+      "eat_large_snacks": 1,
+      "not_leave_alone": 1,
+      "allow_bg_higher": 1,
+      "maintain_higher_bg_alone": 1,
+      "low_bg_eat": 1,
+      "reduce_insulin_low_bg": 1,
+      "higher_bg_away": 1,
+      "fast_acting_sugar": 1,
+      "no_play_low_bg": 1,
+      "frequently_check_outing": 1,
+      "nightime_bg": 1,
+      "not_recognizing": 1,
+      "no_food_juice": 1,
+      "dizzy_pass_out": 1,
+      "low_bg_asleep": 1,
+      "child_embarass": 1,
+      "low_bg_away": 1,
+      "child_disorinted": 1,
+      "lose_control_low_bg": 2,
+      "no_one_around": 1,
+      "child_make_mistake_accident": 1,
+      "bad_evaluation_school": 1,
+      "child_seizures": 1,
+      "long_term_complications": 1,
+      "child_dizzy_weak": 1,
+      "child_insulin_reaction": 1,
+      "hypo_unanswred": 138
+    }
+  },
+  "inspireAdult.txt": {
+    "rows": 352,
+    "patients": 120,
+    "columns": [
+      "DeidentID",
+      "inspireAdultQDt",
+      "aid_adult_1_01",
+      "aid_adult_1_02",
+      "aid_adult_1_03",
+      "aid_adult_1_04",
+      "aid_adult_1_05",
+      "aid_adult_1_06",
+      "aid_adult_1_07",
+      "aid_adult_1_08",
+      "aid_adult_1_09",
+      "aid_adult_1_10",
+      "aid_adult_2_11",
+      "aid_adult_2_12",
+      "aid_adult_2_13",
+      "aid_adult_2_14",
+      "aid_adult_2_15",
+      "aid_adult_2_16",
+      "aid_adult_2_17",
+      "aid_adult_2_18",
+      "aid_adult_2_19",
+      "aid_adult_2_20",
+      "aid_adult_3_21",
+      "aid_adult_3_22",
+      "aid_adult_3_23",
+      "aid_adult_3_24",
+      "aid_adult_3_25",
+      "aid_adult_3_26",
+      "aid_adult_3_27",
+      "aid_adult_3_28",
+      "aid_adult_3_29",
+      "aid_adult_3_30",
+      "aid_adult_3_31",
+      "aid_adult_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "inspireAdultQDt": 0,
+      "aid_adult_1_01": 0,
+      "aid_adult_1_02": 1,
+      "aid_adult_1_03": 7,
+      "aid_adult_1_04": 1,
+      "aid_adult_1_05": 0,
+      "aid_adult_1_06": 0,
+      "aid_adult_1_07": 0,
+      "aid_adult_1_08": 0,
+      "aid_adult_1_09": 1,
+      "aid_adult_1_10": 1,
+      "aid_adult_2_11": 5,
+      "aid_adult_2_12": 7,
+      "aid_adult_2_13": 2,
+      "aid_adult_2_14": 22,
+      "aid_adult_2_15": 55,
+      "aid_adult_2_16": 2,
+      "aid_adult_2_17": 211,
+      "aid_adult_2_18": 0,
+      "aid_adult_2_19": 3,
+      "aid_adult_2_20": 1,
+      "aid_adult_3_21": 4,
+      "aid_adult_3_22": 1,
+      "aid_adult_3_23": 2,
+      "aid_adult_3_24": 2,
+      "aid_adult_3_25": 1,
+      "aid_adult_3_26": 0,
+      "aid_adult_3_27": 0,
+      "aid_adult_3_28": 1,
+      "aid_adult_3_29": 3,
+      "aid_adult_3_30": 0,
+      "aid_adult_3_31": 8,
+      "aid_adult_unanswred": 352
+    }
+  },
+  "inspireTeen.txt": {
+    "rows": 142,
+    "patients": 48,
+    "columns": [
+      "DeidentID",
+      "inspireTeenQDt",
+      "aid_teen_1_1",
+      "aid_teen_1_2",
+      "aid_teen_1_3",
+      "aid_teen_1_4",
+      "aid_teen_1_5",
+      "aid_teen_1_6",
+      "aid_teen_1_7",
+      "aid_teen_1_8",
+      "aid_teen_1_9",
+      "aid_teen_1_10",
+      "aid_teen_2_11",
+      "aid_teen_2_12",
+      "aid_teen_2_13",
+      "aid_teen_2_14",
+      "aid_teen_2_15",
+      "aid_teen_2_16",
+      "aid_teen_2_17",
+      "aid_teen_3_18",
+      "aid_teen_3_19",
+      "aid_teen_3_20",
+      "aid_teen_3_21",
+      "aid_teen_3_22",
+      "aid_teen_3_23",
+      "aid_teen_3_24",
+      "aid_teen_3_25",
+      "aid_teen_3_26",
+      "aid_teen_3_27",
+      "aid_teen_3_28",
+      "aid_teen_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "inspireTeenQDt": 0,
+      "aid_teen_1_1": 0,
+      "aid_teen_1_2": 0,
+      "aid_teen_1_3": 0,
+      "aid_teen_1_4": 0,
+      "aid_teen_1_5": 1,
+      "aid_teen_1_6": 0,
+      "aid_teen_1_7": 0,
+      "aid_teen_1_8": 0,
+      "aid_teen_1_9": 1,
+      "aid_teen_1_10": 2,
+      "aid_teen_2_11": 0,
+      "aid_teen_2_12": 14,
+      "aid_teen_2_13": 0,
+      "aid_teen_2_14": 0,
+      "aid_teen_2_15": 0,
+      "aid_teen_2_16": 1,
+      "aid_teen_2_17": 1,
+      "aid_teen_3_18": 0,
+      "aid_teen_3_19": 1,
+      "aid_teen_3_20": 0,
+      "aid_teen_3_21": 0,
+      "aid_teen_3_22": 0,
+      "aid_teen_3_23": 0,
+      "aid_teen_3_24": 1,
+      "aid_teen_3_25": 0,
+      "aid_teen_3_26": 1,
+      "aid_teen_3_27": 0,
+      "aid_teen_3_28": 0,
+      "aid_teen_unanswred": 139
+    }
+  },
+  "inspireTeenParent.txt": {
+    "rows": 140,
+    "patients": 48,
+    "columns": [
+      "DeidentID",
+      "inspireParentQDt",
+      "aid_parent_1_01",
+      "aid_parent_1_02",
+      "aid_parent_1_03",
+      "aid_parent_1_04",
+      "aid_parent_1_05",
+      "aid_parent_1_06",
+      "aid_parent_1_07",
+      "aid_parent_1_08",
+      "aid_parent_1_09",
+      "aid_parent_1_10",
+      "aid_parent_2_11",
+      "aid_parent_2_12",
+      "aid_parent_2_13",
+      "aid_parent_2_14",
+      "aid_parent_2_15",
+      "aid_parent_2_16",
+      "aid_parent_2_17",
+      "aid_parent_2_18",
+      "aid_parent_2_19",
+      "aid_parent_3_20",
+      "aid_parent_3_21",
+      "aid_parent_3_22",
+      "aid_parent_3_23",
+      "aid_parent_3_24",
+      "aid_parent_3_25",
+      "aid_parent_3_26",
+      "aid_parent_3_27",
+      "aid_parent_3_28",
+      "aid_parent_3_29",
+      "aid_parent_3_30",
+      "aid_parent_unanswred"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "inspireParentQDt": 0,
+      "aid_parent_1_01": 3,
+      "aid_parent_1_02": 2,
+      "aid_parent_1_03": 2,
+      "aid_parent_1_04": 2,
+      "aid_parent_1_05": 2,
+      "aid_parent_1_06": 2,
+      "aid_parent_1_07": 2,
+      "aid_parent_1_08": 2,
+      "aid_parent_1_09": 2,
+      "aid_parent_1_10": 2,
+      "aid_parent_2_11": 3,
+      "aid_parent_2_12": 5,
+      "aid_parent_2_13": 2,
+      "aid_parent_2_14": 9,
+      "aid_parent_2_15": 2,
+      "aid_parent_2_16": 59,
+      "aid_parent_2_17": 2,
+      "aid_parent_2_18": 4,
+      "aid_parent_2_19": 3,
+      "aid_parent_3_20": 3,
+      "aid_parent_3_21": 2,
+      "aid_parent_3_22": 2,
+      "aid_parent_3_23": 3,
+      "aid_parent_3_24": 2,
+      "aid_parent_3_25": 2,
+      "aid_parent_3_26": 2,
+      "aid_parent_3_27": 2,
+      "aid_parent_3_28": 3,
+      "aid_parent_3_29": 2,
+      "aid_parent_3_30": 2,
+      "aid_parent_unanswred": 137
+    }
+  },
+  "systemUsability.txt": {
+    "rows": 223,
+    "patients": 112,
+    "columns": [
+      "PtID",
+      "sysUsabQDt",
+      "use_frequent",
+      "unness_cmplx",
+      "easy_use",
+      "need_support",
+      "well_integrated",
+      "much_inconsist",
+      "learn_quick",
+      "vry_cumbrsme",
+      "vry_confident",
+      "learn_lot",
+      "susTotScore",
+      "susBenefitAvgScore",
+      "susBarrierAvgScore"
+    ],
+    "missing": {
+      "PtID": 0,
+      "sysUsabQDt": 0,
+      "use_frequent": 0,
+      "unness_cmplx": 2,
+      "easy_use": 0,
+      "need_support": 0,
+      "well_integrated": 1,
+      "much_inconsist": 0,
+      "learn_quick": 0,
+      "vry_cumbrsme": 4,
+      "vry_confident": 0,
+      "learn_lot": 0,
+      "susTotScore": 4,
+      "susBenefitAvgScore": 1,
+      "susBarrierAvgScore": 4
+    }
+  },
+  "technologyAcceptance.txt": {
+    "rows": 223,
+    "patients": 112,
+    "columns": [
+      "DeidentID",
+      "too_mny_hass_2",
+      "equip_burden_2",
+      "look_diff_2",
+      "annoy_wght_2",
+      "bother_cnge_sens_2",
+      "peace_mnd_2",
+      "free_food_chce_2",
+      "free_thngs_wnt_2",
+      "less_thnk_dia_2",
+      "less_worried_bld_sgrs_2",
+      "less_wry_insln_2",
+      "more_freedom_2",
+      "more_intrsive_2",
+      "uncomft_equip_2",
+      "lng_respnd_low_2",
+      "lng_rspnd_high_2",
+      "nvr_comft_device_2",
+      "hrd_trst_device_2",
+      "less_burden_2",
+      "trble_slp_2",
+      "mre_time_othr_2",
+      "thnk_too_mch_2",
+      "device_teach_2",
+      "hlp_prvnt_low_2",
+      "too_mny_glitch_2",
+      "hlp_rlx_2",
+      "uncomf_wear_2",
+      "more_trble_wrth_2",
+      "prvnt_bld_sug_prob_2",
+      "wry_less_low_2",
+      "wry_less_high_2",
+      "keep_use_device_2",
+      "chlnge_device_2",
+      "device_rspnd_well_2",
+      "trst_device_mng_2",
+      "nvr_stop_wry_slp_2",
+      "hrd_give_up_2",
+      "how_easy_2",
+      "how_useful_2",
+      "trst_device_2",
+      "tas_unanswred",
+      "techAcceptQDt",
+      "acceptTotalScore",
+      "efficacyTotalScore"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "too_mny_hass_2": 1,
+      "equip_burden_2": 2,
+      "look_diff_2": 1,
+      "annoy_wght_2": 1,
+      "bother_cnge_sens_2": 1,
+      "peace_mnd_2": 1,
+      "free_food_chce_2": 1,
+      "free_thngs_wnt_2": 1,
+      "less_thnk_dia_2": 1,
+      "less_worried_bld_sgrs_2": 1,
+      "less_wry_insln_2": 1,
+      "more_freedom_2": 1,
+      "more_intrsive_2": 1,
+      "uncomft_equip_2": 1,
+      "lng_respnd_low_2": 2,
+      "lng_rspnd_high_2": 1,
+      "nvr_comft_device_2": 1,
+      "hrd_trst_device_2": 1,
+      "less_burden_2": 1,
+      "trble_slp_2": 1,
+      "mre_time_othr_2": 1,
+      "thnk_too_mch_2": 1,
+      "device_teach_2": 1,
+      "hlp_prvnt_low_2": 1,
+      "too_mny_glitch_2": 1,
+      "hlp_rlx_2": 2,
+      "uncomf_wear_2": 1,
+      "more_trble_wrth_2": 1,
+      "prvnt_bld_sug_prob_2": 1,
+      "wry_less_low_2": 1,
+      "wry_less_high_2": 1,
+      "keep_use_device_2": 1,
+      "chlnge_device_2": 1,
+      "device_rspnd_well_2": 1,
+      "trst_device_mng_2": 2,
+      "nvr_stop_wry_slp_2": 1,
+      "hrd_give_up_2": 1,
+      "how_easy_2": 1,
+      "how_useful_2": 1,
+      "trst_device_2": 1,
+      "tas_unanswred": 218,
+      "techAcceptQDt": 0,
+      "acceptTotalScore": 1,
+      "efficacyTotalScore": 1
+    }
+  },
+  "technologyExpectations.txt": {
+    "rows": 112,
+    "patients": 112,
+    "columns": [
+      "DeidentID",
+      "too_mny_hass",
+      "equip_burden",
+      "look_diff",
+      "annoy_wght",
+      "bother_cnge_sens",
+      "peace_mnd",
+      "free_food_chce",
+      "free_thngs_wnt",
+      "less_thnk_dia",
+      "less_worried_bld_sgrs",
+      "less_wry_insln",
+      "more_freedom",
+      "more_intrsive",
+      "uncomft_equip",
+      "lng_respnd_low",
+      "lng_rspnd_high",
+      "nvr_comft_device",
+      "hrd_trst_device",
+      "less_burden",
+      "trble_slp",
+      "mre_time_othr",
+      "thnk_too_mch",
+      "device_teach",
+      "hlp_prvnt_low",
+      "too_mny_glitch",
+      "hlp_rlx",
+      "uncomf_wear",
+      "more_trble_wrth",
+      "prvnt_bld_sug_prob",
+      "wry_less_low",
+      "wry_less_high",
+      "keep_use_device",
+      "chlnge_device",
+      "device_rspnd_well",
+      "trst_device_mng",
+      "nvr_stop_wry_slp",
+      "hrd_give_up",
+      "how_easy",
+      "how_useful",
+      "trst_device",
+      "tes_unanswred",
+      "techExpectQDt",
+      "expectTotalScore",
+      "efficacyTotalScore"
+    ],
+    "missing": {
+      "DeidentID": 0,
+      "too_mny_hass": 0,
+      "equip_burden": 0,
+      "look_diff": 0,
+      "annoy_wght": 0,
+      "bother_cnge_sens": 0,
+      "peace_mnd": 0,
+      "free_food_chce": 0,
+      "free_thngs_wnt": 0,
+      "less_thnk_dia": 0,
+      "less_worried_bld_sgrs": 0,
+      "less_wry_insln": 0,
+      "more_freedom": 0,
+      "more_intrsive": 0,
+      "uncomft_equip": 0,
+      "lng_respnd_low": 0,
+      "lng_rspnd_high": 0,
+      "nvr_comft_device": 0,
+      "hrd_trst_device": 0,
+      "less_burden": 0,
+      "trble_slp": 0,
+      "mre_time_othr": 0,
+      "thnk_too_mch": 0,
+      "device_teach": 0,
+      "hlp_prvnt_low": 0,
+      "too_mny_glitch": 0,
+      "hlp_rlx": 0,
+      "uncomf_wear": 0,
+      "more_trble_wrth": 0,
+      "prvnt_bld_sug_prob": 0,
+      "wry_less_low": 0,
+      "wry_less_high": 0,
+      "keep_use_device": 0,
+      "chlnge_device": 0,
+      "device_rspnd_well": 0,
+      "trst_device_mng": 0,
+      "nvr_stop_wry_slp": 0,
+      "hrd_give_up": 0,
+      "how_easy": 0,
+      "how_useful": 0,
+      "trst_device": 0,
+      "tes_unanswred": 112,
+      "techExpectQDt": 0,
+      "expectTotalScore": 0,
+      "efficacyTotalScore": 0
+    }
+  }
+}

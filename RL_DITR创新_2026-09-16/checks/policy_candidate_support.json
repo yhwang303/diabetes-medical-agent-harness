@@ -1,0 +1,1169 @@
+{
+  "scope": "same28 development probe histories; not independent control results; fixed patient weights within each early/final comparison",
+  "rows": [
+    {
+      "run": "R03_reference_categorical",
+      "policy_step": 2000,
+      "patient_sha256": "480e9c2c736824ce6f498ab463a8ebe8ffdfe5095caaa5bf28cd20b8e031869d",
+      "mean_policy_mean_u_h": 0.584060549736023,
+      "mean_policy_std": 0.9763227105140686,
+      "mean_candidate_max_u_h": 2.1899681091308594,
+      "mean_planned_first_u_h": 0.8150931000709534,
+      "cases": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "policy_mean_u_h": 0.6089680790901184,
+          "policy_std": 0.9767204523086548,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2155299186706543,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "policy_mean_u_h": 0.7239934206008911,
+          "policy_std": 1.0064935684204102,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.3795275688171387,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "policy_mean_u_h": 0.686826765537262,
+          "policy_std": 0.983228325843811,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.3040931224823,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "policy_mean_u_h": 0.6314507722854614,
+          "policy_std": 0.9762507081031799,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2372400760650635,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "policy_mean_u_h": 0.521777868270874,
+          "policy_std": 0.974801778793335,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.1251838207244873,
+          "planned_first_u_h": 2.1251838207244873,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "policy_mean_u_h": 0.5199957489967346,
+          "policy_std": 0.9745821356773376,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.1230404376983643,
+          "planned_first_u_h": 2.1230406761169434,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "policy_mean_u_h": 0.7118921279907227,
+          "policy_std": 1.0008745193481445,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.3581838607788086,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "policy_mean_u_h": 0.5966091752052307,
+          "policy_std": 0.9773369431495667,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2041850090026855,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "policy_mean_u_h": 0.6375309824943542,
+          "policy_std": 0.9763326048851013,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.243454933166504,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "policy_mean_u_h": 0.5301160216331482,
+          "policy_std": 0.9753479957580566,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.134420394897461,
+          "planned_first_u_h": 2.134420394897461,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "policy_mean_u_h": 0.4784221649169922,
+          "policy_std": 0.9702582359313965,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.074354648590088,
+          "planned_first_u_h": 2.074354887008667,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "policy_mean_u_h": 0.3976476490497589,
+          "policy_std": 0.9566870927810669,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.9712575674057007,
+          "planned_first_u_h": 1.9712574481964111,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "policy_mean_u_h": 0.3968520760536194,
+          "policy_std": 0.9563433527946472,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.9698965549468994,
+          "planned_first_u_h": 1.9698965549468994,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "policy_mean_u_h": 0.6396746039390564,
+          "policy_std": 0.9763742089271545,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.245666980743408,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "policy_mean_u_h": 0.6566563248634338,
+          "policy_std": 0.9775314331054688,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.264552116394043,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "policy_mean_u_h": 0.5928477644920349,
+          "policy_std": 0.9769948720932007,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.1998610496520996,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "policy_mean_u_h": 0.6729378700256348,
+          "policy_std": 0.9790084362030029,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2832632064819336,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "policy_mean_u_h": 0.6475836634635925,
+          "policy_std": 0.9766998291015625,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2541117668151855,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "policy_mean_u_h": 0.6072319149971008,
+          "policy_std": 0.9765427708625793,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.213501453399658,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "policy_mean_u_h": 0.6612731218338013,
+          "policy_std": 0.9776386022567749,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.269345283508301,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "policy_mean_u_h": 0.6675246953964233,
+          "policy_std": 0.978504478931427,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2770209312438965,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "policy_mean_u_h": 0.6768137812614441,
+          "policy_std": 0.9803227186203003,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.2893009185791016,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "policy_mean_u_h": 0.5549823641777039,
+          "policy_std": 0.9765074253082275,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.16119384765625,
+          "planned_first_u_h": 2.161194086074829,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "policy_mean_u_h": 0.44261351227760315,
+          "policy_std": 0.9664102792739868,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.032216787338257,
+          "planned_first_u_h": 2.032216787338257,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "policy_mean_u_h": 0.4645342230796814,
+          "policy_std": 0.9692505598068237,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.058809280395508,
+          "planned_first_u_h": 2.058809280395508,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "policy_mean_u_h": 0.5170292258262634,
+          "policy_std": 0.9744161367416382,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.1198008060455322,
+          "planned_first_u_h": 2.119800567626953,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "policy_mean_u_h": 0.45895540714263916,
+          "policy_std": 0.96876460313797,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.052431106567383,
+          "planned_first_u_h": 2.052431106567383,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "policy_mean_u_h": 0.6509552001953125,
+          "policy_std": 0.9768112897872925,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.25766658782959,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        }
+      ]
+    },
+    {
+      "run": "R03_reference_categorical",
+      "policy_step": 6580,
+      "patient_sha256": "480e9c2c736824ce6f498ab463a8ebe8ffdfe5095caaa5bf28cd20b8e031869d",
+      "mean_policy_mean_u_h": 0.4964543282985687,
+      "mean_policy_std": 0.5261847972869873,
+      "mean_candidate_max_u_h": 1.361951231956482,
+      "mean_planned_first_u_h": 0.0,
+      "cases": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "policy_mean_u_h": 0.5112883448600769,
+          "policy_std": 0.5274185538291931,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.378814458847046,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "policy_mean_u_h": 0.543165385723114,
+          "policy_std": 0.5936822295188904,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.5196855068206787,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "policy_mean_u_h": 0.5296767950057983,
+          "policy_std": 0.5592074394226074,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.449491024017334,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "policy_mean_u_h": 0.5216739177703857,
+          "policy_std": 0.5352301597595215,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4020490646362305,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "policy_mean_u_h": 0.4669090509414673,
+          "policy_std": 0.4997938871383667,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.288996696472168,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "policy_mean_u_h": 0.4661497175693512,
+          "policy_std": 0.4993320405483246,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.287477731704712,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5387030839920044,
+          "policy_std": 0.5790621638298035,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4911754131317139,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "policy_mean_u_h": 0.5055057406425476,
+          "policy_std": 0.5232112407684326,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.3661115169525146,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "policy_mean_u_h": 0.522891640663147,
+          "policy_std": 0.5379320979118347,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4077110290527344,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "policy_mean_u_h": 0.47068947553634644,
+          "policy_std": 0.5020890235900879,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.296552300453186,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "policy_mean_u_h": 0.4535562992095947,
+          "policy_std": 0.4927154779434204,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2640010118484497,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "policy_mean_u_h": 0.4293167293071747,
+          "policy_std": 0.48782041668891907,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2317097187042236,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "policy_mean_u_h": 0.42893511056900024,
+          "policy_std": 0.487811416387558,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2313133478164673,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5232229232788086,
+          "policy_std": 0.5389164090156555,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4096614122390747,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "policy_mean_u_h": 0.5254399180412292,
+          "policy_std": 0.5463945865631104,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4241788387298584,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "policy_mean_u_h": 0.5036470293998718,
+          "policy_std": 0.5219573974609375,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.3621904850006104,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "policy_mean_u_h": 0.5270832777023315,
+          "policy_std": 0.5523581504821777,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.435631513595581,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "policy_mean_u_h": 0.5243677496910095,
+          "policy_std": 0.5425439476966858,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4167729616165161,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "policy_mean_u_h": 0.5103389620780945,
+          "policy_std": 0.5268730521202087,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.3769679069519043,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "policy_mean_u_h": 0.5259110927581787,
+          "policy_std": 0.5481759309768677,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4275801181793213,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "policy_mean_u_h": 0.526513397693634,
+          "policy_std": 0.5504105091094971,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.431857943534851,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "policy_mean_u_h": 0.5276620984077454,
+          "policy_std": 0.5539181232452393,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.4387762546539307,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "policy_mean_u_h": 0.4843006730079651,
+          "policy_std": 0.5097936391830444,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.3228363990783691,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "policy_mean_u_h": 0.44509854912757874,
+          "policy_std": 0.4903396964073181,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2516354322433472,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "policy_mean_u_h": 0.4501818120479584,
+          "policy_std": 0.4919865131378174,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2594274282455444,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "policy_mean_u_h": 0.46493440866470337,
+          "policy_std": 0.49857908487319946,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2850239276885986,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "policy_mean_u_h": 0.4488043189048767,
+          "policy_std": 0.4916609823703766,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.257514476776123,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5247527360916138,
+          "policy_std": 0.5439603328704834,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.419487714767456,
+          "planned_first_u_h": 0.0,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        }
+      ]
+    },
+    {
+      "run": "H01_action_prefix",
+      "policy_step": 2000,
+      "patient_sha256": "34c91c75e132a32d92b212fedaa5cbff65995396f3cc780d5e80b9448d6219d3",
+      "mean_policy_mean_u_h": 0.7144305109977722,
+      "mean_policy_std": 0.732445478439331,
+      "mean_candidate_max_u_h": 1.9191957712173462,
+      "mean_planned_first_u_h": 1.9191961288452148,
+      "cases": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "policy_mean_u_h": 0.2878626883029938,
+          "policy_std": 0.7498061656951904,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.5211838483810425,
+          "planned_first_u_h": 1.5211843252182007,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "policy_mean_u_h": 0.8444880843162537,
+          "policy_std": 0.7684214115142822,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.108428716659546,
+          "planned_first_u_h": 2.108428955078125,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "policy_mean_u_h": 0.6265980005264282,
+          "policy_std": 0.7350595593452454,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.8356631994247437,
+          "planned_first_u_h": 1.8356629610061646,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "policy_mean_u_h": 0.8700618147850037,
+          "policy_std": 0.7224869728088379,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.0584468841552734,
+          "planned_first_u_h": 2.0584473609924316,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "policy_mean_u_h": 1.0191195011138916,
+          "policy_std": 0.7989479899406433,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.3332717418670654,
+          "planned_first_u_h": 2.3332719802856445,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "policy_mean_u_h": 0.6496497392654419,
+          "policy_std": 0.6673906445503235,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.747409462928772,
+          "planned_first_u_h": 1.7474098205566406,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "policy_mean_u_h": 0.8198009729385376,
+          "policy_std": 0.7522401809692383,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.0571258068084717,
+          "planned_first_u_h": 2.0571258068084717,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "policy_mean_u_h": 0.26796627044677734,
+          "policy_std": 0.7498263716697693,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.501320719718933,
+          "planned_first_u_h": 1.50132155418396,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "policy_mean_u_h": 0.6649374961853027,
+          "policy_std": 0.7099019885063171,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.8326221704483032,
+          "planned_first_u_h": 1.8326225280761719,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "policy_mean_u_h": 0.39052432775497437,
+          "policy_std": 0.7030588388442993,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.5469529628753662,
+          "planned_first_u_h": 1.546952724456787,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "policy_mean_u_h": 0.6634583473205566,
+          "policy_std": 0.6560129523277283,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.7425034046173096,
+          "planned_first_u_h": 1.7425035238265991,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "policy_mean_u_h": 0.8229693174362183,
+          "policy_std": 0.7099632620811462,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.9907547235488892,
+          "planned_first_u_h": 1.9907546043395996,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "policy_mean_u_h": 0.5868902206420898,
+          "policy_std": 0.6464321613311768,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.6501762866973877,
+          "planned_first_u_h": 1.6501760482788086,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "policy_mean_u_h": 0.6360827684402466,
+          "policy_std": 0.7126709222793579,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.8083219528198242,
+          "planned_first_u_h": 1.8083218336105347,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "policy_mean_u_h": 0.3598487079143524,
+          "policy_std": 0.7594347596168518,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.6090075969696045,
+          "planned_first_u_h": 1.609008550643921,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "policy_mean_u_h": 0.8871593475341797,
+          "policy_std": 0.7144802212715149,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.0623745918273926,
+          "planned_first_u_h": 2.062375068664551,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "policy_mean_u_h": 0.8500188589096069,
+          "policy_std": 0.7349190711975098,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.0588529109954834,
+          "planned_first_u_h": 2.0588533878326416,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "policy_mean_u_h": 1.1224064826965332,
+          "policy_std": 0.9488082528114319,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.6830568313598633,
+          "planned_first_u_h": 2.6830568313598633,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "policy_mean_u_h": 1.0999318361282349,
+          "policy_std": 0.9065102338790894,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.591008186340332,
+          "planned_first_u_h": 2.591008186340332,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "policy_mean_u_h": 0.794353723526001,
+          "policy_std": 0.7185657620429993,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.9762890338897705,
+          "planned_first_u_h": 1.976288914680481,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "policy_mean_u_h": 0.8216272592544556,
+          "policy_std": 0.7276511788368225,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.0185067653656006,
+          "planned_first_u_h": 2.0185070037841797,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "policy_mean_u_h": 0.48486265540122986,
+          "policy_std": 0.7490639686584473,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.7169630527496338,
+          "planned_first_u_h": 1.716964840888977,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "policy_mean_u_h": 0.7366187572479248,
+          "policy_std": 0.675670862197876,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.8479982614517212,
+          "planned_first_u_h": 1.847998857498169,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "policy_mean_u_h": 0.40363040566444397,
+          "policy_std": 0.6781725883483887,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.5191248655319214,
+          "planned_first_u_h": 1.5191240310668945,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "policy_mean_u_h": 0.7730888724327087,
+          "policy_std": 0.6589393019676208,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.856947422027588,
+          "planned_first_u_h": 1.8569469451904297,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "policy_mean_u_h": 1.0043892860412598,
+          "policy_std": 0.7863151431083679,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 2.297762393951416,
+          "planned_first_u_h": 2.297762632369995,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "policy_mean_u_h": 0.7226132154464722,
+          "policy_std": 0.6510077118873596,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.793425440788269,
+          "planned_first_u_h": 1.7934249639511108,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "policy_mean_u_h": 0.7930928468704224,
+          "policy_std": 0.7167141437530518,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.971982479095459,
+          "planned_first_u_h": 1.971982717514038,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        }
+      ]
+    },
+    {
+      "run": "H01_action_prefix",
+      "policy_step": 6580,
+      "patient_sha256": "34c91c75e132a32d92b212fedaa5cbff65995396f3cc780d5e80b9448d6219d3",
+      "mean_policy_mean_u_h": 0.5152372717857361,
+      "mean_policy_std": 0.3425329625606537,
+      "mean_candidate_max_u_h": 1.0786536931991577,
+      "mean_planned_first_u_h": 1.0786538124084473,
+      "cases": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "policy_mean_u_h": 0.4665927588939667,
+          "policy_std": 0.3391346037387848,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0244194269180298,
+          "planned_first_u_h": 1.0244195461273193,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "policy_mean_u_h": 0.5436743497848511,
+          "policy_std": 0.36680227518081665,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.147010326385498,
+          "planned_first_u_h": 1.1470104455947876,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "policy_mean_u_h": 0.4839203357696533,
+          "policy_std": 0.3516653776168823,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0623583793640137,
+          "planned_first_u_h": 1.0623583793640137,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "policy_mean_u_h": 0.5219742059707642,
+          "policy_std": 0.339201956987381,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.079911708831787,
+          "planned_first_u_h": 1.079911708831787,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "policy_mean_u_h": 0.5331889390945435,
+          "policy_std": 0.34062284231185913,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0934635400772095,
+          "planned_first_u_h": 1.0934635400772095,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "policy_mean_u_h": 0.5216633677482605,
+          "policy_std": 0.32830873131752014,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0616830587387085,
+          "planned_first_u_h": 1.0616830587387085,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5361126065254211,
+          "policy_std": 0.3595570921897888,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.1275312900543213,
+          "planned_first_u_h": 1.1275312900543213,
+          "probe_reference_basal_u_h": 1.2675
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "policy_mean_u_h": 0.4731563329696655,
+          "policy_std": 0.33747997879981995,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.028261423110962,
+          "planned_first_u_h": 1.0282615423202515,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "policy_mean_u_h": 0.5067519545555115,
+          "policy_std": 0.33242499828338623,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0535423755645752,
+          "planned_first_u_h": 1.0535424947738647,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "policy_mean_u_h": 0.5148469805717468,
+          "policy_std": 0.3282017707824707,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0546908378601074,
+          "planned_first_u_h": 1.0546908378601074,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "policy_mean_u_h": 0.5226227641105652,
+          "policy_std": 0.3242395520210266,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0559492111206055,
+          "planned_first_u_h": 1.0559492111206055,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "policy_mean_u_h": 0.5441718697547913,
+          "policy_std": 0.3230050802230835,
+          "initial_min_candidate_u_h": 0.012875854969024658,
+          "initial_max_candidate_u_h": 1.075467824935913,
+          "planned_first_u_h": 1.075467824935913,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "policy_mean_u_h": 0.5301394462585449,
+          "policy_std": 0.3242626190185547,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0635039806365967,
+          "planned_first_u_h": 1.0635039806365967,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5028402209281921,
+          "policy_std": 0.3323943614959717,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0495802164077759,
+          "planned_first_u_h": 1.0495802164077759,
+          "probe_reference_basal_u_h": 1.3695000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "policy_mean_u_h": 0.4070286750793457,
+          "policy_std": 0.35661250352859497,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 0.9936039447784424,
+          "planned_first_u_h": 0.9936044216156006,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "policy_mean_u_h": 0.5175241827964783,
+          "policy_std": 0.3331422805786133,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0654942989349365,
+          "planned_first_u_h": 1.0654942989349365,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "policy_mean_u_h": 0.5310379862785339,
+          "policy_std": 0.3482261002063751,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.1038188934326172,
+          "planned_first_u_h": 1.1038188934326172,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "policy_mean_u_h": 0.5909380912780762,
+          "policy_std": 0.41607630252838135,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.275322675704956,
+          "planned_first_u_h": 1.275322675704956,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "policy_mean_u_h": 0.5711919665336609,
+          "policy_std": 0.3912094533443451,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.2146742343902588,
+          "planned_first_u_h": 1.2146742343902588,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "policy_mean_u_h": 0.523160457611084,
+          "policy_std": 0.34124428033828735,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.084457278251648,
+          "planned_first_u_h": 1.084457278251648,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5268979668617249,
+          "policy_std": 0.3449689447879791,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0943212509155273,
+          "planned_first_u_h": 1.0943214893341064,
+          "probe_reference_basal_u_h": 1.4255000000000002
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "policy_mean_u_h": 0.4258371591567993,
+          "policy_std": 0.35682907700538635,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0127687454223633,
+          "planned_first_u_h": 1.0127692222595215,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "policy_mean_u_h": 0.5166669487953186,
+          "policy_std": 0.32950034737586975,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0586466789245605,
+          "planned_first_u_h": 1.0586466789245605,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "policy_mean_u_h": 0.5125289559364319,
+          "policy_std": 0.3235810101032257,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0447722673416138,
+          "planned_first_u_h": 1.0447723865509033,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "policy_mean_u_h": 0.5254977345466614,
+          "policy_std": 0.32293596863746643,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0566799640655518,
+          "planned_first_u_h": 1.0566799640655518,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "policy_mean_u_h": 0.529629647731781,
+          "policy_std": 0.3373677432537079,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.084550142288208,
+          "planned_first_u_h": 1.084550142288208,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "policy_mean_u_h": 0.5257285833358765,
+          "policy_std": 0.32202276587486267,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.0554088354110718,
+          "planned_first_u_h": 1.0554089546203613,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "policy_mean_u_h": 0.5213184356689453,
+          "policy_std": 0.3399044871330261,
+          "initial_min_candidate_u_h": 0.0,
+          "initial_max_candidate_u_h": 1.080411434173584,
+          "planned_first_u_h": 1.080411434173584,
+          "probe_reference_basal_u_h": 0.8880000000000001
+        }
+      ]
+    }
+  ]
+}

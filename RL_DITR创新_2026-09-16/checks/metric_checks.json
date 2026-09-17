@@ -1,0 +1,8 @@
+{
+  "thresholds": true,
+  "missing_outcome_bounds": true,
+  "recovery_confirmation": true,
+  "right_censoring": true,
+  "empty_trajectory": true,
+  "initial_test_failure": "exact float equality assertion corrected to numerical tolerance; metric code unchanged"
+}

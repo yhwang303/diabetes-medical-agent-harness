@@ -1,0 +1,69 @@
+{
+  "recorded_at_local": "2026-09-16T17:41:43+0800",
+  "source": "AutoDL MCP returned JSON observed before SSH connection refusal; compact local record, not a full remote-artifact download",
+  "connection": "connect.nmb1.seetacloud.com:44118 Connection refused beginning approximately17:40 China; cause and remote process state unknown",
+  "last_complete_artifact_sync_local": "2026-09-16T17:30:05+08:00",
+  "H05_integrity_observed": {
+    "status": "passed",
+    "training_seed": 260915,
+    "checkpoint_sha256": "eaa7d43714da73f7a24220a8c972c7feb3140aac1409518c6ebf8afdbcc8752d",
+    "patient_parameters_and_buffers_exact": true,
+    "patient_state_tensors_checked": 147,
+    "all_final_tensors_finite": true,
+    "policy_parameter_l2_change": 6.990697487166122,
+    "steps": 6580,
+    "samples_seen": 1653421,
+    "patients_seen": 225,
+    "full_epochs": 1
+  },
+  "R08_last_observed": {
+    "step": 2550,
+    "samples": 633924,
+    "patients_seen": 225,
+    "full_epoch_completion": "unverified"
+  },
+  "C02_composition_observed": {
+    "status": "composition_complete_no_training",
+    "checkpoint_sha256": "f8a4fdc602e38581121585acfb722820ad1ae9bc223fa5c6386c9fd341bf7e1a",
+    "all_weights_exact_H02": true,
+    "prediction_state_and_initial_policy_exact": true,
+    "step_prefix_reward_parity": true,
+    "inherited_policy_steps": 6580,
+    "composition_optimizer_updates": 0
+  },
+  "temporal_response_results_observed": [
+    {
+      "name": "P05_temporal_conditioned_response",
+      "steps": 3200,
+      "parameters": 17480,
+      "train240mae": 3.4590108394622803,
+      "constant_dev240mae": 7.508484363555908,
+      "dynamic_dev240mae": 5.164348125457764,
+      "timing_direction": 1.0,
+      "timing_mae": 7.353410454023452
+    },
+    {
+      "name": "P06_temporal_direct_prefix",
+      "steps": 3200,
+      "parameters": 17469,
+      "train240mae": 3.339047908782959,
+      "constant_dev240mae": 7.314035892486572,
+      "dynamic_dev240mae": 5.0104475021362305,
+      "timing_direction": 1.0,
+      "timing_mae": 6.8462236154647105
+    }
+  ],
+  "unverified_after_disconnect": [
+    "R08 final training checkpoint and completion",
+    "H05/R08 E39-E42 control outcomes",
+    "C02 E43-E44 control outcomes",
+    "refreshed final scenario identity audit"
+  ],
+  "recovery": "Inspect existing jobs and files before resubmitting; retrieve checkpoints/logs; do not overwrite completed experiments or rerun full pipelines blindly.",
+  "user_confirmed_pause": {
+    "reason": "AutoDL account balance exhausted, user will recharge",
+    "resume_condition": "Only after user explicitly says 任务开始",
+    "remote_process_state": "not verified; no claim that queued processes were explicitly stopped",
+    "local_action": "no new training/evaluation submissions; prepare local summary"
+  }
+}

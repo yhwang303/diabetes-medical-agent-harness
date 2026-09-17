@@ -1,0 +1,33 @@
+{
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "total_minutes": 4320,
+  "groups": [
+    {
+      "name": "dev_normal",
+      "seeds": [
+        3101
+      ],
+      "bolus_factor": 1.0
+    },
+    {
+      "name": "dev_under_bolus",
+      "seeds": [
+        3101
+      ],
+      "bolus_factor": 0.8
+    },
+    {
+      "name": "dev_over_bolus",
+      "seeds": [
+        3101
+      ],
+      "bolus_factor": 1.2
+    }
+  ],
+  "comparison_status": "known-patient known-scenario development, eligible for tuning; not sealed"
+}

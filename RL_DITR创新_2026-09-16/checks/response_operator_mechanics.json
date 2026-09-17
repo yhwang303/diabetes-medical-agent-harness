@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "zero_intervention_exact": true,
+  "no_future_action_influence": true,
+  "manual_causal_convolution_parity": true,
+  "finite_nonzero_gradient": true,
+  "scope": "mechanical checks only, no physiological or efficacy guarantee"
+}

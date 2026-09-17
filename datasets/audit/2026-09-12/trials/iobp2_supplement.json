@@ -1,0 +1,2478 @@
+{
+  "counts": {
+    "date_only_timestamp_rows": 147,
+    "unparseable_timestamps": 0,
+    "meal_positive_raw_size_derived_missing": 36430,
+    "cgm_39_rows": 6394,
+    "cgm_401_rows": 34477,
+    "time_duplicate_rows": 41,
+    "index_reset_pairs": 171,
+    "consecutive_step_within1sec": 8466219,
+    "consecutive_step_gap_gt450": 43879,
+    "consecutive_step_nonpositive_time": 39
+  },
+  "component_abs_error_bins": {
+    "le0.001": 8640089,
+    "le0.002": 8640089,
+    "gt0.002": 760,
+    "gt0.01": 760,
+    "gt0.05": 756,
+    "gt0.1": 754
+  },
+  "meal_time_dose_raw_nonzero": {
+    "21.0": 18064,
+    "31.0": 18696,
+    "11.0": 14624,
+    "30.5": 7781,
+    "31.5": 7604,
+    "20.5": 6759,
+    "10.5": 4812,
+    "21.5": 5430,
+    "11.5": 4044
+  },
+  "adult_group_audit": {
+    "BP": {
+      "adult_raw_rows": 2718538,
+      "adult_rows_rand_to_day91": 2603516,
+      "adult_rows_pre_rand": 1434,
+      "adult_rows_after_day91": 113588,
+      "adult_dates_missing": 0,
+      "cgm_40_400_rows": 2487939,
+      "adult_91d_basic_event_pair_candidates": 2229567,
+      "candidate_patients": 107,
+      "candidate_runs_ge72_pairs": 8735,
+      "candidate_runs_ge288_pairs": 63,
+      "max_candidate_run_pairs": 992
+    },
+    "BPFiasp": {
+      "adult_raw_rows": 2947825,
+      "adult_rows_rand_to_day91": 2831059,
+      "adult_rows_pre_rand": 5002,
+      "adult_rows_after_day91": 111764,
+      "adult_dates_missing": 0,
+      "cgm_40_400_rows": 2689655,
+      "adult_91d_basic_event_pair_candidates": 2408349,
+      "candidate_patients": 113,
+      "candidate_runs_ge72_pairs": 9309,
+      "candidate_runs_ge288_pairs": 84,
+      "max_candidate_run_pairs": 803
+    },
+    "Control": {
+      "adult_raw_rows": 44481,
+      "adult_rows_rand_to_day91": 0,
+      "adult_rows_pre_rand": 122,
+      "adult_rows_after_day91": 44359,
+      "adult_dates_missing": 0,
+      "cgm_40_400_rows": 42287,
+      "adult_91d_basic_event_pair_candidates": 0,
+      "candidate_patients": 0,
+      "candidate_runs_ge72_pairs": 0,
+      "candidate_runs_ge288_pairs": 0,
+      "max_candidate_run_pairs": 0
+    }
+  },
+  "per_patient": {
+    "3": {
+      "rows": 26714,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2020-10-22 13:54:49",
+      "last_device_date": "2021-01-23 15:42:49"
+    },
+    "4": {
+      "rows": 27918,
+      "age": 33,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-22 11:31:08",
+      "last_device_date": "2021-02-27 09:56:08"
+    },
+    "6": {
+      "rows": 24208,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-12-17 12:17:07",
+      "last_device_date": "2021-03-19 11:34:07"
+    },
+    "8": {
+      "rows": 28191,
+      "age": 64,
+      "group": "BP",
+      "first_device_date": "2020-07-19 14:26:43",
+      "last_device_date": "2020-10-25 11:36:43"
+    },
+    "9": {
+      "rows": 29662,
+      "age": 39,
+      "group": "BPFiasp",
+      "first_device_date": "2021-01-23 17:59:44",
+      "last_device_date": "2021-05-06 17:44:44"
+    },
+    "10": {
+      "rows": 12175,
+      "age": 58,
+      "group": "BP",
+      "first_device_date": "2019-11-12 00:00:18",
+      "last_device_date": "2020-05-05 07:43:57"
+    },
+    "12": {
+      "rows": 26096,
+      "age": 57,
+      "group": "BP",
+      "first_device_date": "2020-04-10 11:22:04",
+      "last_device_date": "2020-07-10 07:47:04"
+    },
+    "13": {
+      "rows": 27037,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-10-11 15:02:58",
+      "last_device_date": "2021-01-13 12:02:58"
+    },
+    "17": {
+      "rows": 14391,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2020-07-01 13:26:45",
+      "last_device_date": "2020-08-25 16:21:45"
+    },
+    "18": {
+      "rows": 27044,
+      "age": 46,
+      "group": "BPFiasp",
+      "first_device_date": "2020-04-09 11:18:56",
+      "last_device_date": "2020-07-12 08:55:56"
+    },
+    "20": {
+      "rows": 5439,
+      "age": 53,
+      "group": "BP",
+      "first_device_date": "2021-03-19 12:33:24",
+      "last_device_date": "2021-04-07 09:43:24"
+    },
+    "21": {
+      "rows": 26142,
+      "age": 39,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-11 12:17:48",
+      "last_device_date": "2020-08-10 09:44:52"
+    },
+    "23": {
+      "rows": 28183,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-09-28 12:10:58",
+      "last_device_date": "2021-01-04 08:40:58"
+    },
+    "25": {
+      "rows": 27648,
+      "age": 42,
+      "group": "BP",
+      "first_device_date": "2020-05-17 12:38:32",
+      "last_device_date": "2020-08-21 12:33:32"
+    },
+    "27": {
+      "rows": 26537,
+      "age": 65,
+      "group": "BP",
+      "first_device_date": "2020-06-07 12:21:52",
+      "last_device_date": "2020-09-07 15:41:52"
+    },
+    "30": {
+      "rows": 28450,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-12-09 15:55:57",
+      "last_device_date": "2021-03-18 14:55:10"
+    },
+    "31": {
+      "rows": 26170,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-05-07 13:59:40",
+      "last_device_date": "2020-08-06 11:48:40"
+    },
+    "32": {
+      "rows": 26807,
+      "age": 49,
+      "group": "BP",
+      "first_device_date": "2021-03-01 13:35:44",
+      "last_device_date": "2021-06-02 16:00:44"
+    },
+    "34": {
+      "rows": 26139,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-11-22 17:54:16",
+      "last_device_date": "2021-02-21 12:04:16"
+    },
+    "36": {
+      "rows": 25804,
+      "age": 34,
+      "group": "BP",
+      "first_device_date": "2020-10-03 16:32:41",
+      "last_device_date": "2021-01-05 10:22:41"
+    },
+    "37": {
+      "rows": 27591,
+      "age": 19,
+      "group": "BP",
+      "first_device_date": "2020-04-27 15:27:32",
+      "last_device_date": "2020-08-01 13:32:32"
+    },
+    "38": {
+      "rows": 28015,
+      "age": 58,
+      "group": "BPFiasp",
+      "first_device_date": "2021-02-12 11:07:25",
+      "last_device_date": "2021-05-20 17:37:25"
+    },
+    "39": {
+      "rows": 26724,
+      "age": 38,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-03 18:42:45",
+      "last_device_date": "2020-10-04 14:37:45"
+    },
+    "42": {
+      "rows": 28175,
+      "age": 62,
+      "group": "BP",
+      "first_device_date": "2020-10-25 13:19:51",
+      "last_device_date": "2021-01-31 09:18:54"
+    },
+    "43": {
+      "rows": 27802,
+      "age": 22,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-24 12:09:00",
+      "last_device_date": "2021-03-31 09:39:00"
+    },
+    "45": {
+      "rows": 27123,
+      "age": 57,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-10 11:46:34",
+      "last_device_date": "2020-11-12 15:54:34"
+    },
+    "46": {
+      "rows": 469,
+      "age": 16,
+      "group": "Control",
+      "first_device_date": "2020-10-12 00:01:15",
+      "last_device_date": "2021-04-07 14:36:00"
+    },
+    "47": {
+      "rows": 27595,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2021-02-03 13:51:23",
+      "last_device_date": "2021-05-10 09:18:23"
+    },
+    "48": {
+      "rows": 26138,
+      "age": 61,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-01 13:42:45",
+      "last_device_date": "2020-12-31 11:47:45"
+    },
+    "50": {
+      "rows": 28529,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-09-17 11:16:05",
+      "last_device_date": "2020-12-25 12:36:05"
+    },
+    "51": {
+      "rows": 28014,
+      "age": 51,
+      "group": "BP",
+      "first_device_date": "2021-01-12 10:43:27",
+      "last_device_date": "2021-04-19 17:06:27"
+    },
+    "53": {
+      "rows": 28059,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-06-06 13:17:11",
+      "last_device_date": "2020-09-11 23:32:11"
+    },
+    "54": {
+      "rows": 27755,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2020-06-10 11:26:15",
+      "last_device_date": "2020-09-15 15:16:15"
+    },
+    "55": {
+      "rows": 26146,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-06-20 18:33:04",
+      "last_device_date": "2020-09-19 13:18:04"
+    },
+    "56": {
+      "rows": 27149,
+      "age": 30,
+      "group": "BP",
+      "first_device_date": "2021-03-30 13:34:23",
+      "last_device_date": "2021-07-04 11:08:34"
+    },
+    "57": {
+      "rows": 26727,
+      "age": 50,
+      "group": "BP",
+      "first_device_date": "2020-12-19 16:15:52",
+      "last_device_date": "2021-03-22 13:20:52"
+    },
+    "59": {
+      "rows": 26251,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-07-29 00:01:23",
+      "last_device_date": "2020-12-09 14:32:04"
+    },
+    "60": {
+      "rows": 2027,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-11-28 01:05:43",
+      "last_device_date": "2020-12-05 13:55:43"
+    },
+    "62": {
+      "rows": 28457,
+      "age": 52,
+      "group": "BPFiasp",
+      "first_device_date": "2021-05-11 10:34:53",
+      "last_device_date": "2021-08-18 08:59:53"
+    },
+    "63": {
+      "rows": 23223,
+      "age": 63,
+      "group": "BP",
+      "first_device_date": "2020-02-23 15:18:24",
+      "last_device_date": "2020-05-26 14:07:24"
+    },
+    "65": {
+      "rows": 26170,
+      "age": 58,
+      "group": "BP",
+      "first_device_date": "2020-06-14 15:45:32",
+      "last_device_date": "2020-09-13 12:28:32"
+    },
+    "67": {
+      "rows": 22791,
+      "age": 20,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-25 17:17:05",
+      "last_device_date": "2021-01-25 10:01:25"
+    },
+    "68": {
+      "rows": 26549,
+      "age": 17,
+      "group": "BP",
+      "first_device_date": "2020-09-12 14:59:43",
+      "last_device_date": "2020-12-13 19:19:43"
+    },
+    "69": {
+      "rows": 28529,
+      "age": 36,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-24 14:30:21",
+      "last_device_date": "2020-12-01 15:50:21"
+    },
+    "71": {
+      "rows": 27059,
+      "age": 50,
+      "group": "BP",
+      "first_device_date": "2019-11-13 00:01:49",
+      "last_device_date": "2020-04-24 15:46:06"
+    },
+    "72": {
+      "rows": 27942,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-03-06 13:44:38",
+      "last_device_date": "2020-06-11 15:07:38"
+    },
+    "76": {
+      "rows": 1042,
+      "age": 67,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-20 00:03:12",
+      "last_device_date": "2021-01-24 15:56:43"
+    },
+    "78": {
+      "rows": 26481,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2021-01-13 12:11:42",
+      "last_device_date": "2021-04-15 10:51:42"
+    },
+    "79": {
+      "rows": 27041,
+      "age": 27,
+      "group": "BP",
+      "first_device_date": "2021-01-05 12:14:15",
+      "last_device_date": "2021-04-09 09:34:15"
+    },
+    "81": {
+      "rows": 30289,
+      "age": 55,
+      "group": "BP",
+      "first_device_date": "2021-02-17 12:10:53",
+      "last_device_date": "2021-06-02 16:10:53"
+    },
+    "89": {
+      "rows": 26552,
+      "age": 35,
+      "group": "BPFiasp",
+      "first_device_date": "2021-05-15 11:55:37",
+      "last_device_date": "2021-08-15 16:30:37"
+    },
+    "90": {
+      "rows": 28153,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-09-10 13:43:11",
+      "last_device_date": "2020-12-17 12:12:13"
+    },
+    "92": {
+      "rows": 27854,
+      "age": 46,
+      "group": "BP",
+      "first_device_date": "2021-03-29 18:05:04",
+      "last_device_date": "2021-07-04 11:10:04"
+    },
+    "93": {
+      "rows": 26194,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2020-02-29 12:35:09",
+      "last_device_date": "2020-05-30 12:19:09"
+    },
+    "94": {
+      "rows": 27063,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2020-09-27 15:02:11",
+      "last_device_date": "2020-12-30 15:22:11"
+    },
+    "97": {
+      "rows": 28151,
+      "age": 20,
+      "group": "BP",
+      "first_device_date": "2020-06-29 11:52:55",
+      "last_device_date": "2020-10-05 09:57:55"
+    },
+    "99": {
+      "rows": 27981,
+      "age": 36,
+      "group": "BPFiasp",
+      "first_device_date": "2021-01-13 10:24:03",
+      "last_device_date": "2021-04-20 14:09:03"
+    },
+    "100": {
+      "rows": 26867,
+      "age": 46,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-27 11:38:21",
+      "last_device_date": "2021-03-30 18:26:21"
+    },
+    "101": {
+      "rows": 26204,
+      "age": 20,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-15 11:55:12",
+      "last_device_date": "2020-08-14 11:30:12"
+    },
+    "103": {
+      "rows": 26441,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2021-01-08 15:23:14",
+      "last_device_date": "2021-04-10 14:38:14"
+    },
+    "105": {
+      "rows": 27723,
+      "age": 33,
+      "group": "BP",
+      "first_device_date": "2020-09-08 12:03:04",
+      "last_device_date": "2020-12-13 17:55:47"
+    },
+    "107": {
+      "rows": 24005,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2020-07-13 00:04:15",
+      "last_device_date": "2021-03-02 13:53:31"
+    },
+    "111": {
+      "rows": 26238,
+      "age": 43,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-25 14:58:36",
+      "last_device_date": "2021-01-24 17:23:36"
+    },
+    "112": {
+      "rows": 27926,
+      "age": 69,
+      "group": "BP",
+      "first_device_date": "2021-04-14 15:16:32",
+      "last_device_date": "2021-07-21 14:36:32"
+    },
+    "113": {
+      "rows": 26166,
+      "age": 21,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-28 15:22:01",
+      "last_device_date": "2021-02-27 12:45:01"
+    },
+    "116": {
+      "rows": 27613,
+      "age": 56,
+      "group": "BP",
+      "first_device_date": "2021-01-29 13:03:55",
+      "last_device_date": "2021-05-05 10:01:55"
+    },
+    "119": {
+      "rows": 27565,
+      "age": 18,
+      "group": "BPFiasp",
+      "first_device_date": "2021-04-07 13:57:01",
+      "last_device_date": "2021-07-12 15:42:01"
+    },
+    "121": {
+      "rows": 26793,
+      "age": 41,
+      "group": "BP",
+      "first_device_date": "2020-12-27 15:33:12",
+      "last_device_date": "2021-03-30 16:09:12"
+    },
+    "125": {
+      "rows": 27593,
+      "age": 32,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-27 13:18:08",
+      "last_device_date": "2020-12-01 08:48:08"
+    },
+    "126": {
+      "rows": 24134,
+      "age": 50,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-14 13:07:46",
+      "last_device_date": "2021-01-13 14:17:46"
+    },
+    "128": {
+      "rows": 27067,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2020-04-02 12:17:06",
+      "last_device_date": "2020-07-05 11:47:06"
+    },
+    "130": {
+      "rows": 27086,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2020-04-30 12:07:32",
+      "last_device_date": "2020-08-02 13:12:32"
+    },
+    "131": {
+      "rows": 27428,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2021-01-15 12:53:36",
+      "last_device_date": "2021-04-22 14:54:57"
+    },
+    "133": {
+      "rows": 28204,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2020-11-26 12:13:42",
+      "last_device_date": "2021-03-04 10:25:42"
+    },
+    "134": {
+      "rows": 25907,
+      "age": 56,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-10 12:42:31",
+      "last_device_date": "2021-02-08 14:32:31"
+    },
+    "135": {
+      "rows": 27024,
+      "age": 21,
+      "group": "BPFiasp",
+      "first_device_date": "2020-03-04 14:04:05",
+      "last_device_date": "2020-06-06 10:57:05"
+    },
+    "137": {
+      "rows": 26218,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2020-09-26 12:26:57",
+      "last_device_date": "2020-12-26 14:12:57"
+    },
+    "138": {
+      "rows": 26162,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-03-23 16:48:52",
+      "last_device_date": "2020-06-22 14:14:25"
+    },
+    "139": {
+      "rows": 28482,
+      "age": 22,
+      "group": "BP",
+      "first_device_date": "2020-05-09 16:09:14",
+      "last_device_date": "2020-08-16 13:34:14"
+    },
+    "141": {
+      "rows": 26786,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2020-11-22 15:03:52",
+      "last_device_date": "2021-02-23 15:08:52"
+    },
+    "143": {
+      "rows": 26552,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2021-06-27 10:38:38",
+      "last_device_date": "2021-10-16 07:27:57"
+    },
+    "144": {
+      "rows": 26187,
+      "age": 18,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-04 12:44:23",
+      "last_device_date": "2021-03-05 10:54:23"
+    },
+    "146": {
+      "rows": 184,
+      "age": 13,
+      "group": "Control",
+      "first_device_date": "2020-03-16 00:02:43",
+      "last_device_date": "2020-03-16 15:17:43"
+    },
+    "148": {
+      "rows": 26169,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2020-09-17 12:59:56",
+      "last_device_date": "2020-12-17 10:39:56"
+    },
+    "151": {
+      "rows": 27879,
+      "age": 66,
+      "group": "BP",
+      "first_device_date": "2020-09-04 15:05:41",
+      "last_device_date": "2020-12-10 10:13:41"
+    },
+    "153": {
+      "rows": 26230,
+      "age": 43,
+      "group": "BP",
+      "first_device_date": "2020-07-03 12:45:22",
+      "last_device_date": "2020-10-02 15:30:22"
+    },
+    "154": {
+      "rows": 25952,
+      "age": 54,
+      "group": "BP",
+      "first_device_date": "2020-06-02 09:40:06",
+      "last_device_date": "2020-09-01 08:07:55"
+    },
+    "155": {
+      "rows": 28150,
+      "age": 39,
+      "group": "BP",
+      "first_device_date": "2021-02-22 17:49:30",
+      "last_device_date": "2021-05-31 11:34:30"
+    },
+    "156": {
+      "rows": 27286,
+      "age": 44,
+      "group": "BPFiasp",
+      "first_device_date": "2021-01-19 16:30:57",
+      "last_device_date": "2021-04-24 13:10:57"
+    },
+    "158": {
+      "rows": 27005,
+      "age": 69,
+      "group": "BP",
+      "first_device_date": "2020-10-26 03:23:55",
+      "last_device_date": "2021-01-28 14:13:55"
+    },
+    "160": {
+      "rows": 27951,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-11-07 18:00:28",
+      "last_device_date": "2021-02-14 12:33:02"
+    },
+    "162": {
+      "rows": 27106,
+      "age": 41,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-18 10:56:17",
+      "last_device_date": "2021-01-20 13:41:17"
+    },
+    "163": {
+      "rows": 28181,
+      "age": 35,
+      "group": "BP",
+      "first_device_date": "2021-03-22 14:12:52",
+      "last_device_date": "2021-06-28 10:32:52"
+    },
+    "164": {
+      "rows": 27930,
+      "age": 28,
+      "group": "BPFiasp",
+      "first_device_date": "2021-01-30 11:56:19",
+      "last_device_date": "2021-05-09 09:52:19"
+    },
+    "166": {
+      "rows": 27059,
+      "age": 51,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-10 12:00:55",
+      "last_device_date": "2020-11-12 10:48:55"
+    },
+    "167": {
+      "rows": 24097,
+      "age": 60,
+      "group": "BPFiasp",
+      "first_device_date": "2020-02-16 00:04:07",
+      "last_device_date": "2020-10-11 18:52:18"
+    },
+    "168": {
+      "rows": 26153,
+      "age": 33,
+      "group": "BP",
+      "first_device_date": "2020-10-29 18:14:22",
+      "last_device_date": "2021-01-28 14:34:22"
+    },
+    "170": {
+      "rows": 20046,
+      "age": 69,
+      "group": "BP",
+      "first_device_date": "2021-05-09 11:58:01",
+      "last_device_date": "2021-07-18 14:33:01"
+    },
+    "171": {
+      "rows": 27164,
+      "age": 37,
+      "group": "BPFiasp",
+      "first_device_date": "2020-06-04 00:00:24",
+      "last_device_date": "2020-09-30 11:14:56"
+    },
+    "173": {
+      "rows": 23562,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2021-02-09 13:54:12",
+      "last_device_date": "2021-05-14 17:57:12"
+    },
+    "176": {
+      "rows": 26276,
+      "age": 64,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-09 12:18:33",
+      "last_device_date": "2020-08-09 14:31:33"
+    },
+    "177": {
+      "rows": 26557,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2020-04-14 15:54:09",
+      "last_device_date": "2020-07-17 16:40:11"
+    },
+    "178": {
+      "rows": 26171,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-10-24 16:19:21",
+      "last_device_date": "2021-01-23 13:09:21"
+    },
+    "181": {
+      "rows": 26378,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-03-09 00:02:29",
+      "last_device_date": "2020-08-31 14:41:13"
+    },
+    "182": {
+      "rows": 26145,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-08-08 13:34:52",
+      "last_device_date": "2020-11-07 08:14:52"
+    },
+    "183": {
+      "rows": 26848,
+      "age": 63,
+      "group": "BP",
+      "first_device_date": "2020-08-14 00:01:23",
+      "last_device_date": "2021-03-20 10:58:39"
+    },
+    "184": {
+      "rows": 27588,
+      "age": 31,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-22 15:40:14",
+      "last_device_date": "2021-03-28 11:40:14"
+    },
+    "185": {
+      "rows": 26204,
+      "age": 59,
+      "group": "BP",
+      "first_device_date": "2020-04-08 11:26:53",
+      "last_device_date": "2020-07-08 11:59:53"
+    },
+    "186": {
+      "rows": 27640,
+      "age": 52,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-11 11:36:30",
+      "last_device_date": "2021-06-15 10:51:30"
+    },
+    "187": {
+      "rows": 28139,
+      "age": 31,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-15 15:35:45",
+      "last_device_date": "2020-10-21 14:20:45"
+    },
+    "188": {
+      "rows": 25738,
+      "age": 31,
+      "group": "BPFiasp",
+      "first_device_date": "2021-02-08 18:23:14",
+      "last_device_date": "2021-05-12 15:28:14"
+    },
+    "189": {
+      "rows": 26785,
+      "age": 67,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-10 12:08:57",
+      "last_device_date": "2020-08-11 12:08:57"
+    },
+    "191": {
+      "rows": 27801,
+      "age": 30,
+      "group": "BP",
+      "first_device_date": "2020-06-17 13:44:41",
+      "last_device_date": "2020-09-22 12:09:41"
+    },
+    "193": {
+      "rows": 27817,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2020-05-24 13:22:49",
+      "last_device_date": "2020-09-06 12:16:17"
+    },
+    "194": {
+      "rows": 26781,
+      "age": 48,
+      "group": "BP",
+      "first_device_date": "2020-09-04 13:32:25",
+      "last_device_date": "2020-12-06 16:37:25"
+    },
+    "195": {
+      "rows": 27537,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-10 00:10:15",
+      "last_device_date": "2020-10-13 14:50:15"
+    },
+    "198": {
+      "rows": 27951,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-12-26 14:04:21",
+      "last_device_date": "2021-04-02 16:13:21"
+    },
+    "199": {
+      "rows": 28224,
+      "age": 27,
+      "group": "BPFiasp",
+      "first_device_date": "2020-09-24 13:09:40",
+      "last_device_date": "2020-12-31 13:01:40"
+    },
+    "200": {
+      "rows": 27058,
+      "age": 54,
+      "group": "BPFiasp",
+      "first_device_date": "2021-01-27 10:51:19",
+      "last_device_date": "2021-05-01 09:34:19"
+    },
+    "202": {
+      "rows": 28205,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-10-11 15:21:38",
+      "last_device_date": "2021-01-17 13:38:38"
+    },
+    "203": {
+      "rows": 20825,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-08-24 12:27:08",
+      "last_device_date": "2020-11-24 09:17:08"
+    },
+    "205": {
+      "rows": 25672,
+      "age": 72,
+      "group": "BP",
+      "first_device_date": "2020-09-21 09:18:50",
+      "last_device_date": "2020-12-19 12:33:50"
+    },
+    "206": {
+      "rows": 26428,
+      "age": 47,
+      "group": "BP",
+      "first_device_date": "2020-09-13 14:39:16",
+      "last_device_date": "2020-12-14 09:54:16"
+    },
+    "207": {
+      "rows": 26126,
+      "age": 65,
+      "group": "BPFiasp",
+      "first_device_date": "2021-02-23 16:35:25",
+      "last_device_date": "2021-05-25 11:03:25"
+    },
+    "209": {
+      "rows": 26991,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2020-12-30 12:46:06",
+      "last_device_date": "2021-04-03 10:01:06"
+    },
+    "214": {
+      "rows": 26142,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-11-29 13:49:13",
+      "last_device_date": "2021-02-28 11:09:13"
+    },
+    "217": {
+      "rows": 27566,
+      "age": 37,
+      "group": "BPFiasp",
+      "first_device_date": "2020-06-03 15:55:34",
+      "last_device_date": "2020-09-07 15:24:34"
+    },
+    "218": {
+      "rows": 23897,
+      "age": 50,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-30 17:45:36",
+      "last_device_date": "2021-02-21 17:05:36"
+    },
+    "221": {
+      "rows": 26161,
+      "age": 61,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-17 16:31:58",
+      "last_device_date": "2020-08-16 13:36:58"
+    },
+    "222": {
+      "rows": 21968,
+      "age": 27,
+      "group": "BP",
+      "first_device_date": "2020-07-07 11:35:00",
+      "last_device_date": "2020-09-21 18:10:00"
+    },
+    "223": {
+      "rows": 26578,
+      "age": 47,
+      "group": "BPFiasp",
+      "first_device_date": "2020-02-24 00:00:23",
+      "last_device_date": "2020-10-09 12:22:35"
+    },
+    "224": {
+      "rows": 27282,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2020-09-24 17:59:20",
+      "last_device_date": "2020-12-28 11:54:20"
+    },
+    "226": {
+      "rows": 27895,
+      "age": 62,
+      "group": "BP",
+      "first_device_date": "2020-06-28 11:44:51",
+      "last_device_date": "2020-10-03 09:12:51"
+    },
+    "227": {
+      "rows": 27934,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2021-03-01 12:15:28",
+      "last_device_date": "2021-06-06 11:59:04"
+    },
+    "233": {
+      "rows": 28344,
+      "age": 32,
+      "group": "BP",
+      "first_device_date": "2020-09-12 00:03:54",
+      "last_device_date": "2021-06-08 15:18:10"
+    },
+    "234": {
+      "rows": 27904,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-20 14:38:19",
+      "last_device_date": "2020-11-25 11:53:19"
+    },
+    "235": {
+      "rows": 27191,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-07-26 00:02:43",
+      "last_device_date": "2021-01-13 13:32:44"
+    },
+    "236": {
+      "rows": 19231,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-06-02 13:02:10",
+      "last_device_date": "2020-09-14 21:24:49"
+    },
+    "238": {
+      "rows": 19915,
+      "age": 22,
+      "group": "Control",
+      "first_device_date": "2021-04-13 12:18:29",
+      "last_device_date": "2021-06-21 15:49:29"
+    },
+    "240": {
+      "rows": 26138,
+      "age": 51,
+      "group": "BPFiasp",
+      "first_device_date": "2021-04-26 15:28:28",
+      "last_device_date": "2021-07-26 11:08:28"
+    },
+    "241": {
+      "rows": 26233,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2021-04-15 11:29:10",
+      "last_device_date": "2021-07-15 13:29:10"
+    },
+    "242": {
+      "rows": 28098,
+      "age": 28,
+      "group": "BP",
+      "first_device_date": "2021-02-28 12:55:19",
+      "last_device_date": "2021-06-06 14:00:19"
+    },
+    "245": {
+      "rows": 26807,
+      "age": 62,
+      "group": "BPFiasp",
+      "first_device_date": "2021-02-10 11:42:31",
+      "last_device_date": "2021-05-14 17:27:31"
+    },
+    "247": {
+      "rows": 26062,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-06-20 12:20:10",
+      "last_device_date": "2020-09-19 08:55:10"
+    },
+    "249": {
+      "rows": 26757,
+      "age": 58,
+      "group": "BP",
+      "first_device_date": "2020-04-23 16:59:41",
+      "last_device_date": "2020-07-25 16:39:41"
+    },
+    "250": {
+      "rows": 26177,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-04-12 16:09:05",
+      "last_device_date": "2020-07-12 13:29:05"
+    },
+    "252": {
+      "rows": 27967,
+      "age": 50,
+      "group": "BP",
+      "first_device_date": "2020-06-01 00:04:07",
+      "last_device_date": "2021-01-25 14:35:58"
+    },
+    "254": {
+      "rows": 26741,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-05-25 12:04:46",
+      "last_device_date": "2020-08-26 09:24:46"
+    },
+    "255": {
+      "rows": 27001,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2021-02-06 14:49:31",
+      "last_device_date": "2021-05-11 09:49:25"
+    },
+    "258": {
+      "rows": 26172,
+      "age": 61,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-17 10:45:24",
+      "last_device_date": "2020-11-16 08:38:24"
+    },
+    "259": {
+      "rows": 140,
+      "age": 15,
+      "group": "Control",
+      "first_device_date": "2019-11-15 00:02:10",
+      "last_device_date": "2019-11-15 11:37:10"
+    },
+    "260": {
+      "rows": 21267,
+      "age": 53,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-31 16:48:21",
+      "last_device_date": "2021-07-04 18:46:01"
+    },
+    "261": {
+      "rows": 26189,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2021-01-12 10:10:15",
+      "last_device_date": "2021-04-13 10:13:15"
+    },
+    "266": {
+      "rows": 26204,
+      "age": 21,
+      "group": "BP",
+      "first_device_date": "2020-06-11 11:42:46",
+      "last_device_date": "2020-09-10 11:15:46"
+    },
+    "270": {
+      "rows": 26223,
+      "age": 74,
+      "group": "BPFiasp",
+      "first_device_date": "2020-04-24 13:00:36",
+      "last_device_date": "2020-07-24 14:09:36"
+    },
+    "271": {
+      "rows": 12362,
+      "age": 53,
+      "group": "BP",
+      "first_device_date": "2020-12-29 15:18:22",
+      "last_device_date": "2021-02-10 13:19:04"
+    },
+    "273": {
+      "rows": 29042,
+      "age": 19,
+      "group": "BP",
+      "first_device_date": "2021-01-07 13:13:27",
+      "last_device_date": "2021-04-19 16:32:06"
+    },
+    "274": {
+      "rows": 26435,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-06-25 13:54:25",
+      "last_device_date": "2020-09-25 09:43:25"
+    },
+    "276": {
+      "rows": 26166,
+      "age": 29,
+      "group": "BP",
+      "first_device_date": "2020-08-29 12:14:28",
+      "last_device_date": "2020-11-28 09:39:28"
+    },
+    "277": {
+      "rows": 26145,
+      "age": 53,
+      "group": "BP",
+      "first_device_date": "2021-02-21 11:41:24",
+      "last_device_date": "2021-05-23 09:14:24"
+    },
+    "279": {
+      "rows": 27837,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-10-07 16:09:49",
+      "last_device_date": "2021-01-12 08:49:49"
+    },
+    "280": {
+      "rows": 26170,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-02-18 12:29:48",
+      "last_device_date": "2020-05-19 12:49:48"
+    },
+    "281": {
+      "rows": 26085,
+      "age": 72,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-24 14:07:52",
+      "last_device_date": "2020-10-23 12:17:52"
+    },
+    "282": {
+      "rows": 28184,
+      "age": 59,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-19 12:05:19",
+      "last_device_date": "2020-11-25 08:38:20"
+    },
+    "283": {
+      "rows": 27829,
+      "age": 35,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-20 16:58:23",
+      "last_device_date": "2020-11-25 07:58:23"
+    },
+    "288": {
+      "rows": 26222,
+      "age": 44,
+      "group": "BP",
+      "first_device_date": "2020-10-22 09:09:19",
+      "last_device_date": "2021-01-21 10:14:19"
+    },
+    "289": {
+      "rows": 27913,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-07-25 14:35:06",
+      "last_device_date": "2020-10-30 12:33:06"
+    },
+    "290": {
+      "rows": 27680,
+      "age": 48,
+      "group": "BP",
+      "first_device_date": "2020-09-07 11:41:03",
+      "last_device_date": "2020-12-12 15:31:03"
+    },
+    "291": {
+      "rows": 26076,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-06-23 11:38:59",
+      "last_device_date": "2020-09-22 10:08:59"
+    },
+    "292": {
+      "rows": 27733,
+      "age": 68,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-21 10:54:10",
+      "last_device_date": "2021-01-25 17:54:10"
+    },
+    "293": {
+      "rows": 28126,
+      "age": 26,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-16 13:50:05",
+      "last_device_date": "2021-06-22 10:30:05"
+    },
+    "295": {
+      "rows": 26184,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2020-10-14 11:46:56",
+      "last_device_date": "2021-01-13 10:39:56"
+    },
+    "297": {
+      "rows": 26216,
+      "age": 18,
+      "group": "BP",
+      "first_device_date": "2020-10-27 09:00:22",
+      "last_device_date": "2021-01-26 09:33:14"
+    },
+    "299": {
+      "rows": 26234,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2020-09-22 14:38:21",
+      "last_device_date": "2020-12-22 17:33:21"
+    },
+    "300": {
+      "rows": 28220,
+      "age": 48,
+      "group": "BP",
+      "first_device_date": "2020-08-22 16:00:50",
+      "last_device_date": "2020-11-28 17:50:50"
+    },
+    "301": {
+      "rows": 27902,
+      "age": 61,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-31 14:27:08",
+      "last_device_date": "2021-02-05 15:27:09"
+    },
+    "302": {
+      "rows": 23770,
+      "age": 18,
+      "group": "BP",
+      "first_device_date": "2020-06-17 12:06:52",
+      "last_device_date": "2020-09-23 18:41:52"
+    },
+    "304": {
+      "rows": 23991,
+      "age": 17,
+      "group": "BP",
+      "first_device_date": "2020-09-02 15:02:35",
+      "last_device_date": "2020-12-04 13:13:14"
+    },
+    "306": {
+      "rows": 26732,
+      "age": 56,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-12 13:33:11",
+      "last_device_date": "2021-02-13 11:11:11"
+    },
+    "307": {
+      "rows": 23395,
+      "age": 31,
+      "group": "BP",
+      "first_device_date": "2020-10-09 10:54:23",
+      "last_device_date": "2021-01-10 09:49:23"
+    },
+    "309": {
+      "rows": 28791,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2021-04-11 15:33:45",
+      "last_device_date": "2021-07-20 15:18:45"
+    },
+    "312": {
+      "rows": 27960,
+      "age": 61,
+      "group": "BP",
+      "first_device_date": "2021-01-26 13:24:02",
+      "last_device_date": "2021-05-06 12:13:02"
+    },
+    "313": {
+      "rows": 28294,
+      "age": 27,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-06 17:27:38",
+      "last_device_date": "2020-12-23 19:47:38"
+    },
+    "314": {
+      "rows": 10695,
+      "age": 21,
+      "group": "BP",
+      "first_device_date": "2020-08-06 16:49:14",
+      "last_device_date": "2020-09-12 19:59:14"
+    },
+    "315": {
+      "rows": 26161,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-08-03 13:43:43",
+      "last_device_date": "2020-11-02 15:33:43"
+    },
+    "317": {
+      "rows": 5033,
+      "age": 52,
+      "group": "BP",
+      "first_device_date": "2020-10-21 11:08:11",
+      "last_device_date": "2020-11-09 17:08:51"
+    },
+    "318": {
+      "rows": 27086,
+      "age": 29,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-12 13:57:24",
+      "last_device_date": "2021-02-14 16:01:24"
+    },
+    "321": {
+      "rows": 25485,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-04-11 12:48:48",
+      "last_device_date": "2020-07-11 13:23:48"
+    },
+    "322": {
+      "rows": 28328,
+      "age": 20,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-17 11:44:12",
+      "last_device_date": "2020-09-04 15:13:12"
+    },
+    "323": {
+      "rows": 28194,
+      "age": 37,
+      "group": "BP",
+      "first_device_date": "2020-04-29 18:13:19",
+      "last_device_date": "2020-08-05 15:36:19"
+    },
+    "324": {
+      "rows": 27235,
+      "age": 34,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-11 15:54:48",
+      "last_device_date": "2021-01-14 11:14:48"
+    },
+    "326": {
+      "rows": 26740,
+      "age": 66,
+      "group": "BP",
+      "first_device_date": "2021-03-09 15:40:11",
+      "last_device_date": "2021-06-10 11:55:11"
+    },
+    "328": {
+      "rows": 26214,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-11-27 13:18:23",
+      "last_device_date": "2021-02-26 13:43:23"
+    },
+    "331": {
+      "rows": 27914,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-06-27 13:14:30",
+      "last_device_date": "2020-10-02 18:09:30"
+    },
+    "332": {
+      "rows": 26852,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-06-01 11:23:42",
+      "last_device_date": "2020-09-02 15:50:29"
+    },
+    "336": {
+      "rows": 28270,
+      "age": 17,
+      "group": "BP",
+      "first_device_date": "2020-11-09 16:44:09",
+      "last_device_date": "2021-02-20 15:29:09"
+    },
+    "338": {
+      "rows": 27319,
+      "age": 50,
+      "group": "BPFiasp",
+      "first_device_date": "2020-01-11 15:26:42",
+      "last_device_date": "2020-04-15 12:56:42"
+    },
+    "339": {
+      "rows": 25868,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2021-01-15 10:01:08",
+      "last_device_date": "2021-04-15 13:42:32"
+    },
+    "341": {
+      "rows": 26473,
+      "age": 46,
+      "group": "BP",
+      "first_device_date": "2020-04-20 15:24:41",
+      "last_device_date": "2020-07-21 14:24:41"
+    },
+    "344": {
+      "rows": 26159,
+      "age": 50,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-29 17:18:58",
+      "last_device_date": "2020-10-28 14:12:58"
+    },
+    "346": {
+      "rows": 28200,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2021-01-11 13:27:02",
+      "last_device_date": "2021-04-19 11:22:02"
+    },
+    "347": {
+      "rows": 27727,
+      "age": 53,
+      "group": "BPFiasp",
+      "first_device_date": "2019-10-16 00:02:41",
+      "last_device_date": "2020-07-14 10:22:13"
+    },
+    "348": {
+      "rows": 626,
+      "age": 68,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-20 16:59:08",
+      "last_device_date": "2020-12-22 21:04:08"
+    },
+    "349": {
+      "rows": 26302,
+      "age": 20,
+      "group": "BP",
+      "first_device_date": "2021-02-02 16:20:25",
+      "last_device_date": "2021-05-05 11:20:25"
+    },
+    "350": {
+      "rows": 14677,
+      "age": 18,
+      "group": "BP",
+      "first_device_date": "2020-11-10 15:29:39",
+      "last_device_date": "2021-02-12 13:07:39"
+    },
+    "352": {
+      "rows": 27153,
+      "age": 19,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-04 10:09:09",
+      "last_device_date": "2021-06-06 16:49:09"
+    },
+    "357": {
+      "rows": 4317,
+      "age": 39,
+      "group": "BP",
+      "first_device_date": "2020-08-26 15:36:43",
+      "last_device_date": "2020-09-21 15:26:43"
+    },
+    "358": {
+      "rows": 26154,
+      "age": 36,
+      "group": "BP",
+      "first_device_date": "2020-04-19 11:24:12",
+      "last_device_date": "2020-07-19 10:15:11"
+    },
+    "359": {
+      "rows": 28508,
+      "age": 62,
+      "group": "BP",
+      "first_device_date": "2021-01-09 13:14:55",
+      "last_device_date": "2021-04-18 12:54:55"
+    },
+    "360": {
+      "rows": 25950,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2021-04-15 11:02:04",
+      "last_device_date": "2021-07-14 13:26:04"
+    },
+    "362": {
+      "rows": 167,
+      "age": 9,
+      "group": "Control",
+      "first_device_date": "2020-02-04 00:03:30",
+      "last_device_date": "2020-02-04 13:53:30"
+    },
+    "364": {
+      "rows": 27249,
+      "age": 37,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-02 16:53:34",
+      "last_device_date": "2021-06-05 12:00:37"
+    },
+    "365": {
+      "rows": 26351,
+      "age": 13,
+      "group": "BP",
+      "first_device_date": "2020-12-23 12:32:12",
+      "last_device_date": "2021-04-07 10:37:12"
+    },
+    "366": {
+      "rows": 27318,
+      "age": 39,
+      "group": "BP",
+      "first_device_date": "2020-09-06 11:31:48",
+      "last_device_date": "2020-12-10 11:06:13"
+    },
+    "367": {
+      "rows": 28136,
+      "age": 49,
+      "group": "BP",
+      "first_device_date": "2020-02-27 14:34:09",
+      "last_device_date": "2020-06-04 13:58:09"
+    },
+    "369": {
+      "rows": 747,
+      "age": 53,
+      "group": "BP",
+      "first_device_date": "2021-02-16 12:38:06",
+      "last_device_date": "2021-02-19 15:03:06"
+    },
+    "371": {
+      "rows": 26199,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2021-03-12 15:56:18",
+      "last_device_date": "2021-06-11 15:06:18"
+    },
+    "372": {
+      "rows": 28256,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2020-04-25 10:32:57",
+      "last_device_date": "2020-08-01 13:07:57"
+    },
+    "373": {
+      "rows": 21150,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2021-03-15 12:31:57",
+      "last_device_date": "2021-06-15 12:11:57"
+    },
+    "375": {
+      "rows": 22466,
+      "age": 11,
+      "group": "Control",
+      "first_device_date": "2020-11-10 17:18:32",
+      "last_device_date": "2021-01-27 17:23:32"
+    },
+    "376": {
+      "rows": 26238,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-06-03 15:24:39",
+      "last_device_date": "2020-09-02 17:49:39"
+    },
+    "377": {
+      "rows": 28242,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-12-07 13:01:34",
+      "last_device_date": "2021-03-15 15:23:34"
+    },
+    "378": {
+      "rows": 27138,
+      "age": 33,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-15 11:11:17",
+      "last_device_date": "2021-01-17 16:36:17"
+    },
+    "383": {
+      "rows": 28508,
+      "age": 23,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-08 17:38:21",
+      "last_device_date": "2021-01-15 17:13:21"
+    },
+    "387": {
+      "rows": 28133,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2021-03-23 17:25:29",
+      "last_device_date": "2021-06-29 12:40:29"
+    },
+    "389": {
+      "rows": 28209,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-11-07 16:42:29",
+      "last_device_date": "2021-02-13 15:22:29"
+    },
+    "391": {
+      "rows": 25752,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-08-06 12:43:30",
+      "last_device_date": "2020-11-05 16:57:20"
+    },
+    "392": {
+      "rows": 26445,
+      "age": 47,
+      "group": "BPFiasp",
+      "first_device_date": "2020-02-03 13:00:14",
+      "last_device_date": "2020-05-05 09:40:14"
+    },
+    "393": {
+      "rows": 18062,
+      "age": 44,
+      "group": "BP",
+      "first_device_date": "2020-08-17 00:03:54",
+      "last_device_date": "2021-01-28 16:29:27"
+    },
+    "394": {
+      "rows": 27147,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-10-10 00:04:39",
+      "last_device_date": "2021-07-05 13:44:00"
+    },
+    "395": {
+      "rows": 122,
+      "age": 61,
+      "group": "Control",
+      "first_device_date": "2020-09-09 00:04:18",
+      "last_device_date": "2020-09-11 12:14:18"
+    },
+    "396": {
+      "rows": 26448,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-08-01 15:22:36",
+      "last_device_date": "2020-11-01 13:14:08"
+    },
+    "400": {
+      "rows": 28217,
+      "age": 47,
+      "group": "BP",
+      "first_device_date": "2020-06-26 12:22:16",
+      "last_device_date": "2020-10-02 11:42:16"
+    },
+    "402": {
+      "rows": 27989,
+      "age": 20,
+      "group": "BPFiasp",
+      "first_device_date": "2020-11-20 10:27:37",
+      "last_device_date": "2021-02-25 14:47:37"
+    },
+    "404": {
+      "rows": 26186,
+      "age": 57,
+      "group": "BPFiasp",
+      "first_device_date": "2020-04-03 12:08:16",
+      "last_device_date": "2020-07-03 11:13:16"
+    },
+    "405": {
+      "rows": 27823,
+      "age": 59,
+      "group": "BP",
+      "first_device_date": "2020-10-05 15:50:45",
+      "last_device_date": "2021-01-10 09:13:45"
+    },
+    "406": {
+      "rows": 7717,
+      "age": 8,
+      "group": "Control",
+      "first_device_date": "2021-01-16 16:43:06",
+      "last_device_date": "2021-02-12 11:43:06"
+    },
+    "407": {
+      "rows": 27684,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-08-08 11:27:15",
+      "last_device_date": "2020-11-12 14:21:15"
+    },
+    "408": {
+      "rows": 27342,
+      "age": 62,
+      "group": "BP",
+      "first_device_date": "2020-06-03 16:09:55",
+      "last_device_date": "2020-09-06 14:34:55"
+    },
+    "410": {
+      "rows": 27891,
+      "age": 28,
+      "group": "BPFiasp",
+      "first_device_date": "2021-05-03 13:25:03",
+      "last_device_date": "2021-08-08 11:10:03"
+    },
+    "411": {
+      "rows": 5891,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-08-12 10:34:21",
+      "last_device_date": "2020-09-09 13:19:21"
+    },
+    "412": {
+      "rows": 26069,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-10-18 17:14:35",
+      "last_device_date": "2021-01-17 11:04:05"
+    },
+    "413": {
+      "rows": 27429,
+      "age": 82,
+      "group": "BPFiasp",
+      "first_device_date": "2019-11-10 00:01:40",
+      "last_device_date": "2020-09-20 07:36:14"
+    },
+    "417": {
+      "rows": 26771,
+      "age": 49,
+      "group": "BPFiasp",
+      "first_device_date": "2020-01-21 17:36:28",
+      "last_device_date": "2020-04-23 17:36:28"
+    },
+    "421": {
+      "rows": 28204,
+      "age": 23,
+      "group": "BP",
+      "first_device_date": "2021-01-17 10:57:51",
+      "last_device_date": "2021-04-25 09:10:51"
+    },
+    "423": {
+      "rows": 27877,
+      "age": 35,
+      "group": "BP",
+      "first_device_date": "2020-05-15 11:02:23",
+      "last_device_date": "2020-08-20 09:17:23"
+    },
+    "424": {
+      "rows": 27968,
+      "age": 30,
+      "group": "BP",
+      "first_device_date": "2021-03-15 12:28:26",
+      "last_device_date": "2021-06-20 15:03:26"
+    },
+    "426": {
+      "rows": 26180,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-11-28 11:57:30",
+      "last_device_date": "2021-02-27 09:32:30"
+    },
+    "428": {
+      "rows": 26169,
+      "age": 18,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-09 10:21:45",
+      "last_device_date": "2021-03-10 09:51:45"
+    },
+    "429": {
+      "rows": 28833,
+      "age": 32,
+      "group": "BP",
+      "first_device_date": "2020-12-07 12:05:26",
+      "last_device_date": "2021-03-17 14:43:26"
+    },
+    "430": {
+      "rows": 26493,
+      "age": 59,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-14 11:31:56",
+      "last_device_date": "2020-08-14 12:10:56"
+    },
+    "432": {
+      "rows": 25903,
+      "age": 36,
+      "group": "BP",
+      "first_device_date": "2020-11-22 10:34:27",
+      "last_device_date": "2021-02-21 08:24:06"
+    },
+    "436": {
+      "rows": 28144,
+      "age": 20,
+      "group": "BPFiasp",
+      "first_device_date": "2021-04-17 13:44:42",
+      "last_device_date": "2021-07-24 15:34:42"
+    },
+    "438": {
+      "rows": 26731,
+      "age": 49,
+      "group": "BP",
+      "first_device_date": "2020-08-04 12:05:03",
+      "last_device_date": "2020-11-05 08:49:03"
+    },
+    "440": {
+      "rows": 26403,
+      "age": 42,
+      "group": "BPFiasp",
+      "first_device_date": "2019-11-08 00:03:50",
+      "last_device_date": "2020-06-14 15:30:22"
+    },
+    "441": {
+      "rows": 26504,
+      "age": 35,
+      "group": "BP",
+      "first_device_date": "2021-01-05 12:11:35",
+      "last_device_date": "2021-04-07 13:42:35"
+    },
+    "443": {
+      "rows": 27447,
+      "age": 44,
+      "group": "BP",
+      "first_device_date": "2020-07-02 00:01:11",
+      "last_device_date": "2021-02-16 13:54:26"
+    },
+    "444": {
+      "rows": 10342,
+      "age": 21,
+      "group": "BPFiasp",
+      "first_device_date": "2020-09-13 12:45:41",
+      "last_device_date": "2020-10-19 10:30:41"
+    },
+    "445": {
+      "rows": 26298,
+      "age": 14,
+      "group": "BP",
+      "first_device_date": "2020-07-18 11:42:36",
+      "last_device_date": "2020-10-18 08:59:51"
+    },
+    "446": {
+      "rows": 28275,
+      "age": 64,
+      "group": "BP",
+      "first_device_date": "2020-03-30 11:17:48",
+      "last_device_date": "2020-07-06 16:25:48"
+    },
+    "447": {
+      "rows": 26759,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2020-07-21 12:25:07",
+      "last_device_date": "2020-10-22 10:15:07"
+    },
+    "451": {
+      "rows": 26107,
+      "age": 22,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-26 17:42:43",
+      "last_device_date": "2020-10-25 12:07:43"
+    },
+    "452": {
+      "rows": 26174,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2021-01-06 12:24:54",
+      "last_device_date": "2021-04-07 10:27:54"
+    },
+    "457": {
+      "rows": 27924,
+      "age": 48,
+      "group": "BP",
+      "first_device_date": "2020-02-14 13:45:50",
+      "last_device_date": "2020-05-21 13:44:50"
+    },
+    "459": {
+      "rows": 26285,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2019-11-29 00:02:37",
+      "last_device_date": "2020-05-13 09:46:07"
+    },
+    "462": {
+      "rows": 26125,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-11-27 12:13:47",
+      "last_device_date": "2021-02-26 10:56:47"
+    },
+    "463": {
+      "rows": 26171,
+      "age": 32,
+      "group": "BP",
+      "first_device_date": "2020-05-19 13:30:00",
+      "last_device_date": "2020-08-18 10:18:00"
+    },
+    "464": {
+      "rows": 29669,
+      "age": 19,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-30 11:03:11",
+      "last_device_date": "2020-12-11 11:23:11"
+    },
+    "466": {
+      "rows": 26467,
+      "age": 42,
+      "group": "BPFiasp",
+      "first_device_date": "2020-06-23 12:33:13",
+      "last_device_date": "2020-09-23 11:07:13"
+    },
+    "467": {
+      "rows": 28203,
+      "age": 54,
+      "group": "BPFiasp",
+      "first_device_date": "2021-02-25 10:15:45",
+      "last_device_date": "2021-06-03 08:25:45"
+    },
+    "468": {
+      "rows": 26143,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2021-01-01 15:03:55",
+      "last_device_date": "2021-04-02 10:29:17"
+    },
+    "472": {
+      "rows": 26434,
+      "age": 39,
+      "group": "BPFiasp",
+      "first_device_date": "2020-10-19 12:24:30",
+      "last_device_date": "2021-01-19 10:37:19"
+    },
+    "473": {
+      "rows": 26220,
+      "age": 41,
+      "group": "BP",
+      "first_device_date": "2020-06-18 11:55:47",
+      "last_device_date": "2020-09-17 12:50:47"
+    },
+    "474": {
+      "rows": 27838,
+      "age": 24,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-06 16:39:59",
+      "last_device_date": "2021-06-11 11:34:59"
+    },
+    "480": {
+      "rows": 26975,
+      "age": 46,
+      "group": "BP",
+      "first_device_date": "2020-08-23 00:03:39",
+      "last_device_date": "2021-02-13 10:43:50"
+    },
+    "482": {
+      "rows": 26526,
+      "age": 41,
+      "group": "BP",
+      "first_device_date": "2021-03-12 11:12:51",
+      "last_device_date": "2021-06-12 13:37:51"
+    },
+    "483": {
+      "rows": 27206,
+      "age": 22,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-27 13:26:52",
+      "last_device_date": "2020-11-30 09:16:52"
+    },
+    "486": {
+      "rows": 20109,
+      "age": 32,
+      "group": "Control",
+      "first_device_date": "2021-03-02 14:37:42",
+      "last_device_date": "2021-05-11 10:17:42"
+    },
+    "490": {
+      "rows": 28168,
+      "age": 37,
+      "group": "BP",
+      "first_device_date": "2020-08-31 12:08:25",
+      "last_device_date": "2020-12-07 10:18:25"
+    },
+    "492": {
+      "rows": 28874,
+      "age": 24,
+      "group": "BP",
+      "first_device_date": "2021-01-04 14:06:18",
+      "last_device_date": "2021-05-04 13:54:29"
+    },
+    "493": {
+      "rows": 27013,
+      "age": 16,
+      "group": "BP",
+      "first_device_date": "2020-11-04 14:07:04",
+      "last_device_date": "2021-02-16 10:49:04"
+    },
+    "494": {
+      "rows": 25311,
+      "age": 18,
+      "group": "BPFiasp",
+      "first_device_date": "2021-05-19 12:49:22",
+      "last_device_date": "2021-08-18 15:09:22"
+    },
+    "496": {
+      "rows": 25533,
+      "age": 63,
+      "group": "BP",
+      "first_device_date": "2020-11-23 12:08:14",
+      "last_device_date": "2021-02-22 11:13:14"
+    },
+    "497": {
+      "rows": 28209,
+      "age": 35,
+      "group": "BP",
+      "first_device_date": "2020-01-27 15:22:30",
+      "last_device_date": "2020-05-04 15:03:30"
+    },
+    "498": {
+      "rows": 26742,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-07-23 15:23:19",
+      "last_device_date": "2020-10-24 11:44:19"
+    },
+    "501": {
+      "rows": 23028,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2020-05-15 12:02:10",
+      "last_device_date": "2020-08-21 17:29:56"
+    },
+    "502": {
+      "rows": 26839,
+      "age": 24,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-25 18:22:06",
+      "last_device_date": "2020-11-27 17:08:52"
+    },
+    "503": {
+      "rows": 26505,
+      "age": 40,
+      "group": "BPFiasp",
+      "first_device_date": "2021-01-11 11:15:04",
+      "last_device_date": "2021-04-13 11:55:04"
+    },
+    "504": {
+      "rows": 26168,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2020-10-21 15:20:31",
+      "last_device_date": "2021-01-20 15:18:31"
+    },
+    "507": {
+      "rows": 4025,
+      "age": 52,
+      "group": "BPFiasp",
+      "first_device_date": "2020-12-25 11:23:51",
+      "last_device_date": "2021-01-08 13:18:51"
+    },
+    "509": {
+      "rows": 27679,
+      "age": 31,
+      "group": "BP",
+      "first_device_date": "2020-12-18 11:03:27",
+      "last_device_date": "2021-03-24 13:33:27"
+    },
+    "510": {
+      "rows": 27193,
+      "age": 18,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-24 14:39:47",
+      "last_device_date": "2021-04-23 11:42:47"
+    },
+    "511": {
+      "rows": 28378,
+      "age": 53,
+      "group": "BPFiasp",
+      "first_device_date": "2020-01-09 00:00:47",
+      "last_device_date": "2020-08-31 15:22:05"
+    },
+    "512": {
+      "rows": 26760,
+      "age": 18,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-30 12:58:15",
+      "last_device_date": "2021-07-01 10:53:15"
+    },
+    "514": {
+      "rows": 26131,
+      "age": 36,
+      "group": "BPFiasp",
+      "first_device_date": "2021-02-02 16:03:24",
+      "last_device_date": "2021-05-04 09:33:24"
+    },
+    "516": {
+      "rows": 27412,
+      "age": 33,
+      "group": "BP",
+      "first_device_date": "2020-09-18 11:08:54",
+      "last_device_date": "2020-12-22 15:23:54"
+    },
+    "519": {
+      "rows": 27500,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-05-27 13:52:20",
+      "last_device_date": "2020-08-31 08:30:20"
+    },
+    "525": {
+      "rows": 26203,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2020-07-04 15:26:44",
+      "last_device_date": "2020-10-03 16:16:44"
+    },
+    "527": {
+      "rows": 28476,
+      "age": 67,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-28 11:48:50",
+      "last_device_date": "2020-12-05 08:43:50"
+    },
+    "529": {
+      "rows": 28484,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2019-09-03 15:27:53",
+      "last_device_date": "2020-05-10 09:10:19"
+    },
+    "531": {
+      "rows": 4287,
+      "age": 13,
+      "group": "Control",
+      "first_device_date": "2021-02-02 09:58:07",
+      "last_device_date": "2021-02-17 07:08:07"
+    },
+    "534": {
+      "rows": 26719,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-04-19 14:05:42",
+      "last_device_date": "2020-07-23 15:52:27"
+    },
+    "535": {
+      "rows": 28923,
+      "age": 20,
+      "group": "BP",
+      "first_device_date": "2020-09-25 13:23:33",
+      "last_device_date": "2021-01-03 23:33:33"
+    },
+    "539": {
+      "rows": 27604,
+      "age": 32,
+      "group": "BPFiasp",
+      "first_device_date": "2021-05-30 10:30:19",
+      "last_device_date": "2021-09-04 08:21:19"
+    },
+    "541": {
+      "rows": 26649,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-10-24 00:04:17",
+      "last_device_date": "2021-04-05 11:58:39"
+    },
+    "542": {
+      "rows": 27072,
+      "age": 33,
+      "group": "BP",
+      "first_device_date": "2020-10-27 16:28:42",
+      "last_device_date": "2021-01-29 16:23:42"
+    },
+    "543": {
+      "rows": 26528,
+      "age": 6,
+      "group": "BP",
+      "first_device_date": "2020-12-18 11:27:10",
+      "last_device_date": "2021-03-20 15:10:10"
+    },
+    "546": {
+      "rows": 28250,
+      "age": 39,
+      "group": "BPFiasp",
+      "first_device_date": "2020-03-07 13:22:24",
+      "last_device_date": "2020-06-13 17:13:50"
+    },
+    "547": {
+      "rows": 24931,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-06-19 13:45:53",
+      "last_device_date": "2020-09-22 08:50:53"
+    },
+    "548": {
+      "rows": 20308,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2021-03-30 11:51:40",
+      "last_device_date": "2021-07-04 10:29:43"
+    },
+    "549": {
+      "rows": 26448,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-05-04 11:56:13",
+      "last_device_date": "2020-08-04 09:59:13"
+    },
+    "551": {
+      "rows": 26201,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-01-30 16:29:19",
+      "last_device_date": "2020-04-30 16:48:19"
+    },
+    "552": {
+      "rows": 15029,
+      "age": 29,
+      "group": "BPFiasp",
+      "first_device_date": "2020-08-16 11:09:26",
+      "last_device_date": "2020-10-07 15:29:26"
+    },
+    "553": {
+      "rows": 4335,
+      "age": 65,
+      "group": "Control",
+      "first_device_date": "2020-12-09 14:31:12",
+      "last_device_date": "2020-12-24 15:41:12"
+    },
+    "554": {
+      "rows": 28239,
+      "age": 47,
+      "group": "BPFiasp",
+      "first_device_date": "2020-01-10 00:04:57",
+      "last_device_date": "2020-09-02 12:52:14"
+    },
+    "555": {
+      "rows": 26768,
+      "age": 63,
+      "group": "BP",
+      "first_device_date": "2020-06-22 12:25:20",
+      "last_device_date": "2020-09-23 11:04:20"
+    },
+    "556": {
+      "rows": 27609,
+      "age": 7,
+      "group": "BP",
+      "first_device_date": "2021-04-21 14:05:49",
+      "last_device_date": "2021-07-26 10:45:49"
+    },
+    "557": {
+      "rows": 26784,
+      "age": 35,
+      "group": "BPFiasp",
+      "first_device_date": "2020-07-26 17:24:36",
+      "last_device_date": "2020-10-27 17:19:36"
+    },
+    "560": {
+      "rows": 25337,
+      "age": 19,
+      "group": "BP",
+      "first_device_date": "2020-11-22 16:17:11",
+      "last_device_date": "2021-02-21 14:56:11"
+    },
+    "564": {
+      "rows": 27041,
+      "age": 20,
+      "group": "BP",
+      "first_device_date": "2020-05-13 12:12:23",
+      "last_device_date": "2020-08-15 09:32:23"
+    },
+    "567": {
+      "rows": 28175,
+      "age": 12,
+      "group": "BP",
+      "first_device_date": "2020-01-29 14:28:24",
+      "last_device_date": "2020-05-06 11:18:24"
+    },
+    "569": {
+      "rows": 26161,
+      "age": 27,
+      "group": "BPFiasp",
+      "first_device_date": "2020-03-11 17:28:53",
+      "last_device_date": "2020-06-10 17:23:53"
+    },
+    "570": {
+      "rows": 27309,
+      "age": 35,
+      "group": "BP",
+      "first_device_date": "2020-09-03 20:27:21",
+      "last_device_date": "2020-12-07 18:17:21"
+    },
+    "571": {
+      "rows": 28175,
+      "age": 41,
+      "group": "BPFiasp",
+      "first_device_date": "2020-09-28 12:58:13",
+      "last_device_date": "2021-01-04 10:43:13"
+    },
+    "573": {
+      "rows": 25741,
+      "age": 11,
+      "group": "BP",
+      "first_device_date": "2020-10-15 16:25:23",
+      "last_device_date": "2021-01-14 10:50:23"
+    },
+    "574": {
+      "rows": 27288,
+      "age": 37,
+      "group": "BP",
+      "first_device_date": "2020-07-06 18:31:47",
+      "last_device_date": "2020-10-09 13:26:47"
+    },
+    "576": {
+      "rows": 27850,
+      "age": 43,
+      "group": "BPFiasp",
+      "first_device_date": "2020-04-18 17:31:11",
+      "last_device_date": "2020-07-24 11:21:11"
+    },
+    "577": {
+      "rows": 26673,
+      "age": 52,
+      "group": "BPFiasp",
+      "first_device_date": "2020-09-23 00:04:49",
+      "last_device_date": "2021-03-11 14:44:02"
+    },
+    "578": {
+      "rows": 26462,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2020-05-04 11:47:24",
+      "last_device_date": "2020-08-04 15:07:24"
+    },
+    "580": {
+      "rows": 8881,
+      "age": 15,
+      "group": "BP",
+      "first_device_date": "2021-01-05 14:29:48",
+      "last_device_date": "2021-02-08 15:26:48"
+    },
+    "581": {
+      "rows": 26446,
+      "age": 49,
+      "group": "BP",
+      "first_device_date": "2021-01-05 13:43:08",
+      "last_device_date": "2021-04-07 10:38:08"
+    },
+    "583": {
+      "rows": 26789,
+      "age": 36,
+      "group": "BPFiasp",
+      "first_device_date": "2020-05-10 12:51:47",
+      "last_device_date": "2020-08-11 13:09:47"
+    },
+    "584": {
+      "rows": 29066,
+      "age": 43,
+      "group": "BP",
+      "first_device_date": "2021-03-24 10:52:13",
+      "last_device_date": "2021-07-03 08:57:13"
+    },
+    "586": {
+      "rows": 26374,
+      "age": 8,
+      "group": "BP",
+      "first_device_date": "2020-07-05 02:34:46",
+      "last_device_date": "2020-10-05 11:28:46"
+    },
+    "588": {
+      "rows": 28767,
+      "age": 50,
+      "group": "BPFiasp",
+      "first_device_date": "2021-03-13 13:22:47",
+      "last_device_date": "2021-06-21 10:44:47"
+    },
+    "589": {
+      "rows": 27248,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-06-27 14:35:49",
+      "last_device_date": "2020-09-30 15:00:49"
+    },
+    "590": {
+      "rows": 27412,
+      "age": 10,
+      "group": "BP",
+      "first_device_date": "2020-10-06 00:03:24",
+      "last_device_date": "2021-03-17 09:35:42"
+    },
+    "591": {
+      "rows": 26752,
+      "age": 53,
+      "group": "BPFiasp",
+      "first_device_date": "2021-04-03 11:30:45",
+      "last_device_date": "2021-07-05 08:45:45"
+    },
+    "592": {
+      "rows": 27847,
+      "age": 9,
+      "group": "BP",
+      "first_device_date": "2020-05-18 14:31:24",
+      "last_device_date": "2020-08-23 12:29:24"
+    },
+    "593": {
+      "rows": 27329,
+      "age": 24,
+      "group": "BP",
+      "first_device_date": "2020-07-24 12:58:27",
+      "last_device_date": "2020-10-27 10:16:27"
+    },
+    "594": {
+      "rows": 26785,
+      "age": 59,
+      "group": "BP",
+      "first_device_date": "2021-02-22 16:15:13",
+      "last_device_date": "2021-05-26 16:36:13"
+    },
+    "597": {
+      "rows": 26442,
+      "age": 23,
+      "group": "BP",
+      "first_device_date": "2020-10-05 16:23:02",
+      "last_device_date": "2021-01-05 11:45:02"
+    },
+    "600": {
+      "rows": 12143,
+      "age": 37,
+      "group": "BP",
+      "first_device_date": "2020-08-13 12:53:21",
+      "last_device_date": "2020-09-24 16:43:21"
+    }
+  },
+  "caution": "Candidates only: no CHO grams, no long-acting/manual injection washout or issue/phase adjudication applied. RCT window is diagnostic calendar RandDt to +91 days; not final source phase extraction."
+}

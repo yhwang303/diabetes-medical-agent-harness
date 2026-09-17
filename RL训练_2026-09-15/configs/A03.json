@@ -1,0 +1,25 @@
+{
+  "name": "A03_residual_target",
+  "seed": 260915,
+  "model": {
+    "width": 256,
+    "layers": 3,
+    "ff": 2048,
+    "dropout": 0.4,
+    "residual": true
+  },
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "mu": 0.1,
+  "batch_size": 256,
+  "unroll": 12,
+  "epochs": 1,
+  "max_steps": 10000,
+  "max_seconds": 3600,
+  "eval_every": 1000,
+  "eval_per_patient": 64,
+  "final_eval_per_patient": 256,
+  "log_every": 100,
+  "amp": true,
+  "reason": "A02已恢复拟合，但早期仍未胜30分钟Last基线且剂量方向反常。保持lr1e-4/dropout0.4/结构主体/损失/全数据相同，仅改为预测相对当前CGM的变化再还原绝对GLU。属于显式偏离原作者绝对输出的优化对照，不称原样复现。"
+}

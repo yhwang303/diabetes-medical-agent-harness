@@ -1,0 +1,15 @@
+{
+  "name": "D13_existing_bc200k_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "BC200k": "results/R10_bc_200k/export_0200000.npz"
+  }
+}

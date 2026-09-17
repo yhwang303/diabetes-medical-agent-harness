@@ -1,0 +1,7 @@
+{
+  "probe_parameters_formula_count": 5138948,
+  "fp32_parameters_grad_adam_bytes": 82223168,
+  "input_batch32_float32_bytes": 129024,
+  "cuda_benchmark_executed": false,
+  "scope": "Capacity estimate, not actual peak VRAM or training duration"
+}

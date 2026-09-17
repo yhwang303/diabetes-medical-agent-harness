@@ -1,0 +1,76 @@
+{
+  "audit_date": "2026-09-12",
+  "scope": "public literature and author code snapshots only; no patient processing, model training or simulation execution",
+  "sources": [
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/GluCoEnv-README.md",
+      "size_bytes": 10288,
+      "sha256": "29ee539a67d92315d467d38e578fc44efc1d987125fbe94d1a348adba52bbabe"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/GluCoEnv-revision.json",
+      "size_bytes": 180,
+      "sha256": "030746dafd2bd8e038c9b4587f529b404f5576b450bdf6aa8afe00e193c86237"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/GluCoEnv-tree.json",
+      "size_bytes": 21911,
+      "sha256": "2cb419dccaf0f7b0fa5e42a2ae99561040c2d78063d77943b6a3511b5ad80562"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/RL-DITR.txt",
+      "size_bytes": 103053,
+      "sha256": "39733d8bb101583579360e3b38cb59d1beadbb7841433ab82dfc431fbe7f88d7"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/RL4T1D.pdf",
+      "size_bytes": 2438014,
+      "sha256": "30c293cd19c23ddf714953c7d29f68d15952de0521daff251a332ec78a535f90"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/RL4T1D.txt",
+      "size_bytes": 48797,
+      "sha256": "f12590e8f905afc5779146524f5b5651c005c7dde65ae5e7cd5ac76aa3b0d132"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/ReplayBG-COPYING.md",
+      "size_bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/ReplayBG-data_requirements.md",
+      "size_bytes": 8456,
+      "sha256": "15b7ca3a1012af1569b6e5d1266f4899c38503624f81f8d32656a3bc879cd211"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/ReplayBG-equations.py",
+      "size_bytes": 11004,
+      "sha256": "675931919adf4d29ac6a2a1158574c89bb3030b7a6a3482a4bf1217449a99c83"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/ReplayBG-model.py",
+      "size_bytes": 62705,
+      "sha256": "e7f9abf366b02088b15cf298f89ea8bb487cb637eab931eb5573b5db93a7994b"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/ReplayBG-revision.json",
+      "size_bytes": 187,
+      "sha256": "7aab77a156314efdb113ed0cb7a22c4802af681479a96b604d7521175796da0a"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/ReplayBG-tree.json",
+      "size_bytes": 37024,
+      "sha256": "e7596ac8f3b58882b2276fad9a425d04cd31dacc94512f62d60bb48e3119cd93"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/offline_emerson.pdf",
+      "size_bytes": 426594,
+      "sha256": "be01f8e52e3375e5afc57d81fcdcdd55c54a23c7b82fcf606a0a64fd76d3e0ad"
+    },
+    {
+      "path": "datasets/audit/2026-09-12/literature/sources/offline_emerson.txt",
+      "size_bytes": 68826,
+      "sha256": "3799ce6e35717bc9d9d933ef05f86217809ff2ba02d9fafe492ae2aaf2e36ade"
+    }
+  ]
+}

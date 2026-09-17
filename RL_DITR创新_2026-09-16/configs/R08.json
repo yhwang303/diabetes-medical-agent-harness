@@ -1,0 +1,61 @@
+{
+  "name": "R08_H02_delayed_policy",
+  "seed": 260915,
+  "model": {
+    "width": 256,
+    "layers": 3,
+    "heads": 8,
+    "ff": 2048,
+    "dropout": 0.4,
+    "categorical_heads": true,
+    "transition_mode": "action_prefix"
+  },
+  "batch_size": 256,
+  "horizon": 12,
+  "amp": true,
+  "mu": 0.1,
+  "weight_decay": 0.0001,
+  "target_tau": 0.005,
+  "log_every": 25,
+  "validation_per_patient": 32,
+  "final_validation_per_patient": 128,
+  "patient": {
+    "lr": 0.0001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 1000
+  },
+  "policy": {
+    "lr": 0.001,
+    "epochs": 1,
+    "max_steps": 100000,
+    "eval_every": 2000
+  },
+  "adaptations": [
+    "Matched initialization from C01/H02 before any extra policy epoch; all 225 Loop patients and 1653421 origins retained; seed260915.",
+    "Frozen patient and inherited reference policy; original unsmoothed status reward; independent leave-one-out REINFORCE on 4h sampled trajectories.",
+    "Three 80min action blocks approximate delayed effects; this surrogate differs from every5min closed-loop replanning.",
+    "Soft trajectory KL penalty beta1 replaces direct historical-action NLL in this fine-tuning stage; no hard trust-region or safety guarantee.",
+    "No critic bootstrap in finite4h actor objective; original value head and planning implementation retained.",
+    "Known variance-reduction and policy-regularization adaptations, not claimed as original contributions."
+  ],
+  "selection": "predeclared final one-full-epoch policy; no development checkpoint selection",
+  "initialize_checkpoint": "results/H02_prefix_sim_factual/policy_last.pt",
+  "policy_loss_variant": "delayed_trajectory_kl",
+  "stages": [
+    "policy"
+  ],
+  "allow_policy_initialization": true,
+  "patient_training_origin": "H02_prefix_sim_factual",
+  "policy_rng_seed": 260915,
+  "delayed_policy": {
+    "horizon": 48,
+    "block_steps": 16,
+    "trajectories": 4,
+    "kl_beta": 1.0
+  },
+  "method_sources": [
+    "https://aclanthology.org/2024.acl-long.662/",
+    "https://arxiv.org/abs/2502.03550"
+  ]
+}

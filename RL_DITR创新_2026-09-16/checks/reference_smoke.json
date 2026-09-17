@@ -1,0 +1,72 @@
+{
+  "checks": {
+    "variable_length_bootstrap_not_terminal": true,
+    "reward_low_glucose": true,
+    "censored_policy_endpoint_masses_and_gradients": true,
+    "beam_cumulative_reward_terminal_value_matches_exhaustive": true,
+    "frozen_full_data_and_actual_bootstrap_state": true,
+    "actual_batch_patient_backward_and_frozen_policy_training": true,
+    "actual_model_beam10_horizon12": true
+  },
+  "torch": "2.0.0+cu118",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "seed": 260915,
+  "patient_parameters": 9610501,
+  "patient_batch32_fp32_step_seconds": [
+    0.42246580123901367,
+    0.1170649528503418,
+    0.11024665832519531
+  ],
+  "smoke_losses_not_formal_training": [
+    {
+      "glucose_mse": 32.66670608520508,
+      "wtr_ce": 0.7176070213317871,
+      "consistency": 2.10642671585083,
+      "reward_status_mse": 0.6128997802734375,
+      "value_mse": 0.17882099747657776
+    },
+    {
+      "glucose_mse": 24.99092674255371,
+      "wtr_ce": 0.594086766242981,
+      "consistency": 2.1319985389709473,
+      "reward_status_mse": 0.2892213761806488,
+      "value_mse": 0.11535760015249252
+    },
+    {
+      "glucose_mse": 17.295352935791016,
+      "wtr_ce": 0.40004485845565796,
+      "consistency": 2.2366204261779785,
+      "reward_status_mse": 0.426150381565094,
+      "value_mse": 0.14990471303462982
+    }
+  ],
+  "policy_smoke_parts": {
+    "historical_policy_loss": 1.9344286918640137,
+    "imagined_policy_loss": 0.11578341573476791,
+    "supervised_action_mse": 1.3519752025604248,
+    "mean_std": 0.30000001192092896,
+    "imagined_return": 0.5857414603233337
+  },
+  "beam_seconds": 0.22921538352966309,
+  "beam_output": {
+    "planned_actions_u_h": [
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099,
+      1.4934560060501099
+    ],
+    "plan_value": 0.864430844783783,
+    "horizon": 12,
+    "beam_size": 10
+  },
+  "peak_gpu_gb": 1.301642752,
+  "complete_reference_training": false
+}

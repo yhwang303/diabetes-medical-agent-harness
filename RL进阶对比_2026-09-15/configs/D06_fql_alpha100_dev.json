@@ -1,0 +1,15 @@
+{
+  "name": "D06_fql_alpha100_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "FQL_alpha100": "results/R22_fql_alpha100/export_0050000.npz"
+  }
+}

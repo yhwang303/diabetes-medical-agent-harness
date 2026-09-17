@@ -1,0 +1,13 @@
+diff --git a/plugins/autodl-remote/bin/autodl-remote b/plugins/autodl-remote/bin/autodl-remote
+index 89affe6..fe416b0 100755
+--- a/plugins/autodl-remote/bin/autodl-remote
++++ b/plugins/autodl-remote/bin/autodl-remote
+@@ -3,7 +3,7 @@ set -u
+ 
+ PROGRAM="autodl-remote"
+ PROGRAM_VERSION="0.9.0"
+-APP_DIR="$HOME/.autodl-remote"
++APP_DIR="${AUTODL_REMOTE_APP_DIR:-$HOME/.autodl-remote}"
+ ACCOUNTS_DIR="$APP_DIR/accounts"
+ DEFAULT_ACCOUNT_FILE="$APP_DIR/default-account"
+ CONFIG_FILE=".autodl-remote.conf"

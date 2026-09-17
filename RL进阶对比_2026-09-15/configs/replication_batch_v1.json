@@ -1,0 +1,23 @@
+{
+  "names": [
+    "R31_anchor_rebrac_s260916",
+    "R31_anchor_rebrac_s260917"
+  ],
+  "seeds": [
+    260916,
+    260917
+  ],
+  "updates_per_run": 50000,
+  "sealed_patients_used": false,
+  "withdrawn_unsubmitted": [
+    "R21_rebrac_bc100_s260916",
+    "R32_anchor_fql_s260916",
+    "R22_fql_alpha100_s260916",
+    "R30_anchor_bc_s260916",
+    "R21_rebrac_bc100_s260917",
+    "R32_anchor_fql_s260917",
+    "R22_fql_alpha100_s260917",
+    "R30_anchor_bc_s260917"
+  ],
+  "reason": "User: external baselines require one training seed only; prioritize our model. Additional baseline seed configs were never submitted."
+}

@@ -1,0 +1,532 @@
+{
+  "source": "datasets/raw/dclp3/DCLP3 Public Dataset - Release 3 - 2022-08-04.zip",
+  "archive_sha256": "6dbe8580fe38612622f0ebf5da58fed04b4ed556d1e06bf3a67813791222f5dc",
+  "safe_paths": true,
+  "all_crc_and_size_valid": true,
+  "files": [
+    {
+      "path": "Case Report Forms/00 - README - DCLP3 CRFs Summary.pdf",
+      "bytes": 224463,
+      "crc32": "93348356",
+      "sha256": "dfe7ffa7d5e6c2bf7aa5931c9aa5731ff31247a34840d780546e584aa3231a7a"
+    },
+    {
+      "path": "Case Report Forms/01a-Visit Information - Worksheet Variation A.pdf",
+      "bytes": 32531,
+      "crc32": "bdc759bb",
+      "sha256": "bb54f50a9c0fe4b251f876fb5c821184f3e9552e7563939e8e59acd0084c5674"
+    },
+    {
+      "path": "Case Report Forms/01b-Visit Information - Worksheet Variation B.pdf",
+      "bytes": 41404,
+      "crc32": "e0736c60",
+      "sha256": "0c6a7fb9a3142b8a03000058cce50ded0bf84b12fe98099b8539593a18af7bd2"
+    },
+    {
+      "path": "Case Report Forms/01c-Visit Information - Worksheet Variation C.pdf",
+      "bytes": 38713,
+      "crc32": "b75ba9f7",
+      "sha256": "0696feba5f38a95bb38979aabc6ad1da85aa27ff131fc82f109bdfd63a530714"
+    },
+    {
+      "path": "Case Report Forms/01d-Visit Information (Phone Call) - Worksheet Variation D.pdf",
+      "bytes": 41414,
+      "crc32": "14a8a02f",
+      "sha256": "3f0bac8af9f176d927a173d37cbd751082dc64e3cea2e4ebaf06ce5dc74dfbcc"
+    },
+    {
+      "path": "Case Report Forms/01e-Visit Information (Unscheduled Contact) - Worksheet Variation E.pdf",
+      "bytes": 7635,
+      "crc32": "544b3a54",
+      "sha256": "db40afb7a2a6258b71f316ddf708b4f24c07958707210001f62d260233a5b774"
+    },
+    {
+      "path": "Case Report Forms/02-Diabetes Screening (A) - Worksheet.pdf",
+      "bytes": 237687,
+      "crc32": "7bb64ccd",
+      "sha256": "162d1dc403c780634396471aac1e5f872e1f117de994137f70cc04786375ea4a"
+    },
+    {
+      "path": "Case Report Forms/03-Diabetes Physical Exam Worksheet.pdf",
+      "bytes": 57894,
+      "crc32": "23017eff",
+      "sha256": "eabbc167af2b9b647129d517ea2cbe071af88f730951d5cd3a05b373e9c7684e"
+    },
+    {
+      "path": "Case Report Forms/04-Diabetes Local HbA1c (B) - Worksheet.pdf",
+      "bytes": 9317,
+      "crc32": "a213a77e",
+      "sha256": "89239dd75f274fcb6195aaf8e145d96ff1bec7cf4fe467a34ed05c9927cd21e6"
+    },
+    {
+      "path": "Case Report Forms/05-Insulin - Worksheet.pdf",
+      "bytes": 42921,
+      "crc32": "f0f94f02",
+      "sha256": "7a78ef8c83863f5b3434268634727cfb28f7d0829e8992d98e6d50fd702b3acc"
+    },
+    {
+      "path": "Case Report Forms/06-Diabetes Socioeconomic Information (A) - Worksheet.pdf",
+      "bytes": 77861,
+      "crc32": "729cdf9c",
+      "sha256": "5f6f615ca8759fbd3a35cb772c825d0b6121560b159bbfe2df229008976ae13b"
+    },
+    {
+      "path": "Case Report Forms/07-Device Quality Control Testing - Worksheet.pdf",
+      "bytes": 140133,
+      "crc32": "1f98506f",
+      "sha256": "65c604883b3c039772e1398adeec89a1e37927fa04b60eed62c94da9e6413a23"
+    },
+    {
+      "path": "Case Report Forms/08-Complete the Visit - Screening Worksheet.pdf",
+      "bytes": 191498,
+      "crc32": "8a191332",
+      "sha256": "043933120576794a66623cd2cda14ff01015d95098e4987dc4952d00470e31f0"
+    },
+    {
+      "path": "Case Report Forms/10-Diabetes Medical History Updates (A) - Worksheet.pdf",
+      "bytes": 89661,
+      "crc32": "be9da59c",
+      "sha256": "0372e1555202b6385461e5cb3ff18c602e48a29cf6699d5aa271d1a8d1fd5555"
+    },
+    {
+      "path": "Case Report Forms/11-Adverse Event (A) - Worksheet.pdf",
+      "bytes": 231401,
+      "crc32": "a504be23",
+      "sha256": "ac0d4bb09f2516768758b671a05ebbe52f2246cd8a48836db54c773f8b2273fb"
+    },
+    {
+      "path": "Case Report Forms/12-Run-In Review Visit Worksheet.pdf",
+      "bytes": 26154,
+      "crc32": "03ea9a97",
+      "sha256": "0b60224908e96a48fb2a15dddc3394877fee6081b08d2816d6620421738fe805"
+    },
+    {
+      "path": "Case Report Forms/13-Complete the Visit - Randomization Worksheet.pdf",
+      "bytes": 172466,
+      "crc32": "e9cfb643",
+      "sha256": "7bfe5db8043abe11dd8d7cd4a07073193001731c49fcde867b462d6f6ec075f5"
+    },
+    {
+      "path": "Case Report Forms/14-Study Device Training - Worksheet.pdf",
+      "bytes": 84839,
+      "crc32": "7900bbf4",
+      "sha256": "78baa9c815fd131f4257c0dd30c6d9b149b6b68fa9c2675b9b5c930376944b5e"
+    },
+    {
+      "path": "Case Report Forms/15-Insulin Pump Settings - Worksheet.pdf",
+      "bytes": 95555,
+      "crc32": "99535cf0",
+      "sha256": "63e30b2300201488e4c545214b1484d325d65f77312ed610c915afc5852b16d7"
+    },
+    {
+      "path": "Case Report Forms/17-Medical Condition (A) - Worksheet.pdf",
+      "bytes": 118310,
+      "crc32": "e555e2e4",
+      "sha256": "5768719c49573ce1140218a2e5f3e5b5a4bd617d2808ee8ad6b9e4b6621529cd"
+    },
+    {
+      "path": "Case Report Forms/18-Medications (C) - Worksheet.pdf",
+      "bytes": 143233,
+      "crc32": "74f403b7",
+      "sha256": "322ae7a61486e1a509f551edc2c3aa905bcbb546559fd2de61fc354d2d9ce8e2"
+    },
+    {
+      "path": "Case Report Forms/19-Diabetes Pregnancy Test (A) - Worksheet.pdf",
+      "bytes": 13903,
+      "crc32": "03957048",
+      "sha256": "ca457605201230d88a88a5d860488859990a0f036601b64b13a667c399ced5bf"
+    },
+    {
+      "path": "Case Report Forms/20-Device Issue - Worksheet Variation A.pdf",
+      "bytes": 43349,
+      "crc32": "efb05624",
+      "sha256": "4277fb5603251cfd35afcd28af2768e462acf77239e21f64025cf1e8040da7ed"
+    },
+    {
+      "path": "Case Report Forms/21-Complete the Visit - Follow-Up Worksheet.pdf",
+      "bytes": 430862,
+      "crc32": "1ddd75fd",
+      "sha256": "07891010b4c765e8d65f484548bf6069d5ca2591ca6ba1ee5e59388a2034ca27"
+    },
+    {
+      "path": "Case Report Forms/21a-Complete the Visit - Follow-Up (A) Worksheet.pdf",
+      "bytes": 432363,
+      "crc32": "07a368b2",
+      "sha256": "bbb1d73d5142932aedc58017df2aec4f854192444c8bd92eb63ee23c84e3df59"
+    },
+    {
+      "path": "Case Report Forms/21b-Complete the Visit - Follow-Up (B) Worksheet.pdf",
+      "bytes": 253005,
+      "crc32": "fa23b5ab",
+      "sha256": "96199fd0469b29752bd093af0c0e2e4a6cd9345137c7589b551548fc721e99fa"
+    },
+    {
+      "path": "Case Report Forms/21c-Complete the Visit - Follow-Up (C) Worksheet.pdf",
+      "bytes": 440747,
+      "crc32": "0f50d9a6",
+      "sha256": "cc279891eb54920a4ce1a11e9ed28da9e1556cfaa67e848c3c56b96be9726bb5"
+    },
+    {
+      "path": "Case Report Forms/22-Diabetes Hypoglycemic Event (A) - Worksheet.pdf",
+      "bytes": 92578,
+      "crc32": "e8ff1776",
+      "sha256": "b7dfad78df24da06692bdd53388538e713baa97c9dfd5352fb12af1f84300e24"
+    },
+    {
+      "path": "Case Report Forms/23-Diabetes Severe Hyper or DKA Event (A) - Worksheet.pdf",
+      "bytes": 89844,
+      "crc32": "dc941e49",
+      "sha256": "8419b977888218bd525989c949d275ca88c305563685a2d820878dfdd949051d"
+    },
+    {
+      "path": "Case Report Forms/24-Final Status Worksheet - Variation A.pdf",
+      "bytes": 132079,
+      "crc32": "be139da7",
+      "sha256": "fdd3245f0f066ae9bf43a83d8313fd291e9082682a36d15474db79e677e07bd8"
+    },
+    {
+      "path": "Case Report Forms/25-Final Status Worksheet - Variation B.pdf",
+      "bytes": 132468,
+      "crc32": "3633c830",
+      "sha256": "afde43b8d4ba2d2712fb36fceb2b8490eda4fc0dcbc38eee476c62ce4afa9e53"
+    },
+    {
+      "path": "Data Files/AdvEvent_a.txt",
+      "bytes": 12426,
+      "crc32": "977bd23f",
+      "sha256": "3458bb82af7cf6d9b4df15933547175b01a8462122849ca96fba7a455172a1cd"
+    },
+    {
+      "path": "Data Files/cgm.txt",
+      "bytes": 420701744,
+      "crc32": "a006e9cf",
+      "sha256": "b8b9ee915a8b0e7fda489ee0d185bbbaf0c5291f31afe25b3e25128a1b3a3cf7"
+    },
+    {
+      "path": "Data Files/clarkeHypoAwarness.txt",
+      "bytes": 63992,
+      "crc32": "0ceeab7f",
+      "sha256": "04678a365ccf6442fbf5f219b4528f5baf5be31651d8d205e8b5773b71c64374"
+    },
+    {
+      "path": "Data Files/DeviceIssue_a.txt",
+      "bytes": 84796,
+      "crc32": "d9fc161c",
+      "sha256": "a34b5d7fb5de9f3ca9a7d8092853573b14715c3539a3acfe3ca259e508fae1ff"
+    },
+    {
+      "path": "Data Files/DexcomClarityCGM_a.txt",
+      "bytes": 766707918,
+      "crc32": "967f3ee5",
+      "sha256": "278e977b8989f00a07f2b2081d664de5d0500327b69e45c700829df3e2f51bb0"
+    },
+    {
+      "path": "Data Files/DexcomClarityMeter_a.txt",
+      "bytes": 534378,
+      "crc32": "5f3e6fd7",
+      "sha256": "ff94089fa2c1b6fe696fb1a507bcdc5b19d01969d88fbb666941f91042beada8"
+    },
+    {
+      "path": "Data Files/DiabDKAEvent_a.txt",
+      "bytes": 4620,
+      "crc32": "9dd2050d",
+      "sha256": "6aaf97925f1ffa61e50be52b60bf49b4217018273a20702c9deafd6689555ef2"
+    },
+    {
+      "path": "Data Files/diabetesDistressAdult.txt",
+      "bytes": 226180,
+      "crc32": "960b57ab",
+      "sha256": "365789c1735c77644b068ccdccf3bd89220429297343a0a8bb29e5640b2d21c8"
+    },
+    {
+      "path": "Data Files/diabetesDistressParent.txt",
+      "bytes": 30360,
+      "crc32": "91cb329f",
+      "sha256": "1d402ad0528c9769aa5d9240dd5491728762c12c229faaf84c727dac9e3c8a65"
+    },
+    {
+      "path": "Data Files/diabetesPersonality.txt",
+      "bytes": 79835,
+      "crc32": "50384933",
+      "sha256": "a5889fc5b42ddd1a76bb3c96c4d6f1a03ed3ab11e8c7c6d57fe5d1706c9645a5"
+    },
+    {
+      "path": "Data Files/DiabLocalHbA1c_a.txt",
+      "bytes": 75160,
+      "crc32": "eaf2ddab",
+      "sha256": "db0f6413b8d456a32e1e64202a6c056de577810d0f0cc9bc760dbe7bea4cea9e"
+    },
+    {
+      "path": "Data Files/DiabMedHistory_a.txt",
+      "bytes": 157662,
+      "crc32": "24a8fd5c",
+      "sha256": "403ef56e0e1c5f41ce0ddb034a6d039a46d63550ef3edb80b69e40d7987cdebc"
+    },
+    {
+      "path": "Data Files/DiabPhysExam_a.txt",
+      "bytes": 24814,
+      "crc32": "a1b3cf3f",
+      "sha256": "ba1d4c5a57588a8d9d1db167a02c27a2d52a89a1e4b3a89559c199e5d1df9560"
+    },
+    {
+      "path": "Data Files/DiabPregnancyTest_a.txt",
+      "bytes": 42074,
+      "crc32": "b62213ec",
+      "sha256": "1e677163b80710278cf6ac38e811ab0ac8138b50e533312e5bfcd268ca7f90c7"
+    },
+    {
+      "path": "Data Files/DiabScreening_a.txt",
+      "bytes": 68282,
+      "crc32": "637a6ce3",
+      "sha256": "298f23d49fdf71b978ca09dd1977d5827e7bc10ff352f4e85b01781e4f288f8f"
+    },
+    {
+      "path": "Data Files/DiabSocioEcon_a.txt",
+      "bytes": 29274,
+      "crc32": "00a1743c",
+      "sha256": "b072e1502811169f4a270d769c1fb47a1fd931519d367dd9f415439af967999d"
+    },
+    {
+      "path": "Data Files/DiabUnschedContact_a.txt",
+      "bytes": 62290,
+      "crc32": "1e67a64e",
+      "sha256": "a821ad7d1bbddfffe69c80b85dabf63fffaca306576752a820bc598ade63484b"
+    },
+    {
+      "path": "Data Files/DiasendCGM_a.txt",
+      "bytes": 226834,
+      "crc32": "9edc8abe",
+      "sha256": "6e0ab522f48c3f46e207c9fae7848db16ab7a733bac695e3a10592c30f7d50ca"
+    },
+    {
+      "path": "Data Files/FollowUpCTV_a.txt",
+      "bytes": 197976,
+      "crc32": "d7cfa543",
+      "sha256": "61887dc317f3b7e07eaee073fe9c8befcc272fc61b16c10809664a836a61f858"
+    },
+    {
+      "path": "Data Files/gluIndices.txt",
+      "bytes": 252899,
+      "crc32": "61591f67",
+      "sha256": "1960a2c45aaa31c231d4f0f51732bfc991fb1caf3467b5ac7bd5794287fd9d7f"
+    },
+    {
+      "path": "Data Files/hyperglycemiaAvoidance.txt",
+      "bytes": 111484,
+      "crc32": "8294d8bc",
+      "sha256": "0e786718acf1844db6b9d4067a26305c17374f6246dea7ad6799c697d066b564"
+    },
+    {
+      "path": "Data Files/hypoglycemiaConfidence.txt",
+      "bytes": 59170,
+      "crc32": "8b8431ca",
+      "sha256": "c4a1d4e10537c3696e81c37e0fde6bb424163964ec97f677d5afe8a3f1760237"
+    },
+    {
+      "path": "Data Files/hypoglycemiaFearAdult.txt",
+      "bytes": 85911,
+      "crc32": "29b2680d",
+      "sha256": "f6413dddb5e8efa0afdaf1709fe70470b62f5036cc3c4386c21d35e94f8fa970"
+    },
+    {
+      "path": "Data Files/hypoglycemiaFearTeen.txt",
+      "bytes": 41924,
+      "crc32": "cc5c7e82",
+      "sha256": "f9c7dae06ba68b6f034f001d041204421c9147319d37ee97d80463bd1ec725a8"
+    },
+    {
+      "path": "Data Files/hypoglycemiaFearTeenParent.txt",
+      "bytes": 36352,
+      "crc32": "7201366e",
+      "sha256": "404284be04dc7b8360cde5dfdca03dae5d482911bfd15028b377450a1e70a378"
+    },
+    {
+      "path": "Data Files/inspireAdult.txt",
+      "bytes": 151933,
+      "crc32": "c62d9245",
+      "sha256": "a49ba1a70f22a8290fac3dc2eb5534fe115a285ec47890c2bf044352cd878751"
+    },
+    {
+      "path": "Data Files/inspireTeen.txt",
+      "bytes": 54561,
+      "crc32": "ce456da9",
+      "sha256": "ad49f7594fbe401efa007bf1d787d55c6410cda9d19ac1152c8596dd2fd5bbd0"
+    },
+    {
+      "path": "Data Files/inspireTeenParent.txt",
+      "bytes": 57466,
+      "crc32": "8911a7f1",
+      "sha256": "95dc3d94f6283ade9e9e3d5d15a1c84cb794a82286bbb071a72cbbe8fca1dbe1"
+    },
+    {
+      "path": "Data Files/InsulinPumpSettings_a.txt",
+      "bytes": 836144,
+      "crc32": "2cec720a",
+      "sha256": "b52422ba49352033f78e30b4b2993b4de240a0d0dfac6a7b90e2f794307c49c4"
+    },
+    {
+      "path": "Data Files/Insulin_a.txt",
+      "bytes": 42104,
+      "crc32": "b0c457bd",
+      "sha256": "19c4a39f6ac914130de8158bf03000de39b468cd2c57511d11d76fd68f8fc236"
+    },
+    {
+      "path": "Data Files/Ketone_a.txt",
+      "bytes": 215908,
+      "crc32": "24f62304",
+      "sha256": "238e288e0629061d0f8a036406218183200019a0d308dc8cfc18d96296d770b2"
+    },
+    {
+      "path": "Data Files/MedicalCondition_a.txt",
+      "bytes": 77866,
+      "crc32": "949b31d0",
+      "sha256": "121f71e9f0d6e86072a70bb5f2bd24368a6fda8f331f51ac8e13cc543c9d49a8"
+    },
+    {
+      "path": "Data Files/Medication_a.txt",
+      "bytes": 243854,
+      "crc32": "616ec65a",
+      "sha256": "8fd1c2176e1264e316b982180ef8292d2add415b36a8f8091c9cf404f79fb24d"
+    },
+    {
+      "path": "Data Files/OtherCGM_a.txt",
+      "bytes": 17519890,
+      "crc32": "431add70",
+      "sha256": "fbba0373697361af6b210b19beed12e4338f600fbcf73eb0a9790549fa5740dd"
+    },
+    {
+      "path": "Data Files/PtFinalStat_a.txt",
+      "bytes": 860,
+      "crc32": "84128354",
+      "sha256": "74ad2bb6761dd167cb39f51bc3c20ccc08652edf6858e0f404fff63620bb360b"
+    },
+    {
+      "path": "Data Files/PtRoster_a.txt",
+      "bytes": 23886,
+      "crc32": "f67dd823",
+      "sha256": "64bd16713959b98d0e2b4d75d9791c58eebbb6487e73123fa768478dc2e5afe1"
+    },
+    {
+      "path": "Data Files/Pump_BasalRateChange.txt",
+      "bytes": 133817061,
+      "crc32": "db03c523",
+      "sha256": "abd2e778bf7d2871ba517a846eb3f40f6639cc1fb42de432e90e0442576885d8"
+    },
+    {
+      "path": "Data Files/Pump_BolusDelivered.txt",
+      "bytes": 12777338,
+      "crc32": "a3c5f4cb",
+      "sha256": "2c140efa2af88f9540bcb023c758cd652760517c5196ea0aba416948a71508f4"
+    },
+    {
+      "path": "Data Files/Pump_CGMGlucoseValue.txt",
+      "bytes": 223401886,
+      "crc32": "da6f40ee",
+      "sha256": "5f174e72a0cd2ff81651567fa9ee26b7782453fba9b70825341950bf419b2aa7"
+    },
+    {
+      "path": "Data Files/QCTest_a.txt",
+      "bytes": 43018,
+      "crc32": "d6b132b2",
+      "sha256": "c51547f1235835d396780b140752af78b8ceea3e01f61879d2f52e174261c465"
+    },
+    {
+      "path": "Data Files/RandomizationCTV_a.txt",
+      "bytes": 5456,
+      "crc32": "ee64e33f",
+      "sha256": "adf73bc2ca4641c6e9edc0b27ae150c5531e400b1b57304e9a3331e0515607d9"
+    },
+    {
+      "path": "Data Files/RocheMeter_a.txt",
+      "bytes": 2354140,
+      "crc32": "8a5c54bf",
+      "sha256": "77947f1d883a277b336b76f8deabb7c07886cdea9b87eed7caecb4dd97d74138"
+    },
+    {
+      "path": "Data Files/RunInReview_a.txt",
+      "bytes": 10334,
+      "crc32": "448803a6",
+      "sha256": "39041f3c020d12deca0e0c8254e798ac9d7115fefefa1b7cb6adaf6205822ae1"
+    },
+    {
+      "path": "Data Files/SampleResults_a.txt",
+      "bytes": 61820,
+      "crc32": "61085eb1",
+      "sha256": "0d70d0b941d031c134b2fbe814167109e8d937023f708871eaa3954863983d35"
+    },
+    {
+      "path": "Data Files/ScreeningCTV_a.txt",
+      "bytes": 5238,
+      "crc32": "8153777d",
+      "sha256": "6677cf2b439dcdb58643758d41b32d2d2ff18889125d5dd804ea6dba9fdf3ddf"
+    },
+    {
+      "path": "Data Files/systemUsability.txt",
+      "bytes": 35706,
+      "crc32": "6e9aa602",
+      "sha256": "144e6b4d2ecc943b141968f90098201990bde8ed222928d32e045da22475640d"
+    },
+    {
+      "path": "Data Files/technologyAcceptance.txt",
+      "bytes": 146059,
+      "crc32": "0ec9d062",
+      "sha256": "54e003d35b99ce0383a789a50cd30793c100ecce4d422db295b968956616609d"
+    },
+    {
+      "path": "Data Files/technologyExpectations.txt",
+      "bytes": 71169,
+      "crc32": "580658fe",
+      "sha256": "045ca05b6c1ecdaa7ce5d28b8e7fbe3a7900ba6332a7a1bf217c1ffa3bbe824b"
+    },
+    {
+      "path": "Data Files/Training_a.txt",
+      "bytes": 39866,
+      "crc32": "9f0370c4",
+      "sha256": "44381b74da65ab33fbdbfd643926e5409182642dec72755e7ea2766d79abd983"
+    },
+    {
+      "path": "Data Files/VisitInfo_a.txt",
+      "bytes": 325526,
+      "crc32": "043cf04d",
+      "sha256": "dcee0e690a00357845ee52d3225203c97b6d5496bc927fc417402e173a74eb90"
+    },
+    {
+      "path": "DCLP3_Clinical_Protocol_Pivotal_Study_v10.0 5 NOV 2018.pdf",
+      "bytes": 620786,
+      "crc32": "1acb4d72",
+      "sha256": "5c0d40363be807754a81c8e3b170790b929f92500bbfeeb43e3bd3f9f6af6127"
+    },
+    {
+      "path": "Participant Questionnaires/Hypoglycemia Confidence Scale.pdf",
+      "bytes": 15696,
+      "crc32": "e6fd5e9e",
+      "sha256": "305982274e86027bc25db2f8a720cada027b6e2c069dffe8ec87bb68f375a417"
+    },
+    {
+      "path": "Participant Questionnaires/System Usability Scale.pdf",
+      "bytes": 177462,
+      "crc32": "1e9f3194",
+      "sha256": "a1641338ede9c7bfdcde79146dc1a8b0ff12b2265623ffd1ebc5ffbd3d551471"
+    },
+    {
+      "path": "Participant Questionnaires/Technology Acceptance Questionnaire.pdf",
+      "bytes": 144621,
+      "crc32": "f2f1002c",
+      "sha256": "906636d29aec65841fc56996924b490a50429840a88ebedeca656bbbdc6bdc81"
+    },
+    {
+      "path": "Participant Questionnaires/Technology Expectations Questionnaire.pdf",
+      "bytes": 146651,
+      "crc32": "1acced0c",
+      "sha256": "bb785d9446ed63e0dc8b79d7f9c3935cd28e3adc329fa2a4d2eeb9451eb5e233"
+    },
+    {
+      "path": "ReadMe.rtf",
+      "bytes": 1566070,
+      "crc32": "5bbc52c0",
+      "sha256": "b24a57e1d81322c2a29731c162a92c46fb8edbc9f3a42ee4caa959892dcaa55d"
+    }
+  ],
+  "files_count": 87,
+  "uncompressed_bytes": 1589075018
+}

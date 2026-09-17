@@ -1,0 +1,16 @@
+{
+  "name": "D16_ours_noRL_ablations_dev",
+  "patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    3101
+  ],
+  "policies": {
+    "Bound025_noRL": "results/O03_bounded025_noRL/export_0050000.npz",
+    "Bound050_noRL": "results/O04_bounded050_noRL/export_0050000.npz"
+  }
+}

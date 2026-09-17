@@ -1,0 +1,120 @@
+{
+  "version": "sim-eval-v2-observed-reference",
+  "frozen_before_first_closed_loop_result": false,
+  "simulator_commit": "a6f6777586c860457a2a1e6cce6d0bd3fd33d1cc",
+  "dev_patients": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "dev_seeds": [
+    3101,
+    3102,
+    3103
+  ],
+  "sealed_patients": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sealed_seeds": [
+    73101,
+    73102,
+    73103
+  ],
+  "days": 3,
+  "warmup_hours": 6,
+  "sample_minutes": 5,
+  "sensor": "GuardianRT",
+  "pump": "Insulet",
+  "bolus_factors": [
+    1.0,
+    0.8,
+    1.2
+  ],
+  "meals": {
+    "hours": [
+      8,
+      13,
+      19
+    ],
+    "grams": [
+      45,
+      65,
+      70
+    ],
+    "jitter_minutes": [
+      -30,
+      30
+    ],
+    "gram_noise_sd": 10,
+    "gram_clip": [
+      20,
+      120
+    ]
+  },
+  "common_bolus": "Current announced meal grams / published patient CR * bolus_factor; no correction bolus; identical across methods",
+  "policy_information": "Original history-only baselines receive72x22 observable history. Our reference/residual group and matched architecture controls additionally receive one fixed scalar computed only from the earliest available72 observed prior-5min basal amounts. No policy receives future events, true BG or private patient states. The same common meal bolus module and nominal-reference advantage from v1 remain explicit.",
+  "normalization_sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f",
+  "failure_accounting": "Fixed denominator after warmup. BG>600/nonfinite terminates with remaining BG=600; BG<10 with BG=10. Any termination reported, not discarded.",
+  "primary_metric": "Patient-equally-weighted TIR 70-180 mg/dL, averaged over paired scenario seeds and all bolus factors",
+  "secondary_metrics": [
+    "TBR70",
+    "TBR54",
+    "TAR180",
+    "TAR250",
+    "mean_risk",
+    "mean_BG",
+    "BG_SD",
+    "insulin_per_day",
+    "terminal_failures"
+  ],
+  "research_acceptance": {
+    "delta_TIR_vs_BC_min_pp": 2,
+    "delta_TIR_vs_nominal_min_pp": -2,
+    "delta_TIR_vs_best_recent_RL_min_pp": -2,
+    "TBR70_increase_vs_nominal_and_BC_max_pp": 1,
+    "TBR54_increase_vs_nominal_and_BC_max_pp": 0.5,
+    "terminal_failures_allowed": 0,
+    "training_seeds_min": 3,
+    "seeds_with_TIR_improvement_vs_BC_min": 2,
+    "paired_patient_bootstrap95_delta_TIR_vs_BC_lower_min_pp": -2
+  },
+  "interpretation": "Research thresholds chosen for this experiment, not clinical standards; one-sided descriptive tolerance. Report exact differences and cluster CI including failure. No claim of superiority unless estimates support it. Does not approve clinical or product deployment.",
+  "checkpoint_selection": "Dev only: remove terminal-failure candidates if any nonfailed alternatives; prefer satisfying relative low-glucose tolerances then highest patient-mean TIR. If none satisfy, report failure and investigate without changing frozen test thresholds.",
+  "comparison_training": "Loop-only zero-shot transfer first. Any additional simulation training uses separate rows and equal data/budget for all RL methods.",
+  "ci": "Paired patient cluster bootstrap, 10000 resamples seed 9981. Average scenarios and training seeds within patient first. Also show each training seed and worst patient.",
+  "created_at": "2026-09-15T21:44:53",
+  "parent_contract_sha256": "548dec3e0ad7528381f10beb1c0de26d63eedb6ee786cab12220d2e749b446fd",
+  "performance_thresholds_frozen_in_parent_before_first_result": true,
+  "sealed_patients_used_before_this_version": false,
+  "observed_reference": {
+    "training": "Each patient first eligible72-row history; mean of raw previous5min basal interval U x12; source rows<=first eligible decision. No original targets or origins removed.",
+    "simulation": "Computed once at first learned decision after common6h warmup from72 observed delivered basal intervals, then held fixed for that3-day scenario. New policy instance for every patient/scenario.",
+    "input_dimensions": "1584 flattened history +1 normalized fixed reference, total1585",
+    "normalization": "reference_Uh/10-1; original22 history channels unchanged",
+    "limitation": "Observed historical delivery is not a clinically verified basal requirement. No proof of validity after the evaluated3-day scenario or under major requirement shifts."
+  },
+  "policy_output": {
+    "unit": "U/h continuous basal rate",
+    "global_range": [
+      0,
+      20
+    ],
+    "original_residual": "clip(reference+2*f,0,20)",
+    "bounded_residual": "clip(reference+L*tanh(2*f/L),0,20); L explicitly supplied in trained config",
+    "not_a_clinical_safety_bound": true,
+    "no_original_action_target_clipping": true,
+    "pump_units_and_delivery": "Same official pump U/min conversion and rounding as v1, all requested and delivered actions logged"
+  },
+  "training_seed_scope": {
+    "external_baselines": 1,
+    "our_candidate_minimum": 3,
+    "reason": "Explicit latest user instruction: one external baseline training seed; focus resources on our model. Original performance tolerances remain."
+  },
+  "stage_interpretation": "This amendment declares information/architecture adaptations already registered before their pilot runs in research protocol21:04/21:22. It is created after exploratory development results and before any sealed patient evaluation; it does not turn reused dev results into sealed evidence."
+}

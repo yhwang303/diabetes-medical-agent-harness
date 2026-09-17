@@ -1,0 +1,14 @@
+{
+  "batched_vs_scalar_actions_match": true,
+  "changing_other_patient_does_not_change_first": true,
+  "batch2_seconds": 0.3257899284362793,
+  "batch16_seconds": 0.27648186683654785,
+  "actions_u_h": [
+    0.5065439939498901,
+    0.5065439939498901
+  ],
+  "checkpoint": "RL_DITR\u521b\u65b0_2026-09-16/results/R01_reference_paper_lr/patient_001000.pt",
+  "stage": "patient",
+  "step": 1000,
+  "peak_gpu_gb": 0.9039616
+}

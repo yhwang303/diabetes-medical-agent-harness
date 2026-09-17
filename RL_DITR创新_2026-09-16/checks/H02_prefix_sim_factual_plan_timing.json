@@ -1,0 +1,320 @@
+{
+  "run": "H02_prefix_sim_factual",
+  "scope": "28 exposed observed histories; intended action timing only, not efficacy or causal proof",
+  "mean_block_rates_u_h": [
+    0.26638429292610716,
+    0.19483114246811187,
+    0.1767341180571488
+  ],
+  "last_minus_first_u_h": -0.08965017486895833,
+  "cases": [
+    {
+      "patient": 1,
+      "minute": 360,
+      "planned_block_rates_u_h": [
+        0.2724672555923462,
+        0.2519523501396179,
+        0.19538575410842896
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.2724672555923462
+    },
+    {
+      "patient": 1,
+      "minute": 720,
+      "planned_block_rates_u_h": [
+        0.030879288911819458,
+        0.029067277908325195,
+        0.0
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.030879288911819458
+    },
+    {
+      "patient": 1,
+      "minute": 1080,
+      "planned_block_rates_u_h": [
+        0.2630445659160614,
+        0.23233601450920105,
+        0.11690092086791992
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.2630445659160614
+    },
+    {
+      "patient": 1,
+      "minute": 1440,
+      "planned_block_rates_u_h": [
+        0.3108905553817749,
+        0.1265445351600647,
+        0.2148245871067047
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.3108905553817749
+    },
+    {
+      "patient": 1,
+      "minute": 2160,
+      "planned_block_rates_u_h": [
+        0.2704448997974396,
+        0.2789173722267151,
+        0.25435134768486023
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.2704448997974396
+    },
+    {
+      "patient": 1,
+      "minute": 2880,
+      "planned_block_rates_u_h": [
+        0.3152958154678345,
+        0.15501892566680908,
+        0.13239020109176636
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.3152958154678345
+    },
+    {
+      "patient": 1,
+      "minute": 3600,
+      "planned_block_rates_u_h": [
+        0.16523826122283936,
+        0.1681215763092041,
+        0.1144767552614212
+      ],
+      "reference_basal_u_h": 1.2675,
+      "first_rate_u_h": 0.16523826122283936
+    },
+    {
+      "patient": 2,
+      "minute": 360,
+      "planned_block_rates_u_h": [
+        0.27573102712631226,
+        0.27851971983909607,
+        0.22942319512367249
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.27573102712631226
+    },
+    {
+      "patient": 2,
+      "minute": 720,
+      "planned_block_rates_u_h": [
+        0.22831083834171295,
+        0.16338545083999634,
+        0.10400852560997009
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.22831083834171295
+    },
+    {
+      "patient": 2,
+      "minute": 1080,
+      "planned_block_rates_u_h": [
+        0.3364512026309967,
+        0.15828627347946167,
+        0.13251030445098877
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.3364512026309967
+    },
+    {
+      "patient": 2,
+      "minute": 1440,
+      "planned_block_rates_u_h": [
+        0.32598942518234253,
+        0.2044064998626709,
+        0.19667619466781616
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.32598942518234253
+    },
+    {
+      "patient": 2,
+      "minute": 2160,
+      "planned_block_rates_u_h": [
+        0.29718515276908875,
+        0.26780229806900024,
+        0.27385997772216797
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.29718515276908875
+    },
+    {
+      "patient": 2,
+      "minute": 2880,
+      "planned_block_rates_u_h": [
+        0.31551310420036316,
+        0.32084357738494873,
+        0.3278009295463562
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.31551310420036316
+    },
+    {
+      "patient": 2,
+      "minute": 3600,
+      "planned_block_rates_u_h": [
+        0.28243938088417053,
+        0.18336772918701172,
+        0.12005341053009033
+      ],
+      "reference_basal_u_h": 1.3695000000000002,
+      "first_rate_u_h": 0.28243938088417053
+    },
+    {
+      "patient": 3,
+      "minute": 360,
+      "planned_block_rates_u_h": [
+        0.23838390409946442,
+        0.15335574746131897,
+        0.2307630479335785
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.23838390409946442
+    },
+    {
+      "patient": 3,
+      "minute": 720,
+      "planned_block_rates_u_h": [
+        0.3037063181400299,
+        0.18165341019630432,
+        0.13700741529464722
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.3037063181400299
+    },
+    {
+      "patient": 3,
+      "minute": 1080,
+      "planned_block_rates_u_h": [
+        0.194819837808609,
+        0.22955548763275146,
+        0.12399756908416748
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.194819837808609
+    },
+    {
+      "patient": 3,
+      "minute": 1440,
+      "planned_block_rates_u_h": [
+        0.11641103029251099,
+        0.19252830743789673,
+        0.06271883845329285
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.11641103029251099
+    },
+    {
+      "patient": 3,
+      "minute": 2160,
+      "planned_block_rates_u_h": [
+        0.26389166712760925,
+        0.09219709038734436,
+        0.1708216667175293
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.26389166712760925
+    },
+    {
+      "patient": 3,
+      "minute": 2880,
+      "planned_block_rates_u_h": [
+        0.3057851195335388,
+        0.10810670256614685,
+        0.17075008153915405
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.3057851195335388
+    },
+    {
+      "patient": 3,
+      "minute": 3600,
+      "planned_block_rates_u_h": [
+        0.31371864676475525,
+        0.24103513360023499,
+        0.14759451150894165
+      ],
+      "reference_basal_u_h": 1.4255000000000002,
+      "first_rate_u_h": 0.31371864676475525
+    },
+    {
+      "patient": 4,
+      "minute": 360,
+      "planned_block_rates_u_h": [
+        0.2571479082107544,
+        0.11469927430152893,
+        0.17304089665412903
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.2571479082107544
+    },
+    {
+      "patient": 4,
+      "minute": 720,
+      "planned_block_rates_u_h": [
+        0.31876352429389954,
+        0.2921248972415924,
+        0.2591470777988434
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.31876352429389954
+    },
+    {
+      "patient": 4,
+      "minute": 1080,
+      "planned_block_rates_u_h": [
+        0.26217585802078247,
+        0.2578508257865906,
+        0.2597389221191406
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.26217585802078247
+    },
+    {
+      "patient": 4,
+      "minute": 1440,
+      "planned_block_rates_u_h": [
+        0.3081969916820526,
+        0.18311774730682373,
+        0.1718512773513794
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.3081969916820526
+    },
+    {
+      "patient": 4,
+      "minute": 2160,
+      "planned_block_rates_u_h": [
+        0.27012333273887634,
+        0.2645724415779114,
+        0.23826947808265686
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.27012333273887634
+    },
+    {
+      "patient": 4,
+      "minute": 2880,
+      "planned_block_rates_u_h": [
+        0.3192894756793976,
+        0.20977693796157837,
+        0.2053769826889038
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.3192894756793976
+    },
+    {
+      "patient": 4,
+      "minute": 3600,
+      "planned_block_rates_u_h": [
+        0.29646581411361694,
+        0.11612838506698608,
+        0.1848154366016388
+      ],
+      "reference_basal_u_h": 0.8880000000000001,
+      "first_rate_u_h": 0.29646581411361694
+    }
+  ]
+}

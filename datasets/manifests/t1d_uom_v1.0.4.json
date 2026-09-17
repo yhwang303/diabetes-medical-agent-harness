@@ -1,0 +1,668 @@
+{
+  "source_url": "https://api.github.com/repos/sharpic/ManchesterCSCoordinatedDiabetesStudy/zipball/V1.0.4",
+  "version": "V1.0.4",
+  "retrieved_at": "2026-09-11T15:22:08.003281+00:00",
+  "archive": "datasets/raw/t1d_uom/T1D-UOM-V1.0.4.zip",
+  "bytes": 6547203,
+  "sha256": "f9725405a0761e4e6f51be7a0ea0a221e58afe8eda96ecedb213998cf382526c",
+  "zip_crc": "passed",
+  "files": 127,
+  "uncompressed_bytes": 40233335,
+  "git_lfs_pointers": [],
+  "folders": {
+    ".": 6,
+    "Activity Data": 17,
+    "Demographics": 1,
+    "Garmin Connect OAuth": 5,
+    "Garmin Connect OAuth/templates": 1,
+    "Glucose Data Preprocessing for PPGR Analysis": 2,
+    "Glucose Data": 17,
+    "Insulin Data/Basal Data": 14,
+    "Insulin Data/Bolus Data": 16,
+    "Nutrition Data": 15,
+    "Sleep Data": 33
+  },
+  "members": [
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/.gitignore",
+      "bytes": 50,
+      "crc32": "23335851"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2301.csv",
+      "bytes": 744874,
+      "crc32": "98410bc5"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2302.csv",
+      "bytes": 1477596,
+      "crc32": "4b97c01e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2303.csv",
+      "bytes": 578082,
+      "crc32": "24f24cc9"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2304.csv",
+      "bytes": 1419177,
+      "crc32": "7889edb5"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2305.csv",
+      "bytes": 2210181,
+      "crc32": "6ab66664"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2306.csv",
+      "bytes": 927220,
+      "crc32": "d4ddb70f"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2307.csv",
+      "bytes": 998412,
+      "crc32": "9d66a8fd"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2308.csv",
+      "bytes": 801548,
+      "crc32": "ae21107d"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2309.csv",
+      "bytes": 878060,
+      "crc32": "1086143d"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2310.csv",
+      "bytes": 934194,
+      "crc32": "486f2ef2"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2313.csv",
+      "bytes": 1198235,
+      "crc32": "7bf3fd98"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2314.csv",
+      "bytes": 960945,
+      "crc32": "e5a8fa0f"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2320.csv",
+      "bytes": 925990,
+      "crc32": "2e6996e2"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2401.csv",
+      "bytes": 792815,
+      "crc32": "a25949ea"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2403.csv",
+      "bytes": 900089,
+      "crc32": "20ac2a16"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2404.csv",
+      "bytes": 933582,
+      "crc32": "d2b8cef5"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Activity Data/UoMActivity2405.csv",
+      "bytes": 939986,
+      "crc32": "7a5e6313"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/CITATION.cff",
+      "bytes": 2666,
+      "crc32": "2c2dc217"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Dataset Metadata DataCite.xml",
+      "bytes": 5686,
+      "crc32": "3973fe6e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Demographics/UoMBMI.csv",
+      "bytes": 410,
+      "crc32": "9ca57972"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Garmin Connect OAuth/LICENSE.md",
+      "bytes": 1,
+      "crc32": "32d70693"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Garmin Connect OAuth/README.md",
+      "bytes": 2590,
+      "crc32": "308d0769"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Garmin Connect OAuth/WSGI.py",
+      "bytes": 485,
+      "crc32": "dec56e32"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Garmin Connect OAuth/app.py",
+      "bytes": 3618,
+      "crc32": "b7d9735f"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Garmin Connect OAuth/templates/index.html",
+      "bytes": 379,
+      "crc32": "4acd2126"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Garmin Connect OAuth/verify.py",
+      "bytes": 1627,
+      "crc32": "7c215152"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data Preprocessing for PPGR Analysis/Preprocessing.ipynb",
+      "bytes": 53540,
+      "crc32": "c075c14a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data Preprocessing for PPGR Analysis/README.md",
+      "bytes": 2192,
+      "crc32": "47e23d1f"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2301.csv",
+      "bytes": 1006858,
+      "crc32": "0b9d69a3"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2302.csv",
+      "bytes": 300503,
+      "crc32": "fd9bff17"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2303.csv",
+      "bytes": 310036,
+      "crc32": "98b47b27"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2304.csv",
+      "bytes": 872095,
+      "crc32": "fbd137a5"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2305.csv",
+      "bytes": 160949,
+      "crc32": "f42b0f21"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2306.csv",
+      "bytes": 256768,
+      "crc32": "3413c21e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2307.csv",
+      "bytes": 185331,
+      "crc32": "14cefe93"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2308.csv",
+      "bytes": 629002,
+      "crc32": "2a59b0b9"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2309.csv",
+      "bytes": 459425,
+      "crc32": "5cf973db"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2310.csv",
+      "bytes": 1096490,
+      "crc32": "e4417e9d"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2313.csv",
+      "bytes": 687945,
+      "crc32": "451da7dd"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2314.csv",
+      "bytes": 284520,
+      "crc32": "8ad1df29"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2320.csv",
+      "bytes": 523188,
+      "crc32": "7a541e86"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2401.csv",
+      "bytes": 332885,
+      "crc32": "44fb275a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2403.csv",
+      "bytes": 285994,
+      "crc32": "5fa3ffaf"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2404.csv",
+      "bytes": 182570,
+      "crc32": "89942cad"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Glucose Data/UoMGlucose2405.csv",
+      "bytes": 278837,
+      "crc32": "910d7984"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2301.csv",
+      "bytes": 302480,
+      "crc32": "a355820f"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2302.csv",
+      "bytes": 788,
+      "crc32": "380143e4"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2304.csv",
+      "bytes": 5513,
+      "crc32": "1a63c991"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2305.csv",
+      "bytes": 750,
+      "crc32": "ddab2935"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2306.csv",
+      "bytes": 1841,
+      "crc32": "6ac98850"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2307.csv",
+      "bytes": 175266,
+      "crc32": "906cb5c5"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2308.csv",
+      "bytes": 20236,
+      "crc32": "659e879c"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2309.csv",
+      "bytes": 15505,
+      "crc32": "c968900c"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2310.csv",
+      "bytes": 6199,
+      "crc32": "ac90c070"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2313.csv",
+      "bytes": 2360,
+      "crc32": "42575b5f"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2314.csv",
+      "bytes": 2122,
+      "crc32": "3b44ab31"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2401.csv",
+      "bytes": 2222,
+      "crc32": "fefa7b69"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2403.csv",
+      "bytes": 310,
+      "crc32": "ba9ce88e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Basal Data/UoMBasal2405.csv",
+      "bytes": 3694,
+      "crc32": "009bf3f0"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2301.csv",
+      "bytes": 15382,
+      "crc32": "4d7fe0ab"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2302.csv",
+      "bytes": 3580,
+      "crc32": "4205a907"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2304.csv",
+      "bytes": 4567,
+      "crc32": "ce9bfa78"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2305.csv",
+      "bytes": 3349,
+      "crc32": "e194ee88"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2306.csv",
+      "bytes": 10313,
+      "crc32": "5c95ff1a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2307.csv",
+      "bytes": 12063,
+      "crc32": "76f5fdad"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2308.csv",
+      "bytes": 9247,
+      "crc32": "5274339c"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2309.csv",
+      "bytes": 6568,
+      "crc32": "9ef2e059"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2310.csv",
+      "bytes": 13872,
+      "crc32": "ab02ba69"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2313.csv",
+      "bytes": 5552,
+      "crc32": "800d1ca3"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2314.csv",
+      "bytes": 8542,
+      "crc32": "7ac8b16e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2320.csv",
+      "bytes": 3645,
+      "crc32": "d8d64ecf"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2401.csv",
+      "bytes": 5039,
+      "crc32": "62142910"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2403.csv",
+      "bytes": 6467,
+      "crc32": "fb343877"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2404.csv",
+      "bytes": 7362,
+      "crc32": "6b0f2544"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Insulin Data/Bolus Data/UoMBolus2405.csv",
+      "bytes": 5813,
+      "crc32": "97bb35bb"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/JsonSchema.json",
+      "bytes": 4603,
+      "crc32": "54c6fc37"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/LICENSE.md",
+      "bytes": 18650,
+      "crc32": "3976ce76"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2301.csv",
+      "bytes": 14538,
+      "crc32": "0a93124e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2302.csv",
+      "bytes": 11469,
+      "crc32": "fc9131a8"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2304.csv",
+      "bytes": 9375,
+      "crc32": "d65edc6b"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2305.csv",
+      "bytes": 6756,
+      "crc32": "61bf1f97"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2306.csv",
+      "bytes": 17233,
+      "crc32": "607990cf"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2307.csv",
+      "bytes": 11161,
+      "crc32": "c5bf5f8b"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2308.csv",
+      "bytes": 14061,
+      "crc32": "69cb6fae"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2309.csv",
+      "bytes": 11710,
+      "crc32": "0530d90a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2313.csv",
+      "bytes": 8798,
+      "crc32": "5ff492e2"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2314.csv",
+      "bytes": 29493,
+      "crc32": "40457b95"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2320.csv",
+      "bytes": 24258,
+      "crc32": "f37058c1"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2401.csv",
+      "bytes": 35654,
+      "crc32": "adfc79fe"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2403.csv",
+      "bytes": 8767,
+      "crc32": "fa363fee"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2404.csv",
+      "bytes": 15998,
+      "crc32": "d6be81ca"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Nutrition Data/UoMNutrition2405.csv",
+      "bytes": 12949,
+      "crc32": "a8235f38"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/README.md",
+      "bytes": 10634,
+      "crc32": "2dc29d77"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2301sleeptime.csv",
+      "bytes": 171316,
+      "crc32": "fb23a10a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2302sleeptime.csv",
+      "bytes": 240741,
+      "crc32": "8e9283b0"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2303sleeptime.csv",
+      "bytes": 49244,
+      "crc32": "3fc96478"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2304sleeptime.csv",
+      "bytes": 190452,
+      "crc32": "4cda38b9"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2306sleeptime.csv",
+      "bytes": 140228,
+      "crc32": "42e46a70"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2307sleeptime.csv",
+      "bytes": 221043,
+      "crc32": "f2ec18dc"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2308sleeptime.csv",
+      "bytes": 122393,
+      "crc32": "bf8fd39e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2309sleeptime.csv",
+      "bytes": 206497,
+      "crc32": "a84d341e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2310sleeptime.csv",
+      "bytes": 121771,
+      "crc32": "6cbde714"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2312sleeptime.csv",
+      "bytes": 99026,
+      "crc32": "bd07e72a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2313sleeptime.csv",
+      "bytes": 239282,
+      "crc32": "8e824b6e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2314sleeptime.csv",
+      "bytes": 140320,
+      "crc32": "34a328ae"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2315sleeptime.csv",
+      "bytes": 158393,
+      "crc32": "61846fb5"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2320sleeptime.csv",
+      "bytes": 140414,
+      "crc32": "0ad4d742"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2401sleeptime.csv",
+      "bytes": 160666,
+      "crc32": "71c69359"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2403sleeptime.csv",
+      "bytes": 161582,
+      "crc32": "e782e52c"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2404sleeptime.csv",
+      "bytes": 156587,
+      "crc32": "8fdbb19d"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoM2405sleeptime.csv",
+      "bytes": 120611,
+      "crc32": "3dfd3a16"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2301.csv",
+      "bytes": 814739,
+      "crc32": "faeb918a"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2302.csv",
+      "bytes": 737326,
+      "crc32": "7df3a9d8"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2303.csv",
+      "bytes": 536047,
+      "crc32": "b6158864"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2304.csv",
+      "bytes": 1086934,
+      "crc32": "0d9fb556"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2305.csv",
+      "bytes": 823407,
+      "crc32": "6a8b815e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2306.csv",
+      "bytes": 824575,
+      "crc32": "7fd1db96"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2307.csv",
+      "bytes": 827204,
+      "crc32": "2b39493e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2308.csv",
+      "bytes": 828322,
+      "crc32": "2d18f74b"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2309.csv",
+      "bytes": 837651,
+      "crc32": "655a433e"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2310.csv",
+      "bytes": 484547,
+      "crc32": "95c1c018"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2313.csv",
+      "bytes": 313776,
+      "crc32": "ed285121"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2320.csv",
+      "bytes": 822649,
+      "crc32": "ef536535"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2401.csv",
+      "bytes": 1006380,
+      "crc32": "3dd83bd2"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2404.csv",
+      "bytes": 895054,
+      "crc32": "f68c97d8"
+    },
+    {
+      "path": "sharpic-ManchesterCSCoordinatedDiabetesStudy-ea52718/Sleep Data/UoMsleep2405.csv",
+      "bytes": 79778,
+      "crc32": "aa40a370"
+    }
+  ],
+  "qualification": "not_evaluated",
+  "extraction_verification": {
+    "files_checked": 127,
+    "sha256_match_all": true
+  },
+  "archive_rechecked_at": "2026-09-12T04:27:44.143264+00:00"
+}

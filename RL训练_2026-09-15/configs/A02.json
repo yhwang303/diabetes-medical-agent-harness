@@ -1,0 +1,25 @@
+{
+  "name": "A02_lower_learning_rate",
+  "seed": 260915,
+  "model": {
+    "width": 256,
+    "layers": 3,
+    "ff": 2048,
+    "dropout": 0.4,
+    "residual": false
+  },
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "mu": 0.1,
+  "batch_size": 256,
+  "unroll": 12,
+  "epochs": 1,
+  "max_steps": 10000,
+  "max_seconds": 3600,
+  "eval_every": 1000,
+  "eval_per_patient": 64,
+  "final_eval_per_patient": 256,
+  "log_every": 100,
+  "amp": true,
+  "reason": "A01在1000步后GLU近似常数、响应接近0；保持网络/损失/数据/dropout不变，仅把lr从1e-3降至1e-4检验优化塌缩。完整epoch，独立初始化同种子。"
+}

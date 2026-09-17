@@ -1,0 +1,10 @@
+{
+  "parallel_vs_sequential_equivalent": true,
+  "future_action_does_not_leak_into_earlier_predictions": true,
+  "transition_output_independent_of_previous_predicted_patient_latent": true,
+  "finite_real_batch_patient_and_policy_gradients": true,
+  "patient_frozen_during_policy": true,
+  "parameter_count": 9621295,
+  "wall_seconds": 0.6249423027038574,
+  "note": "dependency and gradient tests only, no efficacy or novelty conclusion"
+}

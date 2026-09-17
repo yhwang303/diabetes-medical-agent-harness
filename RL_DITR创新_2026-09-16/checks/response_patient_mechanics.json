@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "reference_units_u_h": [
+    0.8869999647140503,
+    0.8869999647140503
+  ],
+  "zero_intervention_exact_identity": true,
+  "sequential_parallel_transition_parity": true,
+  "future_action_causality": true,
+  "reward_glucose_function_consistency": true,
+  "batched_independent_planning_parity": true,
+  "policy_gradient_l1": 132.11395359039307,
+  "patient_frozen_during_policy_learning": true,
+  "scope": "engineering/gradient checks; does not establish uncertainty calibration, nonlinear physiology, control efficacy or novelty"
+}
