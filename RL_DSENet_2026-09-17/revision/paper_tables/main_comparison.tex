@@ -1,0 +1,24 @@
+% Requires booktabs and graphicx; values are mean +/- between-patient SD (n=10).
+\begin{table*}[t]
+\centering
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrrrrrrrr}
+\toprule
+Method & Year / venue & Training data & TIR70-180 \% (SD or missing bounds) & TBR70 \% & TBR54 \% & TAR180 \% & TAR250 \% & Mean BG mg/dL & CV \% & LBGI & HBGI & Failures / episodes & Coverage \% & Projection \% \\
+\midrule
+Constant basal & — / Control & warmup & 95.18 $\pm$ 5.41 & 0.98 $\pm$ 3.02 & 0.41 $\pm$ 1.28 & 3.84 $\pm$ 4.22 & 0.00 $\pm$ 0.00 & 129.11 $\pm$ 7.24 & 17.83 $\pm$ 4.44 & 0.47 $\pm$ 0.64 & 1.70 $\pm$ 0.73 & 0/60 & 100.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 \\
+BC & — / Imitation & L & 83.16 $\pm$ 15.36 & 0.67 $\pm$ 2.12 & 0.32 $\pm$ 1.00 & 16.17 $\pm$ 15.60 & 1.34 $\pm$ 2.40 & 145.95 $\pm$ 15.31 & 19.19 $\pm$ 5.15 & 0.28 $\pm$ 0.47 & 3.83 $\pm$ 2.39 & 0/60 & 100.00 $\pm$ 0.00 & 59.10 $\pm$ 8.19 \\
+TD3+BC & 2021 / NeurIPS & L & 76.78 $\pm$ 21.78 & 0.79 $\pm$ 2.10 & 0.40 $\pm$ 1.26 & 22.42 $\pm$ 22.19 & 2.16 $\pm$ 3.83 & 152.19 $\pm$ 22.92 & 17.02 $\pm$ 3.99 & 0.36 $\pm$ 0.55 & 4.87 $\pm$ 3.48 & 0/60 & 100.00 $\pm$ 0.00 & 93.05 $\pm$ 3.12 \\
+IQL & 2022 / ICLR & L & 79.06 $\pm$ 19.48 & 0.45 $\pm$ 1.42 & 0.11 $\pm$ 0.36 & 20.49 $\pm$ 19.68 & 1.26 $\pm$ 2.20 & 154.13 $\pm$ 18.91 & 16.10 $\pm$ 4.13 & 0.13 $\pm$ 0.31 & 4.64 $\pm$ 2.87 & 0/60 & 100.00 $\pm$ 0.00 & 73.33 $\pm$ 10.47 \\
+ReBRAC & 2023 / NeurIPS & L & 85.62 $\pm$ 16.89 & 0.64 $\pm$ 2.01 & 0.22 $\pm$ 0.71 & 13.75 $\pm$ 17.05 & 0.27 $\pm$ 0.85 & 144.80 $\pm$ 18.09 & 16.01 $\pm$ 4.16 & 0.20 $\pm$ 0.43 & 3.41 $\pm$ 2.43 & 0/60 & 100.00 $\pm$ 0.00 & 41.54 $\pm$ 23.84 \\
+FQL & 2025 / ICML & L & 89.78 $\pm$ 8.77 & 0.66 $\pm$ 2.09 & 0.25 $\pm$ 0.79 & 9.56 $\pm$ 8.69 & 0.15 $\pm$ 0.47 & 140.71 $\pm$ 11.35 & 16.70 $\pm$ 3.85 & 0.24 $\pm$ 0.44 & 2.86 $\pm$ 1.39 & 0/60 & 100.00 $\pm$ 0.00 & 46.37 $\pm$ 4.35 \\
+LOM & 2025 / ICLR & L & 74.65 $\pm$ 23.53 & 0.59 $\pm$ 1.86 & 0.28 $\pm$ 0.88 & 24.76 $\pm$ 23.80 & 2.24 $\pm$ 4.02 & 158.16 $\pm$ 23.36 & 15.73 $\pm$ 4.12 & 0.17 $\pm$ 0.43 & 5.36 $\pm$ 3.67 & 0/60 & 100.00 $\pm$ 0.00 & 97.34 $\pm$ 1.74 \\
+GFP & 2026 / ICLR & L & 77.83 $\pm$ 19.52 & 2.08 $\pm$ 2.62 & 0.47 $\pm$ 1.48 & 20.09 $\pm$ 19.75 & 2.04 $\pm$ 3.67 & 146.71 $\pm$ 20.39 & 18.23 $\pm$ 3.92 & 0.65 $\pm$ 0.66 & 4.41 $\pm$ 3.14 & 0/60 & 100.00 $\pm$ 0.00 & 84.63 $\pm$ 5.37 \\
+RL-DITR* & 2023 / Nature Medicine & L & 74.43 $\pm$ 23.87 & 0.44 $\pm$ 1.40 & 0.00 $\pm$ 0.00 & 25.13 $\pm$ 24.09 & 2.27 $\pm$ 4.09 & 159.32 $\pm$ 23.06 & 15.44 $\pm$ 3.88 & 0.11 $\pm$ 0.27 & 5.45 $\pm$ 3.70 & 0/60 & 100.00 $\pm$ 0.00 & 96.58 $\pm$ 4.38 \\
+DSENet-RL (ours) & — / This work & L+S & 97.08 $\pm$ 4.50 & 1.55 $\pm$ 3.89 & 0.57 $\pm$ 1.79 & 1.37 $\pm$ 1.90 & 0.00 $\pm$ 0.00 & 121.20 $\pm$ 6.54 & 19.25 $\pm$ 4.88 & 0.73 $\pm$ 0.82 & 1.14 $\pm$ 0.56 & 0/60 & 100.00 $\pm$ 0.00 & 0.00 $\pm$ 0.00 \\
+\bottomrule
+\end{tabular}}
+\caption{Closed-loop control on 10 previously exposed virtual adults, with six matched scenarios each. One training seed. Values are patient-equal means and between-patient standard deviations. Bracketed TIR values are missing-outcome bounds, not confidence intervals. Other glucose outcomes are observed-only; coverage and failures are reported explicitly. Projection denotes external action clipping, not pump quantization. L: Loop only. L+S: Loop plus inherited simulation-trained context and paired simulator supervision. This compares control systems under the same evaluation protocol, not algorithms with identical training information. *RL-DITR is a continuous-basal task adaptation, not a reproduction of the original clinical trial. All methods share an observed-warmup basal envelope of plus/minus 0.25 U/h. Methods are not guaranteed equally converged under the fixed budgets.}
+\label{tab:main-control}
+\end{table*}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "device": "NVIDIA GeForce RTX 4090",
+  "torch": "2.0.0+cu118",
+  "cuda": "11.8",
+  "parameters": 247832,
+  "checks": [
+    "real_Mamba_CUDA_forward_backward",
+    "both_Mamba_directions_receive_gradient",
+    "router_gradient",
+    "missing_placeholder_invariance",
+    "all_missing_rejected",
+    "constant_finite",
+    "dense_mask_matches_original_RevIN",
+    "batch_independence_eval",
+    "local_mask_direction",
+    "four_fusion_branches_forward_backward"
+  ],
+  "medical_evidence": false
+}

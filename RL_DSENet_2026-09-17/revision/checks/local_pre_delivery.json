@@ -1,0 +1,11 @@
+{
+  "source_files_parsed": 17,
+  "models_fixed_before_new_results": true,
+  "new_config_sha256": {
+    "lom.json": "b94fd04ba0f7ceb23aad1e72879aa3f2a643689460068f2a4ce3c9ec22149747",
+    "td3bc.json": "f09111372ea26990df2a039e0994988417c81f5795b7f59ecf35dbf3efe27c98",
+    "iql.json": "46d38384888a893861c1013a861cc21b82b0c15d5d1eaf7cf0c60f011cc25587",
+    "gfp.json": "5be70d07a2699c851092e8c072dbc93902e675dbf8302008b82da95f3c9c403a"
+  },
+  "base_scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd"
+}

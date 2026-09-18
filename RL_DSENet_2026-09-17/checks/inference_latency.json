@@ -1,0 +1,59 @@
+{
+  "device": "NVIDIA GeForce RTX 4090",
+  "torch": "2.0.0+cu118",
+  "threads": 4,
+  "no_other_cuda_processes_before_start": true,
+  "scope": "encode, forecast, reference, candidate scoring/selection, CPU action copy; excludes JSON and simulator",
+  "rows": [
+    {
+      "mode": "planner",
+      "batch_size": 1,
+      "repeats": 100,
+      "median_ms": 6.978213787078857,
+      "p95_ms": 7.044188678264618
+    },
+    {
+      "mode": "actor",
+      "batch_size": 1,
+      "repeats": 100,
+      "median_ms": 5.244236439466476,
+      "p95_ms": 6.375496089458466
+    },
+    {
+      "mode": "beam",
+      "batch_size": 1,
+      "repeats": 100,
+      "median_ms": 5.924656987190247,
+      "p95_ms": 6.013630703091621
+    },
+    {
+      "mode": "planner",
+      "batch_size": 16,
+      "repeats": 100,
+      "median_ms": 5.903057754039764,
+      "p95_ms": 6.0013409703969955
+    },
+    {
+      "mode": "actor",
+      "batch_size": 16,
+      "repeats": 100,
+      "median_ms": 5.380280315876007,
+      "p95_ms": 5.4838936775922775
+    },
+    {
+      "mode": "beam",
+      "batch_size": 16,
+      "repeats": 100,
+      "median_ms": 6.196111440658569,
+      "p95_ms": 7.487360388040543
+    }
+  ],
+  "parameters": {
+    "dsenet": 316782,
+    "history_encoder_including_unused_legacy_heads": 9621295,
+    "reference_adapter": 45360,
+    "response": 17480,
+    "policy": 40199
+  },
+  "world_sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+}

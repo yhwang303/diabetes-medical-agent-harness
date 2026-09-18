@@ -1,0 +1,18 @@
+{
+  "name": "final_frozen_new_scenarios",
+  "patients": [
+    1
+  ],
+  "total_minutes": 4320,
+  "groups": [
+    {
+      "name": "normal",
+      "bolus_factor": 1.0,
+      "seeds": [
+        91701
+      ],
+      "irregular": false
+    }
+  ],
+  "comparison_status": "Previously reported scenarios; frozen extension, not a new sealed test"
+}

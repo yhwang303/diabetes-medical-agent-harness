@@ -1,0 +1,1663 @@
+{
+  "scope": "exposed development, not sealed control",
+  "decision_gate_passed": true,
+  "gate": "effect path MAE below zero response AND candidate regret below holding reference on both existing probe sets; fixed before reading results",
+  "results": {
+    "action_probe": {
+      "histories": 28,
+      "complete_candidate_pools": 28,
+      "effect_path_mae_mg_dl": 2.707043764314481,
+      "zero_response_path_mae_mg_dl": 4.237976733861225,
+      "true_effect_rms_mg_dl": 7.798913793365321,
+      "predicted_effect_rms_mg_dl": 6.1511405018389445,
+      "direction_agreement_above1mgdl": 1.0,
+      "reference_rmse_mg_dl": 23.742236971855164,
+      "raw_dsenet_reference_rmse_mg_dl": 26.183186054229736,
+      "candidate_regret": 0.1396030741078513,
+      "hold_reference_regret": 0.20612796183143342,
+      "oracle_choice_accuracy": 0.7142857142857143,
+      "records": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 22.227649688720703,
+          "raw_dsenet_reference_rmse_mg_dl": 22.323455810546875,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.12015271186828613,
+          "utility_mae": 0.9211239218711853,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.781083583831787,
+            2.5433363914489746,
+            2.6674370765686035,
+            2.882875442504883,
+            2.9711618423461914
+          ],
+          "true_utility": [
+            1.8498389720916748,
+            1.7225474119186401,
+            1.7870910167694092,
+            1.9108058214187622,
+            1.969991683959961
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 26.80144500732422,
+          "raw_dsenet_reference_rmse_mg_dl": 38.362857818603516,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.13275322318077087,
+          "utility_mae": 1.3660681247711182,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            1.3449921607971191,
+            0.9228209257125854,
+            1.1386748552322388,
+            1.540168046951294,
+            1.7222682237625122
+          ],
+          "true_utility": [
+            -0.03069007396697998,
+            -0.1698148548603058,
+            -0.09946396946907043,
+            0.03648915886878967,
+            0.1020631492137909
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 20.351306915283203,
+          "raw_dsenet_reference_rmse_mg_dl": 33.57725524902344,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.06786561012268066,
+          "utility_mae": 0.25985538959503174,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.239377737045288,
+            1.9329036474227905,
+            2.0919501781463623,
+            2.3733901977539062,
+            2.4918270111083984
+          ],
+          "true_utility": [
+            2.487783908843994,
+            2.4117634296417236,
+            2.4507904052734375,
+            2.522738456726074,
+            2.555649518966675
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 50.42531204223633,
+          "raw_dsenet_reference_rmse_mg_dl": 48.54669952392578,
+          "chosen_arm": 4,
+          "oracle_arm": 1,
+          "candidate_regret": 0.8057112693786621,
+          "hold_reference_regret": 0.37111520767211914,
+          "utility_mae": 0.6350435018539429,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            2.6252946853637695,
+            2.336728096008301,
+            2.488107681274414,
+            2.74595308303833,
+            2.847238540649414
+          ],
+          "true_utility": [
+            2.0178942680358887,
+            2.389009475708008,
+            2.1388378143310547,
+            1.843627691268921,
+            1.5832982063293457
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 28.35196876525879,
+          "raw_dsenet_reference_rmse_mg_dl": 38.31035232543945,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.10657715797424316,
+          "utility_mae": 1.0382589101791382,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.9243552684783936,
+            2.7058486938476562,
+            2.8231520652770996,
+            3.0068106651306152,
+            3.0672831535339355
+          ],
+          "true_utility": [
+            1.8690404891967773,
+            1.7552255392074585,
+            1.8130362033843994,
+            1.9232351779937744,
+            1.9756176471710205
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 39.26865768432617,
+          "raw_dsenet_reference_rmse_mg_dl": 46.34386444091797,
+          "chosen_arm": 4,
+          "oracle_arm": 1,
+          "candidate_regret": 0.28634345531463623,
+          "hold_reference_regret": 0.13559722900390625,
+          "utility_mae": 0.9751611948013306,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.1060218811035156,
+            2.958448886871338,
+            3.039705753326416,
+            3.1552066802978516,
+            3.184628963470459
+          ],
+          "true_utility": [
+            2.117428779602051,
+            2.253026008605957,
+            2.187129497528076,
+            2.0439398288726807,
+            1.9666825532913208
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 7.336318492889404,
+          "raw_dsenet_reference_rmse_mg_dl": 23.31814956665039,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.10447263717651367,
+          "utility_mae": 0.23707512021064758,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            1.6973588466644287,
+            1.302815556526184,
+            1.504597544670105,
+            1.8796782493591309,
+            2.0498623847961426
+          ],
+          "true_utility": [
+            1.9127209186553955,
+            1.800844430923462,
+            1.8577067852020264,
+            1.965884804725647,
+            2.017193555831909
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 15.343369483947754,
+          "raw_dsenet_reference_rmse_mg_dl": 11.240166664123535,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.1550912857055664,
+          "utility_mae": 0.46543583273887634,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.893261432647705,
+            2.677597999572754,
+            2.790935516357422,
+            2.9831066131591797,
+            3.058743953704834
+          ],
+          "true_utility": [
+            2.422513723373413,
+            2.2385430335998535,
+            2.334237575531006,
+            2.5035669803619385,
+            2.5776050090789795
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 20.6783390045166,
+          "raw_dsenet_reference_rmse_mg_dl": 23.86640167236328,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.14843487739562988,
+          "utility_mae": 0.7630209922790527,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.640289306640625,
+            2.3715057373046875,
+            2.511467695236206,
+            2.756380081176758,
+            2.857853412628174
+          ],
+          "true_utility": [
+            1.869121789932251,
+            1.702113151550293,
+            1.7880293130874634,
+            1.9455703496932983,
+            2.017556667327881
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 13.50540828704834,
+          "raw_dsenet_reference_rmse_mg_dl": 24.82259178161621,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.030325889587402344,
+          "utility_mae": 0.07864818722009659,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            3.1208877563476562,
+            2.978522777557373,
+            3.0564379692077637,
+            3.170030117034912,
+            3.2016773223876953
+          ],
+          "true_utility": [
+            3.0339794158935547,
+            2.984081268310547,
+            3.011591911315918,
+            3.051474094390869,
+            3.064305305480957
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 33.46358871459961,
+          "raw_dsenet_reference_rmse_mg_dl": 30.769922256469727,
+          "chosen_arm": 4,
+          "oracle_arm": 1,
+          "candidate_regret": 0.9875667095184326,
+          "hold_reference_regret": 0.27584171295166016,
+          "utility_mae": 1.0445878505706787,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.157116651535034,
+            3.042470932006836,
+            3.1079354286193848,
+            3.1876235008239746,
+            3.196577310562134
+          ],
+          "true_utility": [
+            2.2146077156066895,
+            2.4904494285583496,
+            2.3593995571136475,
+            1.9014453887939453,
+            1.502882719039917
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 23.31407928466797,
+          "raw_dsenet_reference_rmse_mg_dl": 22.771860122680664,
+          "chosen_arm": 0,
+          "oracle_arm": 4,
+          "candidate_regret": 0.08733177185058594,
+          "hold_reference_regret": 0.08733177185058594,
+          "utility_mae": 0.2137499302625656,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.1107535362243652,
+            3.073044776916504,
+            3.1050398349761963,
+            3.0853781700134277,
+            3.0228371620178223
+          ],
+          "true_utility": [
+            2.869907855987549,
+            2.765587568283081,
+            2.819965362548828,
+            2.9156033992767334,
+            2.9572396278381348
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 26.800662994384766,
+          "raw_dsenet_reference_rmse_mg_dl": 30.236793518066406,
+          "chosen_arm": 0,
+          "oracle_arm": 1,
+          "candidate_regret": 0.22289443016052246,
+          "hold_reference_regret": 0.22289443016052246,
+          "utility_mae": 0.9298731088638306,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.12893009185791,
+            3.1044373512268066,
+            3.1288301944732666,
+            3.1005859375,
+            3.0386271476745605
+          ],
+          "true_utility": [
+            2.1813368797302246,
+            2.404231309890747,
+            2.29850435256958,
+            2.053236961364746,
+            1.914736032485962
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 10.595141410827637,
+          "raw_dsenet_reference_rmse_mg_dl": 12.268136024475098,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.07766366004943848,
+          "utility_mae": 0.27431875467300415,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.7330799102783203,
+            2.4773781299591064,
+            2.610314130783081,
+            2.844320774078369,
+            2.9424471855163574
+          ],
+          "true_utility": [
+            3.000901937484741,
+            2.902937412261963,
+            2.954570770263672,
+            3.0421581268310547,
+            3.0785655975341797
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 16.695772171020508,
+          "raw_dsenet_reference_rmse_mg_dl": 11.952713966369629,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.3325786590576172,
+          "utility_mae": 0.7944268584251404,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.6083595752716064,
+            2.339287281036377,
+            2.4794020652770996,
+            2.724557876586914,
+            2.8260982036590576
+          ],
+          "true_utility": [
+            1.824185848236084,
+            1.399470567703247,
+            1.6233363151550293,
+            2.0018134117126465,
+            2.156764507293701
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 31.597875595092773,
+          "raw_dsenet_reference_rmse_mg_dl": 28.310131072998047,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.23304533958435059,
+          "utility_mae": 1.3255542516708374,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.8411035537719727,
+            2.6045498847961426,
+            2.731006383895874,
+            2.9321072101593018,
+            3.0006675720214844
+          ],
+          "true_utility": [
+            1.5115952491760254,
+            1.2174947261810303,
+            1.3724406957626343,
+            1.6354923248291016,
+            1.744640588760376
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 13.220928192138672,
+          "raw_dsenet_reference_rmse_mg_dl": 20.839218139648438,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.13481497764587402,
+          "utility_mae": 0.21080975234508514,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.7217211723327637,
+            2.4510114192962646,
+            2.594701051712036,
+            2.8291964530944824,
+            2.9135890007019043
+          ],
+          "true_utility": [
+            2.5095794200897217,
+            2.3013722896575928,
+            2.41483736038208,
+            2.585986852645874,
+            2.6443943977355957
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 28.684921264648438,
+          "raw_dsenet_reference_rmse_mg_dl": 25.5368595123291,
+          "chosen_arm": 4,
+          "oracle_arm": 0,
+          "candidate_regret": 0.060286760330200195,
+          "hold_reference_regret": 0.0,
+          "utility_mae": 0.8040255904197693,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            2.142958164215088,
+            1.7776806354522705,
+            1.9689127206802368,
+            2.2964224815368652,
+            2.4250328540802
+          ],
+          "true_utility": [
+            2.970181941986084,
+            2.8546271324157715,
+            2.934143304824829,
+            2.962287187576294,
+            2.909895181655884
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 20.25740623474121,
+          "raw_dsenet_reference_rmse_mg_dl": 14.847502708435059,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.1543128490447998,
+          "utility_mae": 0.42738738656044006,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.6381428241729736,
+            2.3499653339385986,
+            2.504154682159424,
+            2.747971773147583,
+            2.828639030456543
+          ],
+          "true_utility": [
+            2.2024855613708496,
+            1.98378586769104,
+            2.101411819458008,
+            2.2874550819396973,
+            2.3567984104156494
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 19.505516052246094,
+          "raw_dsenet_reference_rmse_mg_dl": 20.384841918945312,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.04881882667541504,
+          "utility_mae": 0.17290544509887695,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.6533267498016357,
+            2.37400221824646,
+            2.520784854888916,
+            2.7693135738372803,
+            2.8659327030181885
+          ],
+          "true_utility": [
+            2.847553014755249,
+            2.646829843521118,
+            2.766238212585449,
+            2.8908944129943848,
+            2.896371841430664
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 14.760103225708008,
+          "raw_dsenet_reference_rmse_mg_dl": 10.807954788208008,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.22590065002441406,
+          "utility_mae": 0.4948759078979492,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.625020742416382,
+            2.340071201324463,
+            2.489927291870117,
+            2.7429046630859375,
+            2.8405954837799072
+          ],
+          "true_utility": [
+            2.13124418258667,
+            1.8316729068756104,
+            1.990964651107788,
+            2.253113269805908,
+            2.357144832611084
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 18.989290237426758,
+          "raw_dsenet_reference_rmse_mg_dl": 24.1490535736084,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.8538476228713989,
+          "utility_mae": 1.0902973413467407,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.068530321121216,
+            1.7291169166564941,
+            1.9032793045043945,
+            2.2235727310180664,
+            2.3668746948242188
+          ],
+          "true_utility": [
+            1.0238888263702393,
+            -0.015978485345840454,
+            0.4566144347190857,
+            1.4976258277893066,
+            1.8777364492416382
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 39.771575927734375,
+          "raw_dsenet_reference_rmse_mg_dl": 38.37436294555664,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.4709814786911011,
+          "utility_mae": 1.6936558485031128,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.8513612747192383,
+            2.626753807067871,
+            2.7455124855041504,
+            2.942383050918579,
+            3.0162768363952637
+          ],
+          "true_utility": [
+            1.1946821212768555,
+            0.5185830593109131,
+            0.8823027014732361,
+            1.4527777433395386,
+            1.6656635999679565
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 31.73909568786621,
+          "raw_dsenet_reference_rmse_mg_dl": 29.65454864501953,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.31721973419189453,
+          "utility_mae": 1.071323275566101,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            3.1260805130004883,
+            3.0210347175598145,
+            3.082092761993408,
+            3.1504101753234863,
+            3.151944875717163
+          ],
+          "true_utility": [
+            2.1099679470062256,
+            1.4932255744934082,
+            1.8413517475128174,
+            2.303213596343994,
+            2.42718768119812
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 22.877389907836914,
+          "raw_dsenet_reference_rmse_mg_dl": 30.856761932373047,
+          "chosen_arm": 4,
+          "oracle_arm": 2,
+          "candidate_regret": 1.0783491134643555,
+          "hold_reference_regret": 0.08461785316467285,
+          "utility_mae": 0.3342910706996918,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.0956838130950928,
+            2.956345796585083,
+            3.0349411964416504,
+            3.135686159133911,
+            3.151406764984131
+          ],
+          "true_utility": [
+            3.060361862182617,
+            3.0313098430633545,
+            3.14497971534729,
+            2.769331455230713,
+            2.0666306018829346
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 32.58198928833008,
+          "raw_dsenet_reference_rmse_mg_dl": 28.645946502685547,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.3774106502532959,
+          "utility_mae": 1.2748628854751587,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.901076078414917,
+            2.692305564880371,
+            2.8058481216430664,
+            2.9747605323791504,
+            3.022892951965332
+          ],
+          "true_utility": [
+            1.678516149520874,
+            1.0054898262023926,
+            1.382561445236206,
+            1.90007483959198,
+            2.05592679977417
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 19.384151458740234,
+          "raw_dsenet_reference_rmse_mg_dl": 22.229684829711914,
+          "chosen_arm": 4,
+          "oracle_arm": 0,
+          "candidate_regret": 0.3804025650024414,
+          "hold_reference_regret": 0.0,
+          "utility_mae": 0.1426331102848053,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.106717586517334,
+            2.9813029766082764,
+            3.052990198135376,
+            3.13961124420166,
+            3.1481564044952393
+          ],
+          "true_utility": [
+            3.1312146186828613,
+            2.8002638816833496,
+            3.0523133277893066,
+            3.030003070831299,
+            2.75081205368042
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 16.253372192382812,
+          "raw_dsenet_reference_rmse_mg_dl": 19.7811222076416,
+          "chosen_arm": 4,
+          "oracle_arm": 4,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.5019168853759766,
+          "utility_mae": 0.5001022219657898,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.4682183265686035,
+            2.161515235900879,
+            2.3209993839263916,
+            2.601227045059204,
+            2.717681884765625
+          ],
+          "true_utility": [
+            2.033094644546509,
+            1.2146580219268799,
+            1.6654961109161377,
+            2.3208706378936768,
+            2.5350115299224854
+          ]
+        }
+      ]
+    },
+    "action_probe_dynamic": {
+      "histories": 28,
+      "complete_candidate_pools": 28,
+      "effect_path_mae_mg_dl": 2.198603767783396,
+      "zero_response_path_mae_mg_dl": 3.4727560392329617,
+      "true_effect_rms_mg_dl": 6.887901294001806,
+      "predicted_effect_rms_mg_dl": 5.372057563466623,
+      "direction_agreement_above1mgdl": 1.0,
+      "reference_rmse_mg_dl": 23.742236971855164,
+      "raw_dsenet_reference_rmse_mg_dl": 26.183186054229736,
+      "candidate_regret": 0.11112661446843829,
+      "hold_reference_regret": 0.1981037131377629,
+      "oracle_choice_accuracy": 0.6071428571428571,
+      "records": [
+        {
+          "patient": 1,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 22.227649688720703,
+          "raw_dsenet_reference_rmse_mg_dl": 22.323455810546875,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.11292052268981934,
+          "utility_mae": 0.9233618378639221,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.781083583831787,
+            2.9582467079162598,
+            2.7995200157165527,
+            2.5667881965637207,
+            2.761725425720215,
+            2.9441332817077637,
+            2.589524269104004
+          ],
+          "true_utility": [
+            1.8498389720916748,
+            1.9627594947814941,
+            1.8575563430786133,
+            1.7308082580566406,
+            1.8420583009719849,
+            1.9554617404937744,
+            1.7390062808990479
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 26.80144500732422,
+          "raw_dsenet_reference_rmse_mg_dl": 38.362857818603516,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.12573778629302979,
+          "utility_mae": 1.36770498752594,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            1.3449921607971191,
+            1.698163390159607,
+            1.3738527297973633,
+            0.9556429982185364,
+            1.315446138381958,
+            1.6731065511703491,
+            0.9879674911499023
+          ],
+          "true_utility": [
+            -0.03069007396697998,
+            0.0950477123260498,
+            -0.023201733827590942,
+            -0.16180065274238586,
+            -0.038240909576416016,
+            0.08796969056129456,
+            -0.15384754538536072
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 20.351306915283203,
+          "raw_dsenet_reference_rmse_mg_dl": 33.57725524902344,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.06451272964477539,
+          "utility_mae": 0.25739791989326477,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.239377737045288,
+            2.4766945838928223,
+            2.2608656883239746,
+            1.9599255323410034,
+            2.2168867588043213,
+            2.4602088928222656,
+            1.986194372177124
+          ],
+          "true_utility": [
+            2.487783908843994,
+            2.5522966384887695,
+            2.491766929626465,
+            2.4164531230926514,
+            2.483717918395996,
+            2.5488603115081787,
+            2.421060085296631
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 50.42531204223633,
+          "raw_dsenet_reference_rmse_mg_dl": 48.54669952392578,
+          "chosen_arm": 1,
+          "oracle_arm": 3,
+          "candidate_regret": 0.7943969964981079,
+          "hold_reference_regret": 0.36055755615234375,
+          "utility_mae": 0.6209556460380554,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            2.6252946853637695,
+            2.8359713554382324,
+            2.644296646118164,
+            2.362302541732788,
+            2.605113983154297,
+            2.823080062866211,
+            2.3870067596435547
+          ],
+          "true_utility": [
+            2.0178942680358887,
+            1.5840548276901245,
+            2.010618209838867,
+            2.3784518241882324,
+            2.0250823497772217,
+            1.584810495376587,
+            2.3677637577056885
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 28.35196876525879,
+          "raw_dsenet_reference_rmse_mg_dl": 38.31035232543945,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.10126268863677979,
+          "utility_mae": 1.041846752166748,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.9243552684783936,
+            3.064589500427246,
+            2.936000347137451,
+            2.7251269817352295,
+            2.911334991455078,
+            3.060006618499756,
+            2.7433857917785645
+          ],
+          "true_utility": [
+            1.8690404891967773,
+            1.9703031778335571,
+            1.8748661279678345,
+            1.761627197265625,
+            1.863149642944336,
+            1.9649232625961304,
+            1.7679622173309326
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 39.26865768432617,
+          "raw_dsenet_reference_rmse_mg_dl": 46.34386444091797,
+          "chosen_arm": 5,
+          "oracle_arm": 3,
+          "candidate_regret": 0.26118946075439453,
+          "hold_reference_regret": 0.12863492965698242,
+          "utility_mae": 0.9785701632499695,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.1060218811035156,
+            3.186803102493286,
+            3.1123180389404297,
+            2.972308874130249,
+            3.0983047485351562,
+            3.18709135055542,
+            2.9850804805755615
+          ],
+          "true_utility": [
+            2.117428779602051,
+            1.975830316543579,
+            2.1093132495880127,
+            2.246063709259033,
+            2.125436305999756,
+            1.9848742485046387,
+            2.2389912605285645
+          ]
+        },
+        {
+          "patient": 1,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 7.336318492889404,
+          "raw_dsenet_reference_rmse_mg_dl": 23.31814956665039,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.09888291358947754,
+          "utility_mae": 0.22627729177474976,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            1.6973588466644287,
+            2.0250658988952637,
+            1.726653814315796,
+            1.335947036743164,
+            1.6673945188522339,
+            1.9993579387664795,
+            1.36858332157135
+          ],
+          "true_utility": [
+            1.9127209186553955,
+            2.011603832244873,
+            1.9188357591629028,
+            1.807547926902771,
+            1.906538486480713,
+            2.005946636199951,
+            1.8141846656799316
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 15.343369483947754,
+          "raw_dsenet_reference_rmse_mg_dl": 11.240166664123535,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.1447896957397461,
+          "utility_mae": 0.46711668372154236,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.893261432647705,
+            3.0481157302856445,
+            2.909714937210083,
+            2.6993565559387207,
+            2.8758301734924316,
+            3.0362184047698975,
+            2.720353603363037
+          ],
+          "true_utility": [
+            2.422513723373413,
+            2.567303419113159,
+            2.4349491596221924,
+            2.2536356449127197,
+            2.4096851348876953,
+            2.556629180908203,
+            2.268317937850952
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 20.6783390045166,
+          "raw_dsenet_reference_rmse_mg_dl": 23.86640167236328,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.13919734954833984,
+          "utility_mae": 0.7648141980171204,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.640289306640625,
+            2.8429665565490723,
+            2.660989761352539,
+            2.397366762161255,
+            2.6186585426330566,
+            2.8268465995788574,
+            2.422516107559204
+          ],
+          "true_utility": [
+            1.869121789932251,
+            2.008319139480591,
+            1.8798317909240723,
+            1.7147328853607178,
+            1.8581056594848633,
+            1.9987971782684326,
+            1.7270259857177734
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 13.50540828704834,
+          "raw_dsenet_reference_rmse_mg_dl": 24.82259178161621,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.02897500991821289,
+          "utility_mae": 0.07905776798725128,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            3.1208877563476562,
+            3.201860189437866,
+            3.128201484680176,
+            2.9926700592041016,
+            3.11228609085083,
+            3.2003636360168457,
+            3.005814790725708
+          ],
+          "true_utility": [
+            3.0339794158935547,
+            3.0629544258117676,
+            3.036910057067871,
+            2.9890761375427246,
+            3.030726432800293,
+            3.061309337615967,
+            2.9937238693237305
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 33.46358871459961,
+          "raw_dsenet_reference_rmse_mg_dl": 30.769922256469727,
+          "chosen_arm": 5,
+          "oracle_arm": 3,
+          "candidate_regret": 0.8288323879241943,
+          "hold_reference_regret": 0.2558169364929199,
+          "utility_mae": 1.0396584272384644,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.157116651535034,
+            3.201279401779175,
+            3.16140079498291,
+            3.0547380447387695,
+            3.1513404846191406,
+            3.203993082046509,
+            3.065865993499756
+          ],
+          "true_utility": [
+            2.2146077156066895,
+            1.5132529735565186,
+            2.1890463829040527,
+            2.4704246520996094,
+            2.239513397216797,
+            1.641592264175415,
+            2.44968843460083
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 23.31407928466797,
+          "raw_dsenet_reference_rmse_mg_dl": 22.771860122680664,
+          "chosen_arm": 4,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0890202522277832,
+          "hold_reference_regret": 0.08028984069824219,
+          "utility_mae": 0.21981622278690338,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.1107535362243652,
+            3.0479342937469482,
+            3.101439952850342,
+            3.076815605163574,
+            3.117595911026001,
+            3.069514274597168,
+            3.0787997245788574
+          ],
+          "true_utility": [
+            2.869907855987549,
+            2.950197696685791,
+            2.878340482711792,
+            2.7758476734161377,
+            2.861177444458008,
+            2.9428815841674805,
+            2.7857871055603027
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 26.800662994384766,
+          "raw_dsenet_reference_rmse_mg_dl": 30.236793518066406,
+          "chosen_arm": 4,
+          "oracle_arm": 3,
+          "candidate_regret": 0.19371795654296875,
+          "hold_reference_regret": 0.21029376983642578,
+          "utility_mae": 0.9344454407691956,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.12893009185791,
+            3.0622329711914062,
+            3.1197829246520996,
+            3.107618808746338,
+            3.1356959342956543,
+            3.0825228691101074,
+            3.1090455055236816
+          ],
+          "true_utility": [
+            2.1813368797302246,
+            1.9354870319366455,
+            2.1641974449157715,
+            2.3916306495666504,
+            2.1979126930236816,
+            1.9557366371154785,
+            2.3784098625183105
+          ]
+        },
+        {
+          "patient": 2,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 10.595141410827637,
+          "raw_dsenet_reference_rmse_mg_dl": 12.268136024475098,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.07196855545043945,
+          "utility_mae": 0.2729009985923767,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.7330799102783203,
+            2.925887107849121,
+            2.7547268867492676,
+            2.5036098957061768,
+            2.7106120586395264,
+            2.9082562923431396,
+            2.5292060375213623
+          ],
+          "true_utility": [
+            3.000901937484741,
+            3.0728704929351807,
+            3.0081796646118164,
+            2.912273406982422,
+            2.993307590484619,
+            3.0668838024139404,
+            2.9212682247161865
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 16.695772171020508,
+          "raw_dsenet_reference_rmse_mg_dl": 11.952713966369629,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.31577372550964355,
+          "utility_mae": 0.7935249209403992,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.6083595752716064,
+            2.811723232269287,
+            2.628666639328003,
+            2.364870548248291,
+            2.5870914459228516,
+            2.7960758209228516,
+            2.3897199630737305
+          ],
+          "true_utility": [
+            1.824185848236084,
+            2.1399595737457275,
+            1.84859037399292,
+            1.4333646297454834,
+            1.7982908487319946,
+            2.121772289276123,
+            1.4656693935394287
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 31.597875595092773,
+          "raw_dsenet_reference_rmse_mg_dl": 28.310131072998047,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.22641825675964355,
+          "utility_mae": 1.3268383741378784,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.8411035537719727,
+            2.996633291244507,
+            2.8543190956115723,
+            2.6255621910095215,
+            2.8264734745025635,
+            2.9906439781188965,
+            2.645531177520752
+          ],
+          "true_utility": [
+            1.5115952491760254,
+            1.738013505935669,
+            1.5235528945922852,
+            1.2363156080245972,
+            1.4985597133636475,
+            1.7304096221923828,
+            1.2539509534835815
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 13.220928192138672,
+          "raw_dsenet_reference_rmse_mg_dl": 20.839218139648438,
+          "chosen_arm": 1,
+          "oracle_arm": 5,
+          "candidate_regret": 0.0009827613830566406,
+          "hold_reference_regret": 0.13801121711730957,
+          "utility_mae": 0.2113001048564911,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            2.7217211723327637,
+            2.9061083793640137,
+            2.738312244415283,
+            2.475210666656494,
+            2.7037715911865234,
+            2.8967247009277344,
+            2.498420238494873
+          ],
+          "true_utility": [
+            2.5095794200897217,
+            2.6466078758239746,
+            2.5140647888183594,
+            2.3140900135040283,
+            2.503798723220825,
+            2.6475906372070312,
+            2.32543683052063
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 28.684921264648438,
+          "raw_dsenet_reference_rmse_mg_dl": 25.5368595123291,
+          "chosen_arm": 1,
+          "oracle_arm": 0,
+          "candidate_regret": 0.043065547943115234,
+          "hold_reference_regret": 0.0,
+          "utility_mae": 0.8071635365486145,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            2.142958164215088,
+            2.4144201278686523,
+            2.163271188735962,
+            1.8057078123092651,
+            2.1212902069091797,
+            2.4018306732177734,
+            1.8327858448028564
+          ],
+          "true_utility": [
+            2.970181941986084,
+            2.9271163940429688,
+            2.9685537815093994,
+            2.8708395957946777,
+            2.969315528869629,
+            2.941915512084961,
+            2.884485960006714
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 20.25740623474121,
+          "raw_dsenet_reference_rmse_mg_dl": 14.847502708435059,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.15137577056884766,
+          "utility_mae": 0.42931067943573,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.6381428241729736,
+            2.8263256549835205,
+            2.6520888805389404,
+            2.3732128143310547,
+            2.622541904449463,
+            2.821601390838623,
+            2.3952953815460205
+          ],
+          "true_utility": [
+            2.2024855613708496,
+            2.3538613319396973,
+            2.211090087890625,
+            1.999664545059204,
+            2.1927449703216553,
+            2.34989595413208,
+            2.014291763305664
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 19.505516052246094,
+          "raw_dsenet_reference_rmse_mg_dl": 20.384841918945312,
+          "chosen_arm": 1,
+          "oracle_arm": 5,
+          "candidate_regret": 0.0006749629974365234,
+          "hold_reference_regret": 0.05235791206359863,
+          "utility_mae": 0.1756834089756012,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            2.6533267498016357,
+            2.854938507080078,
+            2.6720573902130127,
+            2.399332046508789,
+            2.633409261703491,
+            2.842312812805176,
+            2.4237842559814453
+          ],
+          "true_utility": [
+            2.847553014755249,
+            2.899235963821411,
+            2.8579187393188477,
+            2.6728882789611816,
+            2.8348875045776367,
+            2.8999109268188477,
+            2.6965503692626953
+          ]
+        },
+        {
+          "patient": 3,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 14.760103225708008,
+          "raw_dsenet_reference_rmse_mg_dl": 10.807954788208008,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.2181243896484375,
+          "utility_mae": 0.4952712655067444,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.625020742416382,
+            2.82974910736084,
+            2.6438469886779785,
+            2.3656539916992188,
+            2.604984760284424,
+            2.817230701446533,
+            2.390347480773926
+          ],
+          "true_utility": [
+            2.13124418258667,
+            2.3493685722351074,
+            2.145199775695801,
+            1.853525161743164,
+            2.1160707473754883,
+            2.340484619140625,
+            1.87404203414917
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 360,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 18.989290237426758,
+          "raw_dsenet_reference_rmse_mg_dl": 24.1490535736084,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.8118253946304321,
+          "utility_mae": 1.082116723060608,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.068530321121216,
+            2.3453149795532227,
+            2.0947887897491455,
+            1.7595324516296387,
+            2.041520357131958,
+            2.322758674621582,
+            1.789376974105835
+          ],
+          "true_utility": [
+            1.0238888263702393,
+            1.8357142210006714,
+            1.0979681015014648,
+            0.04518357291817665,
+            0.9435315132141113,
+            1.7873117923736572,
+            0.11340748518705368
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 720,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 39.771575927734375,
+          "raw_dsenet_reference_rmse_mg_dl": 38.37436294555664,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.46137571334838867,
+          "utility_mae": 1.6815382242202759,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.8513612747192383,
+            3.009591579437256,
+            2.8652536869049072,
+            2.647033452987671,
+            2.8362865447998047,
+            3.0013298988342285,
+            2.6664111614227295
+          ],
+          "true_utility": [
+            1.1946821212768555,
+            1.6560578346252441,
+            1.2275011539459229,
+            0.5847922563552856,
+            1.156385898590088,
+            1.6421011686325073,
+            0.6449793577194214
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 1080,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 31.73909568786621,
+          "raw_dsenet_reference_rmse_mg_dl": 29.65454864501953,
+          "chosen_arm": 5,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0022077560424804688,
+          "hold_reference_regret": 0.32082104682922363,
+          "utility_mae": 1.0610498189926147,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.1260805130004883,
+            3.161241054534912,
+            3.126741886138916,
+            3.03054141998291,
+            3.1237194538116455,
+            3.1682610511779785,
+            3.0387542247772217
+          ],
+          "true_utility": [
+            2.1099679470062256,
+            2.430788993835449,
+            2.134097099304199,
+            1.5551767349243164,
+            2.0791444778442383,
+            2.4285812377929688,
+            1.6102349758148193
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 1440,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 22.877389907836914,
+          "raw_dsenet_reference_rmse_mg_dl": 30.856761932373047,
+          "chosen_arm": 5,
+          "oracle_arm": 6,
+          "candidate_regret": 0.629425048828125,
+          "hold_reference_regret": 0.05372118949890137,
+          "utility_mae": 0.2595328390598297,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.0956838130950928,
+            3.159262180328369,
+            3.0982918739318848,
+            2.9680230617523193,
+            3.0913684368133545,
+            3.1647861003875732,
+            2.9784224033355713
+          ],
+          "true_utility": [
+            3.060361862182617,
+            2.3853261470794678,
+            3.0248868465423584,
+            3.078076124191284,
+            3.083143472671509,
+            2.4846580028533936,
+            3.1140830516815186
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 2160,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 32.58198928833008,
+          "raw_dsenet_reference_rmse_mg_dl": 28.645946502685547,
+          "chosen_arm": 5,
+          "oracle_arm": 5,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.3818819522857666,
+          "utility_mae": 1.2667253017425537,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.901076078414917,
+            3.0262911319732666,
+            2.9085397720336914,
+            2.7088918685913086,
+            2.891932249069214,
+            3.027337074279785,
+            2.7242507934570312
+          ],
+          "true_utility": [
+            1.678516149520874,
+            2.060270071029663,
+            1.6979482173919678,
+            1.0608288049697876,
+            1.6534894704818726,
+            2.0603981018066406,
+            1.1097915172576904
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 2880,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 19.384151458740234,
+          "raw_dsenet_reference_rmse_mg_dl": 22.229684829711914,
+          "chosen_arm": 5,
+          "oracle_arm": 2,
+          "candidate_regret": 0.2680320739746094,
+          "hold_reference_regret": 0.0012445449829101562,
+          "utility_mae": 0.12832169234752655,
+          "chosen_equals_oracle": false,
+          "predicted_utility": [
+            3.106717586517334,
+            3.157170534133911,
+            3.108225107192993,
+            2.9919698238372803,
+            3.1034836769104004,
+            3.1638383865356445,
+            3.001340627670288
+          ],
+          "true_utility": [
+            3.1312146186828613,
+            2.8130147457122803,
+            3.1324591636657715,
+            2.87078595161438,
+            3.1189558506011963,
+            2.864427089691162,
+            2.9320430755615234
+          ]
+        },
+        {
+          "patient": 4,
+          "minute": 3600,
+          "complete_all_arms": true,
+          "reference_rmse_mg_dl": 16.253372192382812,
+          "raw_dsenet_reference_rmse_mg_dl": 19.7811222076416,
+          "chosen_arm": 1,
+          "oracle_arm": 1,
+          "candidate_regret": 0.0,
+          "hold_reference_regret": 0.49013257026672363,
+          "utility_mae": 0.4891764521598816,
+          "chosen_equals_oracle": true,
+          "predicted_utility": [
+            2.4682183265686035,
+            2.703057289123535,
+            2.4895317554473877,
+            2.1885986328125,
+            2.445861339569092,
+            2.6870131492614746,
+            2.214902639389038
+          ],
+          "true_utility": [
+            2.033094644546509,
+            2.5232272148132324,
+            2.072010040283203,
+            1.2903685569763184,
+            1.9880971908569336,
+            2.506349563598633,
+            1.359800934791565
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "gfp": {
+    "status": "passed",
+    "real_rows": 64,
+    "finite_updates": 6,
+    "actor_changed": true,
+    "bounded": true,
+    "save_reload_exact": true,
+    "last_diagnostic": {
+      "actor_loss": 1.5922739505767822,
+      "critic_loss": 2.837550401687622,
+      "flow_loss": 0.9589557647705078,
+      "distill_loss": 0.5922739505767822,
+      "guidance_mean": 0.9996070861816406,
+      "q_mean": -0.8990987539291382,
+      "td_rows": 53
+    }
+  },
+  "td3bc": {
+    "status": "passed",
+    "real_rows": 64,
+    "finite_updates": 6,
+    "actor_changed": true,
+    "bounded": true,
+    "save_reload_exact": true,
+    "last_diagnostic": {
+      "critic_loss": 0.0010996096534654498,
+      "q_mean": 0.08074706792831421,
+      "td_rows": 53,
+      "actor_loss": -2.497972249984741
+    }
+  },
+  "iql": {
+    "status": "passed",
+    "real_rows": 64,
+    "finite_updates": 6,
+    "actor_changed": true,
+    "bounded": true,
+    "save_reload_exact": true,
+    "last_diagnostic": {
+      "actor_loss": 0.9156284332275391,
+      "critic_loss": 0.0011190471705049276,
+      "value_loss": 1.2121780855522957e-05,
+      "bc_mse": 0.002013054210692644,
+      "adv_weight_mean": 0.9958479404449463,
+      "target_mean": 0.06953064352273941,
+      "td_rows": 53,
+      "actor_rows": 64,
+      "actor_lr": 9.999999644694246e-05
+    }
+  },
+  "lom": {
+    "status": "passed",
+    "real_rows": 64,
+    "finite_updates": 6,
+    "actor_changed": true,
+    "bounded": true,
+    "save_reload_exact": true,
+    "last_diagnostic": {
+      "critic_loss": 0.0010987140703946352,
+      "mode_loss": 0.0016195959178730845,
+      "actor_loss": 0.36747294664382935,
+      "weights": 0.9998738169670105,
+      "q_mean": 0.10019457340240479,
+      "target_mean": 0.0706883892416954,
+      "td_rows": 53,
+      "stage_gmm": 0.0
+    }
+  }
+}

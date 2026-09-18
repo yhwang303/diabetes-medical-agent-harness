@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "tables": 15,
+  "rows": 88,
+  "links": 25,
+  "all_local_links_exist": true,
+  "offline_no_script": true,
+  "critical_values_and_individual_risk_present": true,
+  "latex_environments_balanced": true,
+  "visual_browser_preview": "not_performed: local file URL blocked by browser policy; no workaround attempted",
+  "latex_pdf_compile": "not_performed: TeX compiler unavailable",
+  "report_sha256": "ba764a966fba80c8a05b95894f805c83d1d68d038b0fa86991942dd3f2c2d130"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "case": "dev_over_bolus_p01_s3101",
+    "anchor": 1.2675,
+    "min": 0.0,
+    "max": 5.0,
+    "outside_anchor_0_5_fraction": 0.6957070707070707,
+    "tbr": 10.85858585858586
+  },
+  {
+    "case": "dev_under_bolus_p02_s3101",
+    "anchor": 1.3695000000000002,
+    "min": 0.0,
+    "max": 4.75,
+    "outside_anchor_0_5_fraction": 0.7285353535353535,
+    "tbr": 2.7777777777777777
+  },
+  {
+    "case": "dev_normal_p02_s3101",
+    "anchor": 1.3695000000000002,
+    "min": 0.0,
+    "max": 4.25,
+    "outside_anchor_0_5_fraction": 0.6893939393939394,
+    "tbr": 3.1565656565656566
+  },
+  {
+    "case": "dev_over_bolus_p04_s3101",
+    "anchor": 0.8880000000000001,
+    "min": 0.0,
+    "max": 5.5,
+    "outside_anchor_0_5_fraction": 0.8623737373737373,
+    "tbr": 41.41414141414141
+  },
+  {
+    "case": "dev_over_bolus_p03_s3101",
+    "anchor": 1.4255000000000002,
+    "min": 0.0,
+    "max": 5.75,
+    "outside_anchor_0_5_fraction": 0.8522727272727273,
+    "tbr": 19.82323232323232
+  },
+  {
+    "case": "dev_normal_p03_s3101",
+    "anchor": 1.4255000000000002,
+    "min": 0.0,
+    "max": 6.25,
+    "outside_anchor_0_5_fraction": 0.8674242424242424,
+    "tbr": 21.464646464646464
+  },
+  {
+    "case": "dev_under_bolus_p03_s3101",
+    "anchor": 1.4255000000000002,
+    "min": 0.0,
+    "max": 6.75,
+    "outside_anchor_0_5_fraction": 0.8952020202020202,
+    "tbr": 24.747474747474747
+  },
+  {
+    "case": "dev_normal_p01_s3101",
+    "anchor": 1.2675,
+    "min": 0.0,
+    "max": 5.0,
+    "outside_anchor_0_5_fraction": 0.7007575757575758,
+    "tbr": 8.080808080808081
+  },
+  {
+    "case": "dev_under_bolus_p04_s3101",
+    "anchor": 0.8880000000000001,
+    "min": 0.0,
+    "max": 7.5,
+    "outside_anchor_0_5_fraction": 0.8762626262626263,
+    "tbr": 41.16161616161616
+  },
+  {
+    "case": "dev_over_bolus_p02_s3101",
+    "anchor": 1.3695000000000002,
+    "min": 0.0,
+    "max": 3.75,
+    "outside_anchor_0_5_fraction": 0.6843434343434344,
+    "tbr": 3.9141414141414144
+  },
+  {
+    "case": "dev_normal_p04_s3101",
+    "anchor": 0.8880000000000001,
+    "min": 0.0,
+    "max": 6.75,
+    "outside_anchor_0_5_fraction": 0.8611111111111112,
+    "tbr": 39.141414141414145
+  },
+  {
+    "case": "dev_under_bolus_p01_s3101",
+    "anchor": 1.2675,
+    "min": 0.0,
+    "max": 4.75,
+    "outside_anchor_0_5_fraction": 0.7424242424242424,
+    "tbr": 6.691919191919192
+  }
+]

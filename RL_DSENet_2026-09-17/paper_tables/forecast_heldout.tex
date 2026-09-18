@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Patient-equal glucose prediction RMSE (mg/dL) on held-out Loop patients. Lower is better.}
+\label{tab:loop-forecast}
+\begin{tabular}{lrrrr}
+\toprule
+Method & 30 min & 60 min & 120 min & 240 min \\
+\midrule
+Persistence & 22.25 & 36.11 & 51.08 & 67.95 \\
+Linear trend & 26.19 & 52.45 & 101.87 & 197.53 \\
+DSENet-Loop (ours) & 19.55 & 33.20 & 46.13 & 58.81 \\
+\bottomrule
+\end{tabular}
+% Patient-equal RMSE (mg/dL), 32 held-out Loop patients; one training seed.
+\par
+\footnotesize Single training seed 260915. The effective patient counts at 30/60/120/240 minutes are 32/32/31/31; unavailable targets are not imputed.
+\end{table}

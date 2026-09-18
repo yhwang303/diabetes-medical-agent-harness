@@ -1,0 +1,48 @@
+{
+  "bootstrap_seed": 260917,
+  "resamples": 10000,
+  "cluster": "patient",
+  "training_seed_uncertainty_included": false,
+  "results": [
+    {
+      "horizon_min": 30,
+      "delta_rmse_mg_dl": -2.699141074652559,
+      "ci95": [
+        -3.486387052680768,
+        -1.7802079341078838
+      ],
+      "patients": 32,
+      "patients_without_target": 0
+    },
+    {
+      "horizon_min": 60,
+      "delta_rmse_mg_dl": -2.9060224553930363,
+      "ci95": [
+        -3.9903074752500687,
+        -1.6516514270356353
+      ],
+      "patients": 32,
+      "patients_without_target": 0
+    },
+    {
+      "horizon_min": 120,
+      "delta_rmse_mg_dl": -4.953179362281731,
+      "ci95": [
+        -6.298192614595404,
+        -3.490667949665451
+      ],
+      "patients": 31,
+      "patients_without_target": 1
+    },
+    {
+      "horizon_min": 240,
+      "delta_rmse_mg_dl": -9.137132376779777,
+      "ci95": [
+        -11.014278299136707,
+        -7.2362454824482265
+      ],
+      "patients": 31,
+      "patients_without_target": 1
+    }
+  ]
+}

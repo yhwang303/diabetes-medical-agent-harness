@@ -1,0 +1,8 @@
+{
+  "status": "fixed_budget_training_complete",
+  "step": 50000,
+  "seen": 12799419,
+  "seconds": 1356.841732263565,
+  "training_seed": 260915,
+  "final_checkpoint_sha256": "d8e6a660e339d3974bc7447877cbf2aad4b8df4793397675b99d74f9e6f1ab84"
+}

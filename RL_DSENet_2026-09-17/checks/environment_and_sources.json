@@ -1,0 +1,31 @@
+{
+  "torch": "2.0.0+cu118",
+  "mamba-ssm": "1.2.2",
+  "numpy": "1.24.4",
+  "einops": "0.8.1",
+  "transformers": "4.30.2",
+  "sources": {
+    "recover_evidence.py": "5a498b4fdf06ad5e9f125a1e62b6c9550f0cb5a594cd43c1bcfb776dd2504c10",
+    "forecast_model.py": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01",
+    "check_forecast.py": "f32ce4edc9aa15bab7df7443141c9919ec12a60d2ff77bbe371f136dcfea8528",
+    "forecast_data.py": "7011af417c3797a5edb7102876776c78354e4c415cc11ae8e3e1583bf4938d94",
+    "train_forecast.py": "06733840aa7beaab190932949a89c3ed51e99bd774bfd71158ec8e0512806ecb",
+    "world_model.py": "e956d0be8479aab28911d179bfc95c6b7d7562994ef89ee5f760c8cd329fd05c",
+    "train_world.py": "4b91af311337e5ed4b92f8da9a9dc3881195055a09a5fce46ac31d75c9c17f35",
+    "evaluate_world.py": "d1fa05e3996af2342cf72ea2636654dbfa0a88a54a2ef3badbfd598dc0b6a62f",
+    "dsenet/layers/DFBMamba.py": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98",
+    "dsenet/layers/Embed.py": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2",
+    "dsenet/layers/Global_Stream.py": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c",
+    "dsenet/layers/LWSA.py": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e",
+    "dsenet/layers/LoRE.py": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da",
+    "dsenet/layers/Local_Stream.py": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976",
+    "dsenet/layers/Mamba_Family.py": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5",
+    "dsenet/layers/RevIN.py": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+    "dsenet/layers/SelfAttention_Family.py": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80",
+    "dsenet/models/DSENet.py": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251",
+    "dsenet/utils/masking.py": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+    "dsenet/utils/metrics.py": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d",
+    "dsenet/utils/timefeatures.py": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b",
+    "dsenet/utils/tools.py": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c"
+  }
+}

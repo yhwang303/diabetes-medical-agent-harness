@@ -1,0 +1,46 @@
+{
+  "name": "final_frozen_new_scenarios",
+  "patients": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "total_minutes": 4320,
+  "groups": [
+    {
+      "name": "normal",
+      "bolus_factor": 1.0,
+      "seeds": [
+        91701,
+        91702
+      ],
+      "irregular": false
+    },
+    {
+      "name": "under_bolus",
+      "bolus_factor": 0.8,
+      "seeds": [
+        91701,
+        91702
+      ],
+      "irregular": false
+    },
+    {
+      "name": "over_bolus",
+      "bolus_factor": 1.2,
+      "seeds": [
+        91701,
+        91702
+      ],
+      "irregular": false
+    }
+  ],
+  "comparison_status": "frozen new scenarios on previously exposed virtual adults; not unseen-patient test"
+}

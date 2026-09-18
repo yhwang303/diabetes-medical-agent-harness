@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "8f8cb5704ff1e5fdcd0f1a49147b930e9514ef0e6d9151030e0bff67dd156ab8",
+  "archive_bytes": 130928022,
+  "archive_files": 936,
+  "file_hashes_verified": 935,
+  "data_files_extracted_or_matched": 920,
+  "source_files_preserved_locally": true,
+  "all_archive_paths_safe_regular_files": true
+}

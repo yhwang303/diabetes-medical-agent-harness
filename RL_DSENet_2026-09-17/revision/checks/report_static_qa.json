@@ -1,0 +1,13 @@
+{
+  "local_links_checked": 30,
+  "missing_links": [],
+  "main_and_native_rows_each": 10,
+  "full_table_columns": 15,
+  "compact_latex_columns": 11,
+  "latex_structure_passed": true,
+  "html_static_checks_passed": true,
+  "browser_visual_check": false,
+  "latex_compiled": false,
+  "figures_visually_inspected": true,
+  "html_sha256": "fe4e85bd08fd5eed87390d5ab163be691df33dac40e8bd07afe0476550f5389e"
+}

@@ -1,0 +1,559 @@
+{
+  "methods": {
+    "hold": {
+      "TIR": 95.17676767676768,
+      "TBR70": 0.9827441077441078,
+      "TBR54": 0.40614478114478125,
+      "failures": 0
+    },
+    "bc": {
+      "TIR": 83.1628787878788,
+      "TBR70": 0.6691919191919193,
+      "TBR54": 0.3177609427609428,
+      "failures": 0
+    },
+    "td3bc": {
+      "TIR": 76.78451178451178,
+      "TBR70": 0.7912457912457913,
+      "TBR54": 0.3977272727272727,
+      "failures": 0
+    },
+    "iql": {
+      "TIR": 79.05934343434345,
+      "TBR70": 0.45033670033670037,
+      "TBR54": 0.11363636363636362,
+      "failures": 0
+    },
+    "rebrac": {
+      "TIR": 85.61868686868686,
+      "TBR70": 0.6355218855218855,
+      "TBR54": 0.22306397306397305,
+      "failures": 0
+    },
+    "fql": {
+      "TIR": 89.7790404040404,
+      "TBR70": 0.6607744107744107,
+      "TBR54": 0.24831649831649832,
+      "failures": 0
+    },
+    "lom": {
+      "TIR": 74.65488215488215,
+      "TBR70": 0.5871212121212122,
+      "TBR54": 0.2777777777777778,
+      "failures": 0
+    },
+    "gfp": {
+      "TIR": 77.8303872053872,
+      "TBR70": 2.079124579124579,
+      "TBR54": 0.46717171717171724,
+      "failures": 0
+    },
+    "ditr": {
+      "TIR": 74.42760942760944,
+      "TBR70": 0.44191919191919193,
+      "TBR54": 0.0,
+      "failures": 0
+    },
+    "ours": {
+      "TIR": 97.07702020202021,
+      "TBR70": 1.548821548821549,
+      "TBR54": 0.5660774410774411,
+      "failures": 0
+    }
+  },
+  "paired": {
+    "hold": {
+      "tbr70_pct": {
+        "difference": 0.5660774410774413,
+        "ci95": [
+          0.0505050505050505,
+          1.2668350168350173
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.15993265993265987,
+        "ci95": [
+          0.0,
+          0.47979797979797956
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -2.4663299663299663,
+        "ci95": [
+          -4.006786616161615,
+          -1.033249158249158
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -0.3090825591151464,
+        "ci95": [
+          -0.48010457744536017,
+          -0.12810819073151863
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 1.9002525252525175,
+        "ci95": [
+          0.4334490740740695,
+          3.5753367003366834
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 1.9002525252525175,
+        "ci95": [
+          0.4334490740740695,
+          3.5753367003366834
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.0234375,
+      "test_status": "complete paired TIR",
+      "in_holm_family": false
+    },
+    "bc": {
+      "tbr70_pct": {
+        "difference": 0.87962962962963,
+        "ci95": [
+          0.0505050505050505,
+          2.2159090909090913
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.24831649831649832,
+        "ci95": [
+          0.0,
+          0.744949494949495
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -14.793771043771041,
+        "ci95": [
+          -23.922664141414142,
+          -6.399147727272731
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -2.251802055680578,
+        "ci95": [
+          -3.776328992510849,
+          -0.8808207203645841
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 13.914141414141412,
+        "ci95": [
+          5.174610690235683,
+          23.339699074074073
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 13.914141414141412,
+        "ci95": [
+          5.174610690235683,
+          23.339699074074073
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.00390625,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    },
+    "td3bc": {
+      "tbr70_pct": {
+        "difference": 0.7575757575757578,
+        "ci95": [
+          -0.17676767676767677,
+          2.066498316498317
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.1683501683501684,
+        "ci95": [
+          0.0,
+          0.5050505050505052
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -21.050084175084173,
+        "ci95": [
+          -34.3716856060606,
+          -8.840488215488216
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -3.3675839975653346,
+        "ci95": [
+          -5.568870356177366,
+          -1.4278679425273848
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 20.29250841750842,
+        "ci95": [
+          7.884469696969696,
+          33.92476851851852
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 20.29250841750842,
+        "ci95": [
+          7.884469696969696,
+          33.92476851851852
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.00390625,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    },
+    "iql": {
+      "tbr70_pct": {
+        "difference": 1.0984848484848488,
+        "ci95": [
+          0.0505050505050505,
+          2.8724747474747483
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.45244107744107753,
+        "ci95": [
+          0.0,
+          1.3573232323232325
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -19.11616161616162,
+        "ci95": [
+          -30.799873737373737,
+          -8.274410774410775
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -2.9072419448679505,
+        "ci95": [
+          -4.7681919915662405,
+          -1.2189017949207253
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 18.017676767676758,
+        "ci95": [
+          6.886574074074066,
+          30.231586700336692
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 18.017676767676758,
+        "ci95": [
+          6.886574074074066,
+          30.231586700336692
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.00390625,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    },
+    "rebrac": {
+      "tbr70_pct": {
+        "difference": 0.9132996632996637,
+        "ci95": [
+          0.0505050505050505,
+          2.316919191919193
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.34301346801346805,
+        "ci95": [
+          0.0,
+          1.0290404040404042
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -12.371632996632993,
+        "ci95": [
+          -23.512205387205388,
+          -3.5015782828282833
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -1.7513431772813,
+        "ci95": [
+          -3.3526621032976283,
+          -0.40336220817559193
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 11.458333333333332,
+        "ci95": [
+          2.2788299663299623,
+          22.868318602693602
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 11.458333333333332,
+        "ci95": [
+          2.2788299663299623,
+          22.868318602693602
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.01171875,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    },
+    "fql": {
+      "tbr70_pct": {
+        "difference": 0.8880471380471384,
+        "ci95": [
+          0.0505050505050505,
+          2.2411616161616172
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.3177609427609428,
+        "ci95": [
+          0.0,
+          0.9532828282828284
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -8.186026936026936,
+        "ci95": [
+          -13.003051346801344,
+          -3.7373211279461285
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -1.233137051687307,
+        "ci95": [
+          -2.017875237027898,
+          -0.4754797765684044
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 7.297979797979798,
+        "ci95": [
+          2.6156355218855203,
+          12.436868686868685
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 7.297979797979798,
+        "ci95": [
+          2.6156355218855203,
+          12.436868686868685
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.01171875,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    },
+    "lom": {
+      "tbr70_pct": {
+        "difference": 0.961700336700337,
+        "ci95": [
+          0.0505050505050505,
+          2.4621212121212133
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.2882996632996633,
+        "ci95": [
+          0.0,
+          0.8648989898989898
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -23.383838383838388,
+        "ci95": [
+          -37.45165193602694,
+          -10.248106060606066
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -3.67009929763989,
+        "ci95": [
+          -6.004465993307315,
+          -1.5685768161081448
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 22.422138047138038,
+        "ci95": [
+          8.97516835016835,
+          36.88610058922558
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 22.422138047138038,
+        "ci95": [
+          8.97516835016835,
+          36.88610058922558
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.00390625,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    },
+    "gfp": {
+      "tbr70_pct": {
+        "difference": -0.53030303030303,
+        "ci95": [
+          -1.936026936026936,
+          0.9848484848484853
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.09890572390572387,
+        "ci95": [
+          0.0,
+          0.2967171717171716
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -18.716329966329965,
+        "ci95": [
+          -30.389467592592595,
+          -7.895465067340071
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -3.1914624091183725,
+        "ci95": [
+          -5.173668760470267,
+          -1.4124710204498245
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 19.246632996632997,
+        "ci95": [
+          8.166982323232324,
+          31.401515151515145
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 19.246632996632997,
+        "ci95": [
+          8.166982323232324,
+          31.401515151515145
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.001953125,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.015625,
+      "holm_family_size": 8
+    },
+    "ditr": {
+      "tbr70_pct": {
+        "difference": 1.1069023569023573,
+        "ci95": [
+          0.0505050505050505,
+          2.8977272727272734
+        ],
+        "patients": 10
+      },
+      "tbr54_pct": {
+        "difference": 0.5660774410774411,
+        "ci95": [
+          0.0,
+          1.698232323232323
+        ],
+        "patients": 10
+      },
+      "tar180_pct": {
+        "difference": -23.756313131313128,
+        "ci95": [
+          -38.063973063973066,
+          -10.486058501683502
+        ],
+        "patients": 10
+      },
+      "risk": {
+        "difference": -3.6975973265059254,
+        "ci95": [
+          -6.080821067160733,
+          -1.5601098492347272
+        ],
+        "patients": 10
+      },
+      "tir_difference_lower_bound": {
+        "difference": 22.649410774410775,
+        "ci95": [
+          8.956123737373733,
+          37.306449915824906
+        ],
+        "patients": 10
+      },
+      "tir_difference_upper_bound": {
+        "difference": 22.649410774410775,
+        "ci95": [
+          8.956123737373733,
+          37.306449915824906
+        ],
+        "patients": 10
+      },
+      "tir_exact_sign_flip_p": 0.00390625,
+      "test_status": "complete paired TIR",
+      "in_holm_family": true,
+      "tir_holm_adjusted_p": 0.02734375,
+      "holm_family_size": 8
+    }
+  }
+}

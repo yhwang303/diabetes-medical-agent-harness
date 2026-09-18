@@ -1,0 +1,307 @@
+{
+  "created_utc": "2026-09-17T06:44:31.068009+00:00",
+  "no_further_selection": true,
+  "training_seed": 260915,
+  "primary_method": "F11_actor",
+  "patients": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "episode_count": 60,
+  "forecast": {
+    "path": "results/P03_g12s3_l2s1/best.pt",
+    "sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4"
+  },
+  "world": {
+    "path": "results/D05_selected_world/world.pt",
+    "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+  },
+  "policy": {
+    "path": "results/D06_selected_policy/policy.pt",
+    "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+  },
+  "patch_selection_sha256": "c208a69efdf2299d427b68243c6694f23e7fbe0464857dfab5d2cc829f28c901",
+  "methods": [
+    {
+      "name": "F01_hold",
+      "label": "Fixed observed basal",
+      "mode": "hold",
+      "path": null,
+      "sha256": null,
+      "bounded_reference": false,
+      "training_information": "observed warmup basal; no training"
+    },
+    {
+      "name": "F02_BC",
+      "label": "BC",
+      "mode": "legacy",
+      "path": "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/results/R00_bc_pilot/export_0050000.npz",
+      "sha256": "9c73bb2bc386a5a3c740365dbe2b36a01c42d00f62109b00d45197c129ae7101",
+      "bounded_reference": false,
+      "training_information": "Loop; frozen prior weights, original action contract"
+    },
+    {
+      "name": "F03_ReBRAC_BC100",
+      "label": "ReBRAC",
+      "mode": "legacy",
+      "path": "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/results/R21_rebrac_bc100/export_0050000.npz",
+      "sha256": "5f60fe4d82dda41be7998b21915bfdbd03f544bee090aae934b312e4268a3a42",
+      "bounded_reference": false,
+      "training_information": "Loop; frozen prior weights, original action contract"
+    },
+    {
+      "name": "F04_FQL_alpha100",
+      "label": "FQL",
+      "mode": "legacy",
+      "path": "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/results/R22_fql_alpha100/export_0050000.npz",
+      "sha256": "419bf7dff6aa0d479eb0908b0614e8e52767e878d3ea5ca9fb324f2b19f084c7",
+      "bounded_reference": false,
+      "training_information": "Loop; frozen prior weights, original action contract"
+    },
+    {
+      "name": "F05_Anchor_FQL",
+      "label": "Anchor-FQL",
+      "mode": "legacy",
+      "path": "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/results/R32_anchor_fql/export_0050000.npz",
+      "sha256": "cec18488561c9e2ee4ae592ac5bc7240ace11362418314f27eb939bd164f1a2f",
+      "bounded_reference": false,
+      "training_information": "Loop; frozen prior weights, original action contract"
+    },
+    {
+      "name": "F06_Ours_bound040",
+      "label": "Previous bounded RL",
+      "mode": "legacy",
+      "path": "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/results/O07_bounded040_rl/export_0050000.npz",
+      "sha256": "2f3e71a534839aeda9e03f6b52ea34e207bc2e447b0d570bddab3bc1192cb19f",
+      "bounded_reference": false,
+      "training_information": "Loop; frozen prior weights, original action contract"
+    },
+    {
+      "name": "F07_Bound040_noRL",
+      "label": "Previous bounded no-RL",
+      "mode": "legacy",
+      "path": "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/results/O08_bounded040_noRL/export_0050000.npz",
+      "sha256": "b3cae3e4bf0bd389d90a31c97955f26b98a3e60c3be690064441aa41a4a77582",
+      "bounded_reference": false,
+      "training_information": "Loop; frozen prior weights, original action contract"
+    },
+    {
+      "name": "F08_R05",
+      "label": "RL-DITR adaptation R05",
+      "mode": "ditr",
+      "path": "RL_DITR\u521b\u65b0_2026-09-16/results/R05_recursive_sim_stable_policy/policy_last.pt",
+      "sha256": "8b9667f0f50466119e7063b5b6d80e9a3bbc7b92817011e498c7e192234c2d51",
+      "bounded_reference": false,
+      "training_information": "Loop + prior simulation; original 1h planning"
+    },
+    {
+      "name": "F09_H02",
+      "label": "RL-DITR adaptation H02",
+      "mode": "ditr",
+      "path": "RL_DITR\u521b\u65b0_2026-09-16/results/H02_prefix_sim_factual/policy_last.pt",
+      "sha256": "48dd6a16dfa2cd0a15b6538a020d4f41e7cf1d9cc6e9d713d241f4b872a92dff",
+      "bounded_reference": false,
+      "training_information": "Loop + prior simulation; original 1h planning"
+    },
+    {
+      "name": "F10_planner",
+      "label": "DSENet world + no-RL planner",
+      "mode": "planner",
+      "path": "RL_DSENet_2026-09-17/results/D05_selected_world/world.pt",
+      "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae",
+      "bounded_reference": true,
+      "training_information": "Loop + H02 context + 504 paired simulation groups"
+    },
+    {
+      "name": "F11_actor",
+      "label": "DSENet world + RL policy (ours)",
+      "mode": "actor",
+      "path": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+      "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913",
+      "bounded_reference": true,
+      "training_information": "same world and action set as no-RL planner"
+    },
+    {
+      "name": "F12_beam",
+      "label": "DSENet world + RL + planning",
+      "mode": "beam",
+      "path": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+      "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913",
+      "bounded_reference": true,
+      "training_information": "same world and action set as no-RL planner"
+    }
+  ],
+  "scenario_config": {
+    "name": "final_frozen_new_scenarios",
+    "patients": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_minutes": 4320,
+    "groups": [
+      {
+        "name": "normal",
+        "bolus_factor": 1.0,
+        "seeds": [
+          91701,
+          91702
+        ],
+        "irregular": false
+      },
+      {
+        "name": "under_bolus",
+        "bolus_factor": 0.8,
+        "seeds": [
+          91701,
+          91702
+        ],
+        "irregular": false
+      },
+      {
+        "name": "over_bolus",
+        "bolus_factor": 1.2,
+        "seeds": [
+          91701,
+          91702
+        ],
+        "irregular": false
+      }
+    ],
+    "comparison_status": "frozen new scenarios on previously exposed virtual adults; not unseen-patient test"
+  },
+  "primary_outcomes": [
+    "patient-equal BG TIR missing-outcome bounds",
+    "observed TBR70/54",
+    "failure and coverage"
+  ],
+  "secondary_outcomes": [
+    "CGM counterparts",
+    "TAR",
+    "CV",
+    "risk",
+    "insulin",
+    "action variation"
+  ],
+  "inference": "10000 paired patient-cluster bootstrap; 10 independent virtual patients, not 60; no training-seed uncertainty",
+  "claim_rule": "report superiority only for measured endpoints; increased TBR must accompany TIR gains; no clinical or SOTA claim",
+  "source_sha256": {
+    "RL_DSENet_2026-09-17/recover_evidence.py": "5a498b4fdf06ad5e9f125a1e62b6c9550f0cb5a594cd43c1bcfb776dd2504c10",
+    "RL_DSENet_2026-09-17/forecast_model.py": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01",
+    "RL_DSENet_2026-09-17/check_forecast.py": "f32ce4edc9aa15bab7df7443141c9919ec12a60d2ff77bbe371f136dcfea8528",
+    "RL_DSENet_2026-09-17/forecast_data.py": "7011af417c3797a5edb7102876776c78354e4c415cc11ae8e3e1583bf4938d94",
+    "RL_DSENet_2026-09-17/train_forecast.py": "4d03c19b59ba478db4c1dc5ee192bbd7155632f45d71da616fb15b9790a8393b",
+    "RL_DSENet_2026-09-17/world_model.py": "e956d0be8479aab28911d179bfc95c6b7d7562994ef89ee5f760c8cd329fd05c",
+    "RL_DSENet_2026-09-17/evaluate_world.py": "d1fa05e3996af2342cf72ea2636654dbfa0a88a54a2ef3badbfd598dc0b6a62f",
+    "RL_DSENet_2026-09-17/policy.py": "dfc43f22272387c4429c64dfe56a1edb989744832c8f675004bd85ad7ae212ff",
+    "RL_DSENet_2026-09-17/train_policy.py": "8976890d6e834f9801a2ef47709ab72b3eb535b9f99ff6364a4cc92d73db3284",
+    "RL_DSENet_2026-09-17/new_policy_worker.py": "5450e638194f12984fd1f0459fd9320278a6d347ad3b5f9d3cff1099a3faded1",
+    "RL_DSENet_2026-09-17/policy_bounded.py": "73fb10be55505e02e13556a47b951f16091485a1ea672bf4b5413eb1fd77427e",
+    "RL_DSENet_2026-09-17/check_bounded_policy.py": "e5ccfb3ceae20661bacd5eed2c20c3776cde9a5c1b5e00d058aab9607518da4a",
+    "RL_DSENet_2026-09-17/check_patch_grid.py": "6109964b485b157893ecdf7e6cf96f37c237092559ea74ecfa2ba7d5036c7c5a",
+    "RL_DSENet_2026-09-17/legacy_policy_worker.py": "5c8fa2f6b4c97e58442ed17c1b7583f830c69150c44b17cb89a9f62a4673c5e8",
+    "RL_DSENet_2026-09-17/check_frozen_workers.py": "dcb8ab6d3e65e0af87ecc219d5aa83cf31c7277f8060da7db930c7f829946ffa",
+    "RL_DSENet_2026-09-17/train_world.py": "fbd71b2fcb1fe724aa34404598b4483112ee3fbcaa0cbd3689d3fbda3d0f39f4",
+    "RL_DSENet_2026-09-17/train_policy_bounded.py": "971bab10b4b40b54ea77b4865c3ee524ec0432aa0687ddfc40e2062e25057da1",
+    "RL_DSENet_2026-09-17/bounded_policy_worker.py": "3587eccef210e54ae1d471778d23cd0f1d86e2fe5acaeba8bbac1b4afc32ba0a",
+    "RL_DSENet_2026-09-17/check_policy.py": "a353ff89fa97f68d300f207eee23f0c3af4328cc7781cb1c68a69a644f976fb9",
+    "RL_DSENet_2026-09-17/evaluate_control.py": "0bca0254233130cdda29e7ce5bd68d37171f72e65fc8cb34c96c3157dcfbaa53",
+    "RL_DSENet_2026-09-17/prepare_final_forecast.py": "1a6b10b296136cbcc814c1f222833c985d92694773b0b0eb4c6e3bfacf9658aa",
+    "RL_DSENet_2026-09-17/evaluate_final_forecast.py": "fac199877d51a74c1698cdcd458b170db17a19b8d75fa348b47e22f5e3c2040e",
+    "RL_DSENet_2026-09-17/select_patch.py": "744d65d86bb3866f3555559432cec3bb6040b413dbed1e5fb0705bcf33ca2fb2",
+    "RL_DSENet_2026-09-17/run_selected_training.py": "b210e84fb567e479a9820cd38b06644ff1036bb525d51b2e14adac2b95972d1c",
+    "RL_DSENet_2026-09-17/freeze_final.py": "90a1755a3473b6b0867ea46803c938df16424ed6c1d6e11360a9dc8c834580f0",
+    "RL_DSENet_2026-09-17/analyze_control.py": "a7e0a7656a275917e7f9129a0429d0c27404965072d54455e9bd89f51ff52747",
+    "RL_DSENet_2026-09-17/report_sections.py": "86d648645d897c96ebf019659940e1031db899a7679ad74f51c54a0f2920f585",
+    "RL_DSENet_2026-09-17/build_report.py": "2f871222caf435c8d17eb4cadf585db7cc8ccb5652af962a8a8763ea72536126",
+    "RL_DSENet_2026-09-17/run_final_controls.py": "33266161bdd55f11be884a47dddbb789725d3654dd1f337dc4569c6c38d99bff",
+    "RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98",
+    "RL_DSENet_2026-09-17/dsenet/layers/Embed.py": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2",
+    "RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c",
+    "RL_DSENet_2026-09-17/dsenet/layers/LWSA.py": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e",
+    "RL_DSENet_2026-09-17/dsenet/layers/LoRE.py": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da",
+    "RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976",
+    "RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5",
+    "RL_DSENet_2026-09-17/dsenet/layers/RevIN.py": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+    "RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80",
+    "RL_DSENet_2026-09-17/dsenet/models/DSENet.py": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251",
+    "RL_DSENet_2026-09-17/dsenet/utils/masking.py": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+    "RL_DSENet_2026-09-17/dsenet/utils/metrics.py": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d",
+    "RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b",
+    "RL_DSENet_2026-09-17/dsenet/utils/tools.py": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c",
+    "RL_DITR\u521b\u65b0_2026-09-16/ditr_data.py": "0b2da353456709c7cf1315e5d66221972e2641a95f143c51979e38aa986fc5f2",
+    "RL_DITR\u521b\u65b0_2026-09-16/ditr_losses.py": "3e6d0126ee2d933d7c702e7c47636ef8f1266b61aa886837f49f3ae45098390b",
+    "RL_DITR\u521b\u65b0_2026-09-16/ditr_model.py": "d6d013610bf791551d331aea034fa960d285dd57320514e360f984f1317d5279",
+    "RL_DITR\u521b\u65b0_2026-09-16/train_state_response.py": "faa180dde1b71dfb84de177a4b2aa7408237e9e49986642ed390e7a429560e00",
+    "RL_DITR\u521b\u65b0_2026-09-16/response_patient.py": "aef95af95290e8e22fab9df0001b932035192b705ace1d4c2fb68bea1312873d",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_reference.py": "e4e0b8eefd7681751d200aad3e41ba2d1c7a44fb6d2f99aa2a376c1ec622f7d4",
+    "RL_DITR\u521b\u65b0_2026-09-16/train_reference.py": "3aca7ae5351b483afa855888628bd62fcd591d864aad02087b872b9551b6d468",
+    "RL_DITR\u521b\u65b0_2026-09-16/policy_worker.py": "8179e74fe541d879d2b1adb8bf8f4cd6965ccdd48a5f1cf9f2304af1ff7afb68",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_policy_gradients.py": "63a4cbbb36cf362de02aa19fa21a75009c2580621c322ad444815952506e40c7",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_nonfinite.py": "838134f4aad1a4072a897913bec1c953dbc8b32ec8df703cd072442827bbaff1",
+    "RL_DITR\u521b\u65b0_2026-09-16/evaluate_control.py": "7c3c82cb8c50095d82a6e057507e46206f3a85f47813d8e65637676820de9627",
+    "RL_DITR\u521b\u65b0_2026-09-16/control_metrics.py": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_delayed_policy_experiments.py": "2bbdf995916e948cad46e4fe8aaf6fbb13907e0ce49d1f808e8b433f43abe54c",
+    "RL_DITR\u521b\u65b0_2026-09-16/prepare_long_horizons.py": "b389ebe420638d99de5cca87f75269ce04e3ad9c346e0f97ab83abb3430e918f",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_delayed_policy.py": "44890b23dc41c020aafebfcf4f908c117f5458f3f67e5bc8c0daf541a8f310cc",
+    "RL_DITR\u521b\u65b0_2026-09-16/build_action_probe.py": "fb3d5f6cf4ef5c3ff5df4df44e837c5d1c76a73f044b2c77229273ef48705ea3",
+    "RL_DITR\u521b\u65b0_2026-09-16/evaluate_dynamics.py": "0dd5a572d31769be32b3cc7ae541b70e37dadee08d6f565e2b894a4072c219a9",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_delayed_policy_amp.py": "43b519d6abb5672eee2bcd032accccd71ee48bcd393c48cf063f45ad63ae1ec3",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_action_prefix.py": "b5b7a2da255d34da5027063af443df99442ae4c8a5aed9fc5091a353a685d0cb",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_policy_integrity.py": "ce04b049c6f911ea23fc7bf856f32de9fa0054f39393a46c44fdcc8ee997a84a",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_after_training.py": "f5be743bde663456e5d26872fd45560da111fd2a7b9c3b59e20c32cb8789c7ae",
+    "RL_DITR\u521b\u65b0_2026-09-16/prepare_paired_simulation.py": "d71a257743fcc59f8b9024d3324d2cc6e2713508d84ca3163dfa5f061b5a14ad",
+    "RL_DITR\u521b\u65b0_2026-09-16/paired_data.py": "4e1323622cbd6cee114afae5bca6e114ae3306242cc06056d15bd2ca89c5dbba",
+    "RL_DITR\u521b\u65b0_2026-09-16/point_reward_patient.py": "aaf24e5e826366b66be17a7f15c21cc1e6879df88af13045dd848d244186651e",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_development_queue.py": "e4286b0aae24a1c6b46d50a5909eeeb95df15a2a2c5d27d19be57c281cd3df66",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_paired.py": "dde98d328ab4875625cdedfd692b297623e91157f0b26faaf11924cccba69900",
+    "RL_DITR\u521b\u65b0_2026-09-16/compose_point_reward_control.py": "d6d35e0192a35c92427d037a3611c2ebec1d6d1ad2954248e25999b6f82cc4e8",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_paired_experiments.py": "862390eb36321c24a307c1b8eba2c649d86730646c6a8a06f82253b155afd0d9",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_dynamics_v2.py": "a0612a68a8f6c8a1ee7f4060928f3418398b5f6b6e6f642caafb2071453309cc",
+    "RL_DITR\u521b\u65b0_2026-09-16/audit_final_scenarios.py": "8a5d737e610c690d5185425c107484c9c34409fd24915a79109a66c2a7d3a79b",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_plan_components.py": "15c926cd1e30b53f17b2036e5f1184dd8fecf51861d0f5d13aa374b39d8c482d",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_reference_forecasts.py": "976d43d97c72ede49e28ead3eb4084ec505a79ce15ed497ea248e10711f92d3b",
+    "RL_DITR\u521b\u65b0_2026-09-16/evaluate_paired_when_ready.py": "4ac2c36752a22c1a03e3db6a413c1c05de75df9f4b3e6aee08042f3f38a045ba",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_policy_support.py": "b87bc70745ae84fe0121f7dc8e8e19cf368a8da0e6cee28dbdc22f595a27fd0c",
+    "RL_DITR\u521b\u65b0_2026-09-16/chunk_planning.py": "c6540b49787f0efe06e011a5b02381ca2a18ef49ec675d1a1fbc1e81753b7359",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_chunk_planning.py": "6c7f32152d816341cb3d5c64e7cee2fc55108564700cc9c46d8c1ab04bc2cec8",
+    "RL_DITR\u521b\u65b0_2026-09-16/response_operator.py": "5fe6079c040188990079daf2b2e83a59a495b7a76dfbc9663ed10d1bc4a2084c",
+    "RL_DITR\u521b\u65b0_2026-09-16/evaluate_long_planning_when_ready.py": "9feec32bf2207e05f741ebfb0019e4607d18089cc0f06dd7443b382469c96c11",
+    "RL_DITR\u521b\u65b0_2026-09-16/plot_development_control.py": "374d2908ba9bf1d910271eea6d1af5d40746e3df853fb1aaa81847399cce1655",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_policy_objective.py": "ed9667b973e45103a70c0a24a6a69c8d6e9f4a33ec197160162c5a8ed5ad7a84",
+    "RL_DITR\u521b\u65b0_2026-09-16/train_response_operator.py": "8ff28ad6b7eb45ae6f6c294fa17ff96e3a474cc94205106347bbae37bb1a4a8b",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_stable_matched_experiments.py": "2eed4bc0817ab7a2ac7fb5f8eb9b282cba4869e04f1f457b75a03967039e7d00",
+    "RL_DITR\u521b\u65b0_2026-09-16/recover_matched_training.py": "2d66df167a1d0eff94d6fe68f885178696436dcfc71f2aac95df328b1c9275fc",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_response_operator.py": "e2d0fdb2ab6af188b937bb77c9c8e4d47afbad07a5980351e159bf04f0399b97",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_action_identification.py": "d5f4addd98adf2f8aa58c59af9d162f1b367f00173b179d308d40ce59a7bf59e",
+    "RL_DITR\u521b\u65b0_2026-09-16/evaluate_dynamic_actions.py": "3ce7d2ce2f2f0832204c1204f44264783f31c1aeb2b1934322cb92b4149f7e3e",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_timing_diagnostics.py": "cfe265e8e0ab836c195b839791beaaf87540321c9075652c6c7fc03117b71caf",
+    "RL_DITR\u521b\u65b0_2026-09-16/diagnose_plan_timing.py": "8dff718d61074f27095e0f8849868d1985d219a3b0b706de76355c06d7be0cb8",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_temporal_data.py": "ec354a9457d037d1cf2f2e99a4aca372c73526dfe4042479485fc88095b10a21",
+    "RL_DITR\u521b\u65b0_2026-09-16/compose_response_patient.py": "1d29e9bdfa031b2dfe18f09905105489e010154bf4d4e4e09522800fb8900332",
+    "RL_DITR\u521b\u65b0_2026-09-16/check_response_patient.py": "3434395e43ea94e3432f41dfff2c08b626e917762ab8d617d1fe0b74cee9a7a4",
+    "RL_DITR\u521b\u65b0_2026-09-16/run_response_experiments.py": "6927d1fa7d48128181fe331800c1fde7fe012a872a09f0e612f8215c4438f1ca",
+    "RL_DITR\u521b\u65b0_2026-09-16/evaluate_latent_response.py": "fda0dd9af819fb6d6cd2c78eb7c3bb33e21c5bf30c72044ab09c37d71eeea746",
+    "RL_DITR\u521b\u65b0_2026-09-16/plot_response_diagnostics.py": "ead4fd8f2b1ad5da631da5f0947c8bf5ec2913706d1b4143274424315955903b",
+    "RL_DITR\u521b\u65b0_2026-09-16/delayed_policy.py": "c672bd24f8657472e19db9d7fc7151279d2f12d47ba6c6e7f1764d1b978db4db",
+    "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/numpy_policy.py": "6db3344a414ec898f9ced5a069b9cafe629a3c8810c6e2002c0b57fe2c108024",
+    "RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/observable_history.py": "c1b0d1b83071bf76443f69157358571eae144a396ff7d0a8b984e8d66d70f75d",
+    "RL\u8bad\u7ec3_2026-09-15/data.py": "4a02d704f07563aa1ba6202502b60260a6b76ce1054e6377c73573f17fed9a46",
+    "Loop\u6570\u636e\u96c6/\u8bad\u7ec3\u7ba1\u7ebf_v2/prepared/normalization.json": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f"
+  }
+}

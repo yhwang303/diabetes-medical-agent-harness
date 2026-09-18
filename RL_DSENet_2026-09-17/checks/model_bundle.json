@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "bundle_sha256": "a0a96017ed21714dac36011cfc761fa754bbd73ff993f3b596acbc651af35047",
+  "files_verified": 34,
+  "isolated_tree_cuda_inference": true,
+  "actions_match_original_exact": true,
+  "batch_size": 2,
+  "no_patient_dataset_required_for_inference": true
+}

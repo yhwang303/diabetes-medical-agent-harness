@@ -1,0 +1,53 @@
+{
+  "purpose": "research-only standalone project-relative CUDA inference bundle; no dataset or credentials",
+  "files": {
+    "Loop\u6570\u636e\u96c6/\u8bad\u7ec3\u7ba1\u7ebf_v2/prepared/normalization.json": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f",
+    "RL_DITR\u521b\u65b0_2026-09-16/ditr_model.py": "d6d013610bf791551d331aea034fa960d285dd57320514e360f984f1317d5279",
+    "RL_DITR\u521b\u65b0_2026-09-16/response_operator.py": "5fe6079c040188990079daf2b2e83a59a495b7a76dfbc9663ed10d1bc4a2084c",
+    "RL_DITR\u521b\u65b0_2026-09-16/results/H02_prefix_sim_factual/patient_best.pt": "18ecdc57a60fd656cfd239348dd5e0677c78744d15b75a12218febfe9719f012",
+    "RL_DSENet_2026-09-17/README.md": "61c94844f73c67ac7e05eb237c5f3a3aa6542146bf43d5f1d8d78326c9cd9688",
+    "RL_DSENet_2026-09-17/bounded_policy_worker.py": "3587eccef210e54ae1d471778d23cd0f1d86e2fe5acaeba8bbac1b4afc32ba0a",
+    "RL_DSENet_2026-09-17/checks/environment_and_sources.json": "bc424590ad40e2cfbc9141bb18081c515200922508f6d36771f141f6475eeac9",
+    "RL_DSENet_2026-09-17/configs/final_freeze.json": "a1a2d4c7c6970ca61eddcf75f351e9102f6595a31c85b187ab89e5faca5df172",
+    "RL_DSENet_2026-09-17/dsenet/LICENSE": "18b67aff08f4c44a1a9a9fc80119a10821d4d7ab9c07f256f5a326383a1d2712",
+    "RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98",
+    "RL_DSENet_2026-09-17/dsenet/layers/Embed.py": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2",
+    "RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c",
+    "RL_DSENet_2026-09-17/dsenet/layers/LWSA.py": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e",
+    "RL_DSENet_2026-09-17/dsenet/layers/LoRE.py": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da",
+    "RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976",
+    "RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5",
+    "RL_DSENet_2026-09-17/dsenet/layers/RevIN.py": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+    "RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80",
+    "RL_DSENet_2026-09-17/dsenet/models/DSENet.py": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251",
+    "RL_DSENet_2026-09-17/dsenet/upstream.json": "b669a0a7dbef3e268a8a58aab692263aad8af09963bff8fb7b9cb94c7011d31b",
+    "RL_DSENet_2026-09-17/dsenet/utils/masking.py": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+    "RL_DSENet_2026-09-17/dsenet/utils/metrics.py": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d",
+    "RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b",
+    "RL_DSENet_2026-09-17/dsenet/utils/tools.py": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c",
+    "RL_DSENet_2026-09-17/forecast_model.py": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01",
+    "RL_DSENet_2026-09-17/policy_bounded.py": "73fb10be55505e02e13556a47b951f16091485a1ea672bf4b5413eb1fd77427e",
+    "RL_DSENet_2026-09-17/results/D05_selected_world/config.json": "ed9f4af6b6f31e0a33da977de07437dbcac011309d01b4d1fc1db5d9eedc1952",
+    "RL_DSENet_2026-09-17/results/D05_selected_world/world.pt": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae",
+    "RL_DSENet_2026-09-17/results/D06_selected_policy/config.json": "7d5ec28a749e4e636d37155ba22833c8ce91e2af32172586c4f1853c47572aa1",
+    "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913",
+    "RL_DSENet_2026-09-17/results/P03_g12s3_l2s1/best.pt": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4",
+    "RL_DSENet_2026-09-17/results/P03_g12s3_l2s1/config.json": "1392b8bfa68581bcacef49fb792a48c9049ae0bfb2440b775227cac81e4bdfb3",
+    "RL_DSENet_2026-09-17/world_model.py": "e956d0be8479aab28911d179bfc95c6b7d7562994ef89ee5f760c8cd329fd05c",
+    "RL_DSENet_2026-09-17/\u5b9e\u9a8c\u534f\u8bae.md": "1293239747861d67f1e597f7b53625b797d03ab41bab9b0b3d376dabf3294560"
+  },
+  "frozen_inference_weights": {
+    "forecast": {
+      "path": "results/P03_g12s3_l2s1/best.pt",
+      "sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4"
+    },
+    "world": {
+      "path": "results/D05_selected_world/world.pt",
+      "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+    },
+    "policy": {
+      "path": "results/D06_selected_policy/policy.pt",
+      "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    }
+  }
+}

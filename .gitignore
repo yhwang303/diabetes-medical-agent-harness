@@ -99,3 +99,18 @@ Loop数据集/训练管线_v1/prepared/
 Loop数据集/训练管线_v1/文献/
 Loop数据集/训练管线_v2/prepared/
 Loop数据集/训练管线_v2/文献/
+
+# DSENet experiment local clones, recovered checkpoints and generated evidence
+/vendor/dsenet111/
+RL_DSENet_2026-09-17/recovery/
+RL_DSENet_2026-09-17/forecast_masks/
+RL_DSENet_2026-09-17/results/
+RL_DSENet_2026-09-17/dependencies/
+
+RL_DSENet_2026-09-17/final_forecast_data/
+RL_DSENet_2026-09-17/delivery/*.tar.gz
+RL_DSENet_2026-09-17/revision/results/
+RL_DSENet_2026-09-17/revision/sources/
+RL_DSENet_2026-09-17/revision/source_audit/
+RL_DSENet_2026-09-17/revision/*.tar.gz
+RL_DSENet_2026-09-17/revision/delivery/*.tar.gz

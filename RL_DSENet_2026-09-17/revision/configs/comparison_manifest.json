@@ -1,0 +1,133 @@
+{
+  "methods": [
+    {
+      "key": "hold",
+      "label": "Constant basal",
+      "venue": "Control",
+      "year": "—",
+      "checkpoint": null,
+      "mode": "hold",
+      "main_folder": "RL_DSENet_2026-09-17/results/F01_hold",
+      "native_folder": "RL_DSENet_2026-09-17/results/F01_hold",
+      "training_information": "Observed warm-up basal"
+    },
+    {
+      "key": "bc",
+      "label": "BC",
+      "venue": "Imitation",
+      "year": "—",
+      "checkpoint": "RL进阶对比_2026-09-15/results/R00_bc_pilot/export_0050000.npz",
+      "mode": "legacy",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_bc",
+      "native_folder": "RL_DSENet_2026-09-17/results/F02_BC",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "td3bc",
+      "label": "TD3+BC",
+      "venue": "NeurIPS",
+      "year": 2021,
+      "checkpoint": "RL_DSENet_2026-09-17/revision/results/td3bc_seed260915/last.pt",
+      "mode": "external",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_td3bc",
+      "native_folder": "RL_DSENet_2026-09-17/revision/results/N_td3bc",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "iql",
+      "label": "IQL",
+      "venue": "ICLR",
+      "year": 2022,
+      "checkpoint": "RL_DSENet_2026-09-17/revision/results/iql_seed260915/last.pt",
+      "mode": "external",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_iql",
+      "native_folder": "RL_DSENet_2026-09-17/revision/results/N_iql",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "rebrac",
+      "label": "ReBRAC",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "checkpoint": "RL进阶对比_2026-09-15/results/R21_rebrac_bc100/export_0050000.npz",
+      "mode": "legacy",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_rebrac",
+      "native_folder": "RL_DSENet_2026-09-17/results/F03_ReBRAC_BC100",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "fql",
+      "label": "FQL",
+      "venue": "ICML",
+      "year": 2025,
+      "checkpoint": "RL进阶对比_2026-09-15/results/R22_fql_alpha100/export_0050000.npz",
+      "mode": "legacy",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_fql",
+      "native_folder": "RL_DSENet_2026-09-17/results/F04_FQL_alpha100",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "lom",
+      "label": "LOM",
+      "venue": "ICLR",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_2026-09-17/revision/results/lom_seed260915/last.pt",
+      "mode": "external",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_lom",
+      "native_folder": "RL_DSENet_2026-09-17/revision/results/N_lom",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "gfp",
+      "label": "GFP",
+      "venue": "ICLR",
+      "year": 2026,
+      "checkpoint": "RL_DSENet_2026-09-17/revision/results/gfp_seed260915/last.pt",
+      "mode": "external",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_gfp",
+      "native_folder": "RL_DSENet_2026-09-17/revision/results/N_gfp",
+      "training_information": "Loop only"
+    },
+    {
+      "key": "ditr",
+      "label": "RL-DITR*",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "checkpoint": "RL_DITR创新_2026-09-16/results/R03_reference_categorical/policy_last.pt",
+      "mode": "ditr",
+      "main_folder": "RL_DSENet_2026-09-17/revision/results/M_ditr",
+      "native_folder": "RL_DSENet_2026-09-17/revision/results/N_ditr",
+      "training_information": "Loop only; continuous basal task adaptation"
+    },
+    {
+      "key": "ours",
+      "label": "DSENet-RL (ours)",
+      "venue": "This work",
+      "year": "—",
+      "checkpoint": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+      "mode": "actor",
+      "main_folder": "RL_DSENet_2026-09-17/results/F11_actor",
+      "native_folder": "RL_DSENet_2026-09-17/results/F11_actor",
+      "training_information": "Loop + H02 context + paired simulation"
+    }
+  ],
+  "patients": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "episode_count": 60,
+  "primary_method": "ours",
+  "main_common_limit_u_h": 0.25,
+  "training_seed": 260915,
+  "purpose": "same evaluation and common action envelope; training information differs explicitly",
+  "no_test_tuning": true,
+  "scenario_config": "RL_DSENet_2026-09-17/revision/configs/scenarios.json"
+}

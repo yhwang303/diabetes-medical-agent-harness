@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "simulator_function_ast_unchanged": true,
+  "scenario_function_ast_unchanged": true,
+  "hold_3day_raw_records_exact": true,
+  "hold_metrics_exact": true,
+  "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "P03-D05-D06",
+  "training_seed": 260915,
+  "patch": {
+    "global_length": 12,
+    "global_stride": 3,
+    "local_length": 2,
+    "local_stride": 1
+  },
+  "weights": {
+    "forecast": {
+      "path": "results/P03_g12s3_l2s1/best.pt",
+      "sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4"
+    },
+    "world": {
+      "path": "results/D05_selected_world/world.pt",
+      "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+    },
+    "policy": {
+      "path": "results/D06_selected_policy/policy.pt",
+      "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    }
+  },
+  "report": "revision/论文正文对比报告.html",
+  "panel": "revision/paper_tables/main_comparison.csv",
+  "mean_and_patient_sd": {
+    "tir_pct": [
+      97.08,
+      4.5
+    ],
+    "tbr70_pct": [
+      1.55,
+      3.89
+    ],
+    "tbr54_pct": [
+      0.57,
+      1.79
+    ]
+  },
+  "research_only": true,
+  "extra_suspension_rule": false,
+  "modified_low_glucose_reward": false
+}

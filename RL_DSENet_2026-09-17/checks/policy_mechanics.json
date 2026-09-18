@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "exact_expected_return_gradient": true,
+  "old_glucose_reward_value_heads_unused": true,
+  "perturb_DSE_forecast_changes_world_utility": true,
+  "candidate_count": 7,
+  "prediction_queries": 28,
+  "not_control_validation": true
+}

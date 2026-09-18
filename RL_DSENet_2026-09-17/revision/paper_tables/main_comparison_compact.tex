@@ -1,0 +1,24 @@
+% Requires booktabs and graphicx. Detailed coverage/projection: full comparison table.
+\begin{table*}[t]
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcrrrrrrrrr}
+\toprule
+Method (year) & Data & TIR $\uparrow$ & TBR$_{70}$ $\downarrow$ & TBR$_{54}$ $\downarrow$ & TAR$_{180}$ $\downarrow$ & TAR$_{250}$ $\downarrow$ & CV $\downarrow$ & LBGI $\downarrow$ & HBGI $\downarrow$ & Fail. \\
+\midrule
+Constant basal & warmup & 95.18 $\pm$ 5.41 & 0.98 $\pm$ 3.02 & 0.41 $\pm$ 1.28 & 3.84 $\pm$ 4.22 & 0.00 $\pm$ 0.00 & 17.83 $\pm$ 4.44 & 0.47 $\pm$ 0.64 & 1.70 $\pm$ 0.73 & 0/60 \\
+BC & L & 83.16 $\pm$ 15.36 & 0.67 $\pm$ 2.12 & 0.32 $\pm$ 1.00 & 16.17 $\pm$ 15.60 & 1.34 $\pm$ 2.40 & 19.19 $\pm$ 5.15 & 0.28 $\pm$ 0.47 & 3.83 $\pm$ 2.39 & 0/60 \\
+TD3+BC (2021) & L & 76.78 $\pm$ 21.78 & 0.79 $\pm$ 2.10 & 0.40 $\pm$ 1.26 & 22.42 $\pm$ 22.19 & 2.16 $\pm$ 3.83 & 17.02 $\pm$ 3.99 & 0.36 $\pm$ 0.55 & 4.87 $\pm$ 3.48 & 0/60 \\
+IQL (2022) & L & 79.06 $\pm$ 19.48 & 0.45 $\pm$ 1.42 & 0.11 $\pm$ 0.36 & 20.49 $\pm$ 19.68 & 1.26 $\pm$ 2.20 & 16.10 $\pm$ 4.13 & 0.13 $\pm$ 0.31 & 4.64 $\pm$ 2.87 & 0/60 \\
+ReBRAC (2023) & L & 85.62 $\pm$ 16.89 & 0.64 $\pm$ 2.01 & 0.22 $\pm$ 0.71 & 13.75 $\pm$ 17.05 & 0.27 $\pm$ 0.85 & 16.01 $\pm$ 4.16 & 0.20 $\pm$ 0.43 & 3.41 $\pm$ 2.43 & 0/60 \\
+FQL (2025) & L & 89.78 $\pm$ 8.77 & 0.66 $\pm$ 2.09 & 0.25 $\pm$ 0.79 & 9.56 $\pm$ 8.69 & 0.15 $\pm$ 0.47 & 16.70 $\pm$ 3.85 & 0.24 $\pm$ 0.44 & 2.86 $\pm$ 1.39 & 0/60 \\
+LOM (2025) & L & 74.65 $\pm$ 23.53 & 0.59 $\pm$ 1.86 & 0.28 $\pm$ 0.88 & 24.76 $\pm$ 23.80 & 2.24 $\pm$ 4.02 & 15.73 $\pm$ 4.12 & 0.17 $\pm$ 0.43 & 5.36 $\pm$ 3.67 & 0/60 \\
+GFP (2026) & L & 77.83 $\pm$ 19.52 & 2.08 $\pm$ 2.62 & 0.47 $\pm$ 1.48 & 20.09 $\pm$ 19.75 & 2.04 $\pm$ 3.67 & 18.23 $\pm$ 3.92 & 0.65 $\pm$ 0.66 & 4.41 $\pm$ 3.14 & 0/60 \\
+RL-DITR* (2023) & L & 74.43 $\pm$ 23.87 & 0.44 $\pm$ 1.40 & 0.00 $\pm$ 0.00 & 25.13 $\pm$ 24.09 & 2.27 $\pm$ 4.09 & 15.44 $\pm$ 3.88 & 0.11 $\pm$ 0.27 & 5.45 $\pm$ 3.70 & 0/60 \\
+DSENet-RL (ours) & L+S & 97.08 $\pm$ 4.50 & 1.55 $\pm$ 3.89 & 0.57 $\pm$ 1.79 & 1.37 $\pm$ 1.90 & 0.00 $\pm$ 0.00 & 19.25 $\pm$ 4.88 & 0.73 $\pm$ 0.82 & 1.14 $\pm$ 0.56 & 0/60 \\
+\bottomrule
+\end{tabular}}
+\caption{Closed-loop control on 10 previously exposed virtual adults, with six matched scenarios each. One training seed. Values are patient-equal means and between-patient standard deviations. Bracketed TIR values are missing-outcome bounds, not confidence intervals. Other glucose outcomes are observed-only; coverage and failures are reported explicitly. Projection denotes external action clipping, not pump quantization. L: Loop only. L+S: Loop plus inherited simulation-trained context and paired simulator supervision. This compares control systems under the same evaluation protocol, not algorithms with identical training information. *RL-DITR is a continuous-basal task adaptation, not a reproduction of the original clinical trial. All methods share an observed-warmup basal envelope of plus/minus 0.25 U/h. Full coverage, mean glucose and external projection rates are provided in the full supplementary table. Methods are not guaranteed equally converged under the fixed budgets.}
+\label{tab:main-control-compact}
+\end{table*}

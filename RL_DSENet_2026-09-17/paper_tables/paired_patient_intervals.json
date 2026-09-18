@@ -1,0 +1,30 @@
+[
+  {
+    "horizon_min": 30,
+    "patient_count": 55,
+    "delta_rmse_mg_dl": -3.4120266838463404,
+    "ci95_low": -4.525599572694609,
+    "ci95_high": -2.4693623193214154
+  },
+  {
+    "horizon_min": 60,
+    "patient_count": 55,
+    "delta_rmse_mg_dl": -3.558855971601208,
+    "ci95_low": -4.454513247157629,
+    "ci95_high": -2.575488000359218
+  },
+  {
+    "horizon_min": 120,
+    "patient_count": 55,
+    "delta_rmse_mg_dl": -5.436921316657674,
+    "ci95_low": -6.872168870654672,
+    "ci95_high": -3.7642126514580307
+  },
+  {
+    "horizon_min": 240,
+    "patient_count": 55,
+    "delta_rmse_mg_dl": -11.455321162174414,
+    "ci95_low": -13.664514953601977,
+    "ci95_high": -9.653674648552789
+  }
+]

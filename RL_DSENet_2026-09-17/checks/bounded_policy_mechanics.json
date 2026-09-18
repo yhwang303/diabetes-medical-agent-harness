@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "persistent_reference_no_compounding": true,
+  "candidate_support": "+/-0.25 U/h of observed fixed reference",
+  "finite_policy_gradients": true,
+  "scope": "research candidate contract, not clinical safety rule"
+}

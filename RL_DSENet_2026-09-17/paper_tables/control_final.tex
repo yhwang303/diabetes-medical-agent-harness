@@ -1,0 +1,30 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Frozen new-scenario basal-control evaluation on 10 previously exposed virtual adults. Each method has 60 trajectories: two scenario seeds and three shared meal-bolus conditions.}
+\label{tab:control-main}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & TIR (\%) $\uparrow$ & TBR$_{70}$ (\%) $\downarrow$ & TBR$_{54}$ (\%) $\downarrow$ & Failures & Coverage (\%) \\
+\midrule
+Fixed observed basal & 95.18 & 0.98 & 0.41 & 0/60 & 100.00 \\
+BC & 52.41--63.94 & 7.66 & 1.83 & 21/60 & 88.47 \\
+ReBRAC & 75.39 & 0.45 & 0.09 & 0/60 & 100.00 \\
+FQL & 53.82--63.48 & 5.00 & 1.77 & 13/60 & 90.34 \\
+Anchor-FQL & 73.20--74.62 & 1.02 & 0.00 & 4/60 & 98.58 \\
+Previous bounded RL & 95.76 & 1.03 & 0.21 & 0/60 & 100.00 \\
+Previous bounded no-RL & 75.43 & 0.34 & 0.00 & 0/60 & 100.00 \\
+RL-DITR adaptation R05 & 11.70--39.95 & 0.00 & 0.00 & 23/60 & 71.76 \\
+RL-DITR adaptation H02 & 87.47 & 0.70 & 0.17 & 0/60 & 100.00 \\
+DSENet world + no-RL planner & 96.81 & 2.09 & 0.69 & 0/60 & 100.00 \\
+DSENet world + RL policy (ours) & 97.08 & 1.55 & 0.57 & 0/60 & 100.00 \\
+DSENet world + RL + planning & 96.87 & 2.01 & 0.68 & 0/60 & 100.00 \\
+\bottomrule
+\end{tabular}
+% Known virtual adults; frozen new scenarios, shared meal bolus and six-hour warmup.
+% Single training seed 260915; systems differ in training information and action support.
+% TIR ranges are missing-outcome bounds, not confidence intervals. TBR is observed-only.
+\par
+\vspace{3pt}
+\parbox{\textwidth}{\footnotesize One training seed (260915); all prior baseline weights are reused without retraining. TIR ranges bound unknown outcomes after early termination, not confidence intervals; TBR uses observed intervals only. Training information, action support and planning budgets differ across systems. The final three rows share the same DSENet world model, seven candidate plans and reward. Common nominal-basal warmup lasts six hours; evaluation lasts the remaining 66 hours. These are new scenarios on known virtual patients, not unseen-patient or clinical results.}
+\end{table*}
