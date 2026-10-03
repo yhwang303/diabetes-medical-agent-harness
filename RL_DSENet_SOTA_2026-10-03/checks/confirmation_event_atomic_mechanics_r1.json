@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "count": 18,
+  "checks": [
+    "python38_syntax",
+    "reader_process_ready",
+    "two_real_writers_succeeded",
+    "concurrent_reader_only_observed_complete_JSON",
+    "reader_observed_publication_in_progress",
+    "all_events_seen_once",
+    "event_numbers_contiguous_and_unique",
+    "successful_publication_removes_temporaries",
+    "abandoned_partial_temporary_ignored",
+    "abandoned_partial_temporary_retained",
+    "write_failure_not_published",
+    "write_failure_keeps_temporary",
+    "write_failure_releases_lock",
+    "publication_is_no_replace",
+    "publication_collision_keeps_temporary",
+    "collision_releases_lock",
+    "sources_unchanged",
+    "no_model_or_simulator_loaded"
+  ],
+  "source_sha256": {
+    "confirmation_gate.py": "8e25df56e5177f022d2b69ced63fbe736d06c04303eceffa39d1bd7d94c30d44",
+    "checks/check_confirmation_events.py": "0867763ecabbbd3c6334fc88c044a92ec6f73a9fc52b0b8197c3ca0a5c644483"
+  },
+  "real_concurrent_reader": {
+    "status": "passed",
+    "snapshots": 323,
+    "pending_snapshots": 236,
+    "final_count": 12,
+    "keys": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ]
+    ]
+  },
+  "real_writer_count": 2,
+  "process_start_method": "spawn",
+  "fixture_only": true,
+  "actual_selection_frozen": false,
+  "actual_confirmation_jobs_generated": false,
+  "training_simulation_or_remote_run": false
+}

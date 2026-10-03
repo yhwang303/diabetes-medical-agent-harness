@@ -1,0 +1,17 @@
+{
+  "status": "reviewed",
+  "html_sha256": "c77a8e3119861d36ebf905ec120ca3d6bb78ad82f6ddc524ee24d66686d11c46",
+  "viewport": [
+    1280,
+    720
+  ],
+  "browser": "Codex in-app browser",
+  "checks": [
+    "overview text readable; metric-value separation corrected",
+    "main table18 rows and failed Observed rows distinct",
+    "world40/wide40 rows visible with real values",
+    "column labels and long table navigation readable"
+  ],
+  "source_scores_changed": false,
+  "limitations": "Visual inspection of overview and main comparison; full numeric/CSV evidence machine-checked separately"
+}

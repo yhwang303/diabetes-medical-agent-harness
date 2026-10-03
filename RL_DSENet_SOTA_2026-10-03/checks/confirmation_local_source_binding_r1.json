@@ -1,0 +1,17 @@
+{
+  "status": "all_selected_source_bytes_verified_locally",
+  "direct_files": 68,
+  "archived_runtime_sources": {
+    ".venv/lib/python3.11/site-packages/simglucose/actuator/pump.py": {
+      "archive_member": "results/IQL_wide/source/.venv/lib/python3.11/site-packages/simglucose/actuator/pump.py",
+      "sha256": "54dc4ec98f34ae600dacd1edd2e43fc2701512eb0824ce33acb07f3f756a9719"
+    },
+    ".venv/lib/python3.11/site-packages/simglucose/params/pump_params.csv": {
+      "archive_member": "results/IQL_wide/source/.venv/lib/python3.11/site-packages/simglucose/params/pump_params.csv",
+      "sha256": "9b92646519f5501869626164f98e59cdc9303318958df78d7a670de1d023df6f"
+    }
+  },
+  "plan_sha256": "ba438ef52c7f7fc40950b3a3100dd20a4f9b2df9cdba41843e53fff2cf98152e",
+  "remote_full_dependency_validation": "confirmation_preflight_r1.json",
+  "local_cuda_execution": false
+}

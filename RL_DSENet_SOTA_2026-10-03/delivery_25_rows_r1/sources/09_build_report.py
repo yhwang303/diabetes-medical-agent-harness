@@ -24,7 +24,6 @@ PRIMARY = [
     ('tbr54_pct', 'TBR <54 % ↓', -1), ('tar180_pct', 'TAR >180 % ↓', -1),
     ('tar250_pct', 'TAR >250 % ↓', -1), ('sd_mg_dl', '血糖 SD mg/dL ↓', -1),
     ('cv_pct', 'CV % ↓', -1), ('lbgi', 'LBGI ↓', -1), ('hbgi', 'HBGI ↓', -1),
-    ('risk', '总风险 LBGI+HBGI ↓', -1),
 ]
 EXTRA = [('bg', 'mean_mg_dl', 'Mean BG mg/dL'),
          ('dose', 'basal_u_per_observed_day', '基础输注 U/观测日'),

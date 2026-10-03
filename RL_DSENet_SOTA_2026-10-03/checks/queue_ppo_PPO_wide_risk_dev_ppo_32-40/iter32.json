@@ -1,0 +1,42 @@
+{
+  "iteration": 32,
+  "name": "dev_ppo32_r1",
+  "command": [
+    "/root/autodl-tmp/diabetes-agent/.venv/bin/python",
+    "-u",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+    "--kind",
+    "ppo",
+    "--name",
+    "dev_ppo32_r1",
+    "--split",
+    "development",
+    "--config",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/PPO_wide_risk/config.json",
+    "--checkpoint",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/PPO_wide_risk/policy_iter32.pt",
+    "--batch-size",
+    "8"
+  ],
+  "started_at": "2026-10-03T15:13:03.898778+00:00",
+  "checkpoint_binding": {
+    "iteration": 32,
+    "checkpoint": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/PPO_wide_risk/policy_iter32.pt",
+    "checkpoint_sha256": "78b08b51567c1f1de1ef6025e166cd8cd343df493c52ad189460b68fe5d71a79",
+    "history_prefix_sha256": "8b4598914548895196b980a22369109294a8df624712dd2bc8f6498b7aa13f0f",
+    "history_prefix_bytes": 26575
+  },
+  "pid": 13260,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T15:29:03.903077+00:00",
+  "log_sha256": "7b0e2233ded812eba4d90c4c8bff48439052e754b16877105d623f33d628f83f",
+  "manifest_json_sha256": "6be5a42a4c2558119f925fed836d57bfd07930d5316390058e472e01ee83cc0c",
+  "summary_json_sha256": "2a1391bc3ceac21f4a48214bfbc1efc35169e55ca0260ec28f86bdb6f7091a15",
+  "failure_json_sha256": null,
+  "manifest_sha256": "6be5a42a4c2558119f925fed836d57bfd07930d5316390058e472e01ee83cc0c",
+  "summary_sha256": "2a1391bc3ceac21f4a48214bfbc1efc35169e55ca0260ec28f86bdb6f7091a15",
+  "status": "completed",
+  "count": 60,
+  "failed_episode_count": 0,
+  "native_or_environment_episode_failures_do_not_stop_queue": true
+}

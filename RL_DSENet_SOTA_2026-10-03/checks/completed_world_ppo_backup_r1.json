@@ -1,0 +1,4400 @@
+{
+  "status": "archived_completed_training",
+  "archive": "RL_DSENet_SOTA_2026-10-03/archives/completed_world_ppo_run_r1.tar.gz",
+  "archive_sha256": "62c7e95101c84c8d131ba56f1f7429a84fcb646b9e2c3504564147fb82dd9498",
+  "archive_bytes": 58141749,
+  "files": [
+    {
+      "path": "results/PPO_world_risk_r1/completion.json",
+      "bytes": 455,
+      "sha256": "b91389b6f41d3d3d66ed4bbb63fa34466e41b66321d654f5a5ab4d53e8c9d9b6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/config.json",
+      "bytes": 1596,
+      "sha256": "c4cf75f80e31b9fda70e6093e003a36c7529b3d91ce79e4bef52181b42297337"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/history.jsonl",
+      "bytes": 33438,
+      "sha256": "0e4c6597d8ddcab9b1798ec88996371152cdfd03e98f58fabad05a38f4c6f931"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter01.pt",
+      "bytes": 1050895,
+      "sha256": "38394f483a6e9459d0873bb5dc0af021618060f23365ce20b3af9b6f803244ef"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter02.pt",
+      "bytes": 1050895,
+      "sha256": "2e13f4b32148f9aafc6597dad92d3522cc0ea5cea452712e92e983b9bb5a5a22"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter03.pt",
+      "bytes": 1050895,
+      "sha256": "908d84cdb7e2b2a2209c28869d06ce2bbc88fabd87c459aa47bbfc5e14d61ccb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter04.pt",
+      "bytes": 1050895,
+      "sha256": "afc9272964baa45dc745f94536dfdd5e53063a37291192041e531a71c5962a95"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter05.pt",
+      "bytes": 1050895,
+      "sha256": "bee6ac202a58337f15e2685313670f3e33225008a896f8c0698eea2008a9e363"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter06.pt",
+      "bytes": 1050895,
+      "sha256": "a30a850e0baddfa5eb7e1bff258059f280faa2761e38822b26cf55778d1dba40"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter07.pt",
+      "bytes": 1050895,
+      "sha256": "ec517b55fb194297d1456a6c591ed1b98b65ad40e62bc2d654675dc5bf5c3ecf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter08.pt",
+      "bytes": 1050895,
+      "sha256": "806f33bd14dc744bad53fa519978106ae582feb4a5a9fd700d6d1e772516110f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter09.pt",
+      "bytes": 1050895,
+      "sha256": "3ae0c3458f56a178ab2225f17188a7a2ed55a0b1ff8e7ad8c5e2d355b78b7104"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter10.pt",
+      "bytes": 1050895,
+      "sha256": "d148cc28fba06f5175e020b161e6468e7dc730573f3f5e92dabdab3dedcb0a34"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter11.pt",
+      "bytes": 1050895,
+      "sha256": "85c413c7a595310624696d28aef1ae04950e7f8c1e82c13a708e58608b64e8bb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter12.pt",
+      "bytes": 1050895,
+      "sha256": "92bf112f9a227dfc57150fd7492047f189faf28f308cc9f487c6f4a0e6a9423a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter13.pt",
+      "bytes": 1050895,
+      "sha256": "f922746f4d2e1c3fa995841406ae1d5461b121bccaa2fd962c66b7adcf1b1702"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter14.pt",
+      "bytes": 1050895,
+      "sha256": "282bd1ceab31d66c851665f45be627fb3708869b1d92e720d8e2bc82b56dc1c8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter15.pt",
+      "bytes": 1050895,
+      "sha256": "f4825be5192e67a7b4eeaa0c856b5b7b367052ca1301e65f9bf006b51e873925"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter16.pt",
+      "bytes": 1050895,
+      "sha256": "e58cd93f3c3be7e9dd66b720f8ffb8827ac370f70d4cc9d9e5d8bd294d95b107"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter17.pt",
+      "bytes": 1050895,
+      "sha256": "4df3af3a0742268ec3a5d833d44052b6752b331d71ad60b75be6490eae0836a4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter18.pt",
+      "bytes": 1050895,
+      "sha256": "348900a57e9ac0303e899277a6b4659fc785106a4f95e1797aaf7df133e79161"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter19.pt",
+      "bytes": 1050895,
+      "sha256": "91d0dbc2b4b36125a0bcf7fd74fec1875ffe7f705b210eaaea19b9162b4e162a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter20.pt",
+      "bytes": 1050895,
+      "sha256": "31678c6ac4c0b44101e340c93d4ece4dea159dcc33c0d570acbe2f10aa3ce75b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter21.pt",
+      "bytes": 1050895,
+      "sha256": "1eaf42df44e332783b70bad7f209ba8831303c5331119e2fd887692b802108e6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter22.pt",
+      "bytes": 1050895,
+      "sha256": "616f2ca06d2eb823c4f675f86d8d24e28514854f35ddb6ceda4c6c467c4f3fd2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter23.pt",
+      "bytes": 1050895,
+      "sha256": "710c114ae8b3b71ab03d4ae63a105b165fbae7ab4c804af74623ff6bedd9f8d1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter24.pt",
+      "bytes": 1050895,
+      "sha256": "25bd5011b359fe12ef2cfa24829db20deecc7b29b44b4fb0a8b142e977b4af1c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter25.pt",
+      "bytes": 1050895,
+      "sha256": "e7530a44e5317c975fb50917b3c3d0b9d2faaaf0c2697f905694ac9181c402bf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter26.pt",
+      "bytes": 1050895,
+      "sha256": "9f9b97bc30fcaf22024111f9bc9190232a0042cf107218bc0b968f1e1a5cafab"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter27.pt",
+      "bytes": 1050895,
+      "sha256": "e26138d5b4820e1ddbc247d9ae84e1963339c16632263d9a34331dfafe8d737b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter28.pt",
+      "bytes": 1050895,
+      "sha256": "9b5035b68d1ce6369cef4ee7ee9224535d5f34ce95dc323f7ed5b035be40dc2a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter29.pt",
+      "bytes": 1050895,
+      "sha256": "cfb442c388ffd42b5edfba177361ed89b949710db1e5da1cf99254acf6d95a68"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter30.pt",
+      "bytes": 1050895,
+      "sha256": "f5721db157004f5e9c93e9a9fc220f65afc1dd52c45c2f7b511279395ff83448"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter31.pt",
+      "bytes": 1050895,
+      "sha256": "aabd9e9b7cd87945b51ff2408f16f90341c418acf7e7b662e3750380921b7093"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter32.pt",
+      "bytes": 1050895,
+      "sha256": "ab2166e61a4e9ca5aa15eb24f7234f6374da869656ef0f0c96e3c9f45f79d4a2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter33.pt",
+      "bytes": 1050895,
+      "sha256": "1807f6e470f9f51fc71f4aeff62bd56dd6e60fc63ea0823545da8bba605f8bf5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter34.pt",
+      "bytes": 1050895,
+      "sha256": "0747b81be6f06fab0c0f2a9eb45bea7eb6cc5143e523a4aa5b5d87e64ba32c31"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter35.pt",
+      "bytes": 1050895,
+      "sha256": "0e794bf22440b4277d67f7ec17b8b6ce247cc3275df3f1c67323d646a95ac768"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter36.pt",
+      "bytes": 1050895,
+      "sha256": "661ec695c3e9cffeb2c0eceaa94e389bcf320f01f3ec4dac828a7a9e151d4b54"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter37.pt",
+      "bytes": 1050895,
+      "sha256": "22eac18101babcdb3eabe0f2619ba5aea1cbaeaa80c2c18d106da3b728b85d21"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter38.pt",
+      "bytes": 1050895,
+      "sha256": "118f16391b5a672e510a7a47ab960b27bc7ec3e687348396684b0cfff9cdfff2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter39.pt",
+      "bytes": 1050895,
+      "sha256": "7dd2dc0b23836fcd6e86c7f8bd4ab6be2ec1128be4b68004d0f9595ff83d7c70"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/policy_iter40.pt",
+      "bytes": 1050895,
+      "sha256": "294df745dd5951a15b5125e874acd2895bafe4778f2b04eb293c7be0d9672a8e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/progress.json",
+      "bytes": 933,
+      "sha256": "c1d977ce8a9c0704ed79d042e84d77132990129c76645db8735e491bd9a61295"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/provenance.json",
+      "bytes": 300343,
+      "sha256": "3fc61fee96a3f4822ee4d05c5382cd5a3c1f69e2f7d0ed645abc48f92b429b37"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DITR\u521b\u65b0_2026-09-16/control_metrics.py",
+      "bytes": 4155,
+      "sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py",
+      "bytes": 4640,
+      "sha256": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Embed.py",
+      "bytes": 6572,
+      "sha256": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py",
+      "bytes": 3514,
+      "sha256": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/LWSA.py",
+      "bytes": 4770,
+      "sha256": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/LoRE.py",
+      "bytes": 3618,
+      "sha256": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py",
+      "bytes": 15643,
+      "sha256": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py",
+      "bytes": 2136,
+      "sha256": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/RevIN.py",
+      "bytes": 2083,
+      "sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py",
+      "bytes": 6080,
+      "sha256": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/models/DSENet.py",
+      "bytes": 13987,
+      "sha256": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/utils/masking.py",
+      "bytes": 832,
+      "sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/utils/metrics.py",
+      "bytes": 951,
+      "sha256": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py",
+      "bytes": 3743,
+      "sha256": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/dsenet/utils/tools.py",
+      "bytes": 4276,
+      "sha256": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_2026-09-17/forecast_model.py",
+      "bytes": 2169,
+      "sha256": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+      "bytes": 9791,
+      "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/physiologic_features.py",
+      "bytes": 10675,
+      "sha256": "0c0f89a6bbe8f8a8dc6a494f7457ad743d74069ac96f81eb6a8ee6496530b59c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/ppo_wide_worker.py",
+      "bytes": 16257,
+      "sha256": "282e7f58a36f94f6e13b6a84b258c3c3903662f49cedd3346708f012f7ee18eb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/ppo_world_worker.py",
+      "bytes": 10408,
+      "sha256": "c949d01d679baf58a95c231692975164890989861c9e17f891fd197028d0957e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/prepare_windows.py",
+      "bytes": 3960,
+      "sha256": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "bytes": 1420,
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/train_world_policy.py",
+      "bytes": 14209,
+      "sha256": "3da8a35d089c8320ab46be28dd4103e2d0c4e2fb2bff4ea92663bf1e7ff95cf4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/train_world_v2.py",
+      "bytes": 30008,
+      "sha256": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/world_control_worker.py",
+      "bytes": 15627,
+      "sha256": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_SOTA_2026-10-03/world_model_v2.py",
+      "bytes": 10873,
+      "sha256": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_\u516c\u5e73\u4f4e\u7cd6_2026-09-21/brake.py",
+      "bytes": 1450,
+      "sha256": "2b24f526b3426bd6052b71797a52fd14c37892e99a7f432c21014dd258ea2e52"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_\u516c\u5e73\u4f4e\u7cd6_2026-09-21/evaluate.py",
+      "bytes": 12338,
+      "sha256": "d9d6ef89f5877e5660720e8dc4145e40e548a64447eff41c982efd0c5266f69c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL_DSENet_\u516c\u5e73\u4f4e\u7cd6_2026-09-21/ppo_env.py",
+      "bytes": 3447,
+      "sha256": "b3c57f5d0079f1fd782e161ef2978f5a6657bd554636dc6416fe67eee8d46b8b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/observable_history.py",
+      "bytes": 1335,
+      "sha256": "c1b0d1b83071bf76443f69157358571eae144a396ff7d0a8b984e8d66d70f75d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/source/requested_config.json",
+      "bytes": 1133,
+      "sha256": "50fd4e9a547b039aec0a3ef4241e564a3bd31791d6c679d878a5889fd1af9a4c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case00.json",
+      "bytes": 179514,
+      "sha256": "ac84e927845e411fa0ce227776ffd026b52c72c0d2989caaa57186d8c14bc0de"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case01.json",
+      "bytes": 179971,
+      "sha256": "99b389b921df889c95e1a996ffb24b889382a61d534afdf0ee4fe5088927fde2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case02.json",
+      "bytes": 185889,
+      "sha256": "0ea02a3ab4500f46d2a2876df571f56916f1fa734bbbabed0a5ce3c25c859406"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case03.json",
+      "bytes": 186040,
+      "sha256": "a3f291073a1720c68f0dbcf84d33a9b625ef63c1c44fc77258ff8a30cd55463e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case04.json",
+      "bytes": 188413,
+      "sha256": "aa2890f29f5f3975ae8432da2624016157ceec572140ee25973405c5fd9d2e6b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case05.json",
+      "bytes": 188485,
+      "sha256": "8404642db6d27855c403566cb9c869ba9464ef0e583b05c8073f3b5014a733ee"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case06.json",
+      "bytes": 188972,
+      "sha256": "25dcb6562e1435fe8d989d26fed6fcc33ed989c8f40c56c601653066f10ec622"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case07.json",
+      "bytes": 188628,
+      "sha256": "e1848848ed3080d70a51ea400373c3f430abca4458c787852a2091916bc3a246"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case08.json",
+      "bytes": 178289,
+      "sha256": "39a58a4a62fa471b546f855febb57ff4be464b79fc4cd88bb58c8cbfc1fc1935"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case09.json",
+      "bytes": 178851,
+      "sha256": "d5867f71d38e9a65fb0a89d98bfbfe283221795d6069db210465ef804cb141ce"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case10.json",
+      "bytes": 186838,
+      "sha256": "05ad37d1510f93b8d82cc1f387d772ac7472e2460cbc914a6a489b4e969d83bd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case11.json",
+      "bytes": 187284,
+      "sha256": "1c1ff53af0958eb1a8955173d862fa02a7df470a8787e93ad6af9c3fc7e43f36"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case12.json",
+      "bytes": 188064,
+      "sha256": "99da6deaa389ee944a8af041bef3e1216fec787b82903a5faf908c1513a1b34a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case13.json",
+      "bytes": 187703,
+      "sha256": "a2c1ac41ad41dd04d39a17e6a9e127abeff587d26ec7b267efc279fcebe58d60"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case14.json",
+      "bytes": 181427,
+      "sha256": "931fc45de22f0fc5f7bd6ba3cd28de5eccf3898b35df3c03584a35f956563283"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case15.json",
+      "bytes": 181361,
+      "sha256": "2675ebfa89bfb6c73a7de513d76d29681cba6ccd8f7d70ed3d02cd67ff4a9b81"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case16.json",
+      "bytes": 179340,
+      "sha256": "0fbd57f9f14a71a170c562c27903142acdef760ed629c944594aefce7d518060"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case17.json",
+      "bytes": 180292,
+      "sha256": "5fa0480544754b7d7e969a1bbca1cd5d0dd1595a11b3cd723791132ff165e1d2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case18.json",
+      "bytes": 180044,
+      "sha256": "1f59a64bc759e05882e6a057a3d0fb964dcc2568f3c913f22bd5052e866071de"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter01_case19.json",
+      "bytes": 179859,
+      "sha256": "fe21c913797ebc9e9aa3f3e2b3bae7cb920459b4991e13a7fc702536c41e4b81"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case00.json",
+      "bytes": 180364,
+      "sha256": "9e3f213f4496bb4a7e6889a2f40bf46b8935783e189f895b7bd908fc259747dc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case01.json",
+      "bytes": 179960,
+      "sha256": "cec728ed921a80c820fd62293dfbecf113cfdd289a644b3d7eb0cac6de4f386f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case02.json",
+      "bytes": 185723,
+      "sha256": "435ca69f17f8c51ffbf12c8ddcd743cf469a9f9dd10dc95b5c0398495f48c466"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case03.json",
+      "bytes": 185565,
+      "sha256": "d8cb1de875baf5d8a1e5921e9e62d0726ceff50e3265d02a616575afba95f9d9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case04.json",
+      "bytes": 188567,
+      "sha256": "8d21deb617c2f6d7238aabb3e6e31f7d0442497665d6add4b8907e2506e3478f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case05.json",
+      "bytes": 188294,
+      "sha256": "361c579d5c27014cb1f715b33269da2910d1061c6afcd7daff2cb720b32cd472"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case06.json",
+      "bytes": 188600,
+      "sha256": "7b369ffa2466f4686125ea0280e03d905c0f39bc672743d07f4446a0ff69128a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case07.json",
+      "bytes": 188925,
+      "sha256": "12e85d2a5ff514c74cac57421b8abc58b0bf0ac72b8a9067157b2e7929de17c9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case08.json",
+      "bytes": 178855,
+      "sha256": "46dc85104e45d41e33feb5b6ce4e2a9aa3c7af6afcc3144d521f5ec325f36569"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case09.json",
+      "bytes": 179464,
+      "sha256": "05bed83d652230966c055d380602c76dc06fb2a21c193e5cd1192dc3cee0a441"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case10.json",
+      "bytes": 186814,
+      "sha256": "d4fd3a6b59fc34f7543eba76a4a27a7eea8696fb589508586d12ce83c0b35273"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case11.json",
+      "bytes": 186600,
+      "sha256": "cbf087540f712bfbc6f57636af095452d576e9a221211a5b969ce8da3ee356f1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case12.json",
+      "bytes": 187781,
+      "sha256": "2154ab26b7ccde4851f3846985c6d18afdecd1ec396cbb9f151fa2e8e1867e9c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case13.json",
+      "bytes": 188124,
+      "sha256": "af951b7a114b3f086de5328be78e1faebe54fbaecd1012667f03c973450cc7a8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case14.json",
+      "bytes": 182358,
+      "sha256": "d52ca6cb9fde001063fa19539e99115429c216f65d8006dd4714cb8b53b46880"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case15.json",
+      "bytes": 182394,
+      "sha256": "482cf531198b341c2522afefbb0dba7ecde01c0b89e6bff22671ecf3cfe218a3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case16.json",
+      "bytes": 180746,
+      "sha256": "61cd76c09e4b547ed7ce795cce52195d7f18e79e544aaf42bf28eec61a36bed9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case17.json",
+      "bytes": 180673,
+      "sha256": "2b59ec50059e92242c80718e845aa6a50b633d8cbcaf5a8d79b0345cc46ac934"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case18.json",
+      "bytes": 179920,
+      "sha256": "1873fe1dbc9cdf5ad724610546fe37e536bd3e8a8281a670bf83edae2f3e9c90"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter02_case19.json",
+      "bytes": 179967,
+      "sha256": "17fa164d21767ff24b1d87cd41a15b0ee0ce2afed7f9294e7f8b230989935268"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case00.json",
+      "bytes": 180080,
+      "sha256": "5a204628630fcca9ba18b225cf163585b3663bf0a7e637a0cd287e5a56c84ff7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case01.json",
+      "bytes": 180023,
+      "sha256": "53388227b800b978a5f25d0c7e81b14329090cbcbf1f44bc0014d5c0072b9366"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case02.json",
+      "bytes": 185545,
+      "sha256": "729e23b8f7763fbf43e700afc6bc562d637b83e3c01870cfea30e78613e6477d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case03.json",
+      "bytes": 185468,
+      "sha256": "bd0b25f62f61695560f5d331a1b78e936db48071aebb2916269903c397d91a71"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case04.json",
+      "bytes": 188461,
+      "sha256": "6fbf41c0fa5630459e681f5378e8025fb32844ce905f28a1b85e7926ef4862af"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case05.json",
+      "bytes": 188357,
+      "sha256": "90fd069114200a633ac19ebfcd488ce3df02182c0077438e1df7b54c84bd4412"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case06.json",
+      "bytes": 188933,
+      "sha256": "41c129b47c0ab9299e5036a462a868217e21db7d33abc4c5126639386c6c2b1c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case07.json",
+      "bytes": 188958,
+      "sha256": "7ebbd158e08dd4b7d2c2589d70e661d669beb74b9f9168245c825cd63d92e8af"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case08.json",
+      "bytes": 178974,
+      "sha256": "c8f6483e3f78e3cb061cb1cfa39bea3e46b598fa5b6e48bc85b27806093d37d3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case09.json",
+      "bytes": 179431,
+      "sha256": "9f34848c2563018f5e648e78dd89cc6921ed008d6d2b54c8f50f4c053ae8cedf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case10.json",
+      "bytes": 186439,
+      "sha256": "4189b85b4b4c404c9cabe309560bc090e2c6ce1ef050836d9cc4f7c706adc533"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case11.json",
+      "bytes": 186389,
+      "sha256": "9bdadb37fcf7d5a8542b03ee1179f111ac7e9bf76c8cebb3ef064104b41ec808"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case12.json",
+      "bytes": 188014,
+      "sha256": "52c99352323b8f96de7749d586972867622f134544b26399c8cff1019e1a5482"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case13.json",
+      "bytes": 187875,
+      "sha256": "29be486344cc177e3b01682e5ba8104c768718f073a99be5b4d4cd21892e3554"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case14.json",
+      "bytes": 182256,
+      "sha256": "f27f2f11b6f2485cb2f5447d25e650404ada11e9e4390ec82b7c6111f7ad5054"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case15.json",
+      "bytes": 182813,
+      "sha256": "f770d2bef62bec664c8ae73e854f4fe7394b3c044142bb13aac0223a83967b97"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case16.json",
+      "bytes": 180486,
+      "sha256": "0e13fcffb6e4da151ff15a8a987f4db97e12afbc2ee4cea1207a2c2920647094"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case17.json",
+      "bytes": 180247,
+      "sha256": "7764078c79ed8d9e98d74fea87b1cf1a0ebe6811d458111b500424461420f9be"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case18.json",
+      "bytes": 180229,
+      "sha256": "5ef81fe2546bcb7dec987195f15074515cb2d64f3507a742b80fc77faf2b4ad4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter03_case19.json",
+      "bytes": 180197,
+      "sha256": "bcd0a444c05bcdf4b630f29b52b09c4b42dfdbb0c8372902b4688c21655e9881"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case00.json",
+      "bytes": 180381,
+      "sha256": "c51b9328ff0a015f32246c45f1ab53178cf88320b07e88720c539eddfd366ffd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case01.json",
+      "bytes": 180948,
+      "sha256": "0b8fd7c7d779fe7abe2c2761adc98fd9798d270bb5f1643329c7840fd9850cca"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case02.json",
+      "bytes": 185514,
+      "sha256": "9003bd1387072839712347485b64dbf452b565345e3b6ae26d4f3b250ffa77df"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case03.json",
+      "bytes": 185607,
+      "sha256": "e70ac7e9670835241690cf87a7f93a4f060b497c7609da75512668bf4ffed494"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case04.json",
+      "bytes": 188284,
+      "sha256": "161337115659d4d7c296736c9bd911c33b564c42ab8c43565b7f4c5536a9cc55"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case05.json",
+      "bytes": 188239,
+      "sha256": "6307cc3aee8b344e1a50d0ff8256eec64af8a4509cb1bb712868a234fe5b1ddd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case06.json",
+      "bytes": 188929,
+      "sha256": "882e4d73543649b601fc56225c8ee3a0c814fcd2b25e755f8c9c7b656f690ff5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case07.json",
+      "bytes": 188648,
+      "sha256": "9cceb7b008bd22bc27f5d6973d0c3a9939aeff7c0f715d6430ff87a95e9cc857"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case08.json",
+      "bytes": 178795,
+      "sha256": "19b5a408d9d67a53a9be9d5ade8ffd6c89cb30b75003c8d1a37d9fc225880bfc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case09.json",
+      "bytes": 179142,
+      "sha256": "ec214ec733fdcdd8b2258dcf7d7607bef3eb18c2dfa27db86084155e5912a823"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case10.json",
+      "bytes": 186474,
+      "sha256": "a2a6b9d03d442c01f6eda11a3d1313bbc8ad6239dd485130683b9ff87572c565"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case11.json",
+      "bytes": 186288,
+      "sha256": "8c05574f38c0c04c791398e96499094b82b5f598ca182590100cabb0be0bc9d9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case12.json",
+      "bytes": 187871,
+      "sha256": "b804fe14ab3bf7c281200cfc441df72b8e133c2bce5e56ebdf7e6a7a18f29587"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case13.json",
+      "bytes": 187516,
+      "sha256": "5a55ef5c6db3add9d567f2e6b9e9ac237414ec564d9a4b07f7a13b3caf6073ca"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case14.json",
+      "bytes": 183399,
+      "sha256": "0ecb6478110da2a87cb9c1d11c4038009f715707673ccff495390319cca8fc7e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case15.json",
+      "bytes": 182979,
+      "sha256": "597bca4236e89c9c5642f879e1c46a6ede4e746933d05711c657a68638f46164"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case16.json",
+      "bytes": 180436,
+      "sha256": "f1607a4a9ef8cdf03c9b59aa993896547077c666c622419860d9ddf256ccbd00"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case17.json",
+      "bytes": 180756,
+      "sha256": "69b35c4a831dc1886e488b833f4ff8a7aa7f23c1fa7dee4930bc2c29100432f0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case18.json",
+      "bytes": 180464,
+      "sha256": "0ac9a132d4e243799f8a9984f9054850e3660956e355f3b2559376f7fdf902f2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter04_case19.json",
+      "bytes": 180586,
+      "sha256": "6196b3921ecf3e048d633cc334a98dd2c72bbcefbdcad1040ad39b5d78c136f7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case00.json",
+      "bytes": 180429,
+      "sha256": "041d7e4df08dc20758daebdd3549b4538d67bc4750f91e398d7ff5ee577acce5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case01.json",
+      "bytes": 180010,
+      "sha256": "dcec95e549d0fa99a4f5fe4d86be96b43959a38fc39f65ef3170e3bff61387b8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case02.json",
+      "bytes": 185619,
+      "sha256": "b38908ad2e86038ea56f2d54169fbfe9ca81808c99eace2ea7475b5d2087a989"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case03.json",
+      "bytes": 184980,
+      "sha256": "2fea60a893eb387de881fe0b524701b9af4a8feb7cef9dd80104a3467a8883fd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case04.json",
+      "bytes": 188188,
+      "sha256": "3dcd6c8481f24d08e2135719145d484d2ab92d17ac6a06b410c12e836abd50c6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case05.json",
+      "bytes": 188044,
+      "sha256": "71a9293757f52f151e7bc0421aac7271cf08d16237ec82d10769f5c6c325b927"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case06.json",
+      "bytes": 188550,
+      "sha256": "21452ee9987fdb05503e4c4b4edfd1d2f5df3d0b3390bc208740db0437a63ac1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case07.json",
+      "bytes": 188801,
+      "sha256": "e0a6fa4457c1db2c93249827572ce314a7dcc2cf78153fca55ae2e4b7b58db9e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case08.json",
+      "bytes": 179041,
+      "sha256": "35f2a79a59bdcc5c3f9296b50f4492d7c0ba7eb7bf9af447ad125b159e6f845f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case09.json",
+      "bytes": 179025,
+      "sha256": "5827276485580cf2e3d74c85c615633557f4d611685e2e5e0cbe4367530d4b33"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case10.json",
+      "bytes": 186312,
+      "sha256": "df83211742daac5169b98c99d78f23ae2fa0f79bd95cae36261cc25c379402b9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case11.json",
+      "bytes": 186000,
+      "sha256": "e6cc07cf981ed02ca6462de391fcb55c447659d3f1630c13240f4014d055a5fd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case12.json",
+      "bytes": 187697,
+      "sha256": "ed4d94d2753b2265018ee025bf078bdfbc02153646769767f9a42078d9427a74"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case13.json",
+      "bytes": 187835,
+      "sha256": "9d03c71ed173955612056bde38b7492b7f928584201d783c0048afddf70880ed"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case14.json",
+      "bytes": 182790,
+      "sha256": "ec9d19ee7499d5d766b7d1098b873b426d9035c839b04a9f33e02c298ec28598"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case15.json",
+      "bytes": 182995,
+      "sha256": "ad583398e6c2c242017907d006f46731470e53295229b311da2b6e6a020ed220"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case16.json",
+      "bytes": 181110,
+      "sha256": "6faa99d54d4ddacc0f8656f1f4b3eae5310999c326db4bd664a4cb004f08502b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case17.json",
+      "bytes": 180121,
+      "sha256": "a79481c579a64cd44636e0ee8ee82dbbbe3c95ee49c97d19e6bd412f654bdf06"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case18.json",
+      "bytes": 180051,
+      "sha256": "ee6ad7779cc2ed36436c065b697cd2a09ac36a3f3c3199e028a713bf079d788e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter05_case19.json",
+      "bytes": 180320,
+      "sha256": "b1a0716e6425f28db48cd9822710171c67a14525da1faa53ad40b45abd599fca"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case00.json",
+      "bytes": 179810,
+      "sha256": "0c2f92db8f0f74a93c5653ce4d5efa223576047e74ecf22ee144a6fafbb41307"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case01.json",
+      "bytes": 179738,
+      "sha256": "83eb07d9f94c9931a2565d43ede615878d2bf8d10d026e5dfb14bda25388079b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case02.json",
+      "bytes": 185066,
+      "sha256": "409161bc20f8b223bd51663d6e014faefa365fa0c94df38e2f6772e1d5fd43dc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case03.json",
+      "bytes": 184887,
+      "sha256": "e50ce81d250165654edd2a3d520a3a20d5d56ac43c0869b758252d2784dc1f57"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case04.json",
+      "bytes": 188277,
+      "sha256": "dfad794d37751597afebca9d08b7089fa5b375d7dfd37bd6adb76a33fe88c9e1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case05.json",
+      "bytes": 187976,
+      "sha256": "3f037774499de0b6f4a8583b390849488e3974b6099c695cd1d4103eaa359e5a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case06.json",
+      "bytes": 188877,
+      "sha256": "4ef49b701763f5cda7fd7a00a8f5f32b2559151a2dc2d244c8f485591cda28ce"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case07.json",
+      "bytes": 189017,
+      "sha256": "2738a9b497a076c024e1b50d218e575912b1b91c3c64df224af3f5bccff3516a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case08.json",
+      "bytes": 179155,
+      "sha256": "061a73168d9cf6a9a07aecb3baa04024fd9b41f6c53162a64e6096341c2e32ec"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case09.json",
+      "bytes": 178767,
+      "sha256": "d4cadd3984dc7a5d7ae429a525fe7411c119fdbc5372c6fffef66058b4c60db6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case10.json",
+      "bytes": 186122,
+      "sha256": "87d7d7beda7d19b6a6b051589a80e04b7c3ffe4e8cac85c16250afb9854caac4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case11.json",
+      "bytes": 186872,
+      "sha256": "1b6257141ac4d143be0bb23b5db04e71713d67dce29ca37731de7eecf478ed9c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case12.json",
+      "bytes": 187751,
+      "sha256": "182974b1652a3917443f49f8dc9fb7c45f494f3d2c8eefae13add6712ac0c40b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case13.json",
+      "bytes": 187682,
+      "sha256": "0e2b2672e2b89c999f4bbfd0f320f81cbabac91e3a889160412fdac83ce37234"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case14.json",
+      "bytes": 182638,
+      "sha256": "ecb3efaffdc30aaca9de7a73e1c68114e9c8df1c1d99d524e6f786997889aa31"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case15.json",
+      "bytes": 182955,
+      "sha256": "57349c677fa304311b4d18b1c23238acd3d0e708fc6b1fcdf8f5257d1fb0f02e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case16.json",
+      "bytes": 181093,
+      "sha256": "09b8cf823c8f748c64dad3c8d38775e8c63c9b10abd4bb8d98b3aa81ed7d29fc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case17.json",
+      "bytes": 180468,
+      "sha256": "c25d4af31e71886150e3079d0d3fd0dcba82e6a06e07bbfab37a3127976bdf87"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case18.json",
+      "bytes": 179918,
+      "sha256": "53c78633f1d3b42438276cf4aafea63e1f644baca5cd32656c9592dd926d2659"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter06_case19.json",
+      "bytes": 179751,
+      "sha256": "6d93d3dceb01db789c8d16ea0451cf41ba84c2b22ba73cbbd03a7dd359109f47"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case00.json",
+      "bytes": 179707,
+      "sha256": "ae6abbfc259e01492916552f589eb836f99bb6f117f8cdfd6c7605c7667f7b90"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case01.json",
+      "bytes": 180174,
+      "sha256": "995fec7a843303ed32fab2dd591c98957cda3aa72440d0c56a41392d3a8e6a0a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case02.json",
+      "bytes": 185049,
+      "sha256": "b658b92980cca84239a58d382ae97ca985d6c6be33fce0481fdabc604778154f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case03.json",
+      "bytes": 185042,
+      "sha256": "2b22b4bb05bccba28793d5e58d16145d0f0eb80a094d2ae128a2c3f182269d75"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case04.json",
+      "bytes": 187814,
+      "sha256": "87ad979abb41a54a28ac0081b7a1fd6788c0c1a6ebac22b41a22bcdb53a231ea"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case05.json",
+      "bytes": 188066,
+      "sha256": "a50cad4eea2156cfcf1c21433fb504bdb9f6064d3c377b6d6074903e25a08334"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case06.json",
+      "bytes": 188933,
+      "sha256": "728ed514235bc527ccf2335b9c112823eaeba1dbab042ca66238b153058d911e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case07.json",
+      "bytes": 188469,
+      "sha256": "1007a3377acfce5ddc8fd73d6fc1e0a0fbde2e004e03d0c08ad2d383cf7f51bf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case08.json",
+      "bytes": 178363,
+      "sha256": "0dccd1cd190d2312a9d8c48eedb3bc72e26a3284ed6eb37906d2d5687847db5a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case09.json",
+      "bytes": 179054,
+      "sha256": "d201011e6d3cefc5991ee5e50364f9c660191fcfbe4218fa96c4b54420b4dc70"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case10.json",
+      "bytes": 186356,
+      "sha256": "8aaf2071dcd8edc8aa391574f48dcc9f9301ca89e4c0eb1aa8de0bfe943f2404"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case11.json",
+      "bytes": 186315,
+      "sha256": "cfb0e8e26d30577a89d6b3a6f9ac860e517b28981591519a6f66c94237b37747"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case12.json",
+      "bytes": 187476,
+      "sha256": "0b9cd12e51dc069256ea0ff80710228c32914cd566808c4ecfcd661977abc7f3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case13.json",
+      "bytes": 187519,
+      "sha256": "afc12cdc6ee0078ba950b41d1bafc32c98fabab6127bfef010cf1ab795d66ed2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case14.json",
+      "bytes": 182405,
+      "sha256": "53d74ef1cc1defcedd21bcb9f7be8c663803625d7bd3f32ec0457eded7aa39ae"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case15.json",
+      "bytes": 182964,
+      "sha256": "7606d89c7f21f1543f46820f8a6552212389d68c876354079412957907f42143"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case16.json",
+      "bytes": 180337,
+      "sha256": "f98943564cdcfee0a2d0be2f00a72b5cee1ddda8845bf8e8810521a3505c4b5e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case17.json",
+      "bytes": 181488,
+      "sha256": "253969edd0f33ef5f547d1e02e0796a23fa08d080e073668f505aaabaff0527e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case18.json",
+      "bytes": 179765,
+      "sha256": "0ad8a283cba98386f1d618388fa9d9a2aea9a56d869875ab0614f92d1af5ec9f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter07_case19.json",
+      "bytes": 179514,
+      "sha256": "fcb36f8db47ac781fd31b9930322a4cbe704b3edd7434fbd9289547c696365a5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case00.json",
+      "bytes": 179679,
+      "sha256": "7af84b1f1342138ee8c56ee3295a78469c4865024bdf00e9ee0556ea9511b48c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case01.json",
+      "bytes": 179575,
+      "sha256": "2d7c9a8b64a0c4cd603ef39e65916c412c81330b99e67d4193e4e7db3c653a7d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case02.json",
+      "bytes": 185256,
+      "sha256": "912e5db6a0342dff91d69102f4b523c8850e6a5b8f294872f484420d61dc0eb2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case03.json",
+      "bytes": 184715,
+      "sha256": "5c7a2c341930b9eb229926e9b26eb74d17f39d6aa79320b75500b9d4ce0a2e21"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case04.json",
+      "bytes": 187841,
+      "sha256": "d01eee4b9f3d2ffa636227b095c1ceaa957420a47786c2ed77e294637f4c79e7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case05.json",
+      "bytes": 187798,
+      "sha256": "05b7b1bc28ac4775ac276b0d59bf1d0b02f4067260cf91bd21072272a9013f0f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case06.json",
+      "bytes": 188580,
+      "sha256": "e2350a4b333ef9f446fb8aef6b68ebe5c8ea3ced69aa0a78d22b2b919a83f6cc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case07.json",
+      "bytes": 188862,
+      "sha256": "669847ccba81da063f111ce308cada8d4ff3ad10f1fe87826703573cee0d3518"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case08.json",
+      "bytes": 178768,
+      "sha256": "2a85f9982b5839f5f9869cf8e86204e1985699c7d6e0efd4ec2013f582a28aac"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case09.json",
+      "bytes": 178466,
+      "sha256": "874feacfc0ba6e783e28c88371d27e43d8e2f5af342abf1e27485447009c3fb0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case10.json",
+      "bytes": 186379,
+      "sha256": "2318dee946ab9f1440bcc07995c05c9b45ca651f38b239e4bb17812f81ded2b7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case11.json",
+      "bytes": 186643,
+      "sha256": "527d7328767621391aa223766db118a51bec9976a64d03f71f64bc09a41cb6a0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case12.json",
+      "bytes": 187669,
+      "sha256": "23f42686b290e6b08b826f0901386d15871143903a667dae76377c7d1022649f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case13.json",
+      "bytes": 187405,
+      "sha256": "aae15c67ea58b22238cbd1bcf9a5b5643df75aa915d47cede88214f8f22a0923"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case14.json",
+      "bytes": 182540,
+      "sha256": "198af107cc3153e9c5f564a47e00cbf2873f74125fd99d341a780d6f068e0563"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case15.json",
+      "bytes": 183014,
+      "sha256": "1db759f0bd542466cf07691394164ada2a9bf8f0a55293ff8ed281428987de94"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case16.json",
+      "bytes": 181420,
+      "sha256": "90e82a7d885e3bf8c983a45432724cf7364bcb40a80aacb10715e48a0943f477"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case17.json",
+      "bytes": 180980,
+      "sha256": "492daf7bee0a8b51e555d31f3367418bb169fe9d703203822ad8957df55087d8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case18.json",
+      "bytes": 179672,
+      "sha256": "91a61c7a57f77838bd707300dcc5f0861c78857a553cef7f3e7122c5d026eb17"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter08_case19.json",
+      "bytes": 179491,
+      "sha256": "635b8b9df90666f11f601fd4604c978c3f0633bc58c1c33565604cbee4f44d60"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case00.json",
+      "bytes": 179649,
+      "sha256": "1fc6a61dfc8534addd50e719d83c809bc05cc37741a46beb5ab4ae5cd049ee3a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case01.json",
+      "bytes": 179276,
+      "sha256": "45bd460ccbdbe6e8c444d62dd94d45390471fdbc4f1d0c0722a0c37f747d913e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case02.json",
+      "bytes": 184751,
+      "sha256": "470b9d5a1f08cb20c8e0a5fd6fa5d08785bd3379174c1253e4bd7158a113a09f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case03.json",
+      "bytes": 184724,
+      "sha256": "d323d0bd9ff80f6e1c171ed16f9a122a5f6f06ca6b0abc35b78adb29a33299fb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case04.json",
+      "bytes": 187489,
+      "sha256": "01e5bfa044d38f54bfba8e688ea4dbed153627e9f80fda61b5abe44bd9823e2a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case05.json",
+      "bytes": 187812,
+      "sha256": "a0024901c7e4e7500fb1b878b2a8193bffac0dc769dd3ed4b57136d03c0d5fb7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case06.json",
+      "bytes": 188674,
+      "sha256": "718cda2ca9378fc60c63dc0bcef9f664dd5201836c7de94c9c3da67702f9d0d3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case07.json",
+      "bytes": 188766,
+      "sha256": "18c0c898b57a7599b50ca705575c78088d7fa96bda5cead3e72c9797e431f9b2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case08.json",
+      "bytes": 178762,
+      "sha256": "aa2c14fb56afff3e85c8ea562d1cce5c97c51ff6d2a1608a1e5161282f2d0299"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case09.json",
+      "bytes": 178646,
+      "sha256": "11df0fac92b986bcb1c33c9f0e8eea8c028a4a717d42678a96b85d847033055e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case10.json",
+      "bytes": 186093,
+      "sha256": "f71d472f6e752423801b7da62e205e3419f72595d0e0c1afd68d99a71349422f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case11.json",
+      "bytes": 186357,
+      "sha256": "71f30d3cd30cd1a8d4d7d0a545dcd05ac61bb43b0b3bbc4892f4b6925f55fdbc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case12.json",
+      "bytes": 187445,
+      "sha256": "989309404ec8c750a14bbb75c1ae033ab43ee3867a6275a22129f66ee289aa43"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case13.json",
+      "bytes": 187390,
+      "sha256": "0e9bbb8728bac5a8daf507057c2f925067a24b011441b886807a7fadb4a8819a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case14.json",
+      "bytes": 183070,
+      "sha256": "2eef024cd8d0aa9dfdfcd014df2b65317f1a1975ea7db11ae7110921eb9bad45"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case15.json",
+      "bytes": 182965,
+      "sha256": "0cc4bc40b7ec412973d6b34c6518d173ea0810488dd4cd76f37e0aa80a93de28"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case16.json",
+      "bytes": 181339,
+      "sha256": "0695fdd82d63590159d07da164f8285587affa6d1200bd67de6430bb90c6a681"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case17.json",
+      "bytes": 180970,
+      "sha256": "8f272cbbca70ab2fbce0ec456f9b0a2c93d79be6b1a19eec90f043e54e4124aa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case18.json",
+      "bytes": 179589,
+      "sha256": "7b6f4d24feb5be015c3010ce91157bf28a3795799d3f30ef8a8b38322c326bc8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter09_case19.json",
+      "bytes": 179339,
+      "sha256": "8d770291a1c26d4fcfdf7e2afd22efd222ab8f49c65e5910bda8489f01f53f36"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case00.json",
+      "bytes": 180129,
+      "sha256": "c3925b0541e8d076bc69e6e0130e666d2d64f06486bcf9971dca0ba81c3e9e32"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case01.json",
+      "bytes": 179926,
+      "sha256": "fb67fde561232a7b473649e6a0f8aee661f79a2d463d9397950672d2eb25f2fa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case02.json",
+      "bytes": 183926,
+      "sha256": "60aef932dde7cc7ace24fd7d899361cfc707f3264ed137e10d7b77cc08e6b180"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case03.json",
+      "bytes": 184460,
+      "sha256": "34e9b28c92e75ced1b53700534112ea332c13804156d5fe4fd26ddd08da264a7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case04.json",
+      "bytes": 187703,
+      "sha256": "5299e1a18c101052be8b98c4108ded167eee93dd57e3ea2758e2e121238a25dc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case05.json",
+      "bytes": 187429,
+      "sha256": "b44ef1b189249a85b99e2de1bcee343322fb19da59998485c9c5cd25f0de3317"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case06.json",
+      "bytes": 188933,
+      "sha256": "959d7c6e6e8b3ab30759505adca9159b8d701b3cfd3d6220791a31ea5807d287"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case07.json",
+      "bytes": 188795,
+      "sha256": "39e709d5611da8bd94f5e77ca4afa0f653dc78dda1d7b1589eba8befa9e7d15a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case08.json",
+      "bytes": 178720,
+      "sha256": "1ccdc3cfdd93bfede5e9fb76fe5596baec4bda2d4df6790e33714e10fe505205"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case09.json",
+      "bytes": 179142,
+      "sha256": "8d13f745d2d83b1bcc57cc37d7de5f47b8466a64976e0bebb757f00f590ec6d0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case10.json",
+      "bytes": 186077,
+      "sha256": "d649381ff46ad7f0f7c80ef3df6d3880f00a1288d122c161d6760e58e98bad2a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case11.json",
+      "bytes": 186097,
+      "sha256": "3b45ed547d784de66c1411f88a1788e11a9075a08f61adcea4c4350d1888ce19"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case12.json",
+      "bytes": 187712,
+      "sha256": "489bb66cdf88adbf75ae833d654a2076e51a4dfd89b476aad582b704580f1454"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case13.json",
+      "bytes": 187588,
+      "sha256": "e52d15811f14c288c975b43516c4cb546f29096d03dc9985a1df9b1050d40659"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case14.json",
+      "bytes": 183324,
+      "sha256": "bdd31236d1000ccdbecf4bd746cce14d982cf05c6ddb2b095d313460947e2570"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case15.json",
+      "bytes": 183859,
+      "sha256": "f78188175c0467a2f60bb83b21f2a5b22e8da524066658e25b8ba517b8ad5489"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case16.json",
+      "bytes": 181826,
+      "sha256": "245ccc3d27aaf25360b2f33a8f8de07288177c91922d0ec8f2d6f2d34d774cc0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case17.json",
+      "bytes": 182133,
+      "sha256": "3a1af1ba502080bb0c49b3b22ecb39086427160c080ba36e71a7ad0449ca5707"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case18.json",
+      "bytes": 179787,
+      "sha256": "2238458b75bbbc35e4d65cbd6f32aaaaf2b08b989a7304007b1cb4c3c17eeb89"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter10_case19.json",
+      "bytes": 179678,
+      "sha256": "c69fa6768e78b9cd6a7f45b04a323d6da3eddffb58f6215d0f9b2fd444005bb8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case00.json",
+      "bytes": 180449,
+      "sha256": "16e19d44d40ecd69ebda0cf33c8baa11422de5262bb4972f9b863b6a2445cbba"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case01.json",
+      "bytes": 179788,
+      "sha256": "4336f63162226714d23f55aea62669448b2e184255674a7630777aea6ad3c51e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case02.json",
+      "bytes": 184013,
+      "sha256": "b1b54ee9a5c3738a48e05d0b5c02b8dc1fe5c2657d95b9c85251dc4cceaff996"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case03.json",
+      "bytes": 184276,
+      "sha256": "d14d9933e880af1b06796f61d2b692b433e1727e1ae218c872ba0520206d2115"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case04.json",
+      "bytes": 187764,
+      "sha256": "0c673aadf138da636b7b96a0174efb02bc8733e338704830d176117999ed2d05"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case05.json",
+      "bytes": 187553,
+      "sha256": "fc6a2ba0838a54ec98992f8f5a7eb81e41c06c9b40a2de05390299e75e86de08"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case06.json",
+      "bytes": 188130,
+      "sha256": "ef2ba173a49811b01234c1850673b76b9ee9569ed12bd5e9646a76eb6b75f794"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case07.json",
+      "bytes": 188699,
+      "sha256": "e40ba516f3f3c6007ee3c9831697cb7c32eef40dab78b30cfe85dd6acd6dec87"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case08.json",
+      "bytes": 178893,
+      "sha256": "e39621ef5304cb897e39d2fa75a1d182b56e6e59f3288f1712898c550fb08c41"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case09.json",
+      "bytes": 178946,
+      "sha256": "92b5d44372c82ebc79917933f85c9de2d666602f62985141080a4f00e7111f8a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case10.json",
+      "bytes": 186093,
+      "sha256": "0d4f48f2bf6313b77bc5975f203a68e79d0a2a9a587bc4aae8485ab822bc0987"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case11.json",
+      "bytes": 185903,
+      "sha256": "51f9a1849e8d2abf4f2f6783b232f4452971acf182f27e96f63b799fb3fe51c7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case12.json",
+      "bytes": 187298,
+      "sha256": "df8075afb5fbcfebd603127deab17cf83b0d6751dda4d5e99b0b24d2e536ed62"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case13.json",
+      "bytes": 187166,
+      "sha256": "fdd34a7ef1af7f4ac0066ea56fa4aa3c55b41a7119ded232f1d2c224c8bbd00e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case14.json",
+      "bytes": 183602,
+      "sha256": "552a21dce94182577f88fcc31f73d38edfcdc404eb4cee50141f521847464410"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case15.json",
+      "bytes": 183326,
+      "sha256": "c34b3f2e625d94b59b51560295580688ba79d6f7b2d96408a199275dc8f791b9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case16.json",
+      "bytes": 181764,
+      "sha256": "5cc7568dd667cb85e45b2b1ea2f48b34d9ca38b6a606516ad141bea7f4ec2ea9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case17.json",
+      "bytes": 181699,
+      "sha256": "e0772e902959601b2780a0c2766729854ea8988623b406b218ef112a356823c4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case18.json",
+      "bytes": 179841,
+      "sha256": "8dd9c870899a1dd6dbc2728e390ca5071b64c208510b43fa595ad4382610d488"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter11_case19.json",
+      "bytes": 180023,
+      "sha256": "bd80c9bacb49c8e95eaadbd31a776719bfa96b3eab28654bf454bccdca843596"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case00.json",
+      "bytes": 179650,
+      "sha256": "804acda50a6869282f02a7f7b3a1743c85cba677b83a6238deffc62b015ff8ac"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case01.json",
+      "bytes": 179316,
+      "sha256": "7526cf02c181ad3f88811e699ad63e0c568255dc7eeef81734bb43e29e43fbbe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case02.json",
+      "bytes": 184216,
+      "sha256": "008170fcbb187eb20efc819cb5b3eef5832699dde71de1301daf3e463c410bf0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case03.json",
+      "bytes": 184008,
+      "sha256": "ae420c7ebc7cc63ae062d551c5426192e6509fc7f59677e4f505c8bdd4935ff3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case04.json",
+      "bytes": 187681,
+      "sha256": "d7fb6de9fac944d3bce3a84a0ae15b29bc7b6324cc4bdbed125ac2dde01839b8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case05.json",
+      "bytes": 187906,
+      "sha256": "462605645a2d7778faab4af25ed0455321f2169c6e87038ec21d81c408418a71"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case06.json",
+      "bytes": 188506,
+      "sha256": "6f0ffb884030d2e022823d4e93dbc2fc334e114f37013a31b5156b3ecfd26c4e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case07.json",
+      "bytes": 188832,
+      "sha256": "21c2d59e5866c552d265e9ab3464a536f1aa3f95682833b2c3dc5583a1475f55"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case08.json",
+      "bytes": 178710,
+      "sha256": "c9043ee5df35644ec858325ee64bdd86cc6c143bc68fa5af53f9d329b8e85079"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case09.json",
+      "bytes": 178654,
+      "sha256": "31596054cbe269af6de22a20906e83da88de26db5d110312d018504f97a0ccf2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case10.json",
+      "bytes": 186437,
+      "sha256": "5498a4425b4fa837e6c098a146b05b3cc7a8b77dbef44def89e52cf93c5155b6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case11.json",
+      "bytes": 186388,
+      "sha256": "84dfcbdf93b172ccc15b0d2f710d30287511a5f6a48e39f9a6361f5f83e25ceb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case12.json",
+      "bytes": 187688,
+      "sha256": "603e7ab5ac11e645139eee4a893cefa8860a139c66e8bc8b57549aa94056d6fc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case13.json",
+      "bytes": 187532,
+      "sha256": "ef5e4f1fd530105e0f17f4d14b6d18c0e2674ea949ce93cec624e8921e7582ad"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case14.json",
+      "bytes": 183390,
+      "sha256": "90ccef153904074520802aaa2cac6ed76da91d63aa6ee9b16376400e38ecb44b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case15.json",
+      "bytes": 183239,
+      "sha256": "6bd316690513c7f9ed658fea7a2b40f0d4e58895c08c6417ef39400125905046"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case16.json",
+      "bytes": 181479,
+      "sha256": "0bb271017a005dab194e177c09beab3e9a6b4a4c560d87de888f4b06784abf69"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case17.json",
+      "bytes": 180938,
+      "sha256": "dd0b11da443b17b2f41f26f81488fc6c8368a4368ddf8c3d98f1f067662571a6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case18.json",
+      "bytes": 179779,
+      "sha256": "05c050195729139fc430a375deb9fc7625885bab3c0de8c877f04bf846b78af9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter12_case19.json",
+      "bytes": 179614,
+      "sha256": "0a9c617aac62f21b53313461117a2589d5f578ad66ffd92fa63c82b2e2ce4eb8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case00.json",
+      "bytes": 179520,
+      "sha256": "3856cd0b3a1c26b12a4d8b0095520dc344ae42a6aa9ac2234b95779eeeb7880f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case01.json",
+      "bytes": 179682,
+      "sha256": "6d72db97a6ee5fe911d09f4f6b83c5e017e9d5df0badf0fa51e46556053e7573"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case02.json",
+      "bytes": 183817,
+      "sha256": "4784eafdb308fe2acbd2e4bee135f96d665de8a8761fd5a9226b3ea850a23b1e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case03.json",
+      "bytes": 184375,
+      "sha256": "df0290cec54fcf45971e115585183bb5327559f4a6b60eee0e349227fb7a9a01"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case04.json",
+      "bytes": 187430,
+      "sha256": "4b939d1fd1beef535d4a16663bbcd49a5a756b1bdd8e6bc11c1f565901066ab7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case05.json",
+      "bytes": 187621,
+      "sha256": "d9a641a8643ecfbc1b5ea7fb8c6d9c71908b358d935cac332a61e037cee54065"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case06.json",
+      "bytes": 188566,
+      "sha256": "26972ac63d70edf184798c37f66365ffcb95dcb3a1304d04f014ce29db4e38f8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case07.json",
+      "bytes": 188365,
+      "sha256": "cdfb3f9b35ef9af9083b3fc095e3f5a29a7e2b9877829443a9af87190b3d660c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case08.json",
+      "bytes": 178892,
+      "sha256": "ea432afd82061beeefccb036cd2b0d149096ac4752be6f63715ae74b8042581e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case09.json",
+      "bytes": 178782,
+      "sha256": "f98cc236d9a67277e2530d54765974f888706b453219c0857ff4d282d1ca7287"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case10.json",
+      "bytes": 186424,
+      "sha256": "cf947a7b23397ca5772648df9f724090df6cfc1da8c9c74b3b5f6971f2fe0091"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case11.json",
+      "bytes": 186272,
+      "sha256": "cb3023611dcb18add0450ad67ecf91b13b7a1da495a0bd7c415b0864c8fa1639"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case12.json",
+      "bytes": 187510,
+      "sha256": "7ca595666210ccd8fc1a32fb2f977ab97e7d119d5373a09621e004800039b920"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case13.json",
+      "bytes": 187497,
+      "sha256": "43bae66fcc69fc9a2b408d9b14ed7872c747da55ac03a4d8d52c7d5be48ced49"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case14.json",
+      "bytes": 183605,
+      "sha256": "83876c7a025020e3673ddc32965d3774c7896dd1a0186766ad526e4518ecd062"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case15.json",
+      "bytes": 183630,
+      "sha256": "6b0f2f37c3da2fd9da66e8daf252a40f86ed8de52bad17dd55d1917551e7df9f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case16.json",
+      "bytes": 181474,
+      "sha256": "6e3cafc2bfc60d4bf71c05310d6d82892d4297bd54f374ec57442dd466b2bfb4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case17.json",
+      "bytes": 181699,
+      "sha256": "af08e845f9ebe500bfb43e8b2002ab6da96173a0c95f6d1d7fc706c2a5c74c9b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case18.json",
+      "bytes": 179711,
+      "sha256": "665593750d84be089e4f515e4803a33532cac5b164ec4a09af8a734ec326376b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter13_case19.json",
+      "bytes": 179614,
+      "sha256": "90a1b99c4871da49297bcdd55123d9add52630062c7c7526780a32873ce807f9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case00.json",
+      "bytes": 180222,
+      "sha256": "76ce884a69e3b8baa8dcb462a8cffb51b0ef3cf689be5cc58bbaea753123fcf7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case01.json",
+      "bytes": 179671,
+      "sha256": "773712db354c0fc6537fcec2f902b682a0085368daad1fe9205f6d025c1ee85d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case02.json",
+      "bytes": 183845,
+      "sha256": "fab58c1965a8b24c8697f3b144e82dc270f1602bcf28cb0707d5cf3e693efc0d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case03.json",
+      "bytes": 183693,
+      "sha256": "de35cc0181f4a467ba90d5235d509a82a47dbb8eef2569ca29488f240fb7b018"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case04.json",
+      "bytes": 187756,
+      "sha256": "e688b1868afb1267be505d79eb90faf77fcb788b3c9fd3d4a0f70495f134c19c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case05.json",
+      "bytes": 187050,
+      "sha256": "d276c7ffd2c0f935af30f22c2ef8f2f52ef7f5d54b2ac142dc392c1197fe30a8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case06.json",
+      "bytes": 188256,
+      "sha256": "22825255edbad9ee24c07490cfded14186a88b226806175278605e78ba048cb5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case07.json",
+      "bytes": 188555,
+      "sha256": "97bc068185fbef98e0099513a5189d9778551036ac3463e82cbe66b8ba6a05aa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case08.json",
+      "bytes": 179165,
+      "sha256": "6a0f8fc336d9f8b13312b1914920d19a365b1b1d8af1375dbd5beeb8686f9cf3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case09.json",
+      "bytes": 178861,
+      "sha256": "76eeb5632db4e10584363be215061580930ebc6c83a886f59cb0802186a910d6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case10.json",
+      "bytes": 186202,
+      "sha256": "8d3b424e607f183c20e4addcafc0243ede9f858f11995d773e2f5a9ff5167e33"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case11.json",
+      "bytes": 186426,
+      "sha256": "0a304fefd4bd6c07b3434c31c704044633ef115fa7569fa205bac466f1153f1f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case12.json",
+      "bytes": 187229,
+      "sha256": "7d80a25086849c5c4c77b352b2776618e58243f025a80fd1d0283b0a85b28b3e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case13.json",
+      "bytes": 187289,
+      "sha256": "375780569d97d9ab8e4456e57131a0a7fa110202c2cf3a854941f8d1af738174"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case14.json",
+      "bytes": 184114,
+      "sha256": "353fec97a0b465f82716b1cf19320baca022dbeada2a67641b4381dc15e84101"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case15.json",
+      "bytes": 184291,
+      "sha256": "878b701f3e90a8a6207d7a942a89fe1cdaa0d0bdd73248ae3b24a5f967f5c9f6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case16.json",
+      "bytes": 182348,
+      "sha256": "3b0f4e58e15bb0e0a2c344f6b2f20c8e6d282fd2d39d8e731dab3a213079c648"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case17.json",
+      "bytes": 181469,
+      "sha256": "b84e9c0138aaef8426d1534c43886af1957492db83110ac76742786f61585201"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case18.json",
+      "bytes": 180271,
+      "sha256": "a187045eddd3c53e05451f02da90f1443b18c19ff2441d2d918c6cde7291f387"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter14_case19.json",
+      "bytes": 179877,
+      "sha256": "835d92ba51285f18ab319d2c06d3deb5cb4cb6f12d4705fe74ae474227c4b221"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case00.json",
+      "bytes": 180106,
+      "sha256": "18371736872dc2542bc4675414b0ae471942c527490a66af086dbf7842a50900"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case01.json",
+      "bytes": 180014,
+      "sha256": "d5aa6ad5b994f1ef109bb81c9b49aed3ee73a18a2633743281bb48cb170851c1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case02.json",
+      "bytes": 184121,
+      "sha256": "d7bd5ffc7941251f8ce3c7f61294eb11db265dc0b8f9ff2ae3ed13d1df8e0b8a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case03.json",
+      "bytes": 183979,
+      "sha256": "643a9dd76ddadbf747182547b5696760e92e227ddd05b665c768d1b90231024f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case04.json",
+      "bytes": 187648,
+      "sha256": "841a3590453f9c1c8e60c2e6bae2fbe4cbe03cac73cb1ba088cc09de5fb528a3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case05.json",
+      "bytes": 187744,
+      "sha256": "886ca1c892fc6777471fb5246da7412e062ca605e31978a587dc742361ad170b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case06.json",
+      "bytes": 188302,
+      "sha256": "ce18f030157825f3b05d7f796aeb22c8abdedc3117eeaa1cb9374a046f4043ae"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case07.json",
+      "bytes": 188580,
+      "sha256": "46a5afec21bd3d71d67d749b72944ab7d0b44ece1346833fbe165c069d7b74fa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case08.json",
+      "bytes": 179717,
+      "sha256": "8e4bb11c45fbcd7576c9ad0e498943fc9240fdb35f6258e14b2f62dceac7d689"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case09.json",
+      "bytes": 178465,
+      "sha256": "3ad652bd4387fc2047929b105822fd75bfb9d346b53273d3a614b9a717f59faf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case10.json",
+      "bytes": 185683,
+      "sha256": "f7e07566453ee9b1c0adb865f378675448ab91ba2bee70224324c6631fa4c5ac"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case11.json",
+      "bytes": 185882,
+      "sha256": "f12ac097f3cf5fff7be05225b2fc0af6a3c932824acdc9ddc4eb7f45cd6bc9cf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case12.json",
+      "bytes": 187306,
+      "sha256": "227234f044bf14c832be17ab6ed28a64493049c725799d02eea02d9ec630b7fa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case13.json",
+      "bytes": 187006,
+      "sha256": "454778c4b1c111035fd34bd240124672680e9c8c1b981c8869f5335b3b70fb9a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case14.json",
+      "bytes": 183930,
+      "sha256": "1cbd2dc86818c04bb3b414b075ba908e6821930f7e5dcc0501b51e8b36b0e038"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case15.json",
+      "bytes": 183939,
+      "sha256": "b35185524582079649be694e9c4a1c564de337797df8e933700f4ae9c19ff345"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case16.json",
+      "bytes": 182005,
+      "sha256": "2e775bb4f5377e77eaa3c5e561df3c333d4823b4caf75e0a9cffd53164b9d566"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case17.json",
+      "bytes": 181770,
+      "sha256": "e9ac7298535125eee492aff56c632ce73306f566d053d1d0c9b6631396b27fa8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case18.json",
+      "bytes": 180401,
+      "sha256": "9012cc8a5825070809da502c959ea5c0bee993989256c8471ac1ec094149d9ab"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter15_case19.json",
+      "bytes": 179872,
+      "sha256": "312e3b038854260efb08ecc3725e3388680995606500bbfbd1cd415578ce2521"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case00.json",
+      "bytes": 180078,
+      "sha256": "599926d50c571c7980a3c1a12affb39ebefa0cc047497dbe1960eaa91bc2e151"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case01.json",
+      "bytes": 180898,
+      "sha256": "69c35c135e5872ca32df189aeb2702903cd257ed49758c407d899ba8e7f5bd3f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case02.json",
+      "bytes": 183623,
+      "sha256": "93c6deb1bba00623e138363f1d6a839344c5a75a135e93016962ff76a4cf718d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case03.json",
+      "bytes": 184033,
+      "sha256": "27b1f2f0d60954cb64854009427f7a1cb6358e2a9058f38f3ba9b920b1796757"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case04.json",
+      "bytes": 187484,
+      "sha256": "33c5c095aa56ad56b5533f1411776b1994a3fa360ab50ae61dd95f90b3f97a70"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case05.json",
+      "bytes": 187682,
+      "sha256": "a09c9f1b7a5f1688d59ec686d493c81518174e03abc2e933364e4b8d4e36581e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case06.json",
+      "bytes": 188454,
+      "sha256": "9d6345e0c17659430c0d9a40763d7475cf6fd14b42ea638a8cb301c1fedd6f42"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case07.json",
+      "bytes": 188251,
+      "sha256": "313bc9f738cb4f34583e5e61a89aa6040ed5346908c25b7301bcd093da81b3ef"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case08.json",
+      "bytes": 179015,
+      "sha256": "19e3dd4352295d05f9dd07d5a4c01ee2f9558a96aad28b5112ee06e579a8b305"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case09.json",
+      "bytes": 179577,
+      "sha256": "824e651c58f2b3ce78d10a49cb15243cb18e4d281a03be69543c35eaba2c9650"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case10.json",
+      "bytes": 185732,
+      "sha256": "dc2f92659fe22c818fcea4adfb6cf801a2535baf23a1073bd5cca1dc90b7fa59"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case11.json",
+      "bytes": 185775,
+      "sha256": "f60a284e7801d0bad2d9078d8a87aff124aba26e85449e6a72510332ff4124d6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case12.json",
+      "bytes": 187183,
+      "sha256": "d0a8a66a75da539965fa28150c568ca59f3355b9f54d17f4983b2395677157ba"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case13.json",
+      "bytes": 187116,
+      "sha256": "c90afa2ba5a30bed4605dcce9788d0f364b32a3b06f7f92eaeea54b1a2da9cea"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case14.json",
+      "bytes": 183669,
+      "sha256": "7d90c0c0947b28e700a665485aef4913448c929083f413954351e63a8f84140e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case15.json",
+      "bytes": 184304,
+      "sha256": "c67404e4de9cad1bbb01636d4e61572b9972dd5c85d3aa7df4b2520516ec2ae1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case16.json",
+      "bytes": 181069,
+      "sha256": "d6cf84d83568bc618e1290f8110e672d748faa8ad809845e42cf584842c6a5dc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case17.json",
+      "bytes": 181775,
+      "sha256": "5074fe119a5f5d8f1513c82bcb15c15bdb1098acaaf51c3f999a69cd04fe3495"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case18.json",
+      "bytes": 180091,
+      "sha256": "75136ec14fe4829c9d8fc3d13117972363442e5541c47c9aa064a29003288f0c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter16_case19.json",
+      "bytes": 180314,
+      "sha256": "226260f7a4f908850f59394c7935dae4d1642694daeef5c4ee4e73d78e6bdd6a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case00.json",
+      "bytes": 180128,
+      "sha256": "bfc7e6a0360fc0145d01ec7df1bf73cd81b24af9125f80701c44072acf31776c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case01.json",
+      "bytes": 180333,
+      "sha256": "82f1ab6cc0da8f2afccc961a4dc32c1cf9ed578954fe2ce951b30bfe9d1663fc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case02.json",
+      "bytes": 184127,
+      "sha256": "c15fec5ebcb4aada9b2ddb0534f0a6bb4557c211069005556c8728f660b06797"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case03.json",
+      "bytes": 183869,
+      "sha256": "f2a87b9fed5439c82f249ca84dd22e6b164803c9f7762655f6ebdc1dbe3c435d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case04.json",
+      "bytes": 187559,
+      "sha256": "d8f6fd47df0d0de30d51e3772407d9c40a6d6ca95532c045186a9a62d1b5b7a9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case05.json",
+      "bytes": 187402,
+      "sha256": "662546c2f27f465fde9efe778cbe1a5173eb5f7cff806c09ce58a8084823da90"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case06.json",
+      "bytes": 188295,
+      "sha256": "4657938481bc78f5ea9fe9f6f48a849ff21e3ee6d9375e62d6779f15b7ebd63b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case07.json",
+      "bytes": 188476,
+      "sha256": "2a0741687473c134b8bf4854f5a021117b211f36391854a39826ab2aea64ec01"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case08.json",
+      "bytes": 179392,
+      "sha256": "d7069210ff316f5f9d762629d30131eed7ac4972fb68a8c6c24fa91ae064db56"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case09.json",
+      "bytes": 179339,
+      "sha256": "4756ab6c48b143303b8c45432ae83d7ad04283176becfa80dfb01594d6a40b22"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case10.json",
+      "bytes": 185736,
+      "sha256": "b61b00d7e9a31e9da5deef9b675e15afbe795513586a4c66437730d43ca500e5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case11.json",
+      "bytes": 186068,
+      "sha256": "aad233a9e77fff198361f36e1ce3cea7cc08663cb3840caea301d8775be9fb84"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case12.json",
+      "bytes": 187596,
+      "sha256": "6745d974cb3c4de0721dd2bce4efc984e442d1c2a42399680dbeba5e8da1b9ab"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case13.json",
+      "bytes": 187298,
+      "sha256": "631dcb3109cdc01dad5c3d87fef72c36a2515178c2136b217bc723f75ce550e8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case14.json",
+      "bytes": 184157,
+      "sha256": "b993cd74d44b96f0139697084e609049651859222c04d1442c9c7b7a85d16120"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case15.json",
+      "bytes": 184170,
+      "sha256": "d2cb8ec5c59b69f9118824f9994dac03fe8732f2291680c5d6ea9a108b163b41"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case16.json",
+      "bytes": 182628,
+      "sha256": "6673cf73d780dc0625e054d29a7af5784a83b2e2fdd92a6b466096bbed306670"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case17.json",
+      "bytes": 182305,
+      "sha256": "a35aae8650bd90ae56b5e3597082a39db39e6de9765fa52edc7980529c7e028f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case18.json",
+      "bytes": 179823,
+      "sha256": "57cc5e3feba16295f6f96b08f4501ef07bc33407f0f0533cdc9edcb53a492ae0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter17_case19.json",
+      "bytes": 180444,
+      "sha256": "ae04e94abe22be378d4a8476598a4d2e26f34e3781a2e7f65d71f650c43ca50f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case00.json",
+      "bytes": 180155,
+      "sha256": "4efcfb078a2340c3b5d025cf4127f6a1f275323b431c5f47ffad7669035e585f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case01.json",
+      "bytes": 179822,
+      "sha256": "5b7f80727cf672b56627294f0ad332d8e7dfa3e031a89bf3c5daf99b7cb59bc1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case02.json",
+      "bytes": 183413,
+      "sha256": "9c0c1db7d58428ebafede82c0c9b46dde04ef9853d65b0110c67a1200d7a3eea"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case03.json",
+      "bytes": 183529,
+      "sha256": "241aba6241db0b5ff1797942567b14d4796cfdd5cc92140cda0f4843f444761d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case04.json",
+      "bytes": 187541,
+      "sha256": "9a5e5d1e2905c43352904ede7227676f8373fa8500c47a284fb644dc61bdb7c7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case05.json",
+      "bytes": 187406,
+      "sha256": "a0af55c6479f2b61c99c8cee45670a2e8e0277412ffc2009911af5b2d078325b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case06.json",
+      "bytes": 188074,
+      "sha256": "f0ff0a0737ec55055900bc392cdfe35d56149be8e6aba00979f7a00f8aaa5971"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case07.json",
+      "bytes": 188616,
+      "sha256": "0cc0ac05a5430c14a88e5dc8b5a9cd79adc255dd348742970dc18984a1d856c9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case08.json",
+      "bytes": 179369,
+      "sha256": "211a1ba2649cfc15f9c238e0012b6cc99bc2be9126786d23754306cbb580b4fe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case09.json",
+      "bytes": 179169,
+      "sha256": "403391de197385f4a0cdfb8754c7784ac9ca0738da5cc03643ba49fc307c4279"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case10.json",
+      "bytes": 186040,
+      "sha256": "f1ea8df72455a30af9f75e012a7e29a1ad1d5da6b3ca5585a65656b780c8e717"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case11.json",
+      "bytes": 185873,
+      "sha256": "a9f2eac7a75fe24aee3fefd929898f7d4d4a91a9f59dd5c352156f39de03a39b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case12.json",
+      "bytes": 186992,
+      "sha256": "7295eaf8ce3af863ac19df6ebb45db0f4f5630e14e2656566ad9faab647607c0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case13.json",
+      "bytes": 187381,
+      "sha256": "e27429c4bf9d75a978bab4c8a1cbc6353f228d5b74f1931a2ebca96a9b55ca0b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case14.json",
+      "bytes": 183672,
+      "sha256": "7b0e3ba6c388876007b12cb233d7d694a8c3811ad068470986591c65354d5f47"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case15.json",
+      "bytes": 184208,
+      "sha256": "7129751c1b4eade9697f7fc8256173da7f17db2aed9202ff06a8313b1c5a85df"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case16.json",
+      "bytes": 182030,
+      "sha256": "46f3f976a8a4693a229e05ae0db28abe5c2c153d13c057bc3589fd038eb255fa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case17.json",
+      "bytes": 181134,
+      "sha256": "74c4acf17f05066bd18da34cb3b2457bdba065f44f218c2ad81643e396d22fd2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case18.json",
+      "bytes": 180392,
+      "sha256": "c4871481389106c839e40f0fa73fb7bf27da9bdc2ced0c55805bee63bbf9ecad"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter18_case19.json",
+      "bytes": 179878,
+      "sha256": "7497f9b1511dfc148a986a513ac7def96133258078b12ee1ee7d06986b53e82c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case00.json",
+      "bytes": 179465,
+      "sha256": "10d1543ebc3429161950ff4ef15d397985449e132a1f7a4603a6fde0bcaaad36"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case01.json",
+      "bytes": 180294,
+      "sha256": "93bca7099516e8d66f2f048a10ea99c6b531aeac27522d33d37547a95515b13e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case02.json",
+      "bytes": 182738,
+      "sha256": "5f97d8e533884a90d3a5beac16bb96cfdc91955ff475f804997963093791ffc3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case03.json",
+      "bytes": 183791,
+      "sha256": "1a97a02a173f1e595574394e52e30f641f1393acdb7762c95d7f584946e8c74c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case04.json",
+      "bytes": 187315,
+      "sha256": "eebe335e0d426bc0e6b4a677c07374035900c0289e7854d6114d8c643387a927"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case05.json",
+      "bytes": 187565,
+      "sha256": "84a4c7a88e8a8d76af7e6a24c59dd747c7ba874936403bd3f1ef623a29e51d4a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case06.json",
+      "bytes": 188290,
+      "sha256": "58eabae9cdd2f6fafe82e21cedcb4ac771b77e4cdfe18e1b3b98898c3919894d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case07.json",
+      "bytes": 188492,
+      "sha256": "1e3b296fd475c7f4f3a4e0321be0e878fd715862d8dfc0bc56db7abe9f05247d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case08.json",
+      "bytes": 178837,
+      "sha256": "ddc8f1362abb46e9f94dca30428b13359b82e9e4813fee8350cf3fe29b52b224"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case09.json",
+      "bytes": 179416,
+      "sha256": "ab8993d8ebbe79eba00006cd1fc32d85c12c93c8deebccc7762eb586b7fafba3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case10.json",
+      "bytes": 186133,
+      "sha256": "3881dcf8c24952a03474556adcef5e9d39f95e24b9b234ae94b25cf13735217c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case11.json",
+      "bytes": 186073,
+      "sha256": "2fe21c7d192209b8f6fa814660adc533730302a58e6d09bdb0b0b0a4f72458fe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case12.json",
+      "bytes": 187085,
+      "sha256": "8cd9cf973dc08174ab34b5af6b7a4a9ee67b85ae63568c0697baed58348967fe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case13.json",
+      "bytes": 187229,
+      "sha256": "c361d3261e6d4b86b5b8d47542d36f585a905dcac1173d78299e15a63f05e12f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case14.json",
+      "bytes": 183978,
+      "sha256": "12e06b4d53b97d7e517beaa6eb9e8ce76a00e7fe150a1bcd570ed5592a47d006"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case15.json",
+      "bytes": 183992,
+      "sha256": "72c3051efda281891856739545c921b39123655af279dc23e90d151ce2ac9ad7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case16.json",
+      "bytes": 181410,
+      "sha256": "78591dafe11f40fce7641f09301972cafb23cff4c28f32d1dc0be2f2c85c9876"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case17.json",
+      "bytes": 182246,
+      "sha256": "443fbb3cda6f3aeda0dad176673b828fb33204671ea091ee75f36c82a8d085e1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case18.json",
+      "bytes": 179919,
+      "sha256": "3021ef2767aae0bf592cebdbb1bb02ac9a75a60de8815f8a74ae8f46558b112f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter19_case19.json",
+      "bytes": 179376,
+      "sha256": "303b6fdcc8686cfc8d7f00870ffbf8bd6bfb1adc4fb05f0c55155a3c068812e7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case00.json",
+      "bytes": 180473,
+      "sha256": "f5968bfc24e021ffbbe2d3c64ed0f16084852571ce96380c54a93ed20ce4db69"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case01.json",
+      "bytes": 180140,
+      "sha256": "28c64999806ad2626e652a7358a4edbe4462345cb4c7e6d0e60efee04fd592d2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case02.json",
+      "bytes": 184138,
+      "sha256": "6618c94480ce996f6a2efdd8d514609716647659b715b21dda1c8f3a1071011f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case03.json",
+      "bytes": 183627,
+      "sha256": "6978ac6a9435d5c9215d95bea61c46e7a033668eb7654414cae734689706cfee"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case04.json",
+      "bytes": 187616,
+      "sha256": "5c680daa3be344f3c35cafe01e2386a7c18dd0dee8e2afff30ab8329b5056f84"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case05.json",
+      "bytes": 187579,
+      "sha256": "99d92b8a1b192d282accd2d074ddd24acfc60d28f9f09a9e2518776e60b2d4a6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case06.json",
+      "bytes": 188083,
+      "sha256": "52c490539ec41ece41be741d0e612749bbc6c6070efe0e36c0d459cea58bfe77"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case07.json",
+      "bytes": 188495,
+      "sha256": "fccf7b1125d9aa4259984570a3ba3a5ff27d300d06faa0a686aafb2a98c01c5d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case08.json",
+      "bytes": 179271,
+      "sha256": "719b7bec1a998fd76a6a7c6105d741ff8d28b3554204e85c9d7bba6cbcca45fc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case09.json",
+      "bytes": 179458,
+      "sha256": "e704bd45b11fc0fa9d81d7d6d5e48be4013fdd9cdff79209c82f01749521e598"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case10.json",
+      "bytes": 185600,
+      "sha256": "c523da0274649155f9744e5a402294ab496050291a313b89dc3e61cbe7dd9f05"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case11.json",
+      "bytes": 185887,
+      "sha256": "3c52100e85bd72938860ac384c30eb8af625b83b74dbd69cdad7c1931d2848a9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case12.json",
+      "bytes": 187112,
+      "sha256": "8de04646bcbc0b37929b9eb46c7bb02f49b9de1fdba7cae407d25574541b1241"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case13.json",
+      "bytes": 187388,
+      "sha256": "133f572975a181edf55c02d6018908b0a5eceda18866cf0a91c4490909f96440"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case14.json",
+      "bytes": 184342,
+      "sha256": "81e2c338cb1726c680fa1e19e586dc896cb84edba79ae505a79672ba670f1c72"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case15.json",
+      "bytes": 183981,
+      "sha256": "a44365268a892fcae2084b17158dba13a57b3f43966e7c699d193d5f60e5fe9d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case16.json",
+      "bytes": 182425,
+      "sha256": "53958906ade2624cc311737f6924090ed78de37f712ee03883be882fb94a5a0f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case17.json",
+      "bytes": 182000,
+      "sha256": "311fb7026780e87f313e2d69cdcefb8bfa36377f5c940ba4079833677a598d67"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case18.json",
+      "bytes": 179695,
+      "sha256": "503355785282764a531e21dff46902d99bca9237f27582362452463868b2d659"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter20_case19.json",
+      "bytes": 180268,
+      "sha256": "9e205f6e73cbf2c992cc4b28f409c8aa7048c0feaaf9e30337972a3e49588fb4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case00.json",
+      "bytes": 179831,
+      "sha256": "7471ee3a57250b1b8948891735149a21a2bdb786c9af61dc6a094ff74c0a0700"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case01.json",
+      "bytes": 179972,
+      "sha256": "947e051b4677d86276a1944f0fc0fd075fc8327f6ac76edcee25f7b03cb3a799"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case02.json",
+      "bytes": 183653,
+      "sha256": "2d56ba671a0d81ab326a0eaff378076941826dacda23462beb91512b80dcbfbf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case03.json",
+      "bytes": 183338,
+      "sha256": "d0f88ab0fb3673fa23d49ab578c39fdba86d09ebea9e9978ee2a4069237c25f3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case04.json",
+      "bytes": 187487,
+      "sha256": "22175459f971d6f123cb3e07da29a9f2c8408c8ededba783cad0ba060c84a3be"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case05.json",
+      "bytes": 187255,
+      "sha256": "a2632d03cbe92b40940db6193fb83b3f34938ae81accf23e00dc18da8b5b8ffe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case06.json",
+      "bytes": 188512,
+      "sha256": "57996548af6b3442bfed59486d614a612dd8c94a53b99273f74b6b6ce65d64c5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case07.json",
+      "bytes": 188443,
+      "sha256": "7221ae13bb665a947fc1c89abc0ce0e5ad52defe5491df4a28842613e46fb8b6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case08.json",
+      "bytes": 178847,
+      "sha256": "92c08c562c1f2d6dfd4541252eadb70fd31336f1da5457af78cea01a7b81b4dd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case09.json",
+      "bytes": 178146,
+      "sha256": "dc4b71d85cecd9b47155aafddf33bd59783e65bcd63b92b955290c20ed16fe56"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case10.json",
+      "bytes": 185808,
+      "sha256": "47624eac0b97fbe7409bd0668ecfe11dcd35a52a9117ccb605b3c8d480124605"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case11.json",
+      "bytes": 186688,
+      "sha256": "f49512c87bc13397a48dc29ccc7764272d47d480c9b900245221e2e5af9c81d6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case12.json",
+      "bytes": 187007,
+      "sha256": "966aa57a2462573e667e9d542d13479f91330e278598eddf5dc3df3eb90ac1cc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case13.json",
+      "bytes": 187128,
+      "sha256": "c7664674e0082a09a18b987a4e25af0617be767284d30353247d13f91373be30"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case14.json",
+      "bytes": 183762,
+      "sha256": "e49f08649c0daa23ff5e76246f29de1c3e079b85654b75f513c2edb9385f7204"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case15.json",
+      "bytes": 184103,
+      "sha256": "3d8d5578d7a6d89833d56b0ff28f243b1996b66dff43d5a893b5781b7e2da8fe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case16.json",
+      "bytes": 182479,
+      "sha256": "4a4f8d2c325739025f227d0b073e68972aef691b732244bcd6b17481c61cb200"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case17.json",
+      "bytes": 181749,
+      "sha256": "909516f4bcb0bc29d8771a31d15e65d7ef6199a92817edd452bf92fdf166f47e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case18.json",
+      "bytes": 179911,
+      "sha256": "11fd15f19612c8bf7a6497a0203e73249dc290e96fe8110df11fad0151ba800a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter21_case19.json",
+      "bytes": 179789,
+      "sha256": "17c9ccbe70696b007ad647dd3b6cfd18854ba884549681867159ead4baa14523"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case00.json",
+      "bytes": 180368,
+      "sha256": "83abb240c62a5becd185483c749a93ac1004957d254fdbf36e2f2bde27e7da8f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case01.json",
+      "bytes": 180499,
+      "sha256": "286211bf4e1510579c00352436bc1c425e25d0df3d91a0f64b28ef95166e13b1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case02.json",
+      "bytes": 183586,
+      "sha256": "15f917765b29e842b2743f5dd4b6a7996ad6cb716b27f51ae564eb84f06a8692"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case03.json",
+      "bytes": 183904,
+      "sha256": "9389a799e828259c31157432ab8ec14706753371e6eb26c1da621c7853fedc88"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case04.json",
+      "bytes": 187627,
+      "sha256": "68e4815caa54dcf21b4f9156b141de70b06ab5b29aaacced76397b97e9c0230b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case05.json",
+      "bytes": 187601,
+      "sha256": "6aa311b82e8c3be921e629ea25bd98f53e8a8f78b4a8d3861c77fa9099e6f50b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case06.json",
+      "bytes": 188687,
+      "sha256": "0c9d332f676c8057db2de664106d5ce16a9f87a7a9f22da2c0c38ac707201902"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case07.json",
+      "bytes": 188352,
+      "sha256": "26dbd47718f074e295981d9e4eee3b57b57c8645f5dfcc18fcc97d556cb72567"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case08.json",
+      "bytes": 178795,
+      "sha256": "bdd1146cc5518cae3703dfd429b7234829bef31ca210774c02d45954d8d59597"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case09.json",
+      "bytes": 178931,
+      "sha256": "8b1dc099357947d9eaa46e55d9c1a5abd0692c4775b44b76edb5041adfda457b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case10.json",
+      "bytes": 186143,
+      "sha256": "5a913dc3734c7ab264e5e925cf9a8e953352f2dea29525f501efd4befad8aa58"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case11.json",
+      "bytes": 186167,
+      "sha256": "244ddf36bb6d4502a0bc54f4d5ac1147b5c521e666766c0a986c331dbcbdc877"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case12.json",
+      "bytes": 187393,
+      "sha256": "5c6c8114a27878ab02150014efbe9d39ec3b3ed9d83441da80eea2270f9d83a1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case13.json",
+      "bytes": 187440,
+      "sha256": "84aa3e25a2d681e3f277e87761cf6a07a574ecea4d1243190805c2cb28cc0f4a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case14.json",
+      "bytes": 184336,
+      "sha256": "0708a5af4a8c2995f2bd1e1fbc31aaceefc4987686aa31235f4f4c833062d65a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case15.json",
+      "bytes": 183704,
+      "sha256": "7199228a1f04d0532a68f233b5f37665ed153bf807ee60a312212080d4a6e2de"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case16.json",
+      "bytes": 181956,
+      "sha256": "7bd75381ac8723ca134b4a1b69275465bc2d47d55fcf3f9be6ee25dfc3bd6e8f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case17.json",
+      "bytes": 182016,
+      "sha256": "734527387163deace2c78c4001d57ae941e0213fd22f43e342201263ab90d383"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case18.json",
+      "bytes": 180149,
+      "sha256": "bcb8e35f1a8655375bc48f219dec11013e078cb586877d3bdd32ffab9e9737a5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter22_case19.json",
+      "bytes": 180435,
+      "sha256": "f8cd46924e541342cb56b6e50cd3c192152cfd85f2b8b1bb38a0fcb7b826a6e8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case00.json",
+      "bytes": 179916,
+      "sha256": "78bf5f7b606ed2f5ace3c6833dc27fda066417b37310b6d6a235b326ef3d114e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case01.json",
+      "bytes": 179986,
+      "sha256": "f6fab87e98817ee78e2d394be6e20ba77915f85de469e3037a1eafba254a3725"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case02.json",
+      "bytes": 184327,
+      "sha256": "9bce2cd090b12015c3391cdfeda83bbc6724eb86e92ccbd0b616da779910d8b5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case03.json",
+      "bytes": 184100,
+      "sha256": "089009de601dc13ea4a57732ef89c0c59b6540b033510710cba558c203be394e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case04.json",
+      "bytes": 187290,
+      "sha256": "65081e6e4452c18b6ab8ea2114743645e4408daf69ad6849766295939eba3b4f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case05.json",
+      "bytes": 187138,
+      "sha256": "85e95016e0aef5964fc0ab3e5bf87a5878cb2c8fef81898582846db887173dac"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case06.json",
+      "bytes": 188187,
+      "sha256": "36f9e3760878b90c2edcb59c522ce88db90213748e23989f841e010ffff99fc8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case07.json",
+      "bytes": 188132,
+      "sha256": "fba9029c25dcf62ffa1669e37a762f8cb4994379b09b41935d12778cd9b26271"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case08.json",
+      "bytes": 179415,
+      "sha256": "0991d46229ac5366451d3babab1ff3010971662523d086660d95df8e2d0f6699"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case09.json",
+      "bytes": 179644,
+      "sha256": "6dac49a85199a6fbeaf170e4b118c4ecde63d958eec9fbc457ecb4a91735fada"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case10.json",
+      "bytes": 185341,
+      "sha256": "c4f2d4af57eb2089b4010eaad1238009b7fca83aa99268bed92209e18cafd4c4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case11.json",
+      "bytes": 185180,
+      "sha256": "c029b02385cec2b9f48711a3a1b72943adaf17eeee55b0a1aa0dac32556dc146"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case12.json",
+      "bytes": 187015,
+      "sha256": "6647936754af9f7b736875285e0f1c9ac89647f4ba24eba1f36f8ca5fecb82db"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case13.json",
+      "bytes": 187179,
+      "sha256": "94a5aa736fbb53ee522ac0462a1e8f7cfb064fc8f47037ee3429bdb6e60aae4f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case14.json",
+      "bytes": 184099,
+      "sha256": "7ae87ec7331aefa2665ba3c5c801d2768c669c54fda0c8b80c8e3130f4d4e49f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case15.json",
+      "bytes": 183806,
+      "sha256": "a4e602ccf75b3c82163febb9bd669188fa2190f7afe74e059667c52bc7dd84b2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case16.json",
+      "bytes": 182082,
+      "sha256": "deacac1877dd4c255946504889e8554c44cfce495d57841b36bf40e4593e2616"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case17.json",
+      "bytes": 180705,
+      "sha256": "2c56386b5f7645ac1bb71e257f5249200fb8b771911bb4b06a7da93619975d60"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case18.json",
+      "bytes": 180361,
+      "sha256": "92af2cb21cd20daa8dbd3ea7054c3a5885de9b6d2f37906d5957d5dfddfb3b35"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter23_case19.json",
+      "bytes": 180115,
+      "sha256": "8b3ecaeacb061a332ca0225f24275e7d47142445987bc0b5530ed0f8b7c6a71b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case00.json",
+      "bytes": 180159,
+      "sha256": "addf1d9b12f130d6f2fc3c43502326e0cf11661237dea156cd21902b4303a5ea"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case01.json",
+      "bytes": 180302,
+      "sha256": "4b2f2595e24f54428c4d90e3448c20e6e8255b49de530ea3c78ff308528ba152"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case02.json",
+      "bytes": 184145,
+      "sha256": "706ae96a5725baf4148c873de549da45551048184082b37d4621d5b5c94d834f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case03.json",
+      "bytes": 184105,
+      "sha256": "d2d3df0f6fb02828db75949bf58d43f2243b70ffd5fe4ad2bcaef6838498afb1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case04.json",
+      "bytes": 187155,
+      "sha256": "4454605fdf95a61e504a0fabadc08ad43ae213241284d14fee91d37d63bdc760"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case05.json",
+      "bytes": 187233,
+      "sha256": "3dd7e42522e9abb518154bb97e79a26f74da75023a5950a6911f7096cb528fce"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case06.json",
+      "bytes": 188333,
+      "sha256": "ac069226aa32b6e8dee8b8abcd5d32c73765bdb1e0e560df861f4fbed1e4e1a0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case07.json",
+      "bytes": 188385,
+      "sha256": "6ba4d00a806e3d474051630095a96997705f87042ce75ba977ee2d6a91e87723"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case08.json",
+      "bytes": 179762,
+      "sha256": "c1cadf0b8adbc90f2fdf901d8894ce69f9b4c346dddcf780b75ce7b19e140007"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case09.json",
+      "bytes": 179774,
+      "sha256": "79995de1ae4a845220ae13bb9e49198e14efdc6cd0098a71d9dbd7735c5e68ce"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case10.json",
+      "bytes": 185035,
+      "sha256": "d17a98ed8c294f804a999be83ab3897450595fe16b88dd3de42491dbf8d048dc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case11.json",
+      "bytes": 185347,
+      "sha256": "7977930db32c09ee45931b3563ef7e17d84276e00aded9827dad71e61576433a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case12.json",
+      "bytes": 186848,
+      "sha256": "318d37a740a52230a126f8b9796a85051d4eab3738c87e026d05e2b629aafa9f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case13.json",
+      "bytes": 187154,
+      "sha256": "84bdbcf6ac5ce1b5939c3e849add3b71e5eedf33d0213aa66047fee3f5475317"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case14.json",
+      "bytes": 184318,
+      "sha256": "20fd35e03ead263612031ad73484f38f00f4764a7fcdb466b6a64e0dcb0091d2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case15.json",
+      "bytes": 183593,
+      "sha256": "3da98a11e9f8f56efcd9f8236ebd50efe8904b8ff1a185be25ca4e2c31d45037"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case16.json",
+      "bytes": 181729,
+      "sha256": "920d866d39057295dd8147877eadc5b8bbfaed6cc7338dc222428da429cb34b0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case17.json",
+      "bytes": 181829,
+      "sha256": "83750af0575ccbd22103c580026f7b1d66c30a4a5b1be5d22904419433b916b6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case18.json",
+      "bytes": 180627,
+      "sha256": "86a25a2928856efb206169e2273d71bfd2c483c42683b191d3f36584611c59a5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter24_case19.json",
+      "bytes": 180605,
+      "sha256": "eedf90c5968f66f7ebf881f09e46f51cfcce9ccf2a8b52a0fddc873d916e156e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case00.json",
+      "bytes": 180471,
+      "sha256": "c5ccba12a3f7ace2f226bb8fa7e3c8763eea78119ea32aa5bd44ac4244cdf28f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case01.json",
+      "bytes": 180760,
+      "sha256": "bd0d9d93cc53bae1ec5065a3f467ed53eb2ba610bd8174830e6e53c2ed106174"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case02.json",
+      "bytes": 184230,
+      "sha256": "e9883c94ea052afafad78d98525899eeb87eed4319af7cefd5af799800dc5b2b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case03.json",
+      "bytes": 183583,
+      "sha256": "0fa9a25000562a0bc7fec0ce1ad7ae21af51ebf71f4b588cbe419751c5cb8d68"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case04.json",
+      "bytes": 187504,
+      "sha256": "6a7d51de88958a8a212216c14a647f37cdfceee054e242a46c1326f7aa2b8dc3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case05.json",
+      "bytes": 187765,
+      "sha256": "ade775722c89d4dd9608b11f31c622579469476be89d690654c8ff5403ae1ac0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case06.json",
+      "bytes": 188020,
+      "sha256": "c61c3388deba3f681e5ed9ae12922c11d6e63594bc297633ce17ca274d824dfd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case07.json",
+      "bytes": 187765,
+      "sha256": "34396cd1a26bf251943345c4dbb51ac3c9c2431f1a35106b37a79e5c445e1530"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case08.json",
+      "bytes": 179396,
+      "sha256": "6dac82e4dd72f6cbfea8c025d1bdb66afeb5ed041b69430c55242db375c62d9c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case09.json",
+      "bytes": 179287,
+      "sha256": "4eeafa99033d7776a6f41642555cf8283c66a5b9e89a9ac2eb0382345f80a165"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case10.json",
+      "bytes": 185984,
+      "sha256": "d01d280e9aa2ac18b0b6056b2e05be80dca922cc004d4a36227e44e7f8cedd31"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case11.json",
+      "bytes": 185623,
+      "sha256": "fca4afe1150d664fcdcaaa654b37def2a9c7e7baec1ec306d75e3a3176edfc69"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case12.json",
+      "bytes": 186663,
+      "sha256": "d9ac2c45afb15755237934ef29ce2286b29403fb37a3c6ce32e06f2e1b9f2ea2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case13.json",
+      "bytes": 186691,
+      "sha256": "abf7b0906c01053a6b855c92bccd51bb04e46d9681c7549b37aaed7538d687b1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case14.json",
+      "bytes": 184000,
+      "sha256": "b5974a82bedc8826188e7265fec3a428069d15d08a30c4186eba2d9ead6b9b76"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case15.json",
+      "bytes": 184150,
+      "sha256": "f80eb763fd1e15d4fde47d93e35d3ad179f9a100544d2ec72c8c8ab1470416d7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case16.json",
+      "bytes": 182063,
+      "sha256": "e5897258a807995372bdf666f3910060e05bf53a9ad55ef793c8ede783d54c4a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case17.json",
+      "bytes": 181993,
+      "sha256": "737d03e9c573736c63f2d21a7460a7079945a3cec8704ee79cf14409605f0b6d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case18.json",
+      "bytes": 180144,
+      "sha256": "6533c3d7e0d87dc3e71df1c7d6fc4b7a26bb25b8e1198e4f3e9b530af7842784"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter25_case19.json",
+      "bytes": 180414,
+      "sha256": "958bf9c47c1176a42fd03222e05705de548a794a80654c6434ad11ee9899e7b3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case00.json",
+      "bytes": 180926,
+      "sha256": "dede263f9d5403ed132692645bead4af3f7a50616f100c1eb5b5b65ba9acbb20"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case01.json",
+      "bytes": 179647,
+      "sha256": "e45ec5bed5b95eb6dbc7406f1369e39a58b4b86c7dfc55790ef5efd648d23194"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case02.json",
+      "bytes": 183852,
+      "sha256": "f0de1c1eea802cae5666aef1efea86fb63a3440f30c2468b994b276aa64c8036"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case03.json",
+      "bytes": 183420,
+      "sha256": "1283a29d3388f776351b3e4b37396152a1fee964fc69f4beed93fb7874852f9f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case04.json",
+      "bytes": 187437,
+      "sha256": "9d8b3bce7544b19ad8d2f5d532e4f33ef6b4304afe8c06825f6e778f65ded7f1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case05.json",
+      "bytes": 187174,
+      "sha256": "9658e529e0f98565838f29ad6fc19716ab6b4ae5759ca0be013f31664c96b3fa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case06.json",
+      "bytes": 188006,
+      "sha256": "c1d509c3e7d50477cdd8cc5a2e67fba60670fdf3068fd6e0a98e465432af4407"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case07.json",
+      "bytes": 188320,
+      "sha256": "48e26abcef69477b5f230ac25b7cf69e8ff2f8da415da705d15dea728867d2f9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case08.json",
+      "bytes": 179130,
+      "sha256": "57489796c0b4614469ead563813280a44f799b380aeaa9a30e7b65ad6b82e66a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case09.json",
+      "bytes": 179234,
+      "sha256": "f03bc6b1f557dbeedfd09867c17d3cf33dc34e2f62f20f1ebdc6b48d9d0c18c8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case10.json",
+      "bytes": 186274,
+      "sha256": "4f337f95335001e2746bd9f0704a9fc16c6e03fea904351be37fafb0fceef06e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case11.json",
+      "bytes": 185549,
+      "sha256": "1151b672c3240c9ce8ea87baf18a30f28db5424ebb3299d6b1dccd8e608d7362"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case12.json",
+      "bytes": 186782,
+      "sha256": "baad4972519a0e99098084629dccf67a8a0cdc61b2f13c2e0a7d2427512781e7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case13.json",
+      "bytes": 186920,
+      "sha256": "894886888fb4a9aaf9a3de6d50a95642afaaaf05dd380c3934f06885310c30e1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case14.json",
+      "bytes": 184318,
+      "sha256": "5ae86d790319cf2d9f5ea9dd1eb157ad64269f78cdd7cb31081a3489627258e8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case15.json",
+      "bytes": 183665,
+      "sha256": "dc7c010c14c4314443830bf472b2ed1a2a1bce9f9740c0b5b1a1cbc9b3b9afb5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case16.json",
+      "bytes": 181958,
+      "sha256": "1d56c59ba2464e46a4f32d28ad437019b9aff096dac29a4e5750e4237f255b26"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case17.json",
+      "bytes": 181510,
+      "sha256": "d5bc4c9c53bf60db80f0983725f337ebfe9f42d8d6ecbd2d60bf2c02f94970bd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case18.json",
+      "bytes": 180478,
+      "sha256": "0e77ffffd41e57d6a1c94ae9197fcf4847741d9eced5c00f50e0e469f9c92a50"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter26_case19.json",
+      "bytes": 180114,
+      "sha256": "1c45d4bea373a4b83d718cd70be442a137e6a742b7359539892623c4152fcbf8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case00.json",
+      "bytes": 179538,
+      "sha256": "ee06d2182ec9d185a98863623eb8319ee15e20c2bcf34ef7262119735a909c3b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case01.json",
+      "bytes": 179633,
+      "sha256": "ba8e9278a2b30985778c732dc0ea7ad6f9bfb40826e9d54c28849d61f5667859"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case02.json",
+      "bytes": 183536,
+      "sha256": "f5ecf0124b50b88915829c6825573f01547b3a8c84a1cf3013962b020fb4a716"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case03.json",
+      "bytes": 183526,
+      "sha256": "2225cac0d10fc3bb41c76d00f27ae831b946e713980aaa90cd30deb60c3ffd39"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case04.json",
+      "bytes": 187430,
+      "sha256": "b455e17a4712d453ebf5145c2a5ebf557d8be5a13fb47a22244b35ab5f7c5c20"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case05.json",
+      "bytes": 187497,
+      "sha256": "648082f3f1880ebb4e8db53ea6fc6180d6e719e3622f959adfbe50c000a44ccc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case06.json",
+      "bytes": 188133,
+      "sha256": "0693b2b633e08dfa5ece15db19ccdd377d640f4a75e9a34e35ee5c02695e8ed4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case07.json",
+      "bytes": 188329,
+      "sha256": "fa6fb7902d3406310bb2393e03b0d22a3c25fbf596bb558d3ba402b62aa308cd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case08.json",
+      "bytes": 179251,
+      "sha256": "db1d0d9eecd2500c93516ea74165f329140d8b5acb17ff9afeb2772a135380fe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case09.json",
+      "bytes": 179036,
+      "sha256": "1659784c2ec52b51ce879806569a8e6e4979525d2b7c2ba72d5b97fcfc21e7ba"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case10.json",
+      "bytes": 185972,
+      "sha256": "e215f524beee2a31af0f3811657b6c8fcab202c720dc6628bab58eaa4dee39be"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case11.json",
+      "bytes": 186260,
+      "sha256": "302bde1013e9a926e5e9c5abcbc530dd40a01e0f03f8248d79ec06620ef6874f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case12.json",
+      "bytes": 186528,
+      "sha256": "274ff5e614925cc20ff8dc954d9bd8774bee4741a87bcdaf7d8ae43ff2406f60"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case13.json",
+      "bytes": 186667,
+      "sha256": "297e106395d690a15310826f29c354cb9e31679887a9ee04b5cd6d2cd0e7c857"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case14.json",
+      "bytes": 183757,
+      "sha256": "5af8584840a16fd319a55b41ba7270299d8d86636acd54f1f48f01a0f30edf60"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case15.json",
+      "bytes": 183660,
+      "sha256": "5bededeb0c197f54ccf9c89c23eafa67aed83b3544846347d55708cd9f61cc13"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case16.json",
+      "bytes": 181469,
+      "sha256": "c00fe85f264d110eff772431fb3aa63bb831ad4e5d590eb89d785a05a16a4e90"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case17.json",
+      "bytes": 181563,
+      "sha256": "6a9fc327a744056219b0ab446a2ca10e5230ddcaacbbd19ec4477b8607edc88c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case18.json",
+      "bytes": 179690,
+      "sha256": "23fcf8c7a2958b69558651b792701a80b33bb0b4ce6e002bd5422e27ed0cca28"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter27_case19.json",
+      "bytes": 179823,
+      "sha256": "01ffc0ad1d86e3616ae9ea7ee92613da097326a7af0c1e51d00acadb4a82c9a4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case00.json",
+      "bytes": 179567,
+      "sha256": "7e1936f3a51d4b470e3e02fe16b0e69d3907831b538e450c9bf5531f8f47ff70"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case01.json",
+      "bytes": 179723,
+      "sha256": "9fe54f62fbbe80b1cb8770b4086209afec3ab652e2010771425135b04cb592fc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case02.json",
+      "bytes": 183657,
+      "sha256": "7bdeaa1ebf861d8f38bdff795877ec1799261eeb5840136e028db638312aa049"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case03.json",
+      "bytes": 184028,
+      "sha256": "691c23df056ed22637e188ad021657f41d1f8d733cca02c65e9a6a8f5e1e3c8b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case04.json",
+      "bytes": 187106,
+      "sha256": "2a9a1e5d9b190224619d276b917f5984be972b4090dbef8caa04c945067bdb50"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case05.json",
+      "bytes": 186997,
+      "sha256": "d5ac6f86d3ab0ad82b5e8fb2532a0a13d3d03bd70cb41e9b1eecd83dab7e58a7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case06.json",
+      "bytes": 188033,
+      "sha256": "42eca6089910043a0f2d85d5cf1c5289bb0b286c00c0bf25eeb85aee7a737170"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case07.json",
+      "bytes": 187709,
+      "sha256": "dd9aae733e7ed60d6fadb78f84f85351b443c5b970f0b65357550fab30bc1fa4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case08.json",
+      "bytes": 178526,
+      "sha256": "350e318da5ab20160139b2415a8b1330cee82302b92105d981c386b16bcc3082"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case09.json",
+      "bytes": 178707,
+      "sha256": "8797ad071d9a3d52933751e72ea005b17c52f6ee042408ab885a8fffa953abf3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case10.json",
+      "bytes": 186399,
+      "sha256": "6cf738e405adafc9592e69bb43533440c99390686ec1ad136256196775ed5706"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case11.json",
+      "bytes": 186155,
+      "sha256": "0dd2bed5407a30d1f27c1acddc92ef804a97fb10edcbe04367f2d542f24f0941"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case12.json",
+      "bytes": 186672,
+      "sha256": "65dea516f6a8178283febad4c36636b06f62d38f41a46bbe46658dd822ae813d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case13.json",
+      "bytes": 186807,
+      "sha256": "7d96e13b7f2bcad89bc23aaba83f71cabf519aa8a00b8f7f91d4ed5ff0d2328b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case14.json",
+      "bytes": 183515,
+      "sha256": "55017cb39e062bf9d6e598b1b941beb3e5b84a138ef0da0c11510710af329b53"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case15.json",
+      "bytes": 183498,
+      "sha256": "1cd3730402fbf1e6c31d6c1b2fdd8ff5308b6d6ce1eed8dacfe40914ac3cead3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case16.json",
+      "bytes": 181903,
+      "sha256": "9486a3a27785a24dd9ec89b25b7be13f0b323c2a9bc91ec51886323450c09da8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case17.json",
+      "bytes": 182548,
+      "sha256": "20edfd9bd7f26a7693c5772dc44d99ec379bb30865b1db4dd26a2ccd4b334b1e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case18.json",
+      "bytes": 179385,
+      "sha256": "b16e595790547460070aee1167ece4de0a7b1a8ccb76ba6135b2d762161c25aa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter28_case19.json",
+      "bytes": 179731,
+      "sha256": "82467268a9509b82a84a404b75de059bb1f38fb0fb233694490803d2e7f1dae9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case00.json",
+      "bytes": 180279,
+      "sha256": "c25f1df520ad9feec411c4cb56fdfa5178b38bf73fc46622b753b08c4f36799d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case01.json",
+      "bytes": 179136,
+      "sha256": "fb54815852256b254af0e78607d6479984be28c92b974743bb8ef53c1f09a3be"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case02.json",
+      "bytes": 183623,
+      "sha256": "726c2094ae5abb121effa85e4b8912459d2905d53dda655fd74deed2f3ef1db5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case03.json",
+      "bytes": 183218,
+      "sha256": "2003519866a0d0aad09ba3eb783305725ad117f49be70279adc94335182758c3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case04.json",
+      "bytes": 187311,
+      "sha256": "3e217fd2d8989da1b2bf829260d2aac6b1a7a6dc569a71379057b712343fc4d7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case05.json",
+      "bytes": 187077,
+      "sha256": "fecd63c4dd92c35f658f042f6147e6c53ca4b47afe1db46dd0813aba0838a2cb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case06.json",
+      "bytes": 187731,
+      "sha256": "fe81ee6f33dd2d69eaa9094883b4269387e8c7ec9aef4626e5acf6e10b42b432"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case07.json",
+      "bytes": 188062,
+      "sha256": "ade35874bd5dbc0d838536e149c28d36bab360873ddfa118d7eeb97b5e679552"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case08.json",
+      "bytes": 178539,
+      "sha256": "4b5dfaa07b304e4f56bd307d084ff8dc315dccba966b444adf1b4e323e94f847"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case09.json",
+      "bytes": 178718,
+      "sha256": "2aa6c8ba4edecbd5416641c9a2efe43db4821735db26d0b979ff08876d6327f9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case10.json",
+      "bytes": 186083,
+      "sha256": "07270cad01a482cab80f346a1f5741c1c9ebcf4258c018e98645624d62607e41"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case11.json",
+      "bytes": 185592,
+      "sha256": "e791710e3f8a4ce2ba86cf5ca378f4285db2cc74635565c8494f4558d0d6a6eb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case12.json",
+      "bytes": 186279,
+      "sha256": "94214a5930b5739d8193d211a3ef9b0db371b30a82ad51404464a2c2c769f582"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case13.json",
+      "bytes": 186172,
+      "sha256": "706e38aa167ec0af8dcd0629b60ae04206031536c994436f0c07286305c181d5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case14.json",
+      "bytes": 183714,
+      "sha256": "3aaa490cc37e7c93a4a0a62a900d01b1e5bde6a355b3fbaf01b81a92b8700c6d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case15.json",
+      "bytes": 183264,
+      "sha256": "f9a8c8598b28a0eb3c2146307710ca05baffc02ac25a14b8a363f5429236d01a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case16.json",
+      "bytes": 181619,
+      "sha256": "e257026b3bc85149628b85e461e6a030f44ec1cdec6b0abaf6fb07261036a835"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case17.json",
+      "bytes": 181307,
+      "sha256": "4a8376bb0535eda2b487e80204e0dad4fd103e54d543ef852cf2c077c65a940c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case18.json",
+      "bytes": 179600,
+      "sha256": "077cf916ca32211823e0b71d66a43b159648607a785153a89176b99e75a87a4d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter29_case19.json",
+      "bytes": 179579,
+      "sha256": "c0797b0e6f033f9a23a781a8f201cde69588c02997f970c127961fa852828ab4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case00.json",
+      "bytes": 179433,
+      "sha256": "dae99f602864c7a30cfdea014e2ec8fbc18703013f2fdc596f896dc35e73cebf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case01.json",
+      "bytes": 179815,
+      "sha256": "d3c50f4054ce7404fb67e59916fadb1b8baca210d0a33e4cce268b67205ff18a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case02.json",
+      "bytes": 184486,
+      "sha256": "d11140058997d08a68d366c08b3670c2cd7ac8291ca7a22bb9f68493861e6988"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case03.json",
+      "bytes": 184487,
+      "sha256": "a35b1b0d0a63cc1bccf5242cb81e58a4fa08b355e212653b992a6e386f355c44"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case04.json",
+      "bytes": 187472,
+      "sha256": "c2cb2fded1de556b5f594179d143c4d847995ed2a6dc3ec80ecbe11d06923913"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case05.json",
+      "bytes": 187287,
+      "sha256": "f3d437fb2143d89bfc0e011ca350f676713ef97c6b68d3b3a72a6b1d88b5dd9a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case06.json",
+      "bytes": 188561,
+      "sha256": "4bd786f8f9f56990c6b4505ec720a01f4254ddabedc9299a5d15e930d034a228"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case07.json",
+      "bytes": 188257,
+      "sha256": "57eea0f7d4a2d748d6ef42d6a08df41a8bc2800978b572270902092d5f9fbccf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case08.json",
+      "bytes": 179085,
+      "sha256": "494f2f9e97082328c90c0f20f7c39c320daa454ae524f831616ab3c4686be7e3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case09.json",
+      "bytes": 178987,
+      "sha256": "906a5e6ce30a5da457792756f64cbbc4aae73e7f8287f0f739c624c8b8bce266"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case10.json",
+      "bytes": 186146,
+      "sha256": "941322f14fbe974b244dd0302f7120f3c38fb026a998aa28fb421d98d735da11"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case11.json",
+      "bytes": 186861,
+      "sha256": "9a8f9d0a5af6da70cef41f444abe0dc9fafbe654243fcf156f5127aeae4b7843"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case12.json",
+      "bytes": 186631,
+      "sha256": "5d93a8239c3a179a38e5380efd8807c5f2d7cc13512960c15c1571f0565f5be9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case13.json",
+      "bytes": 186251,
+      "sha256": "69208cefd8e2577448cf1447fdc187bfb17fd24aea010bf27d631f613686abb8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case14.json",
+      "bytes": 183436,
+      "sha256": "be506443bfcfe8df18f96aa901dc69a111d716e2b2abf22b70c7238962e083fd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case15.json",
+      "bytes": 183191,
+      "sha256": "534a70fe02c0b89a5174146f1ea478ec8546282374dfc886517de205390ece21"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case16.json",
+      "bytes": 179776,
+      "sha256": "a03d45b1e73e314c51ff3179b40f272081531cb4383255ecbf7f8088185036de"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case17.json",
+      "bytes": 181923,
+      "sha256": "49a757eb6269c17cff3f1e5750a5de3850966a6c7d26bd6f75417aa061bc2744"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case18.json",
+      "bytes": 179650,
+      "sha256": "d82418fe67306fcbd6b15ff687d21fa650a06f2770360cb3a073a2470a99e18e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter30_case19.json",
+      "bytes": 179562,
+      "sha256": "e3d6bbb2fc24f74f2d9f3cb8cd855115c2db4399d54354ff326cf91578ac0ddd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case00.json",
+      "bytes": 179910,
+      "sha256": "fd60e95d124ace341543e3b24c28a09f33d9ed865774a342e79dfd60a2a06c2e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case01.json",
+      "bytes": 180259,
+      "sha256": "c917f58239b83e1d0260858315193e63d5cc3dfa3fec0e9678abed2c4556d697"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case02.json",
+      "bytes": 184091,
+      "sha256": "a00cbbfd14e33af4cb90dac90ddbdc5d063cc17c750b1183a5f7092ca3f88621"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case03.json",
+      "bytes": 183624,
+      "sha256": "f549d5e9b4d69f2ae14ea3dae5959b02eb79bd2f1a4901fbebc6a90c2c2c867e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case04.json",
+      "bytes": 187308,
+      "sha256": "3156a2523f125b72a128404d48ffc11dda50521de1dded708f5de4bb1afd0bdf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case05.json",
+      "bytes": 186918,
+      "sha256": "0dede6389a7462e7d53b0dd3d7ca8666675cc5d4b39fb084e5f88c61602f79b9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case06.json",
+      "bytes": 188154,
+      "sha256": "ec4bfc09f8af506cdab6be65ae82a0442b123a50e30b165894ddebc944bb7c87"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case07.json",
+      "bytes": 188158,
+      "sha256": "9ad139965a9409e9c22587f56e13d0759e12352f7ffeafe7d7bea5874fcab587"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case08.json",
+      "bytes": 179275,
+      "sha256": "cce6fd653ad0e5a402db2c4adcb65485d29a6ad1a67ddbf44f62c38a0711fcab"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case09.json",
+      "bytes": 178769,
+      "sha256": "d6c941185f06f7caed833cbbe21c9d99db516ef8d0ed2fcc750805312e6a18c9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case10.json",
+      "bytes": 186029,
+      "sha256": "a77ac519f69d9c9a3a490aac00e563e502dd06c6057fa08beec95f679a1a9a6e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case11.json",
+      "bytes": 185835,
+      "sha256": "82b4d55df3beb5462f3864dc9a8df8db5c6ccc82f6f500e763956950dbb4c73d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case12.json",
+      "bytes": 187068,
+      "sha256": "fa17189fe3f6edfd12351c74f762979d107555c850ef67891db4d6d5f164f53b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case13.json",
+      "bytes": 186878,
+      "sha256": "8bfe52c2e98430fea379e2e983ea3d5a6aa9e598426732a5c1dcc8392cea9fc2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case14.json",
+      "bytes": 183213,
+      "sha256": "348a2c54af0cb2f9f1ad38e94ef70787ff469a0d46974d3d7fb954a4c1cd75a4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case15.json",
+      "bytes": 183784,
+      "sha256": "983e7b5d6b682e75c0ef4e1e81703ccc938c9f7f99a5c53124c753d3efa2fefb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case16.json",
+      "bytes": 181900,
+      "sha256": "c7cea748717d33512db8c63a4bf4435c049a37036f46a9dd4bee48fa6b854558"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case17.json",
+      "bytes": 181975,
+      "sha256": "0fcf8a7b3c72e42567cf228ada778f3a2e4e1773266d73900871e368dbf06c3f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case18.json",
+      "bytes": 179757,
+      "sha256": "d18355450f62485fc510cd3ddb8e18fafd848bee9935de35ed6cb6ce42e80d56"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter31_case19.json",
+      "bytes": 180230,
+      "sha256": "a5a57ec5c93c21f046ffe4e1345a1eafa3b7be4785ee2f8fc6beb8f58f6c86ad"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case00.json",
+      "bytes": 180979,
+      "sha256": "a7886a883fcbe7638255a4122e66ef0d344a01a6f3a0cee6fc75429af1945d76"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case01.json",
+      "bytes": 180005,
+      "sha256": "d147d25192fd31e3acab0af98313c91ba63d48b073f163468cbc311781b330c6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case02.json",
+      "bytes": 183925,
+      "sha256": "f56550271cf746c5f51d7617d3cd55f2b7f416db1da3343056ecee2896034c68"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case03.json",
+      "bytes": 184048,
+      "sha256": "d457c43dbea084526522cec9db3ee836a252a6fad1a29e5782f125bbb9d2ee55"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case04.json",
+      "bytes": 187247,
+      "sha256": "f71b00d8ad9c5822efc1afe92c04022d2b0d2560dcb35afe8d9c986153fcedb6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case05.json",
+      "bytes": 187323,
+      "sha256": "5f81496648a5b9a163c56d827d80ad64d8f7903853eadfcf5619ef1ac763971d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case06.json",
+      "bytes": 187945,
+      "sha256": "8fcdb98e3a1b51391016168f16b44334bb4c26d62c9110643990f913ee423611"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case07.json",
+      "bytes": 187966,
+      "sha256": "2fc596b09fa28d5115c5d0d43335760d2c7f8d1b59dc697ec27b01e635371704"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case08.json",
+      "bytes": 178925,
+      "sha256": "9ca844c5c90a553740a1ff0f15d0a5ba4e43c787baa45a2b87819d9649249a17"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case09.json",
+      "bytes": 179290,
+      "sha256": "c665fc66b56d46bbbf9a3f257eafa1fa8f2a066bdf324124957a5fcdb6ea3fb5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case10.json",
+      "bytes": 185456,
+      "sha256": "fc1e1988066a0b1f5ebbab7c8fcbd73812a36662315638ad1ce1d0ceb46165ef"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case11.json",
+      "bytes": 185864,
+      "sha256": "093e579ed66d0581e7747c04755018e4c40ce5672ba65ab57c0b25a459250f9e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case12.json",
+      "bytes": 186560,
+      "sha256": "e74513580a2a12c7eb6b7c1980aa63dd291917934912a4343c4b1707b3ba7c3d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case13.json",
+      "bytes": 186039,
+      "sha256": "2797d84f25726b8d116684b32a5caa967ce15d41d8cd197afb81171dd8924c4c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case14.json",
+      "bytes": 183644,
+      "sha256": "a967e2b08a061b0ade27ad2a4096c68e1901781d5c18d1d0415c94a3698f60b9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case15.json",
+      "bytes": 183942,
+      "sha256": "57e4ad546a9cbc8c13af62be6f8562b6a99a93182c85b66d8207244ea76fa30a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case16.json",
+      "bytes": 181619,
+      "sha256": "683c16fe4fe4649eee35a65a9ee037802254a8abc791f7cf953861ecb20cad83"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case17.json",
+      "bytes": 181028,
+      "sha256": "6f473f66106a8bb65a74125c4d31bcac1992eff437000ee078f942a759c9f918"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case18.json",
+      "bytes": 180294,
+      "sha256": "dbd53e9414d18f3e05f3d1e1708741acd6e2f009d1156e4ac56a2f5ffef5138f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter32_case19.json",
+      "bytes": 179835,
+      "sha256": "b11c66252d877b4c5494ab6f3357dedfe2f33a99258dae47d71f24c9f0b1c7f1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case00.json",
+      "bytes": 179411,
+      "sha256": "4ee20ed5503d51799ff0d37a9ae41ebe8b6def11b1d2026163212f59d41efc24"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case01.json",
+      "bytes": 180048,
+      "sha256": "8453aa7275a8f01e6c87734911e18cc050f94cd19575df3fd1eb50c53e55d307"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case02.json",
+      "bytes": 183619,
+      "sha256": "f44e60b78815ba3bdccfb10d85e1906eee35ebc181242962620ef5a1144b15c6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case03.json",
+      "bytes": 183782,
+      "sha256": "214ad371d44f28ac278e7dda4d5b77b575d4cb3b897ceb422490e07c6abfe957"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case04.json",
+      "bytes": 187057,
+      "sha256": "959c7d160aa1b7b9d78e46f727044d2e503eaae138477783dea5330f85422752"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case05.json",
+      "bytes": 187206,
+      "sha256": "4b01014f9530f4ae7afba1e35e97d4c44624be4ab4ee725d21450dbcee45b721"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case06.json",
+      "bytes": 188109,
+      "sha256": "17850ee82cd2d11ed56071c5f7e7740846522871581ec14445f00be5c7bf72c9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case07.json",
+      "bytes": 187776,
+      "sha256": "00529559e6329bdcf9a1204628858b25996d3415a21f02e2db7ff3a18dca0ecd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case08.json",
+      "bytes": 179271,
+      "sha256": "a06dc40d62bb0688d642869eaa0e3335d667d996f624f62bfe5046a39d3652f7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case09.json",
+      "bytes": 179226,
+      "sha256": "7a64abd7fee9b5d7ea54dfebf7ae1bc23c4e9de4d9f7b14e58b725fdd9a5ed75"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case10.json",
+      "bytes": 185950,
+      "sha256": "a780f44e34bbaee99a4a6f1b2f51cace0cf732df2f879cccb9cd2b43009825df"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case11.json",
+      "bytes": 185837,
+      "sha256": "31de638b5f55fd727c771d3ca4c4fd1b06520179f7d8e0294023d8a11cf98138"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case12.json",
+      "bytes": 186382,
+      "sha256": "c4a410ebf7a6e2b1e71ddb4bdc27e2392762d209e4b7433c37c0675ac9212487"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case13.json",
+      "bytes": 186311,
+      "sha256": "ff1c1ff8edcc0ed8c9c3bdea3d4dff941548b053f2e959f8bb3d01d5b22574bc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case14.json",
+      "bytes": 183590,
+      "sha256": "17934d2acbde0760574193c046dce4b80890a3aa44dba4f9c6af7ea25bd2f8a1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case15.json",
+      "bytes": 183696,
+      "sha256": "e4bb47e0519d50b06678c45a62f27de1b76515573e389aa369dab174e7bdd68d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case16.json",
+      "bytes": 181494,
+      "sha256": "c56c83e9537067b70aa1da25b7bbbd30d8d141f9a4ec141b48da67afb901dc57"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case17.json",
+      "bytes": 181850,
+      "sha256": "c73010ea7edce80aeb6f0c9ee6cbe6c42a9a98208d1f52944c6ef700cdd2fc1c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case18.json",
+      "bytes": 179870,
+      "sha256": "a32b3b54a08d17677c8165cff83d686b112e1f19139c9a281faf1200f9c5767e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter33_case19.json",
+      "bytes": 179905,
+      "sha256": "69ac40224a9872d90da8aff73f4c7988c3bfb093f7987aa537cda25833ccee5e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case00.json",
+      "bytes": 180448,
+      "sha256": "eb8d85013c970d0e130f362f0466d8a2ac4f7e3674924709aa67a8338c495bcd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case01.json",
+      "bytes": 180689,
+      "sha256": "366ddc9810290f4b564afb24374fc14d45ebdb314aa17d0b2366ad83bbe3b902"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case02.json",
+      "bytes": 183843,
+      "sha256": "7f48931b653eed46defdf30a17235f787ac60179b9d41b1e0852b5e9485e0db9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case03.json",
+      "bytes": 183644,
+      "sha256": "ed531cad1fb9e6bfae6be71fd0a6600a58608a26978e04eada6956d66496742f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case04.json",
+      "bytes": 187411,
+      "sha256": "c4e62248981ea5a25dd68bb142e7d33d4d011a9bbd771a2fa237166ae945662c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case05.json",
+      "bytes": 186810,
+      "sha256": "9e2fdcd17bd617adfdaa190a73502f4340f4c819ca02cecea7d91d94f7769330"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case06.json",
+      "bytes": 187574,
+      "sha256": "467fe3e957a69c91cde3047e52b268ede254dd75264a31b0f3ffe566a6ec7afd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case07.json",
+      "bytes": 188393,
+      "sha256": "2e2b468fd8a4df1eb047b6b687fc020cbe20c0a4e4592e4a281a7e9c3c87fa35"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case08.json",
+      "bytes": 179519,
+      "sha256": "81079265526907e7cdca837b217c00db54a07e8dc745192e2172b73e746c5908"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case09.json",
+      "bytes": 179479,
+      "sha256": "db6bb25b850bf77d49b5cae1f74f79e8f78136d9e44fb1c6fcce5447c4e76f63"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case10.json",
+      "bytes": 186126,
+      "sha256": "ff84be8b0a5d8894446a0b3017b4f62817b49f5bf2fd8f8ee7060c183f38c0a0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case11.json",
+      "bytes": 185348,
+      "sha256": "753f884906b85e84e66469049eb998364976a67bd47a2efa8181e2ad141306fd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case12.json",
+      "bytes": 186569,
+      "sha256": "c56f3a718091df9f3dba5d9e641624bed4e1bd106f740d59845bfb55812af40c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case13.json",
+      "bytes": 186913,
+      "sha256": "b419d6d4b47f120602913090dc57064e45d7c2bfc72d6dcde42a5b70350c9bcc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case14.json",
+      "bytes": 184804,
+      "sha256": "2c66d900dcf6c22f774e40505459097920a5081755c611d3216e56da4035952a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case15.json",
+      "bytes": 184252,
+      "sha256": "0ea9c6e88a71dde74481bbd70ef73f5cfdc6944caf734de2cb79bc3bc7b3b782"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case16.json",
+      "bytes": 181438,
+      "sha256": "800b7ccb999ff3c27386c2234accc9aa4aa597a700467b7ae878f0dd33506a4e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case17.json",
+      "bytes": 181935,
+      "sha256": "10731e4481c6228ba505612d0294f8d473e5b9b4da86e8d008acedcf263ebcc7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case18.json",
+      "bytes": 180516,
+      "sha256": "5b62d053a8bbed4bef0a1a648ed94a490c199f10fe17d8d56c6f56482cc0c983"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter34_case19.json",
+      "bytes": 180549,
+      "sha256": "b05f5f535da1358fbe35f1b16e99a59617379ca66d9cbaaab3229f6032d3d264"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case00.json",
+      "bytes": 181064,
+      "sha256": "5d143c3a5f02363286caa24811cbd61454a7e373a94cb20c269b18bedc5a26b4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case01.json",
+      "bytes": 179842,
+      "sha256": "0aed8afe68fba38d9b20ce110ff9efa242267f78e246ae84b5620b0042f23c3b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case02.json",
+      "bytes": 183464,
+      "sha256": "3d1900d080be85906d24547a876079793d711951678421865de8939c56a70cb4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case03.json",
+      "bytes": 183490,
+      "sha256": "795f395d5755bbda71daaa5ddf0dc609642f91eabe062bd6a4d5eb1c4573d01b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case04.json",
+      "bytes": 187073,
+      "sha256": "7d06e0634eaefb2075d23b4debccffad717c3c4079747b3c9031a189cf385e27"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case05.json",
+      "bytes": 187177,
+      "sha256": "40c01e99fb4062aad4102f441e174e46d1f581ea307545a1cbdfe9d80e0d65dc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case06.json",
+      "bytes": 187728,
+      "sha256": "f302d22561663d7b5e08ce910c34e86c2539922d02690f88a7a5d2a9824e6c0b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case07.json",
+      "bytes": 187939,
+      "sha256": "5945f3a88b757e8ab68d7fce5c2524e605261b1aa7fb2e68297c28e92cfca4ed"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case08.json",
+      "bytes": 179670,
+      "sha256": "ba81a73d3e9932d81302e9753e5430f5e1e5d20e2ecd307a444b59186742f397"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case09.json",
+      "bytes": 179840,
+      "sha256": "d15832618cfa74ae0fa03f6d1dc4cc963be06f1431f2f46d3f554bfb094ae485"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case10.json",
+      "bytes": 185760,
+      "sha256": "03ec2b551f4297145f5df4a1b20f4a997c74cd58dc7066b4c1429ece344c0d0a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case11.json",
+      "bytes": 185184,
+      "sha256": "dcff126f84c3ab609c293662e9b80e250acdc20ff30b063654d652f544a5c37e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case12.json",
+      "bytes": 186749,
+      "sha256": "f71dd21b90c8b3d9a1932dbab706523b92e05aefe1b3de4517f14d70ca3aeda4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case13.json",
+      "bytes": 186623,
+      "sha256": "b65cb04df39eb870252f4cbf08d1f018846c166a5caed09d4561b1b9ad84db14"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case14.json",
+      "bytes": 184642,
+      "sha256": "3f874338f3521b5bcd065e94566783db98741533f19459c5337748dd06b0f0ce"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case15.json",
+      "bytes": 184074,
+      "sha256": "d3938ec8f0afd6e949660bc071c7b1c7936fd0bc78438399a1444988e86304d2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case16.json",
+      "bytes": 181891,
+      "sha256": "5553d3b22dc04d9bd1bb7e38cde0d5a0457a7fdb25deea40ec95d6afe6380bcd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case17.json",
+      "bytes": 181434,
+      "sha256": "95c0425c354bb4c722957d4204c777db4f718f4abe54cacf53740606428d2a0c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case18.json",
+      "bytes": 180950,
+      "sha256": "bd68863c66c9c303bb8d30f38fd051fc6631c978628dc21bff189ad640f84ecd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter35_case19.json",
+      "bytes": 180406,
+      "sha256": "5d68ca40fc3589dce8e9ec5f0fd9f3efb93642933577d633278e33d750e2b921"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case00.json",
+      "bytes": 180135,
+      "sha256": "47565f41dde5d9f0e33a815dc2f6be6c48ec4e821f3a5a3d4d2767a104d1d08d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case01.json",
+      "bytes": 180771,
+      "sha256": "9e253d2f48aca676763191164737ded34eda85458ec7cb10008443689d359761"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case02.json",
+      "bytes": 183501,
+      "sha256": "fd91058c5e95a548a46a552843f62f2b4bad4e009e000516b3ae78ed41270936"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case03.json",
+      "bytes": 183922,
+      "sha256": "d28ffa6f3d78cd740923a271be661bdcd237125583b91b53cc35302d35fe58bf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case04.json",
+      "bytes": 186958,
+      "sha256": "cf93046932067c28aeafe38d5bc5d28516f2f246d0fc48bacace15e1bfe3fac1"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case05.json",
+      "bytes": 186838,
+      "sha256": "2d5c67f2ed7d3a11022539fbfdf2307b7f63d635302fab133e8ae72d5cf2d2ac"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case06.json",
+      "bytes": 187669,
+      "sha256": "3abcc4e16c4d7df15d3b24d0126659da2d73da9b8d5f0bd29eac2a902f1eccc9"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case07.json",
+      "bytes": 187638,
+      "sha256": "8273d3b6369ba9a1386b98a145f296e74a6d7d117365a6fce4172a3593e39e7b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case08.json",
+      "bytes": 179176,
+      "sha256": "2fd5d666571a0857679521f62d62700d0a3243129d7002e59544c429b5b1bf38"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case09.json",
+      "bytes": 179544,
+      "sha256": "ce9098ebd3d0e659e12043f25a67a3577cb562b01b8f03fd99738ece32e6dd47"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case10.json",
+      "bytes": 185920,
+      "sha256": "cee103d0e7399cc755725b72dcf609d62b7e001ce229a21d71c8d2b71d905eee"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case11.json",
+      "bytes": 186055,
+      "sha256": "740d3bbdbaf161737847bd21d0d1939ce1efcd61a4bd1ad98c46979243214be4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case12.json",
+      "bytes": 186519,
+      "sha256": "0ed367490ec486135196f22a614aafbea3ce19957e14c47785ecc0f78f7dce3f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case13.json",
+      "bytes": 186889,
+      "sha256": "bcbdd06887f2c0528415a07dda28aaa3541867b8ae2780487351b0412365f595"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case14.json",
+      "bytes": 184489,
+      "sha256": "a4249e89e9334904e69b6dae1c747bc1409c2a149dc38f34cc518cf39f3c738d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case15.json",
+      "bytes": 184884,
+      "sha256": "4f7187b6fcfc78a8e997872bf6924ed877aa4fdab8a5fad612a665fbb791cd30"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case16.json",
+      "bytes": 181565,
+      "sha256": "e7a4c9f9386c29761fa95f04c5b8fa5ca3b72da193793371907b652a913bbd9e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case17.json",
+      "bytes": 181786,
+      "sha256": "ea1940305a84a4dc95159fcb0cfd6e4a3dfb594c7720286bd0a562e8ef814e20"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case18.json",
+      "bytes": 180185,
+      "sha256": "2cb85c2eadd1ff1da34bb07eb69f2d7f2e6c480951804a125d099a346974cd90"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter36_case19.json",
+      "bytes": 180325,
+      "sha256": "0f4bf86c2e49767e8f81f1e8e6945505c4c7c9d7229d3e788d0fe3eb58841241"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case00.json",
+      "bytes": 179843,
+      "sha256": "9c7646381412ec19fa12ad6e7795ea35d8217e8fd647c31a9594adb6f4841839"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case01.json",
+      "bytes": 180602,
+      "sha256": "86a7d7ef4bacb37c505639ffdf585e1c3d99bf137d684da34e8f5f5529931c79"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case02.json",
+      "bytes": 183438,
+      "sha256": "0c74293a65bf7e18f65f5c0779376e350d8c0f3b8d20f29ad775aae08b8a9671"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case03.json",
+      "bytes": 184094,
+      "sha256": "7d0e00fc2d05260c2d27f39d37f4f01ecf983794d9af19652ff62951e7ceb85f"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case04.json",
+      "bytes": 186850,
+      "sha256": "17dab2ffdbe2813a8742db606a63be60f94ede2f6b1e415c301fe6efab8998df"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case05.json",
+      "bytes": 186967,
+      "sha256": "1cb0ee027515fff5585bf16cfde28380a31ddb5c745bb3f6b0eec34db4bfbdbd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case06.json",
+      "bytes": 187916,
+      "sha256": "3d2470dd57e179b36ab788527decff7139c0763255dd30a8fe033c958d4efcef"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case07.json",
+      "bytes": 188129,
+      "sha256": "74226912c0add733493f8ffeb0c8e959734af4d2cb0ee85df685e14610f9d1e8"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case08.json",
+      "bytes": 179718,
+      "sha256": "dce84743d2e801dc459bb8b14e4e6381b7101c9a40b39c2c2aa15a2bed85f746"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case09.json",
+      "bytes": 179681,
+      "sha256": "13508ef99f3f5bbdc9a8988c9755b158af50ad3332787f76ff22689b749b5148"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case10.json",
+      "bytes": 185513,
+      "sha256": "0055984a771d03b0a33dc3cd9670334693d6d6690f0c5b1e4b37e96fdb5953cf"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case11.json",
+      "bytes": 185783,
+      "sha256": "a4c69220280604e3fdaf6a5c123585005298d67d15887e9fa5a8dcde6e767cf2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case12.json",
+      "bytes": 186861,
+      "sha256": "09ce031b6a5ee118e9ef4241b0c36e03205ee04f2a0a37b6bf74ed1fa883d780"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case13.json",
+      "bytes": 187332,
+      "sha256": "2c79126b23d4b92b71874ca35858d608c0ffe1de412d653c61108953598c6f54"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case14.json",
+      "bytes": 184269,
+      "sha256": "ee3a2c6d9381e2c651a283e26aac73d18a7fec36f15ae4f74b5a9aef0a03c948"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case15.json",
+      "bytes": 184212,
+      "sha256": "3660ea64640e195d6615814244c48968d1b828b2a0e9afe4dc1bc42c6822bf93"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case16.json",
+      "bytes": 181366,
+      "sha256": "2673a52c207463c83fcdc5965d6f9e32a541905f29edb8d18723d365461d597b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case17.json",
+      "bytes": 181443,
+      "sha256": "3778a25816fc845c81a95e0ab781465423778947ae90d2903a4485bcb4b566e6"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case18.json",
+      "bytes": 180454,
+      "sha256": "46bc282623d5f0204a5f62d8cd119ff997f6684005931062f73e2e7d94b70255"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter37_case19.json",
+      "bytes": 180940,
+      "sha256": "6e22399e1ea32858b2710b719f508ab4a90287d936f641ab2c70aa862153e5b7"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case00.json",
+      "bytes": 180544,
+      "sha256": "f69c3e98b50e9e3af8a24cbc905e4da3b68f43485f8566f1dd65d2b19889708a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case01.json",
+      "bytes": 179968,
+      "sha256": "9acd337ead139ea78ecae495fc726cb7f240ce2db6a4e349ad646c0c4d96f8fe"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case02.json",
+      "bytes": 183627,
+      "sha256": "d77bd704b68bc3dc6fb64c1be759bdc3c91ebbd5e2899b767b8a6ad24f8139ff"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case03.json",
+      "bytes": 183347,
+      "sha256": "6fdc7077f105a63df93fac6e73d37f53f83180170b2329a9c5c52af4818efe8b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case04.json",
+      "bytes": 186948,
+      "sha256": "7fbe585d46021bc28de3c048b9d76cf60f305f35ed71cb2f97183c3e181075bd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case05.json",
+      "bytes": 187338,
+      "sha256": "52c19977ad1dcd5aa60f7deb90fee069159467c5820fcf2c6ba6fbd653938f33"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case06.json",
+      "bytes": 187966,
+      "sha256": "79de9443a50ed678f71617aeb06195e2f049e708be186c0dfa1a1ca1ade6ad2d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case07.json",
+      "bytes": 187692,
+      "sha256": "30c5ed86dcb65b761fe743a7c88b7cd030f204e211c41e91baa6467765bb63ce"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case08.json",
+      "bytes": 179777,
+      "sha256": "c30d78cd849debf7de82e872fce135f3cc015ce52c88e50c82420f97000a46dd"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case09.json",
+      "bytes": 179645,
+      "sha256": "b38a3358db79ed46ffe0d652fa3db450564781b33cc502b685e841abf41301e2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case10.json",
+      "bytes": 185407,
+      "sha256": "765953da7fe941d42a7d93df1c5299238720688442b1b41a9190457324f27845"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case11.json",
+      "bytes": 185470,
+      "sha256": "6465a26fd55c7808740cd968806db5727277fb38eadae6ab8bb78d2fc4e66d45"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case12.json",
+      "bytes": 187280,
+      "sha256": "8f44d4e0dfdbc3cf547d4ec178428e3a5c78b46919f0f89dea0cc3101972b017"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case13.json",
+      "bytes": 186051,
+      "sha256": "5d9894083d9f5045675338d4b6ddfa5a0eeeb7a7c1b65fd4bce411f7551263aa"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case14.json",
+      "bytes": 184792,
+      "sha256": "e02befde4a6725d66d4bcdf9f003e77fe1e667e87a1476f3b78d1cca3145d3cc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case15.json",
+      "bytes": 184344,
+      "sha256": "7e8cbeb30228ef769ec5f6addd1cf8facad050da29593f4010bd05c870b3297d"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case16.json",
+      "bytes": 182234,
+      "sha256": "d7421dfc6f6448bc8066fbe122e22b9bf53e67cc9e07825b456a68d0818b0aa3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case17.json",
+      "bytes": 182097,
+      "sha256": "8ec0699515bb2884992080e0748203291a5c578c93e7c27c3cd5d17c324178a5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case18.json",
+      "bytes": 180389,
+      "sha256": "0514cc7f3232ea074ec3662334e60bb6a0b11d6c1079a318a85c7bf9f5e28ba4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter38_case19.json",
+      "bytes": 180203,
+      "sha256": "6cde01bcdaa895509690a0fd888824c8bcc34c2e5625a90776df1f953b8c5106"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case00.json",
+      "bytes": 179859,
+      "sha256": "5bc924773d90285a161935620073d8e33a9afbada2375ffa044254089df01680"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case01.json",
+      "bytes": 180713,
+      "sha256": "322672824061368c2d44e25972a6fe49fb8042b852ef47376f4dc398b03394b2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case02.json",
+      "bytes": 183131,
+      "sha256": "63a596440943695d58b05ed5eefa27fe24d5174937c7d79ebad327962982cf27"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case03.json",
+      "bytes": 183535,
+      "sha256": "25372ffe59f8d1548f9c17517122654912c4b337951612a36fb150b2f600a683"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case04.json",
+      "bytes": 186987,
+      "sha256": "f4b24bf59eea3d601f189324a5d1d7a4f678e5e46d9a72c8a6f880e8cf893251"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case05.json",
+      "bytes": 187147,
+      "sha256": "6e46bf22f68b1d6b3f1a4f327581ec4435c3accc9340aa95c86aba1a71cfdb77"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case06.json",
+      "bytes": 187872,
+      "sha256": "139b40a3e9b07d1d365f383f2fbf8ea044153939fc5bd141f9617c741849f84a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case07.json",
+      "bytes": 187989,
+      "sha256": "4d132e0ad56a5c202ce2f79bb79c7e46eca0cdffc363ae2a84c583bddc0c2451"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case08.json",
+      "bytes": 179813,
+      "sha256": "d418a271c10aded7c854743cc86a32f44e79f83fe822abaccf4c888f04eb9ab3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case09.json",
+      "bytes": 179787,
+      "sha256": "e8fffd6a250266acc30fd733ce1f6b4a3e80bc8f6cb672120949ef17f4d51de5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case10.json",
+      "bytes": 185535,
+      "sha256": "5a476f8961143915057a7fb2e06cdf4fa4559ac71e6dce9a561a7e8ef1b6ab50"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case11.json",
+      "bytes": 184948,
+      "sha256": "aa3ca2cdd968c2fa3375524fb6584974451fc09cab6cbc5a7def499eca37b619"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case12.json",
+      "bytes": 186483,
+      "sha256": "8041c661300dcdd829f1c858e5f72287602f22e29a77a0ec0df2e5a3866e0174"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case13.json",
+      "bytes": 186487,
+      "sha256": "58645f1eaee335e5727d40495d2fa2b00a05efd15be15876924405f3145c9eea"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case14.json",
+      "bytes": 184329,
+      "sha256": "61862d27656e4fa90d2a6c329a7c485cf6809e141aa0510094a17d580822a153"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case15.json",
+      "bytes": 184309,
+      "sha256": "2d8220bedf7bb732eb7346112c3c322971bbab859ba4adaafc62f32d4c38e6a4"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case16.json",
+      "bytes": 181711,
+      "sha256": "3857155c942a19485b8e5b3567f96003551033f68ae8b48e733bc7f7995b195b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case17.json",
+      "bytes": 182192,
+      "sha256": "2ff3e561cc6848f3a633d218addf16229e6d23e7534a151f90235699ab58220b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case18.json",
+      "bytes": 181022,
+      "sha256": "95160bfe3e61a334b1e5a146a175a3822206aeb5b67b6a97d16ea17945581953"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter39_case19.json",
+      "bytes": 180511,
+      "sha256": "1906354fb8a4d69f1ab722c99e972a50e4fd7faa50f82b1ca7602efde866c106"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case00.json",
+      "bytes": 180890,
+      "sha256": "7def587079b537e844ec1a0dfcb6e1dc498069bb5ae746b4295b67c87091282e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case01.json",
+      "bytes": 180541,
+      "sha256": "02e51f93d73ff68fa7df1c5cc5a7f238a77fb06508613614fc16b9e5f29bb6bc"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case02.json",
+      "bytes": 182658,
+      "sha256": "66f90e917560e433194e4e846bde9190d1c1b5045dfac815ac19a2700ed1e2d3"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case03.json",
+      "bytes": 183094,
+      "sha256": "44af3d8d14b0f9f2448fa8a53c0ce3ffcfd4167343b70a036e7c215bc055600b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case04.json",
+      "bytes": 186511,
+      "sha256": "d5ca8cbe8115b6336e2282a4285cbb2120e1510df7f783469930d83744eb1035"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case05.json",
+      "bytes": 186846,
+      "sha256": "f8b02b32dcc45039079b44dccd1dc595e9ef688995597aa27b8f157470cd9e0c"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case06.json",
+      "bytes": 187770,
+      "sha256": "70d7c337b0b380e439fdf3a34b057b828c773e9d01fd9d100034cbae58e8385b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case07.json",
+      "bytes": 188102,
+      "sha256": "ece7bedd079ab0d65f743e3cb8e935d2537337b94f5522ebc05f3321f2c52a9a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case08.json",
+      "bytes": 180048,
+      "sha256": "a2ff37fa90f7ff69268958449f51e7e9658212cd4d91e74c14670cce62c91238"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case09.json",
+      "bytes": 179854,
+      "sha256": "cc8e4cb5b5a441074b59786b71b189187e4caf5a440169c58ecdfa433904308a"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case10.json",
+      "bytes": 185012,
+      "sha256": "9c09c8e5e60d6d842f75db686a690679a82ef332e610139594025f7c4c2aa394"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case11.json",
+      "bytes": 184983,
+      "sha256": "560183bc730c33e4331d39508ab2876596e7a8528c9c9836432b197712e65abb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case12.json",
+      "bytes": 186339,
+      "sha256": "813bc5087ad972689e7b4bf9875d329cbc748b257dc07bc8983a419ded12e001"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case13.json",
+      "bytes": 186641,
+      "sha256": "ce7f2a03f23b7b7196fe32d9213393cde4adc0461002e3120f4a142ebdaba120"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case14.json",
+      "bytes": 185376,
+      "sha256": "877471cbcdb3e90ce4fd932dc6c464e72e525038a4d8b8accc9cef6c13b1a12b"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case15.json",
+      "bytes": 185034,
+      "sha256": "067833b857efe870b6ab6c044f2d4efa971c999bc1785d90b864b0bf84e989eb"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case16.json",
+      "bytes": 182083,
+      "sha256": "71ab61a6033e9b3ebb2997606c197f0e6d48d0bb857370cd4270d45f63d56b61"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case17.json",
+      "bytes": 182538,
+      "sha256": "09e0636c4dacd8b42185fe20e1817ed4782e117911fcde9b0cb884d505bb7fd2"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case18.json",
+      "bytes": 180535,
+      "sha256": "6d669c4711b854bdf18ca46ffaa215375fbab7dd77fb3e68698052221a6962a5"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/trajectories/iter40_case19.json",
+      "bytes": 180683,
+      "sha256": "f9083367aae168b2b542d7afd307698da0613e16e91f0c98c9011a3278d4f42e"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/worker_ready.json",
+      "bytes": 7666,
+      "sha256": "ed1b2d4a8a8aa81e118b6a2c54897cd3e32f5e5a566eeee60c9227bed62d79f0"
+    },
+    {
+      "path": "results/PPO_world_risk_r1/worker_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "file_count": 878,
+  "uncompressed_bytes": 189606043
+}

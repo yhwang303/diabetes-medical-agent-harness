@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "count": 25,
+  "checks": [
+    "python38_AST",
+    "hold_expected_config_is_None",
+    "hold_missing_config_key_accepted",
+    "hold_explicit_null_config_accepted",
+    "hold_unexpected_config_hash_rejected",
+    "physiology_expected_config_is_None",
+    "physiology_missing_config_key_accepted",
+    "physiology_explicit_null_config_accepted",
+    "physiology_unexpected_config_hash_rejected",
+    "legacy_expected_config_is_None",
+    "legacy_missing_config_key_accepted",
+    "legacy_explicit_null_config_accepted",
+    "legacy_unexpected_config_hash_rejected",
+    "ppo_required_config_hash_nonnull",
+    "ppo_missing_required_config_rejected",
+    "ppo_null_required_config_rejected",
+    "ppo_wrong_required_config_hash_rejected",
+    "ppo_exact_required_config_hash_accepted",
+    "retained_required_config_hash_nonnull",
+    "retained_missing_required_config_rejected",
+    "retained_null_required_config_rejected",
+    "retained_wrong_required_config_hash_rejected",
+    "retained_exact_required_config_hash_accepted",
+    "sources_unchanged",
+    "no_model_or_simulator_imported"
+  ],
+  "source_sha256": {
+    "confirmation_gate.py": "3a8da7223ddce6dfc13e9767faa86c8735b638214d40d5276e0944bb4ee7c9ce",
+    "evaluate_candidates.py": "fa135911d85ad29ebe06268144ea19646aa3f97800a2f169927e0be76017947f",
+    "checks/check_confirmation_config_compat.py": "d4ca01bf659ce2da63349dc046a09f38f352c8760963b4e3c87c0f1ea8c251ed"
+  },
+  "scope": "development_evidence config key compatibility only; other metadata remains hash-consistent",
+  "fixture_only": true,
+  "old_manifests_modified": false,
+  "actual_selection_frozen": false,
+  "actual_confirmation_jobs_generated": false,
+  "training_simulation_or_remote_run": false
+}

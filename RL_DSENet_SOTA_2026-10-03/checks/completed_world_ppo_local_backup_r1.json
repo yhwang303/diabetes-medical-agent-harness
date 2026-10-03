@@ -1,0 +1,9 @@
+{
+  "status": "all_archive_members_exact",
+  "archive_sha256": "62c7e95101c84c8d131ba56f1f7429a84fcb646b9e2c3504564147fb82dd9498",
+  "manifest_sha256": "1527c50492c9f251a6fbad38151ba5ae8881125f60a716295aa2d280a9eb9863",
+  "members": 878,
+  "uncompressed_bytes": 189606043,
+  "archive_bytes": 58141749,
+  "extracted": false
+}

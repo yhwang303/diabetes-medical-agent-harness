@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "development_panels": {
+    "hold": "dev_hold_r1",
+    "physiology": "dev_physiology_r1",
+    "d06_frozen": "dev_legacy_r1",
+    "retained_bc": "dev_retained_bc_r1",
+    "retained_td3bc": "dev_retained_td3bc_r1",
+    "retained_iql": "dev_retained_iql_r1",
+    "retained_rebrac": "dev_retained_rebrac_r1",
+    "retained_fql": "dev_retained_fql_r1",
+    "retained_lom": "dev_retained_lom_r1",
+    "retained_gfp": "dev_retained_gfp_r1",
+    "retained_ditr": "dev_retained_ditr_r1",
+    "iql_wide": "dev_iql_wide_r1",
+    "ppo_wide": "dev_ppo40_r1",
+    "ppo_world_quantile": "dev_world_ppo40_r1",
+    "mpc_point_world": "dev_world_point_r1",
+    "mpc_quantile_median": "dev_world_quantile_median_r1",
+    "mpc_expected": "dev_world_expected_r1",
+    "mpc_event_risk": "dev_world_risk_r1"
+  },
+  "primary_method_id": "ppo_world_quantile",
+  "secondary_rl_method_id": "ppo_wide",
+  "batch_size": 8,
+  "development_bundle_sha256": "13a849dc0785ceb54368c788e470b5b2024978fef70de35b883dd0a64e4f5bb4"
+}

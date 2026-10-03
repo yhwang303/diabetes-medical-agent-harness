@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "training_seed": 260915,
+  "task": "adult_T1D_basal_only_5min",
+  "observation": "actual past 72x22 history and warmup-delivered basal anchor; no identity, hidden physiology or future meals",
+  "action": {"unit": "U/h", "new_support": "0 to 2 times observed warmup basal", "global_limit": [0, 20]},
+  "patients": [1,2,3,4,5,6,7,8,9,10],
+  "patient_claim": "known virtual patients; previous studies already exposed all ten; no unseen-patient generalization claim",
+  "total_minutes": 4320,
+  "warmup_minutes": 360,
+  "bolus_factors": [0.8,1.0,1.2],
+  "train_scenario_seeds": [103001,103002,103003,103004],
+  "world_validation_scenario_seeds": [103011,103012],
+  "ppo_train_scenario_seed_range_inclusive": [103201,103280],
+  "smoke_scenario_seeds": [103800],
+  "development_scenario_seeds": [103101,103102],
+  "confirmation_scenario_seeds": [103901,103902],
+  "confirmation_policy": "Do not generate confirmation trajectories before final model/configuration selection is frozen. No tuning on confirmation.",
+  "source_data": "existing immutable Loop train and public simulation training replay, plus newly generated training cases only",
+  "scorer": "RL_DITR创新_2026-09-16/control_metrics.py",
+  "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+  "prior_confirmation": "917*, 919*, 92111/92112 are exposed and may only serve documented development diagnostics"
+}

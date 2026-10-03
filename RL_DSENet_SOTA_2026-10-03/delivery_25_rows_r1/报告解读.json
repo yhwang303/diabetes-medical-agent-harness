@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "paragraphs": [
+    "开发阶段已完成，独立确认尚未运行。本报告包含25个方案／检查点行、1500条原始轨迹；主表18个拟确认部署，内部表7个较早检查点或均值消融。19行完整，6个旧对照存在提前终止，共44个失败病例。表格行数不等于独立算法数。",
+    "新世界模型路线的第40轮 PPO 是当前主候选：BG TIR = 96.5972%、TBR70 = 1.2163%、TBR54 = 0.3577%、TAR180 = 2.1864%、SD = 23.1438 mg/dL、CV = 18.7050%。相对原 D06，9项描述指标改善、1平、1差；HBGI 从1.2057升至1.2402，因此原严格联合门槛仍未通过。长时间严重低糖事件仍有4次。",
+    "旧模型特征路线的 wide-PPO40 在开发均值上通过原严格门槛，10项改善、1平、0差，作为第二RL候选保留。它使用P03/H02/D05与生理特征，不能把收益归因于新quantile world。world-PPO40的低糖、TIR与波动优于wide40，但HBGI仍有取舍。",
+    "独立审查确认：在拟确认的12个完整部署、11个family描述指标中，两个PPO候选均无单独最优，仅TAR250与多行共同为0。相对D06多数改善没有实现全比较集多数最优，当前不能声称SOTA或最终目标已达成。wide/world的第8轮与Hold的全部BG聚合及患者指标精确一致；早期负结果全部保留。",
+    "固定MPC也显示真实控制收益。point world 的 TIR = 97.4263%、TBR70 = 1.9045%、TBR54 = 0.3009%，但CV和LBGI比D06差；quantile risk MPC 的 TIR = 96.8056%、TBR54 = 0%，TBR70 = 2.2075%仍比D06差。同一quantile权重的median部署已经TBR54为0，不能把严重低糖清零归因于事件项。MPC与真实PPO actor分别报告。",
+    "新结构以冻结DSENet预测、可观测历史编码、因果动作响应、CGM分位数和真实BG事件头构建六小时世界模型。PPO使用冻结world提供的195维特征，在真实仿真交互的BG奖励上学习，未使用想象rollout，也不是端到端联合更新world与policy。只实现数值仿真研究闭环，产品Harness与真实患者准入均未改变。",
+    "患者配对区间表明仍有不确定性：world-PPO40相对D06的TIR差为 +0.8712 pp，95%区间为[−0.2146, 1.9529]；TBR70差为−0.7849 pp，区间为[−1.7424, −0.0800]；TBR54差为−0.3388 pp，区间为[−1.0164, 0]。p4的TIR下降2.3779 pp，严重低糖仍集中于p9；均值改善不能解释为每名患者无退步。",
+    "新IQL为固定20k的任务适配基线，其最终训练样本权重的ESS/N = 0.9901，主体权重接近1；低糖标签子集权重更低。这只是最终固定模型对训练replay的只读诊断，不能断言整个IQL等同BC、解释弱结果因果或代表充分调优IQL上限。旧八方法的冻结权重与动作投影限制也明确保留。",
+    "下一步是锁定18个方法并执行一次相同60场景确认；本快照尚未生成确认。条件性BC工具保持未激活。全部开发数据、缓存、模型与成功／失败轨迹5246个文件已归档至本地并逐文件核验。单训练seed260915、十名已见虚拟成人、公开仿真与basal-only条件始终保留；零TBR54不构成临床安全证明。"
+  ],
+  "panels": {
+    "dev_legacy_r1": {
+      "method_id": "d06_frozen",
+      "label": "原 D06 · 冻结窄动作",
+      "group": "comparison"
+    },
+    "dev_hold_r1": {
+      "method_id": "hold",
+      "label": "观测基础率 Hold",
+      "group": "comparison"
+    },
+    "dev_physiology_r1": {
+      "method_id": "physiology",
+      "label": "IOB / Zone 规则对照",
+      "group": "comparison"
+    },
+    "dev_ppo08_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 08 轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_retained_bc_r1": {
+      "method_id": "retained_bc",
+      "label": "BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_iql_r1": {
+      "method_id": "retained_iql",
+      "label": "IQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo16_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 16 轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_retained_rebrac_r1": {
+      "method_id": "retained_rebrac",
+      "label": "ReBRAC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_lom_r1": {
+      "method_id": "retained_lom",
+      "label": "LOM · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_gfp_r1": {
+      "method_id": "retained_gfp",
+      "label": "GFP · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_td3bc_r1": {
+      "method_id": "retained_td3bc",
+      "label": "TD3BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_fql_r1": {
+      "method_id": "retained_fql",
+      "label": "FQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo32_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第32轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_retained_ditr_r1": {
+      "method_id": "retained_ditr",
+      "label": "RL-DITR* · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_world_point_r1": {
+      "method_id": "mpc_point_world",
+      "label": "Point world · MPC",
+      "group": "comparison"
+    },
+    "dev_world_quantile_median_r1": {
+      "method_id": "mpc_quantile_median",
+      "label": "Quantile world · 中位数 MPC",
+      "group": "comparison"
+    },
+    "dev_world_expected_r1": {
+      "method_id": "mpc_expected",
+      "label": "Quantile world · 期望风险 MPC",
+      "group": "comparison"
+    },
+    "dev_world_risk_r1": {
+      "method_id": "mpc_event_risk",
+      "label": "Quantile world · 期望风险 + 事件 MPC",
+      "group": "comparison"
+    },
+    "dev_world_ppo08_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第08轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_iql_wide_r1": {
+      "method_id": "iql_wide",
+      "label": "IQL · 新任务固定20k",
+      "group": "comparison"
+    },
+    "dev_ppo16_mean_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO16 · 同权重概率均值部署",
+      "group": "internal_ablation",
+      "deployment_variant": "probability_mean_of_capped_executable_grid; post-development hypothesis; same checkpoint as argmax16"
+    },
+    "dev_ppo40_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第40轮（第二RL候选）",
+      "group": "comparison"
+    },
+    "dev_world_ppo16_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第16轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_world_ppo32_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第32轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_world_ppo40_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第40轮（主候选）",
+      "group": "comparison"
+    }
+  },
+  "equal_bg": [
+    {
+      "left": "dev_ppo08_r1",
+      "right": "dev_hold_r1"
+    },
+    {
+      "left": "dev_world_ppo08_r1",
+      "right": "dev_hold_r1"
+    }
+  ]
+}

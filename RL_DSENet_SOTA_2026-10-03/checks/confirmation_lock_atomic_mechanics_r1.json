@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "count": 25,
+  "checks": [
+    "python38_syntax",
+    "default_wait_is_30_seconds",
+    "uncontended_lock_records_owner",
+    "normal_exit_removes_own_lock",
+    "body_error_releases_own_lock",
+    "holder_process_acquired",
+    "contender_process_started",
+    "contender_waits_without_overlapping",
+    "contender_acquires_after_release",
+    "both_contending_processes_exit_successfully",
+    "two_real_processes_observed",
+    "critical_sections_do_not_overlap",
+    "successful_wait_is_nonzero_and_bounded",
+    "contended_completion_cleans_lock",
+    "timeout_holder_acquired",
+    "timeout_identifies_retained_lock",
+    "live_owner_timeout_bounded",
+    "timeout_does_not_remove_live_owner_lock",
+    "original_owner_still_releases_after_timeout",
+    "timeout_identifies_retained_lock",
+    "abandoned_lock_timeout_bounded",
+    "abandoned_lock_preserved_byte_for_byte",
+    "non_contention_errors_are_not_retried",
+    "source_files_unchanged",
+    "no_model_or_simulator_imported"
+  ],
+  "source_sha256": {
+    "confirmation_gate.py": "8e25df56e5177f022d2b69ced63fbe736d06c04303eceffa39d1bd7d94c30d44",
+    "checks/check_confirmation_lock.py": "997c97b07bb59f257a91c5befbc2181e542e0d5c1c9cdf0ea1b1a543641ce5c4"
+  },
+  "process_start_method": "spawn",
+  "observed_lock_events": [
+    {
+      "event": "holder_enter",
+      "time_utc_seconds": 1791044589.671896,
+      "pid": 92514
+    },
+    {
+      "event": "holder_exit",
+      "time_utc_seconds": 1791044589.9255822,
+      "pid": 92514
+    },
+    {
+      "event": "waiter_enter",
+      "time_utc_seconds": 1791044589.927745,
+      "pid": 92515,
+      "wait_seconds": 0.207472208
+    },
+    {
+      "event": "waiter_exit",
+      "time_utc_seconds": 1791044589.9293618,
+      "pid": 92515
+    }
+  ],
+  "timings": {
+    "live_owner_timeout_seconds": 0.20515529100000002,
+    "abandoned_lock_timeout_seconds": 0.12103395800000005
+  },
+  "fixture_only": true,
+  "actual_selection_frozen": false,
+  "actual_confirmation_jobs_generated": false,
+  "training_simulation_or_remote_run": false,
+  "default_lock_timeout_seconds": 30.0
+}

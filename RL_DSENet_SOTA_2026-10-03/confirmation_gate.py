@@ -12,6 +12,8 @@ import json
 import os
 from pathlib import Path
 import re
+import time
+import uuid
 
 R=Path(__file__).resolve().parent
 P=R.parent
@@ -164,7 +166,7 @@ def development_evidence(method):
             or manifest['scorer_sha256']!=protocol['scorer_sha256']
             or summary['provenance']['manifest_sha256']!=sha(manifest_path)
             or manifest['checkpoint_sha256']!=(method['checkpoint']['sha256'] if method['checkpoint'] else None)
-            or manifest['config_sha256']!=method_config_sha(method)):
+            or manifest.get('config_sha256')!=method_config_sha(method)):
         raise ValueError('Method lacks its exact completed60 development evidence: '+method['id'])
     for item in summary['episodes']:
         raw=(summary_path.parent/item['raw_path']).resolve();raw.relative_to(summary_path.parent.resolve())
@@ -206,9 +208,19 @@ def validate_plan(plan,check_exposure=True):
 
 
 @contextmanager
-def lock(directory):
+def lock(directory,timeout_seconds=30.):
     path=directory/'.gate.lock'
-    descriptor=os.open(str(path),os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600)
+    deadline=time.monotonic()+timeout_seconds
+    while True:
+        try:
+            descriptor=os.open(str(path),os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600)
+            break
+        except FileExistsError as error:
+            remaining=deadline-time.monotonic()
+            if remaining<=0:
+                raise TimeoutError('Timed out waiting for confirmation gate lock; existing lock retained: '+str(path)) from error
+            # Retry only lock acquisition, never a ticket or experiment. No stale-lock deletion.
+            time.sleep(min(.05,remaining))
     try:
         os.write(descriptor,str(os.getpid()).encode());os.close(descriptor)
         yield
@@ -245,8 +257,14 @@ def events(directory):
 
 
 def append_event(directory,value):
-    number=len(list((directory/'events').glob('*.json')))+1
-    write_new(directory/'events'/('%04d.json'%number),dict(time_utc=datetime.now(timezone.utc).isoformat(),**value))
+    folder=directory/'events'
+    number=len(list(folder.glob('*.json')))+1
+    temporary=folder/('.%04d.%s.tmp'%(number,uuid.uuid4().hex))
+    write_new(temporary,dict(time_utc=datetime.now(timezone.utc).isoformat(),**value))
+    # Callers hold the gate lock. Publish complete bytes without replacing any event.
+    # On write/link failure retain the temporary evidence; readers only glob *.json.
+    os.link(str(temporary),str(folder/('%04d.json'%number)))
+    temporary.unlink()
 
 
 def authorize(freeze_path,method_id):

@@ -1,0 +1,16 @@
+{
+  "status": "reviewed",
+  "html_sha256": "5d55aa6ad2504dc4e72346ffdbe35ff864c4261ff85fff8441f093b355f2996f",
+  "viewport": [
+    1280,
+    720
+  ],
+  "browser": "Codex in-app browser",
+  "checks": [
+    "main table horizontally scrollable with fixed method column",
+    "original total risk column present",
+    "world40 total risk1.75±1.09 correctly bolded among complete main rows",
+    "severe long-low4 and incomplete Observed rows retained"
+  ],
+  "limitation": "Selected rendered views plus separate500-cell machine check; not a medical validation"
+}
