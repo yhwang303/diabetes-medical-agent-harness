@@ -1,0 +1,9 @@
+{
+  "status": "verified_local_frozen_dependency_backup",
+  "remote_source": "RL_DITR创新_2026-09-16/results/H02_prefix_sim_factual/patient_best.pt",
+  "local_backup": "RL_DSENet_SOTA_2026-10-03/archives/legacy_H02_patient_best.pt",
+  "sha256": "18ecdc57a60fd656cfd239348dd5e0677c78744d15b75a12218febfe9719f012",
+  "bytes": 155736727,
+  "source_modified": false,
+  "weight_deserialized": false
+}
