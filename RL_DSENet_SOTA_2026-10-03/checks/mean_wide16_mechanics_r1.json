@@ -1,0 +1,383 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "passed": true,
+  "mechanics_only": true,
+  "formal_evaluation_authorized": false,
+  "model_or_clinical_performance_claim": false,
+  "simulator_executed": false,
+  "tolerances": {
+    "independent_probability": 1e-12,
+    "independent_mean_u_h": 1e-12,
+    "original_argmax_action_u_h": 2e-06,
+    "original_fp32_probability": 2e-07,
+    "repeat_logits": 1e-05,
+    "repeat_probability": 1e-06,
+    "repeat_action_u_h": 1e-06,
+    "batch_logits": 0.0001,
+    "batch_probability": 1e-05,
+    "batch_action_u_h": 2e-05
+  },
+  "source_sha256": "1b9d1bb1bd555df0722043395cf9e4a071c27dcb05fbf6f2c993ff0502569fd2",
+  "binding": {
+    "iteration": 16,
+    "checkpoint_sha256": "e6152bc0b6de2be08513a0f37375787b066ef02a86870b1e145f087e8098e336",
+    "config_sha256": "1ce258b63a42ed9e592d67b961cdf551e88e5039dad4cb6998477c07ea54142b",
+    "training_provenance_sha256": "486c9cfadc41b48c428c5ef53ce9708b5b8d5336fc76f81d0e0ab4729d755bf1",
+    "history_prefix_sha256": "36d580d696a85781a981bfa5eacda3c15ef8bab3c040d670bca3a8744aad2164",
+    "history_prefix_bytes": 13252
+  },
+  "record": {
+    "record": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/natural_validation_r1/bolus_0.8_p01_s103011.json",
+    "record_sha256": "ce175cc89c318f895a862f6fe192565144f6bc7d05ce540d64099f9cb93cbc7c",
+    "manifest_sha256": "b581c10ad6c4b68f46049fa528742781dc9ba3df542c11eed876bb8752a4fa18",
+    "summary_sha256": "c8568dee14aa13a600e66ae2a71e80923ef789427c265fb64be5fce9a517534a",
+    "origin_minutes": [
+      360,
+      420
+    ],
+    "split": "world_validation",
+    "history_shape": [
+      2,
+      72,
+      22
+    ],
+    "history_bytes_sha256": "5e2f9e94117c46656842e4a5f9c0224a5161388033e1b821953beada850d97d9",
+    "anchors_u_h": [
+      1.2675000429153442,
+      1.2675000429153442
+    ],
+    "observed_fields": [
+      "cgm_mg_dl",
+      "delivered_basal_u_h",
+      "bolus_u",
+      "meal_g",
+      "minute"
+    ],
+    "BG_identity_future_meals_sent_to_policy": false
+  },
+  "source_and_input_sha256": {
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/PPO_wide_risk/config.json": "1ce258b63a42ed9e592d67b961cdf551e88e5039dad4cb6998477c07ea54142b",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/PPO_wide_risk/policy_iter16.pt": "e6152bc0b6de2be08513a0f37375787b066ef02a86870b1e145f087e8098e336",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/PPO_wide_risk/provenance.json": "486c9cfadc41b48c428c5ef53ce9708b5b8d5336fc76f81d0e0ab4729d755bf1",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/natural_validation_r1/bolus_0.8_p01_s103011.json": "ce175cc89c318f895a862f6fe192565144f6bc7d05ce540d64099f9cb93cbc7c",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/natural_validation_r1/manifest.json": "b581c10ad6c4b68f46049fa528742781dc9ba3df542c11eed876bb8752a4fa18",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/natural_validation_r1/summary.json": "c8568dee14aa13a600e66ae2a71e80923ef789427c265fb64be5fce9a517534a",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/protocol.json": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/ppo_mean_worker.py": "67e4cf4f4a763956eef45c733f45d5d49604bcd78ef489cc9c365c84d4a5719f",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/ppo_wide_worker.py": "282e7f58a36f94f6e13b6a84b258c3c3903662f49cedd3346708f012f7ee18eb",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/ppo_world_worker.py": "c949d01d679baf58a95c231692975164890989861c9e17f891fd197028d0957e",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/physiologic_features.py": "0c0f89a6bbe8f8a8dc6a494f7457ad743d74069ac96f81eb6a8ee6496530b59c",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/check_mean_worker.py": "1b9d1bb1bd555df0722043395cf9e4a071c27dcb05fbf6f2c993ff0502569fd2",
+    "/root/autodl-tmp/diabetes-agent/RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/observable_history.py": "c1b0d1b83071bf76443f69157358571eae144a396ff7d0a8b984e8d66d70f75d",
+    "/root/autodl-tmp/diabetes-agent/Loop\u6570\u636e\u96c6/\u8bad\u7ec3\u7ba1\u7ebf_v2/prepared/normalization.json": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f"
+  },
+  "errors": {
+    "wrapper_original_actor_logits": {
+      "maximum": 0.0,
+      "tolerance": 1e-05
+    },
+    "independent_softmax_probability": {
+      "maximum": 8.673617379884035e-19,
+      "tolerance": 1e-12
+    },
+    "original_FP32_softmax_difference": {
+      "maximum": 1.6134959479607858e-08,
+      "tolerance": 2e-07
+    },
+    "independent_executable_grid": {
+      "maximum": 0.0,
+      "tolerance": 0.0
+    },
+    "independent_grid_probability_mean": {
+      "maximum": 2.220446049250313e-16,
+      "tolerance": 1e-12
+    },
+    "action_mean_alias": {
+      "maximum": 0.0,
+      "tolerance": 0.0
+    },
+    "original_argmax_rates": {
+      "maximum": 2.9802322387695312e-08,
+      "tolerance": 2e-06
+    },
+    "repeat_logits": {
+      "maximum": 0.0,
+      "tolerance": 1e-05
+    },
+    "repeat_probabilities": {
+      "maximum": 0.0,
+      "tolerance": 1e-06
+    },
+    "repeat_actions": {
+      "maximum": 0.0,
+      "tolerance": 1e-06
+    },
+    "batch_single_logits": {
+      "maximum": 0.0,
+      "tolerance": 0.0001
+    },
+    "batch_single_probabilities": {
+      "maximum": 0.0,
+      "tolerance": 1e-05
+    },
+    "batch_single_actions": {
+      "maximum": 0.0,
+      "tolerance": 2e-05
+    }
+  },
+  "checks": [
+    {
+      "name": "ready_family_interface",
+      "passed": true
+    },
+    {
+      "name": "ready_independent_history_and_sha_binding",
+      "passed": true
+    },
+    {
+      "name": "ready_no_training_or_sampling",
+      "passed": true
+    },
+    {
+      "name": "ready_source_hashes",
+      "passed": true
+    },
+    {
+      "name": "ready_provenance_and_feature_dim",
+      "passed": true
+    },
+    {
+      "name": "no_optimizer_or_rollout_buffer",
+      "passed": true
+    },
+    {
+      "name": "all_models_eval_and_frozen",
+      "passed": true
+    },
+    {
+      "name": "actor_tensors_equal_checkpoint",
+      "passed": true
+    },
+    {
+      "name": "critic_tensors_equal_checkpoint",
+      "passed": true
+    },
+    {
+      "name": "one_original_actor_forward",
+      "passed": true
+    },
+    {
+      "name": "one_original_actor_forward",
+      "passed": true
+    },
+    {
+      "name": "wrapper_original_actor_logits",
+      "passed": true
+    },
+    {
+      "name": "independent_softmax_probability",
+      "passed": true
+    },
+    {
+      "name": "original_FP32_softmax_difference",
+      "passed": true
+    },
+    {
+      "name": "independent_executable_grid",
+      "passed": true
+    },
+    {
+      "name": "independent_grid_probability_mean",
+      "passed": true
+    },
+    {
+      "name": "action_mean_alias",
+      "passed": true
+    },
+    {
+      "name": "original_argmax_indices",
+      "passed": true
+    },
+    {
+      "name": "original_argmax_rates",
+      "passed": true
+    },
+    {
+      "name": "repeat_logits",
+      "passed": true
+    },
+    {
+      "name": "repeat_probabilities",
+      "passed": true
+    },
+    {
+      "name": "repeat_actions",
+      "passed": true
+    },
+    {
+      "name": "one_original_actor_forward",
+      "passed": true
+    },
+    {
+      "name": "one_original_actor_forward",
+      "passed": true
+    },
+    {
+      "name": "batch_single_logits",
+      "passed": true
+    },
+    {
+      "name": "batch_single_probabilities",
+      "passed": true
+    },
+    {
+      "name": "batch_single_actions",
+      "passed": true
+    },
+    {
+      "name": "batch_single_argmax_indices",
+      "passed": true
+    },
+    {
+      "name": "synthetic_large_anchor_cap_before_mean",
+      "passed": true
+    },
+    {
+      "name": "training_and_hidden_fields_rejected",
+      "passed": true
+    },
+    {
+      "name": "all_model_parameters_and_buffers_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_models_still_frozen_and_no_gradients",
+      "passed": true
+    },
+    {
+      "name": "no_training_state_created",
+      "passed": true
+    },
+    {
+      "name": "CPU_CUDA_RNG_unchanged",
+      "passed": true
+    },
+    {
+      "name": "Python_NumPy_RNG_unchanged",
+      "passed": true
+    },
+    {
+      "name": "checkpoint_history_prefix_binding_unchanged",
+      "passed": true
+    },
+    {
+      "name": "source_and_input_files_unchanged",
+      "passed": true
+    }
+  ],
+  "family": "wide",
+  "ready_sha256": "181f792e912042df7893c692cc31021138df35855df37ea5a0d272ce6ab87e52",
+  "runtime": {
+    "torch": "2.0.0+cu118",
+    "torch_threads": 2,
+    "actor_forward": "original FP32 feature/actor computation",
+    "softmax_and_mean": "Python float64",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_deterministic": false
+  },
+  "model_state_sha256_before": "ad5f8a956212d812396945b23a0e022a3ebad6efd4f5678c31de29ecd01f9ec9",
+  "model_state_sha256_after": "ad5f8a956212d812396945b23a0e022a3ebad6efd4f5678c31de29ecd01f9ec9",
+  "actual_logits": [
+    [
+      -5.2367939949035645,
+      -3.914619207382202,
+      -2.7598013877868652,
+      -1.7302956581115723,
+      -1.5655406713485718,
+      -1.5438247919082642,
+      -3.1338541507720947,
+      -3.347048759460449,
+      -5.361581325531006
+    ],
+    [
+      -5.280045032501221,
+      -3.931654930114746,
+      -2.7857723236083984,
+      -1.7813438177108765,
+      -1.5276130437850952,
+      -1.5264575481414795,
+      -3.1261343955993652,
+      -3.3419759273529053,
+      -5.372225284576416
+    ]
+  ],
+  "actions": [
+    1.283942121603331,
+    1.2915930567977096
+  ],
+  "probabilities": [
+    [
+      0.006889711318994725,
+      0.025847243817419433,
+      0.08202481248023258,
+      0.22964336587903678,
+      0.27077345426680444,
+      0.2767178482239052,
+      0.05642819978468224,
+      0.04559392213125132,
+      0.006081442097673256
+    ],
+    [
+      0.006587142555851923,
+      0.025368538227771173,
+      0.07978953538391853,
+      0.2178530746805567,
+      0.28077443937461316,
+      0.2810990605291954,
+      0.05677126434688299,
+      0.04574986114213671,
+      0.006007083759073329
+    ]
+  ],
+  "argmax_indices": [
+    5,
+    5
+  ],
+  "argmax_actions_u_h": [
+    1.5843750536441803,
+    1.5843750536441803
+  ],
+  "actual_action_grid_u_h": [
+    [
+      0.0,
+      0.31687501072883606,
+      0.6337500214576721,
+      0.9506250321865082,
+      1.2675000429153442,
+      1.5843750536441803,
+      1.9012500643730164,
+      2.2181250751018524,
+      2.5350000858306885
+    ],
+    [
+      0.0,
+      0.31687501072883606,
+      0.6337500214576721,
+      0.9506250321865082,
+      1.2675000429153442,
+      1.5843750536441803,
+      1.9012500643730164,
+      2.2181250751018524,
+      2.5350000858306885
+    ]
+  ],
+  "count_checks": 37,
+  "real_checkpoint_loaded": true,
+  "real_record_history_used": true,
+  "synthetic_boundary_case_only": [
+    10.0
+  ],
+  "seconds": 9.711792230606079
+}

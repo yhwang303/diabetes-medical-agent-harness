@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "run": "IQL_wide_smoke",
+  "checkpoint_sha256": "fe271561b2b015f6294271c859234dc3925cd6f407623f6effe466b03364af1d",
+  "replay_manifest_sha256": "ca2c0456efaaf18391aa12e804e601093811da15220be25fe12717c379d109fa",
+  "transitions": 221760,
+  "optimizer_steps": {
+    "actor": [
+      4
+    ],
+    "q": [
+      4
+    ],
+    "value": [
+      4
+    ]
+  },
+  "changed_parameter_counts": {
+    "actor.": 6,
+    "q1.": 6,
+    "q2.": 6,
+    "value.": 6,
+    "q1_target.": 6,
+    "q2_target.": 6
+  },
+  "all_parameters_finite": true,
+  "repeated_actions_exact": true,
+  "batched_actions_atol_u_h": 1e-06,
+  "invalid_shape_rejected": true,
+  "checkpoint_unchanged": true,
+  "evaluation_frozen": true,
+  "TF32": false,
+  "actions": [
+    1.2953384556416792,
+    0.9598413821652483
+  ],
+  "source_sha256": "1e9fe693f464b1961e27903e44df039dd6b04fff7dd14b9ee7f275003909d666",
+  "performance_claim": false
+}

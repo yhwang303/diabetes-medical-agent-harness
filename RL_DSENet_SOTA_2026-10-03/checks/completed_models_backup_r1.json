@@ -1,0 +1,758 @@
+{
+  "schema": 1,
+  "archive": "RL_DSENet_SOTA_2026-10-03/archives/completed_models_r1.tar.gz",
+  "archive_sha256": "0a649171ff00e3dc10331b233cf76fef8c03aedb99af98dbdff33101f8b9715b",
+  "archive_bytes": 452001642,
+  "files": [
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/completion.json",
+      "bytes": 699,
+      "sha256": "9e91b044c50e948f9e8f15dd7512b349b782f431979284b6be8e26cb34cbe502"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/config.json",
+      "bytes": 1777,
+      "sha256": "37bdf38ef9687977ed478ebce855d7cb342f67223ed67dd6ebabadb639e39c77"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/history.jsonl",
+      "bytes": 75047,
+      "sha256": "38dec7d74839317ad3e9124d4e7419fb56e8da6d32eaaa8bddbf1276e5c44f3c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/policy_005000.pt",
+      "bytes": 26950813,
+      "sha256": "c25bb0df610cea0dfc3f342e71754cf0418e736aa1e19adf83ff3eb7052f67ab"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/policy_010000.pt",
+      "bytes": 26950813,
+      "sha256": "3101d0d8fdc7ba79371a7f48ab591b26107cf3421b76299bc505022fee632106"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/policy_020000.pt",
+      "bytes": 26950813,
+      "sha256": "705b08a4da2c35a8759f3c70331e1fc0e37e27710000ac271c06032c4abaaab5"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/provenance.json",
+      "bytes": 57870,
+      "sha256": "f7f7b3296c2431e372bd6f3408ef75af345af3b9114c3780621dff1e0848d514"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/.venv/lib/python3.11/site-packages/simglucose/actuator/pump.py",
+      "bytes": 1401,
+      "sha256": "54dc4ec98f34ae600dacd1edd2e43fc2701512eb0824ce33acb07f3f756a9719"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/.venv/lib/python3.11/site-packages/simglucose/params/pump_params.csv",
+      "bytes": 155,
+      "sha256": "9b92646519f5501869626164f98e59cdc9303318958df78d7a670de1d023df6f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/Loop\u6570\u636e\u96c6/\u8bad\u7ec3\u7ba1\u7ebf_v2/prepared/normalization.json",
+      "bytes": 685,
+      "sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DITR\u521b\u65b0_2026-09-16/control_metrics.py",
+      "bytes": 4155,
+      "sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/configs/iql_wide.json",
+      "bytes": 1752,
+      "sha256": "2d52f472a5debf99303fd68feb752a3ac7ec6f250a483d498fefdfddc4763254"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/iql_wide.py",
+      "bytes": 5623,
+      "sha256": "2bd8ce3773e07ca0502fec17a63862d7ae16137ed37ec4b041d3a5768925b02c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/iql_wide_worker.py",
+      "bytes": 5195,
+      "sha256": "0832e85bf4e349564d4160f0357dc95b3906d89fe8c4074a47b9b8f1064b8cb9"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/physiologic_features.py",
+      "bytes": 10675,
+      "sha256": "0c0f89a6bbe8f8a8dc6a494f7457ad743d74069ac96f81eb6a8ee6496530b59c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/prepare_iql_replay.py",
+      "bytes": 20715,
+      "sha256": "069512184064c08817de933acf08f962d885796c7ffe40faaacbc533b327a5c7"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "bytes": 1420,
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/train_iql_wide.py",
+      "bytes": 6378,
+      "sha256": "58ec6e8bdff8bf353b26fa27d113e726fe67e8885e6b79a68fe8c2d17a4585f4"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/LICENSE",
+      "bytes": 1099,
+      "sha256": "9f42494426ea2b2e56b97e7ca95a7c265aa831e1ebbc80231b2c35f800dcd834"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/actor.py",
+      "bytes": 986,
+      "sha256": "8c4a438ec595c7f2c74804428458a6f6c7af05552c1bc7d908ec02a3a8eaada1"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/configs/mujoco_config.py",
+      "bytes": 424,
+      "sha256": "c0a76f95f56dd8b4c8b17ab4ab91a1243460970b169394b4ffcc22b5e551cb18"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/critic.py",
+      "bytes": 1574,
+      "sha256": "2ba5e9a735ee9cf88e071869a23f98f37a0056500e4704e95b45f8840f1c4abd"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/learner.py",
+      "bytes": 5114,
+      "sha256": "80e35a82fdebdc478370b6c6e1b5c826e22572efcbda0a44dffc1b550d262128"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/policy.py",
+      "bytes": 2998,
+      "sha256": "3c2a1c27982b5b1844b478184c62a98ba0dece2ca31afd7c850eb7e1d34c4ad3"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL_DSENet_SOTA_2026-10-03/vendor/iql/upstream.json",
+      "bytes": 120,
+      "sha256": "e8c1435a40f9ddbc6b21bfdf2942c0aa102b6d114a9efe5eed3508a9f374e4a3"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/IQL_wide/source/RL\u8fdb\u9636\u5bf9\u6bd4_2026-09-15/observable_history.py",
+      "bytes": 1335,
+      "sha256": "c1b0d1b83071bf76443f69157358571eae144a396ff7d0a8b984e8d66d70f75d"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/best.pt",
+      "bytes": 4261239,
+      "sha256": "1f86f2881986660de0ab4f111be71173a7271f49ce59a1a614112edb8699fd30"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/initial.pt",
+      "bytes": 2302575,
+      "sha256": "c899836f61b98da8c6f5f47ee0c83cb3048bae70fbb634205e19311fb9a1c7f0"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0000500.pt",
+      "bytes": 4261239,
+      "sha256": "27356e4da4dc6c7ffaa68ca1e1c56ec35d5d3caa8461d401fd7e16e536ce4cb4"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0001000.pt",
+      "bytes": 4261239,
+      "sha256": "1f86f2881986660de0ab4f111be71173a7271f49ce59a1a614112edb8699fd30"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0001500.pt",
+      "bytes": 4261303,
+      "sha256": "3ec184acf261e4931e0aeb79aac1e8c2f72f59b630460743c13004bcbf449d10"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0002000.pt",
+      "bytes": 4261303,
+      "sha256": "85df348378b92c7365cce5bdd4366064a604fb6166a7ec0514a4964f3e285c59"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0002500.pt",
+      "bytes": 4261367,
+      "sha256": "73d6e29babdb4ac13b2d48d666e935b254a671307c1e9a056c1037bd89a5a0aa"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0003000.pt",
+      "bytes": 4261303,
+      "sha256": "4e07fe7af1cc608c4236b0947e6ed7ffc601a071e30f153cb666c21e26c4f519"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0003500.pt",
+      "bytes": 4261367,
+      "sha256": "9fb176f20bd6aa465fcd4cdd02ebc90376f2977a511a1c2bf75a6a31544e5cfd"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/checkpoints/step0004000.pt",
+      "bytes": 4261303,
+      "sha256": "acf53deee5f986d8ab48917e841d3dc386ff9872b0ddc30a3838ac3ff14d84e1"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/completion.json",
+      "bytes": 600,
+      "sha256": "059a83f1bab0b106c3d1bb5899eed84c9e89f9da7e8830f4fdfb749086a11849"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/config.json",
+      "bytes": 2219,
+      "sha256": "5104ba5460dfd15bc07fbb39c89595eedfa45fe63daada2614b393c8d77399d9"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/history.jsonl",
+      "bytes": 3200383,
+      "sha256": "1e46fa7fff7ae8138990edbba93fdd5a447d27b26a0a7a1e5dfb4068fc8671ea"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/last.pt",
+      "bytes": 4261303,
+      "sha256": "acf53deee5f986d8ab48917e841d3dc386ff9872b0ddc30a3838ac3ff14d84e1"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/provenance.json",
+      "bytes": 271639,
+      "sha256": "983bbd4f52ab9a4527fa3243d1038a898558162de406aac6721c275ce6862ece"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/selection.json",
+      "bytes": 255,
+      "sha256": "ad58061cacfbb120f102a36d7e80b13c91b48b7212c6650fa401f5effe01ba56"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py",
+      "bytes": 4640,
+      "sha256": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Embed.py",
+      "bytes": 6572,
+      "sha256": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py",
+      "bytes": 3514,
+      "sha256": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/LWSA.py",
+      "bytes": 4770,
+      "sha256": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/LoRE.py",
+      "bytes": 3618,
+      "sha256": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py",
+      "bytes": 15643,
+      "sha256": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py",
+      "bytes": 2136,
+      "sha256": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/RevIN.py",
+      "bytes": 2083,
+      "sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py",
+      "bytes": 6080,
+      "sha256": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/models/DSENet.py",
+      "bytes": 13987,
+      "sha256": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/utils/masking.py",
+      "bytes": 832,
+      "sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/utils/metrics.py",
+      "bytes": 951,
+      "sha256": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py",
+      "bytes": 3743,
+      "sha256": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/dsenet/utils/tools.py",
+      "bytes": 4276,
+      "sha256": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_2026-09-17/forecast_model.py",
+      "bytes": 2169,
+      "sha256": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+      "bytes": 9791,
+      "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_SOTA_2026-10-03/prepare_windows.py",
+      "bytes": 3960,
+      "sha256": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "bytes": 1420,
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_SOTA_2026-10-03/train_world_v2.py",
+      "bytes": 30008,
+      "sha256": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/RL_DSENet_SOTA_2026-10-03/world_model_v2.py",
+      "bytes": 10873,
+      "sha256": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/normalization.json",
+      "bytes": 685,
+      "sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/source/requested_config.json",
+      "bytes": 1629,
+      "sha256": "ffe3047f197fe8dbb270c5d9bfe9b3193c4f012006ab2ce2f99834aef8786f09"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0000500.npz",
+      "bytes": 4130643,
+      "sha256": "2bc9fca7bc51cab5a1a88881c26434419bce518e0c1813d1d5be3deee6ab2113"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0001000.npz",
+      "bytes": 4131712,
+      "sha256": "90fbc06217d312241f19856a0c3bf11eba5843e588f438ebec11c1a3cfdd1594"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0001500.npz",
+      "bytes": 4144846,
+      "sha256": "2acefa1d3c5a764badf3652da7c7f213bbd8cc2f1d9ad9090484bbf2dc5c7dbc"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0002000.npz",
+      "bytes": 4144746,
+      "sha256": "f57e4d5de0c1b73a0312ac08de28c34c917eb3bb58e404c1d7781975c821af80"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0002500.npz",
+      "bytes": 4120705,
+      "sha256": "8771906e5766629342bffb3ff01c23c18e6a97ecb5571db9dcf5d485fe26912a"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0003000.npz",
+      "bytes": 4126868,
+      "sha256": "3eda27282e3bebd6ec134c5782f0093747d603c9c0b55beff156449462497091"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0003500.npz",
+      "bytes": 4132736,
+      "sha256": "b8160ce95c8add4d518bc8ecb941080ddb4370c8803292f9e9ffd760da46f22a"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/natural_step0004000.npz",
+      "bytes": 4137749,
+      "sha256": "b08c8a31424aed307b10464a134f5c90464e34a80255e657993af091328e5c2f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0000500.npz",
+      "bytes": 968990,
+      "sha256": "d157af049edf36f6f2e82dd967b304934270fdf0c482c28d2726456d928126f9"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0001000.npz",
+      "bytes": 970875,
+      "sha256": "e9ddb43eaeb8ac94928db14d7a9f4d9ef2829a8bcb505fc3511f9d6e42680e09"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0001500.npz",
+      "bytes": 972169,
+      "sha256": "75e806773fd75de9ee6bf6afad85b33729dd35dca9a70f214928d6eb10302a90"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0002000.npz",
+      "bytes": 973118,
+      "sha256": "1d2349d245e114135578008045e39754a1045fa8349a1ab74b0af8ea1011eab8"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0002500.npz",
+      "bytes": 967823,
+      "sha256": "3ad205e57831a7af6ed55b8831dfe4789fa4bdc5e87f4306cf1bbbaa167963e2"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0003000.npz",
+      "bytes": 969673,
+      "sha256": "748f33f33f8750da73a20d1c3432c892988507b9eedb5d60081a481a6ec736d7"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0003500.npz",
+      "bytes": 970222,
+      "sha256": "7e307bf13223fd65b95547588e98f1828ca6a5fdee60cc79d20a70f7654ad4ef"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/paired_step0004000.npz",
+      "bytes": 971882,
+      "sha256": "64265b708ac6a2797155a5696bae6b64a8a481c131865506a754077d2a1f6039"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0000500.json",
+      "bytes": 6291,
+      "sha256": "65ec5c86a78940d7f7347d9f5c0aee623144fbb3ef3c94fd9aaa02e37ce5b6f3"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0001000.json",
+      "bytes": 6336,
+      "sha256": "2324fc38dd292e2400fe0b44cd709934f25799c4317c5a24ddf7422523921ed5"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0001500.json",
+      "bytes": 6416,
+      "sha256": "f23b04e719b306a6a1bcd160229557f081a5ae91f6a229b3041b9d494c6693b7"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0002000.json",
+      "bytes": 6427,
+      "sha256": "5b6fa9af83f2866e40cc2df581f1f3b80c6c14c7f7399cab51423292b14346a4"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0002500.json",
+      "bytes": 6414,
+      "sha256": "dceb79ffe8ae88fa4c57ba84d0e89d1f62e214451a6bcb18780d35b54485e2e0"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0003000.json",
+      "bytes": 6383,
+      "sha256": "65804fe324357aa15844a8c0eda5797c13cae7b69239991e3d5ca8ace8f0589a"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0003500.json",
+      "bytes": 6462,
+      "sha256": "7b17143eb095d8b4ee98607fcc969d2367b0ef7cfd0b65618afce050c716aa8f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_point_r1/validation/step0004000.json",
+      "bytes": 6415,
+      "sha256": "05f4ee74620c990314242c1512d7aa1f34c02fe880afc2496e321ffff0f8593c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/best.pt",
+      "bytes": 4266423,
+      "sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/initial.pt",
+      "bytes": 2304175,
+      "sha256": "b78ed9f2cdd52a81ab4f25ae986d24026bc3c0861b83bc744d8e0d91f4a3f12b"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0000500.pt",
+      "bytes": 4266295,
+      "sha256": "80fbe1fba6f3954ae2c319a7082b25fe4cbb7500acb1226e7cede74689bd15bf"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0001000.pt",
+      "bytes": 4266295,
+      "sha256": "770aca732836fc30405d63c4eec9d70722e87ca2e2f62d9ce212f1a53262a928"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0001500.pt",
+      "bytes": 4266423,
+      "sha256": "760856242801d83897528acc2069faafd66cb7cbbb15174322668f4c46ef4eba"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0002000.pt",
+      "bytes": 4266423,
+      "sha256": "3912ee9fec5aac341006d332e087271ab0a846805797bc22e736191aaa936e07"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0002500.pt",
+      "bytes": 4266423,
+      "sha256": "f1654a5b2ff6dff38e42af92b175a3ddad3e8c26922cebe26cbda533c2628bc0"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0003000.pt",
+      "bytes": 4266423,
+      "sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0003500.pt",
+      "bytes": 4266423,
+      "sha256": "51eb714052835bc8b433c9625c417d43bc41cb6a64fe09fac7eaf56a4ddc24d0"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/checkpoints/step0004000.pt",
+      "bytes": 4266359,
+      "sha256": "9db1c2585fd85de9a4ddb200483b35b5a76e832918dfc3d2975b96f9dfc308db"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/completion.json",
+      "bytes": 599,
+      "sha256": "48958ba49af5c3cea537f96249bc5cf02a924a1720ab62dbeee43d3fa180da32"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/config.json",
+      "bytes": 2289,
+      "sha256": "2e21b8a1453ed06c04b5059fe879d8ec065b772717240f8f8be1ba331930dae4"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/history.jsonl",
+      "bytes": 3200857,
+      "sha256": "197ae27abd21d84e58405ecfff4adbb0effb709c82f6226644e3f34864c3a38b"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/last.pt",
+      "bytes": 4266359,
+      "sha256": "9db1c2585fd85de9a4ddb200483b35b5a76e832918dfc3d2975b96f9dfc308db"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/provenance.json",
+      "bytes": 271721,
+      "sha256": "8be5815210c546b54c04f53d3fca7615f2ec066150bc91cee35105378114cb58"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/selection.json",
+      "bytes": 255,
+      "sha256": "bf68871dda7119f96eb508fffef2494f18d15b690d34e424ccd3527c431c6e1f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py",
+      "bytes": 4640,
+      "sha256": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Embed.py",
+      "bytes": 6572,
+      "sha256": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py",
+      "bytes": 3514,
+      "sha256": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/LWSA.py",
+      "bytes": 4770,
+      "sha256": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/LoRE.py",
+      "bytes": 3618,
+      "sha256": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py",
+      "bytes": 15643,
+      "sha256": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py",
+      "bytes": 2136,
+      "sha256": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/RevIN.py",
+      "bytes": 2083,
+      "sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py",
+      "bytes": 6080,
+      "sha256": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/models/DSENet.py",
+      "bytes": 13987,
+      "sha256": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/utils/masking.py",
+      "bytes": 832,
+      "sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/utils/metrics.py",
+      "bytes": 951,
+      "sha256": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py",
+      "bytes": 3743,
+      "sha256": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/dsenet/utils/tools.py",
+      "bytes": 4276,
+      "sha256": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_2026-09-17/forecast_model.py",
+      "bytes": 2169,
+      "sha256": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+      "bytes": 9791,
+      "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_SOTA_2026-10-03/prepare_windows.py",
+      "bytes": 3960,
+      "sha256": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "bytes": 1420,
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_SOTA_2026-10-03/train_world_v2.py",
+      "bytes": 30008,
+      "sha256": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/RL_DSENet_SOTA_2026-10-03/world_model_v2.py",
+      "bytes": 10873,
+      "sha256": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/normalization.json",
+      "bytes": 685,
+      "sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/source/requested_config.json",
+      "bytes": 1672,
+      "sha256": "f5c982622b731353c19f46b411b065773c6b3556a4aceb8d5860736eb4c663df"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0000500.npz",
+      "bytes": 28091942,
+      "sha256": "93a90b04bc0a710cd137ed4e5761842b858a1272115f2b6b8b7aba55a4535a64"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0001000.npz",
+      "bytes": 28125297,
+      "sha256": "206a615311ae2bddedf951de64d6564fe4c55128f98f9aefadeae0a98952e84b"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0001500.npz",
+      "bytes": 28167069,
+      "sha256": "0842fa2e4594d6db6759b9bbb63577d40fda51bcc4156481bf027eeb59875746"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0002000.npz",
+      "bytes": 28223678,
+      "sha256": "cc81aef0b4000b84d5e9d094e88fe3c2b2e1c66f887c83571cb9681dc899108c"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0002500.npz",
+      "bytes": 28128101,
+      "sha256": "5066bed3da2bfd9f06cd367c73b6bf0312c3127a457456d3938ea8e4217509cb"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0003000.npz",
+      "bytes": 28102768,
+      "sha256": "6e756a7b8cbe288b5a8f1467e06916d4ca32000993cf3f12e73390cfbb329dc7"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0003500.npz",
+      "bytes": 28063994,
+      "sha256": "0ced585f2482252a32af5212fec8a03be2ce9cb50da2c61f12759b57bbb7eb88"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/natural_step0004000.npz",
+      "bytes": 28091263,
+      "sha256": "5e1a5faf310890b00c1268f4f6c98bf32a1f5c4d2aea5815657b06c64cc1bc08"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0000500.npz",
+      "bytes": 7116459,
+      "sha256": "d1a8511f4820088232fdb83a400e62c0f507345468080a7fbd048b6281c96236"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0001000.npz",
+      "bytes": 7130342,
+      "sha256": "568779ee44e65f6210ea8d7404abeb49124c5d6878bb37ea4f3472f64b2f10b2"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0001500.npz",
+      "bytes": 7134465,
+      "sha256": "ccc1104fa7fcfa51d15abf5a05973fb03771afcfa9f23204703ac47c5cf440ea"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0002000.npz",
+      "bytes": 7148197,
+      "sha256": "86782b21ca508ec5f833b9050d81821ea0973f0ab8b16d756bfbb467d47f5b95"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0002500.npz",
+      "bytes": 7124573,
+      "sha256": "2912ca9c5f37788bcbc87b768f1d064fd1839a529c04f57b323d1c2712815711"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0003000.npz",
+      "bytes": 7120140,
+      "sha256": "be8fa6549949843a3fedefc4e63a5741925925f1567d72be5299c5a330e7bcea"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0003500.npz",
+      "bytes": 7109792,
+      "sha256": "3f025f28a7c64516bec788cb77db89f7d74c4dcde61ac926b6eec110fd81e095"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/paired_step0004000.npz",
+      "bytes": 7116698,
+      "sha256": "031f42485e5d0c0f922af48ba64990d76f66fa0acc228a722e34c32bb45510f8"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0000500.json",
+      "bytes": 6893,
+      "sha256": "dce3b7ac407286f8ad8fdc0c835928ffef2c7ea740895a8f079bc0cb1ff8f5cf"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0001000.json",
+      "bytes": 6966,
+      "sha256": "48ad96345be785cfaa7a39a8510bc23b411a8af09743a23682925a8c71d5b923"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0001500.json",
+      "bytes": 7055,
+      "sha256": "f836b11a3ddd19dfb2b323c374141b38090363ba004ef17f8005f3bf6b33d798"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0002000.json",
+      "bytes": 7060,
+      "sha256": "4b0fc2ee802ed5f3818f83eb4e0fcaa9f544bf2d6c5637ad2f94e6f04343815f"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0002500.json",
+      "bytes": 7066,
+      "sha256": "862f5940b10ac0241b7ea4896f974649c9f5f255361c9aea480ba66c62196891"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0003000.json",
+      "bytes": 7057,
+      "sha256": "f2576666451d5299bb3be04d9a98b49799296c20769dca6f3213503aab30c8c6"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0003500.json",
+      "bytes": 7040,
+      "sha256": "5a5fad70a9033a6b78cb7c4fa6fac46bf8a878aeefeb88a2fa6b58e843642f0e"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/results/world_quantile_r1/validation/step0004000.json",
+      "bytes": 7042,
+      "sha256": "9bfe7450918c090c1b66d5d022acae5d6022ab12856f80670d0fee792bc01104"
+    }
+  ]
+}

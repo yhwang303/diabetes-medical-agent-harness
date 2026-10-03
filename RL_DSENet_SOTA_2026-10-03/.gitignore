@@ -1,5 +1,6 @@
 results/
 cache/
+data/
 trajectories/
 logs/
 runtime/

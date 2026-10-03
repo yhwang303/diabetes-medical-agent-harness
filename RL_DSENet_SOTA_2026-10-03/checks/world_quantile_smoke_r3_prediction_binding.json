@@ -1,0 +1,412 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "passed": true,
+  "evidence_kind": "full_saved_prediction_recomputation",
+  "requested_checkpoint": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/best.pt",
+  "split": "world_validation",
+  "fixed_absolute_tolerances": {
+    "cgm_mg_dl": 0.001,
+    "bg_class_probability": 1e-06
+  },
+  "relative_tolerance": 0.0,
+  "all_natural_and_paired_rows_required": true,
+  "sampled_comparison": false,
+  "byte_identity_required": false,
+  "checkpoint_selection_performed": false,
+  "probability_recalibration": false,
+  "original_artifacts_modified": false,
+  "verification_scope": "Numerical checkpoint-to-prediction identity only; not independent accuracy, calibration or control validation.",
+  "checkpoint": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/best.pt",
+  "checkpoint_role": "best",
+  "step": 4,
+  "world_dependency": {
+    "world_checkpoint_sha256": "18cee685b6caf864a4cc36038844fe3c1a82f777c4e387cfefc5d851fbda29fd",
+    "training_provenance_sha256": "2cfde314f9277afce8987f769718ac2c18b071b9dc4da051bd64618a4d3533a9",
+    "completion_sha256": "1aab88dce9dde226c28280c39c6587133704a0f9fcc8f127af55f45e1ec73596",
+    "forecast_sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4",
+    "normalization_sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f",
+    "training_step": 4,
+    "training_variant": "quantile",
+    "quantile_levels": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95
+    ],
+    "completed_steps": 4,
+    "configured_steps": 4000,
+    "budget_override": true,
+    "quantile_integration_weights": [
+      0.07500000000000001,
+      0.09999999999999998,
+      0.2,
+      0.25,
+      0.19999999999999996,
+      0.10000000000000009,
+      0.07499999999999996
+    ],
+    "source_sha256": {
+      "RL_DSENet_SOTA_2026-10-03/train_world_v2.py": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec",
+      "RL_DSENet_SOTA_2026-10-03/world_model_v2.py": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db",
+      "RL_DSENet_SOTA_2026-10-03/protocol.json": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+      "RL_DSENet_SOTA_2026-10-03/prepare_windows.py": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2",
+      "RL_DSENet_SOTA_2026-10-03/paired_collect.py": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440",
+      "RL_DSENet_2026-09-17/forecast_model.py": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01",
+      "RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98",
+      "RL_DSENet_2026-09-17/dsenet/layers/Embed.py": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2",
+      "RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c",
+      "RL_DSENet_2026-09-17/dsenet/layers/LWSA.py": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e",
+      "RL_DSENet_2026-09-17/dsenet/layers/LoRE.py": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da",
+      "RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976",
+      "RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5",
+      "RL_DSENet_2026-09-17/dsenet/layers/RevIN.py": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+      "RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80",
+      "RL_DSENet_2026-09-17/dsenet/models/DSENet.py": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251",
+      "RL_DSENet_2026-09-17/dsenet/utils/masking.py": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+      "RL_DSENet_2026-09-17/dsenet/utils/metrics.py": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d",
+      "RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b",
+      "RL_DSENet_2026-09-17/dsenet/utils/tools.py": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c",
+      "RL_DSENet_SOTA_2026-10-03/world_control_worker.py": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb"
+    },
+    "action_plan_source_sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440",
+    "horizon_steps": 72,
+    "training": false,
+    "calibrated_probability_claim": false,
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": false,
+    "torch_threads": 2
+  },
+  "training_budget": {
+    "completed_steps": 4,
+    "configured_steps": 4000,
+    "budget_override": true
+  },
+  "runtime": {
+    "python": "3.8.10 (default, Jun  4 2021, 15:09:15) \n[GCC 7.5.0]",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.17",
+    "numpy": "1.24.4",
+    "torch": "2.0.0+cu118",
+    "cuda": "11.8",
+    "cudnn": 8700,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "torch_threads": 2,
+    "amp": false,
+    "precision": "float32",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false
+  },
+  "datasets": {
+    "natural": {
+      "directory": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_natural_world_validation",
+      "manifest_sha256": "8a6d43dfc5ce4755a112c840e28232fcc9b8f64403e26db609e141547ec2197b",
+      "file_order": [
+        {
+          "file": "bolus_0.8_p01_s103011.npz",
+          "count": 33,
+          "sha256": "5578e6e5e2215374b97d786f09626471e3e25a60544d756cbad13f61765322a0",
+          "job": {
+            "patient": 1,
+            "seed": 103011,
+            "group": "bolus_0.8",
+            "bolus_factor": 0.8,
+            "total_minutes": 4320,
+            "meals": [
+              [
+                490,
+                39.61502194462362
+              ],
+              [
+                785,
+                43.28332824541512
+              ],
+              [
+                1120,
+                65.13817787881497
+              ],
+              [
+                1890,
+                41.66107026145239
+              ],
+              [
+                2245,
+                60.536207584186066
+              ],
+              [
+                2570,
+                50.66526277567432
+              ],
+              [
+                3385,
+                43.32481050182688
+              ],
+              [
+                3665,
+                61.76350667778018
+              ],
+              [
+                4030,
+                59.77376092827928
+              ]
+            ]
+          }
+        },
+        {
+          "file": "bolus_1.2_p01_s103011.npz",
+          "count": 33,
+          "sha256": "6ac72e97600c32bf67f7be52a88fd173e48b34b3666013cb1fec47cca9d73337",
+          "job": {
+            "patient": 1,
+            "seed": 103011,
+            "group": "bolus_1.2",
+            "bolus_factor": 1.2,
+            "total_minutes": 4320,
+            "meals": [
+              [
+                490,
+                39.61502194462362
+              ],
+              [
+                785,
+                43.28332824541512
+              ],
+              [
+                1120,
+                65.13817787881497
+              ],
+              [
+                1890,
+                41.66107026145239
+              ],
+              [
+                2245,
+                60.536207584186066
+              ],
+              [
+                2570,
+                50.66526277567432
+              ],
+              [
+                3385,
+                43.32481050182688
+              ],
+              [
+                3665,
+                61.76350667778018
+              ],
+              [
+                4030,
+                59.77376092827928
+              ]
+            ]
+          }
+        }
+      ],
+      "predictions": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/validation/natural_step0000004.npz",
+      "prediction_sha256": "621c5d57852ec14769fb14c586ec96810564cfbb2350d8908cc9216695a24238"
+    },
+    "paired": {
+      "directory": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_paired_world_validation",
+      "manifest_sha256": "00f1b429f13566bf2cc6c373903cf2dfd4a96108b2cb139e0f3115e4b152a0f9",
+      "file_order": [
+        {
+          "file": "p01_s103011_b0.8.npz",
+          "count": 8,
+          "sha256": "c246cd3fc7463d5b69542e63922929dfa592330d0cdb991e0e88c93f0b27b5e4",
+          "job": {
+            "patient": 1,
+            "seed": 103011,
+            "bolus_factor": 0.8,
+            "index": 0,
+            "name": "paired_world_validation_r1",
+            "smoke": false
+          }
+        },
+        {
+          "file": "p01_s103011_b1.2.npz",
+          "count": 8,
+          "sha256": "97cd22e8c4d5f7db77a82dd1adcd7bc9fa8f379bc9fc926d227dc34d302feeda",
+          "job": {
+            "patient": 1,
+            "seed": 103011,
+            "bolus_factor": 1.2,
+            "index": 2,
+            "name": "paired_world_validation_r1",
+            "smoke": false
+          }
+        }
+      ],
+      "predictions": "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/validation/paired_step0000004.npz",
+      "prediction_sha256": "9689ea2bf764ee98575783adbbc515cf2b25df1f18909998cbc5c226900ce562"
+    }
+  },
+  "comparisons": {
+    "natural": {
+      "passed": true,
+      "groups": 66,
+      "arms": 1,
+      "horizon": 72,
+      "original_validation_batch_groups": 64,
+      "recomputed_batches": 2,
+      "final_batch_groups": 2,
+      "sample_order_exact": true,
+      "quantile_levels_exact": true,
+      "sample_index_sha256": "2a13e80cc4566a94d334c98e729fe67e1c558ac9420d7423ee940548ff37d2b0",
+      "quantile_levels_sha256": "78555b5f5880349e519326922c4e97924a7e2c75f4f44761329489023d07ceb1",
+      "cgm_quantiles": {
+        "passed": true,
+        "compared_elements": 33264,
+        "expected_elements": 33264,
+        "all_elements_checked": true,
+        "absolute_tolerance": 0.001,
+        "relative_tolerance": 0.0,
+        "elements_exceeding_tolerance": 0,
+        "nonfinite_element_pairs": 0,
+        "maximum_absolute_error": 0.0,
+        "maximum_error_index": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_absolute_error": 0.0,
+        "saved_array_sha256": "bbdef26213d5c023d47c9eb8a3691b01f9779a0bc6d83a462dceec303585d93a",
+        "recomputed_array_sha256": "bbdef26213d5c023d47c9eb8a3691b01f9779a0bc6d83a462dceec303585d93a"
+      },
+      "bg_three_class_probabilities": {
+        "passed": true,
+        "compared_elements": 198,
+        "expected_elements": 198,
+        "all_elements_checked": true,
+        "absolute_tolerance": 1e-06,
+        "relative_tolerance": 0.0,
+        "elements_exceeding_tolerance": 0,
+        "nonfinite_element_pairs": 0,
+        "maximum_absolute_error": 0.0,
+        "maximum_error_index": [
+          0,
+          0,
+          0
+        ],
+        "mean_absolute_error": 0.0,
+        "saved_array_sha256": "e66965d55764f1463a401240cb944f84ba80463b04aba1955acace55ed4ed98e",
+        "recomputed_array_sha256": "e66965d55764f1463a401240cb944f84ba80463b04aba1955acace55ed4ed98e"
+      },
+      "class_order": [
+        "no_BG_below70",
+        "BG_below70_but_no_BG_below54",
+        "any_BG_below54"
+      ],
+      "compared_unknown_target_tail_predictions": true,
+      "seconds": 1.4187638759613037
+    },
+    "paired": {
+      "passed": true,
+      "groups": 16,
+      "arms": 9,
+      "horizon": 72,
+      "original_validation_batch_groups": 64,
+      "recomputed_batches": 1,
+      "final_batch_groups": 16,
+      "sample_order_exact": true,
+      "quantile_levels_exact": true,
+      "sample_index_sha256": "34a24311e8d0dbdd39005f837ff35de10a117d0c0262a3af6578b511913c062e",
+      "quantile_levels_sha256": "78555b5f5880349e519326922c4e97924a7e2c75f4f44761329489023d07ceb1",
+      "cgm_quantiles": {
+        "passed": true,
+        "compared_elements": 72576,
+        "expected_elements": 72576,
+        "all_elements_checked": true,
+        "absolute_tolerance": 0.001,
+        "relative_tolerance": 0.0,
+        "elements_exceeding_tolerance": 0,
+        "nonfinite_element_pairs": 0,
+        "maximum_absolute_error": 0.0,
+        "maximum_error_index": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_absolute_error": 0.0,
+        "saved_array_sha256": "b9d35a8d1bdd32fdb021ff71dce734448eebb46e86e59f9eb37b7c5073a72231",
+        "recomputed_array_sha256": "b9d35a8d1bdd32fdb021ff71dce734448eebb46e86e59f9eb37b7c5073a72231"
+      },
+      "bg_three_class_probabilities": {
+        "passed": true,
+        "compared_elements": 432,
+        "expected_elements": 432,
+        "all_elements_checked": true,
+        "absolute_tolerance": 1e-06,
+        "relative_tolerance": 0.0,
+        "elements_exceeding_tolerance": 0,
+        "nonfinite_element_pairs": 0,
+        "maximum_absolute_error": 0.0,
+        "maximum_error_index": [
+          0,
+          0,
+          0
+        ],
+        "mean_absolute_error": 0.0,
+        "saved_array_sha256": "6b75148e25d5000fbef3332ef8eaa926590e598442a5a485e1b8b91ce4e743a8",
+        "recomputed_array_sha256": "6b75148e25d5000fbef3332ef8eaa926590e598442a5a485e1b8b91ce4e743a8"
+      },
+      "class_order": [
+        "no_BG_below70",
+        "BG_below70_but_no_BG_below54",
+        "any_BG_below54"
+      ],
+      "compared_unknown_target_tail_predictions": true,
+      "seconds": 0.29177236557006836
+    }
+  },
+  "input_and_source_sha256": {
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/best.pt": "18cee685b6caf864a4cc36038844fe3c1a82f777c4e387cfefc5d851fbda29fd",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/provenance.json": "2cfde314f9277afce8987f769718ac2c18b071b9dc4da051bd64618a4d3533a9",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/completion.json": "1aab88dce9dde226c28280c39c6587133704a0f9fcc8f127af55f45e1ec73596",
+    "/root/autodl-tmp/diabetes-agent/Loop\u6570\u636e\u96c6/\u8bad\u7ec3\u7ba1\u7ebf_v2/prepared/normalization.json": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/results/P03_g12s3_l2s1/best.pt": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/checks/frozen_selected_version.json": "54a93ef9f9eb89819ba491f6c14e8ed896fb556d3089e0d5c499207a210b5265",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/validation/step0000004.json": "04c838fcbe5ac9346bd106f5d12f12b705a564ffb24a1374fe400c282c4a4030",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/verify_world_predictions.py": "a8150117ed9e160a56c9b22758097ada443b0050404cdd61990e0e6da29cb8d8",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/train_world_v2.py": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/world_model_v2.py": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/protocol.json": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/prepare_windows.py": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/paired_collect.py": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/forecast_model.py": "27bdbce339e97f78f4368f4fb664295086a82ac91b28586175d8b5001bc69a01",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/DFBMamba.py": "2bb536f13e8416b63feec503dfbfa1580f3de32ed581a3d8d338d93f3d50bd98",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/Embed.py": "3743a14dd505f9caafb512727b10bec2d4a84d84cacc6f8936f33a5071e2a0a2",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/Global_Stream.py": "308fd769ad6731880fb661e757671120a449bb1a58ecb57c04822b74b597bb3c",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/LWSA.py": "2668cf22573e034be8529403a2d26f037660e382317fa12f9dd9b64afadc766e",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/LoRE.py": "e0b9b308b000c62833f090f6f9d49fbfed6e968d9856afd23a93c8a8e4a7b1da",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/Local_Stream.py": "db6d528fd0925a73ee5ac5a13fe87b9f8a149d0d01a6dd088f32212afa6a4976",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/Mamba_Family.py": "3add39ce86ccac4dcf843f8a4db407f4db73bdea1b58b56e9a6dc3097f184cb5",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/RevIN.py": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/layers/SelfAttention_Family.py": "0f6914264a4289b1260beb76382e8a75973b542ff6a27ba8482ac7c07678fc80",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/models/DSENet.py": "78231c6a60cf7289ece370bc797d158e73e085d0a485b0f3a83375dcac564251",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/utils/masking.py": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/utils/metrics.py": "9d61cbf6239d2749f7640eff9fa80e66a17dbbea1881b919c4375b126195294d",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/utils/timefeatures.py": "2ad031a425f6f02b88db1918333a30937e41b18f435df90e6bcbb6470427221b",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_2026-09-17/dsenet/utils/tools.py": "01bf3eb627eefef70dfa85999bbe10595e58acf82c90efad3e7fcdc43975864c",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/world_control_worker.py": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_natural_world_validation/manifest.json": "8a6d43dfc5ce4755a112c840e28232fcc9b8f64403e26db609e141547ec2197b",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_natural_world_validation/bolus_0.8_p01_s103011.npz": "5578e6e5e2215374b97d786f09626471e3e25a60544d756cbad13f61765322a0",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_natural_world_validation/bolus_1.2_p01_s103011.npz": "6ac72e97600c32bf67f7be52a88fd173e48b34b3666013cb1fec47cca9d73337",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/validation/natural_step0000004.npz": "621c5d57852ec14769fb14c586ec96810564cfbb2350d8908cc9216695a24238",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_paired_world_validation/manifest.json": "00f1b429f13566bf2cc6c373903cf2dfd4a96108b2cb139e0f3115e4b152a0f9",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_paired_world_validation/p01_s103011_b0.8.npz": "c246cd3fc7463d5b69542e63922929dfa592330d0cdb991e0e88c93f0b27b5e4",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/cache/smoke_paired_world_validation/p01_s103011_b1.2.npz": "97cd22e8c4d5f7db77a82dd1adcd7bc9fa8f379bc9fc926d227dc34d302feeda",
+    "/root/autodl-tmp/diabetes-agent/RL_DSENet_SOTA_2026-10-03/results/world_quantile_smoke_r3/validation/paired_step0000004.npz": "9689ea2bf764ee98575783adbbc515cf2b25df1f18909998cbc5c226900ce562"
+  },
+  "loaded_state_sha256_before": "ff1dda55c35f62ce8b95aa2e1d38bc3fe9f6c5302c47e131cf6992abb5607df9",
+  "loaded_state_sha256_after": "ff1dda55c35f62ce8b95aa2e1d38bc3fe9f6c5302c47e131cf6992abb5607df9",
+  "inputs_and_sources_unchanged_at_end": true,
+  "seconds": 12.20283317565918
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "archive_sha256": "0a649171ff00e3dc10331b233cf76fef8c03aedb99af98dbdff33101f8b9715b",
+  "archive_bytes": 452001642,
+  "files_verified": 150,
+  "manifest_sha256": "1682ae145bd6f20b02fd7a044c5b2a710f522e698203afb2afae89deaca03fcc",
+  "all_archive_member_hashes_match": true,
+  "extracted": false
+}
