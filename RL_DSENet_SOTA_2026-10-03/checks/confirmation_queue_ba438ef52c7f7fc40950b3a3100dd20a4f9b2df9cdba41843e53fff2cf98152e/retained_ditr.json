@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_ditr",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "28a5cf9351f07923d447cc9f0c608c1aa64c6cd3baa21367bb8de19acda0602a",
+  "log_sha256": "60915d2530ff1118b944ba20fbffa6c1a409532e607d7db5f33e034bff5b7d81"
+}

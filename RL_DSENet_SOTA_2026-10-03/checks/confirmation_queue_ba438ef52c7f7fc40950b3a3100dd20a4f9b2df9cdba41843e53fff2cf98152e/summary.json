@@ -1,0 +1,188 @@
+{
+  "status": "fixed_set_executed",
+  "methods": [
+    {
+      "method_id": "ppo_world_quantile",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "9379ff76ae77001c598d3df3b7efa693319f55b0122da7b1f5781a05a6e5b9df",
+      "log_sha256": "a9f86b3ab5555e3dc1bdabe3181a9f1e02a8b5b43601fd1d1b757278468ad566"
+    },
+    {
+      "method_id": "d06_frozen",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "7e0dd77087b87c2a889e827106921552d7c2a9e28d516fdf6c67ade8e5179877",
+      "log_sha256": "902d4c61e42705962118d76e8d1e8cc6679a7e475e31939f0d6ee75c1c851b1d"
+    },
+    {
+      "method_id": "ppo_wide",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "0278b29e791d06827b8593147e40b59ea76b3aeb18afd06b61d443751815b180",
+      "log_sha256": "b61f93943dcb8ca5f39892b9f222b7542a33ee134fdf658e5d5663578f0452c1"
+    },
+    {
+      "method_id": "physiology",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "f720fa88e21a9580868236bc376ebd18525de52e39919216bb8a8cf725dddd15",
+      "log_sha256": "19b91ea6d0b6bb444d5ac7307f6b105a899a109e104318d6d15eccc3bc60fee0"
+    },
+    {
+      "method_id": "mpc_event_risk",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "f4aa465a32a59c068d0be5e1fe1878b9d358ba8798c85d837c98440712a89bf9",
+      "log_sha256": "3dabaa44e5d5ee9b4c2c5fde6168fc67c7d661b33ac12e1cc371380050c82c60"
+    },
+    {
+      "method_id": "mpc_point_world",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "61f4eb9cd577198f17edf270e205fd23ac37a2348cdeacaccddfb7836f2d4035",
+      "log_sha256": "a02cf21289a1cf61d263b52578fb9c69815bce791541813bb1fb97806dad2fdc"
+    },
+    {
+      "method_id": "mpc_quantile_median",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "c57bd2afcd4d3569566e00a7380c64f881f84eb6ca8cc2b525aa0ba168daeda2",
+      "log_sha256": "ad19258b9c4edb71f5e9713bd21e5c1ef5bd8df7ee637855c230839e88b485cb"
+    },
+    {
+      "method_id": "mpc_expected",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "81a62fedef577fb767313a3006bf980156d660dd153ff6cb79383df6216b71b4",
+      "log_sha256": "bbef9a5a42ac7fe8abe060c0d4306e899fe7e384eb182444faab5348a997475b"
+    },
+    {
+      "method_id": "hold",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "16d06afe423aa848cf9586e25620cd9e2b3ea341c5102ee3369ff3423c930280",
+      "log_sha256": "b46ae15bbea28b747e21fa349dd37439f2f7f3056e7a1546f6b3a679ca5c087e"
+    },
+    {
+      "method_id": "iql_wide",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "c344eb7441ee7ec16ce68ca2f88553fb63ad676f9fb38f73a8f71c3acc3830d2",
+      "log_sha256": "9429b2ce5d094a67d8482d7cec665fec55f5022737f52cf4f2f21fa47f5d78bd"
+    },
+    {
+      "method_id": "retained_bc",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "effcea43a33e91a91dd396a2ed830a00b049f813ab66348ae8efda2bf6f2d247",
+      "log_sha256": "e799db3299cd55e3a5bb5a24814411f30d508c8bd9106e26ab625b199f9af2a9"
+    },
+    {
+      "method_id": "retained_iql",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "4f476f11fe0c1d955b29a06ed3380f370e01fbe9b177f01d9ea6317138b5e557",
+      "log_sha256": "23311c856089472847983fd49ad39fdf4646f7722adc85c8fdfd6cadfc533260"
+    },
+    {
+      "method_id": "retained_td3bc",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "d84b27f0a586547d034c01f52a2b23085d76bd019c05f86216beca60911dd2d6",
+      "log_sha256": "d7ab1f5ceece63054a3a33395e79fb2feabb95e653b0b266eae7793f8ff46d5e"
+    },
+    {
+      "method_id": "retained_rebrac",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "d93b742f12e07f79f161c0e5ea9327bcb632a66d5091b283b7c02ae7a3493edf",
+      "log_sha256": "b82977c777fb872498cfd945b952ff83a1ea98c88da8a3d6d5aa3a00a3981c74"
+    },
+    {
+      "method_id": "retained_fql",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "7f61d4c9b5d26cef410c86aebb3e8ccc7291ac411dccb129e031a03ec2597aed",
+      "log_sha256": "da7a7a54d8a398fe3c403ce5e9299003a67802173147faf2c3351e14ab6e59d0"
+    },
+    {
+      "method_id": "retained_lom",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "24dde439d5066701822c48485234c0eb22b9a75d465336197b256cc7b51df948",
+      "log_sha256": "7db313c4144695146789e716343d5ac42f439caa6cfdc3d8abfe3441848f1bb8"
+    },
+    {
+      "method_id": "retained_gfp",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "0b769a7c82e61b105cb8a31f343223695035f90cf62f3bb569b761a989018a23",
+      "log_sha256": "5ea8aea6b40d2e5bb9ca6886da85bcc917b18fdff41a0d4577f8a9667eef8701"
+    },
+    {
+      "method_id": "retained_ditr",
+      "exit_code": 0,
+      "launch_error": null,
+      "status": "completed",
+      "error": null,
+      "complete_fixed_case_reporting": true,
+      "ticket_sha256": "28a5cf9351f07923d447cc9f0c608c1aa64c6cd3baa21367bb8de19acda0602a",
+      "log_sha256": "60915d2530ff1118b944ba20fbffa6c1a409532e607d7db5f33e034bff5b7d81"
+    }
+  ],
+  "all_methods_reported": true,
+  "finished_utc": "2026-10-03T17:32:30.769455+00:00",
+  "no_model_promotion": true
+}

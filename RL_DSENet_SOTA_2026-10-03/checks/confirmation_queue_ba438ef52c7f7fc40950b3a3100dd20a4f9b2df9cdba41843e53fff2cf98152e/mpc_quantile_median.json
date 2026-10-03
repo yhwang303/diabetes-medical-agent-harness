@@ -1,0 +1,10 @@
+{
+  "method_id": "mpc_quantile_median",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "c57bd2afcd4d3569566e00a7380c64f881f84eb6ca8cc2b525aa0ba168daeda2",
+  "log_sha256": "ad19258b9c4edb71f5e9713bd21e5c1ef5bd8df7ee637855c230839e88b485cb"
+}

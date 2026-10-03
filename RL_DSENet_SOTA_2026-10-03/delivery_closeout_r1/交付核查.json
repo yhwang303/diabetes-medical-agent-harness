@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "date": "2026-10-04",
+  "overview_sha256": "f75cd955ee055f0dd34528594450d57acaf29a86749bb6aef4b435fba2d22d65",
+  "confirmation_results_review_sha256": "06becd3ba018a6736832616e365b7d2ef8fbb182eb7d73cff9c64e0b961c677e",
+  "browser": "Codex in-app browser",
+  "viewport": [
+    1280,
+    720
+  ],
+  "visually_checked": [
+    "首页最终结论",
+    "确认BG主表顶部",
+    "横向风险/失败/覆盖/未知尾列",
+    "旧论文基线与不完整行",
+    "论文来源换行与链接"
+  ],
+  "overview_local_links_passed": true,
+  "rendered_numeric_cells": 860,
+  "lossless_csv_rows": 1677,
+  "all_evaluation_records": 2580,
+  "paper_adaptations": 8,
+  "new_experiments_started": false,
+  "confirmation_raw_backup_local_status": "unavailable: SSH transport/auth failed; archive completion not reverified",
+  "frozen_report_outputs_unmodified": true
+}

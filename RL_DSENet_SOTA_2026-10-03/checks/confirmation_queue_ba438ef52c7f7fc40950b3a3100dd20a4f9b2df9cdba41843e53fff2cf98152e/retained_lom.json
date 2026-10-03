@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_lom",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "24dde439d5066701822c48485234c0eb22b9a75d465336197b256cc7b51df948",
+  "log_sha256": "7db313c4144695146789e716343d5ac42f439caa6cfdc3d8abfe3441848f1bb8"
+}

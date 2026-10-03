@@ -1,0 +1,10 @@
+{
+  "method_id": "d06_frozen",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "7e0dd77087b87c2a889e827106921552d7c2a9e28d516fdf6c67ade8e5179877",
+  "log_sha256": "902d4c61e42705962118d76e8d1e8cc6679a7e475e31939f0d6ee75c1c851b1d"
+}

@@ -1,0 +1,10 @@
+{
+  "method_id": "ppo_world_quantile",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "9379ff76ae77001c598d3df3b7efa693319f55b0122da7b1f5781a05a6e5b9df",
+  "log_sha256": "a9f86b3ab5555e3dc1bdabe3181a9f1e02a8b5b43601fd1d1b757278468ad566"
+}

@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_rebrac",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "d93b742f12e07f79f161c0e5ea9327bcb632a66d5091b283b7c02ae7a3493edf",
+  "log_sha256": "b82977c777fb872498cfd945b952ff83a1ea98c88da8a3d6d5aa3a00a3981c74"
+}

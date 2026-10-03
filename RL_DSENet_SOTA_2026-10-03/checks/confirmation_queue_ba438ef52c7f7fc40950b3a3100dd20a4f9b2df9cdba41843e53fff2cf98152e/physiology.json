@@ -1,0 +1,10 @@
+{
+  "method_id": "physiology",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "f720fa88e21a9580868236bc376ebd18525de52e39919216bb8a8cf725dddd15",
+  "log_sha256": "19b91ea6d0b6bb444d5ac7307f6b105a899a109e104318d6d15eccc3bc60fee0"
+}

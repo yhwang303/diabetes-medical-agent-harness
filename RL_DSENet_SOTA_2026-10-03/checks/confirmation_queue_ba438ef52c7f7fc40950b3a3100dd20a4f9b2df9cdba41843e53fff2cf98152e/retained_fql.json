@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_fql",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "7f61d4c9b5d26cef410c86aebb3e8ccc7291ac411dccb129e031a03ec2597aed",
+  "log_sha256": "da7a7a54d8a398fe3c403ce5e9299003a67802173147faf2c3351e14ab6e59d0"
+}

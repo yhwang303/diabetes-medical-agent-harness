@@ -1,0 +1,416 @@
+{
+  "schema": 1,
+  "status": "final",
+  "built_utc": "2026-10-03T17:44:41.396656+00:00",
+  "builder_sha256": "ed199d3c76489d2d026a5256af0add3d5e5786649eebc5d2f6a581b040ee129c",
+  "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+  "protocol_sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+  "source_inputs": [
+    {
+      "role": "panels_development_25_rows_r1.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/panels_development_25_rows_r1.json",
+      "copy": "sources/00_panels_development_25_rows_r1.json",
+      "sha256": "13a849dc0785ceb54368c788e470b5b2024978fef70de35b883dd0a64e4f5bb4"
+    },
+    {
+      "role": "panels_confirmation_r1.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/panels_confirmation_r1.json",
+      "copy": "sources/01_panels_confirmation_r1.json",
+      "sha256": "b2a0896586d185fe620a461e510c3e64cb3e800ad7b5c1471f2223f69786bde4"
+    },
+    {
+      "role": "world_point_r1_best_diagnostics.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_point_r1_best_diagnostics.json",
+      "copy": "sources/02_world_point_r1_best_diagnostics.json",
+      "sha256": "e98c0925b0c9e452b2cd732b11da0cbfba5566970315f75324a6c4c942b6b88c"
+    },
+    {
+      "role": "world_point_r1_best_prediction_binding.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_point_r1_best_prediction_binding.json",
+      "copy": "sources/03_world_point_r1_best_prediction_binding.json",
+      "sha256": "ba4c82ec2863dd1c9cd9ae0aefa599f97e1e16888751fec0db2ba1c3678d14a2"
+    },
+    {
+      "role": "world_quantile_r1_best_diagnostics.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_quantile_r1_best_diagnostics.json",
+      "copy": "sources/04_world_quantile_r1_best_diagnostics.json",
+      "sha256": "2f0b5c077051800324ee665a79654b71d49544b060cb00f751064d366c5259be"
+    },
+    {
+      "role": "world_quantile_r1_best_prediction_binding.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_quantile_r1_best_prediction_binding.json",
+      "copy": "sources/05_world_quantile_r1_best_prediction_binding.json",
+      "sha256": "86842de2e260f3f91a3b0609cb1d76e38bcc762318947a39f7650c26ac0075a7"
+    },
+    {
+      "role": "method_registry.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/method_registry.json",
+      "copy": "sources/06_method_registry.json",
+      "sha256": "2d1bd08ddabfd1776264ed912eab3b7235225cf86de493fb5862711bc9dca10a"
+    },
+    {
+      "role": "protocol.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "copy": "sources/07_protocol.json",
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "role": "build_report.py",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/build_report.py",
+      "copy": "sources/08_build_report.py",
+      "sha256": "ed199d3c76489d2d026a5256af0add3d5e5786649eebc5d2f6a581b040ee129c"
+    },
+    {
+      "role": "summarize_panels.py",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/summarize_panels.py",
+      "copy": "sources/09_summarize_panels.py",
+      "sha256": "82c7a11db9d3316af1cfd9584e6175c594262127831ccad61ac77f16c32c6438"
+    },
+    {
+      "role": "control_metrics.py",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DITR创新_2026-09-16/control_metrics.py",
+      "copy": "sources/10_control_metrics.py",
+      "sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd"
+    },
+    {
+      "role": "report_closeout_review_r1.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/report_closeout_review_r1.json",
+      "copy": "sources/11_report_closeout_review_r1.json",
+      "sha256": "7c8b1222925bcb971b83a6f5fbdb46bcdb75dee3575a3e4c6ca8872a82194c25"
+    },
+    {
+      "role": "report_design.md",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/report_design.md",
+      "copy": "sources/12_report_design.md",
+      "sha256": "e48385ec6470c8817e2c87cb6f6833cb775456014413f0b3e5b469bb640d5fd1"
+    }
+  ],
+  "outputs_sha256": {
+    "sources/00_panels_development_25_rows_r1.json": "13a849dc0785ceb54368c788e470b5b2024978fef70de35b883dd0a64e4f5bb4",
+    "sources/01_panels_confirmation_r1.json": "b2a0896586d185fe620a461e510c3e64cb3e800ad7b5c1471f2223f69786bde4",
+    "sources/02_world_point_r1_best_diagnostics.json": "e98c0925b0c9e452b2cd732b11da0cbfba5566970315f75324a6c4c942b6b88c",
+    "sources/03_world_point_r1_best_prediction_binding.json": "ba4c82ec2863dd1c9cd9ae0aefa599f97e1e16888751fec0db2ba1c3678d14a2",
+    "sources/04_world_quantile_r1_best_diagnostics.json": "2f0b5c077051800324ee665a79654b71d49544b060cb00f751064d366c5259be",
+    "sources/05_world_quantile_r1_best_prediction_binding.json": "86842de2e260f3f91a3b0609cb1d76e38bcc762318947a39f7650c26ac0075a7",
+    "sources/06_method_registry.json": "2d1bd08ddabfd1776264ed912eab3b7235225cf86de493fb5862711bc9dca10a",
+    "sources/07_protocol.json": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+    "sources/08_build_report.py": "ed199d3c76489d2d026a5256af0add3d5e5786649eebc5d2f6a581b040ee129c",
+    "sources/09_summarize_panels.py": "82c7a11db9d3316af1cfd9584e6175c594262127831ccad61ac77f16c32c6438",
+    "sources/10_control_metrics.py": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+    "sources/11_report_closeout_review_r1.json": "7c8b1222925bcb971b83a6f5fbdb46bcdb75dee3575a3e4c6ca8872a82194c25",
+    "sources/12_report_design.md": "e48385ec6470c8817e2c87cb6f6833cb775456014413f0b3e5b469bb640d5fd1",
+    "患者配对差.csv": "bdcd4449da9dd4e55d7a7b893b45cf9dd41b4d1c5c43a1cdea43038e29e2bdf1",
+    "报告解读.json": "7c8b1222925bcb971b83a6f5fbdb46bcdb75dee3575a3e4c6ca8872a82194c25",
+    "指标长表.csv": "046ee9e61a7162728044f256ae81ac0f4d670b34891d921b7f49fb96e3640e97",
+    "核查结果.json": "3f818fa04855637dbe6388cc18d34e16589318c10e929fd7888cd5472d7dc787",
+    "病例审计.csv": "2b1a5b8c6bd9302017c8d4f5f0388cdd927c1c125447f0107083d6179f5eb82e",
+    "阶段研究报告.html": "aef2d0864dbaa2e46a8c88b0ac60e173033416daae2c03bab84d6ca5ede90049"
+  },
+  "panels": {
+    "dev_legacy_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "a471fffabf09b945a89f03eb885d7e272c3e288cf8902c7fb2e2c08c677241e5",
+      "summary_sha256": "618ed3c2948608d6e783abf78080b52acadfbbf763fcfaf5faac60669342c47e",
+      "checkpoint_sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    },
+    "dev_hold_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "ad5d29cd77298894f3688fa7a664f08cd779854b386891e62fa59e9e78dcb489",
+      "summary_sha256": "95fb569d70e1f4f3a595c54e9bd083d9130c1a26e94e29d5c1ef2b0b180ffc45",
+      "checkpoint_sha256": null
+    },
+    "dev_physiology_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "b74c92b65887fc4c1a85ddee54b504ade4f632fbc563a3b08087c186ed1e00e5",
+      "summary_sha256": "1996ca8dbbefbe06401dbe7100a7b30068082551e0f6e8c89d76b3cf5a8cf4f3",
+      "checkpoint_sha256": null
+    },
+    "dev_ppo08_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "eb3ec5ee6f5068cdbaa32f56c292ecddbd21f6ab4d6a014ceec37cda235d0204",
+      "summary_sha256": "95dfca8c465993f16b494620f5adb6aad596dd62e04163a343aa5afe57c7d35e",
+      "checkpoint_sha256": "4d7d6c141c7a529b30dd0bbc148098241eb92432c9f3ba0e4a20013708bfa30d"
+    },
+    "dev_ppo16_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "50677010d9d7843f19dd51bbc2d3bead56ca0c91f381997afe1ede07ab0b18e1",
+      "summary_sha256": "bb21eaef9a336d4b24a3420d42f6b150cab0a0d5218dd5700c40e7ba81b5432e",
+      "checkpoint_sha256": "e6152bc0b6de2be08513a0f37375787b066ef02a86870b1e145f087e8098e336"
+    },
+    "dev_ppo32_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "6be5a42a4c2558119f925fed836d57bfd07930d5316390058e472e01ee83cc0c",
+      "summary_sha256": "2a1391bc3ceac21f4a48214bfbc1efc35169e55ca0260ec28f86bdb6f7091a15",
+      "checkpoint_sha256": "78b08b51567c1f1de1ef6025e166cd8cd343df493c52ad189460b68fe5d71a79"
+    },
+    "dev_retained_bc_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "ca9ea3bfc61e72570bc42a0518a17c8b541fd1978036e699bf2108ca03bfda64",
+      "summary_sha256": "efa88d06abbfb167316d2f0e118007d2994030855e1ef52a32efdd14ba13527b",
+      "checkpoint_sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1"
+    },
+    "dev_retained_iql_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "cd9be534cde689c78a42d61785f3acb8f0d29576a9fe2bf47cba82d5739f0ed4",
+      "summary_sha256": "45b1c77028c786a72022b1a7c466ae9ac58d3c2ed0d8bb45b5319490b13bb7bd",
+      "checkpoint_sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37"
+    },
+    "dev_retained_rebrac_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "d5c064b2c1dda10f04251979d1df9ab1bd52da4d411ab3202f1edd7217e43463",
+      "summary_sha256": "156b9d09b481b471da2070c602aaad5be5084e8c6387a0bd55e45a635060adb5",
+      "checkpoint_sha256": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00"
+    },
+    "dev_retained_lom_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "9ee8faf32da5a3336fadba3b4ee8062d73aec3107e9828288555d1d56ce7c5fa",
+      "summary_sha256": "ee5f9de8717214b233d0875ba05d4711630312562c813531841d3f408184609e",
+      "checkpoint_sha256": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe"
+    },
+    "dev_retained_gfp_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "2bcfea4dadddd8a32563d9c2e9b6cfab4c5299d809e0f5dc2ac9a428ca9cf810",
+      "summary_sha256": "22f8f65ec871bce5a0db63a8de3ed380392b78ade17313749a0bedfcd9166618",
+      "checkpoint_sha256": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76"
+    },
+    "dev_retained_td3bc_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "276cd4545ef21b2cd21c5c345e091d873d2e4c5567ba46874e1195a0d9af232b",
+      "summary_sha256": "1098f649a96158ce6792417b44f660851352c603f714f82ac942ec73e2fe94b8",
+      "checkpoint_sha256": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507"
+    },
+    "dev_retained_fql_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "2ab9524cf8443839e58bcf1dc5f12ee8cb6f6976b9cba92edc724368121df8cb",
+      "summary_sha256": "c2f282f1061bb42fb03529c1fa8ff5d3f3b9e7f1a8b47cc5fe2ce37a9047cfef",
+      "checkpoint_sha256": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71"
+    },
+    "dev_retained_ditr_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "8e9c6abf86b91c5fcedafa4ef063cef8be38d444fecacc0d74b3d4d4e3bed3b6",
+      "summary_sha256": "6f788ae7dd09a4b15f1c1f2049d9ffb503738caf8f49ba2fc31be0de49631a09",
+      "checkpoint_sha256": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9"
+    },
+    "dev_world_point_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "bfbad54210107aaecb8ffcde00efe3319672fa4aa667e5ac3d1f1164fa0672de",
+      "summary_sha256": "4b89681b31c3be5feae4c8c8db45ddac0eb6699d40bf5252c0194cb53e745b11",
+      "checkpoint_sha256": "1f86f2881986660de0ab4f111be71173a7271f49ce59a1a614112edb8699fd30"
+    },
+    "dev_world_quantile_median_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "1b453b59811a4ae36e4142a289a4034f8f7198453c93bc23d9ecaa5fabdf3733",
+      "summary_sha256": "b4aae09ed494830252eff3e668e91558b6829726af3eb2b723a70d413e71aa0e",
+      "checkpoint_sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    "dev_world_expected_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "13b7bf1dbee436780de94bcc4ab933d68462fb95536f13167ee80bdc01cdc34c",
+      "summary_sha256": "19571350893a68ae1fb7a1dd8e369f4ddb195f36516e91eb55afd2fd025f64bb",
+      "checkpoint_sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    "dev_world_risk_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "7445621179778c3737a8f9e26543b77380cb6f9636a1147a7f02453ad3f34fa7",
+      "summary_sha256": "6970225338926758e59d60e1e2c39ffacbc6f1fb03003d75fed27a87cc379763",
+      "checkpoint_sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    "dev_world_ppo08_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "420b17329750476e91f0c1585300059021b84d12ad5cb700c1672f325090a8c0",
+      "summary_sha256": "32ae356ed5c67eef875adb3a781723404adb9f452c0f2abb0433afd439b4156c",
+      "checkpoint_sha256": "806f33bd14dc744bad53fa519978106ae582feb4a5a9fd700d6d1e772516110f"
+    },
+    "dev_iql_wide_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "6d40346b6830ca9a64317b5a5b50975527f35f41509657306e44e494cf1d0c05",
+      "summary_sha256": "27e0fd31b797d4884370aaebda7752e6656617d4612cfe8c95c7433e746af858",
+      "checkpoint_sha256": "705b08a4da2c35a8759f3c70331e1fc0e37e27710000ac271c06032c4abaaab5"
+    },
+    "dev_ppo16_mean_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "eccf6298d6c764b36a00cdcc2a79911f6ba5174ee8f0d331786c644b242eaed1",
+      "summary_sha256": "11faf8dd2f56714772fa526e9b1deecd8b209ffebcf099435b75ded5e14069ef",
+      "checkpoint_sha256": "e6152bc0b6de2be08513a0f37375787b066ef02a86870b1e145f087e8098e336"
+    },
+    "dev_ppo40_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "45c9ce2dac8be11c8243b53847ada888afc7455f77636645f37575c5b8266cc4",
+      "summary_sha256": "7b9ca81edbbf70b076d68df7d8195841ee3215867f4d73f43cb079ddab799029",
+      "checkpoint_sha256": "d9e1c70150b60f47becad77bef6aa312c7032dfb91c882fb4c8887692b869114"
+    },
+    "dev_world_ppo16_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "b56a6d7a35a06562d4ef632b4e3c78cc11f70f51010c9d4c3f94e0e387415905",
+      "summary_sha256": "2a111270fee40bb39382983717189e916f98a4220cfb05faa7336ac17f9b8ed8",
+      "checkpoint_sha256": "e58cd93f3c3be7e9dd66b720f8ffb8827ac370f70d4cc9d9e5d8bd294d95b107"
+    },
+    "dev_world_ppo32_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "81b00d9979afa6c0ab2bbf58c96d44d6bf17411fcea0b4e92328affc54ef4c84",
+      "summary_sha256": "c5d94b52568946057dad51e89123029f2733623ad78c6702e8c491a82b80f1d6",
+      "checkpoint_sha256": "ab2166e61a4e9ca5aa15eb24f7234f6374da869656ef0f0c96e3c9f45f79d4a2"
+    },
+    "dev_world_ppo40_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "19756dadf2fe1b71b6c35a376486c2d31f170e27eba0adf6153d4dc9a3d69034",
+      "summary_sha256": "0261deb89431d5ffbf1afcdc787344d7ffb3a017c55ebf1cb751c9fdbf2f696a",
+      "checkpoint_sha256": "294df745dd5951a15b5125e874acd2895bafe4778f2b04eb293c7be0d9672a8e"
+    },
+    "confirmation_ppo_world_quantile": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "7656cfcbc461216650bbbf0d8151d62df3d78b95af5367bb3d6742e8826b48fc",
+      "summary_sha256": "07fcf44d461eab0e2258bb4add2690bd2c12cc4e56c001639168ed481cb24eba",
+      "checkpoint_sha256": "294df745dd5951a15b5125e874acd2895bafe4778f2b04eb293c7be0d9672a8e"
+    },
+    "confirmation_d06_frozen": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "c8c059b3adb02c0abb21bbce0f0f6377052465dc6f8596cd0316b720694aa1b7",
+      "summary_sha256": "d772c54b6de647dce31836d536726217c08f5b7dc732c4c4b42c5401a2bcea43",
+      "checkpoint_sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    },
+    "confirmation_ppo_wide": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "3a4e8c0aec6c14709cf71e768422f82afbfc731a4a3efd79b986ee9590013e77",
+      "summary_sha256": "7b86d8790a9cc4ef90d2eef02ae93b6461f8a13fbc6010ea2ec5999a7d9e96b4",
+      "checkpoint_sha256": "d9e1c70150b60f47becad77bef6aa312c7032dfb91c882fb4c8887692b869114"
+    },
+    "confirmation_physiology": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "aeef3a66b833937f5be83e5bbb1f9dcad6ee2ccd027d8c950d134a9e131bf72f",
+      "summary_sha256": "7198a50fe84a43424083984f6378d673a05d35401b2120711d6e96637fbbe816",
+      "checkpoint_sha256": null
+    },
+    "confirmation_mpc_event_risk": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "12aaf5fafe5b0655c8889eba27df63c01edfd7312fb34692b069f7f25d872330",
+      "summary_sha256": "eb3fa6d33066de4c956e856bb4caf271f20a71bfdf601e17660e286fefe0298a",
+      "checkpoint_sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    "confirmation_mpc_point_world": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "a6a87a61f94be56cbc8aca88f4432dac278c4107396f13624045929ac9e6d423",
+      "summary_sha256": "774bc6f650c72378360d5c2b5d3c8afb0a1b081791ebe930a847af074c2f6758",
+      "checkpoint_sha256": "1f86f2881986660de0ab4f111be71173a7271f49ce59a1a614112edb8699fd30"
+    },
+    "confirmation_mpc_quantile_median": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "6906a04f90aa861f8a4c52d7fcece04cfb6e8e2179be0ec823ee5c9c2469f05b",
+      "summary_sha256": "6e6d68bdc7c53a1744aaf55919184e878dd302a23342e38613670b8324094e3d",
+      "checkpoint_sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    "confirmation_mpc_expected": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "d9cf6df653dee9abf888344dd3b56e5899ab454a74915ab51d5e8bdf30523b7b",
+      "summary_sha256": "b1dcccd91e74aa5e9876c77aab8958848968995df7cf0a8e48d6fa312b1499ac",
+      "checkpoint_sha256": "51ba03d242583e081e53e46fa738c3a55cc3456f14c67fb5b9a7f40b0f5cc1c5"
+    },
+    "confirmation_hold": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "08edcc2b8b946996885d2fd593f8cbbcaf36117b566951cb1dd89e762ae6de7a",
+      "summary_sha256": "d57bcea5ffacc5cec838d4b88483c1dde46b4b5630df93f317c3314899431bb5",
+      "checkpoint_sha256": null
+    },
+    "confirmation_iql_wide": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "3c789c3f84a1aaf013ab1a0fafb96a9a5cb1a093b95a89a4c14b6ec26bd76bc1",
+      "summary_sha256": "61df4c5bcaaa367899c62cb5f36520b355d79b2beef66d6d4fa3601c77b49c47",
+      "checkpoint_sha256": "705b08a4da2c35a8759f3c70331e1fc0e37e27710000ac271c06032c4abaaab5"
+    },
+    "confirmation_retained_bc": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "8e3fe36050191d4d384e100153acf9d37d85c8ff27565b0da7bb15f56d2735c0",
+      "summary_sha256": "f57f56d613ccbbf35e551a80456d6b93cf859d20f6c84ed3420dd79e8d7fb1fc",
+      "checkpoint_sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1"
+    },
+    "confirmation_retained_iql": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "f955079f12c112a7eac37cef95b1b5532fcf843571464448c2d20f750efa844d",
+      "summary_sha256": "b252b973d7757e2541c4b28329c29236d822d0b01f3019f6a10f2f7602903c6b",
+      "checkpoint_sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37"
+    },
+    "confirmation_retained_td3bc": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "dab29692914271aa9f980b9c92e7aaa6c9231ca31cea26826c738b37216ee623",
+      "summary_sha256": "8084368f0dbf58ffd7a822d33cc9fbcea736125e04b1099036ce5ea7fe87f8ec",
+      "checkpoint_sha256": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507"
+    },
+    "confirmation_retained_rebrac": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "32ad11d11b9f732c8cfc2420860d9cac37d4644ecb16727ddaa5213fb00d0ffe",
+      "summary_sha256": "f82b6efb9e4e967af1869d27bc7b4afc423bf0f364534b6d7835ca7caf66799c",
+      "checkpoint_sha256": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00"
+    },
+    "confirmation_retained_fql": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "b5716f4d7293e05d32a27da88109b813dd0075edab443be0de239656d3fc3375",
+      "summary_sha256": "ddb8b87e54ae2ec68ef1f00e33f489ef2e3168f172dd23eee5a97c19a9e7cb9a",
+      "checkpoint_sha256": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71"
+    },
+    "confirmation_retained_lom": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "d3391eed463367243fac2ef8afc132ca4f7f4dbc5a10dfc1d63cf745dfee41bd",
+      "summary_sha256": "7d9c77bdc2d4354e698558d15e8a4273130f933a77a6f559f092b84dd80f6016",
+      "checkpoint_sha256": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe"
+    },
+    "confirmation_retained_gfp": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "1b249a42e8413496055e7fa39275df68a467793e33f7403fe863681a88a97b6d",
+      "summary_sha256": "0cb175951f2f3e797a3cc1552f4deb7060f5fca8f2c07a01353d1be409f50529",
+      "checkpoint_sha256": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76"
+    },
+    "confirmation_retained_ditr": {
+      "split": "confirmation",
+      "smoke": false,
+      "manifest_sha256": "49e243ea9b79e7e35c6af6789fe7bd95be89b12f16a36c21f563af8df74a52b3",
+      "summary_sha256": "b251583d3a065a1af4d3df8b637e817460adf3acf367cafb52d4376b36e40ddd",
+      "checkpoint_sha256": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9"
+    }
+  },
+  "model_promoted": false,
+  "automatic_SOTA_claim": false,
+  "visual_review": "pending_parent",
+  "source_raw_trajectories_bundled": false
+}

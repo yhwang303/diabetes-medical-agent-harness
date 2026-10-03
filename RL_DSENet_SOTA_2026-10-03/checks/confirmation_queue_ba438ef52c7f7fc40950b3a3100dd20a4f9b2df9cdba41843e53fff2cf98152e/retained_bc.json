@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_bc",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "effcea43a33e91a91dd396a2ed830a00b049f813ab66348ae8efda2bf6f2d247",
+  "log_sha256": "e799db3299cd55e3a5bb5a24814411f30d508c8bd9106e26ab625b199f9af2a9"
+}

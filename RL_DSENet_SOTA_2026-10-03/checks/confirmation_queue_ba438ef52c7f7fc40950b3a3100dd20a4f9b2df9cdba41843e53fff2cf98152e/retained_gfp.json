@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_gfp",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "0b769a7c82e61b105cb8a31f343223695035f90cf62f3bb569b761a989018a23",
+  "log_sha256": "5ea8aea6b40d2e5bb9ca6886da85bcc917b18fdff41a0d4577f8a9667eef8701"
+}

@@ -1,0 +1,10 @@
+{
+  "method_id": "mpc_point_world",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "61f4eb9cd577198f17edf270e205fd23ac37a2348cdeacaccddfb7836f2d4035",
+  "log_sha256": "a02cf21289a1cf61d263b52578fb9c69815bce791541813bb1fb97806dad2fdc"
+}

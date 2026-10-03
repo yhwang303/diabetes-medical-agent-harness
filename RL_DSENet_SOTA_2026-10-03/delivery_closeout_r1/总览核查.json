@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "full_report_sha256": "aef2d0864dbaa2e46a8c88b0ac60e173033416daae2c03bab84d6ca5ede90049",
+  "full_report_manifest_sha256": "7ac26ac71b2ec45aafeb3d6bfde867987a98169d1d674d805e2be3d4b95da577",
+  "overview_sha256": "f75cd955ee055f0dd34528594450d57acaf29a86749bb6aef4b435fba2d22d65",
+  "exact_confirmation_section_sha256": "5c35608738f3931fdc317d6072c37bb34b0ccb1aa1a43fa9256028e21b33a5a5",
+  "confirmation_section_copied_verbatim": true,
+  "confirmation_methods": 18,
+  "paper_methods": 8,
+  "wide_csv_sha256": "ac1650d90d455edadb84d5ffd4dc59162c34ecc0eb9a83b48a3b87594407592a",
+  "wide_csv_rows": 18,
+  "wide_csv_columns": 18,
+  "wide_csv_display_values_exact": true,
+  "paper_sources_sha256": "b4df7ca6ee83fa9c325c22ea024023c0ddd829e1df0f8861cd0f52280ecea0f9",
+  "script_sha256": "cda20f33ec695eb3bd4d1493cc699b35f37bdf43cfd900f2635d088717c0d67a",
+  "numeric_scores_recomputed": false,
+  "models_executed": false,
+  "visual_review": "pending"
+}

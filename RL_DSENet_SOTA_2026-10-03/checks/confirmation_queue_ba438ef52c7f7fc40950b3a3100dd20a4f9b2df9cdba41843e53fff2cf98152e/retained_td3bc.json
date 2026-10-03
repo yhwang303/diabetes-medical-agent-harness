@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_td3bc",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "d84b27f0a586547d034c01f52a2b23085d76bd019c05f86216beca60911dd2d6",
+  "log_sha256": "d7ab1f5ceece63054a3a33395e79fb2feabb95e653b0b266eae7793f8ff46d5e"
+}

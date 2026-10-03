@@ -1,0 +1,10 @@
+{
+  "method_id": "mpc_event_risk",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "f4aa465a32a59c068d0be5e1fe1878b9d358ba8798c85d837c98440712a89bf9",
+  "log_sha256": "3dabaa44e5d5ee9b4c2c5fde6168fc67c7d661b33ac12e1cc371380050c82c60"
+}

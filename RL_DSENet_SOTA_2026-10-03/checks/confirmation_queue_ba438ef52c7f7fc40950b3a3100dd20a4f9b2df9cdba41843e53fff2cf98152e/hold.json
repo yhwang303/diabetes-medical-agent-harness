@@ -1,0 +1,10 @@
+{
+  "method_id": "hold",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "16d06afe423aa848cf9586e25620cd9e2b3ea341c5102ee3369ff3423c930280",
+  "log_sha256": "b46ae15bbea28b747e21fa349dd37439f2f7f3056e7a1546f6b3a679ca5c087e"
+}

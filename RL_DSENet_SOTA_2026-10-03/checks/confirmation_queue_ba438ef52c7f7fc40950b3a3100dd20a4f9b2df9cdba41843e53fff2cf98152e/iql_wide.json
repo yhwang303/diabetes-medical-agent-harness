@@ -1,0 +1,10 @@
+{
+  "method_id": "iql_wide",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "c344eb7441ee7ec16ce68ca2f88553fb63ad676f9fb38f73a8f71c3acc3830d2",
+  "log_sha256": "9429b2ce5d094a67d8482d7cec665fec55f5022737f52cf4f2f21fa47f5d78bd"
+}

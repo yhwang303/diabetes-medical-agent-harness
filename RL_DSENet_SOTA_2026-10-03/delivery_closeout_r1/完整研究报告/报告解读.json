@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "paragraphs": [
+    "本轮已收尾并暂停新创新与新训练。25行开发结果（1500条）和18个冻结方法的独立确认结果（1080条）已全部完成、保留并通过原评分器逐条重算；合计43个方案／检查点行、2580条评测记录，不代表43个独立算法或2580名患者。确认集12行完整，6行存在原生仿真提前终止，共50例；开发集44例，合计94例，均保留失败及未知尾部。",
+    "冻结主方案 World PPO40 的确认结果为 BG TIR 97.1149%、TBR70 1.2247%、TBR54 0.3914%、TAR180 1.6604%、SD 22.3462 mg/dL、CV 18.1130%、LBGI 0.4960、HBGI 1.1629。相对原D06，TIR提高0.6292个百分点，TBR70降低0.7407个百分点，TBR54降低0.2820个百分点，SD降低1.3337 mg/dL，CV降低1.6370个百分点；TAR180增加0.1115个百分点、HBGI增加0.0369。",
+    "结论：低糖与波动改善得到确认，但降低低糖且其他指标不退步的原严格联合目标仍未达成。World PPO40和Wide PPO40均为11项family指标8改善、1平、2差，3个家族改善而高糖家族恶化；TAR180和HBGI使两者严格门槛失败。Wide PPO40曾在开发均值上通过，该现象未在确认集复现，不据此改变冻结选择或追加调参。",
+    "目前没有一个方案在全部指标上占优。在12个完整确认部署的11个family指标中，两PPO均无单独最优，仅TAR250共同为0。World PPO40作为预先冻结的世界模型+RL主方案保留；其原有综合风险LBGI+HBGI为1.658866，事件风险MPC为1.658930，差仅0.00006394，属于近乎持平，不能写成明显或可靠优势，也不计作额外独立指标票数。",
+    "不同控制器体现不同取舍：事件风险MPC的确认TIR为97.6810%、SD为21.7205 mg/dL，TBR54为0.0042%；Point MPC的TAR180为0.3346%、HBGI为0.6355，但TBR70为2.1507%。IOB/Zone规则的TBR70为0.1978%、TBR54为0、CV为16.5636%，同时TAR180为4.8211%。MPC是固定规划器，规则法也不是学习到的RL，不能将这些类别的优势合并为主PPO的成绩。",
+    "患者配对结果支持审慎解释：World PPO40相对D06的TIR差95%患者簇bootstrap区间为[−0.4125, 1.6772]个百分点；TBR70为[−1.6162, −0.0884]；TBR54为[−0.8460, 0]。十名患者中p4的TIR下降2.6936个百分点，严重低糖仍集中于p9。主方案持续至少120分钟的严重低糖事件由D06的6次降至5次。区间仅描述十名已见虚拟患者的不确定性，未作多重比较校正，不代表多训练seed稳定性。",
+    "模型闭环现状：冻结DSENet P03预测加上可观测历史编码、因果动作响应、CGM分位数和真实BG事件头，构成六小时动作条件世界模型；World PPO使用该冻结模型提供的195维特征，在真实仿真交互BG奖励上学习。已形成预测/世界模型辅助策略—给药—仿真反馈的数值闭环；尚非想象rollout训练或world/policy端到端联合更新，亦非真实患者产品验收。Wide PPO使用旧P03/H02/D05及生理特征，不能将其收益归因于新quantile world。",
+    "世界模型验证保留真实增益及局限：point与quantile的自然验证MAE为19.1172与17.7014 mg/dL，配对动作验证为18.7385与16.9548 mg/dL；BG54事件漏报由41/55降至18/55。自然验证缺少严重低糖阳性样本，相应漏报率不可估计；预测仍不能消除闭环低糖。分位数边际不等于联合轨迹CVaR，预测改善不直接构成给药安全性证明。",
+    "大表纳入BC、TD3+BC、IQL、ReBRAC、FQL、LOM、GFP和RL-DITR方法适配，并补充新任务固定20k IQL。论文身份与作者代码来源单列；旧冻结权重的预训练、奖励与预算不同，采用共同合法动作范围投影。本表是本项目同一仿真场景的实测，既非原论文结果搬运，也不代表充分调优后的算法性能上限。六个不完整方法仅报告Observed前缀、覆盖率及TIR边界，不参与完整随访排名。",
+    "全部阶段检查点、早期与失败结果都保留。Wide/World PPO第8轮BG结果与Hold精确一致；Wide16概率均值部署负结果保留，条件性BC没有激活。新IQL最终训练replay诊断ESS/N为0.9901，仅是固定模型的训练样本权重描述，不能据此断言IQL等同BC或确定弱结果的因果。",
+    "实验范围固定为公开仿真中的10名已见成人T1D、基础输注U/h、每5分钟动作、单训练seed260915；确认更换场景种子而未换患者，外部餐时bolus依规则给定。表中mean±SD先按每患者6病例求均值，再对10名患者计算样本标准差。当前结果支持研究阶段的改善，不支持全面SOTA、真实临床安全或用户产品闭环完成。后续新方案按用户要求暂停。"
+  ],
+  "panels": {
+    "dev_legacy_r1": {
+      "method_id": "d06_frozen",
+      "label": "原 D06 · 冻结窄动作",
+      "group": "comparison"
+    },
+    "dev_hold_r1": {
+      "method_id": "hold",
+      "label": "观测基础率 Hold",
+      "group": "comparison"
+    },
+    "dev_physiology_r1": {
+      "method_id": "physiology",
+      "label": "IOB / Zone 规则对照",
+      "group": "comparison"
+    },
+    "dev_ppo08_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 08 轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_retained_bc_r1": {
+      "method_id": "retained_bc",
+      "label": "BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_iql_r1": {
+      "method_id": "retained_iql",
+      "label": "IQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo16_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 16 轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_retained_rebrac_r1": {
+      "method_id": "retained_rebrac",
+      "label": "ReBRAC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_lom_r1": {
+      "method_id": "retained_lom",
+      "label": "LOM · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_gfp_r1": {
+      "method_id": "retained_gfp",
+      "label": "GFP · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_td3bc_r1": {
+      "method_id": "retained_td3bc",
+      "label": "TD3BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_fql_r1": {
+      "method_id": "retained_fql",
+      "label": "FQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo32_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第32轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_retained_ditr_r1": {
+      "method_id": "retained_ditr",
+      "label": "RL-DITR* · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_world_point_r1": {
+      "method_id": "mpc_point_world",
+      "label": "Point world · MPC",
+      "group": "comparison"
+    },
+    "dev_world_quantile_median_r1": {
+      "method_id": "mpc_quantile_median",
+      "label": "Quantile world · 中位数 MPC",
+      "group": "comparison"
+    },
+    "dev_world_expected_r1": {
+      "method_id": "mpc_expected",
+      "label": "Quantile world · 期望风险 MPC",
+      "group": "comparison"
+    },
+    "dev_world_risk_r1": {
+      "method_id": "mpc_event_risk",
+      "label": "Quantile world · 期望风险 + 事件 MPC",
+      "group": "comparison"
+    },
+    "dev_world_ppo08_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第08轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_iql_wide_r1": {
+      "method_id": "iql_wide",
+      "label": "IQL · 新任务固定20k",
+      "group": "comparison"
+    },
+    "dev_ppo16_mean_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO16 · 同权重概率均值部署",
+      "group": "internal_ablation",
+      "deployment_variant": "probability_mean_of_capped_executable_grid; post-development hypothesis; same checkpoint as argmax16"
+    },
+    "dev_ppo40_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第40轮（第二RL候选）",
+      "group": "comparison"
+    },
+    "dev_world_ppo16_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第16轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_world_ppo32_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第32轮（argmax）",
+      "group": "internal_ablation",
+      "deployment_variant": "同一固定训练运行的较早检查点；完整开发负结果保留，不计为独立算法。"
+    },
+    "dev_world_ppo40_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第40轮（主候选）",
+      "group": "comparison"
+    },
+    "confirmation_ppo_world_quantile": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第40轮（冻结主候选）",
+      "group": "comparison"
+    },
+    "confirmation_d06_frozen": {
+      "method_id": "d06_frozen",
+      "label": "原 D06 · 冻结窄动作",
+      "group": "comparison"
+    },
+    "confirmation_ppo_wide": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第40轮（第二RL候选）",
+      "group": "comparison"
+    },
+    "confirmation_physiology": {
+      "method_id": "physiology",
+      "label": "IOB / Zone 规则对照",
+      "group": "comparison"
+    },
+    "confirmation_mpc_event_risk": {
+      "method_id": "mpc_event_risk",
+      "label": "Quantile world · 期望风险 + 事件 MPC",
+      "group": "comparison"
+    },
+    "confirmation_mpc_point_world": {
+      "method_id": "mpc_point_world",
+      "label": "Point world · MPC",
+      "group": "comparison"
+    },
+    "confirmation_mpc_quantile_median": {
+      "method_id": "mpc_quantile_median",
+      "label": "Quantile world · 中位数 MPC",
+      "group": "comparison"
+    },
+    "confirmation_mpc_expected": {
+      "method_id": "mpc_expected",
+      "label": "Quantile world · 期望风险 MPC",
+      "group": "comparison"
+    },
+    "confirmation_hold": {
+      "method_id": "hold",
+      "label": "观测基础率 Hold",
+      "group": "comparison"
+    },
+    "confirmation_iql_wide": {
+      "method_id": "iql_wide",
+      "label": "IQL · 新任务固定20k",
+      "group": "comparison"
+    },
+    "confirmation_retained_bc": {
+      "method_id": "retained_bc",
+      "label": "BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_iql": {
+      "method_id": "retained_iql",
+      "label": "IQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_td3bc": {
+      "method_id": "retained_td3bc",
+      "label": "TD3BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_rebrac": {
+      "method_id": "retained_rebrac",
+      "label": "ReBRAC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_fql": {
+      "method_id": "retained_fql",
+      "label": "FQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_lom": {
+      "method_id": "retained_lom",
+      "label": "LOM · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_gfp": {
+      "method_id": "retained_gfp",
+      "label": "GFP · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "confirmation_retained_ditr": {
+      "method_id": "retained_ditr",
+      "label": "RL-DITR* · 冻结 + 公共范围投影",
+      "group": "comparison"
+    }
+  },
+  "equal_bg": [
+    {
+      "left": "dev_ppo08_r1",
+      "right": "dev_hold_r1"
+    },
+    {
+      "left": "dev_world_ppo08_r1",
+      "right": "dev_hold_r1"
+    }
+  ],
+  "closeout_overview_paragraphs": [
+    "本轮全部评测已完成：25行开发结果加18个冻结方法的确认结果，共2580条记录；原评分器重算通过。新方案与新训练已暂停。下方大表是独立确认结果，完整报告保留所有开发检查点和负结果。",
+    "当前冻结的世界模型+RL主方案为World PPO40：TIR 97.11%、TBR70 1.22%、TBR54 0.39%、SD 22.35 mg/dL、CV 18.11%。相对原D06，TBR70降低0.74个百分点、TBR54降低0.28个百分点、TIR提高0.63个百分点；仍有5次持续至少120分钟的严重低糖事件。",
+    "核心目标尚未完全达成：TAR180由1.55%升至1.66%，HBGI由1.1260升至1.1629。World与Wide PPO均未通过原严格联合门槛，不能声称解决低糖且其他指标不退步或全面SOTA。Wide PPO在开发集上的严格通过未在确认集复现。",
+    "最优结果取决于指标：事件风险MPC的TIR最高（97.68%），规则对照的低糖指标最低（TBR70 0.20%、TBR54 0），但高糖更多。World PPO的综合风险1.658866与事件风险MPC的1.658930近乎持平，不能当作可靠领先。两PPO在11项family指标中都没有单独最优。",
+    "确认集12个方法完整，6个方法合计50例原生提前终止；失败行仅展示已观测前缀，不参与完整结果排名。论文模型属于本项目任务适配，训练预算与原论文任务并不等价。全部结论限于单训练种子、10名已见虚拟成人的公开仿真；并非真实患者或端到端联合世界模型的完成证明。"
+  ],
+  "confirmation_review": {
+    "reviewed": true,
+    "reviewer": "audit_review 独立只读审查：18方法身份/冻结证据/1080病例/门槛/患者区间/完整行最优计数已核验；见 confirmation_results_review.md",
+    "panel_manifest_sha256": {
+      "confirmation_ppo_world_quantile": "7656cfcbc461216650bbbf0d8151d62df3d78b95af5367bb3d6742e8826b48fc",
+      "confirmation_d06_frozen": "c8c059b3adb02c0abb21bbce0f0f6377052465dc6f8596cd0316b720694aa1b7",
+      "confirmation_ppo_wide": "3a4e8c0aec6c14709cf71e768422f82afbfc731a4a3efd79b986ee9590013e77",
+      "confirmation_physiology": "aeef3a66b833937f5be83e5bbb1f9dcad6ee2ccd027d8c950d134a9e131bf72f",
+      "confirmation_mpc_event_risk": "12aaf5fafe5b0655c8889eba27df63c01edfd7312fb34692b069f7f25d872330",
+      "confirmation_mpc_point_world": "a6a87a61f94be56cbc8aca88f4432dac278c4107396f13624045929ac9e6d423",
+      "confirmation_mpc_quantile_median": "6906a04f90aa861f8a4c52d7fcece04cfb6e8e2179be0ec823ee5c9c2469f05b",
+      "confirmation_mpc_expected": "d9cf6df653dee9abf888344dd3b56e5899ab454a74915ab51d5e8bdf30523b7b",
+      "confirmation_hold": "08edcc2b8b946996885d2fd593f8cbbcaf36117b566951cb1dd89e762ae6de7a",
+      "confirmation_iql_wide": "3c789c3f84a1aaf013ab1a0fafb96a9a5cb1a093b95a89a4c14b6ec26bd76bc1",
+      "confirmation_retained_bc": "8e3fe36050191d4d384e100153acf9d37d85c8ff27565b0da7bb15f56d2735c0",
+      "confirmation_retained_iql": "f955079f12c112a7eac37cef95b1b5532fcf843571464448c2d20f750efa844d",
+      "confirmation_retained_td3bc": "dab29692914271aa9f980b9c92e7aaa6c9231ca31cea26826c738b37216ee623",
+      "confirmation_retained_rebrac": "32ad11d11b9f732c8cfc2420860d9cac37d4644ecb16727ddaa5213fb00d0ffe",
+      "confirmation_retained_fql": "b5716f4d7293e05d32a27da88109b813dd0075edab443be0de239656d3fc3375",
+      "confirmation_retained_lom": "d3391eed463367243fac2ef8afc132ca4f7f4dbc5a10dfc1d63cf745dfee41bd",
+      "confirmation_retained_gfp": "1b249a42e8413496055e7fa39275df68a467793e33f7403fe863681a88a97b6d",
+      "confirmation_retained_ditr": "49e243ea9b79e7e35c6af6789fe7bd95be89b12f16a36c21f563af8df74a52b3"
+    }
+  },
+  "closeout_scope": {
+    "new_experiments_paused": true,
+    "all_existing_evaluations_finished": true,
+    "clinical_validation": false,
+    "global_sota_achieved": false
+  }
+}

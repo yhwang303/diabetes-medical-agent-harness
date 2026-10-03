@@ -1,0 +1,10 @@
+{
+  "method_id": "retained_iql",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "4f476f11fe0c1d955b29a06ed3380f370e01fbe9b177f01d9ea6317138b5e557",
+  "log_sha256": "23311c856089472847983fd49ad39fdf4646f7722adc85c8fdfd6cadfc533260"
+}

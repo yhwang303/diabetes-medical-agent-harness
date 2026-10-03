@@ -1,0 +1,10 @@
+{
+  "method_id": "ppo_wide",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "0278b29e791d06827b8593147e40b59ea76b3aeb18afd06b61d443751815b180",
+  "log_sha256": "b61f93943dcb8ca5f39892b9f222b7542a33ee134fdf658e5d5663578f0452c1"
+}

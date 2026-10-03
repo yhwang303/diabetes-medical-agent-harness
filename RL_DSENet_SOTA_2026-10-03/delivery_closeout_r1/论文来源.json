@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "purpose": "最终对比表八个旧基线的文献身份与实际适配出处；不含新增候选、成绩或模型选择。",
+  "methods": [
+    {
+      "id": "retained_bc",
+      "display_name": "BC frozen+projection",
+      "paper_title": null,
+      "venue_year": "通用行为克隆（无单一论文归属）",
+      "paper_url": null,
+      "code_url": null,
+      "adaptation_note": "通用监督行为克隆，以确定性 MLP 和动作 MSE 拟合已记录基础率，不使用 RL reward。沿用 shared_bc 旧权重并作公共投影，不冠以某篇论文官方实现或独立强化学习算法。",
+      "verification_status": "generic_method_no_single_paper_attribution",
+      "publication_year": null,
+      "verification_note": "本地 rl_algorithms.py 的 algorithm=bc 分支直接执行动作 MSE；未指定唯一发明论文或作者仓库。",
+      "additional_primary_urls": [],
+      "author_code_fixed_commit_in_local_audit": null,
+      "implementation_details": "1584 维归一化历史、3×256 MLP、绝对 0..20 U/h 映射；既有 Loop 权重后追加 20k 共同数据更新。",
+      "local_implementation": {
+        "path": "RL进阶对比_2026-09-15/rl_algorithms.py",
+        "sha256": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_td3bc",
+      "display_name": "TD3+BC frozen+projection",
+      "paper_title": "A Minimalist Approach to Offline Reinforcement Learning",
+      "venue_year": "NeurIPS 2021",
+      "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/a8166da05c5a094f7dc03724b41886e5-Abstract.html",
+      "code_url": "https://github.com/sfujim/TD3_BC",
+      "adaptation_note": "按 TD3+BC 双 Q、延迟策略更新和 actor 行为正则适配基础输注；1584 维历史、3×256 网络及任务奖励/折扣为本项目设置。沿用旧权重后投影，非作者 D4RL 默认配置或分数复现。",
+      "verification_status": "verified_primary_paper_and_author_repository",
+      "publication_year": 2021,
+      "verification_note": "NeurIPS 正式页直接给出原题及 2021 年；sfujim/TD3_BC 标明作者 PyTorch 实现并链接同文。",
+      "additional_primary_urls": [],
+      "author_code_fixed_commit_in_local_audit": null,
+      "implementation_details": "保留 Q1 actor 目标、双 Q 最小 TD 目标、alpha=2.5、policy_delay=2。官方仓库已核验，所读本地审查未给上游固定 commit，故不补造。",
+      "local_implementation": {
+        "path": "RL_DSENet_2026-09-17/revision/td3bc_algorithm.py",
+        "sha256": "589a532582d2934cc62232c21ecc3e0dd8bed78d1b62029f4a117c9046c64eeb"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_iql",
+      "display_name": "IQL frozen+projection",
+      "paper_title": "Offline Reinforcement Learning with Implicit Q-Learning",
+      "venue_year": "ICLR 2022",
+      "paper_url": "https://openreview.net/forum?id=68n2s9ZJWF8",
+      "code_url": "https://github.com/ikostrikov/implicit_q_learning",
+      "adaptation_note": "旧 IQL 的 PyTorch 任务适配，保留 expectile V、双 Q 与优势加权 Gaussian 似然，评估取均值。此处为 shared_iql 冻结权重加投影，不能与新 IQL_wide 混同，也不是作者 JAX/原 D4RL 复现。",
+      "verification_status": "verified_primary_catalogue_author_preprint_and_repository",
+      "publication_year": 2022,
+      "verification_note": "ICLR 2022 官方目录直接列出原题并链接 poster/5941；作者 arXiv 和官方代码核对题名与归属。OpenReview 本次为浏览器验证页；2021 首稿年不替代正式会议 2022。",
+      "additional_primary_urls": [
+        "https://iclr.cc/Downloads/2022",
+        "https://arxiv.org/abs/2110.06169"
+      ],
+      "author_code_fixed_commit_in_local_audit": "09d700248117881a75cb21f0adb95c6c8a694cb2",
+      "implementation_details": "expectile=0.7、exp(3A) 上限 100；1584 维历史、3×256；无有效后继的行屏蔽 Q/V 并保留权重 1 的行为学习，属于资料缺失适配。",
+      "local_implementation": {
+        "path": "RL_DSENet_2026-09-17/revision/iql_algorithm.py",
+        "sha256": "b6b538ffaee85513f925a44b780f986f03be4ae01cbef0419c4754972a302766"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_rebrac",
+      "display_name": "ReBRAC frozen+projection",
+      "paper_title": "Revisiting the Minimalist Approach to Offline Reinforcement Learning",
+      "venue_year": "NeurIPS 2023",
+      "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/26cce1e512793f2072fd27c391e04652-Abstract-Conference.html",
+      "code_url": "https://github.com/tinkoff-ai/ReBRAC",
+      "adaptation_note": "PyTorch 适配保留 actor/Q 双重行为正则，采用已修正更新顺序的 shared_rebrac 旧权重；正则、学习率、噪声与初始化已有任务适配。部署再投影，不能称原生或充分调优的整个 ReBRAC 算法族成绩。",
+      "verification_status": "verified_primary_paper_and_author_repository",
+      "publication_year": 2023,
+      "verification_note": "NeurIPS 2023 正式页与作者仓库同题；本地 baseline_sources.md 记录作者固定提交，训练入口为 rebrac_corrected.py。",
+      "additional_primary_urls": [],
+      "author_code_fixed_commit_in_local_audit": "694385b72fcef2ae318e3f0ff41ca36122355343",
+      "implementation_details": "实际旧配置 beta_actor=100、beta_q=1、target_noise=0.02、noise_clip=0.05，无 anchor_context；不能把早期文献建议参数冒充冻结参数。",
+      "local_implementation": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/rebrac_corrected.py",
+        "sha256": "a5ddfee9b3628a23124fa2dd949650b1d478dc561d18f5cb45c9751edafc3b4c"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_fql",
+      "display_name": "FQL frozen+projection",
+      "paper_title": "Flow Q-Learning",
+      "venue_year": "ICML 2025",
+      "paper_url": "https://proceedings.mlr.press/v267/park25f.html",
+      "code_url": "https://github.com/seohongpark/fql",
+      "adaptation_note": "流匹配行为模型、单步 actor 蒸馏/Q 优化的 PyTorch 适配，使用 source-order 修正后的 shared_fql 旧权重。部署带 Gaussian noise 的单步 actor 后投影，非作者 JAX/原基准完整复现。",
+      "verification_status": "verified_primary_paper_and_author_repository",
+      "publication_year": 2025,
+      "verification_note": "PMLR 正式页给出 ICML 2025、267:48104–48127；作者仓库声明 FQL 官方实现。不是 ICLR 2025。",
+      "additional_primary_urls": [],
+      "author_code_fixed_commit_in_local_audit": "e8cd16eb490332924dfa2492097219f181765933",
+      "implementation_details": "实际旧配置 4×512、alpha=100、q_agg=mean、normalize_q_loss=false、Euler 10 步；推理不运行 flow 积分。保留原每 episode 噪声流，病例句柄不入网络。",
+      "local_implementation": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/fql_corrected.py",
+        "sha256": "d60f08a2e859cb2498dae0da44df4225478f1c3587b9c5158dd323d77a215ec3"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_lom",
+      "display_name": "LOM frozen+projection",
+      "paper_title": "Learning on One Mode: Addressing Multi-modality in Offline Reinforcement Learning",
+      "venue_year": "ICLR 2025",
+      "paper_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/be62c4a943675195ff5a2a98d5b9724f-Abstract-Conference.html",
+      "code_url": "https://github.com/MianchuWang/LOM",
+      "adaptation_note": "依论文独立实现 GMM、SARSA behavior-Q、mode-Q 与单 mode 加权模仿；固定作者快照未发现 LICENSE，未纳入其源码。优势基准取所选 mode 均值，区别于所审作者代码的 actor 基准。沿用 corrected 旧权重并投影。",
+      "verification_status": "verified_primary_paper_and_author_repository",
+      "publication_year": 2025,
+      "verification_note": "ICLR 2025 正式页与作者 README 同题，README 指向 OpenReview upkxzurnLC。2024 为首稿年，采用正式会议 2025。",
+      "additional_primary_urls": [],
+      "author_code_fixed_commit_in_local_audit": "e7cf8a37b05adeb983af8c288abd06f1c37e9f40",
+      "implementation_details": "10 个 mixture；既有 10k GMM+50k RL 后追加 5k GMM+20k RL；3×256 actor/Q 为容量适配，推理使用确定性 actor，不从 GMM 采样。",
+      "local_implementation": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/lom_corrected.py",
+        "sha256": "6c56db1ef9567cffc8e8fc964c1a58804963e01ade058b7f17dd32930ededc8d"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_gfp",
+      "display_name": "GFP frozen+projection",
+      "paper_title": "Guided Flow Policy: Learning from High-Value Actions in Offline Reinforcement Learning",
+      "venue_year": "ICLR 2026",
+      "paper_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/33f131b806a93d376cf0ce1a456464bb-Abstract-Conference.html",
+      "code_url": "https://github.com/Simple-Robotics/guided-flow-policy",
+      "adaptation_note": "价值引导 flow 拟合与单步 actor 蒸馏的 PyTorch 任务适配；保留价值权重、时间编码及目标更新逻辑，网络/学习率采用项目预算。Gaussian noise actor 后投影，非作者 JAX/原 benchmark 复现。",
+      "verification_status": "verified_primary_paper_and_author_repository",
+      "publication_year": 2026,
+      "verification_note": "ICLR 正式 2026 出版页给出完整题名；作者仓库列 2025 首稿、2026 接收/代码发布。采用 ICLR 2026。",
+      "additional_primary_urls": [],
+      "author_code_fixed_commit_in_local_audit": "e60468e31066ed072e494be8c6cce14ac19f60e9",
+      "implementation_details": "alpha=1、eta=0.001、64 维时间编码、10 步 Euler；本项目 3×256 与作者默认 4×512 不同。保留原逐 episode 噪声流，无场景/患者身份网络输入。",
+      "local_implementation": {
+        "path": "RL_DSENet_2026-09-17/revision/gfp_algorithm.py",
+        "sha256": "bfbd96578c29c70ccfa59ab4c5b8b53f198a49357154b554e9e7bad2b93b283c"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76",
+        "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+        "worker_args": []
+      }
+    },
+    {
+      "id": "retained_ditr",
+      "display_name": "RL-DITR* frozen+projection",
+      "paper_title": "Optimized glycemic control of type 2 diabetes with reinforcement learning: a proof-of-concept trial",
+      "venue_year": "Nature Medicine 2023",
+      "paper_url": "https://www.nature.com/articles/s41591-023-02552-9",
+      "code_url": "https://github.com/rlditr23/RL-DITR",
+      "adaptation_note": "*表示公开成人 T1D 连续基础输注适配：患者模型/策略/价值/beam 思路改为 5 分钟连续 U/h，区别于原住院 T2D 给药任务。旧 R03 categorical 继续训练权重与原 beam worker，首动作在搜索后投影；非范围内重新规划或原临床试验复现。",
+      "verification_status": "verified_primary_full_text_and_paper_linked_author_repository",
+      "publication_year": 2023,
+      "verification_note": "Nature 主站本次跳转验证未成功；出版商提供的同文 PMC 全文明确题名、DOI、29:2633–2642，并在 Code availability 直接链接 rlditr23/RL-DITR；与本地全文及作者快照一致。",
+      "additional_primary_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10579102/",
+        "https://doi.org/10.1038/s41591-023-02552-9"
+      ],
+      "author_code_fixed_commit_in_local_audit": "5080fdbe43979f9b8a9616fbc120aae4ac25842a",
+      "implementation_details": "公开 trainer 接口/目标差异已有审查，按论文与源码独立对齐；shared 阶段追加 2k patient+2k policy。原医院队列、ClinicalBERT 资料和临床结论未在本项目复现。",
+      "local_implementation": {
+        "path": "RL_DITR创新_2026-09-16/ditr_model.py",
+        "sha256": "d6d013610bf791551d331aea034fa960d285dd57320514e360f984f1317d5279"
+      },
+      "frozen_deployment_reference": {
+        "configuration_path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+        "configuration_sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+        "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/policy_last.pt",
+        "checkpoint_sha256_as_frozen_manifest": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9",
+        "worker": "RL_DITR创新_2026-09-16/policy_worker.py",
+        "worker_args": [
+          "--mode",
+          "beam"
+        ]
+      }
+    }
+  ],
+  "common_adaptation": {
+    "deployment_label": "frozen+projection",
+    "observations": "截至决策时已可用的 72×22 历史；七个 shared actor 展平为 1584 维。旧网络不新增持久 warmup anchor 输入。",
+    "action": "保持旧绝对 0..20 U/h 映射，再显式 clip(raw,0,min(20,2*observed_warmup_anchor))；每 5 分钟执行。不是 anchor 乘法重映射。",
+    "training": "沿用 9/21 最终权重；七方法在既有权重后追加 Loop+S1+S2 共同数据更新 20k，LOM 另加 5k GMM；RL-DITR 追加 2k patient+2k policy。单训练 seed 260915。",
+    "comparability": "共同观测来源、场景和评分器不等于相同表示、奖励、数据、预算或调参充分程度；比较对象是具体冻结任务适配实例，不能据此宣称全面 SOTA 或算法族上限。",
+    "citation_scope": "文献身份与作者仓库关联核验不表示本项目复现其原数据、基准分数或临床结论。BC 无指定的单一原论文或作者仓库。",
+    "results": "本文件不复制成绩；开发/确认完成率、失败与未知尾部由绑定评分大表负责。"
+  },
+  "verification_access_notes": [
+    "2026-10-04 通过公开一手出版页、作者仓库与既有本地审查核验。",
+    "IQL OpenReview 与 RL-DITR Nature 本次访问受限；分别用官方 ICLR 年度目录+作者原稿、出版商提供的 PMC 同文全文验证，不把访问受限写成成功读取。",
+    "固定作者 commit 来自历史本地审查，不是本次获取的最新 commit；null 表示所读审查未核验到固定版本。",
+    "只新增文献索引；不改变训练、部署、配置、权重、registry、评分器或确认协议。"
+  ],
+  "created_at": "2026-10-04T00:58:43+08:00",
+  "local_evidence_sha256": {
+    "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c",
+    "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a",
+    "RL_DSENet_公平低糖_2026-09-21/configs/final_manifest.json": "bd2884f7103e5ed913ed5e9e799622be22d2ece1e205291bf79ea3b12e6218ec",
+    "RL_DSENet_公平低糖_2026-09-21/configs/shared_methods.json": "cbb17a5801d7923db8f488ab343bd2b67d92d1759830ad7ff41dd1a23bd308de",
+    "RL_DSENet_公平低糖_2026-09-21/configs/ditr_shared.json": "6755ffb7cdeb82ea167411defa3d57c69b1425b414d82bfca191a58cd14d6777",
+    "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+    "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+    "RL进阶对比_2026-09-15/baseline_sources.md": "a5ec571aaf08074fc0331e09a4ae4fe8550bc165843c418bcf3d31cfb36c1ecc",
+    "RL_DSENet_2026-09-17/revision/iql_implementation.md": "8fcf0c8a5bef7189a46ecd9b362368a25772888b9299a4818a5f709b2c03791b",
+    "RL_DSENet_2026-09-17/revision/gfp_td3bc_implementation.md": "ff34be82c7c6eb80f327cd8a6fb79b721107ef449c7fe2cb3a79a7235a726e33",
+    "RL_DSENet_2026-09-17/revision/recent_baselines_research.md": "5b310180675ca6d6ad7fc693505ca6b26abded29224145b7b8aa41bbcacc73d8",
+    "RL_DSENet_2026-09-17/revision/source_audit/manifest.json": "1f017a9b6068daaf742bad72443ac5332cec7cdec8cc6ca271e27c08c0286eae",
+    "RL_DSENet_2026-09-17/revision/source_audit/lom/README.md": "6a787c7e424ba502bc00f514cc252ffc6d55590a66ee32f5e6023be04c14393a",
+    "RL_DSENet_2026-09-17/revision/source_audit/iql/upstream.json": "e8c1435a40f9ddbc6b21bfdf2942c0aa102b6d114a9efe5eed3508a9f374e4a3",
+    "RL训练_2026-09-15/method_audit.md": "09c4cf0a556b0bcfbb33734ac40c6deaefb5cca15e8cfc747e5071d181a371be",
+    "RL训练_2026-09-15/vendor/RL-DITR/README.md": "e9b3d955aa023013d05ce7f403d14d291ccc4b5ca64433eb613d51be5f26de63",
+    "RL_DITR创新_2026-09-16/任务与复现合同.md": "8e5a8144cac3d0acb5e72a9ae9cfdb25b4ebd701be655599ba0ce968e121b29e",
+    "Loop数据集/训练管线_v1/文献/RL-DITR_全文.txt": "2a1bf58cf2eb59405db66964b28dd67e9598ade70d98535fff697373d324a5c4",
+    "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+    "RL_DSENet_2026-09-17/revision/td3bc_algorithm.py": "589a532582d2934cc62232c21ecc3e0dd8bed78d1b62029f4a117c9046c64eeb",
+    "RL_DSENet_2026-09-17/revision/iql_algorithm.py": "b6b538ffaee85513f925a44b780f986f03be4ae01cbef0419c4754972a302766",
+    "RL_DSENet_公平低糖_2026-09-21/rebrac_corrected.py": "a5ddfee9b3628a23124fa2dd949650b1d478dc561d18f5cb45c9751edafc3b4c",
+    "RL_DSENet_公平低糖_2026-09-21/fql_corrected.py": "d60f08a2e859cb2498dae0da44df4225478f1c3587b9c5158dd323d77a215ec3",
+    "RL_DSENet_公平低糖_2026-09-21/lom_corrected.py": "6c56db1ef9567cffc8e8fc964c1a58804963e01ade058b7f17dd32930ededc8d",
+    "RL_DSENet_2026-09-17/revision/gfp_algorithm.py": "bfbd96578c29c70ccfa59ab4c5b8b53f198a49357154b554e9e7bad2b93b283c",
+    "RL_DITR创新_2026-09-16/ditr_model.py": "d6d013610bf791551d331aea034fa960d285dd57320514e360f984f1317d5279"
+  }
+}

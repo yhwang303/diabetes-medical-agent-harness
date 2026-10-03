@@ -1,0 +1,10 @@
+{
+  "method_id": "mpc_expected",
+  "exit_code": 0,
+  "launch_error": null,
+  "status": "completed",
+  "error": null,
+  "complete_fixed_case_reporting": true,
+  "ticket_sha256": "81a62fedef577fb767313a3006bf980156d660dd153ff6cb79383df6216b71b4",
+  "log_sha256": "bbef9a5a42ac7fe8abe060c0d4306e899fe7e384eb182444faab5348a997475b"
+}
