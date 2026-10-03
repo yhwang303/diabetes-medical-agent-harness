@@ -1,0 +1,14 @@
+{
+  "forecast": {
+    "path": "results/P03_g12s3_l2s1/best.pt",
+    "sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4"
+  },
+  "world": {
+    "path": "results/D05_selected_world/world.pt",
+    "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+  },
+  "policy": {
+    "path": "results/D06_selected_policy/policy.pt",
+    "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "old": {
+    "world_sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae",
+    "event_summary": {
+      "severe": {
+        "arms": 168,
+        "54_bg": {
+          "true_low": 168,
+          "misses": 168,
+          "predicted_safe": 168,
+          "missed_fraction": 1.0,
+          "false_safe_fraction": 1.0
+        },
+        "54_cgm": {
+          "true_low": 168,
+          "misses": 168,
+          "predicted_safe": 168,
+          "missed_fraction": 1.0,
+          "false_safe_fraction": 1.0
+        },
+        "70_bg": {
+          "true_low": 168,
+          "misses": 126,
+          "predicted_safe": 126,
+          "missed_fraction": 0.75,
+          "false_safe_fraction": 1.0
+        },
+        "70_cgm": {
+          "true_low": 168,
+          "misses": 126,
+          "predicted_safe": 126,
+          "missed_fraction": 0.75,
+          "false_safe_fraction": 1.0
+        }
+      },
+      "mild": {
+        "arms": 56,
+        "54_bg": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 56,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "54_cgm": {
+          "true_low": 13,
+          "misses": 13,
+          "predicted_safe": 56,
+          "missed_fraction": 1.0,
+          "false_safe_fraction": 0.23214285714285715
+        },
+        "70_bg": {
+          "true_low": 56,
+          "misses": 56,
+          "predicted_safe": 56,
+          "missed_fraction": 1.0,
+          "false_safe_fraction": 1.0
+        },
+        "70_cgm": {
+          "true_low": 56,
+          "misses": 56,
+          "predicted_safe": 56,
+          "missed_fraction": 1.0,
+          "false_safe_fraction": 1.0
+        }
+      },
+      "negative": {
+        "arms": 70,
+        "54_bg": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 70,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "54_cgm": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 70,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "70_bg": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 49,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "70_cgm": {
+          "true_low": 7,
+          "misses": 0,
+          "predicted_safe": 49,
+          "missed_fraction": 0.0,
+          "false_safe_fraction": 0.0
+        }
+      }
+    },
+    "regression": {
+      "severe": {
+        "arms": 168,
+        "mean_cgm_mae_mg_dl": 49.78400524726784,
+        "mean_min_cgm_bias_mg_dl": 52.736968318615105,
+        "predicted_low54": 0,
+        "predicted_low70": 42,
+        "false_positive54_cgm": 0,
+        "false_positive70_cgm": 0
+      },
+      "mild": {
+        "arms": 56,
+        "mean_cgm_mae_mg_dl": 26.689651473034008,
+        "mean_min_cgm_bias_mg_dl": 23.48715167556355,
+        "predicted_low54": 0,
+        "predicted_low70": 0,
+        "false_positive54_cgm": 0,
+        "false_positive70_cgm": 0
+      },
+      "negative": {
+        "arms": 70,
+        "mean_cgm_mae_mg_dl": 28.568946904158704,
+        "mean_min_cgm_bias_mg_dl": 0.623112201575349,
+        "predicted_low54": 0,
+        "predicted_low70": 21,
+        "false_positive54_cgm": 0,
+        "false_positive70_cgm": 14
+      }
+    }
+  },
+  "old_prediction_max_abs_delta_mg_dl": 0.0,
+  "new": {
+    "world_sha256": "3f93d9636c2f6ebb9afcdc7147b1a00eccc39f7884865dc618b000e191a6b156",
+    "event_summary": {
+      "severe": {
+        "arms": 168,
+        "54_bg": {
+          "true_low": 168,
+          "misses": 167,
+          "predicted_safe": 167,
+          "missed_fraction": 0.9940476190476191,
+          "false_safe_fraction": 1.0
+        },
+        "54_cgm": {
+          "true_low": 168,
+          "misses": 167,
+          "predicted_safe": 167,
+          "missed_fraction": 0.9940476190476191,
+          "false_safe_fraction": 1.0
+        },
+        "70_bg": {
+          "true_low": 168,
+          "misses": 128,
+          "predicted_safe": 128,
+          "missed_fraction": 0.7619047619047619,
+          "false_safe_fraction": 1.0
+        },
+        "70_cgm": {
+          "true_low": 168,
+          "misses": 128,
+          "predicted_safe": 128,
+          "missed_fraction": 0.7619047619047619,
+          "false_safe_fraction": 1.0
+        }
+      },
+      "mild": {
+        "arms": 56,
+        "54_bg": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 56,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "54_cgm": {
+          "true_low": 13,
+          "misses": 13,
+          "predicted_safe": 56,
+          "missed_fraction": 1.0,
+          "false_safe_fraction": 0.23214285714285715
+        },
+        "70_bg": {
+          "true_low": 56,
+          "misses": 54,
+          "predicted_safe": 54,
+          "missed_fraction": 0.9642857142857143,
+          "false_safe_fraction": 1.0
+        },
+        "70_cgm": {
+          "true_low": 56,
+          "misses": 54,
+          "predicted_safe": 54,
+          "missed_fraction": 0.9642857142857143,
+          "false_safe_fraction": 1.0
+        }
+      },
+      "negative": {
+        "arms": 70,
+        "54_bg": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 70,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "54_cgm": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 70,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "70_bg": {
+          "true_low": 0,
+          "misses": 0,
+          "predicted_safe": 56,
+          "missed_fraction": null,
+          "false_safe_fraction": 0.0
+        },
+        "70_cgm": {
+          "true_low": 7,
+          "misses": 0,
+          "predicted_safe": 56,
+          "missed_fraction": 0.0,
+          "false_safe_fraction": 0.0
+        }
+      }
+    },
+    "regression": {
+      "severe": {
+        "arms": 168,
+        "mean_cgm_mae_mg_dl": 43.39104399516991,
+        "mean_min_cgm_bias_mg_dl": 51.09499623093666,
+        "predicted_low54": 1,
+        "predicted_low70": 40,
+        "false_positive54_cgm": 0,
+        "false_positive70_cgm": 0
+      },
+      "mild": {
+        "arms": 56,
+        "mean_cgm_mae_mg_dl": 22.96542787617434,
+        "mean_min_cgm_bias_mg_dl": 23.65268501383782,
+        "predicted_low54": 0,
+        "predicted_low70": 2,
+        "false_positive54_cgm": 0,
+        "false_positive70_cgm": 0
+      },
+      "negative": {
+        "arms": 70,
+        "mean_cgm_mae_mg_dl": 24.23436963996943,
+        "mean_min_cgm_bias_mg_dl": 1.3581357001105052,
+        "predicted_low54": 0,
+        "predicted_low70": 14,
+        "false_positive54_cgm": 0,
+        "false_positive70_cgm": 7
+      }
+    }
+  },
+  "scoring_source_sha256": "ffda611b3d286b419ba6c0f1d9277af41f026f0c35ed6ec44db6dbd31b4f54df",
+  "original_development_predictions_sha256": "2de2abfdc7d16d6667ec5853151c122d24babdb2fe83cca492044c29182e3169",
+  "evaluation": "42 exposed event-enriched starts x 7 plans; CGM target and separate BG outcomes; correlated arms/windows, not independent population rate",
+  "training_uses_these_labels": false,
+  "fixed_final_step": 3000,
+  "actor_retrained": false,
+  "clinical_safety_proven": false
+}

@@ -1,0 +1,158 @@
+{
+  "status": "passed",
+  "raw_episodes": 1200,
+  "rows": [
+    {
+      "panel": "native",
+      "method": "hold",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "bc",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "td3bc",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "iql",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "rebrac",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "fql",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "lom",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "gfp",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "ditr",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "native",
+      "method": "ours",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "hold",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "bc",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "td3bc",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "iql",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "rebrac",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "fql",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "lom",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "gfp",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "ditr",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    },
+    {
+      "panel": "brake17",
+      "method": "ours",
+      "full_raw_and_units": "passed",
+      "table_numbers": "passed",
+      "incomplete_and_bold_rules": "passed"
+    }
+  ],
+  "warnings": [],
+  "sha256": {
+    "analysis/final.json": "60104682c4d8cf8542b11a78479e25c93b0a0849efda14116e6c9a9d0e1609a1",
+    "configs/final_manifest.json": "bd2884f7103e5ed913ed5e9e799622be22d2ece1e205291bf79ea3b12e6218ec",
+    "build_report.py": "cdafced4566799a3ea7a5724b13fbb8aaccfacd12666192313095bc77217bec0",
+    "final_analysis.py": "3a1f71d978f684edae005b2e7d01081263b6da9687ebed3b0e28c6d9506a4b99",
+    "delivery/comparison_native.csv": "077425ad67de8e960a37e4a3cd4b80e70b1ef8541b6b1290d45be30e51dafc7a",
+    "delivery/comparison_brake17.csv": "66e3152b197abfc36ad894258cba85f9b4dad11157a12b12960ff5fa1b6b0805",
+    "delivery/comparison_native.tex": "2d50616d054ac8ad5922a7059877351db4873a5ef238ae444abc8e425b9811a1",
+    "delivery/comparison_brake17.tex": "a0c9ece06271b833d6bff2186b8bd5c70ca48d938e4c2af0260a0ed26e0629a1",
+    "delivery/最终公平对比与低血糖修复报告.html": "1bf4b5d322823df366766769604669844bc153ccc665a5f51649f5aec6e45cb2"
+  }
+}

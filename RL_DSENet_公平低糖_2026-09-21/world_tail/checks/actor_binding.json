@@ -1,0 +1,7 @@
+{
+  "policy_tensors_exact": true,
+  "policy_checkpoint_sha256": "f899f1989c878ed426de0fbcc3a59865a97f78c58aa00023b42bec4fd4de0621",
+  "old_policy_sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913",
+  "world_sha256": "3f93d9636c2f6ebb9afcdc7147b1a00eccc39f7884865dc618b000e191a6b156",
+  "world_checkpoint": "../RL_DSENet_\u516c\u5e73\u4f4e\u7cd6_2026-09-21/world_tail/results/W01_tail/world.pt"
+}

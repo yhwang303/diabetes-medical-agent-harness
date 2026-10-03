@@ -1,0 +1,23 @@
+{
+  "status": "public_adapter_checks_passed",
+  "no_training": true,
+  "checks": [
+    "trajectory_dedup",
+    "episode_boundaries",
+    "actual_action_units",
+    "state_clock",
+    "one_step_successor",
+    "reward_frozen_function_exact",
+    "true_terminal_vs_horizon_truncation",
+    "multistep_masks",
+    "incomplete_PPO_rejected",
+    "array_hash_tamper_rejected"
+  ],
+  "real_paired_sample": "RL_DITR\u521b\u65b0_2026-09-16/paired_sim_train/p01_s40101_b0.8_r0.7.npz",
+  "real_paired_sample_sha256": "b72e5ac5fa307ebcca78659468a3657f368c37be0cb2a3c23cc75b3d49517f42",
+  "source_sha256": {
+    "prepare_shared_replay.py": "2415ce2a6dccce43ccc78b577be08750ebec946f96f189a35c1ce8e2bcb4ba40",
+    "shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+    "shared_check.py": "e66d30279706596fcbc3fe198f0ad2bd286b30900e24e259e9927b451410d7ea"
+  }
+}

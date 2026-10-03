@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "folders": [
+    {
+      "folder": "RL_DSENet_2026-09-17/results/F11_actor",
+      "episodes": 60,
+      "patient_clusters": 10,
+      "warmup_counts": [
+        72
+      ],
+      "raw_glucose_and_dose_arithmetic": "passed",
+      "patient_mean_sample_SD": "passed",
+      "metrics": {
+        "tir_lower_bound_pct": {
+          "mean": 97.07702020202021,
+          "sd": 4.503601363254765
+        },
+        "tir_upper_bound_pct": {
+          "mean": 97.07702020202021,
+          "sd": 4.503601363254765
+        },
+        "tbr70_pct": {
+          "mean": 1.548821548821549,
+          "sd": 3.8891485111641453
+        },
+        "tbr54_pct": {
+          "mean": 0.5660774410774411,
+          "sd": 1.7900940458444738
+        },
+        "tar180_pct": {
+          "mean": 1.3741582491582491,
+          "sd": 1.9025206208168293
+        },
+        "tar250_pct": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "mean_mg_dl": {
+          "mean": 121.19818496520375,
+          "sd": 6.54055477539958
+        },
+        "sd_mg_dl": {
+          "mean": 23.222522166744845,
+          "sd": 6.1286921505527445
+        },
+        "cv_pct": {
+          "mean": 19.24631179660695,
+          "sd": 4.878212015878108
+        },
+        "lbgi": {
+          "mean": 0.7284699185561117,
+          "sd": 0.8231924004842237
+        },
+        "hbgi": {
+          "mean": 1.1374765510659306,
+          "sd": 0.5639671411954977
+        },
+        "coverage_pct": {
+          "mean": 100.0,
+          "sd": 0.0
+        },
+        "basal_u_per_observed_day": {
+          "mean": 32.21334141414142,
+          "sd": 5.36389725227779
+        },
+        "bolus_u_per_observed_day": {
+          "mean": 23.67823964646465,
+          "sd": 11.340775503927135
+        },
+        "action_tv_per_observed_day": {
+          "mean": 8.759090909090911,
+          "sd": 1.8938175044952505
+        },
+        "pump_changed_fraction": {
+          "mean": 0.1,
+          "sd": 0.31622776601683794
+        }
+      }
+    }
+  ],
+  "synthetic_missing_tail": "passed",
+  "retained_original_weights_verified": {
+    "forecast": {
+      "path": "RL_DSENet_2026-09-17/results/P03_g12s3_l2s1/best.pt",
+      "sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4"
+    },
+    "world": {
+      "path": "RL_DSENet_2026-09-17/results/D05_selected_world/world.pt",
+      "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+    },
+    "policy": {
+      "path": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+      "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    }
+  },
+  "final_analysis_sha256": "9b04f7ce6a5ca843787883b87fadc9d688c0ecae5c046bb9f59cd5b0183eebd7"
+}

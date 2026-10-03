@@ -1,0 +1,535 @@
+{
+  "date": "2026-10-03",
+  "scope": "source, configs, simulator aggregate results and QA; no weights, patient records, raw trajectories or credentials",
+  "retained_model_base_commit": "42101b8d158a89cf7b736780a14f21af67677692",
+  "files": {
+    "RL_DSENet_公平低糖_2026-09-21/HANDOFF_2026-10-03.md": {
+      "bytes": 12890,
+      "sha256": "dc6be755453c4810dd1cd49a8f7f56c4561394ad0852011b3dff0582ae26a75c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/PPO预注册.md": {
+      "bytes": 1978,
+      "sha256": "ff0b92bbb949d1da51199508c2d5e6285cc8b0578fc35a7dac023ffe5a1bcc4a"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/README.md": {
+      "bytes": 2973,
+      "sha256": "0b561b2ebb862d97b910d889bf466e57b78bd3e4c0987d0fefa0878ac7b53fb3"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/actor_worker.py": {
+      "bytes": 2712,
+      "sha256": "bf9ee1cdeef8756e2ab897888819be71c63b2e234056136185025c492af26410"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/aggregate.py": {
+      "bytes": 2412,
+      "sha256": "480fee09d0d3a1628aaa5643b5257efec559456dc57b923c55f6fe549fec2df0"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/analysis/development.json": {
+      "bytes": 106225,
+      "sha256": "b8481e0dfc4d3d9de35a4d7d7452157d8e28a26c3cbae594e4dae81ade186edd"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/analysis/final.json": {
+      "bytes": 1840427,
+      "sha256": "60104682c4d8cf8542b11a78479e25c93b0a0849efda14116e6c9a9d0e1609a1"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/brake.py": {
+      "bytes": 1450,
+      "sha256": "2b24f526b3426bd6052b71797a52fd14c37892e99a7f432c21014dd258ea2e52"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/build_report.py": {
+      "bytes": 19169,
+      "sha256": "cdafced4566799a3ea7a5724b13fbb8aaccfacd12666192313095bc77217bec0"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_ditr_shared.py": {
+      "bytes": 2844,
+      "sha256": "45c47f93401e0418808c545f0282fc5cb8d3386b04fc804f88672ad9cb718c14"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_fql.py": {
+      "bytes": 1101,
+      "sha256": "0a903b1688a8d38717d30653df59957060f3a2f2e547b74b2b7855562c21c01c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_lom.py": {
+      "bytes": 1194,
+      "sha256": "8405fd174503455c7750700a39d8b4785d62ff5b505f7c0d8ba2aadc8ea71d11"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_mechanics.py": {
+      "bytes": 1602,
+      "sha256": "3ec46e592c7fdcec251e2fbd2bc126c951a19139d7cbc20021db53069591f1fd"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_ppo.py": {
+      "bytes": 1297,
+      "sha256": "531cef4d3c8e660969b1a88866ec474fe2b081eeb2b5c08c3d8fdbfea0d186d4"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_ppo_metrics.py": {
+      "bytes": 524,
+      "sha256": "ae6848e139dbb24c93480fd21f8bed16711b738c31421f2bb801b050b3e7cd7d"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/check_rebrac.py": {
+      "bytes": 1369,
+      "sha256": "190db2e17a7564ba4005bda020951ec74e125a0e3c9d1d4a50303be87a27571c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/check_final_analysis.py": {
+      "bytes": 5072,
+      "sha256": "c711481d256e9354e2c8bbafbc42084e79a88d59345ad64f4fb412745f3db13c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/check_final_delivery.py": {
+      "bytes": 7142,
+      "sha256": "4d8b565e3c65112997c3f4fa1f45431ec13c9425b2945a079af1e01587f53ea3"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/check_shared_train.py": {
+      "bytes": 7792,
+      "sha256": "e5f99f412b13a3b88d74075311041f173d4f59e5e9a9868f52d67c152c3b48fc"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/equivalence.json": {
+      "bytes": 67,
+      "sha256": "131ac408d07f8b0ebfed24e5b6129a8a57b3e50c31e0ae8e059b41cca197e922"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/final_analysis_check.json": {
+      "bytes": 2744,
+      "sha256": "f8c682be573cea367178ef09fa4df6aa5b975855f4a48955b883a0c2f562c53b"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/final_delivery_check.json": {
+      "bytes": 4584,
+      "sha256": "78252d769bd20da30eeab484add59392174c75466dc5512eea40ee0d0484de7a"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/fql_target_order.json": {
+      "bytes": 145,
+      "sha256": "0f2fb546664d4ae0e2501696a94135e8293c2a9081a62f15b51e183dc1738f7c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/local_final_archive_check.json": {
+      "bytes": 459,
+      "sha256": "d9427c1a56ed58864e316e9764718ccd07d8e69591a774cd3650791c009752ef"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/local_training_archive_check.json": {
+      "bytes": 138,
+      "sha256": "d15f291df2a411e1d42c798480aa2825fb34783055d8d718c17fa4f489a8c294"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/lom_target_order.json": {
+      "bytes": 124,
+      "sha256": "8d49cf5f6886ff9410872acc49938535319794f4f23f144075da79a829a57ecd"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/mechanics.json": {
+      "bytes": 677,
+      "sha256": "2657ca6b0565734cfe6f04d83a481f58eeee8764fc452217487ea3760c9ecd16"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/ppo_metrics.json": {
+      "bytes": 91,
+      "sha256": "d6cfa6027e9fb32382bf5d3aeeb38c163688bfa4e3b94712a9bc1ef088464ff8"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/ppo_smoke.json": {
+      "bytes": 309,
+      "sha256": "aa955c6358a001c499167c53975e0e3792adccb8111d62b59f06cd00c5bb0132"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/rebrac_target_order.json": {
+      "bytes": 141,
+      "sha256": "657e66e23eac0def95cb401843574db4c97049be7339a5ff3f4db8fa0160c8c2"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/shared_adapter_check.json": {
+      "bytes": 881,
+      "sha256": "5197043cb40bb75629f62d6d9f00d84c83e2f93a6745edc4bc167e432adc451c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/shared_check.py": {
+      "bytes": 5682,
+      "sha256": "e66d30279706596fcbc3fe198f0ad2bd286b30900e24e259e9927b451410d7ea"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/shared_full_check.json": {
+      "bytes": 587,
+      "sha256": "bfa982c57bc54cdac8ca36c1c1cd2f7702784c859f4ec14dfcbc00bedc9817fc"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/shared_full_check.py": {
+      "bytes": 3869,
+      "sha256": "e3f86fe4c25600c4f4b24965f21fe3ca7df61f03ebfbfa6de6038b68137e9471"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/shared_replay_manifest.json": {
+      "bytes": 56765,
+      "sha256": "2140c9564eaf64fc24d90dc5975f90024ad970263663c27401253947ca128533"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/shared_train_integration.json": {
+      "bytes": 11648,
+      "sha256": "9ce895a5716148e10c2bc6df74e41b3e774d63e6f3efd32e3f9ddf9eb8099b69"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/source_order_setting_check.json": {
+      "bytes": 779,
+      "sha256": "9e5e1b602f4f28c47392a9f0e1b63f22b73c362a45f4c781f64402345a6c6c60"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/checks/transfer_recovery.json": {
+      "bytes": 1319,
+      "sha256": "4490bf0182ee6ef780a456888b7de12dbd6c1e6c9324208817d27492dfe61499"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/brake17.json": {
+      "bytes": 215,
+      "sha256": "05cc16bab4f74a7f49b58f9610339b606c6e0e967b2b504e937b8ae17816b040"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/brake30.json": {
+      "bytes": 215,
+      "sha256": "cf35f741a069b74c392385abd8a5925379f135bdad944a91a278f92d844729ff"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/confirmation.json": {
+      "bytes": 731,
+      "sha256": "d90b7f775a8de4db7e98c54575c1ccff1f61761e39ad2e172089c1c3a9418a7f"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/development.json": {
+      "bytes": 653,
+      "sha256": "8e6631af50e455c98dfe739a9c352767726285a8bb0204d7febd7427b9356875"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/development_freeze.json": {
+      "bytes": 1123,
+      "sha256": "69e72489cb2898215b02e0198a432bab17992585e3b0e09eab18391b3a66af71"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/ditr_shared.json": {
+      "bytes": 1282,
+      "sha256": "6755ffb7cdeb82ea167411defa3d57c69b1425b414d82bfca191a58cd14d6777"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/final_manifest.json": {
+      "bytes": 4645,
+      "sha256": "bd2884f7103e5ed913ed5e9e799622be22d2ece1e205291bf79ea3b12e6218ec"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/final_manifest_draft.json": {
+      "bytes": 3494,
+      "sha256": "4bfd1d4fd3ce2f51336ff22651b0d12a7833fcd71ada3e03e4c783b8c7a4ef38"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/fql_corrected.json": {
+      "bytes": 738,
+      "sha256": "b309ed38083f1bbaa63b95aafb847ac86475fb77b7516014f06d03cd72992cb7"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/lom_corrected.json": {
+      "bytes": 657,
+      "sha256": "e460018cf348dbcdb1cb4fda604f094bffba2f843b8ac03ab573a38af6478fb8"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/ppo.json": {
+      "bytes": 623,
+      "sha256": "8788842fd85262584903f4948d655d2da4a6d9e16cb8ade74d8842fdfad5619d"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/ppo_smoke.json": {
+      "bytes": 559,
+      "sha256": "4cb0c33e51933f3a6c9eaec969a01df708b51994fce98d9a6fc1ecb50b4d4d84"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/rebrac_corrected.json": {
+      "bytes": 819,
+      "sha256": "7bf9a506668cd148f21fb1ff1d051fb61442ef3b2194587531d828cfe400a239"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/retained_weights.json": {
+      "bytes": 453,
+      "sha256": "eec308be1778b02ab18e76d08b492a0bf67bbd1cf019d244c26c92bdb1126796"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/shared_methods.json": {
+      "bytes": 7626,
+      "sha256": "cbb17a5801d7923db8f488ab343bd2b67d92d1759830ad7ff41dd1a23bd308de"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/configs/smoke.json": {
+      "bytes": 277,
+      "sha256": "af083e57bd71f21d047dce9c5b8b9a242f7b7948a54c3d465cdb43014404c684"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/comparison_brake17.csv": {
+      "bytes": 6995,
+      "sha256": "66e3152b197abfc36ad894258cba85f9b4dad11157a12b12960ff5fa1b6b0805"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/comparison_brake17.tex": {
+      "bytes": 4546,
+      "sha256": "a0c9ece06271b833d6bff2186b8bd5c70ca48d938e4c2af0260a0ed26e0629a1"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/comparison_native.csv": {
+      "bytes": 6953,
+      "sha256": "077425ad67de8e960a37e4a3cd4b80e70b1ef8541b6b1290d45be30e51dafc7a"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/comparison_native.tex": {
+      "bytes": 4594,
+      "sha256": "2d50616d054ac8ad5922a7059877351db4873a5ef238ae444abc8e425b9811a1"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/已完成训练与开发证据.sha256": {
+      "bytes": 104,
+      "sha256": "f3ce298466e4e939a0ab2084f283ae7b47e1028d9614a727cf6a72195bfd03bb"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/已完成训练归档清单.json": {
+      "bytes": 196537,
+      "sha256": "b022f4352d96bd14bf625a08f3cc8057b3799a9dfa0fa04680a40cec193c9015"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/归档清单.json": {
+      "bytes": 391357,
+      "sha256": "cec3008f886fbec6b2d4da58dc9e0a6ad06e7ac653e3069de069325c68e96b2d"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/最终公平对比与低血糖修复报告.html": {
+      "bytes": 23212,
+      "sha256": "1bf4b5d322823df366766769604669844bc153ccc665a5f51649f5aec6e45cb2"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/delivery/确认评测与报告归档.sha256": {
+      "bytes": 101,
+      "sha256": "08b84646cd3ddffdabdcbb5b8ba3cb76ad3650b28650960e005645525d1ad8e5"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/ditr_shared_data.py": {
+      "bytes": 4101,
+      "sha256": "6c65c393bd7afff48a493bb739c7ff8d3650b38132787123b7c815b6e2f830c8"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/evaluate.py": {
+      "bytes": 12338,
+      "sha256": "d9d6ef89f5877e5660720e8dc4145e40e548a64447eff41c982efd0c5266f69c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/evaluate_final.py": {
+      "bytes": 12872,
+      "sha256": "36114db8ce2d77f7ac1c6e6deb025c04ae272f89672567394c6d4264596ec0b8"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/evaluate_ppo_queue.py": {
+      "bytes": 883,
+      "sha256": "08a872f20f16c044ed46768e5acd7f36c7dc9d28d172c1d43d6240d60f7099a4"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/export_fql.py": {
+      "bytes": 2244,
+      "sha256": "c40364e90685af2d46061ac0c5e1681420dc5f216d563eb832b2da88731388e0"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/export_rebrac.py": {
+      "bytes": 2247,
+      "sha256": "3edc10223287b0c4e747a4fda020ae7d2313c7525a6c4bd03fde43e4d34d9e0e"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/final_analysis.py": {
+      "bytes": 4983,
+      "sha256": "3a1f71d978f684edae005b2e7d01081263b6da9687ebed3b0e28c6d9506a4b99"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/fql_corrected.py": {
+      "bytes": 7209,
+      "sha256": "d60f08a2e859cb2498dae0da44df4225478f1c3587b9c5158dd323d77a215ec3"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/freeze_final.py": {
+      "bytes": 2165,
+      "sha256": "129a46045a3bd3b06ac017f799e3fab910bbc3818901aea22d6839c830a472d5"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/literature/方法依据.md": {
+      "bytes": 2159,
+      "sha256": "9f661500aefb22a1c883bb1c0ea86585a3a933c097739db2885efd02645dcbce"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/lom_corrected.py": {
+      "bytes": 7278,
+      "sha256": "6c56db1ef9567cffc8e8fc964c1a58804963e01ade058b7f17dd32930ededc8d"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/lom_worker.py": {
+      "bytes": 1522,
+      "sha256": "2e28a78cd98d1bce598844d86859bb3858b8624973ddc2c39c5cea92d4086dc0"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/package_run.py": {
+      "bytes": 2243,
+      "sha256": "1d12ddd837f427330b4885defc858b62033d2147f6a519f8032560a11d510796"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/package_training.py": {
+      "bytes": 1210,
+      "sha256": "bc7f6987b273c8116804eb44500096846a72833fca3d0f574d7765275de58a81"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/ppo_env.py": {
+      "bytes": 3447,
+      "sha256": "b3c57f5d0079f1fd782e161ef2978f5a6657bd554636dc6416fe67eee8d46b8b"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/ppo_worker.py": {
+      "bytes": 5805,
+      "sha256": "6f5cf3d667430592f5594372ad8ac8060732253b7a760726aee641613429e745"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/prepare_shared_replay.py": {
+      "bytes": 15314,
+      "sha256": "2415ce2a6dccce43ccc78b577be08750ebec946f96f189a35c1ce8e2bcb4ba40"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/progress.py": {
+      "bytes": 361,
+      "sha256": "be262fdad363997070c692a7950b0b030314f244ce8347361e29d156ae806e1b"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/read_native.py": {
+      "bytes": 504,
+      "sha256": "0da39cd317d6f77a1a5e87da7402ae04c9d2e672178636ab044753a9a4005f43"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/rebrac_corrected.py": {
+      "bytes": 7209,
+      "sha256": "a5ddfee9b3628a23124fa2dd949650b1d478dc561d18f5cb45c9751edafc3b4c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/recover_transfer.py": {
+      "bytes": 1205,
+      "sha256": "64d6664fdadc4854cc2e6f02e96b62f3cc111a74335210ad5a9ec2d8766c1a94"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/run_development.py": {
+      "bytes": 1389,
+      "sha256": "48c614b514d62586c486ee1cb1334ac5e06bd07198291ce1d08edff569e5dc99"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/run_final.py": {
+      "bytes": 1037,
+      "sha256": "4d86d1364892575f2fe2b2a2abe2ad5867a0de1d5fc1b2e2f02e60523ea13972"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/run_final_queues.py": {
+      "bytes": 888,
+      "sha256": "ccc07d80409b78abc91272a5a0676663f150edfa2d590bc95b2fc2fbe9a05e22"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/run_shared_queue.py": {
+      "bytes": 355,
+      "sha256": "5e0f844a04b64022637ccc022af2ac417dc519290653a20858c4d345de78431b"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/run_source_order_evaluation.py": {
+      "bytes": 620,
+      "sha256": "164cf59e3c0a27da347d63865c0f5cb3a42e8cc792ed69e811d0a5f67abed250"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/shared_data.py": {
+      "bytes": 3761,
+      "sha256": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": {
+      "bytes": 1126,
+      "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/summary_now.py": {
+      "bytes": 413,
+      "sha256": "3c9c33f03441e763d0947cf19cdc99067b786fa5d243e3ffbfd94a90a6cf1475"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/train_ditr_shared.py": {
+      "bytes": 12000,
+      "sha256": "7a36841ceaacfcabb66c06dd741bd9225bc1ace8b3fb9d3ff918f04228a2afe9"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/train_fql.py": {
+      "bytes": 6940,
+      "sha256": "970345a8e2dca4a529c6f615ee4c7d69dd676e0a313af879b7c1758b633681c6"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/train_lom.py": {
+      "bytes": 4474,
+      "sha256": "1be921fbce151211a053a45455fec8ce3b3d893d9dc0b8d32b6aaa16fa7fc12e"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/train_ppo.py": {
+      "bytes": 4230,
+      "sha256": "908c31faefdf5f5868d5bef8d0f01ecf1b196506c2d84481d4d4befc94d732a1"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/train_rebrac.py": {
+      "bytes": 6946,
+      "sha256": "42e80b3e4e19a62a10da4be34565f4e8afb99fa98081e8282b2f87d8d1cf73fa"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/train_shared.py": {
+      "bytes": 4837,
+      "sha256": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/PPO首动作只读诊断.md": {
+      "bytes": 2479,
+      "sha256": "c8ca515e9a47059e53cb32873f77111a56f993d672c4b8ef9cae7424d817c7fb"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/actor_diagnostic.py": {
+      "bytes": 4726,
+      "sha256": "8cff74719aeb2a5d7bf795edd74d78bb0e07cc3665760f077e8b64fc7d234e14"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/bind_actor.py": {
+      "bytes": 1122,
+      "sha256": "2f25992583b47833e631f8a6f5bf9fa5a901fb4e05a48e8c44879659dc9fdb43"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/check_metric_runtime.py": {
+      "bytes": 1525,
+      "sha256": "bdf4a5a09dd61fb37445a7816bec6e667b5bef232ce4bd7e829a462c9e6b790c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/actor_binding.json": {
+      "bytes": 420,
+      "sha256": "a8f97a4cde341968277d8d28fc493d0e3d63e1f70100ec0c5a3c0be44935cb1a"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/actor_diagnostic/episodes.json": {
+      "bytes": 222418,
+      "sha256": "12c40ddb8b9e35eda88ea11eab5bce5fa86213f37969d508125fa405148b3c97"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/actor_diagnostic/manifest.json": {
+      "bytes": 1895,
+      "sha256": "ca194b69c1b12288401bbaad75919d2d62c605a37774793e6f718709eb77c051"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/actor_diagnostic/result.json": {
+      "bytes": 7774,
+      "sha256": "3a01eb95614125bf065bd1297fa259168c479785a471f08bed784c158b6663b7"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/cache_manifest.json": {
+      "bytes": 23123,
+      "sha256": "f62eb4a19a0333d1272f643f20ff5bc4191af7b0a8390c56f0c38015bfb955cc"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/collect_control_native_v1.py": {
+      "bytes": 1161,
+      "sha256": "37d85ab5dfc1d066b7e7e729ae4ede9ceb1333bbb1da54b9ea48a9896c62f92a"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/control_comparison.json": {
+      "bytes": 28552,
+      "sha256": "53e0a0547a7cfd71ef5abea08afe230fdc86813c27acc1c8700bbf204ec564ec"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/delivery_source_hashes.json": {
+      "bytes": 716,
+      "sha256": "762d2142e6d738e5c2b931b443676f8bcca2f117419915370e0b6493528fce98"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/prediction_comparison.json": {
+      "bytes": 7361,
+      "sha256": "d63b35becf3c9cf8d0ab9206d63f8fc0a99b3ba0ba574c59572969de1cee0178"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/scorer_runtime_11.json": {
+      "bytes": 123,
+      "sha256": "d30f1ae0909ee2f04832c74cb773c832e207fcfed77414874444efcf7dd55fba"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/scorer_runtime_8.json": {
+      "bytes": 61435,
+      "sha256": "2236f7c2f58ead3c27a198a01f3ccc8fbe037d0e67539504c0f90eddad8aa3f2"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/checks/source_freeze.json": {
+      "bytes": 343,
+      "sha256": "9fc797d409b59c1b343c8f28b689f6da70a2737fc3dd2804213e0416f3d66d79"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/collect_control.py": {
+      "bytes": 1340,
+      "sha256": "edf9fba0e97ae817cd709a4cd597a1c809efc0682a999bfd8621b0dd908eaa23"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/common.py": {
+      "bytes": 1377,
+      "sha256": "8367c0746e0a946704f1509337a4af8b908f7469ed4ca620441a8f5ea015746a"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/configs/actor_diagnostic.json": {
+      "bytes": 1192,
+      "sha256": "1dcbb4e98116ced3606b825bd179d28fc46426995df6dfa42c9e709acb62c07c"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/configs/train.json": {
+      "bytes": 1450,
+      "sha256": "00d224c430f49a51594c45ecb28e9c79f57b72f4680a0796c8e4a84559429e74"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/evaluate_predictions.py": {
+      "bytes": 4226,
+      "sha256": "a03f0b44e7c1949f819e1528aa0c21fe2ce6c97a3f9ca547f3bd904b3c3df12e"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/prepare.py": {
+      "bytes": 6275,
+      "sha256": "2d2082e9535e0250ba43727a55bb776b9ef587f83705d4d144e27734c6be4bf0"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/prepare_actor_diagnostic.py": {
+      "bytes": 3669,
+      "sha256": "bda5524b85562fd414e813ec2d5c4604a22a23c6aa2135e4d587e2089c81a746"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/train.py": {
+      "bytes": 5178,
+      "sha256": "1eda75c8f50710f9a860ef90f572ad35ccb0d4e33d3fe2d3528013bc7609f181"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/结果说明.md": {
+      "bytes": 4322,
+      "sha256": "800bc5c3a8bbd4280ca9976be03124189f3b83053009a5fd329536ee6ccc95b3"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/world_tail/训练合同.md": {
+      "bytes": 2896,
+      "sha256": "67016a8e436caed147dcf833be20310f429cb0636edbb02444eabe63d866f2d6"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/交接与证据.md": {
+      "bytes": 2875,
+      "sha256": "74bb89f9d03280097d9a2cc003dc1207a3c55f5715230f33e64984013bff7df7"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/共享数据预注册.md": {
+      "bytes": 1622,
+      "sha256": "aa5e5b80dfaa3680abfca9544b8d2d3c6a66e0effe2866a761c7f73327e5dacd"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/基线实现核验.md": {
+      "bytes": 2002,
+      "sha256": "30eed735dc8631e329ae9123a24a4b700827b15d86bd745a712569ce1c026008"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/复现说明.md": {
+      "bytes": 4004,
+      "sha256": "dba1ceda53d57e7622d37bd1e36a980555dcb4b9b408f15e0cbec3ddc5fb23fa"
+    },
+    "RL_DSENet_公平低糖_2026-09-21/实验合同.md": {
+      "bytes": 3625,
+      "sha256": "bcd33605218c6a4d94d1c27a485691c1ed674fc1bb2a5857f9f37c3b764b8109"
+    },
+    "RL_DSENet_局部风险_2026-09-21/analyze_forecasts.py": {
+      "bytes": 3550,
+      "sha256": "ffda611b3d286b419ba6c0f1d9277af41f026f0c35ed6ec44db6dbd31b4f54df"
+    },
+    "RL_DSENet_局部风险_2026-09-21/configs/dependencies.json": {
+      "bytes": 3327,
+      "sha256": "4e602d7f693fc9213edebbdd24a8d18ea39b9a5c365ebf45b4e3b1ba7abe9b3a"
+    },
+    "RL_DSENet_局部风险_2026-09-21/worker.py": {
+      "bytes": 3924,
+      "sha256": "f11f1dd9eed9b6146ffb70adaedd085924c44c2b6b6294a4440355d891f62b9a"
+    }
+  }
+}

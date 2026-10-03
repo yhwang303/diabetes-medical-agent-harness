@@ -114,3 +114,14 @@ RL_DSENet_2026-09-17/revision/sources/
 RL_DSENet_2026-09-17/revision/source_audit/
 RL_DSENet_2026-09-17/revision/*.tar.gz
 RL_DSENet_2026-09-17/revision/delivery/*.tar.gz
+
+# Frozen 2026-09-21 study: publish source and summaries, keep runtime evidence local
+RL_DSENet_公平低糖_2026-09-21/results/
+RL_DSENet_公平低糖_2026-09-21/shared_replay/
+RL_DSENet_公平低糖_2026-09-21/checks/initial_transfer_quarantine/
+RL_DSENet_公平低糖_2026-09-21/checks/remote_job_logs/
+RL_DSENet_公平低糖_2026-09-21/world_tail/cache/
+RL_DSENet_公平低糖_2026-09-21/world_tail/results/
+RL_DSENet_公平低糖_2026-09-21/world_tail/checks/development_*/
+# Only explicitly tracked dependency files from this earlier diagnostic are public
+/RL_DSENet_局部风险_2026-09-21/

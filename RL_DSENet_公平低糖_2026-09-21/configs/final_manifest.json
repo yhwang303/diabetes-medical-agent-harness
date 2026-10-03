@@ -1,0 +1,126 @@
+{
+  "methods": [
+    {
+      "key": "hold",
+      "label": "Constant basal",
+      "venue": "Control",
+      "year": "—",
+      "checkpoint": null,
+      "mode": "hold",
+      "training_information": "Observed warm-up basal",
+      "shared_worker": false
+    },
+    {
+      "key": "bc",
+      "label": "BC",
+      "venue": "Imitation",
+      "year": "—",
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1"
+    },
+    {
+      "key": "td3bc",
+      "label": "TD3+BC",
+      "venue": "NeurIPS",
+      "year": 2021,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507"
+    },
+    {
+      "key": "iql",
+      "label": "IQL",
+      "venue": "ICLR",
+      "year": 2022,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37"
+    },
+    {
+      "key": "rebrac",
+      "label": "ReBRAC",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00"
+    },
+    {
+      "key": "fql",
+      "label": "FQL",
+      "venue": "ICML",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71"
+    },
+    {
+      "key": "lom",
+      "label": "LOM",
+      "venue": "ICLR",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates; +5k GMM",
+      "shared_worker": true,
+      "checkpoint_sha256": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe"
+    },
+    {
+      "key": "gfp",
+      "label": "GFP",
+      "venue": "ICLR",
+      "year": 2026,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76"
+    },
+    {
+      "key": "ditr",
+      "label": "RL-DITR*",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/policy_last.pt",
+      "mode": "ditr",
+      "training_information": "L+S1+S2; +2000 patient +2000 policy updates",
+      "shared_worker": false,
+      "checkpoint_sha256": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9"
+    },
+    {
+      "key": "ours",
+      "label": "DSENet-RL (ours)",
+      "venue": "This work",
+      "year": "—",
+      "checkpoint": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+      "mode": "actor",
+      "training_information": "Loop + S1 paired simulation and H02 context; retained original, no S2 refinement selected",
+      "shared_worker": false,
+      "checkpoint_sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    }
+  ],
+  "training_seed": 260915,
+  "scenario_config": "RL_DSENet_公平低糖_2026-09-21/configs/confirmation.json",
+  "panels": [
+    "native",
+    "brake17"
+  ],
+  "selection_pending": false,
+  "shared_manifest_sha256": "2140c9564eaf64fc24d90dc5975f90024ad970263663c27401253947ca128533",
+  "scope": "matched evaluation and available simulator records; training rewards, representations, budgets and previous tuning differ",
+  "strict_joint_gate": true,
+  "selected_candidate": "old",
+  "development_sha256": "b8481e0dfc4d3d9de35a4d7d7452157d8e28a26c3cbae594e4dae81ade186edd",
+  "selection_reason": "No candidate passed preregistered strict joint development gate. Retain D06 unchanged."
+}

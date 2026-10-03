@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "real_Loop_CUDA_rows": 32,
+  "target_phase_first_third_RL_step": true,
+  "finite_training": true
+}

@@ -1,0 +1,6 @@
+{
+  "name": "brake30",
+  "slope_minutes": 30,
+  "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4607512/",
+  "adaptation": "CGM-only, no correction-factor or IOB oracle; 30min variant changes slope horizon"
+}

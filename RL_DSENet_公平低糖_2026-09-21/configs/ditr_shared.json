@@ -1,0 +1,22 @@
+{
+  "name": "ditr_shared_r03_seed260915",
+  "seed": 260915,
+  "model": {"width": 256, "layers": 3, "heads": 8, "ff": 2048, "dropout": 0.4, "categorical_heads": true, "transition_mode": "recursive"},
+  "initialize_checkpoint": "RL_DITR创新_2026-09-16/results/R03_reference_categorical/policy_last.pt",
+  "initialize_sha256": "a8c0d50ebdf7e5af71c32764dc3074e3acc688f69f99e4402c0503f89e3db153",
+  "shared_root": "RL_DSENet_公平低糖_2026-09-21/shared_replay",
+  "shared_manifest_sha256": "2140c9564eaf64fc24d90dc5975f90024ad970263663c27401253947ca128533",
+  "batch_size": 128,
+  "horizon": 12,
+  "amp": true,
+  "mu": 0.1,
+  "weight_decay": 0.0001,
+  "target_tau": 0.005,
+  "grad_clip": 5.0,
+  "threads": 4,
+  "log_every": 25,
+  "patient": {"lr": 0.001, "steps": 2000},
+  "policy": {"lr": 0.001, "steps": 2000},
+  "selection": "last patient update then last policy update; no simulator-based checkpoint selection",
+  "adaptations": ["Equal 64 Loop plus 64 shared-S samples per update", "R03 recursive categorical model and legacy policy objective retained", "Policy historical bootstrap zeroed at genuine environment terminals only", "Time limits, 4h branch ends, and data gaps keep observed-state bootstrap", "Final S manifest must be frozen explicitly before formal training"]
+}

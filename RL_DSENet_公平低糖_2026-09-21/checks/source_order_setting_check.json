@@ -1,0 +1,20 @@
+{
+  "fql": {
+    "same_jobs": true,
+    "common_limit_u_h": 0.25,
+    "old_manifest_sha256": "2cd9b696723b017cc5c5bf132e861f6acd0f072c3e0b05f84fb46c6071ba1da3",
+    "new_manifest_sha256": "4830df9b31ff91133fac308d476075096cd44d437def5b1eabdb261042555a44"
+  },
+  "rebrac": {
+    "same_jobs": true,
+    "common_limit_u_h": 0.25,
+    "old_manifest_sha256": "d294c01096119035b1c50819b28c1dad64ef59e32190257faeb697d4db01a347",
+    "new_manifest_sha256": "dfe79ce61f0ad24e31710622d1aad60222c4febb2ffb5a064b13f1e53900b061"
+  },
+  "lom": {
+    "same_jobs": true,
+    "common_limit_u_h": 0.25,
+    "old_manifest_sha256": "4f3ddf1694dd9a5459424548dfcdf146246fc7b8734c3b065a974887547d9253",
+    "new_manifest_sha256": "529dd49958a4fa8f7c3d506a9020a659b5a607226958eb7aedc7670753c30156"
+  }
+}

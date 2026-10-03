@@ -1,0 +1,15 @@
+{
+  "status": "full_shared_replay_checks_passed",
+  "training_run": false,
+  "manifest_sha256": "2140c9564eaf64fc24d90dc5975f90024ad970263663c27401253947ca128533",
+  "arrays_verified": 18,
+  "sources_verified": 322,
+  "episodes_verified": 5704,
+  "transitions_verified": 392832,
+  "ppo_original_BG_and_PPO_reward_exact_rows": 126720,
+  "all_reward_rows_frozen_formula_exact": true,
+  "no_cross_episode_successors": true,
+  "true_terminal_transitions": 0,
+  "real_CPU_batch_and_DITR_multistep": true,
+  "source_sha256": "e3f86fe4c25600c4f4b24965f21fe3ca7df61f03ebfbfa6de6038b68137e9471"
+}

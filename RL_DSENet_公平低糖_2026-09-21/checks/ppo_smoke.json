@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "physical_first_action_argmax_equivalent_random_logits": 1000,
+  "real_simulator_smoke_transitions": 432,
+  "actor_changed_and_finite": true,
+  "three_retained_weights_unchanged": true,
+  "reward_is_real_BG_label_not_policy_input": true,
+  "timeout_bootstrap_source_reviewed": true
+}

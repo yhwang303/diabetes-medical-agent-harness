@@ -1,0 +1,114 @@
+{
+  "methods": [
+    {
+      "key": "hold",
+      "label": "Constant basal",
+      "venue": "Control",
+      "year": "—",
+      "checkpoint": null,
+      "mode": "hold",
+      "training_information": "Observed warm-up basal",
+      "shared_worker": false
+    },
+    {
+      "key": "bc",
+      "label": "BC",
+      "venue": "Imitation",
+      "year": "—",
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true
+    },
+    {
+      "key": "td3bc",
+      "label": "TD3+BC",
+      "venue": "NeurIPS",
+      "year": 2021,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true
+    },
+    {
+      "key": "iql",
+      "label": "IQL",
+      "venue": "ICLR",
+      "year": 2022,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true
+    },
+    {
+      "key": "rebrac",
+      "label": "ReBRAC",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true
+    },
+    {
+      "key": "fql",
+      "label": "FQL",
+      "venue": "ICML",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true
+    },
+    {
+      "key": "lom",
+      "label": "LOM",
+      "venue": "ICLR",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates; +5k GMM",
+      "shared_worker": true
+    },
+    {
+      "key": "gfp",
+      "label": "GFP",
+      "venue": "ICLR",
+      "year": 2026,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true
+    },
+    {
+      "key": "ditr",
+      "label": "RL-DITR*",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/policy_last.pt",
+      "mode": "ditr",
+      "training_information": "L+S1+S2; +2000 patient +2000 policy updates",
+      "shared_worker": false
+    },
+    {
+      "key": "ours",
+      "label": "DSENet-RL (ours)",
+      "venue": "This work",
+      "year": "—",
+      "checkpoint": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+      "mode": "actor",
+      "training_information": "pending development selection",
+      "shared_worker": false
+    }
+  ],
+  "training_seed": 260915,
+  "scenario_config": "RL_DSENet_公平低糖_2026-09-21/configs/confirmation.json",
+  "panels": [
+    "native",
+    "brake17"
+  ],
+  "selection_pending": true,
+  "shared_manifest_sha256": "2140c9564eaf64fc24d90dc5975f90024ad970263663c27401253947ca128533",
+  "scope": "matched evaluation and available simulator records; training rewards, representations, budgets and previous tuning differ",
+  "strict_joint_gate": true
+}

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "actor_target_from_old_actor": true,
+  "critic_target_from_new_critic": true,
+  "delayed_updates_unchanged": true
+}

@@ -1,0 +1,13 @@
+{
+  "intent": "Read-only same-observation first-action comparison; associative diagnostic only",
+  "sources": "160 completed official PPO_real_rewards training trajectories, iterations 1-8, scenario seeds 930001-930016",
+  "states_per_trajectory": 62,
+  "total_states": 9920,
+  "selection": "62 equally spaced integer indices from first controlled origin through final origin with 48 actual future outcomes, per episode; no outcome-based sampling",
+  "models": ["D06", "PPO02", "PPO04", "PPO08"],
+  "anchor": "persistent episode anchor reconstructed exactly with original NumPy2 training-runtime formula from first control history last delivered basal; never current-rate proxy",
+  "action": "ppo_worker.physical merges hold classes via max logits, then argmax physical class; offsets 0,-0.25,+0.25 U/h, clamp0..20",
+  "outcome_groups": ["all", "actual next60min minimum CGM<70", "actual next60min minimum CGM<54"],
+  "limitations": "Correlated training states and actual future outcomes from generating stochastic PPO policy; no counterfactual efficacy or held-out confirmation claim",
+  "forbidden": ["training", "model changes", "confirmation files", "current-rate anchor substitution"]
+}

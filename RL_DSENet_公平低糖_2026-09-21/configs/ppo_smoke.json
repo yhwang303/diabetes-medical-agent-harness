@@ -1,0 +1,27 @@
+{
+  "seed": 260915,
+  "iterations": 1,
+  "patients": [
+    1,
+    9
+  ],
+  "copies": 1,
+  "base_scenario_seed": 930001,
+  "total_minutes": 1440,
+  "actor_lr": 3e-05,
+  "value_lr": 0.001,
+  "gamma": 0.997,
+  "gae_lambda": 0.99,
+  "epochs": 1,
+  "batch_size": 512,
+  "clip": 0.1,
+  "teacher_kl": 0.05,
+  "entropy": 0.002,
+  "development_checkpoints": [
+    2,
+    4,
+    8
+  ],
+  "selection": "strict joint criterion on exposed development only; fixed final8 and any strictly eligible earlier checkpoint retained; confirmation unopened",
+  "name": "PPO_smoke"
+}

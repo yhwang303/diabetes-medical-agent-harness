@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "environment_and_scenario_AST_equal": true,
+  "slope_units_verified": true,
+  "continuous_attenuation_and_immediate_recovery": true,
+  "no_BG_or_patient_identity_input": true,
+  "source_sha256": {
+    "actor_worker.py": "bf9ee1cdeef8756e2ab897888819be71c63b2e234056136185025c492af26410",
+    "brake.py": "2b24f526b3426bd6052b71797a52fd14c37892e99a7f432c21014dd258ea2e52",
+    "check_mechanics.py": "3ec46e592c7fdcec251e2fbd2bc126c951a19139d7cbc20021db53069591f1fd",
+    "evaluate.py": "d9d6ef89f5877e5660720e8dc4145e40e548a64447eff41c982efd0c5266f69c",
+    "run_development.py": "48c614b514d62586c486ee1cb1334ac5e06bd07198291ce1d08edff569e5dc99"
+  }
+}

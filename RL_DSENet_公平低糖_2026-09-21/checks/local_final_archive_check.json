@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "verified_files": 2449,
+  "confirmation_archive_sha256": "f7bfa9caf2f5ae68213ca5d0665705e22973e5d0ce567f4bf60f045ceb921db3",
+  "confirmation_archive_bytes": 73885908,
+  "code_archive_sha256": "4c9d73dce4504463cbeb2927d29f5a55066b948fc3df6b1599e822548a0a9528",
+  "retained_weights": "all original SHA256 matched",
+  "remote_research_processes": [],
+  "remote_gpu_compute_processes": [],
+  "verified_at": "2026-09-21T17:31:05.096279"
+}

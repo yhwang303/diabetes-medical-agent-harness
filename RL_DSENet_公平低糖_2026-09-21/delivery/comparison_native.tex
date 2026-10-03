@@ -1,0 +1,26 @@
+% Requires booktabs, graphicx. One training seed 260915. Patient-level mean +- SD.
+% BG is scoring ground truth; CGM only is observable. 10 known adults, 6 cases each.
+% TIR intervals bound missing outcomes, NOT confidence intervals. Dagger: observed-prefix only.
+% Training objectives/budgets differ; this is a matched-evaluation system comparison.
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Native requested actions; only common simulator pump constraints. New scenario seeds 92111/92112; 3 days with 6-hour warm-up. Bold denotes numerical best among fully observed methods only; no significance claim.}
+\resizebox{\textwidth}{!}{\begin{tabular}{llrrrrrrrrrrrr}
+\toprule
+Method & Data & TIR$\uparrow$ & TBR70$\downarrow$ & TBR54$\downarrow$ & TAR180$\downarrow$ & TAR250$\downarrow$ & SD$\downarrow$ & CV$\downarrow$ & LBGI$\downarrow$ & HBGI$\downarrow$ & Fail & Coverage & Long54 \\
+\midrule
+Constant basal & warm-up & 94.14 $\pm$ 6.32 & 1.59 $\pm$ 3.61 & 0.64 $\pm$ 2.02 & 4.27 $\pm$ 4.39 & \textbf{0.00 $\pm$ 0.00} & \textbf{24.40 $\pm$ 6.58} & \textbf{19.29 $\pm$ 5.07} & 0.69 $\pm$ 0.92 & 1.73 $\pm$ 0.74 & 0/60 & 100.00 & 5 \\
+BC & L+S1+S2 & 88.60 $\pm$ 15.77 & \textbf{1.40 $\pm$ 3.81} & \textbf{0.55 $\pm$ 1.72} & 10.00 $\pm$ 15.68 & 0.20 $\pm$ 0.63 & 25.97 $\pm$ 6.89 & 19.35 $\pm$ 6.08 & \textbf{0.58 $\pm$ 0.92} & 2.85 $\pm$ 2.49 & 0/60 & 100.00 & 6 \\
+TD3+BC & L+S1+S2 & [44.20, 51.56] & 18.96 $\pm$ 15.08$^{\dagger}$ & 12.65 $\pm$ 11.89$^{\dagger}$ & 31.45 $\pm$ 29.47$^{\dagger}$ & 4.52 $\pm$ 9.78$^{\dagger}$ & 37.11 $\pm$ 5.63$^{\dagger}$ & 31.59 $\pm$ 10.91$^{\dagger}$ & 7.11 $\pm$ 5.85$^{\dagger}$ & 6.10 $\pm$ 5.47$^{\dagger}$ & 10/60 & 92.64 & 82$^{\dagger}$ \\
+IQL & L+S1+S2 & 90.79 $\pm$ 13.85 & 2.97 $\pm$ 5.09 & 0.85 $\pm$ 2.70 & 6.24 $\pm$ 13.38 & 1.31 $\pm$ 4.15 & 26.67 $\pm$ 9.15 & 21.24 $\pm$ 7.07 & 1.11 $\pm$ 1.45 & 2.19 $\pm$ 2.71 & 0/60 & 100.00 & 7 \\
+ReBRAC & L+S1+S2 & [26.77, 82.03] & 35.47 $\pm$ 11.19$^{\dagger}$ & 27.17 $\pm$ 10.57$^{\dagger}$ & 1.85 $\pm$ 2.48$^{\dagger}$ & 0.00 $\pm$ 0.00$^{\dagger}$ & 47.10 $\pm$ 4.52$^{\dagger}$ & 51.37 $\pm$ 10.33$^{\dagger}$ & 18.55 $\pm$ 8.58$^{\dagger}$ & 1.06 $\pm$ 0.48$^{\dagger}$ & 60/60 & 44.73 & 92$^{\dagger}$ \\
+FQL & L+S1+S2 & [55.52, 55.79] & 1.97 $\pm$ 4.64$^{\dagger}$ & 0.94 $\pm$ 2.66$^{\dagger}$ & 42.45 $\pm$ 18.43$^{\dagger}$ & 14.75 $\pm$ 20.93$^{\dagger}$ & 54.57 $\pm$ 49.84$^{\dagger}$ & 25.77 $\pm$ 16.86$^{\dagger}$ & 0.65 $\pm$ 1.63$^{\dagger}$ & 12.04 $\pm$ 9.77$^{\dagger}$ & 2/60 & 99.73 & 8$^{\dagger}$ \\
+LOM & L+S1+S2 & [20.38, 34.99] & 0.00 $\pm$ 0.00$^{\dagger}$ & 0.00 $\pm$ 0.00$^{\dagger}$ & 76.76 $\pm$ 14.34$^{\dagger}$ & 27.55 $\pm$ 28.90$^{\dagger}$ & 55.01 $\pm$ 47.79$^{\dagger}$ & 20.57 $\pm$ 10.93$^{\dagger}$ & 0.00 $\pm$ 0.00$^{\dagger}$ & 20.84 $\pm$ 15.08$^{\dagger}$ & 12/60 & 85.39 & 0$^{\dagger}$ \\
+GFP & L+S1+S2 & [28.33, 38.57] & 0.98 $\pm$ 1.88$^{\dagger}$ & 0.49 $\pm$ 1.38$^{\dagger}$ & 68.56 $\pm$ 17.12$^{\dagger}$ & 35.73 $\pm$ 27.28$^{\dagger}$ & 70.82 $\pm$ 46.89$^{\dagger}$ & 27.14 $\pm$ 11.79$^{\dagger}$ & 0.29 $\pm$ 0.67$^{\dagger}$ & 22.71 $\pm$ 14.23$^{\dagger}$ & 10/60 & 89.76 & 3$^{\dagger}$ \\
+RL-DITR$^{*}$ & L+S1+S2 & [65.82, 70.21] & 24.44 $\pm$ 20.41$^{\dagger}$ & 13.83 $\pm$ 15.50$^{\dagger}$ & 6.67 $\pm$ 8.21$^{\dagger}$ & 0.54 $\pm$ 1.20$^{\dagger}$ & 36.71 $\pm$ 8.97$^{\dagger}$ & 36.01 $\pm$ 9.74$^{\dagger}$ & 7.31 $\pm$ 6.17$^{\dagger}$ & 1.69 $\pm$ 1.42$^{\dagger}$ & 5/60 & 95.62 & 104$^{\dagger}$ \\
+DSENet-RL (ours) & L+S1 & \textbf{95.61 $\pm$ 6.08} & 2.43 $\pm$ 4.88 & 0.86 $\pm$ 2.59 & \textbf{1.95 $\pm$ 2.26} & \textbf{0.00 $\pm$ 0.00} & 25.16 $\pm$ 6.70 & 20.91 $\pm$ 5.38 & 1.02 $\pm$ 1.22 & \textbf{1.23 $\pm$ 0.60} & 0/60 & 100.00 & 7 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\raggedright\footnotesize
+TIR is time in 70--180 mg/dL; TIR/TBR/TAR/CV/Coverage are percentages, glucose SD is in mg/dL. Values are patient-level mean $\pm$ SD (10 patients, six cases each), not multiple-training-seed statistics. TIR intervals bound missing outcomes, not confidence intervals; $^{\dagger}$ denotes observed-prefix metrics after early termination, which must not be ranked against complete follow-up. Long54 counts continuous BG below 54 mg/dL for at least 120 minutes. L is Loop; S1 is paired simulation; S2 is the fixed 160 PPO training trajectories, never development or confirmation trajectories. RL-DITR$^*$ is a public-data continuous-basal task adaptation. The retained ours uses L+S1; other learned methods also receive S2. Reward learning, architecture and budgets are not identical.
+\end{table*}

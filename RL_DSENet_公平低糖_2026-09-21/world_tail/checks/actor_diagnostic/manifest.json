@@ -1,0 +1,38 @@
+{
+  "contract": {
+    "intent": "Read-only same-observation first-action comparison; associative diagnostic only",
+    "sources": "160 completed official PPO_real_rewards training trajectories, iterations 1-8, scenario seeds 930001-930016",
+    "states_per_trajectory": 62,
+    "total_states": 9920,
+    "selection": "62 equally spaced integer indices from first controlled origin through final origin with 48 actual future outcomes, per episode; no outcome-based sampling",
+    "models": [
+      "D06",
+      "PPO02",
+      "PPO04",
+      "PPO08"
+    ],
+    "anchor": "persistent episode anchor reconstructed exactly with original NumPy2 training-runtime formula from first control history last delivered basal; never current-rate proxy",
+    "action": "ppo_worker.physical merges hold classes via max logits, then argmax physical class; offsets 0,-0.25,+0.25 U/h, clamp0..20",
+    "outcome_groups": [
+      "all",
+      "actual next60min minimum CGM<70",
+      "actual next60min minimum CGM<54"
+    ],
+    "limitations": "Correlated training states and actual future outcomes from generating stochastic PPO policy; no counterfactual efficacy or held-out confirmation claim",
+    "forbidden": [
+      "training",
+      "model changes",
+      "confirmation files",
+      "current-rate anchor substitution"
+    ]
+  },
+  "contract_sha256": "1dcbb4e98116ced3606b825bd179d28fc46426995df6dfa42c9e709acb62c07c",
+  "shared_manifest_sha256": "2140c9564eaf64fc24d90dc5975f90024ad970263663c27401253947ca128533",
+  "selection_sha256": "d94737450ac65a8669c41da21772a7b4c3982d35340a9c363e9cf4449284e0c9",
+  "episodes_sha256": "12c40ddb8b9e35eda88ea11eab5bce5fa86213f37969d508125fa405148b3c97",
+  "source_sha256": "bda5524b85562fd414e813ec2d5c4604a22a23c6aa2135e4d587e2089c81a746",
+  "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+  "numpy": "2.4.6",
+  "states": 9920,
+  "trajectories": 160
+}

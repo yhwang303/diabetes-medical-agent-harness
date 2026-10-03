@@ -1,0 +1,331 @@
+{
+  "groups": {
+    "all": {
+      "states": 9920,
+      "D06_class_counts": [
+        4930,
+        672,
+        4318
+      ],
+      "models": {
+        "PPO02": {
+          "changed": 315,
+          "changed_fraction": 0.031754032258064516,
+          "dose_increased": 2,
+          "dose_decreased": 313,
+          "mean_delta_u_h": -0.007837701588869095,
+          "class_counts": [
+            5221,
+            682,
+            4017
+          ],
+          "transition_matrix": [
+            [
+              4918,
+              12,
+              0
+            ],
+            [
+              2,
+              670,
+              0
+            ],
+            [
+              301,
+              0,
+              4017
+            ]
+          ],
+          "mean_probability_total_variation": 0.0203403327614069
+        },
+        "PPO04": {
+          "changed": 188,
+          "changed_fraction": 0.018951612903225806,
+          "dose_increased": 5,
+          "dose_decreased": 183,
+          "mean_delta_u_h": -0.004485887009650469,
+          "class_counts": [
+            5032,
+            710,
+            4178
+          ],
+          "transition_matrix": [
+            [
+              4887,
+              43,
+              0
+            ],
+            [
+              5,
+              667,
+              0
+            ],
+            [
+              140,
+              0,
+              4178
+            ]
+          ],
+          "mean_probability_total_variation": 0.014806105755269527
+        },
+        "PPO08": {
+          "changed": 149,
+          "changed_fraction": 0.01502016129032258,
+          "dose_increased": 63,
+          "dose_decreased": 86,
+          "mean_delta_u_h": -0.0005796370678581297,
+          "class_counts": [
+            4787,
+            755,
+            4378
+          ],
+          "transition_matrix": [
+            [
+              4784,
+              83,
+              63
+            ],
+            [
+              0,
+              672,
+              0
+            ],
+            [
+              3,
+              0,
+              4315
+            ]
+          ],
+          "mean_probability_total_variation": 0.012746457010507584
+        }
+      }
+    },
+    "future60_cgm_lt70": {
+      "states": 510,
+      "D06_class_counts": [
+        176,
+        328,
+        6
+      ],
+      "models": {
+        "PPO02": {
+          "changed": 6,
+          "changed_fraction": 0.011764705882352941,
+          "dose_increased": 2,
+          "dose_decreased": 4,
+          "mean_delta_u_h": -0.0009803922148421407,
+          "class_counts": [
+            180,
+            327,
+            3
+          ],
+          "transition_matrix": [
+            [
+              175,
+              1,
+              0
+            ],
+            [
+              2,
+              326,
+              0
+            ],
+            [
+              3,
+              0,
+              3
+            ]
+          ],
+          "mean_probability_total_variation": 0.006864678580313921
+        },
+        "PPO04": {
+          "changed": 11,
+          "changed_fraction": 0.021568627450980392,
+          "dose_increased": 3,
+          "dose_decreased": 8,
+          "mean_delta_u_h": -0.0024509804788976908,
+          "class_counts": [
+            177,
+            330,
+            3
+          ],
+          "transition_matrix": [
+            [
+              171,
+              5,
+              0
+            ],
+            [
+              3,
+              325,
+              0
+            ],
+            [
+              3,
+              0,
+              3
+            ]
+          ],
+          "mean_probability_total_variation": 0.011076795868575573
+        },
+        "PPO08": {
+          "changed": 11,
+          "changed_fraction": 0.021568627450980392,
+          "dose_increased": 1,
+          "dose_decreased": 10,
+          "mean_delta_u_h": -0.004411764908581972,
+          "class_counts": [
+            165,
+            338,
+            7
+          ],
+          "transition_matrix": [
+            [
+              165,
+              10,
+              1
+            ],
+            [
+              0,
+              328,
+              0
+            ],
+            [
+              0,
+              0,
+              6
+            ]
+          ],
+          "mean_probability_total_variation": 0.014342200942337513
+        }
+      }
+    },
+    "future60_cgm_lt54": {
+      "states": 143,
+      "D06_class_counts": [
+        17,
+        125,
+        1
+      ],
+      "models": {
+        "PPO02": {
+          "changed": 1,
+          "changed_fraction": 0.006993006993006993,
+          "dose_increased": 0,
+          "dose_decreased": 1,
+          "mean_delta_u_h": -0.0017482517287135124,
+          "class_counts": [
+            18,
+            125,
+            0
+          ],
+          "transition_matrix": [
+            [
+              17,
+              0,
+              0
+            ],
+            [
+              0,
+              125,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "mean_probability_total_variation": 0.00450536422431469
+        },
+        "PPO04": {
+          "changed": 1,
+          "changed_fraction": 0.006993006993006993,
+          "dose_increased": 0,
+          "dose_decreased": 1,
+          "mean_delta_u_h": -0.0017482517287135124,
+          "class_counts": [
+            18,
+            125,
+            0
+          ],
+          "transition_matrix": [
+            [
+              17,
+              0,
+              0
+            ],
+            [
+              0,
+              125,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "mean_probability_total_variation": 0.007540466263890266
+        },
+        "PPO08": {
+          "changed": 3,
+          "changed_fraction": 0.02097902097902098,
+          "dose_increased": 0,
+          "dose_decreased": 3,
+          "mean_delta_u_h": -0.005244755186140537,
+          "class_counts": [
+            14,
+            128,
+            1
+          ],
+          "transition_matrix": [
+            [
+              14,
+              3,
+              0
+            ],
+            [
+              0,
+              125,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "mean_probability_total_variation": 0.007591193541884422
+        }
+      }
+    }
+  },
+  "class_order": [
+    "hold",
+    "reduce_0.25",
+    "increase_0.25"
+  ],
+  "checkpoint_sha256": {
+    "D06": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913",
+    "PPO02": "1d7e15c7e019ce10bcc22a2db743a3d266a89c9a710fee60962618e3b51da828",
+    "PPO04": "bd5fd98f21ab347c5c91ea0d4ded771c9fe8ecd588d8a195011a896717d07729",
+    "PPO08": "6ceaa5973aabef36489d18f10bfd5e62cc38364525f3ebc48ffbaf6d47729231"
+  },
+  "selection_manifest_sha256": "ca194b69c1b12288401bbaad75919d2d62c605a37774793e6f718709eb77c051",
+  "source_sha256": {
+    "RL_DSENet_\u516c\u5e73\u4f4e\u7cd6_2026-09-21/world_tail/actor_diagnostic.py": "8cff74719aeb2a5d7bf795edd74d78bb0e07cc3665760f077e8b64fc7d234e14",
+    "RL_DSENet_\u516c\u5e73\u4f4e\u7cd6_2026-09-21/ppo_worker.py": "6f5cf3d667430592f5594372ad8ac8060732253b7a760726aee641613429e745"
+  },
+  "predictions_sha256": "064bed1260e478b63caecc6eefa0a6029b46b1163ca7550824b03338d3e9429d",
+  "max_rate_anchor_difference": 0.25000011920928955,
+  "physical_vs_original7_tie_disagreements": {
+    "D06": 0,
+    "PPO02": 0,
+    "PPO04": 0,
+    "PPO08": 0
+  },
+  "association_only": true,
+  "confirmation_read": false,
+  "limitation": "Actual future outcomes are from generating stochastic PPO trajectory, not from rerunning each candidate; repeated correlated training states."
+}
