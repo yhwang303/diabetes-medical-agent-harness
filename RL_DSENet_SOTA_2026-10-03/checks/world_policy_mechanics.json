@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "run": "PPO_world_smoke_r2",
+  "checkpoint_sha256": "ce0f2064217d1cac72179c6dfbaff5ad32df9185445729d9a82beaa554c44e57",
+  "feature_dim": 195,
+  "actual_simulator_transitions": 144,
+  "evaluate_buffer_empty": true,
+  "deterministic_repeat_and_batch_actions": true,
+  "world_frozen": true,
+  "actor_gradient_update_observed": true,
+  "checkpoint_unchanged": true,
+  "cudnn_deterministic": false,
+  "TF32": false,
+  "actions": [
+    1.2674999237060547,
+    1.2674999237060547
+  ],
+  "source_sha256": "9488927362b81cda31d7a07bccbbf3cb267a8cf59b8f8cc7b4942a96de183ab9",
+  "performance_claim": false
+}

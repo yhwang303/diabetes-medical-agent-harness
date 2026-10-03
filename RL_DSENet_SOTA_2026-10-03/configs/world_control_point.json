@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "controller_family": "MPC",
+  "mode": "point",
+  "horizon_steps": 72,
+  "control_interval_minutes": 5,
+  "high_risk_weight": 1.0,
+  "low_risk_weight": 2.0,
+  "below70_event_weight": 2.0,
+  "below54_event_weight": 4.0,
+  "action_cost_weight": 0.02,
+  "glucose_risk_clip_mg_dl": [20.0, 600.0],
+  "torch_threads": 2,
+  "precision": "float32_no_amp_no_tf32"
+}

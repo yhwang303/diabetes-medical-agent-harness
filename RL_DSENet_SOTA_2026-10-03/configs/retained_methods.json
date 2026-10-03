@@ -1,0 +1,241 @@
+{
+  "schema": 1,
+  "final_manifest": "RL_DSENet_公平低糖_2026-09-21/configs/final_manifest.json",
+  "final_manifest_sha256": "bd2884f7103e5ed913ed5e9e799622be22d2ece1e205291bf79ea3b12e6218ec",
+  "training_seed": 260915,
+  "deployment_label": "frozen+projection",
+  "normalization_sha256": "90ef9f4faf383d46102896a980f9ddd2220e302983d246cbc74aa88dd1ca4a5f",
+  "action": {
+    "original_worker_unit": "U/h",
+    "original_worker_bounds": [
+      0,
+      20
+    ],
+    "projection": "clip(raw_u_h,0,min(20,2*observed_warmup_anchor_u_h))",
+    "network_action_remapping": false
+  },
+  "methods": {
+    "bc": {
+      "key": "bc",
+      "label": "BC frozen+projection",
+      "venue": "Imitation",
+      "year": "—",
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1",
+      "original_label": "BC",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/config.json": "cee8a2d8a4fa16c1a9c8119e31cd51b5dcb60c2ec56f1e878bf828854a10bda5",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/provenance.json": "33708e41251e9a4face64ee5f8f298a76bcedb8afa0534cfaddfebdfdd2193fd"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "td3bc": {
+      "key": "td3bc",
+      "label": "TD3+BC frozen+projection",
+      "venue": "NeurIPS",
+      "year": 2021,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507",
+      "original_label": "TD3+BC",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_2026-09-17/revision/td3bc_algorithm.py": "589a532582d2934cc62232c21ecc3e0dd8bed78d1b62029f4a117c9046c64eeb",
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/config.json": "d5442e156845e11f4ff1e13c2ad548390200a62b135d6fd767364a1fdd801c35",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/provenance.json": "398b2f6eafb7e4b2492bf52a64b9570f8a769ec65abc03deeb9bfb4ddeb8ccc0"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "iql": {
+      "key": "iql",
+      "label": "IQL frozen+projection",
+      "venue": "ICLR",
+      "year": 2022,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37",
+      "original_label": "IQL",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_2026-09-17/revision/iql_algorithm.py": "b6b538ffaee85513f925a44b780f986f03be4ae01cbef0419c4754972a302766",
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/config.json": "aec389dfb3264bea54fa1caa01a619c3fea3eff5fe1d53f48072003e3da8b41b",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/provenance.json": "860e1738895c71edf9484d5c2712dfb0235b6ac0aad244a560bb665994c1cb97"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "rebrac": {
+      "key": "rebrac",
+      "label": "ReBRAC frozen+projection",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00",
+      "original_label": "ReBRAC",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/rebrac_corrected.py": "a5ddfee9b3628a23124fa2dd949650b1d478dc561d18f5cb45c9751edafc3b4c",
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/config.json": "c45738795e99e977f77255b9bc1f765ed1f836df36626beb0b078419d2ab7c85",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/provenance.json": "32f1e58453343cfbb1ead7e5f2476ddd144790bad66c1442eec409334283b624"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "fql": {
+      "key": "fql",
+      "label": "FQL frozen+projection",
+      "venue": "ICML",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71",
+      "original_label": "FQL",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/fql_corrected.py": "d60f08a2e859cb2498dae0da44df4225478f1c3587b9c5158dd323d77a215ec3",
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/config.json": "d1333354e6aadfa81be2761d36ae6b69bd43f5aa028e4eb2c91f1817d9f652a2",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/provenance.json": "b4658dd665e93d102fb85115742da3bddeacd89960172eda9c8b309ef78f71f6"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "lom": {
+      "key": "lom",
+      "label": "LOM frozen+projection",
+      "venue": "ICLR",
+      "year": 2025,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates; +5k GMM",
+      "shared_worker": true,
+      "checkpoint_sha256": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe",
+      "original_label": "LOM",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/lom_corrected.py": "6c56db1ef9567cffc8e8fc964c1a58804963e01ade058b7f17dd32930ededc8d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/config.json": "8803bb54dd0e457d03ae02672d1762fbbb60753e773da0f35cccc526984bce91",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/provenance.json": "c7e769691a32af383f52d381025ef0040214b5efe269678416fbb5f363edb96b"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "gfp": {
+      "key": "gfp",
+      "label": "GFP frozen+projection",
+      "venue": "ICLR",
+      "year": 2026,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/last.pt",
+      "mode": "external",
+      "training_information": "L+S1+S2; fixed +20k updates",
+      "shared_worker": true,
+      "checkpoint_sha256": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76",
+      "original_label": "GFP",
+      "worker": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+      "worker_args": [],
+      "source_sha256": {
+        "RL_DSENet_2026-09-17/revision/gfp_algorithm.py": "bfbd96578c29c70ccfa59ab4c5b8b53f198a49357154b554e9e7bad2b93b283c",
+        "RL_DSENet_公平低糖_2026-09-21/shared_data.py": "b28e84d06e0d955449896ce358886f1a75b7a832d5c0bbddcfbc03a5cb13267d",
+        "RL_DSENet_公平低糖_2026-09-21/shared_worker.py": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4",
+        "RL_DSENet_公平低糖_2026-09-21/train_shared.py": "eaa2ba7721627fa10227013985416a11a9bd570a5561363502bce6cb895a7e27",
+        "RL进阶对比_2026-09-15/rl_algorithms.py": "777a043580ad54df82cac6fa3037e32d892da5af16cd52afc08432492b69e15c",
+        "RL进阶对比_2026-09-15/rl_data.py": "078417f85bcfc632c46a558f9ebf90caf876dfc6bc298d0a6c888e4c309a63e7"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/config.json": "ec372b33f16d4678ea9301151d75d65d6fed656e3fde724d1203a85f36d30b51",
+        "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/provenance.json": "08abb556509096549e310a69a7bc31b11845a2588e5e73c655a6676516923ba1"
+      },
+      "rng": "opaque per-episode handle; numpy default_rng(scenario_seed+20000); one normal each decision",
+      "limitation": "Frozen absolute-rate action mapping; no anchor input added to the network."
+    },
+    "ditr": {
+      "key": "ditr",
+      "label": "RL-DITR* frozen+projection",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "checkpoint": "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/policy_last.pt",
+      "mode": "ditr",
+      "training_information": "L+S1+S2; +2000 patient +2000 policy updates",
+      "shared_worker": false,
+      "checkpoint_sha256": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9",
+      "original_label": "RL-DITR*",
+      "worker": "RL_DITR创新_2026-09-16/policy_worker.py",
+      "worker_args": [
+        "--mode",
+        "beam"
+      ],
+      "source_sha256": {
+        "RL_DITR创新_2026-09-16/ditr_model.py": "d6d013610bf791551d331aea034fa960d285dd57320514e360f984f1317d5279",
+        "RL_DITR创新_2026-09-16/policy_worker.py": "8179e74fe541d879d2b1adb8bf8f4cd6965ccdd48a5f1cf9f2304af1ff7afb68"
+      },
+      "metadata_sha256": {
+        "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/config.json": "ff86bbe94b792d8ca74768375984cde37a5da54842e649bea9da085bb270ba3d",
+        "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/provenance.json": "a8189dbf63dda0d8560cbb884e5bd0e0a952768cdd18fdff4cf6d5b562bef7bf"
+      },
+      "rng": "none",
+      "limitation": "Original beam planned without the common projection; only its first returned action is projected."
+    }
+  }
+}

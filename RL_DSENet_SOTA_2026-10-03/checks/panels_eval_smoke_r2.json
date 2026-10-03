@@ -1,0 +1,3356 @@
+{
+  "schema": 1,
+  "reference": "eval_legacy_smoke_r2",
+  "panel_order": [
+    "eval_legacy_smoke_r2",
+    "eval_ppo_smoke_r2"
+  ],
+  "panels": {
+    "eval_legacy_smoke_r2": {
+      "name": "eval_legacy_smoke_r2",
+      "folder": "RL_DSENet_SOTA_2026-10-03/results/eval_legacy_smoke_r2",
+      "split": "development",
+      "smoke": true,
+      "controller": "legacy",
+      "status": "completed",
+      "error": null,
+      "manifest_sha256": "8e1ea4072956260b48ec4f2387f806ca51f57d264f792144137967b9cf60b776",
+      "summary_sha256": "b07c1ec6e75058ea0246acd0d8ebbc44730669eb1e833c0629c53c658ff3bc42",
+      "scoring_verified_exact": true,
+      "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+      "jobs_sha256": "63ea1da9a56b209b2ef606a69911375f7fa10df6e2c3475123b0963f62541873",
+      "jobs": [
+        {
+          "patient": 1,
+          "seed": 103101,
+          "group": "bolus_0.8",
+          "bolus_factor": 0.8,
+          "total_minutes": 4320,
+          "meals": [
+            [
+              480,
+              46.52184987115675
+            ],
+            [
+              805,
+              70.31791228491176
+            ],
+            [
+              1150,
+              71.43942263534929
+            ],
+            [
+              1930,
+              39.53168062935694
+            ],
+            [
+              2190,
+              80.38547312582648
+            ],
+            [
+              2575,
+              66.09059991662629
+            ],
+            [
+              3390,
+              48.2249640216487
+            ],
+            [
+              3640,
+              63.08506662212679
+            ],
+            [
+              4025,
+              61.82247595556138
+            ]
+          ]
+        },
+        {
+          "patient": 9,
+          "seed": 103101,
+          "group": "bolus_1.2",
+          "bolus_factor": 1.2,
+          "total_minutes": 4320,
+          "meals": [
+            [
+              480,
+              46.52184987115675
+            ],
+            [
+              805,
+              70.31791228491176
+            ],
+            [
+              1150,
+              71.43942263534929
+            ],
+            [
+              1930,
+              39.53168062935694
+            ],
+            [
+              2190,
+              80.38547312582648
+            ],
+            [
+              2575,
+              66.09059991662629
+            ],
+            [
+              3390,
+              48.2249640216487
+            ],
+            [
+              3640,
+              63.08506662212679
+            ],
+            [
+              4025,
+              61.82247595556138
+            ]
+          ]
+        }
+      ],
+      "action_support": "anchor +/- 0.25 U/h, clipped 0..20",
+      "checkpoint_sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913",
+      "episodes": 2,
+      "patient_count": 2,
+      "failed_episodes": 0,
+      "incomplete_episodes": 0,
+      "unknown_tail_intervals": 0,
+      "eligible_for_complete_followup_comparison": true,
+      "table_label": "Complete",
+      "complete": {
+        "bg": {
+          "tir_observed_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 11.237373737373737,
+            "sd": 15.892046344849174,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 7.512626262626262,
+            "sd": 10.624457949646358,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 3.21969696969697,
+            "sd": 3.1248405734254,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 117.97169438355559,
+            "sd": 20.17650447738143,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 34.647962607658776,
+            "sd": 6.155800825854184,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 30.258481887173673,
+            "sd": 10.3930903448281,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.8784352429634756,
+            "sd": 4.73229369137907,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 1.5296540730063015,
+            "sd": 0.9018075359110902,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.408089315969777,
+            "sd": 3.830486155467979,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.0,
+            "sd": 1.4142135623730951,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.7272727272727273,
+            "sd": 1.02851895445316,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 202.5,
+            "sd": 286.37824638055173,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "cgm": {
+          "tir_observed_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979426,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979417,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979417,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 12.184343434343434,
+            "sd": 17.23126373346006,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 7.954545454545454,
+            "sd": 11.249426064331438,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 4.166666666666666,
+            "sd": 4.999744917480639,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 118.8608351409712,
+            "sd": 19.990371979639107,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 35.63732981541293,
+            "sd": 5.457929613372962,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 30.804192155107977,
+            "sd": 9.772606928703881,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.482542598603361,
+            "sd": 4.224894612307811,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 1.6710613827663765,
+            "sd": 0.9554287869189929,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.153603981369737,
+            "sd": 3.2694658253888167,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.5,
+            "sd": 2.1213203435596424,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.9090909090909091,
+            "sd": 1.28564869306645,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 207.5,
+            "sd": 293.4493141924172,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "dose": {
+          "basal_u_per_observed_day": {
+            "mean": 30.662696969696974,
+            "sd": 4.060121427660284,
+            "n_patients": 2
+          },
+          "bolus_u_per_observed_day": {
+            "mean": 31.849848484848486,
+            "sd": 22.521243843400455,
+            "n_patients": 2
+          },
+          "action_tv_per_observed_day": {
+            "mean": 9.272727272727277,
+            "sd": 2.4427325168262572,
+            "n_patients": 2
+          },
+          "pump_changed_fraction": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        }
+      },
+      "observed": {
+        "bg": {
+          "tir_observed_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 11.237373737373737,
+            "sd": 15.892046344849174,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 7.512626262626262,
+            "sd": 10.624457949646358,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 3.21969696969697,
+            "sd": 3.1248405734254,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 117.97169438355559,
+            "sd": 20.17650447738143,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 34.647962607658776,
+            "sd": 6.155800825854184,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 30.258481887173673,
+            "sd": 10.3930903448281,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.8784352429634756,
+            "sd": 4.73229369137907,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 1.5296540730063015,
+            "sd": 0.9018075359110902,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.408089315969777,
+            "sd": 3.830486155467979,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.0,
+            "sd": 1.4142135623730951,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.7272727272727273,
+            "sd": 1.02851895445316,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 202.5,
+            "sd": 286.37824638055173,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "cgm": {
+          "tir_observed_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979426,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979417,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979417,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 12.184343434343434,
+            "sd": 17.23126373346006,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 7.954545454545454,
+            "sd": 11.249426064331438,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 4.166666666666666,
+            "sd": 4.999744917480639,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 118.8608351409712,
+            "sd": 19.990371979639107,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 35.63732981541293,
+            "sd": 5.457929613372962,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 30.804192155107977,
+            "sd": 9.772606928703881,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.482542598603361,
+            "sd": 4.224894612307811,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 1.6710613827663765,
+            "sd": 0.9554287869189929,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.153603981369737,
+            "sd": 3.2694658253888167,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.5,
+            "sd": 2.1213203435596424,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.9090909090909091,
+            "sd": 1.28564869306645,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 207.5,
+            "sd": 293.4493141924172,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "dose": {
+          "basal_u_per_observed_day": {
+            "mean": 30.662696969696974,
+            "sd": 4.060121427660284,
+            "n_patients": 2
+          },
+          "bolus_u_per_observed_day": {
+            "mean": 31.849848484848486,
+            "sd": 22.521243843400455,
+            "n_patients": 2
+          },
+          "action_tv_per_observed_day": {
+            "mean": 9.272727272727277,
+            "sd": 2.4427325168262572,
+            "n_patients": 2
+          },
+          "pump_changed_fraction": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        }
+      },
+      "coverage_and_tir_bounds": {
+        "bg": {
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 85.5429292929293,
+            "sd": 12.767205771423775,
+            "n_patients": 2
+          }
+        },
+        "cgm": {
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979417,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 83.6489898989899,
+            "sd": 12.231518815979417,
+            "n_patients": 2
+          }
+        }
+      },
+      "observed_event_totals": {
+        "bg": {
+          "prolonged_under54_120min_events": 2,
+          "hypo_events": 4,
+          "unknown_tail_may_contain_additional_events": false
+        },
+        "cgm": {
+          "prolonged_under54_120min_events": 3,
+          "hypo_events": 5,
+          "unknown_tail_may_contain_additional_events": false
+        }
+      },
+      "patients": {
+        "1": {
+          "case_count": 1,
+          "keys": [
+            "bolus_0.8_p01_s103101"
+          ],
+          "bg": {
+            "tir_observed_pct": 94.57070707070707,
+            "tir_lower_bound_pct": 94.57070707070707,
+            "tir_upper_bound_pct": 94.57070707070707,
+            "tbr70_pct": 0.0,
+            "tbr54_pct": 0.0,
+            "tar180_pct": 5.42929292929293,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 132.23863752015274,
+            "sd_mg_dl": 30.29515410006353,
+            "cv_pct": 22.90945722686129,
+            "lbgi": 0.5321982832230168,
+            "hbgi": 2.1673282969741643,
+            "risk": 2.6995265801971806,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 0.0,
+            "hypo_events_per_observed_day": 0.0,
+            "max_hypo_low_minutes": 0.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "bg_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "cgm": {
+            "tir_observed_pct": 92.2979797979798,
+            "tir_lower_bound_pct": 92.29797979797979,
+            "tir_upper_bound_pct": 92.29797979797979,
+            "tbr70_pct": 0.0,
+            "tbr54_pct": 0.0,
+            "tar180_pct": 7.7020202020202015,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 132.99616272621557,
+            "sd_mg_dl": 31.777990774558038,
+            "cv_pct": 23.89391552595082,
+            "lbgi": 0.49509096844199846,
+            "hbgi": 2.3466515569376334,
+            "risk": 2.841742525379632,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 0.0,
+            "hypo_events_per_observed_day": 0.0,
+            "max_hypo_low_minutes": 0.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "cgm_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "dose": {
+            "basal_u_per_observed_day": 33.53363636363637,
+            "bolus_u_per_observed_day": 15.924924242424241,
+            "action_tv_per_observed_day": 11.000000000000005,
+            "pump_changed_fraction": 0.0
+          },
+          "dose_case_counts": {
+            "basal_u_per_observed_day": 1,
+            "bolus_u_per_observed_day": 1,
+            "action_tv_per_observed_day": 1,
+            "pump_changed_fraction": 1
+          }
+        },
+        "9": {
+          "case_count": 1,
+          "keys": [
+            "bolus_1.2_p09_s103101"
+          ],
+          "bg": {
+            "tir_observed_pct": 76.51515151515152,
+            "tir_lower_bound_pct": 76.51515151515152,
+            "tir_upper_bound_pct": 76.51515151515152,
+            "tbr70_pct": 22.474747474747474,
+            "tbr54_pct": 15.025252525252524,
+            "tar180_pct": 1.0101010101010102,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 103.70475124695844,
+            "sd_mg_dl": 39.00077111525402,
+            "cv_pct": 37.607506547486054,
+            "lbgi": 7.2246722027039345,
+            "hbgi": 0.8919798490384386,
+            "risk": 8.116652051742372,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 2.0,
+            "hypo_events_per_observed_day": 1.4545454545454546,
+            "max_hypo_low_minutes": 405.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "bg_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "cgm": {
+            "tir_observed_pct": 75.0,
+            "tir_lower_bound_pct": 75.0,
+            "tir_upper_bound_pct": 75.0,
+            "tbr70_pct": 24.36868686868687,
+            "tbr54_pct": 15.909090909090908,
+            "tar180_pct": 0.6313131313131313,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 104.72550755572685,
+            "sd_mg_dl": 39.496668856267824,
+            "cv_pct": 37.71446878426513,
+            "lbgi": 6.469994228764723,
+            "hbgi": 0.9954712085951197,
+            "risk": 7.465465437359842,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 3.0,
+            "hypo_events_per_observed_day": 1.8181818181818181,
+            "max_hypo_low_minutes": 415.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "cgm_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "dose": {
+            "basal_u_per_observed_day": 27.791757575757583,
+            "bolus_u_per_observed_day": 47.77477272727273,
+            "action_tv_per_observed_day": 7.545454545454548,
+            "pump_changed_fraction": 0.0
+          },
+          "dose_case_counts": {
+            "basal_u_per_observed_day": 1,
+            "bolus_u_per_observed_day": 1,
+            "action_tv_per_observed_day": 1,
+            "pump_changed_fraction": 1
+          }
+        }
+      },
+      "cases": [
+        {
+          "key": "bolus_0.8_p01_s103101",
+          "job": {
+            "patient": 1,
+            "seed": 103101,
+            "group": "bolus_0.8",
+            "bolus_factor": 0.8,
+            "total_minutes": 4320,
+            "meals": [
+              [
+                480,
+                46.52184987115675
+              ],
+              [
+                805,
+                70.31791228491176
+              ],
+              [
+                1150,
+                71.43942263534929
+              ],
+              [
+                1930,
+                39.53168062935694
+              ],
+              [
+                2190,
+                80.38547312582648
+              ],
+              [
+                2575,
+                66.09059991662629
+              ],
+              [
+                3390,
+                48.2249640216487
+              ],
+              [
+                3640,
+                63.08506662212679
+              ],
+              [
+                4025,
+                61.82247595556138
+              ]
+            ]
+          },
+          "raw_path": "RL_DSENet_SOTA_2026-10-03/results/eval_legacy_smoke_r2/trajectories/bolus_0.8_p01_s103101.json",
+          "raw_sha256": "e33ec1077eebd53c1d26a8fe6b52c20335c7cd03b6e577b8a4bf55c42244205f",
+          "failure_reason": null,
+          "technical_failure_reason": null,
+          "raw_trajectory_available": true,
+          "complete_followup": true,
+          "observed_record_intervals": 792,
+          "unknown_tail_intervals": 0,
+          "unknown_tail_minutes": 0,
+          "unknown_tail": false,
+          "unobserved_or_invalid_intervals": {
+            "bg": 0,
+            "cgm": 0
+          },
+          "metrics": {
+            "bg": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 94.57070707070707,
+              "tir_lower_bound_pct": 94.57070707070707,
+              "tir_upper_bound_pct": 94.57070707070707,
+              "tbr70_pct": 0.0,
+              "tbr54_pct": 0.0,
+              "tar180_pct": 5.42929292929293,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 132.23863752015274,
+              "sd_mg_dl": 30.29515410006353,
+              "cv_pct": 22.90945722686129,
+              "lbgi": 0.5321982832230168,
+              "hbgi": 2.1673282969741643,
+              "risk": 2.6995265801971806,
+              "hypo_events": [],
+              "hypo_events_per_observed_day": 0.0,
+              "max_hypo_low_minutes": 0,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 0
+            },
+            "cgm": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 92.2979797979798,
+              "tir_lower_bound_pct": 92.29797979797979,
+              "tir_upper_bound_pct": 92.29797979797979,
+              "tbr70_pct": 0.0,
+              "tbr54_pct": 0.0,
+              "tar180_pct": 7.7020202020202015,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 132.99616272621557,
+              "sd_mg_dl": 31.777990774558038,
+              "cv_pct": 23.89391552595082,
+              "lbgi": 0.49509096844199846,
+              "hbgi": 2.3466515569376334,
+              "risk": 2.841742525379632,
+              "hypo_events": [],
+              "hypo_events_per_observed_day": 0.0,
+              "max_hypo_low_minutes": 0,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 0
+            },
+            "failed": false,
+            "planned_intervals": 792,
+            "observed_intervals": 792,
+            "basal_u_observed": 92.21750000000002,
+            "bolus_u_observed": 43.79354166666666,
+            "basal_u_per_observed_day": 33.53363636363637,
+            "bolus_u_per_observed_day": 15.924924242424241,
+            "action_tv_per_observed_day": 11.000000000000005,
+            "pump_changed_fraction": 0.0
+          }
+        },
+        {
+          "key": "bolus_1.2_p09_s103101",
+          "job": {
+            "patient": 9,
+            "seed": 103101,
+            "group": "bolus_1.2",
+            "bolus_factor": 1.2,
+            "total_minutes": 4320,
+            "meals": [
+              [
+                480,
+                46.52184987115675
+              ],
+              [
+                805,
+                70.31791228491176
+              ],
+              [
+                1150,
+                71.43942263534929
+              ],
+              [
+                1930,
+                39.53168062935694
+              ],
+              [
+                2190,
+                80.38547312582648
+              ],
+              [
+                2575,
+                66.09059991662629
+              ],
+              [
+                3390,
+                48.2249640216487
+              ],
+              [
+                3640,
+                63.08506662212679
+              ],
+              [
+                4025,
+                61.82247595556138
+              ]
+            ]
+          },
+          "raw_path": "RL_DSENet_SOTA_2026-10-03/results/eval_legacy_smoke_r2/trajectories/bolus_1.2_p09_s103101.json",
+          "raw_sha256": "3e48bdc1fa96c84b86ae78d5eab9beb6c6ec1c48246bf3497c76c42d1d97ff1a",
+          "failure_reason": null,
+          "technical_failure_reason": null,
+          "raw_trajectory_available": true,
+          "complete_followup": true,
+          "observed_record_intervals": 792,
+          "unknown_tail_intervals": 0,
+          "unknown_tail_minutes": 0,
+          "unknown_tail": false,
+          "unobserved_or_invalid_intervals": {
+            "bg": 0,
+            "cgm": 0
+          },
+          "metrics": {
+            "bg": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 76.51515151515152,
+              "tir_lower_bound_pct": 76.51515151515152,
+              "tir_upper_bound_pct": 76.51515151515152,
+              "tbr70_pct": 22.474747474747474,
+              "tbr54_pct": 15.025252525252524,
+              "tar180_pct": 1.0101010101010102,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 103.70475124695844,
+              "sd_mg_dl": 39.00077111525402,
+              "cv_pct": 37.607506547486054,
+              "lbgi": 7.2246722027039345,
+              "hbgi": 0.8919798490384386,
+              "risk": 8.116652051742372,
+              "hypo_events": [
+                {
+                  "start_index": 238,
+                  "end_index_exclusive": 318,
+                  "low_minutes": 400,
+                  "span_minutes": 400,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 479,
+                  "end_index_exclusive": 486,
+                  "low_minutes": 35,
+                  "span_minutes": 35,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 519,
+                  "end_index_exclusive": 600,
+                  "low_minutes": 405,
+                  "span_minutes": 405,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 767,
+                  "end_index_exclusive": 777,
+                  "low_minutes": 50,
+                  "span_minutes": 50,
+                  "right_censored": false
+                }
+              ],
+              "hypo_events_per_observed_day": 1.4545454545454546,
+              "max_hypo_low_minutes": 405,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 2
+            },
+            "cgm": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 75.0,
+              "tir_lower_bound_pct": 75.0,
+              "tir_upper_bound_pct": 75.0,
+              "tbr70_pct": 24.36868686868687,
+              "tbr54_pct": 15.909090909090908,
+              "tar180_pct": 0.6313131313131313,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 104.72550755572685,
+              "sd_mg_dl": 39.496668856267824,
+              "cv_pct": 37.71446878426513,
+              "lbgi": 6.469994228764723,
+              "hbgi": 0.9954712085951197,
+              "risk": 7.465465437359842,
+              "hypo_events": [
+                {
+                  "start_index": 195,
+                  "end_index_exclusive": 202,
+                  "low_minutes": 35,
+                  "span_minutes": 35,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 240,
+                  "end_index_exclusive": 318,
+                  "low_minutes": 380,
+                  "span_minutes": 390,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 473,
+                  "end_index_exclusive": 487,
+                  "low_minutes": 70,
+                  "span_minutes": 70,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 522,
+                  "end_index_exclusive": 605,
+                  "low_minutes": 415,
+                  "span_minutes": 415,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 766,
+                  "end_index_exclusive": 777,
+                  "low_minutes": 55,
+                  "span_minutes": 55,
+                  "right_censored": false
+                }
+              ],
+              "hypo_events_per_observed_day": 1.8181818181818181,
+              "max_hypo_low_minutes": 415,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 3
+            },
+            "failed": false,
+            "planned_intervals": 792,
+            "observed_intervals": 792,
+            "basal_u_observed": 76.42733333333335,
+            "bolus_u_observed": 131.380625,
+            "basal_u_per_observed_day": 27.791757575757583,
+            "bolus_u_per_observed_day": 47.77477272727273,
+            "action_tv_per_observed_day": 7.545454545454548,
+            "pump_changed_fraction": 0.0
+          }
+        }
+      ]
+    },
+    "eval_ppo_smoke_r2": {
+      "name": "eval_ppo_smoke_r2",
+      "folder": "RL_DSENet_SOTA_2026-10-03/results/eval_ppo_smoke_r2",
+      "split": "development",
+      "smoke": true,
+      "controller": "ppo",
+      "status": "completed",
+      "error": null,
+      "manifest_sha256": "0537f72ebf13a123d1e4e2000c9304fb3c942b8613266215d0f6bfd44e0bab23",
+      "summary_sha256": "0712c1e832dcdf71e051eb8c21e8e33ffde4a86cdca63c0583508405f68d5d71",
+      "scoring_verified_exact": true,
+      "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+      "jobs_sha256": "63ea1da9a56b209b2ef606a69911375f7fa10df6e2c3475123b0963f62541873",
+      "jobs": [
+        {
+          "patient": 1,
+          "seed": 103101,
+          "group": "bolus_0.8",
+          "bolus_factor": 0.8,
+          "total_minutes": 4320,
+          "meals": [
+            [
+              480,
+              46.52184987115675
+            ],
+            [
+              805,
+              70.31791228491176
+            ],
+            [
+              1150,
+              71.43942263534929
+            ],
+            [
+              1930,
+              39.53168062935694
+            ],
+            [
+              2190,
+              80.38547312582648
+            ],
+            [
+              2575,
+              66.09059991662629
+            ],
+            [
+              3390,
+              48.2249640216487
+            ],
+            [
+              3640,
+              63.08506662212679
+            ],
+            [
+              4025,
+              61.82247595556138
+            ]
+          ]
+        },
+        {
+          "patient": 9,
+          "seed": 103101,
+          "group": "bolus_1.2",
+          "bolus_factor": 1.2,
+          "total_minutes": 4320,
+          "meals": [
+            [
+              480,
+              46.52184987115675
+            ],
+            [
+              805,
+              70.31791228491176
+            ],
+            [
+              1150,
+              71.43942263534929
+            ],
+            [
+              1930,
+              39.53168062935694
+            ],
+            [
+              2190,
+              80.38547312582648
+            ],
+            [
+              2575,
+              66.09059991662629
+            ],
+            [
+              3390,
+              48.2249640216487
+            ],
+            [
+              3640,
+              63.08506662212679
+            ],
+            [
+              4025,
+              61.82247595556138
+            ]
+          ]
+        }
+      ],
+      "action_support": "0..min(20,2*observed anchor) U/h",
+      "checkpoint_sha256": "a53229c2f5deb3ac612b32bd03110df83d1c77cf678ae2ea61e8c56bda74fd61",
+      "episodes": 2,
+      "patient_count": 2,
+      "failed_episodes": 0,
+      "incomplete_episodes": 0,
+      "unknown_tail_intervals": 0,
+      "eligible_for_complete_followup_comparison": true,
+      "table_label": "Complete",
+      "complete": {
+        "bg": {
+          "tir_observed_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 10.795454545454545,
+            "sd": 15.267078230164094,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 7.7020202020202015,
+            "sd": 10.892301427368535,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 5.303030303030304,
+            "sd": 5.713994191406446,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 123.8104026276289,
+            "sd": 27.24904994971709,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 34.13801069073011,
+            "sd": 7.245989892799378,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 28.917190089636982,
+            "sd": 12.216784004709986,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.511989498459307,
+            "sd": 4.783476685914094,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 2.0449860601502072,
+            "sd": 1.5422950610436648,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.556975558609515,
+            "sd": 3.241181624870428,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.0,
+            "sd": 1.4142135623730951,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.5454545454545454,
+            "sd": 0.77138921583987,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 217.5,
+            "sd": 307.59144981614816,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "cgm": {
+          "tir_observed_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 12.058080808080808,
+            "sd": 17.052701414978607,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 8.080808080808081,
+            "sd": 11.42798838281289,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 6.502525252525253,
+            "sd": 7.410336216980232,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 124.66534445202892,
+            "sd": 27.10125147183965,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 35.43718584752067,
+            "sd": 6.470148726932869,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 29.691587133374508,
+            "sd": 11.644728120504398,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.2620694020092316,
+            "sd": 4.4205514027551,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 2.190896778645242,
+            "sd": 1.5924319069847728,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.4529661806544745,
+            "sd": 2.828119495770328,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.5,
+            "sd": 2.1213203435596424,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.9090909090909091,
+            "sd": 1.28564869306645,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 215.0,
+            "sd": 304.05591591021545,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "dose": {
+          "basal_u_per_observed_day": {
+            "mean": 28.818000000000005,
+            "sd": 2.265570126921694,
+            "n_patients": 2
+          },
+          "bolus_u_per_observed_day": {
+            "mean": 31.849848484848486,
+            "sd": 22.521243843400455,
+            "n_patients": 2
+          },
+          "action_tv_per_observed_day": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "pump_changed_fraction": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        }
+      },
+      "observed": {
+        "bg": {
+          "tir_observed_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 10.795454545454545,
+            "sd": 15.267078230164094,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 7.7020202020202015,
+            "sd": 10.892301427368535,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 5.303030303030304,
+            "sd": 5.713994191406446,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 123.8104026276289,
+            "sd": 27.24904994971709,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 34.13801069073011,
+            "sd": 7.245989892799378,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 28.917190089636982,
+            "sd": 12.216784004709986,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.511989498459307,
+            "sd": 4.783476685914094,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 2.0449860601502072,
+            "sd": 1.5422950610436648,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.556975558609515,
+            "sd": 3.241181624870428,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.0,
+            "sd": 1.4142135623730951,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.5454545454545454,
+            "sd": 0.77138921583987,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 217.5,
+            "sd": 307.59144981614816,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "cgm": {
+          "tir_observed_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tbr70_pct": {
+            "mean": 12.058080808080808,
+            "sd": 17.052701414978607,
+            "n_patients": 2
+          },
+          "tbr54_pct": {
+            "mean": 8.080808080808081,
+            "sd": 11.42798838281289,
+            "n_patients": 2
+          },
+          "tar180_pct": {
+            "mean": 6.502525252525253,
+            "sd": 7.410336216980232,
+            "n_patients": 2
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "mean_mg_dl": {
+            "mean": 124.66534445202892,
+            "sd": 27.10125147183965,
+            "n_patients": 2
+          },
+          "sd_mg_dl": {
+            "mean": 35.43718584752067,
+            "sd": 6.470148726932869,
+            "n_patients": 2
+          },
+          "cv_pct": {
+            "mean": 29.691587133374508,
+            "sd": 11.644728120504398,
+            "n_patients": 2
+          },
+          "lbgi": {
+            "mean": 3.2620694020092316,
+            "sd": 4.4205514027551,
+            "n_patients": 2
+          },
+          "hbgi": {
+            "mean": 2.190896778645242,
+            "sd": 1.5924319069847728,
+            "n_patients": 2
+          },
+          "risk": {
+            "mean": 5.4529661806544745,
+            "sd": 2.828119495770328,
+            "n_patients": 2
+          },
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 1.5,
+            "sd": 2.1213203435596424,
+            "n_patients": 2
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.9090909090909091,
+            "sd": 1.28564869306645,
+            "n_patients": 2
+          },
+          "max_hypo_low_minutes": {
+            "mean": 215.0,
+            "sd": 304.05591591021545,
+            "n_patients": 2
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        },
+        "dose": {
+          "basal_u_per_observed_day": {
+            "mean": 28.818000000000005,
+            "sd": 2.265570126921694,
+            "n_patients": 2
+          },
+          "bolus_u_per_observed_day": {
+            "mean": 31.849848484848486,
+            "sd": 22.521243843400455,
+            "n_patients": 2
+          },
+          "action_tv_per_observed_day": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "pump_changed_fraction": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2
+          }
+        }
+      },
+      "coverage_and_tir_bounds": {
+        "bg": {
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 83.90151515151516,
+            "sd": 9.55308403875765,
+            "n_patients": 2
+          }
+        },
+        "cgm": {
+          "coverage_pct": {
+            "mean": 100.0,
+            "sd": 0.0,
+            "n_patients": 2
+          },
+          "tir_lower_bound_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          },
+          "tir_upper_bound_pct": {
+            "mean": 81.43939393939394,
+            "sd": 9.642365197998368,
+            "n_patients": 2
+          }
+        }
+      },
+      "observed_event_totals": {
+        "bg": {
+          "prolonged_under54_120min_events": 2,
+          "hypo_events": 3,
+          "unknown_tail_may_contain_additional_events": false
+        },
+        "cgm": {
+          "prolonged_under54_120min_events": 3,
+          "hypo_events": 5,
+          "unknown_tail_may_contain_additional_events": false
+        }
+      },
+      "patients": {
+        "1": {
+          "case_count": 1,
+          "keys": [
+            "bolus_0.8_p01_s103101"
+          ],
+          "bg": {
+            "tir_observed_pct": 90.65656565656566,
+            "tir_lower_bound_pct": 90.65656565656566,
+            "tir_upper_bound_pct": 90.65656565656566,
+            "tbr70_pct": 0.0,
+            "tbr54_pct": 0.0,
+            "tar180_pct": 9.343434343434344,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 143.0783906279648,
+            "sd_mg_dl": 29.014322101122488,
+            "cv_pct": 20.278619275615203,
+            "lbgi": 0.12956069620169872,
+            "hbgi": 3.135553356404703,
+            "risk": 3.2651140526064024,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 0.0,
+            "hypo_events_per_observed_day": 0.0,
+            "max_hypo_low_minutes": 0.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "bg_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "cgm": {
+            "tir_observed_pct": 88.25757575757575,
+            "tir_lower_bound_pct": 88.25757575757575,
+            "tir_upper_bound_pct": 88.25757575757575,
+            "tbr70_pct": 0.0,
+            "tbr54_pct": 0.0,
+            "tar180_pct": 11.742424242424242,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 143.82882314640864,
+            "sd_mg_dl": 30.86209980742093,
+            "cv_pct": 21.457520914292168,
+            "lbgi": 0.13626752853739535,
+            "hbgi": 3.3169161786520003,
+            "risk": 3.453183707189396,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 0.0,
+            "hypo_events_per_observed_day": 0.0,
+            "max_hypo_low_minutes": 0.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "cgm_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "dose": {
+            "basal_u_per_observed_day": 30.42,
+            "bolus_u_per_observed_day": 15.924924242424241,
+            "action_tv_per_observed_day": 0.0,
+            "pump_changed_fraction": 0.0
+          },
+          "dose_case_counts": {
+            "basal_u_per_observed_day": 1,
+            "bolus_u_per_observed_day": 1,
+            "action_tv_per_observed_day": 1,
+            "pump_changed_fraction": 1
+          }
+        },
+        "9": {
+          "case_count": 1,
+          "keys": [
+            "bolus_1.2_p09_s103101"
+          ],
+          "bg": {
+            "tir_observed_pct": 77.14646464646465,
+            "tir_lower_bound_pct": 77.14646464646465,
+            "tir_upper_bound_pct": 77.14646464646465,
+            "tbr70_pct": 21.59090909090909,
+            "tbr54_pct": 15.404040404040403,
+            "tar180_pct": 1.2626262626262625,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 104.542414627293,
+            "sd_mg_dl": 39.26169928033774,
+            "cv_pct": 37.55576090365876,
+            "lbgi": 6.894418300716915,
+            "hbgi": 0.9544187638957115,
+            "risk": 7.848837064612627,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 2.0,
+            "hypo_events_per_observed_day": 1.0909090909090908,
+            "max_hypo_low_minutes": 435.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "bg_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "cgm": {
+            "tir_observed_pct": 74.62121212121212,
+            "tir_lower_bound_pct": 74.62121212121212,
+            "tir_upper_bound_pct": 74.62121212121212,
+            "tbr70_pct": 24.116161616161616,
+            "tbr54_pct": 16.161616161616163,
+            "tar180_pct": 1.2626262626262625,
+            "tar250_pct": 0.0,
+            "mean_mg_dl": 105.5018657576492,
+            "sd_mg_dl": 40.01227188762041,
+            "cv_pct": 37.92565335245685,
+            "lbgi": 6.387871275481068,
+            "hbgi": 1.0648773786384835,
+            "risk": 7.452748654119553,
+            "coverage_pct": 100.0,
+            "prolonged_under54_120min_events": 3.0,
+            "hypo_events_per_observed_day": 1.8181818181818181,
+            "max_hypo_low_minutes": 430.0,
+            "right_censored_hypo_events": 0.0
+          },
+          "cgm_case_counts": {
+            "tir_observed_pct": 1,
+            "tir_lower_bound_pct": 1,
+            "tir_upper_bound_pct": 1,
+            "tbr70_pct": 1,
+            "tbr54_pct": 1,
+            "tar180_pct": 1,
+            "tar250_pct": 1,
+            "mean_mg_dl": 1,
+            "sd_mg_dl": 1,
+            "cv_pct": 1,
+            "lbgi": 1,
+            "hbgi": 1,
+            "risk": 1,
+            "coverage_pct": 1,
+            "prolonged_under54_120min_events": 1,
+            "hypo_events_per_observed_day": 1,
+            "max_hypo_low_minutes": 1,
+            "right_censored_hypo_events": 1
+          },
+          "dose": {
+            "basal_u_per_observed_day": 27.216000000000008,
+            "bolus_u_per_observed_day": 47.77477272727273,
+            "action_tv_per_observed_day": 0.0,
+            "pump_changed_fraction": 0.0
+          },
+          "dose_case_counts": {
+            "basal_u_per_observed_day": 1,
+            "bolus_u_per_observed_day": 1,
+            "action_tv_per_observed_day": 1,
+            "pump_changed_fraction": 1
+          }
+        }
+      },
+      "cases": [
+        {
+          "key": "bolus_0.8_p01_s103101",
+          "job": {
+            "patient": 1,
+            "seed": 103101,
+            "group": "bolus_0.8",
+            "bolus_factor": 0.8,
+            "total_minutes": 4320,
+            "meals": [
+              [
+                480,
+                46.52184987115675
+              ],
+              [
+                805,
+                70.31791228491176
+              ],
+              [
+                1150,
+                71.43942263534929
+              ],
+              [
+                1930,
+                39.53168062935694
+              ],
+              [
+                2190,
+                80.38547312582648
+              ],
+              [
+                2575,
+                66.09059991662629
+              ],
+              [
+                3390,
+                48.2249640216487
+              ],
+              [
+                3640,
+                63.08506662212679
+              ],
+              [
+                4025,
+                61.82247595556138
+              ]
+            ]
+          },
+          "raw_path": "RL_DSENet_SOTA_2026-10-03/results/eval_ppo_smoke_r2/trajectories/bolus_0.8_p01_s103101.json",
+          "raw_sha256": "f56d6c623d412f1ab46baafbeafdc810702b8043126b71bf4fdbdbc1d3d2a713",
+          "failure_reason": null,
+          "technical_failure_reason": null,
+          "raw_trajectory_available": true,
+          "complete_followup": true,
+          "observed_record_intervals": 792,
+          "unknown_tail_intervals": 0,
+          "unknown_tail_minutes": 0,
+          "unknown_tail": false,
+          "unobserved_or_invalid_intervals": {
+            "bg": 0,
+            "cgm": 0
+          },
+          "metrics": {
+            "bg": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 90.65656565656566,
+              "tir_lower_bound_pct": 90.65656565656566,
+              "tir_upper_bound_pct": 90.65656565656566,
+              "tbr70_pct": 0.0,
+              "tbr54_pct": 0.0,
+              "tar180_pct": 9.343434343434344,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 143.0783906279648,
+              "sd_mg_dl": 29.014322101122488,
+              "cv_pct": 20.278619275615203,
+              "lbgi": 0.12956069620169872,
+              "hbgi": 3.135553356404703,
+              "risk": 3.2651140526064024,
+              "hypo_events": [],
+              "hypo_events_per_observed_day": 0.0,
+              "max_hypo_low_minutes": 0,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 0
+            },
+            "cgm": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 88.25757575757575,
+              "tir_lower_bound_pct": 88.25757575757575,
+              "tir_upper_bound_pct": 88.25757575757575,
+              "tbr70_pct": 0.0,
+              "tbr54_pct": 0.0,
+              "tar180_pct": 11.742424242424242,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 143.82882314640864,
+              "sd_mg_dl": 30.86209980742093,
+              "cv_pct": 21.457520914292168,
+              "lbgi": 0.13626752853739535,
+              "hbgi": 3.3169161786520003,
+              "risk": 3.453183707189396,
+              "hypo_events": [],
+              "hypo_events_per_observed_day": 0.0,
+              "max_hypo_low_minutes": 0,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 0
+            },
+            "failed": false,
+            "planned_intervals": 792,
+            "observed_intervals": 792,
+            "basal_u_observed": 83.655,
+            "bolus_u_observed": 43.79354166666666,
+            "basal_u_per_observed_day": 30.42,
+            "bolus_u_per_observed_day": 15.924924242424241,
+            "action_tv_per_observed_day": 0.0,
+            "pump_changed_fraction": 0.0
+          }
+        },
+        {
+          "key": "bolus_1.2_p09_s103101",
+          "job": {
+            "patient": 9,
+            "seed": 103101,
+            "group": "bolus_1.2",
+            "bolus_factor": 1.2,
+            "total_minutes": 4320,
+            "meals": [
+              [
+                480,
+                46.52184987115675
+              ],
+              [
+                805,
+                70.31791228491176
+              ],
+              [
+                1150,
+                71.43942263534929
+              ],
+              [
+                1930,
+                39.53168062935694
+              ],
+              [
+                2190,
+                80.38547312582648
+              ],
+              [
+                2575,
+                66.09059991662629
+              ],
+              [
+                3390,
+                48.2249640216487
+              ],
+              [
+                3640,
+                63.08506662212679
+              ],
+              [
+                4025,
+                61.82247595556138
+              ]
+            ]
+          },
+          "raw_path": "RL_DSENet_SOTA_2026-10-03/results/eval_ppo_smoke_r2/trajectories/bolus_1.2_p09_s103101.json",
+          "raw_sha256": "8426c81f2879e0c7ff5022c9e3c36cf2a8481c8a05dae7dcd020d2797a57f59c",
+          "failure_reason": null,
+          "technical_failure_reason": null,
+          "raw_trajectory_available": true,
+          "complete_followup": true,
+          "observed_record_intervals": 792,
+          "unknown_tail_intervals": 0,
+          "unknown_tail_minutes": 0,
+          "unknown_tail": false,
+          "unobserved_or_invalid_intervals": {
+            "bg": 0,
+            "cgm": 0
+          },
+          "metrics": {
+            "bg": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 77.14646464646465,
+              "tir_lower_bound_pct": 77.14646464646465,
+              "tir_upper_bound_pct": 77.14646464646465,
+              "tbr70_pct": 21.59090909090909,
+              "tbr54_pct": 15.404040404040403,
+              "tar180_pct": 1.2626262626262625,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 104.542414627293,
+              "sd_mg_dl": 39.26169928033774,
+              "cv_pct": 37.55576090365876,
+              "lbgi": 6.894418300716915,
+              "hbgi": 0.9544187638957115,
+              "risk": 7.848837064612627,
+              "hypo_events": [
+                {
+                  "start_index": 239,
+                  "end_index_exclusive": 319,
+                  "low_minutes": 400,
+                  "span_minutes": 400,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 519,
+                  "end_index_exclusive": 606,
+                  "low_minutes": 435,
+                  "span_minutes": 435,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 771,
+                  "end_index_exclusive": 774,
+                  "low_minutes": 15,
+                  "span_minutes": 15,
+                  "right_censored": false
+                }
+              ],
+              "hypo_events_per_observed_day": 1.0909090909090908,
+              "max_hypo_low_minutes": 435,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 2
+            },
+            "cgm": {
+              "observed_intervals": 792,
+              "invalid_intervals": 0,
+              "coverage_pct": 100.0,
+              "tir_observed_pct": 74.62121212121212,
+              "tir_lower_bound_pct": 74.62121212121212,
+              "tir_upper_bound_pct": 74.62121212121212,
+              "tbr70_pct": 24.116161616161616,
+              "tbr54_pct": 16.161616161616163,
+              "tar180_pct": 1.2626262626262625,
+              "tar250_pct": 0.0,
+              "mean_mg_dl": 105.5018657576492,
+              "sd_mg_dl": 40.01227188762041,
+              "cv_pct": 37.92565335245685,
+              "lbgi": 6.387871275481068,
+              "hbgi": 1.0648773786384835,
+              "risk": 7.452748654119553,
+              "hypo_events": [
+                {
+                  "start_index": 195,
+                  "end_index_exclusive": 200,
+                  "low_minutes": 25,
+                  "span_minutes": 25,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 241,
+                  "end_index_exclusive": 319,
+                  "low_minutes": 390,
+                  "span_minutes": 390,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 474,
+                  "end_index_exclusive": 486,
+                  "low_minutes": 60,
+                  "span_minutes": 60,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 522,
+                  "end_index_exclusive": 608,
+                  "low_minutes": 430,
+                  "span_minutes": 430,
+                  "right_censored": false
+                },
+                {
+                  "start_index": 766,
+                  "end_index_exclusive": 776,
+                  "low_minutes": 50,
+                  "span_minutes": 50,
+                  "right_censored": false
+                }
+              ],
+              "hypo_events_per_observed_day": 1.8181818181818181,
+              "max_hypo_low_minutes": 430,
+              "right_censored_hypo_events": 0,
+              "prolonged_under54_120min_events": 3
+            },
+            "failed": false,
+            "planned_intervals": 792,
+            "observed_intervals": 792,
+            "basal_u_observed": 74.84400000000002,
+            "bolus_u_observed": 131.380625,
+            "basal_u_per_observed_day": 27.216000000000008,
+            "bolus_u_per_observed_day": 47.77477272727273,
+            "action_tv_per_observed_day": 0.0,
+            "pump_changed_fraction": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "eval_ppo_smoke_r2": {
+      "candidate": "eval_ppo_smoke_r2",
+      "reference": "eval_legacy_smoke_r2",
+      "difference_direction": "candidate minus reference",
+      "identical_jobs_meals_factors": true,
+      "complete_pair_applicable": true,
+      "observed_patient_differences": {
+        "bg": {
+          "tir_observed_pct": {
+            "mean": -1.6414141414141383,
+            "sd": 3.214121732666126,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.9141414141414117,
+              "9": 0.631313131313135
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tir_lower_bound_pct": {
+            "mean": -1.6414141414141383,
+            "sd": 3.214121732666126,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.9141414141414117,
+              "9": 0.631313131313135
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tir_upper_bound_pct": {
+            "mean": -1.6414141414141383,
+            "sd": 3.214121732666126,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.9141414141414117,
+              "9": 0.631313131313135
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tbr70_pct": {
+            "mean": -0.44191919191919204,
+            "sd": 0.6249681146850801,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": -0.8838383838383841
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tbr54_pct": {
+            "mean": 0.18939393939393945,
+            "sd": 0.26784347772217715,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.3787878787878789
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tar180_pct": {
+            "mean": 2.0833333333333335,
+            "sd": 2.5891536179810455,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 3.9141414141414144,
+              "9": 0.2525252525252524
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "mean_mg_dl": {
+            "mean": 5.838708244073317,
+            "sd": 7.072545472335655,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 10.839753107812072,
+              "9": 0.8376633803345612
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "sd_mg_dl": {
+            "mean": -0.5099519169286619,
+            "sd": 1.0901890669451928,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -1.2808319989410428,
+              "9": 0.26092816508371897
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "cv_pct": {
+            "mean": -1.341291797536691,
+            "sd": 1.8236936598818865,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -2.630837951246086,
+              "9": -0.05174564382729585
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "lbgi": {
+            "mean": -0.3664457445041686,
+            "sd": 0.05118299453502391,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -0.402637587021318,
+              "9": -0.3302539019870192
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "hbgi": {
+            "mean": 0.5153319871439057,
+            "sd": 0.6404875251325748,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.9682250594305386,
+              "9": 0.06243891485727282
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "risk": {
+            "mean": 0.14888624263973815,
+            "sd": 0.5893045305975511,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.5655874724092218,
+              "9": -0.2678149871297455
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "coverage_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "hypo_events_per_observed_day": {
+            "mean": -0.18181818181818188,
+            "sd": 0.2571297386132901,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": -0.36363636363636376
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "max_hypo_low_minutes": {
+            "mean": 15.0,
+            "sd": 21.213203435596427,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 30.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          }
+        },
+        "cgm": {
+          "tir_observed_pct": {
+            "mean": -2.2095959595959656,
+            "sd": 2.5891536179810584,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -4.040404040404056,
+              "9": -0.37878787878787534
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tir_lower_bound_pct": {
+            "mean": -2.2095959595959584,
+            "sd": 2.5891536179810486,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -4.0404040404040416,
+              "9": -0.37878787878787534
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tir_upper_bound_pct": {
+            "mean": -2.2095959595959584,
+            "sd": 2.5891536179810486,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -4.0404040404040416,
+              "9": -0.37878787878787534
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tbr70_pct": {
+            "mean": -0.1262626262626263,
+            "sd": 0.17856231848145146,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": -0.2525252525252526
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tbr54_pct": {
+            "mean": 0.1262626262626272,
+            "sd": 0.1785623184814527,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.2525252525252544
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tar180_pct": {
+            "mean": 2.335858585858586,
+            "sd": 2.410591299499594,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 4.040404040404041,
+              "9": 0.6313131313131313
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "mean_mg_dl": {
+            "mean": 5.804509311057707,
+            "sd": 7.110879492200543,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 10.832660420193065,
+              "9": 0.7763582019223492
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "sd_mg_dl": {
+            "mean": -0.20014396789226296,
+            "sd": 1.012219113559907,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -0.9158909671371092,
+              "9": 0.5156030313525832
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "cv_pct": {
+            "mean": -1.1126050217334669,
+            "sd": 1.8721211918005156,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -2.4363946116586526,
+              "9": 0.21118456819171882
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "lbgi": {
+            "mean": -0.22047319659412934,
+            "sd": 0.19565679044728954,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -0.3588234399046031,
+              "9": -0.0821229532836556
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "hbgi": {
+            "mean": 0.5198353958788653,
+            "sd": 0.63700312006578,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.9702646217143669,
+              "9": 0.0694061700433638
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "risk": {
+            "mean": 0.29936219928473773,
+            "sd": 0.44134632961848863,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.6114411818097643,
+              "9": -0.012716783240288798
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "coverage_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "max_hypo_low_minutes": {
+            "mean": 7.5,
+            "sd": 10.606601717798213,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 15.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          }
+        },
+        "dose": {
+          "basal_u_per_observed_day": {
+            "mean": -1.8446969696969706,
+            "sd": 1.7945513007385898,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.113636363636367,
+              "9": -0.5757575757575744
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "bolus_u_per_observed_day": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "action_tv_per_observed_day": {
+            "mean": -9.272727272727277,
+            "sd": 2.4427325168262572,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -11.000000000000005,
+              "9": -7.545454545454548
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          },
+          "pump_changed_fraction": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": null
+          }
+        }
+      },
+      "observed_warning": null,
+      "original_joint_nonregression": {
+        "applicable": true,
+        "passed": false,
+        "gates": {
+          "tir_not_lower": false,
+          "complete": true,
+          "hypo_strict": true,
+          "tbr70_pct": true,
+          "tbr54_pct": false,
+          "tar180_pct": false,
+          "tar250_pct": true,
+          "hbgi": false,
+          "sd_mg_dl": true,
+          "cv_pct": true
+        },
+        "changes": {
+          "tir_lower_bound_pct": -1.6414141414141454,
+          "tir_upper_bound_pct": -1.6414141414141454,
+          "tbr70_pct": -0.44191919191919204,
+          "tbr54_pct": 0.18939393939393945,
+          "tar180_pct": 2.0833333333333335,
+          "tar250_pct": 0.0,
+          "sd_mg_dl": -0.5099519169286637,
+          "cv_pct": -1.341291797536691,
+          "lbgi": -0.36644574450416867,
+          "hbgi": 0.5153319871439057,
+          "mean_mg_dl": 5.838708244073317,
+          "coverage_pct": 0.0
+        }
+      },
+      "metric_family_comparison": {
+        "descriptive_only": true,
+        "families": {
+          "tir": {
+            "status": "worsened",
+            "metrics": {
+              "tir_observed_pct": {
+                "candidate_minus_reference": -1.6414141414141383,
+                "direction": 1,
+                "vote": "worsened"
+              }
+            }
+          },
+          "hypoglycemia": {
+            "status": "tradeoff",
+            "metrics": {
+              "tbr70_pct": {
+                "candidate_minus_reference": -0.44191919191919204,
+                "direction": -1,
+                "vote": "improved"
+              },
+              "tbr54_pct": {
+                "candidate_minus_reference": 0.18939393939393945,
+                "direction": -1,
+                "vote": "worsened"
+              },
+              "lbgi": {
+                "candidate_minus_reference": -0.3664457445041686,
+                "direction": -1,
+                "vote": "improved"
+              },
+              "prolonged_under54_120min_events": {
+                "candidate_minus_reference": 0.0,
+                "direction": -1,
+                "vote": "tied"
+              },
+              "hypo_events_per_observed_day": {
+                "candidate_minus_reference": -0.18181818181818188,
+                "direction": -1,
+                "vote": "improved"
+              }
+            }
+          },
+          "hyperglycemia": {
+            "status": "worsened",
+            "metrics": {
+              "tar180_pct": {
+                "candidate_minus_reference": 2.0833333333333335,
+                "direction": -1,
+                "vote": "worsened"
+              },
+              "tar250_pct": {
+                "candidate_minus_reference": 0.0,
+                "direction": -1,
+                "vote": "tied"
+              },
+              "hbgi": {
+                "candidate_minus_reference": 0.5153319871439057,
+                "direction": -1,
+                "vote": "worsened"
+              }
+            }
+          },
+          "variability": {
+            "status": "improved",
+            "metrics": {
+              "sd_mg_dl": {
+                "candidate_minus_reference": -0.5099519169286619,
+                "direction": -1,
+                "vote": "improved"
+              },
+              "cv_pct": {
+                "candidate_minus_reference": -1.341291797536691,
+                "direction": -1,
+                "vote": "improved"
+              }
+            }
+          }
+        },
+        "metric_votes": {
+          "improved": 5,
+          "tied": 2,
+          "worsened": 4
+        },
+        "family_votes": {
+          "improved": 1,
+          "tied": 0,
+          "worsened": 2,
+          "tradeoff": 1
+        },
+        "strict_majority_of_metrics_improved": false,
+        "strict_majority_of_families_improved": false,
+        "no_SOTA_claim": true
+      },
+      "complete_patient_differences": {
+        "bg": {
+          "tir_observed_pct": {
+            "mean": -1.6414141414141383,
+            "sd": 3.214121732666126,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.9141414141414117,
+              "9": 0.631313131313135
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -3.9141414141414117,
+              0.631313131313135
+            ]
+          },
+          "tir_lower_bound_pct": {
+            "mean": -1.6414141414141383,
+            "sd": 3.214121732666126,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.9141414141414117,
+              "9": 0.631313131313135
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -3.9141414141414117,
+              0.631313131313135
+            ]
+          },
+          "tir_upper_bound_pct": {
+            "mean": -1.6414141414141383,
+            "sd": 3.214121732666126,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.9141414141414117,
+              "9": 0.631313131313135
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -3.9141414141414117,
+              0.631313131313135
+            ]
+          },
+          "tbr70_pct": {
+            "mean": -0.44191919191919204,
+            "sd": 0.6249681146850801,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": -0.8838383838383841
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.8838383838383841,
+              0.0
+            ]
+          },
+          "tbr54_pct": {
+            "mean": 0.18939393939393945,
+            "sd": 0.26784347772217715,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.3787878787878789
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.3787878787878789
+            ]
+          },
+          "tar180_pct": {
+            "mean": 2.0833333333333335,
+            "sd": 2.5891536179810455,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 3.9141414141414144,
+              "9": 0.2525252525252524
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.2525252525252524,
+              3.9141414141414144
+            ]
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_mg_dl": {
+            "mean": 5.838708244073317,
+            "sd": 7.072545472335655,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 10.839753107812072,
+              "9": 0.8376633803345612
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.8376633803345612,
+              10.839753107812072
+            ]
+          },
+          "sd_mg_dl": {
+            "mean": -0.5099519169286619,
+            "sd": 1.0901890669451928,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -1.2808319989410428,
+              "9": 0.26092816508371897
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -1.2808319989410428,
+              0.26092816508371897
+            ]
+          },
+          "cv_pct": {
+            "mean": -1.341291797536691,
+            "sd": 1.8236936598818865,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -2.630837951246086,
+              "9": -0.05174564382729585
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -2.630837951246086,
+              -0.05174564382729585
+            ]
+          },
+          "lbgi": {
+            "mean": -0.3664457445041686,
+            "sd": 0.05118299453502391,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -0.402637587021318,
+              "9": -0.3302539019870192
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.402637587021318,
+              -0.3302539019870192
+            ]
+          },
+          "hbgi": {
+            "mean": 0.5153319871439057,
+            "sd": 0.6404875251325748,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.9682250594305386,
+              "9": 0.06243891485727282
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.06243891485727282,
+              0.9682250594305386
+            ]
+          },
+          "risk": {
+            "mean": 0.14888624263973815,
+            "sd": 0.5893045305975511,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.5655874724092218,
+              "9": -0.2678149871297455
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.2678149871297455,
+              0.5655874724092218
+            ]
+          },
+          "coverage_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hypo_events_per_observed_day": {
+            "mean": -0.18181818181818188,
+            "sd": 0.2571297386132901,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": -0.36363636363636376
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.36363636363636376,
+              0.0
+            ]
+          },
+          "max_hypo_low_minutes": {
+            "mean": 15.0,
+            "sd": 21.213203435596427,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 30.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              30.0
+            ]
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "cgm": {
+          "tir_observed_pct": {
+            "mean": -2.2095959595959656,
+            "sd": 2.5891536179810584,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -4.040404040404056,
+              "9": -0.37878787878787534
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -4.040404040404056,
+              -0.37878787878787534
+            ]
+          },
+          "tir_lower_bound_pct": {
+            "mean": -2.2095959595959584,
+            "sd": 2.5891536179810486,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -4.0404040404040416,
+              "9": -0.37878787878787534
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -4.0404040404040416,
+              -0.37878787878787534
+            ]
+          },
+          "tir_upper_bound_pct": {
+            "mean": -2.2095959595959584,
+            "sd": 2.5891536179810486,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -4.0404040404040416,
+              "9": -0.37878787878787534
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -4.0404040404040416,
+              -0.37878787878787534
+            ]
+          },
+          "tbr70_pct": {
+            "mean": -0.1262626262626263,
+            "sd": 0.17856231848145146,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": -0.2525252525252526
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.2525252525252526,
+              0.0
+            ]
+          },
+          "tbr54_pct": {
+            "mean": 0.1262626262626272,
+            "sd": 0.1785623184814527,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.2525252525252544
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.2525252525252544
+            ]
+          },
+          "tar180_pct": {
+            "mean": 2.335858585858586,
+            "sd": 2.410591299499594,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 4.040404040404041,
+              "9": 0.6313131313131313
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.6313131313131313,
+              4.040404040404041
+            ]
+          },
+          "tar250_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_mg_dl": {
+            "mean": 5.804509311057707,
+            "sd": 7.110879492200543,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 10.832660420193065,
+              "9": 0.7763582019223492
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.7763582019223492,
+              10.832660420193065
+            ]
+          },
+          "sd_mg_dl": {
+            "mean": -0.20014396789226296,
+            "sd": 1.012219113559907,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -0.9158909671371092,
+              "9": 0.5156030313525832
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.9158909671371092,
+              0.5156030313525832
+            ]
+          },
+          "cv_pct": {
+            "mean": -1.1126050217334669,
+            "sd": 1.8721211918005156,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -2.4363946116586526,
+              "9": 0.21118456819171882
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -2.4363946116586526,
+              0.21118456819171882
+            ]
+          },
+          "lbgi": {
+            "mean": -0.22047319659412934,
+            "sd": 0.19565679044728954,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -0.3588234399046031,
+              "9": -0.0821229532836556
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.3588234399046031,
+              -0.0821229532836556
+            ]
+          },
+          "hbgi": {
+            "mean": 0.5198353958788653,
+            "sd": 0.63700312006578,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.9702646217143669,
+              "9": 0.0694061700433638
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0694061700433638,
+              0.9702646217143669
+            ]
+          },
+          "risk": {
+            "mean": 0.29936219928473773,
+            "sd": 0.44134632961848863,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.6114411818097643,
+              "9": -0.012716783240288798
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -0.012716783240288798,
+              0.6114411818097643
+            ]
+          },
+          "coverage_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "prolonged_under54_120min_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hypo_events_per_observed_day": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "max_hypo_low_minutes": {
+            "mean": 7.5,
+            "sd": 10.606601717798213,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 15.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              15.0
+            ]
+          },
+          "right_censored_hypo_events": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "dose": {
+          "basal_u_per_observed_day": {
+            "mean": -1.8446969696969706,
+            "sd": 1.7945513007385898,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -3.113636363636367,
+              "9": -0.5757575757575744
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -3.113636363636367,
+              -0.5757575757575744
+            ]
+          },
+          "bolus_u_per_observed_day": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "action_tv_per_observed_day": {
+            "mean": -9.272727272727277,
+            "sd": 2.4427325168262572,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": -11.000000000000005,
+              "9": -7.545454545454548
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              -11.000000000000005,
+              -7.545454545454548
+            ]
+          },
+          "pump_changed_fraction": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "n_patients": 2,
+            "patient_differences": {
+              "1": 0.0,
+              "9": 0.0
+            },
+            "missing_patient_ids": [],
+            "patient_cluster_bootstrap_ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "methodology": {
+    "bg_primary": true,
+    "cgm_secondary": true,
+    "scoring_dt_minutes": 5,
+    "scorer": "RL_DITR创新_2026-09-16/control_metrics.py",
+    "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+    "raw_and_summary_score_verification": "Every field exactly equal to unchanged control_metrics.summarize; no numeric tolerance",
+    "trajectory_glucose_sd_ddof": 0,
+    "between_patient_sd_ddof": 1,
+    "aggregation": "First equal-weight case means within each patient, then equal-weight patient mean and sample SD; a missing metric is null, never zero. Observed tables retain available-case counts.",
+    "tir_bounds": "Bounds for unknown/invalid outcomes, not confidence intervals",
+    "incomplete_rule": "Every planned case is retained. Any failure, invalid signal, unknown tail or failed run excludes the entire panel from complete-followup comparisons; no complete-case subset ranking.",
+    "hypoglycemia_event_definition": "Original scorer: >=15 minutes <70; closes after >=15 minutes recovery. Long54: continuous <54 for >=120 minutes. Events are observed, possibly right-censored.",
+    "old_joint_source": "RL_DSENet_公平低糖_2026-09-21/aggregate.py:18; unchanged BG gates, applied only to two complete panels",
+    "aggregation_source": "RL_DSENet_公平低糖_2026-09-21/aggregate.py and final_analysis.py",
+    "family_rule": "BG only. A family improves when every component is non-worse and at least one improves; mixed directions are tradeoff. Component vote counts are descriptive and distinct from the original joint criterion.",
+    "decision_tolerance": 1e-08,
+    "bootstrap": {
+      "seed": 1030317,
+      "replicates": 20000,
+      "unit": "paired patient cluster after within-patient averaging",
+      "seed_is_training_seed": false,
+      "interval": "percentile 95%; unavailable for one patient or incomplete followup",
+      "descriptive_no_multiplicity_correction": true
+    },
+    "limitations": [
+      "Single training seed; patient variability is not seed variability",
+      "Known virtual patients; no unseen-patient or clinical claim",
+      "Different action support is disclosed per panel; comparison does not isolate architecture",
+      "Train/validation/development/confirmation panels cannot be mixed in one comparison",
+      "No automatic SOTA claim or candidate selection"
+    ]
+  },
+  "provenance": {
+    "script_sha256": "82c7a11db9d3316af1cfd9584e6175c594262127831ccad61ac77f16c32c6438",
+    "numpy_version": "2.4.6",
+    "python_version": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "protocol_sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+  }
+}
