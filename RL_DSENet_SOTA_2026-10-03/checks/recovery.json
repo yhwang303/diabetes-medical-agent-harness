@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "frozen_weights": {
+    "forecast": {
+      "path": "results/P03_g12s3_l2s1/best.pt",
+      "sha256": "c01610104632a967b4de5eaafe59511a67e3b4d0d34954fab5bc7341fb8d19b4"
+    },
+    "world": {
+      "path": "results/D05_selected_world/world.pt",
+      "sha256": "deddaa51d00a92feb61570b1fe1ffad7c20dd85b33d74a772c62eaf0ea60f1ae"
+    },
+    "policy": {
+      "path": "results/D06_selected_policy/policy.pt",
+      "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    }
+  },
+  "compared": [
+    {
+      "case": "over_bolus_p01_s92111.json",
+      "records_exact": true,
+      "metrics_exact": true,
+      "old_sha256": "ae9ad968376f73b731146ae96218b89ff3e90b4313a59c4cce47aee73b071e40",
+      "new_sha256": "f214fb0c4c7badfabc05e05d7bf43c6223cabc8fffabbed473823acf3368d635"
+    },
+    {
+      "case": "over_bolus_p09_s92111.json",
+      "records_exact": true,
+      "metrics_exact": true,
+      "old_sha256": "8dcf2e2be9488858376b4a11adb22544e9d2b22150aa3fc66b7eaf881d4130f1",
+      "new_sha256": "da2b279aa65525e4b953dd5742926319c95231fb7aa2c3d8d7deed10154beddb"
+    }
+  ],
+  "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+  "evaluator_sha256": "36114db8ce2d77f7ac1c6e6deb025c04ae272f89672567394c6d4264596ec0b8",
+  "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+  "numpy": "2.4.6",
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB"
+}

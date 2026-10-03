@@ -1,0 +1,19 @@
+{
+  "name": "confirmation_0921",
+  "patients": [
+    1,
+    9
+  ],
+  "total_minutes": 4320,
+  "groups": [
+    {
+      "name": "over_bolus",
+      "bolus_factor": 1.2,
+      "seeds": [
+        92111
+      ],
+      "irregular": false
+    }
+  ],
+  "comparison_status": "recovery only, exposed old cases; not new confirmation"
+}

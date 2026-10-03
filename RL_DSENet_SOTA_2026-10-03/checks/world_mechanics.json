@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "data": "paired_smoke_r3",
+  "errors": {
+    "real_dsenet_mgdl": 0.0,
+    "future_actions_prefix": 0.0,
+    "masked_placeholder": 0.0,
+    "batch_single": 3.0517578125e-05,
+    "horizon_1_prefix": 1.52587890625e-05,
+    "horizon_48_prefix": 0.0,
+    "horizon_49_prefix": 0.0,
+    "horizon_72_prefix": 0.0
+  },
+  "gradient_sums": {
+    "forecast": 0.0,
+    "history": 1121.962532043457,
+    "actions": 564.2865295410156,
+    "action_input": 0.8135833144187927
+  },
+  "seconds_per_2_histories_18_arms": 0.015838660299777985,
+  "peak_cuda_mb": 32.2919921875,
+  "source_sha256": {
+    "check_world.py": "62f7853a12cc6b5b51293afa0ace793bf8aedd36ed8fe8d98ae5d3dd9c8e057c",
+    "world_model_v2.py": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db"
+  },
+  "performance_or_calibration_claim": false
+}

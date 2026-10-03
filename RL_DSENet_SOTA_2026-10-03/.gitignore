@@ -1,0 +1,8 @@
+results/
+cache/
+trajectories/
+logs/
+runtime/
+*.npz
+*.pt
+*.tar.gz

@@ -1,0 +1,39 @@
+{
+  "name": "PPO_wide_smoke",
+  "seed": 260915,
+  "iterations": 1,
+  "patients": [
+    1,
+    9
+  ],
+  "copies": 1,
+  "base_scenario_seed": 103800,
+  "total_minutes": 720,
+  "actor_lr": 0.0003,
+  "value_lr": 0.001,
+  "gamma": 0.997,
+  "gae_lambda": 0.99,
+  "epochs": 4,
+  "batch_size": 512,
+  "clip": 0.2,
+  "entropy": 0.01,
+  "teacher_kl": 0.0,
+  "reward_profile": "risk",
+  "terminal_penalty": 100.0,
+  "low_risk_weight": 2.0,
+  "reward_scale": 10.0,
+  "action_multipliers": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2
+  ],
+  "development_checkpoints": [],
+  "selection": "development Pareto comparison; never use new confirmation outcomes to select checkpoint",
+  "task_scope": "basal-only; same original meal-bolus and simulator protocol; known virtual adults"
+}
