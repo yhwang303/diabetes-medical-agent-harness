@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "paragraphs": [
+    "研究仍在进行，独立确认尚未运行，当前没有最终模型结论。已完成的开发场景只用于研究诊断，未完成运行不填推测成绩。"
+  ],
+  "panels": {
+    "dev_legacy_r1": {
+      "method_id": "d06_frozen",
+      "label": "原 D06 · 冻结窄动作",
+      "group": "comparison"
+    },
+    "dev_hold_r1": {
+      "method_id": "hold",
+      "label": "观测基础率 Hold",
+      "group": "comparison"
+    },
+    "dev_physiology_r1": {
+      "method_id": "physiology",
+      "label": "IOB / Zone 规则对照",
+      "group": "comparison"
+    },
+    "dev_ppo08_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 08 轮（argmax）",
+      "group": "comparison"
+    },
+    "dev_retained_bc_r1": {
+      "method_id": "retained_bc",
+      "label": "BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_iql_r1": {
+      "method_id": "retained_iql",
+      "label": "IQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo16_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 16 轮（argmax）",
+      "group": "comparison"
+    },
+    "dev_retained_rebrac_r1": {
+      "method_id": "retained_rebrac",
+      "label": "ReBRAC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_lom_r1": {
+      "method_id": "retained_lom",
+      "label": "LOM · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_gfp_r1": {
+      "method_id": "retained_gfp",
+      "label": "GFP · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_td3bc_r1": {
+      "method_id": "retained_td3bc",
+      "label": "TD3BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_fql_r1": {
+      "method_id": "retained_fql",
+      "label": "FQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    }
+  },
+  "equal_bg": [
+    {
+      "left": "dev_ppo08_r1",
+      "right": "dev_hold_r1"
+    }
+  ]
+}

@@ -1,0 +1,2580 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-03",
+  "scope": "Basal-only single-seed known-virtual-adult research panel; method definitions and status, no outcome scores.",
+  "path_base": "project root",
+  "status_policy": {
+    "snapshot_not_live": true,
+    "local_files": "hash-verified local definitions; no remote invocation by this documentation task",
+    "parent_report": "latest parent update2026-10-03: remote retained hashes passed; world point/quantile each beyond2500/4000; widePPO16/40; IQL replay280episodes/221760transitions and CUDA4-step mechanics passed, formal20k running; worldPPO smoke only",
+    "not_registered": "no score or completed run asserted; does not prove no remote process exists",
+    "unverified_completion": "start known but completion not established in this snapshot"
+  },
+  "common_contract": {
+    "schema": 1,
+    "training_seed": 260915,
+    "task": "adult_T1D_basal_only_5min",
+    "observation": "actual past 72x22 history and warmup-delivered basal anchor; no identity, hidden physiology or future meals",
+    "action": {
+      "unit": "U/h",
+      "new_support": "0 to 2 times observed warmup basal",
+      "global_limit": [
+        0,
+        20
+      ]
+    },
+    "patients": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "patient_claim": "known virtual patients; previous studies already exposed all ten; no unseen-patient generalization claim",
+    "total_minutes": 4320,
+    "warmup_minutes": 360,
+    "bolus_factors": [
+      0.8,
+      1.0,
+      1.2
+    ],
+    "train_scenario_seeds": [
+      103001,
+      103002,
+      103003,
+      103004
+    ],
+    "world_validation_scenario_seeds": [
+      103011,
+      103012
+    ],
+    "ppo_train_scenario_seed_range_inclusive": [
+      103201,
+      103280
+    ],
+    "smoke_scenario_seeds": [
+      103800
+    ],
+    "development_scenario_seeds": [
+      103101,
+      103102
+    ],
+    "confirmation_scenario_seeds": [
+      103901,
+      103902
+    ],
+    "confirmation_policy": "Do not generate confirmation trajectories before final model/configuration selection is frozen. No tuning on confirmation.",
+    "source_data": "existing immutable Loop train and public simulation training replay, plus newly generated training cases only",
+    "scorer": "RL_DITR创新_2026-09-16/control_metrics.py",
+    "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+    "prior_confirmation": "917*, 919*, 92111/92112 are exposed and may only serve documented development diagnostics"
+  },
+  "evaluation": {
+    "default_split": "development",
+    "job_count": 60,
+    "canonical_jobs_sha256": "92c50ab6c353023716a5e3fc7bfa76f0ac0999c9363f3cb82e0a5eaf0ed4a417",
+    "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+    "future_confirmation": "Current evaluator rejects; separate final frozen runner required.",
+    "failure_reporting": "Retain technical failure, genuine early termination, coverage and unknown tail; never replace absent results with success or zero.",
+    "metrics": "Original scorer only; report complete BG/CGM profile, low/high glucose, TIR, termination and coverage together. Registry deliberately contains no outcome values.",
+    "retained_projection": "per-decision raw/requested/delivered distinctions and episode/overall projection rates"
+  },
+  "world_components": [
+    {
+      "id": "world_v2_point",
+      "display_name": "WorldModelV2 point",
+      "role": "learned predictive component; not itself RL or controller",
+      "inputs": [
+        "observable history72x22",
+        "observed anchor",
+        "candidate future basal plan"
+      ],
+      "label_only": [
+        "future CGM targets/masks",
+        "future true BG event labels"
+      ],
+      "architecture": "frozen real P03 4h reference; trainable observed-history GRU and exposure bases; causal nonlinear TCN action response to6h; separate nested BG-event head",
+      "forecast_steps": 72,
+      "quantile_levels": [
+        0.5
+      ],
+      "event_heads": [
+        "any_BG_below70",
+        "any_BG_below54"
+      ],
+      "training_data": {
+        "natural": "new natural train only, 120 planned episodes; inspect run manifest for actual count",
+        "paired": "train snapshots from seeds103001/103002, up to8 origins per case, same9arm6h plan family",
+        "validation": "natural and paired world_validation seeds103011/103012",
+        "development_or_confirmation_training": false
+      },
+      "budget": {
+        "seed": 260915,
+        "steps": 4000,
+        "batch_groups": 64,
+        "natural_fraction": 0.5,
+        "width": 64,
+        "learning_rate": 0.0003,
+        "validation_every": 500
+      },
+      "sampling": "uniform with replacement: 32 natural windows and 32 paired origins, retaining all nine arms; no hypoglycemia enrichment",
+      "loss": "0.5*(natural_pinball+paired_pinball)/100 + 0.5*(natural_event_ce+paired_event_ce) + 0.2*paired_delta_mae/100",
+      "checkpoint_selection": "minimum fixed composite loss on world_validation only; ties keep earlier checkpoint",
+      "status": {
+        "implementation": "implemented and engineering mechanics/smoke exist",
+        "formal_training": "in_progress_beyond2500_of4000_per_latest_parent_report",
+        "formal_predictive_validation": "not_registered"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_model_v2.py",
+          "role": "implementation",
+          "sha256": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/train_world_v2.py",
+          "role": "implementation",
+          "sha256": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/world_v2_point.json",
+          "role": "fixed_training_budget",
+          "sha256": "ffe3047f197fe8dbb270c5d9bfe9b3193c4f012006ab2ce2f99834aef8786f09"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/prepare_windows.py",
+          "role": "implementation",
+          "sha256": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+          "role": "implementation",
+          "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_mechanics.json",
+          "role": "engineering_mechanics",
+          "sha256": "f0f39fae13015c116bc675aecc4cf1d09b66b6413b0b3229c3b2a03aa4890b18"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_trainer_smoke.json",
+          "role": "engineering_smoke",
+          "sha256": "8b7d6a0a7acb147e63b23f4f08750187a43d4d2af3d631b26c03f8401b092b22"
+        }
+      ],
+      "limitations": [
+        "No joint trajectory distribution or calibrated CVaR claim.",
+        "Independent BG event head is not proof of calibration.",
+        "After4h the original P03 is unavailable; extension is learned.",
+        "Single seed, known virtual patients only."
+      ]
+    },
+    {
+      "id": "world_v2_quantile",
+      "display_name": "WorldModelV2 quantile",
+      "role": "learned predictive component; not itself RL or controller",
+      "inputs": [
+        "observable history72x22",
+        "observed anchor",
+        "candidate future basal plan"
+      ],
+      "label_only": [
+        "future CGM targets/masks",
+        "future true BG event labels"
+      ],
+      "architecture": "frozen real P03 4h reference; trainable observed-history GRU and exposure bases; causal nonlinear TCN action response to6h; separate nested BG-event head",
+      "forecast_steps": 72,
+      "quantile_levels": [
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        0.9,
+        0.95
+      ],
+      "event_heads": [
+        "any_BG_below70",
+        "any_BG_below54"
+      ],
+      "training_data": {
+        "natural": "new natural train only, 120 planned episodes; inspect run manifest for actual count",
+        "paired": "train snapshots from seeds103001/103002, up to8 origins per case, same9arm6h plan family",
+        "validation": "natural and paired world_validation seeds103011/103012",
+        "development_or_confirmation_training": false
+      },
+      "budget": {
+        "seed": 260915,
+        "steps": 4000,
+        "batch_groups": 64,
+        "natural_fraction": 0.5,
+        "width": 64,
+        "learning_rate": 0.0003,
+        "validation_every": 500
+      },
+      "sampling": "uniform with replacement: 32 natural windows and 32 paired origins, retaining all nine arms; no hypoglycemia enrichment",
+      "loss": "0.5*(natural_pinball+paired_pinball)/100 + 0.5*(natural_event_ce+paired_event_ce) + 0.2*paired_delta_mae/100",
+      "checkpoint_selection": "minimum fixed composite loss on world_validation only; ties keep earlier checkpoint",
+      "status": {
+        "implementation": "implemented and engineering mechanics/smoke exist",
+        "formal_training": "in_progress_beyond2500_of4000_per_latest_parent_report",
+        "formal_predictive_validation": "not_registered"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_model_v2.py",
+          "role": "implementation",
+          "sha256": "ccc8ddf2b628c11ae544b43cebe31015864e024677cfcecfa10da6ce383378db"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/train_world_v2.py",
+          "role": "implementation",
+          "sha256": "230393aa25089442f719fc356e59ae2f21cf5b153b04d1423910760ffcf57bec"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/world_v2_quantile.json",
+          "role": "fixed_training_budget",
+          "sha256": "f5c982622b731353c19f46b411b065773c6b3556a4aceb8d5860736eb4c663df"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/prepare_windows.py",
+          "role": "implementation",
+          "sha256": "398326ad5b64c9551a0b7c846459f237cd3e5cceaf5ebf22fc36486ff69b0cf2"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+          "role": "implementation",
+          "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_mechanics.json",
+          "role": "engineering_mechanics",
+          "sha256": "f0f39fae13015c116bc675aecc4cf1d09b66b6413b0b3229c3b2a03aa4890b18"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_trainer_smoke.json",
+          "role": "engineering_smoke",
+          "sha256": "8b7d6a0a7acb147e63b23f4f08750187a43d4d2af3d631b26c03f8401b092b22"
+        }
+      ],
+      "limitations": [
+        "No joint trajectory distribution or calibrated CVaR claim.",
+        "Independent BG event head is not proof of calibration.",
+        "After4h the original P03 is unavailable; extension is learned.",
+        "Single seed, known virtual patients only."
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "id": "hold",
+      "display_name": "Observed-anchor hold",
+      "algorithm_family": "fixed reference controller",
+      "learned_world": {
+        "used": false,
+        "role": "none"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "always observed warmup anchor"
+      },
+      "data": {
+        "training": "none"
+      },
+      "budget": {
+        "training_updates": 0
+      },
+      "selection": {
+        "parameter_selection": "fixed reference; no fitting"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "runner mechanics; formal start reported by root",
+        "training": "not_applicable",
+        "development": "started_completion_unverified",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_root_work_log"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/controller_baselines.py",
+          "role": "implementation",
+          "sha256": "e1ee43f85edd38f5f65ad5638315b60226708933281271a06fcc58eba0cb36e2"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/physiologic_features.py",
+          "role": "implementation",
+          "sha256": "0c0f89a6bbe8f8a8dc6a494f7457ad743d74069ac96f81eb6a8ee6496530b59c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/evaluate_candidates_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "30f121c3ff3f65fd2fceb1be5c233ac4ffdcc960a6c8d36691011bda22f1f0a7"
+        }
+      ],
+      "entrypoint": {
+        "kind": "hold"
+      }
+    },
+    {
+      "id": "physiology",
+      "display_name": "IOB-aware zone PI(D) research baseline",
+      "algorithm_family": "fixed observable physiology-inspired feedback controller",
+      "learned_world": {
+        "used": false,
+        "role": "none"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "continuous fixed PI(D)/IOB/COB/trend control with predictive reduction and recovery"
+      },
+      "data": {
+        "training": "none"
+      },
+      "budget": {
+        "training_updates": 0
+      },
+      "selection": {
+        "parameter_selection": "fixed source parameters; no development fitting"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "local_mechanics_only",
+        "training": "not_applicable",
+        "development": "started_completion_unverified",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_root_work_log"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/controller_baselines.py",
+          "role": "implementation",
+          "sha256": "e1ee43f85edd38f5f65ad5638315b60226708933281271a06fcc58eba0cb36e2"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/physiologic_features.py",
+          "role": "implementation",
+          "sha256": "0c0f89a6bbe8f8a8dc6a494f7457ad743d74069ac96f81eb6a8ee6496530b59c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/evaluate_candidates_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "30f121c3ff3f65fd2fceb1be5c233ac4ffdcc960a6c8d36691011bda22f1f0a7"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/literature_control.md",
+          "role": "source_and_limitations",
+          "sha256": "40469d933e9ce9c06346d45c440654f9eafcdcecaae3297b0775310a2025121b"
+        }
+      ],
+      "entrypoint": {
+        "kind": "physiology"
+      },
+      "assumptions": {
+        "ISF": "1800/(24*anchor/0.5), empirical prior, not measured patient ISF",
+        "COB": "finite recorded-event proxy, unvalidated",
+        "missing_events": "no recorded event does not establish absence of real dosing or food"
+      },
+      "reproduction_claim": "project adaptation; not official author controller reproduction"
+    },
+    {
+      "id": "d06_frozen",
+      "display_name": "D06 frozen narrow actor",
+      "algorithm_family": "finite-plan actor learned against frozen model utility",
+      "learned_world": {
+        "used": true,
+        "component": "legacy P03+D05+H02",
+        "role": "frozen reference/context plus linear action response; model utility used in original actor fitting"
+      },
+      "policy_learning": {
+        "kind": "original exact expected model utility plus KL prior; not new on-policy real-BG PPO",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "anchor +/-0.25 clipped0..20",
+        "plans": 7,
+        "horizon_minutes": 240,
+        "plan_structure": "hold, or +/-0.25 in one of three 80-minute blocks",
+        "execute_minutes": 5,
+        "common_range_relation": "narrow retained support; no rescaling; compare compatibility per observed anchor"
+      },
+      "data": {
+        "training": "original Loop and earlier public simulation learning chain; no new training in this task"
+      },
+      "budget": {
+        "original_actor_epochs": 1,
+        "new_updates": 0
+      },
+      "selection": {
+        "checkpoint": "fixed old D06 final one-epoch checkpoint, no new development checkpoint selection"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "legacy/PPO smoke r2 completed per local check",
+        "training": "retained_frozen",
+        "development": "started_completion_unverified",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_root_work_log"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/frozen_selected_version.json",
+          "role": "frozen_checkpoint_manifest",
+          "sha256": "54a93ef9f9eb89819ba491f6c14e8ed896fb556d3089e0d5c499207a210b5265"
+        },
+        {
+          "path": "RL_DSENet_2026-09-17/results/D06_selected_policy/config.json",
+          "role": "old_training_config",
+          "sha256": "7d5ec28a749e4e636d37155ba22833c8ce91e2af32172586c4f1853c47572aa1"
+        },
+        {
+          "path": "RL_DSENet_2026-09-17/policy_bounded.py",
+          "role": "implementation",
+          "sha256": "73fb10be55505e02e13556a47b951f16091485a1ea672bf4b5413eb1fd77427e"
+        },
+        {
+          "path": "RL_DSENet_2026-09-17/bounded_policy_worker.py",
+          "role": "implementation",
+          "sha256": "3587eccef210e54ae1d471778d23cd0f1d86e2fe5acaeba8bbac1b4afc32ba0a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/panels_eval_smoke_r2.json",
+          "role": "smoke_evidence",
+          "sha256": "d58a1c77bdfeccd7df8b83059f805f565e82a149e287be43978bfe8c11e25414"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "legacy"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_2026-09-17/results/D06_selected_policy/policy.pt",
+        "sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+      }
+    },
+    {
+      "id": "retained_bc",
+      "display_name": "BC frozen+projection",
+      "algorithm_family": "behavior cloning",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "imitation",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "none"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": null,
+        "shared_td_replay_genuine_terminal_count": null
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 0,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/last.pt",
+          "role": "retained_weight",
+          "sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "bc"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_bc/last.pt",
+        "sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": false
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_td3bc",
+      "display_name": "TD3+BC frozen+projection",
+      "algorithm_family": "offline TD3 with behavior-cloning regularization",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "offline RL on stored transitions",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": 392832,
+        "shared_td_replay_genuine_terminal_count": 0
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 0,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/last.pt",
+          "role": "retained_weight",
+          "sha256": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "td3bc"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_td3bc/last.pt",
+        "sha256": "0f2735dfb0f16184e4bba8ded6eec6467c42ee5f713a127410554df04c89a507"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": false
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_iql",
+      "display_name": "IQL frozen+projection",
+      "algorithm_family": "offline implicit Q-learning",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "offline RL on stored transitions",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": 392832,
+        "shared_td_replay_genuine_terminal_count": 0
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 0,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/last.pt",
+          "role": "retained_weight",
+          "sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "iql"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_iql/last.pt",
+        "sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": false
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_rebrac",
+      "display_name": "ReBRAC frozen+projection",
+      "algorithm_family": "offline actor-critic with behavior regularization",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "offline RL on stored transitions",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": 392832,
+        "shared_td_replay_genuine_terminal_count": 0
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 0,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/last.pt",
+          "role": "retained_weight",
+          "sha256": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "rebrac"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_rebrac/last.pt",
+        "sha256": "a27c670ffeabeee8b68c2a610769d78756e5505d8babfa7cb90ba8dcacf40c00"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": false
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_fql",
+      "display_name": "FQL frozen+projection",
+      "algorithm_family": "offline flow Q-learning, distilled deployment actor",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "offline RL on stored transitions",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": 392832,
+        "shared_td_replay_genuine_terminal_count": 0
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 0,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/last.pt",
+          "role": "retained_weight",
+          "sha256": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "fql"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_fql/last.pt",
+        "sha256": "1a624bc8f6f883a7614e9b6ce3426a9342c20c53e2b7ed24cc07418dd9834e71"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": true
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_lom",
+      "display_name": "LOM frozen+projection",
+      "algorithm_family": "offline policy learning with mixture behavior model",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "offline RL on stored transitions",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": 392832,
+        "shared_td_replay_genuine_terminal_count": 0
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 5000,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/last.pt",
+          "role": "retained_weight",
+          "sha256": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "lom"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_lom/last.pt",
+        "sha256": "4ed59c51a9db055a890d02275d48592a8e5f3dd7b45269c92edb4af5a854f1fe"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": false
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_gfp",
+      "display_name": "GFP frozen+projection",
+      "algorithm_family": "offline generative flow policy, distilled deployment actor",
+      "learned_world": {
+        "used": false,
+        "role": "none",
+        "component": null
+      },
+      "policy_learning": {
+        "kind": "offline RL on stored transitions",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false,
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": 1584,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": null,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ]
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": 392832,
+        "shared_td_replay_genuine_terminal_count": 0
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_rl_or_bc_updates": 20000,
+        "extra_gmm_updates": 0,
+        "batch_loop": 128,
+        "batch_simulator": 128
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/shared_worker.py",
+          "role": "implementation",
+          "sha256": "23498816ec315f960bfcb4877eac32070a86964b6ed85e133b4b188b0edc73b4"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/last.pt",
+          "role": "retained_weight",
+          "sha256": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "gfp"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/shared_gfp/last.pt",
+        "sha256": "84d1c901b7fb4804a8e2ee8a3d58c1cb09255b50d4ce1fb0cd105a5e117e9e76"
+      },
+      "deployment_rng": {
+        "network_receives_identity_or_case_metadata": false,
+        "opaque_episode_rng": "default_rng(scenario_seed+20000); original per-case stream preserved",
+        "noise_used_by_actor": true
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "retained_ditr",
+      "display_name": "RL-DITR* frozen+projection",
+      "algorithm_family": "learned patient model plus policy and beam planning",
+      "learned_world": {
+        "used": true,
+        "role": "patient model used by original beam and original policy training",
+        "component": "retained RL-DITR patient model"
+      },
+      "policy_learning": {
+        "kind": "original learned-model policy optimization",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": "original model/policy training; see old source",
+        "reward": "original CGM status-score target; not new asymmetric true-BG PPO reward"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]"
+        ],
+        "flattened_dim": null,
+        "anchor_network_input": false,
+        "anchor_adapter_input": true,
+        "hidden_or_future_input": false,
+        "sequence_shape": [
+          72,
+          22
+        ]
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "original_mapping": "original worker absolute rate 0..20 U/h; never replaced by anchor*(a+1)",
+        "deployment": "frozen+projection",
+        "projection": "clip(original_worker_rate,0,min(20,2*anchor))",
+        "inside_model_candidate_projection": false,
+        "projection_audit": [
+          "raw_policy_u_h",
+          "requested_basal_u_h",
+          "delivered_basal",
+          "observed_anchor_u_h",
+          "projected",
+          "projection_delta_u_h",
+          "per_episode_and_overall_projection_rate"
+        ],
+        "original_beam_steps": 12,
+        "original_beam_width": 10,
+        "original_plan_minutes": 60,
+        "limitation": "post-beam first-action projection can differ from model-predicted plan"
+      },
+      "data": {
+        "training": "original Loop+S1+S2 replay; earlier initialization also retained",
+        "not_current_training_data": true,
+        "shared_td_replay_origins": null,
+        "shared_td_replay_genuine_terminal_count": null
+      },
+      "budget": {
+        "new_task_updates": 0,
+        "seed": 260915,
+        "initialization": "retained earlier trained model; not scratch training",
+        "continuation_patient_updates": 2000,
+        "continuation_policy_updates": 2000,
+        "batch_loop": 64,
+        "batch_simulator": 64
+      },
+      "selection": {
+        "checkpoint": "fixed 2026-09-21 final manifest; no new selection/retraining",
+        "new_evaluation_split": "development"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "58 local integration mechanics; all 8 remote dependencies SHA preflight passed per root report",
+        "training": "retained_frozen",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/retained_methods.json",
+          "role": "frozen_dependency_hashes",
+          "sha256": "4601479bc11b35265333460252cb9f5fe44797e292aff6eccb1586fb5b320e7c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "integration_and_prior_data_audit",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+          "role": "58_local_mechanic_checks",
+          "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+        },
+        {
+          "path": "RL_DITR创新_2026-09-16/policy_worker.py",
+          "role": "implementation",
+          "sha256": "8179e74fe541d879d2b1adb8bf8f4cd6965ccdd48a5f1cf9f2304af1ff7afb68"
+        },
+        {
+          "path": "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/policy_last.pt",
+          "role": "retained_weight",
+          "sha256": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "retained",
+        "method": "ditr"
+      },
+      "checkpoint": {
+        "path": "RL_DSENet_公平低糖_2026-09-21/results/ditr_shared_r03_seed260915/policy_last.pt",
+        "sha256": "19a1e810c4eb6d11bd6f5c34fed556694656c6add7884363285125e1f4f315d9"
+      },
+      "deployment_rng": {
+        "stochastic_deployment": false
+      },
+      "reproduction_claim": "public-data/task adaptation of algorithm; not authors original clinical task or official benchmark reproduction"
+    },
+    {
+      "id": "ppo_wide",
+      "display_name": "PPO wide with frozen legacy reference features",
+      "algorithm_family": "on-policy PPO with new wide action support",
+      "learned_world": {
+        "used": true,
+        "component": "legacy P03/D05/H02",
+        "role": "frozen representation/reference features, no candidate action prediction at each decision"
+      },
+      "policy_learning": {
+        "kind": "PPO on real simulator transitions",
+        "real_simulator_reward_updates": true,
+        "imagined_training_rollouts": false,
+        "reward": "-(HBG_risk+2*LBG_risk)/(12*10); genuine termination adds -100, administrative timeout bootstraps",
+        "world_gradients": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false,
+        "feature_dim": 334,
+        "feature_structure": "306 legacy context/reference/current-basal/anchor + 28 physiology features"
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "anchor times current multiplier",
+        "multipliers": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5,
+          1.75,
+          2
+        ]
+      },
+      "data": {
+        "scenario_seed_range_inclusive": [
+          103201,
+          103280
+        ],
+        "known_virtual_adults": 10,
+        "training_transitions": "new simulator rollouts only; frozen feature models have earlier training histories"
+      },
+      "budget": {
+        "seed": 260915,
+        "iterations": 40,
+        "copies": 2,
+        "actor_lr": 0.0003,
+        "value_lr": 0.001,
+        "gamma": 0.997,
+        "gae_lambda": 0.99,
+        "epochs": 4,
+        "batch_size": 512,
+        "clip": 0.2,
+        "entropy": 0.01,
+        "teacher_kl": 0.0,
+        "patients_per_iteration": 10,
+        "planned_episodes": 800,
+        "episode_minutes_including_warmup": 4320,
+        "gradient_clip": 0.5,
+        "completed_episodes": null
+      },
+      "selection": {
+        "candidate_iterations": [
+          8,
+          16,
+          32,
+          40
+        ],
+        "selection_split": "development",
+        "rule": "predeclared development Pareto comparison",
+        "confirmation_used": false
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "legacy/PPO smoke r2 completed",
+        "training": "formal_in_progress_16_of40_per_latest_parent_report",
+        "development": "predeclared_iteration08_development_started",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/ppo_wide_risk.json",
+          "role": "formal_budget",
+          "sha256": "7715ba15f9b5bb834cd0133b8c716f54c40ea35241ff98f37d7211c86d5ad602"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/train_wide.py",
+          "role": "implementation",
+          "sha256": "b0c8838811b1dd60d846fbdde0a8bc3e262e4bc203f19aa38fa584f3f8e8329c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/ppo_wide_worker.py",
+          "role": "implementation",
+          "sha256": "282e7f58a36f94f6e13b6a84b258c3c3903662f49cedd3346708f012f7ee18eb"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/ppo_wide_design.md",
+          "role": "implementation",
+          "sha256": "15581c431285890fec43479d650080eae0a3d771f3eef8a4fe0b2f790039bbff"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/panels_eval_smoke_r2.json",
+          "role": "smoke_evidence",
+          "sha256": "d58a1c77bdfeccd7df8b83059f805f565e82a149e287be43978bfe8c11e25414"
+        }
+      ],
+      "entrypoint": {
+        "kind": "ppo",
+        "checkpoint": "runtime policy_iter*.pt",
+        "config": "resolved runtime config.json"
+      },
+      "weights": "new actor/critic; frozen old feature models"
+    },
+    {
+      "id": "mpc_point_world",
+      "display_name": "Median-risk MPC with point world",
+      "algorithm_family": "finite-candidate receding-horizon MPC",
+      "learned_world": {
+        "used": true,
+        "component": "world_v2_point",
+        "role": "frozen action-conditioned outcome prediction for argmin planning"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "plans": {
+          "count": 9,
+          "horizon_minutes": 360,
+          "plans": "hold; first60min multipliers0/0.5/1.5/2 then anchor; first120min same4 then anchor",
+          "execute_minutes": 5,
+          "match": "paired_collect.plans",
+          "future_execution": "hypothetical plan; replanned after actual next observation"
+        }
+      },
+      "data": {
+        "controller_training": "none",
+        "world_training": "see world_components"
+      },
+      "budget": {
+        "controller_updates": 0,
+        "world_budget_ref": "world_v2_point"
+      },
+      "selection": {
+        "controller_hyperparameters": "fixed control config",
+        "world_checkpoint": "completed world training, world_validation loss selection only"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "38 local world-control mechanics; no registered formal control run",
+        "training": "controller_not_trained; prerequisite_formal_world_in_progress",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_control_worker.py",
+          "role": "implementation",
+          "sha256": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/world_control_point.json",
+          "role": "fixed_control_objective",
+          "sha256": "b991851e826487ac0bb0c385121e6cbef06fb8f0c0c140ba3d8adf15456d1723"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_control_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "9134061717745397d11f2c02003570c6128a561e3a433d960c48a5eef66040c3"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+          "role": "candidate_plan_definition",
+          "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "world",
+        "config": "configs/world_control_point.json",
+        "checkpoint": "completed world_v2_point checkpoint"
+      },
+      "cost": {
+        "high_weight": 1,
+        "low_weight": 2,
+        "time_reduction": "mean over72steps",
+        "action_cost": "0.02*mean((plan/anchor-1)^2)",
+        "risk_input_clip_mg_dl": [
+          20,
+          600
+        ],
+        "clip_fraction_logged": true,
+        "tie": "first/hold",
+        "mode": "point",
+        "quantile_weights": null,
+        "event_penalty_weights": [
+          0,
+          0
+        ]
+      },
+      "interpretation": "Different trained world from quantile rows: architecture/learning comparison, not objective-only ablation."
+    },
+    {
+      "id": "mpc_quantile_median",
+      "display_name": "Median-risk MPC with quantile world",
+      "algorithm_family": "finite-candidate receding-horizon MPC",
+      "learned_world": {
+        "used": true,
+        "component": "world_v2_quantile",
+        "role": "frozen action-conditioned outcome prediction for argmin planning"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "plans": {
+          "count": 9,
+          "horizon_minutes": 360,
+          "plans": "hold; first60min multipliers0/0.5/1.5/2 then anchor; first120min same4 then anchor",
+          "execute_minutes": 5,
+          "match": "paired_collect.plans",
+          "future_execution": "hypothetical plan; replanned after actual next observation"
+        }
+      },
+      "data": {
+        "controller_training": "none",
+        "world_training": "see world_components"
+      },
+      "budget": {
+        "controller_updates": 0,
+        "world_budget_ref": "world_v2_quantile"
+      },
+      "selection": {
+        "controller_hyperparameters": "fixed control config",
+        "world_checkpoint": "completed world training, world_validation loss selection only"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "38 local world-control mechanics; no registered formal control run",
+        "training": "controller_not_trained; prerequisite_formal_world_in_progress",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_control_worker.py",
+          "role": "implementation",
+          "sha256": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/world_control_point.json",
+          "role": "fixed_control_objective",
+          "sha256": "b991851e826487ac0bb0c385121e6cbef06fb8f0c0c140ba3d8adf15456d1723"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_control_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "9134061717745397d11f2c02003570c6128a561e3a433d960c48a5eef66040c3"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+          "role": "candidate_plan_definition",
+          "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "world",
+        "config": "configs/world_control_point.json",
+        "checkpoint": "completed world_v2_quantile checkpoint"
+      },
+      "cost": {
+        "high_weight": 1,
+        "low_weight": 2,
+        "time_reduction": "mean over72steps",
+        "action_cost": "0.02*mean((plan/anchor-1)^2)",
+        "risk_input_clip_mg_dl": [
+          20,
+          600
+        ],
+        "clip_fraction_logged": true,
+        "tie": "first/hold",
+        "mode": "point",
+        "quantile_weights": null,
+        "event_penalty_weights": [
+          0,
+          0
+        ]
+      },
+      "interpretation": "Supported proposed same-checkpoint objective ablation; must share quantile checkpoint with expected/risk rows."
+    },
+    {
+      "id": "mpc_expected",
+      "display_name": "Expected-risk MPC with quantile world",
+      "algorithm_family": "finite-candidate receding-horizon MPC",
+      "learned_world": {
+        "used": true,
+        "component": "world_v2_quantile",
+        "role": "frozen action-conditioned outcome prediction for argmin planning"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "plans": {
+          "count": 9,
+          "horizon_minutes": 360,
+          "plans": "hold; first60min multipliers0/0.5/1.5/2 then anchor; first120min same4 then anchor",
+          "execute_minutes": 5,
+          "match": "paired_collect.plans",
+          "future_execution": "hypothetical plan; replanned after actual next observation"
+        }
+      },
+      "data": {
+        "controller_training": "none",
+        "world_training": "see world_components"
+      },
+      "budget": {
+        "controller_updates": 0,
+        "world_budget_ref": "world_v2_quantile"
+      },
+      "selection": {
+        "controller_hyperparameters": "fixed control config",
+        "world_checkpoint": "completed world training, world_validation loss selection only"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "38 local world-control mechanics; no registered formal control run",
+        "training": "controller_not_trained; prerequisite_formal_world_in_progress",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_control_worker.py",
+          "role": "implementation",
+          "sha256": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/world_control_expected.json",
+          "role": "fixed_control_objective",
+          "sha256": "041b2ca909cf2c14bb954e0909f37eeb946efa6f96aa0d2163d0c88354fbbf84"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_control_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "9134061717745397d11f2c02003570c6128a561e3a433d960c48a5eef66040c3"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+          "role": "candidate_plan_definition",
+          "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "world",
+        "config": "configs/world_control_expected.json",
+        "checkpoint": "completed world_v2_quantile checkpoint"
+      },
+      "cost": {
+        "high_weight": 1,
+        "low_weight": 2,
+        "time_reduction": "mean over72steps",
+        "action_cost": "0.02*mean((plan/anchor-1)^2)",
+        "risk_input_clip_mg_dl": [
+          20,
+          600
+        ],
+        "clip_fraction_logged": true,
+        "tie": "first/hold",
+        "mode": "expected",
+        "quantile_weights": [
+          0.075,
+          0.1,
+          0.2,
+          0.25,
+          0.2,
+          0.1,
+          0.075
+        ],
+        "event_penalty_weights": [
+          0,
+          0
+        ]
+      },
+      "interpretation": "Midpoint quantile integration; not joint-trajectory CVaR."
+    },
+    {
+      "id": "mpc_event_risk",
+      "display_name": "Expected-risk plus BG-event MPC with quantile world",
+      "algorithm_family": "finite-candidate receding-horizon MPC",
+      "learned_world": {
+        "used": true,
+        "component": "world_v2_quantile",
+        "role": "frozen action-conditioned outcome prediction for argmin planning"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "plans": {
+          "count": 9,
+          "horizon_minutes": 360,
+          "plans": "hold; first60min multipliers0/0.5/1.5/2 then anchor; first120min same4 then anchor",
+          "execute_minutes": 5,
+          "match": "paired_collect.plans",
+          "future_execution": "hypothetical plan; replanned after actual next observation"
+        }
+      },
+      "data": {
+        "controller_training": "none",
+        "world_training": "see world_components"
+      },
+      "budget": {
+        "controller_updates": 0,
+        "world_budget_ref": "world_v2_quantile"
+      },
+      "selection": {
+        "controller_hyperparameters": "fixed control config",
+        "world_checkpoint": "completed world training, world_validation loss selection only"
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "38 local world-control mechanics; no registered formal control run",
+        "training": "controller_not_trained; prerequisite_formal_world_in_progress",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_control_worker.py",
+          "role": "implementation",
+          "sha256": "88a40896b6e46b75b3a3612932831cc360a755cb36fbb3c5de800957c6ffffcb"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/world_control_risk.json",
+          "role": "fixed_control_objective",
+          "sha256": "9386469577da627511a155f075d1387ef382b44b3a54106e33ee396d4adbffdb"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_control_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "9134061717745397d11f2c02003570c6128a561e3a433d960c48a5eef66040c3"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/paired_collect.py",
+          "role": "candidate_plan_definition",
+          "sha256": "c350557a654fc27f724770fb965ff4fa3a6abe12f72e6eacbe1b4c52163c1440"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "world",
+        "config": "configs/world_control_risk.json",
+        "checkpoint": "completed world_v2_quantile checkpoint"
+      },
+      "cost": {
+        "high_weight": 1,
+        "low_weight": 2,
+        "time_reduction": "mean over72steps",
+        "action_cost": "0.02*mean((plan/anchor-1)^2)",
+        "risk_input_clip_mg_dl": [
+          20,
+          600
+        ],
+        "clip_fraction_logged": true,
+        "tie": "first/hold",
+        "mode": "risk",
+        "quantile_weights": [
+          0.075,
+          0.1,
+          0.2,
+          0.25,
+          0.2,
+          0.1,
+          0.075
+        ],
+        "event_penalty_weights": [
+          2,
+          4
+        ]
+      },
+      "interpretation": "Same quantile checkpoint/plans as expected; adds 2*P(any BG<70)+4*P(any BG<54)."
+    },
+    {
+      "id": "ppo_world_quantile",
+      "display_name": "PPO with frozen quantile-world response features",
+      "algorithm_family": "model-assisted on-policy PPO trained on real simulator rewards",
+      "learned_world": {
+        "used": true,
+        "component": "world_v2_quantile",
+        "role": "frozen context and candidate response features; no world updates or imagined training rollouts"
+      },
+      "policy_learning": {
+        "kind": "PPO on real simulator transitions",
+        "real_simulator_reward_updates": true,
+        "imagined_training_rollouts": false,
+        "reward": "-(HBG_risk+2*LBG_risk)/(12*10); genuine termination adds -100, administrative timeout bootstraps",
+        "world_gradients": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false,
+        "feature_dim": 195,
+        "feature_structure": "64 context+48 P03+28 physiology+1 anchor+9*6 response summaries",
+        "point_low_quantile_fallback": null
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "anchor times current multiplier",
+        "multipliers": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5,
+          1.75,
+          2
+        ],
+        "candidate_feature_plans": "9 multipliers0,.25,..2 held60min then anchor to6h; different menu from MPC paired arms"
+      },
+      "data": {
+        "scenario_seed_range_inclusive": [
+          103201,
+          103280
+        ],
+        "known_virtual_adults": 10,
+        "training_transitions": "new simulator rollouts only; frozen feature models have earlier training histories"
+      },
+      "budget": {
+        "seed": 260915,
+        "iterations": 40,
+        "copies": 2,
+        "actor_lr": 0.0003,
+        "value_lr": 0.001,
+        "gamma": 0.997,
+        "gae_lambda": 0.99,
+        "epochs": 4,
+        "batch_size": 512,
+        "clip": 0.2,
+        "entropy": 0.01,
+        "teacher_kl": 0.0,
+        "patients_per_iteration": 10,
+        "planned_episodes": 800,
+        "episode_minutes_including_warmup": 4320,
+        "gradient_clip": 0.5,
+        "completed_episodes": null
+      },
+      "selection": {
+        "candidate_iterations": [
+          8,
+          16,
+          32,
+          40
+        ],
+        "selection_split": "development",
+        "rule": "predeclared development Pareto comparison",
+        "confirmation_used": false
+      },
+      "status": {
+        "implementation": "implemented",
+        "validation": "local mechanics and root-reported smoke; final full audit not asserted",
+        "training": "smoke_only; formal_not_started",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/ppo_world_worker.py",
+          "role": "implementation",
+          "sha256": "c949d01d679baf58a95c231692975164890989861c9e17f891fd197028d0957e"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/train_world_policy.py",
+          "role": "implementation",
+          "sha256": "3da8a35d089c8320ab46be28dd4103e2d0c4e2fb2bff4ea92663bf1e7ff95cf4"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_policy_design.md",
+          "role": "implementation",
+          "sha256": "9d828ffff057daf8698693ccfe2fe4be00bed8fafb7ac2dcd21807ebd4aa80d7"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_policy_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "c92a1c232f6123f48bdd98f853400d5d09e80ab0c5e5241853b6a23890ac8b5e"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/ppo_world_risk.json",
+          "role": "formal_budget_template",
+          "sha256": "50fd4e9a547b039aec0a3ef4241e564a3bd31791d6c679d878a5889fd1af9a4c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "world_ppo",
+        "checkpoint": "runtime policy_iter*.pt",
+        "config": "resolved runtime config.json"
+      },
+      "weights": "new actor/critic; strictly completed and frozen world dependency",
+      "comparison_limit": "MPC candidate feature plans differ; not an optimizer-only ablation."
+    },
+    {
+      "id": "ppo_world_point",
+      "display_name": "PPO with frozen point-world response features (proposed)",
+      "algorithm_family": "model-assisted on-policy PPO trained on real simulator rewards",
+      "learned_world": {
+        "used": true,
+        "component": "world_v2_point",
+        "role": "frozen context and candidate response features; no world updates or imagined training rollouts"
+      },
+      "policy_learning": {
+        "kind": "PPO on real simulator transitions",
+        "real_simulator_reward_updates": true,
+        "imagined_training_rollouts": false,
+        "reward": "-(HBG_risk+2*LBG_risk)/(12*10); genuine termination adds -100, administrative timeout bootstraps",
+        "world_gradients": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false,
+        "feature_dim": 195,
+        "feature_structure": "64 context+48 P03+28 physiology+1 anchor+9*6 response summaries",
+        "point_low_quantile_fallback": "q05 feature explicitly equals median"
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "anchor times current multiplier",
+        "multipliers": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5,
+          1.75,
+          2
+        ],
+        "candidate_feature_plans": "9 multipliers0,.25,..2 held60min then anchor to6h; different menu from MPC paired arms"
+      },
+      "data": {
+        "scenario_seed_range_inclusive": [
+          103201,
+          103280
+        ],
+        "known_virtual_adults": 10,
+        "training_transitions": "new simulator rollouts only; frozen feature models have earlier training histories"
+      },
+      "budget": {
+        "proposed_matching_budget": {
+          "seed": 260915,
+          "iterations": 40,
+          "copies": 2,
+          "actor_lr": 0.0003,
+          "value_lr": 0.001,
+          "gamma": 0.997,
+          "gae_lambda": 0.99,
+          "epochs": 4,
+          "batch_size": 512,
+          "clip": 0.2,
+          "entropy": 0.01,
+          "teacher_kl": 0.0,
+          "patients_per_iteration": 10,
+          "planned_episodes": 800,
+          "episode_minutes_including_warmup": 4320,
+          "gradient_clip": 0.5,
+          "completed_episodes": null
+        },
+        "formal_config_frozen": false
+      },
+      "selection": {
+        "rule": "proposed same development schedule; requires separately bound config before training"
+      },
+      "status": {
+        "implementation": "worker_supports_point_but_formal_config_not_created",
+        "validation": "point fallback supported in source; formal execution not verified",
+        "training": "not_started",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_parent_message_2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/ppo_world_worker.py",
+          "role": "implementation",
+          "sha256": "c949d01d679baf58a95c231692975164890989861c9e17f891fd197028d0957e"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/train_world_policy.py",
+          "role": "implementation",
+          "sha256": "3da8a35d089c8320ab46be28dd4103e2d0c4e2fb2bff4ea92663bf1e7ff95cf4"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/world_policy_design.md",
+          "role": "implementation",
+          "sha256": "9d828ffff057daf8698693ccfe2fe4be00bed8fafb7ac2dcd21807ebd4aa80d7"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/world_policy_mechanics.json",
+          "role": "local_mechanic_checks",
+          "sha256": "c92a1c232f6123f48bdd98f853400d5d09e80ab0c5e5241853b6a23890ac8b5e"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "implementation",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        }
+      ],
+      "entrypoint": {
+        "kind": "world_ppo",
+        "checkpoint": "runtime policy_iter*.pt",
+        "config": "resolved runtime config.json"
+      },
+      "weights": "new actor/critic; strictly completed and frozen world dependency",
+      "comparison_limit": "MPC candidate feature plans differ; not an optimizer-only ablation."
+    },
+    {
+      "id": "iql_wide",
+      "display_name": "IQL wide, newly trained task adaptation",
+      "algorithm_family": "offline implicit Q-learning",
+      "learned_world": {
+        "used": false,
+        "role": "none"
+      },
+      "policy_learning": {
+        "kind": "offline RL on actual recorded simulator transitions",
+        "real_simulator_reward_updates": true,
+        "imagined_training_rollouts": false,
+        "reward": "same new asymmetric true-BG risk profile as wide PPO; terminal versus timeout distinguished"
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false,
+        "feature_dim": 1613,
+        "feature_structure": "1584 normalized history+28 physiology+anchor/5"
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "continuous Gaussian mean in normalized[-1,1], anchor*(normalized+1), cap20",
+        "deployment": "intrinsic new action parameterization, not frozen old-action projection"
+      },
+      "data": {
+        "natural_train_episodes_planned": 120,
+        "wide_ppo_first_iterations": 8,
+        "wide_ppo_episodes_planned": 160,
+        "later_ppo_data_allowed": false,
+        "replay_status": "generated_per_parent_report",
+        "episodes_reported": 280,
+        "transitions_reported": 221760,
+        "replay_reference_sha256_reported": "ca2c0456efaaf18391aa12e804e601093811da15220be25fe12717c379d109fa"
+      },
+      "budget": {
+        "seed": 260915,
+        "updates": 20000,
+        "batch_size": 256,
+        "hidden_dims": [
+          256,
+          256
+        ],
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "value_lr": 0.0003,
+        "gamma": 0.997,
+        "expectile": 0.7,
+        "advantage_temperature": 3.0,
+        "target_tau": 0.005
+      },
+      "selection": {
+        "rule": "Fixed final 20000 updates; no development checkpoint selection",
+        "final_checkpoint": "policy_020000.pt",
+        "development_checkpoint_selection": false
+      },
+      "status": {
+        "implementation": "four_modules_and_config_implemented; evaluator_route_integrated",
+        "validation": "independent58 local evaluator checks plus parent-reported CUDA4step/parameter-update/frozen-inference checks; actual closed-loop eval smoke still pending",
+        "training": "formal20000_update_run_started",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files_and_latest_parent_message2026-10-03"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/iql_wide.py",
+          "role": "implementation",
+          "sha256": "2bd8ce3773e07ca0502fec17a63862d7ae16137ed37ec4b041d3a5768925b02c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/prepare_iql_replay.py",
+          "role": "implementation",
+          "sha256": "069512184064c08817de933acf08f962d885796c7ffe40faaacbc533b327a5c7"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/train_iql_wide.py",
+          "role": "implementation",
+          "sha256": "58ec6e8bdff8bf353b26fa27d113e726fe67e8885e6b79a68fe8c2d17a4585f4"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/iql_wide_worker.py",
+          "role": "implementation",
+          "sha256": "0832e85bf4e349564d4160f0357dc95b3906d89fe8c4074a47b9b8f1064b8cb9"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/configs/iql_wide.json",
+          "role": "fixed_training_budget",
+          "sha256": "2d52f472a5debf99303fd68feb752a3ac7ec6f250a483d498fefdfddc4763254"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/evaluate_candidates.py",
+          "role": "common_evaluator",
+          "sha256": "30e303cf58874a6a958e7314ec3c7a16b90ee33549ef51aa76de8068b879982c"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/check_iql_evaluation.py",
+          "role": "evaluator_mechanic_checks_source",
+          "sha256": "615f62b060002b2ff11a5c7e58230e8672d400fd7e976d77b6af8a6a6eb05f99"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/checks/evaluate_iql_wide_mechanics.json",
+          "role": "58_local_evaluation_checks",
+          "sha256": "92dbf364eda50bf1971651542bffe2982864c6bff278d75f03e2f6a057ff4937"
+        },
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/iql_wide_design.md",
+          "role": "task_adaptation_design",
+          "sha256": "88689b266232cfe4f7b4098f2b6ea6471e6c1d1f7405ac3ec7c4f7f95b6954f0"
+        }
+      ],
+      "entrypoint": {
+        "kind": "iql_wide",
+        "checkpoint": "absolute completed run policy_020000.pt (or smoke_step4.pt only with --smoke)",
+        "config": "absolute same-run config.json",
+        "worker": "iql_wide_worker.py --checkpoint ABS --device cuda [--allow-smoke]",
+        "protocol": "op=evaluate,history,anchors"
+      },
+      "weights": "new from scratch",
+      "author_source_commit": "09d700248117881a75cb21f0adb95c6c8a694cb2",
+      "comparison_limit": "same authorized information/range/reward profile; representation, offline data and optimizer budget still differ from PPO."
+    },
+    {
+      "id": "bc_wide_proposed",
+      "display_name": "BC wide (proposal only)",
+      "algorithm_family": "behavior cloning",
+      "learned_world": {
+        "used": false,
+        "role": "none"
+      },
+      "policy_learning": {
+        "kind": "proposed imitation",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false,
+        "proposed": "same permitted observable features as IQL wide"
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "not_frozen"
+      },
+      "data": {
+        "plan": "could reuse declared IQL-wide replay; not frozen"
+      },
+      "budget": {
+        "updates": null,
+        "reason": "no approved config yet"
+      },
+      "selection": {
+        "rule": "not_frozen"
+      },
+      "status": {
+        "implementation": "not_implemented",
+        "validation": "none",
+        "training": "not_started",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "proposal",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        }
+      ],
+      "entrypoint": null
+    },
+    {
+      "id": "ditr_bounded_beam_proposed",
+      "display_name": "RL-DITR* with bounds inside beam (proposal only)",
+      "algorithm_family": "receding-horizon learned-model beam planning",
+      "learned_world": {
+        "used": true,
+        "component": "retained RL-DITR patient model",
+        "role": "would evaluate already-bounded candidates"
+      },
+      "policy_learning": {
+        "kind": "none",
+        "real_simulator_reward_updates": false,
+        "imagined_training_rollouts": false
+      },
+      "information_support": {
+        "input_fields": [
+          "history[N,72,22]",
+          "observed_warmup_anchor[N]"
+        ],
+        "hidden_or_future_input": false
+      },
+      "action_support": {
+        "unit": "U/h",
+        "bounds": "0..min(20,2*observed_warmup_anchor)",
+        "decision_interval_minutes": 5,
+        "parameterization": "proposed every future candidate bounded before model prediction; differs from post-beam projection"
+      },
+      "data": {
+        "training": "none planned; retained weights"
+      },
+      "budget": {
+        "new_updates": 0,
+        "search_budget": "not_frozen"
+      },
+      "selection": {
+        "rule": "requires separately frozen search config"
+      },
+      "status": {
+        "implementation": "not_implemented",
+        "validation": "none",
+        "training": "not_applicable",
+        "development": "not_registered",
+        "confirmation": "not_run_and_current_runner_forbids",
+        "status_basis": "local_files"
+      },
+      "evidence": [
+        {
+          "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+          "role": "proposal",
+          "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+        }
+      ],
+      "entrypoint": null
+    }
+  ],
+  "data_generators": [
+    {
+      "id": "exploration_collection",
+      "display_name": "Fixed rule/random exploration collection policy",
+      "evaluation_candidate": false,
+      "learned_world": false,
+      "RL_training": false,
+      "action": "0..min20,2anchor; random held30-90min; rule/random mixture with observed-low protection",
+      "seed": 260915,
+      "source": {
+        "path": "RL_DSENet_SOTA_2026-10-03/controller_baselines.py",
+        "role": "implementation",
+        "sha256": "e1ee43f85edd38f5f65ad5638315b60226708933281271a06fcc58eba0cb36e2"
+      },
+      "purpose": "training state/action coverage; no performance row"
+    }
+  ],
+  "historical_appendix": {
+    "scope": "old native/brake17 panels and old narrow policy attempts",
+    "current_panel_comparable": false,
+    "reason": "different scenarios and/or action/controllers; historical failure rows cannot establish superiority over whole algorithm families",
+    "evidence": [
+      {
+        "path": "RL_DSENet_公平低糖_2026-09-21/configs/final_manifest.json",
+        "role": "old_final_manifest",
+        "sha256": "bd2884f7103e5ed913ed5e9e799622be22d2ece1e205291bf79ea3b12e6218ec"
+      },
+      {
+        "path": "RL_DSENet_公平低糖_2026-09-21/analysis/final.json",
+        "role": "historical_results_reference_only",
+        "sha256": "60104682c4d8cf8542b11a78479e25c93b0a0849efda14116e6c9a9d0e1609a1"
+      },
+      {
+        "path": "RL_DSENet_SOTA_2026-10-03/retained_baselines_plan.md",
+        "role": "implementation",
+        "sha256": "dfc18f51ee7fdd391d6c5200e856c7a00aff54287bbb94f8b8a7531c4df4814a"
+      }
+    ]
+  },
+  "deferred_out_of_scope": [
+    "joint basal-bolus requires new task contract and common comparators",
+    "joint auxiliary world/PPO training not implemented by frozen-world PPO",
+    "retraining all eight retained baselines not currently registered"
+  ],
+  "report_constraints": [
+    "No clinical efficacy/safety or unseen-patient generalization claim.",
+    "Do not label MPC as reinforcement learning.",
+    "Do not label frozen+projection retained methods as native.",
+    "Do not call common action bounds and observable inputs equal training budgets or identical network representations.",
+    "Do not infer learned counterfactual accuracy from forecaster accuracy or engineering smoke.",
+    "Report candidate data and checkpoint-selection costs; development is selection data, not confirmation."
+  ],
+  "evidence": [
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "role": "contract",
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/研究合同.md",
+      "role": "research_scope",
+      "sha256": "b690904705cc2cc85ee23ea0eeafe9da8b657c9f4a5b508b918aa5e508ce0e69"
+    },
+    {
+      "path": "RL_DSENet_SOTA_2026-10-03/checks/retained_evaluation_mechanics.json",
+      "role": "integration",
+      "sha256": "eb2bfd466dd628487a59656e77f08e3961f198d727f6888cc0e4157cde8c9d31"
+    },
+    {
+      "path": "工作记录.md",
+      "role": "root_running_status_at_snapshot",
+      "sha256": "95855283a8daddba28cb7dc7591b37723e3f343d002915a98f0d2590872a81f3"
+    }
+  ],
+  "runtime_status_reports": [
+    {
+      "source": "parent message2026-10-03; not independently inspected remotely by documentation subagent",
+      "IQL_replay_complete_episodes": 280,
+      "IQL_replay_transitions": 221760,
+      "IQL_replay_reference_sha256_reported": "ca2c0456efaaf18391aa12e804e601093811da15220be25fe12717c379d109fa",
+      "IQL_CUDA_four_step_checks": "actor/Q1/Q2/V/target actual parameter updates; repeated frozen inference/actions/optimizer steps passed",
+      "IQL_formal_training": "20000update run started",
+      "world_point_and_quantile_formal_progress": "each beyond2500of4000",
+      "wide_PPO_formal_progress": "16of40",
+      "IQL_actual_closed_loop_smoke": "not yet completed"
+    }
+  ]
+}

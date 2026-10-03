@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "standard_library_only": true,
+  "raw_scorer_executed": false,
+  "model_or_simulator_executed": false,
+  "audited_panels": 6,
+  "audited_cases": 360,
+  "html_numeric_cells": 108,
+  "lossless_csv_rows": 234,
+  "html_transcription_exact": true,
+  "failed_panels_excluded_from_bolding": true,
+  "offline_links_verified": true,
+  "aggregate_consistency_tolerance": {
+    "relative": 1e-10,
+    "absolute": 1e-09,
+    "raw_score_audit_relaxed": false
+  },
+  "visual_browser_review": "pending_parent",
+  "no_model_promotion": true
+}

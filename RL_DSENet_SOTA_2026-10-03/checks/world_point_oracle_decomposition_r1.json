@@ -1,0 +1,347 @@
+{
+  "schema": 1,
+  "status": "completed_offline_oracle_diagnostic",
+  "variant": "point",
+  "split": "world_validation",
+  "checkpoint_sha256": "1f86f2881986660de0ab4f111be71173a7271f49ce59a1a614112edb8699fd30",
+  "step": 1000,
+  "binding_report_sha256": "ba4c82ec2863dd1c9cd9ae0aefa599f97e1e16888751fec0db2ba1c3678d14a2",
+  "prediction_sha256": "e9ddb43eaeb8ac94928db14d7a9f4d9ef2829a8bcb505fc3511f9d6e42680e09",
+  "source_sha256": "cf2e3255c46080f44645fb24a1370a07c841a63f85b188ecbfce50290bea5920",
+  "diagnostic_dependency_sha256": "b816e6a851c554d3eaff0e2dfb7b931b82db18385e7839ff03ec7bb52d81c198",
+  "paired_manifest_sha256": "084b99fb0dc73d3ef428da52a085575a5b053683b421409bcb6efe8fe1772eae",
+  "reference_arm": 0,
+  "complete_groups": 480,
+  "excluded_incomplete_groups": 0,
+  "complete_arms": 4320,
+  "true_bg54_arms": 55,
+  "true_bg54_arms_by_virtual_patient": {
+    "1": 4,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 16,
+    "7": 23,
+    "8": 0,
+    "9": 12,
+    "10": 0
+  },
+  "reconstructions": {
+    "predicted_reference_predicted_response": {
+      "cgm_point_error": {
+        "count": 311040,
+        "bias_mg_dl": 3.157248985607928,
+        "mae_mg_dl": 18.738525087634724,
+        "rmse_mg_dl": 24.37481414093911
+      },
+      "cgm_minimum_error": {
+        "count": 4320,
+        "bias_mg_dl": 19.460594038610104,
+        "mae_mg_dl": 21.337126257684496,
+        "rmse_mg_dl": 27.1970404528515
+      },
+      "bg54_subset_cgm_minimum_error": {
+        "count": 55,
+        "bias_mg_dl": 28.42788939042525,
+        "mae_mg_dl": 28.42788939042525,
+        "rmse_mg_dl": 31.691866481268285
+      },
+      "bg54_subset_minimum_overestimates": 55,
+      "cgm_horizon_events": {
+        "70": {
+          "tp": 76,
+          "fn": 562,
+          "fp": 7,
+          "tn": 3675,
+          "fnr": 0.8808777429467085,
+          "fpr": 0.0019011406844106464
+        },
+        "54": {
+          "tp": 12,
+          "fn": 244,
+          "fp": 1,
+          "tn": 4063,
+          "fnr": 0.953125,
+          "fpr": 0.00024606299212598425
+        }
+      },
+      "endpoint_error_by_minutes": {
+        "15": {
+          "count": 4320,
+          "bias_mg_dl": -3.0311423725552027,
+          "mae_mg_dl": 6.522674405133283,
+          "rmse_mg_dl": 8.357324904767815
+        },
+        "30": {
+          "count": 4320,
+          "bias_mg_dl": -2.492672687989694,
+          "mae_mg_dl": 11.193068971457304,
+          "rmse_mg_dl": 13.457244096467253
+        },
+        "60": {
+          "count": 4320,
+          "bias_mg_dl": 2.22179074022505,
+          "mae_mg_dl": 14.319573337943465,
+          "rmse_mg_dl": 17.650144184234772
+        },
+        "120": {
+          "count": 4320,
+          "bias_mg_dl": 1.6874475019949453,
+          "mae_mg_dl": 16.14957348505656,
+          "rmse_mg_dl": 20.704123589357028
+        },
+        "240": {
+          "count": 4320,
+          "bias_mg_dl": 5.794828224182129,
+          "mae_mg_dl": 22.86561798696165,
+          "rmse_mg_dl": 28.61874996155496
+        },
+        "360": {
+          "count": 4320,
+          "bias_mg_dl": 2.063919526559335,
+          "mae_mg_dl": 21.166855640764588,
+          "rmse_mg_dl": 26.920318976615583
+        }
+      }
+    },
+    "true_reference_predicted_response": {
+      "cgm_point_error": {
+        "count": 311040,
+        "bias_mg_dl": -0.35125771534050443,
+        "mae_mg_dl": 4.61522899254114,
+        "rmse_mg_dl": 9.203554274699254
+      },
+      "cgm_minimum_error": {
+        "count": 4320,
+        "bias_mg_dl": -0.10373101146132857,
+        "mae_mg_dl": 3.9333485612162837,
+        "rmse_mg_dl": 6.721480494606469
+      },
+      "bg54_subset_cgm_minimum_error": {
+        "count": 55,
+        "bias_mg_dl": -11.349307736483487,
+        "mae_mg_dl": 13.640860748291015,
+        "rmse_mg_dl": 16.815227148353838
+      },
+      "bg54_subset_minimum_overestimates": 7,
+      "cgm_horizon_events": {
+        "70": {
+          "tp": 577,
+          "fn": 61,
+          "fp": 59,
+          "tn": 3623,
+          "fnr": 0.09561128526645768,
+          "fpr": 0.016023900054318304
+        },
+        "54": {
+          "tp": 221,
+          "fn": 35,
+          "fp": 60,
+          "tn": 4004,
+          "fnr": 0.13671875,
+          "fpr": 0.014763779527559055
+        }
+      },
+      "endpoint_error_by_minutes": {
+        "15": {
+          "count": 4320,
+          "bias_mg_dl": -0.4466571119096544,
+          "mae_mg_dl": 0.5643821733969229,
+          "rmse_mg_dl": 0.8368902581786096
+        },
+        "30": {
+          "count": 4320,
+          "bias_mg_dl": -0.27114375255726003,
+          "mae_mg_dl": 0.570626144055967,
+          "rmse_mg_dl": 0.85933497130024
+        },
+        "60": {
+          "count": 4320,
+          "bias_mg_dl": -0.5025641388363309,
+          "mae_mg_dl": 0.9848599168989394,
+          "rmse_mg_dl": 1.4589750342807524
+        },
+        "120": {
+          "count": 4320,
+          "bias_mg_dl": -0.5598749302051685,
+          "mae_mg_dl": 3.0683796211525247,
+          "rmse_mg_dl": 4.567245797469982
+        },
+        "240": {
+          "count": 4320,
+          "bias_mg_dl": 1.1058167854944865,
+          "mae_mg_dl": 6.903696234137923,
+          "rmse_mg_dl": 11.867218269614202
+        },
+        "360": {
+          "count": 4320,
+          "bias_mg_dl": -1.2822899597662467,
+          "mae_mg_dl": 7.465341939749541,
+          "rmse_mg_dl": 13.368020160475604
+        }
+      }
+    },
+    "predicted_reference_true_response": {
+      "cgm_point_error": {
+        "count": 311040,
+        "bias_mg_dl": 3.5085067009484328,
+        "mae_mg_dl": 17.71910725059333,
+        "rmse_mg_dl": 22.686513348901624
+      },
+      "cgm_minimum_error": {
+        "count": 4320,
+        "bias_mg_dl": 19.555933112568326,
+        "mae_mg_dl": 21.184169498196354,
+        "rmse_mg_dl": 27.05508610260266
+      },
+      "bg54_subset_cgm_minimum_error": {
+        "count": 55,
+        "bias_mg_dl": 33.58564751364968,
+        "mae_mg_dl": 33.58564751364968,
+        "rmse_mg_dl": 35.754341837515504
+      },
+      "bg54_subset_minimum_overestimates": 55,
+      "cgm_horizon_events": {
+        "70": {
+          "tp": 72,
+          "fn": 566,
+          "fp": 12,
+          "tn": 3670,
+          "fnr": 0.8871473354231975,
+          "fpr": 0.0032590983161325366
+        },
+        "54": {
+          "tp": 6,
+          "fn": 250,
+          "fp": 1,
+          "tn": 4063,
+          "fnr": 0.9765625,
+          "fpr": 0.00024606299212598425
+        }
+      },
+      "endpoint_error_by_minutes": {
+        "15": {
+          "count": 4320,
+          "bias_mg_dl": -2.5844852606455486,
+          "mae_mg_dl": 6.373819080988566,
+          "rmse_mg_dl": 8.169775475505503
+        },
+        "30": {
+          "count": 4320,
+          "bias_mg_dl": -2.221528935432434,
+          "mae_mg_dl": 11.137241037686666,
+          "rmse_mg_dl": 13.383180930263938
+        },
+        "60": {
+          "count": 4320,
+          "bias_mg_dl": 2.724354879061381,
+          "mae_mg_dl": 14.30792214870453,
+          "rmse_mg_dl": 17.536471181911566
+        },
+        "120": {
+          "count": 4320,
+          "bias_mg_dl": 2.247322432200114,
+          "mae_mg_dl": 15.63774159749349,
+          "rmse_mg_dl": 20.144980736900788
+        },
+        "240": {
+          "count": 4320,
+          "bias_mg_dl": 4.6890114386876425,
+          "mae_mg_dl": 20.82112034956614,
+          "rmse_mg_dl": 25.794620451361478
+        },
+        "360": {
+          "count": 4320,
+          "bias_mg_dl": 3.346209486325582,
+          "mae_mg_dl": 19.2403843164444,
+          "rmse_mg_dl": 23.847017654831653
+        }
+      }
+    },
+    "true_reference_true_response": {
+      "cgm_point_error": {
+        "count": 311040,
+        "bias_mg_dl": 0.0,
+        "mae_mg_dl": 0.0,
+        "rmse_mg_dl": 0.0
+      },
+      "cgm_minimum_error": {
+        "count": 4320,
+        "bias_mg_dl": 0.0,
+        "mae_mg_dl": 0.0,
+        "rmse_mg_dl": 0.0
+      },
+      "bg54_subset_cgm_minimum_error": {
+        "count": 55,
+        "bias_mg_dl": 0.0,
+        "mae_mg_dl": 0.0,
+        "rmse_mg_dl": 0.0
+      },
+      "bg54_subset_minimum_overestimates": 0,
+      "cgm_horizon_events": {
+        "70": {
+          "tp": 638,
+          "fn": 0,
+          "fp": 0,
+          "tn": 3682,
+          "fnr": 0.0,
+          "fpr": 0.0
+        },
+        "54": {
+          "tp": 256,
+          "fn": 0,
+          "fp": 0,
+          "tn": 4064,
+          "fnr": 0.0,
+          "fpr": 0.0
+        }
+      },
+      "endpoint_error_by_minutes": {
+        "15": {
+          "count": 4320,
+          "bias_mg_dl": 0.0,
+          "mae_mg_dl": 0.0,
+          "rmse_mg_dl": 0.0
+        },
+        "30": {
+          "count": 4320,
+          "bias_mg_dl": 0.0,
+          "mae_mg_dl": 0.0,
+          "rmse_mg_dl": 0.0
+        },
+        "60": {
+          "count": 4320,
+          "bias_mg_dl": 0.0,
+          "mae_mg_dl": 0.0,
+          "rmse_mg_dl": 0.0
+        },
+        "120": {
+          "count": 4320,
+          "bias_mg_dl": 0.0,
+          "mae_mg_dl": 0.0,
+          "rmse_mg_dl": 0.0
+        },
+        "240": {
+          "count": 4320,
+          "bias_mg_dl": 0.0,
+          "mae_mg_dl": 0.0,
+          "rmse_mg_dl": 0.0
+        },
+        "360": {
+          "count": 4320,
+          "bias_mg_dl": 0.0,
+          "mae_mg_dl": 0.0,
+          "rmse_mg_dl": 0.0
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Only predicted_reference_predicted_response is a real model prediction.",
+    "Oracle substitutions use future labels and cannot be deployed, trained on here, or counted as candidate control performance.",
+    "CGM threshold event errors compare CGM with CGM; BG54 only defines a diagnostic subgroup.",
+    "Reference and response errors interact through nonlinear minima and thresholds; no additive attribution of FNR is asserted.",
+    "Overlapping windows and same-origin arms are dependent; no independent-sample inference or clinical claim."
+  ]
+}

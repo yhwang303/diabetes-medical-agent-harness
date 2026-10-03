@@ -1,0 +1,21 @@
+{
+  "status": "visually_reviewed",
+  "artifact": "RL_DSENet_SOTA_2026-10-03/delivery_12_methods_r1/\u9636\u6bb5\u7814\u7a76\u62a5\u544a.html",
+  "html_sha256": "e4abaf9bd225a86c9a7e9852b4f9248e44e0e2dbb5466cef08d22314aa96f155",
+  "browser": "Codex in-app browser",
+  "viewport": [
+    1280,
+    720
+  ],
+  "inspected": [
+    "title and interim status",
+    "BG table including actual failed rows",
+    "horizontal scrolling and fixed method column",
+    "sticky header",
+    "failure case coverage and TIR bounds"
+  ],
+  "observed_bg_and_cgm_rows_bold_values": 0,
+  "readable": true,
+  "clipping_or_overlap_observed": false,
+  "notes": "Wide tables intentionally scroll horizontally with an explicit hint. This checks presentation, not model efficacy."
+}

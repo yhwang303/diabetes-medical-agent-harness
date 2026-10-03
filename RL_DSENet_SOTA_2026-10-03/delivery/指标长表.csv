@@ -1,0 +1,235 @@
+﻿split,group,panel,method_id,label,signal,metric,mean,sample_sd,n_patients,complete,smoke,failed_episodes,planned_episodes,unknown_tail_minutes,observed_long54_events
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tir_observed_pct,95.7260101010101,6.383681506295193,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tir_lower_bound_pct,95.7260101010101,6.383681506295193,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tir_upper_bound_pct,95.7260101010101,6.383681506295193,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tbr70_pct,2.0012626262626263,4.713329221682333,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tbr54_pct,0.6965488215488216,2.2026807776004493,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tar180_pct,2.2727272727272725,2.4860959070459265,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,tar250_pct,0.0,0.0,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,mean_mg_dl,120.9825266665046,6.732317213743024,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,sd_mg_dl,24.584965637910294,6.935124259891986,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,cv_pct,20.442416988062945,5.6440134018142345,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,lbgi,0.8797561027991172,1.0595211883846958,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,hbgi,1.2057489964325137,0.5938966521957637,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,risk,2.085505099231631,1.3812811606613165,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,coverage_pct,100.0,0.0,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,prolonged_under54_120min_events,0.11666666666666667,0.3689323936863109,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,hypo_events_per_observed_day,0.16363636363636364,0.30107110764059225,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,max_hypo_low_minutes,44.83333333333333,97.83047822195189,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,bg,right_censored_hypo_events,0.0,0.0,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tir_observed_pct,93.93518518518519,6.626614855315701,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tir_lower_bound_pct,93.93518518518519,6.626614855315701,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tir_upper_bound_pct,93.93518518518519,6.626614855315701,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tbr70_pct,1.3846801346801345,3.692857720560902,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tbr54_pct,0.5092592592592593,1.6104191787894524,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tar180_pct,4.68013468013468,4.522221039805825,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,tar250_pct,0.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,mean_mg_dl,128.14975930111322,7.716670978526804,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,sd_mg_dl,24.276034670075013,6.691462223561017,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,cv_pct,19.19627408221029,5.276850324359423,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,lbgi,0.6272330114365651,0.8917612944261859,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,hbgi,1.7297808750584234,0.736222862970685,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,risk,2.3570138864949888,1.2317967599014115,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,coverage_pct,100.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,prolonged_under54_120min_events,0.06666666666666667,0.21081851067789195,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,hypo_events_per_observed_day,0.07878787878787878,0.19387625234763764,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,max_hypo_low_minutes,29.916666666666668,76.34235956660976,10,True,False,0,60,0,4
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,bg,right_censored_hypo_events,0.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tir_observed_pct,94.01515151515152,6.487803675860466,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tir_lower_bound_pct,94.01515151515152,6.487803675860466,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tir_upper_bound_pct,94.01515151515152,6.487803675860466,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tbr70_pct,0.18097643097643096,0.5722977246937724,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tbr54_pct,0.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tar180_pct,5.8038720538720545,6.128310015075374,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,tar250_pct,0.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,mean_mg_dl,135.06275975798678,7.922188124090462,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,sd_mg_dl,23.483905351811362,6.969247327806973,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,cv_pct,17.33171694635239,4.646634201107339,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,lbgi,0.15561908414029024,0.17157599411939345,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,hbgi,2.113865418795169,0.9867834128485086,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,risk,2.26948450293546,1.0832664094061926,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,coverage_pct,100.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,prolonged_under54_120min_events,0.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,hypo_events_per_observed_day,0.01818181818181818,0.05749595745760689,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,max_hypo_low_minutes,5.25,16.60195771588399,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,bg,right_censored_hypo_events,0.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tir_observed_pct,93.93518518518519,6.626614855315701,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tir_lower_bound_pct,93.93518518518519,6.626614855315701,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tir_upper_bound_pct,93.93518518518519,6.626614855315701,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tbr70_pct,1.3846801346801345,3.692857720560902,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tbr54_pct,0.5092592592592593,1.6104191787894524,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tar180_pct,4.68013468013468,4.522221039805825,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,tar250_pct,0.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,mean_mg_dl,128.14975930111322,7.716670978526804,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,sd_mg_dl,24.276034670075013,6.691462223561017,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,cv_pct,19.19627408221029,5.276850324359423,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,lbgi,0.6272330114365651,0.8917612944261859,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,hbgi,1.7297808750584234,0.736222862970685,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,risk,2.3570138864949888,1.2317967599014115,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,coverage_pct,100.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,prolonged_under54_120min_events,0.06666666666666667,0.21081851067789195,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,hypo_events_per_observed_day,0.07878787878787878,0.19387625234763764,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,max_hypo_low_minutes,29.916666666666668,76.34235956660976,10,True,False,0,60,0,4
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,bg,right_censored_hypo_events,0.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tir_observed_pct,88.23863636363637,15.726694195639041,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tir_lower_bound_pct,88.23863636363637,15.726694195639041,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tir_upper_bound_pct,88.23863636363637,15.726694195639041,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tbr70_pct,1.2626262626262625,3.6721229727725473,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tbr54_pct,0.4608585858585858,1.457362810557397,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tar180_pct,10.498737373737374,15.551748466094093,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,tar250_pct,0.1957070707070707,0.6188800976339631,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,mean_mg_dl,137.42177324563085,20.634714281417555,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,sd_mg_dl,26.222223335596386,6.923708722599696,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,cv_pct,19.578120597693832,6.207504038896098,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,lbgi,0.5431586049322001,0.883543239763836,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,hbgi,2.856231126354877,2.4538530493479533,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,risk,3.3993897312870773,2.3644866426112663,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,coverage_pct,100.0,0.0,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,prolonged_under54_120min_events,0.08333333333333334,0.26352313834736496,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,hypo_events_per_observed_day,0.09090909090909091,0.20452986597289483,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,max_hypo_low_minutes,30.166666666666664,87.50467359652608,10,True,False,0,60,0,5
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,bg,right_censored_hypo_events,0.0,0.0,10,True,False,0,60,0,5
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tir_observed_pct,90.66708754208754,14.423550878052383,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tir_lower_bound_pct,90.66708754208754,14.423550878052385,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tir_upper_bound_pct,90.66708754208754,14.423550878052385,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tbr70_pct,2.502104377104377,5.049749464149496,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tbr54_pct,0.7849326599326598,2.4821750152415936,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tar180_pct,6.830808080808081,13.93772519158594,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,tar250_pct,1.3047138047138047,4.125867317559754,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,mean_mg_dl,128.5571099221896,21.875209556968944,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,sd_mg_dl,26.526336787862327,9.127319232030802,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,cv_pct,21.035392316444348,7.162532890015743,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,lbgi,0.9716436088060549,1.3248946235925372,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,hbgi,2.230260851153594,2.7232097766905174,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,risk,3.201904459959649,2.7305887683792833,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,coverage_pct,100.0,0.0,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,prolonged_under54_120min_events,0.11666666666666667,0.3689323936863109,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,hypo_events_per_observed_day,0.2666666666666667,0.44919408839393277,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,max_hypo_low_minutes,52.0,103.05233597845942,10,True,False,0,60,0,7
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,bg,right_censored_hypo_events,0.016666666666666666,0.05270462766947298,10,True,False,0,60,0,7
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,dose,basal_u_per_observed_day,32.01271010101011,5.4066741074333775,10,True,False,0,60,0,
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,dose,bolus_u_per_observed_day,24.157933838383837,11.570524774224793,10,True,False,0,60,0,
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,dose,action_tv_per_observed_day,8.610606060606063,1.688486643171619,10,True,False,0,60,0,
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,dose,basal_u_per_observed_day,30.049200000000003,5.656977143316031,10,True,False,0,60,0,
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,dose,bolus_u_per_observed_day,24.157933838383837,11.570524774224793,10,True,False,0,60,0,
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,dose,action_tv_per_observed_day,0.0,0.0,10,True,False,0,60,0,
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,dose,basal_u_per_observed_day,27.189140656565655,7.318774630580126,10,True,False,0,60,0,
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,dose,bolus_u_per_observed_day,24.157933838383837,11.570524774224793,10,True,False,0,60,0,
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,dose,action_tv_per_observed_day,26.060684848484847,4.838490062248901,10,True,False,0,60,0,
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,dose,basal_u_per_observed_day,30.049200000000003,5.656977143316031,10,True,False,0,60,0,
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,dose,bolus_u_per_observed_day,24.157933838383837,11.570524774224793,10,True,False,0,60,0,
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,dose,action_tv_per_observed_day,0.0,0.0,10,True,False,0,60,0,
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,dose,basal_u_per_observed_day,28.179039646464652,2.7613577702067067,10,True,False,0,60,0,
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,dose,bolus_u_per_observed_day,24.157933838383837,11.570524774224793,10,True,False,0,60,0,
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,dose,action_tv_per_observed_day,2.7303696969696976,0.39650442232434546,10,True,False,0,60,0,
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,dose,basal_u_per_observed_day,30.742364646464654,2.00415114419469,10,True,False,0,60,0,
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,dose,bolus_u_per_observed_day,24.157933838383837,11.570524774224793,10,True,False,0,60,0,
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,dose,action_tv_per_observed_day,3.281087878787879,0.6990838673116081,10,True,False,0,60,0,
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tir_observed_pct,93.33122895622895,6.364112103948742,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tir_lower_bound_pct,93.33122895622895,6.36411210394874,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tir_upper_bound_pct,93.33122895622895,6.36411210394874,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tbr70_pct,3.371212121212121,4.502731056348436,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tbr54_pct,0.8417508417508419,2.2415101230921723,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tar180_pct,3.2975589225589226,2.930656056333352,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,tar250_pct,0.01893939393939394,0.047002989808504356,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,mean_mg_dl,121.76799259108427,6.724911569921266,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,sd_mg_dl,27.437315295021563,6.182046298640922,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,cv_pct,22.660766482415205,4.989037987588061,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,lbgi,1.0545618535897767,0.9674492841389315,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,hbgi,1.3883437745619265,0.5979989059802264,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,risk,2.442905628151703,1.2785925189432816,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,coverage_pct,100.0,0.0,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,prolonged_under54_120min_events,0.13333333333333333,0.4216370213557839,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,hypo_events_per_observed_day,0.7454545454545454,0.4840481610143872,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,max_hypo_low_minutes,56.58333333333333,64.99697286398407,10,True,False,0,60,0,8
+development,comparison,dev_legacy_r1,d06_frozen,原 D06 · 冻结窄动作,cgm,right_censored_hypo_events,0.016666666666666666,0.05270462766947298,10,True,False,0,60,0,8
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tir_observed_pct,92.12331649831648,6.550516146564429,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tir_lower_bound_pct,92.12331649831648,6.550516146564429,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tir_upper_bound_pct,92.12331649831648,6.550516146564429,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tbr70_pct,2.138047138047138,3.6745903250249126,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tbr54_pct,0.6628787878787878,1.9632646694328963,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tar180_pct,5.738636363636365,4.640277966927975,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,tar250_pct,0.06523569023569023,0.09007673606897873,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,mean_mg_dl,128.9285852783996,7.707393395152263,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,sd_mg_dl,27.140320977621837,6.038149661877656,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,cv_pct,21.309885607324055,4.745399625531981,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,lbgi,0.74588524740338,0.8503239389014351,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,hbgi,1.9310848419963853,0.741432869776636,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,risk,2.6769700893997657,1.1786924154901126,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,coverage_pct,100.0,0.0,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,prolonged_under54_120min_events,0.11666666666666667,0.3689323936863109,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,hypo_events_per_observed_day,0.5030303030303029,0.4110999427664237,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,max_hypo_low_minutes,32.75,50.823541862087964,10,True,False,0,60,0,7
+development,comparison,dev_hold_r1,hold,观测基础率 Hold,cgm,right_censored_hypo_events,0.016666666666666666,0.05270462766947298,10,True,False,0,60,0,7
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tir_observed_pct,92.52525252525253,6.698135320052659,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tir_lower_bound_pct,92.52525252525253,6.698135320052658,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tir_upper_bound_pct,92.52525252525253,6.698135320052658,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tbr70_pct,0.4019360269360269,0.4557270895300508,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tbr54_pct,0.016835016835016835,0.034076761508112,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tar180_pct,7.072811447811448,6.417054063168989,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,tar250_pct,0.08838383838383838,0.14402988515949045,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,mean_mg_dl,135.82767510618564,7.917129887064291,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,sd_mg_dl,26.60944876073224,6.220132080304359,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,cv_pct,19.55459488126741,4.030325646003312,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,lbgi,0.25062936782522083,0.1711447200032434,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,hbgi,2.3440469276568314,0.983060305585733,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,risk,2.594676295482052,1.0551278020395183,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,coverage_pct,100.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,prolonged_under54_120min_events,0.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,hypo_events_per_observed_day,0.16363636363636364,0.15131299645312327,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,max_hypo_low_minutes,9.583333333333334,11.588694469446196,10,True,False,0,60,0,0
+development,comparison,dev_physiology_r1,physiology,IOB / Zone 规则对照,cgm,right_censored_hypo_events,0.0,0.0,10,True,False,0,60,0,0
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tir_observed_pct,92.12331649831648,6.550516146564429,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tir_lower_bound_pct,92.12331649831648,6.550516146564429,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tir_upper_bound_pct,92.12331649831648,6.550516146564429,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tbr70_pct,2.138047138047138,3.6745903250249126,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tbr54_pct,0.6628787878787878,1.9632646694328963,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tar180_pct,5.738636363636365,4.640277966927975,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,tar250_pct,0.06523569023569023,0.09007673606897873,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,mean_mg_dl,128.9285852783996,7.707393395152263,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,sd_mg_dl,27.140320977621837,6.038149661877656,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,cv_pct,21.309885607324055,4.745399625531981,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,lbgi,0.74588524740338,0.8503239389014351,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,hbgi,1.9310848419963853,0.741432869776636,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,risk,2.6769700893997657,1.1786924154901126,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,coverage_pct,100.0,0.0,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,prolonged_under54_120min_events,0.11666666666666667,0.3689323936863109,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,hypo_events_per_observed_day,0.5030303030303029,0.4110999427664237,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,max_hypo_low_minutes,32.75,50.823541862087964,10,True,False,0,60,0,7
+development,comparison,dev_ppo08_r1,ppo_wide,Wide PPO · 第 08 轮（argmax）,cgm,right_censored_hypo_events,0.016666666666666666,0.05270462766947298,10,True,False,0,60,0,7
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tir_observed_pct,85.66498316498317,15.15157945179023,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tir_lower_bound_pct,85.66498316498317,15.151579451790232,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tir_upper_bound_pct,85.66498316498317,15.151579451790232,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tbr70_pct,2.144360269360269,4.1118838163607085,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tbr54_pct,0.5597643097643098,1.478238999158243,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tar180_pct,12.190656565656564,15.340904440174041,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,tar250_pct,0.4103535353535353,1.1009667148067077,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,mean_mg_dl,138.19212373920678,20.61894486348935,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,sd_mg_dl,28.94064032994291,6.251930163260829,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,cv_pct,21.46826128958677,5.901128375101169,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,lbgi,0.6554909158474916,0.9262539646354391,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,hbgi,3.063922758490769,2.462405406492831,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,risk,3.71941367433826,2.3220136440811605,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,coverage_pct,100.0,0.0,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,prolonged_under54_120min_events,0.06666666666666667,0.21081851067789195,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,hypo_events_per_observed_day,0.49090909090909085,0.7458075865992221,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,max_hypo_low_minutes,34.50000000000001,62.76941930590086,10,True,False,0,60,0,4
+development,comparison,dev_retained_bc_r1,retained_bc,BC · 冻结 + 公共范围投影,cgm,right_censored_hypo_events,0.03333333333333333,0.07027283689263066,10,True,False,0,60,0,4
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tir_observed_pct,88.4111952861953,13.819775729524368,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tir_lower_bound_pct,88.4111952861953,13.819775729524368,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tir_upper_bound_pct,88.4111952861953,13.819775729524368,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tbr70_pct,3.7037037037037033,5.620477449448015,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tbr54_pct,1.0963804713804712,2.5760160252297415,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tar180_pct,7.88510101010101,13.483681415810869,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,tar250_pct,1.3510101010101012,4.125065822541289,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,mean_mg_dl,129.33991663483184,21.843197237488855,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,sd_mg_dl,29.274019056860016,8.144050735564157,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,cv_pct,23.110152972291598,6.710072537546257,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,lbgi,1.12559303155904,1.3358653269005,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,hbgi,2.418267698976266,2.7120732169195514,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,risk,3.543860730535306,2.638809337810967,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,coverage_pct,100.0,0.0,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,prolonged_under54_120min_events,0.13333333333333333,0.4216370213557839,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,hypo_events_per_observed_day,0.8424242424242424,0.9778487327122389,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,max_hypo_low_minutes,54.0,80.54291088498826,10,True,False,0,60,0,8
+development,comparison,dev_retained_iql_r1,retained_iql,IQL · 冻结 + 公共范围投影,cgm,right_censored_hypo_events,0.06666666666666667,0.1405456737852613,10,True,False,0,60,0,8

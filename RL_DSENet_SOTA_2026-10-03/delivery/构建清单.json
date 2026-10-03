@@ -1,0 +1,143 @@
+{
+  "schema": 1,
+  "status": "interim",
+  "built_utc": "2026-10-03T14:50:37.851655+00:00",
+  "builder_sha256": "f4a1d7d93723fecb07a5701ffdf5a4ed389b136bdd16dc1f6ea50fac2a3f3e25",
+  "scorer_sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+  "protocol_sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+  "source_inputs": [
+    {
+      "role": "panels_development_first_baselines_r1.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/panels_development_first_baselines_r1.json",
+      "copy": "sources/00_panels_development_first_baselines_r1.json",
+      "sha256": "9a58428ba0abe916250b6942338d4b4895f06f9d9d32af554b407da0ad4849fd"
+    },
+    {
+      "role": "world_point_r1_best_diagnostics.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_point_r1_best_diagnostics.json",
+      "copy": "sources/01_world_point_r1_best_diagnostics.json",
+      "sha256": "e98c0925b0c9e452b2cd732b11da0cbfba5566970315f75324a6c4c942b6b88c"
+    },
+    {
+      "role": "world_point_r1_best_prediction_binding.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_point_r1_best_prediction_binding.json",
+      "copy": "sources/02_world_point_r1_best_prediction_binding.json",
+      "sha256": "ba4c82ec2863dd1c9cd9ae0aefa599f97e1e16888751fec0db2ba1c3678d14a2"
+    },
+    {
+      "role": "world_quantile_r1_best_diagnostics.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_quantile_r1_best_diagnostics.json",
+      "copy": "sources/03_world_quantile_r1_best_diagnostics.json",
+      "sha256": "2f0b5c077051800324ee665a79654b71d49544b060cb00f751064d366c5259be"
+    },
+    {
+      "role": "world_quantile_r1_best_prediction_binding.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/world_quantile_r1_best_prediction_binding.json",
+      "copy": "sources/04_world_quantile_r1_best_prediction_binding.json",
+      "sha256": "86842de2e260f3f91a3b0609cb1d76e38bcc762318947a39f7650c26ac0075a7"
+    },
+    {
+      "role": "actions_dev_ppo08_r1.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/checks/actions_dev_ppo08_r1.json",
+      "copy": "sources/05_actions_dev_ppo08_r1.json",
+      "sha256": "ba68074df8e2391635c3319127502fc96855c52ec8a02a2461dbfc26f8386e5b"
+    },
+    {
+      "role": "method_registry.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/method_registry.json",
+      "copy": "sources/06_method_registry.json",
+      "sha256": "e040931c53a6861046e2e3abe8e168c4820aaa13fd01e84f255f4bfc73992f9e"
+    },
+    {
+      "role": "protocol.json",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/protocol.json",
+      "copy": "sources/07_protocol.json",
+      "sha256": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36"
+    },
+    {
+      "role": "build_report.py",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/build_report.py",
+      "copy": "sources/08_build_report.py",
+      "sha256": "f4a1d7d93723fecb07a5701ffdf5a4ed389b136bdd16dc1f6ea50fac2a3f3e25"
+    },
+    {
+      "role": "summarize_panels.py",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DSENet_SOTA_2026-10-03/summarize_panels.py",
+      "copy": "sources/09_summarize_panels.py",
+      "sha256": "82c7a11db9d3316af1cfd9584e6175c594262127831ccad61ac77f16c32c6438"
+    },
+    {
+      "role": "control_metrics.py",
+      "original": "/Users/george/Desktop/糖尿病医疗Agent_强约束Harness方案/RL_DITR创新_2026-09-16/control_metrics.py",
+      "copy": "sources/10_control_metrics.py",
+      "sha256": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd"
+    }
+  ],
+  "outputs_sha256": {
+    "sources/00_panels_development_first_baselines_r1.json": "9a58428ba0abe916250b6942338d4b4895f06f9d9d32af554b407da0ad4849fd",
+    "sources/01_world_point_r1_best_diagnostics.json": "e98c0925b0c9e452b2cd732b11da0cbfba5566970315f75324a6c4c942b6b88c",
+    "sources/02_world_point_r1_best_prediction_binding.json": "ba4c82ec2863dd1c9cd9ae0aefa599f97e1e16888751fec0db2ba1c3678d14a2",
+    "sources/03_world_quantile_r1_best_diagnostics.json": "2f0b5c077051800324ee665a79654b71d49544b060cb00f751064d366c5259be",
+    "sources/04_world_quantile_r1_best_prediction_binding.json": "86842de2e260f3f91a3b0609cb1d76e38bcc762318947a39f7650c26ac0075a7",
+    "sources/05_actions_dev_ppo08_r1.json": "ba68074df8e2391635c3319127502fc96855c52ec8a02a2461dbfc26f8386e5b",
+    "sources/06_method_registry.json": "e040931c53a6861046e2e3abe8e168c4820aaa13fd01e84f255f4bfc73992f9e",
+    "sources/07_protocol.json": "7f59e99eb5bd76fb430c0e6f488f75436315a2fffa3c415e7205e4f52a369b36",
+    "sources/08_build_report.py": "f4a1d7d93723fecb07a5701ffdf5a4ed389b136bdd16dc1f6ea50fac2a3f3e25",
+    "sources/09_summarize_panels.py": "82c7a11db9d3316af1cfd9584e6175c594262127831ccad61ac77f16c32c6438",
+    "sources/10_control_metrics.py": "0a6d44298d942bc09764f15e7ef45a71d3afbc7ba63cad3dae5425f0b22b8cfd",
+    "患者配对差.csv": "6baeda3d1a3065407ee9576909bdedef21b7e1439139b6b066427cbb662fd4c9",
+    "报告解读.json": "f39be344f0b7b0871d77e546ce1191636b5e00982fc668dd529e1ff17dd3429d",
+    "指标长表.csv": "019017e42b3415e84dafd65ab2fc446cdd1d244bcd49bfd62a5ded0b1dab2923",
+    "核查结果.json": "d7d9175516e90fd4d927ba0829d89193ab69919f8400fb0c5d4c101e35fbb7e4",
+    "病例审计.csv": "81a0c80844b3dfb6688501fd15e948a4674316238f93b2a8120f2495ec03859f",
+    "阶段研究报告.html": "37340552ece3b587939c8a83a1e69a74c43d3f34783148df6e806d13c0bf337a"
+  },
+  "panels": {
+    "dev_legacy_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "a471fffabf09b945a89f03eb885d7e272c3e288cf8902c7fb2e2c08c677241e5",
+      "summary_sha256": "618ed3c2948608d6e783abf78080b52acadfbbf763fcfaf5faac60669342c47e",
+      "checkpoint_sha256": "348caaf3d3474d34cd9091dfa90aeba31305499d2e34d98279999bfcfdb16913"
+    },
+    "dev_hold_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "ad5d29cd77298894f3688fa7a664f08cd779854b386891e62fa59e9e78dcb489",
+      "summary_sha256": "95fb569d70e1f4f3a595c54e9bd083d9130c1a26e94e29d5c1ef2b0b180ffc45",
+      "checkpoint_sha256": null
+    },
+    "dev_physiology_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "b74c92b65887fc4c1a85ddee54b504ade4f632fbc563a3b08087c186ed1e00e5",
+      "summary_sha256": "1996ca8dbbefbe06401dbe7100a7b30068082551e0f6e8c89d76b3cf5a8cf4f3",
+      "checkpoint_sha256": null
+    },
+    "dev_ppo08_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "eb3ec5ee6f5068cdbaa32f56c292ecddbd21f6ab4d6a014ceec37cda235d0204",
+      "summary_sha256": "95dfca8c465993f16b494620f5adb6aad596dd62e04163a343aa5afe57c7d35e",
+      "checkpoint_sha256": "4d7d6c141c7a529b30dd0bbc148098241eb92432c9f3ba0e4a20013708bfa30d"
+    },
+    "dev_retained_bc_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "ca9ea3bfc61e72570bc42a0518a17c8b541fd1978036e699bf2108ca03bfda64",
+      "summary_sha256": "efa88d06abbfb167316d2f0e118007d2994030855e1ef52a32efdd14ba13527b",
+      "checkpoint_sha256": "1a1cab603f8aed8df8121b8b7a8983cd568dbeaac6d32c34cca2e84c434872a1"
+    },
+    "dev_retained_iql_r1": {
+      "split": "development",
+      "smoke": false,
+      "manifest_sha256": "cd9be534cde689c78a42d61785f3acb8f0d29576a9fe2bf47cba82d5739f0ed4",
+      "summary_sha256": "45b1c77028c786a72022b1a7c466ae9ac58d3c2ed0d8bb45b5319490b13bb7bd",
+      "checkpoint_sha256": "f0ebb6763b4ffac949a71ec00afcfa4b555ff506ee9b1ff75d1bbd52d9b2dc37"
+    }
+  },
+  "model_promoted": false,
+  "automatic_SOTA_claim": false,
+  "visual_review": "pending_parent",
+  "source_raw_trajectories_bundled": false
+}

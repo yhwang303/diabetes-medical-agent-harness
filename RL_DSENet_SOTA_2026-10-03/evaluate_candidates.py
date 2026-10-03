@@ -1,4 +1,4 @@
-"""Common development runner; original simulator/scorer, no confirmation access.
+"""Common evaluator; ordinary CLI rejects confirmation, which needs a frozen ticket.
 
 `legacy` means the frozen P03/D05/D06 bounded actor, not the unrelated old
 NumPy external baseline. No model receives job metadata, nominal basal, BG,
@@ -614,6 +614,42 @@ def run(args):
     out = R/'results'/args.name
     out.mkdir(parents=True, exist_ok=False)
     (out/'trajectories').mkdir()
+    return _execute(args, protocol, jobs, out)
+
+
+def run_confirmation(ticket_path):
+    """Only ticket-derived settings can enter the reserved confirmation split."""
+    import confirmation_gate as gate
+    from types import SimpleNamespace
+    ticket_path=Path(ticket_path).resolve()
+    ticket=gate.start_run(ticket_path)
+    method=ticket['method'];out=gate.project_path(ticket['output_dir'])
+    supplied=MEAN_KINDS.get(method['kind'],method['kind']) in ('ppo','world','world_ppo','iql_wide')
+    args=SimpleNamespace(kind=method['kind'],method=method['method'],name=method['id'],
+                         split='confirmation',smoke=False,batch_size=method['batch_size'],
+                         checkpoint=gate.project_path(method['checkpoint']['path']) if supplied else None,
+                         config=gate.project_path(method['config']['path']) if supplied else None)
+    try:
+        if {p.name for p in out.iterdir()}!={'ticket.json','start.json'}:
+            raise ValueError('Confirmation initialization permits only its ticket and exclusive start marker')
+        (out/'trajectories').mkdir(exist_ok=False)
+        result=_execute(args,json.loads((R/'protocol.json').read_text()),ticket['jobs'],out,ticket)
+    except Exception as error:
+        if (out/'summary.json').is_file():
+            gate.record_result(ticket_path,summary_path=out/'summary.json')
+        else:
+            gate.record_result(ticket_path,failure_reason='Confirmation runner failed before a complete summary: '+repr(error))
+        raise
+    finished=gate.record_result(ticket_path,summary_path=out/'summary.json')
+    if finished['error'] is not None:
+        raise RuntimeError('Confirmation evidence validation failed: '+finished['error'])
+    return result
+
+
+def _execute(args, protocol, jobs, out, confirmation=None):
+    """Shared development/confirmation loop; this is not a public override CLI."""
+    family=MEAN_KINDS.get(args.kind,args.kind)
+    method=getattr(args,'method',None)
     started = time.time(); active = []; results = {}; worker = None; error = None
     retained_decisions={job_key(job):[] for job in jobs} if args.kind=='retained' else {}
     manifest = dict(schema=1, kind=args.kind, name=args.name, split=args.split, smoke=args.smoke,
@@ -630,10 +666,24 @@ def run(args):
                     source_sha256={str(p.relative_to(P)):sha(p) for p in COMMON_SOURCES},
                     artifact_sha256={str(NORMALIZER_PATH.relative_to(P)):sha(NORMALIZER_PATH),
                                      str((R/'protocol.json').relative_to(P)):sha(R/'protocol.json')})
+    if confirmation is not None:
+        frozen=confirmation['method']
+        import confirmation_gate as gate
+        manifest.update(confirmation=True,tuning_split=False,
+            freeze_sha256=confirmation['freeze_sha256'],ticket_sha256=sha(out/'ticket.json'),
+            protocol_sha256=confirmation['protocol']['sha256'],normalization_sha256=confirmation['normalizer']['sha256'],
+            worker_sha256=frozen['worker']['sha256'] if frozen['worker'] else None,
+            config_sha256=gate.method_config_sha(frozen),
+            checkpoint_sha256=frozen['checkpoint']['sha256'] if frozen['checkpoint'] else None,
+            source_sha256=frozen['source_sha256'],artifact_sha256=frozen['artifact_sha256'])
     write_json(out/'manifest.json', manifest)
     provenance = dict(manifest_sha256=sha(out/'manifest.json'), jobs_sha256=manifest['jobs_sha256'],
                       scorer_sha256=manifest['scorer_sha256'], checkpoint_sha256=None,
                       source_sha256=manifest['source_sha256'])
+    if confirmation is not None:
+        for key in ('freeze_sha256','ticket_sha256','protocol_sha256','normalization_sha256',
+                    'worker_sha256','config_sha256','checkpoint_sha256'):
+            provenance[key]=manifest[key]
 
     def save(job, raw=None, technical_error=None):
         key = job_key(job)
@@ -686,6 +736,11 @@ def run(args):
         config = args.config.resolve() if args.config else None
         sources, artifacts, command, checkpoint = dependencies(args.kind, checkpoint, config,method=method,
                                                               allow_smoke=args.smoke)
+        if confirmation is not None:
+            sources=sorted(set(sources+[P/p for p in frozen['source_sha256']]))
+            artifacts=sorted(set(artifacts+[P/p for p in frozen['artifact_sha256']]))
+            if (gate.hashes(sources)!=frozen['source_sha256'] or gate.hashes(artifacts)!=frozen['artifact_sha256']):
+                raise ValueError('Confirmation runtime dependencies differ from the frozen exact set')
         manifest.update(source_sha256={str(p.relative_to(P)):sha(p) for p in sources},
                         artifact_sha256={str(p.relative_to(P)) if p.is_relative_to(P) else str(p):sha(p)
                                          for p in artifacts},

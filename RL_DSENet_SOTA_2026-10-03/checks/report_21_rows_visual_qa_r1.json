@@ -1,0 +1,19 @@
+{
+  "status": "reviewed_with_prose_readability_note",
+  "html_sha256": "2bc087a3777f65232c0efe3d94f2b08a8a9c61bcdab82ed6ba96ccc7e078a6b2",
+  "browser": "Codex in-app browser",
+  "viewport": [
+    1280,
+    720
+  ],
+  "visually_checked": [
+    "title and ongoing/unconfirmed status",
+    "current interpretation paragraphs",
+    "main table header and leading rows",
+    "horizontal table presentation"
+  ],
+  "notes": [
+    "Main table and navigation readable. Final interpretation should add spaces or equals signs between metric names and numbers, e.g. TBR70 = 1.9045%, instead of TBR701.9045%."
+  ],
+  "actual_confirmation_run": false
+}

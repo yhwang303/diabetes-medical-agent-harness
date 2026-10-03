@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "paragraphs": [
+    "研究仍在进行，独立确认尚未运行。当前为21个已完成方案/检查点行，不是21个独立算法；同算法检查点和部署变体全部保留，粗体只表示同表完整随访行的描述性最优，不代表统计显著性或SOTA。",
+    "新world配合MPC显示控制收益：point模型TIR97.4263%、TBR701.9045%、TBR54.3009%，但CV和LBGI仍比原D06差。概率risk规划TIR96.8056%、TBR54为0，但TBR702.2075%仍高于原D06的2.0013%，不能称所有指标不退步。MPC是规划器，尚不能把其收益写成RL actor的收益。",
+    "同一quantile checkpoint的median-only部署已经TBR54=0；expected/risk的额外收益主要是TBR70下降，同时TAR略增。因此严重低糖清零不能单独归因于事件概率项。point与quantile训练还改变损失、输出头及所选step，归因范围另有边界。",
+    "wide-PPO08及world-PPO08的全部BG聚合与逐患者指标均和Hold精确一致。wide-PPO16降低低糖但增加高糖，wide-PPO32仍未实现联合改进；后续固定检查点继续运行。相同wide16权重的概率均值动作是事后内部部署消融，不是新外部算法。",
+    "旧对照保留冻结权重和显式动作范围投影，其中6行有原生提前终止，共44个失败病例。Observed前缀和未知尾部如实保留，不参加完整方法最优排名。新IQL为固定20k任务适配基线，未证明充分调优；其表示、离线数据覆盖及预算不同，不能据此判断IQL性能上限。",
+    "本轮为单训练seed260915、已见十名虚拟成人、公开仿真及basal-only任务。患者聚合与配对bootstrap不等于训练多seed或新患者泛化，零TBR54也不构成临床安全证明。"
+  ],
+  "panels": {
+    "dev_legacy_r1": {
+      "method_id": "d06_frozen",
+      "label": "原 D06 · 冻结窄动作",
+      "group": "comparison"
+    },
+    "dev_hold_r1": {
+      "method_id": "hold",
+      "label": "观测基础率 Hold",
+      "group": "comparison"
+    },
+    "dev_physiology_r1": {
+      "method_id": "physiology",
+      "label": "IOB / Zone 规则对照",
+      "group": "comparison"
+    },
+    "dev_ppo08_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 08 轮（argmax）",
+      "group": "comparison"
+    },
+    "dev_retained_bc_r1": {
+      "method_id": "retained_bc",
+      "label": "BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_iql_r1": {
+      "method_id": "retained_iql",
+      "label": "IQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo16_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第 16 轮（argmax）",
+      "group": "comparison"
+    },
+    "dev_retained_rebrac_r1": {
+      "method_id": "retained_rebrac",
+      "label": "ReBRAC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_lom_r1": {
+      "method_id": "retained_lom",
+      "label": "LOM · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_gfp_r1": {
+      "method_id": "retained_gfp",
+      "label": "GFP · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_td3bc_r1": {
+      "method_id": "retained_td3bc",
+      "label": "TD3BC · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_retained_fql_r1": {
+      "method_id": "retained_fql",
+      "label": "FQL · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_ppo32_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO · 第32轮（argmax）",
+      "group": "comparison"
+    },
+    "dev_retained_ditr_r1": {
+      "method_id": "retained_ditr",
+      "label": "RL-DITR* · 冻结 + 公共范围投影",
+      "group": "comparison"
+    },
+    "dev_world_point_r1": {
+      "method_id": "mpc_point_world",
+      "label": "Point world · MPC",
+      "group": "comparison"
+    },
+    "dev_world_quantile_median_r1": {
+      "method_id": "mpc_quantile_median",
+      "label": "Quantile world · 中位数 MPC",
+      "group": "comparison"
+    },
+    "dev_world_expected_r1": {
+      "method_id": "mpc_expected",
+      "label": "Quantile world · 期望风险 MPC",
+      "group": "comparison"
+    },
+    "dev_world_risk_r1": {
+      "method_id": "mpc_event_risk",
+      "label": "Quantile world · 期望风险 + 事件 MPC",
+      "group": "comparison"
+    },
+    "dev_world_ppo08_r1": {
+      "method_id": "ppo_world_quantile",
+      "label": "World PPO · 第08轮（argmax）",
+      "group": "comparison"
+    },
+    "dev_iql_wide_r1": {
+      "method_id": "iql_wide",
+      "label": "IQL · 新任务固定20k",
+      "group": "comparison"
+    },
+    "dev_ppo16_mean_r1": {
+      "method_id": "ppo_wide",
+      "label": "Wide PPO16 · 同权重概率均值部署",
+      "group": "internal_ablation",
+      "deployment_variant": "probability_mean_of_capped_executable_grid; post-development hypothesis; same checkpoint as argmax16"
+    }
+  },
+  "equal_bg": [
+    {
+      "left": "dev_ppo08_r1",
+      "right": "dev_hold_r1"
+    },
+    {
+      "left": "dev_world_ppo08_r1",
+      "right": "dev_hold_r1"
+    }
+  ]
+}
