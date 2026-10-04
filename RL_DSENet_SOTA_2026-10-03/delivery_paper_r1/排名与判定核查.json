@@ -1,0 +1,2882 @@
+{
+  "source_sha256": "b2a0896586d185fe620a461e510c3e64cb3e800ad7b5c1471f2223f69786bde4",
+  "paper_source_sha256": "b4df7ca6ee83fa9c325c22ea024023c0ddd829e1df0f8861cd0f52280ecea0f9",
+  "tie_tolerance_absolute": 1e-08,
+  "ranking_uses_unrounded_means": true,
+  "failed_rows_ranked": false,
+  "tables": {
+    "external": {
+      "rows": [
+        "retained_bc",
+        "retained_td3bc",
+        "retained_iql",
+        "retained_rebrac",
+        "retained_fql",
+        "retained_lom",
+        "retained_gfp",
+        "retained_ditr",
+        "iql_wide",
+        "ppo_world_quantile"
+      ],
+      "eligible": [
+        "retained_bc",
+        "retained_iql",
+        "iql_wide",
+        "ppo_world_quantile"
+      ],
+      "ranks": {
+        "tir_observed_pct": {
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 2,
+          "ppo_world_quantile": 1
+        },
+        "tbr70_pct": {
+          "retained_bc": 1,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 2
+        },
+        "tbr54_pct": {
+          "retained_bc": 2,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 1
+        },
+        "tar180_pct": {
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 2,
+          "ppo_world_quantile": 1
+        },
+        "tar250_pct": {
+          "retained_bc": 2,
+          "retained_iql": 0,
+          "iql_wide": 1,
+          "ppo_world_quantile": 1
+        },
+        "sd_mg_dl": {
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 2,
+          "ppo_world_quantile": 1
+        },
+        "cv_pct": {
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 1,
+          "ppo_world_quantile": 2
+        },
+        "lbgi": {
+          "retained_bc": 1,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 2
+        },
+        "hbgi": {
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 2,
+          "ppo_world_quantile": 1
+        },
+        "risk": {
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 2,
+          "ppo_world_quantile": 1
+        },
+        "long54": {
+          "retained_bc": 1,
+          "retained_iql": 2,
+          "iql_wide": 1,
+          "ppo_world_quantile": 1
+        }
+      }
+    },
+    "all": {
+      "rows": [
+        "hold",
+        "physiology",
+        "d06_frozen",
+        "mpc_point_world",
+        "mpc_quantile_median",
+        "mpc_expected",
+        "mpc_event_risk",
+        "ppo_wide",
+        "retained_bc",
+        "retained_td3bc",
+        "retained_iql",
+        "retained_rebrac",
+        "retained_fql",
+        "retained_lom",
+        "retained_gfp",
+        "retained_ditr",
+        "iql_wide",
+        "ppo_world_quantile"
+      ],
+      "eligible": [
+        "hold",
+        "physiology",
+        "d06_frozen",
+        "mpc_point_world",
+        "mpc_quantile_median",
+        "mpc_expected",
+        "mpc_event_risk",
+        "ppo_wide",
+        "retained_bc",
+        "retained_iql",
+        "iql_wide",
+        "ppo_world_quantile"
+      ],
+      "ranks": {
+        "tir_observed_pct": {
+          "hold": 0,
+          "physiology": 0,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 2,
+          "mpc_event_risk": 1,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "tbr70_pct": {
+          "hold": 0,
+          "physiology": 1,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 0,
+          "mpc_event_risk": 0,
+          "ppo_wide": 0,
+          "retained_bc": 2,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "tbr54_pct": {
+          "hold": 0,
+          "physiology": 1,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 0,
+          "mpc_event_risk": 2,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "tar180_pct": {
+          "hold": 0,
+          "physiology": 0,
+          "d06_frozen": 0,
+          "mpc_point_world": 1,
+          "mpc_quantile_median": 2,
+          "mpc_expected": 0,
+          "mpc_event_risk": 0,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "tar250_pct": {
+          "hold": 1,
+          "physiology": 1,
+          "d06_frozen": 1,
+          "mpc_point_world": 1,
+          "mpc_quantile_median": 1,
+          "mpc_expected": 1,
+          "mpc_event_risk": 1,
+          "ppo_wide": 1,
+          "retained_bc": 2,
+          "retained_iql": 0,
+          "iql_wide": 1,
+          "ppo_world_quantile": 1
+        },
+        "sd_mg_dl": {
+          "hold": 0,
+          "physiology": 0,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 2,
+          "mpc_event_risk": 1,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "cv_pct": {
+          "hold": 0,
+          "physiology": 1,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 0,
+          "mpc_event_risk": 0,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 2,
+          "ppo_world_quantile": 0
+        },
+        "lbgi": {
+          "hold": 0,
+          "physiology": 1,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 0,
+          "mpc_event_risk": 0,
+          "ppo_wide": 0,
+          "retained_bc": 2,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "hbgi": {
+          "hold": 0,
+          "physiology": 0,
+          "d06_frozen": 0,
+          "mpc_point_world": 1,
+          "mpc_quantile_median": 2,
+          "mpc_expected": 0,
+          "mpc_event_risk": 0,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        },
+        "risk": {
+          "hold": 0,
+          "physiology": 0,
+          "d06_frozen": 0,
+          "mpc_point_world": 0,
+          "mpc_quantile_median": 0,
+          "mpc_expected": 0,
+          "mpc_event_risk": 2,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 1
+        },
+        "long54": {
+          "hold": 0,
+          "physiology": 1,
+          "d06_frozen": 0,
+          "mpc_point_world": 2,
+          "mpc_quantile_median": 1,
+          "mpc_expected": 1,
+          "mpc_event_risk": 1,
+          "ppo_wide": 0,
+          "retained_bc": 0,
+          "retained_iql": 0,
+          "iql_wide": 0,
+          "ppo_world_quantile": 0
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "tir_observed_pct",
+      "mean": 89.54545454545453,
+      "sd": 15.598779725231669,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "tbr70_pct",
+      "mean": 1.132154882154882,
+      "sd": 3.5214333446138477,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "tbr54_pct",
+      "mean": 0.4187710437710438,
+      "sd": 1.3242703164425662,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "tar180_pct",
+      "mean": 9.322390572390573,
+      "sd": 15.554157762242214,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "tar250_pct",
+      "mean": 0.08207070707070706,
+      "sd": 0.25953036352391995,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "sd_mg_dl",
+      "mean": 24.68004798218626,
+      "sd": 6.4726880793509105,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "cv_pct",
+      "mean": 18.38249281403923,
+      "sd": 5.801809701696308,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "lbgi",
+      "mean": 0.4808042212278706,
+      "sd": 0.7995499780175138,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "hbgi",
+      "mean": 2.7651046482503174,
+      "sd": 2.429057394783567,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_bc",
+      "metric": "risk",
+      "mean": 3.2459088694781877,
+      "sd": 2.3352817307414715,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "tir_observed_pct",
+      "mean": 55.18472190610129,
+      "sd": 24.10547109683927,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "tbr70_pct",
+      "mean": 15.206518310192939,
+      "sd": 17.435544387883905,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "tbr54_pct",
+      "mean": 9.204881608395134,
+      "sd": 13.074283053011252,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "tar180_pct",
+      "mean": 29.608759783705786,
+      "sd": 30.909504141072283,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "tar250_pct",
+      "mean": 3.827861952861953,
+      "sd": 8.183658042003247,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "sd_mg_dl",
+      "mean": 33.68593330435656,
+      "sd": 6.069098625249401,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "cv_pct",
+      "mean": 27.71396401420959,
+      "sd": 11.016094224222615,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "lbgi",
+      "mean": 4.815021446021667,
+      "sd": 5.654999110147026,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "hbgi",
+      "mean": 5.73435911139204,
+      "sd": 5.476810868911952,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_td3bc",
+      "metric": "risk",
+      "mean": 10.549380557413706,
+      "sd": 4.946927364245964,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "tir_observed_pct",
+      "mean": 91.77398989898988,
+      "sd": 13.158501931466638,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "tbr70_pct",
+      "mean": 2.476851851851852,
+      "sd": 4.778589474232392,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "tbr54_pct",
+      "mean": 0.7512626262626263,
+      "sd": 2.3757010199497297,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "tar180_pct",
+      "mean": 5.749158249158249,
+      "sd": 12.888987852626702,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "tar250_pct",
+      "mean": 1.1763468013468013,
+      "sd": 3.71993521050952,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "sd_mg_dl",
+      "mean": 25.250481112489904,
+      "sd": 8.44910320316038,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "cv_pct",
+      "mean": 20.0651053302822,
+      "sd": 6.785171941681577,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "lbgi",
+      "mean": 0.9245007611398574,
+      "sd": 1.2675376532806277,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "hbgi",
+      "mean": 2.109089045382994,
+      "sd": 2.582719697137556,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_iql",
+      "metric": "risk",
+      "mean": 3.0335898065228513,
+      "sd": 2.5606768018440724,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "tir_observed_pct",
+      "mean": 49.39390908224814,
+      "sd": 20.560203701304538,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "tbr70_pct",
+      "mean": 49.730998729791835,
+      "sd": 21.374276257098625,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "tbr54_pct",
+      "mean": 33.66841638077139,
+      "sd": 21.072408880163312,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "tar180_pct",
+      "mean": 0.8750921879600309,
+      "sd": 1.2880454178517853,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "sd_mg_dl",
+      "mean": 38.07316907974767,
+      "sd": 5.806910841812741,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "cv_pct",
+      "mean": 50.892215878064114,
+      "sd": 13.54592181327644,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "lbgi",
+      "mean": 20.544268774038805,
+      "sd": 13.522044612300533,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "hbgi",
+      "mean": 0.558748422870576,
+      "sd": 0.4117487468389148,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_rebrac",
+      "metric": "risk",
+      "mean": 21.103017196909384,
+      "sd": 13.28442200261439,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "tir_observed_pct",
+      "mean": 45.238236866950054,
+      "sd": 21.295069264080702,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "tbr70_pct",
+      "mean": 0.3069907343734878,
+      "sd": 0.6490467345691207,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "tbr54_pct",
+      "mean": 0.1555519898938961,
+      "sd": 0.3685693053925074,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "tar180_pct",
+      "mean": 54.45477239867647,
+      "sd": 21.005144217307443,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "tar250_pct",
+      "mean": 19.950269482299944,
+      "sd": 25.62173599529686,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "sd_mg_dl",
+      "mean": 55.811813694188096,
+      "sd": 51.51934587432106,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "cv_pct",
+      "mean": 22.936930171267953,
+      "sd": 13.56329646490281,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "lbgi",
+      "mean": 0.10532489270677906,
+      "sd": 0.19945924296031844,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "hbgi",
+      "mean": 16.07330805590662,
+      "sd": 13.440938339450627,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_fql",
+      "metric": "risk",
+      "mean": 16.178632948613398,
+      "sd": 13.622490328996275,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "tir_observed_pct",
+      "mean": 21.539798358524433,
+      "sd": 14.391162182593963,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "tbr70_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "tbr54_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "tar180_pct",
+      "mean": 78.46020164147558,
+      "sd": 14.391162182593959,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "tar250_pct",
+      "mean": 26.413758317402937,
+      "sd": 28.890807044812302,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "sd_mg_dl",
+      "mean": 53.56206513150837,
+      "sd": 48.82081405065624,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "cv_pct",
+      "mean": 19.754012393626482,
+      "sd": 11.163275316535396,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "lbgi",
+      "mean": 2.1919558327530976e-05,
+      "sd": 6.931572961990896e-05,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "hbgi",
+      "mean": 20.957727729166244,
+      "sd": 15.291161100096547,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_lom",
+      "metric": "risk",
+      "mean": 20.95774964872457,
+      "sd": 15.291144268312788,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "tir_observed_pct",
+      "mean": 25.94406049040189,
+      "sd": 18.075553848911934,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "tbr70_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "tbr54_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "tar180_pct",
+      "mean": 74.0559395095981,
+      "sd": 18.07555384891193,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "tar250_pct",
+      "mean": 39.555814139469085,
+      "sd": 30.341543177041757,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "sd_mg_dl",
+      "mean": 67.55382724593309,
+      "sd": 43.42342162092332,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "cv_pct",
+      "mean": 24.38168969837782,
+      "sd": 9.419841509046385,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "lbgi",
+      "mean": 0.003208431447353685,
+      "sd": 0.009960682401666164,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "hbgi",
+      "mean": 24.817141186376716,
+      "sd": 15.884573131567757,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_gfp",
+      "metric": "risk",
+      "mean": 24.82034961782407,
+      "sd": 15.881180581013005,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "tir_observed_pct",
+      "mean": 70.91634118537955,
+      "sd": 15.596738008156501,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "tbr70_pct",
+      "mean": 17.25630066058942,
+      "sd": 16.847205263600372,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "tbr54_pct",
+      "mean": 7.7765312806245985,
+      "sd": 10.402035640800827,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "tar180_pct",
+      "mean": 11.827358154031014,
+      "sd": 12.900511638980518,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "tar250_pct",
+      "mean": 0.9532828282828282,
+      "sd": 1.902934380350838,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "sd_mg_dl",
+      "mean": 35.9434784601427,
+      "sd": 10.685594747500458,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "cv_pct",
+      "mean": 31.799027911451184,
+      "sd": 10.864798874679543,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "lbgi",
+      "mean": 4.532449608276993,
+      "sd": 4.43060206685715,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "hbgi",
+      "mean": 2.6994194332170784,
+      "sd": 2.252397032699852,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "retained_ditr",
+      "metric": "risk",
+      "mean": 7.231869041494072,
+      "sd": 3.65045502236177,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "tir_observed_pct",
+      "mean": 95.10732323232322,
+      "sd": 5.535416317145599,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "tbr70_pct",
+      "mean": 1.2268518518518516,
+      "sd": 3.2749055752008984,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "tbr54_pct",
+      "mean": 0.5345117845117844,
+      "sd": 1.6902746752583506,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "tar180_pct",
+      "mean": 3.6658249158249157,
+      "sd": 4.072110771773643,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "sd_mg_dl",
+      "mean": 22.914382417224296,
+      "sd": 6.172249462865311,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "cv_pct",
+      "mean": 18.057914581064516,
+      "sd": 4.828035564667841,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "lbgi",
+      "mean": 0.5561364293924372,
+      "sd": 0.8198801596775548,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "hbgi",
+      "mean": 1.6564218114793323,
+      "sd": 0.7062693074340413,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "iql_wide",
+      "metric": "risk",
+      "mean": 2.2125582408717697,
+      "sd": 1.1342520583721092,
+      "places": 6,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "tir_observed_pct",
+      "mean": 97.11489898989899,
+      "sd": 4.4949837577212,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "tbr70_pct",
+      "mean": 1.2247474747474747,
+      "sd": 3.4325480551731564,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "tbr54_pct",
+      "mean": 0.3914141414141414,
+      "sd": 1.2377601952679262,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "tar180_pct",
+      "mean": 1.6603535353535352,
+      "sd": 2.5237605097851215,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "sd_mg_dl",
+      "mean": 22.346187044633822,
+      "sd": 6.124339420940872,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "cv_pct",
+      "mean": 18.113044516421624,
+      "sd": 4.865579929571554,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "lbgi",
+      "mean": 0.49595893234270133,
+      "sd": 0.7127922205710928,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "hbgi",
+      "mean": 1.1629073907694951,
+      "sd": 0.5040461946455495,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "external",
+      "method": "ppo_world_quantile",
+      "metric": "risk",
+      "mean": 1.6588663231121963,
+      "sd": 0.9994400874350986,
+      "places": 6,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "tir_observed_pct",
+      "mean": 95.0189393939394,
+      "sd": 5.605751032195793,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "tbr70_pct",
+      "mean": 1.2226430976430975,
+      "sd": 3.2496932342100937,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "tbr54_pct",
+      "mean": 0.5303030303030302,
+      "sd": 1.6769654258468674,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "tar180_pct",
+      "mean": 3.7584175084175087,
+      "sd": 4.159861444151133,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "sd_mg_dl",
+      "mean": 23.014908955651347,
+      "sd": 6.163783807387569,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "cv_pct",
+      "mean": 18.159031311162543,
+      "sd": 4.805726090591359,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "lbgi",
+      "mean": 0.5693098270186578,
+      "sd": 0.8197124914283784,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "hbgi",
+      "mean": 1.662964011416588,
+      "sd": 0.7103045021891699,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "hold",
+      "metric": "risk",
+      "mean": 2.232273838435246,
+      "sd": 1.1366597159341831,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "tir_observed_pct",
+      "mean": 94.9810606060606,
+      "sd": 6.176148629019452,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "tbr70_pct",
+      "mean": 0.19781144781144783,
+      "sd": 0.6255347223397046,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "tbr54_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "tar180_pct",
+      "mean": 4.821127946127946,
+      "sd": 5.805406938991366,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "sd_mg_dl",
+      "mean": 22.35540906255676,
+      "sd": 6.619196321336022,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "cv_pct",
+      "mean": 16.563584205876765,
+      "sd": 4.439362964294795,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "lbgi",
+      "mean": 0.15622327790307985,
+      "sd": 0.18168726940906885,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "hbgi",
+      "mean": 2.0117015175993083,
+      "sd": 0.969361557256617,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "physiology",
+      "metric": "risk",
+      "mean": 2.167924795502388,
+      "sd": 1.068447339456936,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "tir_observed_pct",
+      "mean": 96.48569023569024,
+      "sd": 5.382810341851182,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "tbr70_pct",
+      "mean": 1.9654882154882156,
+      "sd": 4.500516560509552,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "tbr54_pct",
+      "mean": 0.6734006734006733,
+      "sd": 2.1294799058372926,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "tar180_pct",
+      "mean": 1.5488215488215489,
+      "sd": 2.0342118502117676,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "sd_mg_dl",
+      "mean": 23.679842723683727,
+      "sd": 6.3272207433610035,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "cv_pct",
+      "mean": 19.75008847126061,
+      "sd": 5.169712390917632,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "lbgi",
+      "mean": 0.8629147628575655,
+      "sd": 1.062310575116702,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "hbgi",
+      "mean": 1.1259889986317413,
+      "sd": 0.5467080503191573,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "d06_frozen",
+      "metric": "risk",
+      "mean": 1.988903761489307,
+      "sd": 1.3195706800526597,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "tir_observed_pct",
+      "mean": 97.51473063973064,
+      "sd": 3.835684861651503,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "tbr70_pct",
+      "mean": 2.1506734006734005,
+      "sd": 3.802241858767426,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "tbr54_pct",
+      "mean": 0.35774410774410775,
+      "sd": 1.1312861999760617,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "tar180_pct",
+      "mean": 0.3345959595959596,
+      "sd": 0.6010034531589526,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "sd_mg_dl",
+      "mean": 22.37077420847667,
+      "sd": 5.127307699082571,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "cv_pct",
+      "mean": 20.06845173236115,
+      "sd": 4.439577559668577,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "lbgi",
+      "mean": 1.0904518234095268,
+      "sd": 0.7041832029063023,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "hbgi",
+      "mean": 0.6355222052320371,
+      "sd": 0.3784787936710962,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_point_world",
+      "metric": "risk",
+      "mean": 1.725974028641564,
+      "sd": 0.7926036312559703,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "tir_observed_pct",
+      "mean": 97.08964646464646,
+      "sd": 3.6329084186304392,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "tbr70_pct",
+      "mean": 2.417929292929293,
+      "sd": 3.537544220215481,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "tbr54_pct",
+      "mean": 0.06734006734006734,
+      "sd": 0.21294799058372926,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "tar180_pct",
+      "mean": 0.4924242424242424,
+      "sd": 0.8747281353603027,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "sd_mg_dl",
+      "mean": 21.915775992292332,
+      "sd": 5.435865480160414,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "cv_pct",
+      "mean": 19.4953327695812,
+      "sd": 4.51488123328415,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "lbgi",
+      "mean": 1.0588389896362118,
+      "sd": 0.64932590275001,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "hbgi",
+      "mean": 0.6620178333323141,
+      "sd": 0.489290259947954,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "mpc_quantile_median",
+      "metric": "risk",
+      "mean": 1.720856822968526,
+      "sd": 0.6882364360587077,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "tir_observed_pct",
+      "mean": 97.6367845117845,
+      "sd": 3.3149272280425013,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "tbr70_pct",
+      "mean": 1.7781986531986533,
+      "sd": 2.965127163448236,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "tbr54_pct",
+      "mean": 0.02104377104377104,
+      "sd": 0.0665462470574154,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "tar180_pct",
+      "mean": 0.585016835016835,
+      "sd": 1.0793264257853519,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "sd_mg_dl",
+      "mean": 21.7281280911011,
+      "sd": 5.3281960581150845,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "cv_pct",
+      "mean": 18.937507244246905,
+      "sd": 4.507107413709366,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "lbgi",
+      "mean": 0.910905291652243,
+      "sd": 0.6183779701621376,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "hbgi",
+      "mean": 0.7506403355565672,
+      "sd": 0.5083847729878427,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_expected",
+      "metric": "risk",
+      "mean": 1.66154562720881,
+      "sd": 0.6781520695187604,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "tir_observed_pct",
+      "mean": 97.68097643097643,
+      "sd": 3.321077783116576,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "tbr70_pct",
+      "mean": 1.734006734006734,
+      "sd": 2.9654084250258474,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "tbr54_pct",
+      "mean": 0.004208754208754209,
+      "sd": 0.013309249411483079,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "tar180_pct",
+      "mean": 0.585016835016835,
+      "sd": 1.0793264257853519,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "sd_mg_dl",
+      "mean": 21.720488730721122,
+      "sd": 5.31792707243761,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "cv_pct",
+      "mean": 18.926262169191265,
+      "sd": 4.496251895439139,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "lbgi",
+      "mean": 0.9072917856708724,
+      "sd": 0.6160313866058709,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "hbgi",
+      "mean": 0.7516384753680136,
+      "sd": 0.5085083493656639,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "mpc_event_risk",
+      "metric": "risk",
+      "mean": 1.6589302610388863,
+      "sd": 0.674695587994782,
+      "places": 6,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "tir_observed_pct",
+      "mean": 96.68350168350167,
+      "sd": 5.089018341722267,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "tbr70_pct",
+      "mean": 1.5909090909090908,
+      "sd": 3.9223065296789326,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "tbr54_pct",
+      "mean": 0.4461279461279461,
+      "sd": 1.410780437617206,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "tar180_pct",
+      "mean": 1.7255892255892256,
+      "sd": 2.4200031716225885,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "sd_mg_dl",
+      "mean": 23.32011788426689,
+      "sd": 6.309020938148907,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "cv_pct",
+      "mean": 19.140839433626002,
+      "sd": 4.939817074667466,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "lbgi",
+      "mean": 0.6540146506443899,
+      "sd": 0.7983366364071639,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "hbgi",
+      "mean": 1.1272241578392694,
+      "sd": 0.5489544168548501,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_wide",
+      "metric": "risk",
+      "mean": 1.7812388084836595,
+      "sd": 1.1318261689512676,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "tir_observed_pct",
+      "mean": 89.54545454545453,
+      "sd": 15.598779725231669,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "tbr70_pct",
+      "mean": 1.132154882154882,
+      "sd": 3.5214333446138477,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "tbr54_pct",
+      "mean": 0.4187710437710438,
+      "sd": 1.3242703164425662,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "tar180_pct",
+      "mean": 9.322390572390573,
+      "sd": 15.554157762242214,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "tar250_pct",
+      "mean": 0.08207070707070706,
+      "sd": 0.25953036352391995,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "sd_mg_dl",
+      "mean": 24.68004798218626,
+      "sd": 6.4726880793509105,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "cv_pct",
+      "mean": 18.38249281403923,
+      "sd": 5.801809701696308,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "lbgi",
+      "mean": 0.4808042212278706,
+      "sd": 0.7995499780175138,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "hbgi",
+      "mean": 2.7651046482503174,
+      "sd": 2.429057394783567,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_bc",
+      "metric": "risk",
+      "mean": 3.2459088694781877,
+      "sd": 2.3352817307414715,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "tir_observed_pct",
+      "mean": 55.18472190610129,
+      "sd": 24.10547109683927,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "tbr70_pct",
+      "mean": 15.206518310192939,
+      "sd": 17.435544387883905,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "tbr54_pct",
+      "mean": 9.204881608395134,
+      "sd": 13.074283053011252,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "tar180_pct",
+      "mean": 29.608759783705786,
+      "sd": 30.909504141072283,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "tar250_pct",
+      "mean": 3.827861952861953,
+      "sd": 8.183658042003247,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "sd_mg_dl",
+      "mean": 33.68593330435656,
+      "sd": 6.069098625249401,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "cv_pct",
+      "mean": 27.71396401420959,
+      "sd": 11.016094224222615,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "lbgi",
+      "mean": 4.815021446021667,
+      "sd": 5.654999110147026,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "hbgi",
+      "mean": 5.73435911139204,
+      "sd": 5.476810868911952,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_td3bc",
+      "metric": "risk",
+      "mean": 10.549380557413706,
+      "sd": 4.946927364245964,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "tir_observed_pct",
+      "mean": 91.77398989898988,
+      "sd": 13.158501931466638,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "tbr70_pct",
+      "mean": 2.476851851851852,
+      "sd": 4.778589474232392,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "tbr54_pct",
+      "mean": 0.7512626262626263,
+      "sd": 2.3757010199497297,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "tar180_pct",
+      "mean": 5.749158249158249,
+      "sd": 12.888987852626702,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "tar250_pct",
+      "mean": 1.1763468013468013,
+      "sd": 3.71993521050952,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "sd_mg_dl",
+      "mean": 25.250481112489904,
+      "sd": 8.44910320316038,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "cv_pct",
+      "mean": 20.0651053302822,
+      "sd": 6.785171941681577,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "lbgi",
+      "mean": 0.9245007611398574,
+      "sd": 1.2675376532806277,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "hbgi",
+      "mean": 2.109089045382994,
+      "sd": 2.582719697137556,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_iql",
+      "metric": "risk",
+      "mean": 3.0335898065228513,
+      "sd": 2.5606768018440724,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "tir_observed_pct",
+      "mean": 49.39390908224814,
+      "sd": 20.560203701304538,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "tbr70_pct",
+      "mean": 49.730998729791835,
+      "sd": 21.374276257098625,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "tbr54_pct",
+      "mean": 33.66841638077139,
+      "sd": 21.072408880163312,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "tar180_pct",
+      "mean": 0.8750921879600309,
+      "sd": 1.2880454178517853,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "sd_mg_dl",
+      "mean": 38.07316907974767,
+      "sd": 5.806910841812741,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "cv_pct",
+      "mean": 50.892215878064114,
+      "sd": 13.54592181327644,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "lbgi",
+      "mean": 20.544268774038805,
+      "sd": 13.522044612300533,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "hbgi",
+      "mean": 0.558748422870576,
+      "sd": 0.4117487468389148,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_rebrac",
+      "metric": "risk",
+      "mean": 21.103017196909384,
+      "sd": 13.28442200261439,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "tir_observed_pct",
+      "mean": 45.238236866950054,
+      "sd": 21.295069264080702,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "tbr70_pct",
+      "mean": 0.3069907343734878,
+      "sd": 0.6490467345691207,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "tbr54_pct",
+      "mean": 0.1555519898938961,
+      "sd": 0.3685693053925074,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "tar180_pct",
+      "mean": 54.45477239867647,
+      "sd": 21.005144217307443,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "tar250_pct",
+      "mean": 19.950269482299944,
+      "sd": 25.62173599529686,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "sd_mg_dl",
+      "mean": 55.811813694188096,
+      "sd": 51.51934587432106,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "cv_pct",
+      "mean": 22.936930171267953,
+      "sd": 13.56329646490281,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "lbgi",
+      "mean": 0.10532489270677906,
+      "sd": 0.19945924296031844,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "hbgi",
+      "mean": 16.07330805590662,
+      "sd": 13.440938339450627,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_fql",
+      "metric": "risk",
+      "mean": 16.178632948613398,
+      "sd": 13.622490328996275,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "tir_observed_pct",
+      "mean": 21.539798358524433,
+      "sd": 14.391162182593963,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "tbr70_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "tbr54_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "tar180_pct",
+      "mean": 78.46020164147558,
+      "sd": 14.391162182593959,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "tar250_pct",
+      "mean": 26.413758317402937,
+      "sd": 28.890807044812302,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "sd_mg_dl",
+      "mean": 53.56206513150837,
+      "sd": 48.82081405065624,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "cv_pct",
+      "mean": 19.754012393626482,
+      "sd": 11.163275316535396,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "lbgi",
+      "mean": 2.1919558327530976e-05,
+      "sd": 6.931572961990896e-05,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "hbgi",
+      "mean": 20.957727729166244,
+      "sd": 15.291161100096547,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_lom",
+      "metric": "risk",
+      "mean": 20.95774964872457,
+      "sd": 15.291144268312788,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "tir_observed_pct",
+      "mean": 25.94406049040189,
+      "sd": 18.075553848911934,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "tbr70_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "tbr54_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "tar180_pct",
+      "mean": 74.0559395095981,
+      "sd": 18.07555384891193,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "tar250_pct",
+      "mean": 39.555814139469085,
+      "sd": 30.341543177041757,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "sd_mg_dl",
+      "mean": 67.55382724593309,
+      "sd": 43.42342162092332,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "cv_pct",
+      "mean": 24.38168969837782,
+      "sd": 9.419841509046385,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "lbgi",
+      "mean": 0.003208431447353685,
+      "sd": 0.009960682401666164,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "hbgi",
+      "mean": 24.817141186376716,
+      "sd": 15.884573131567757,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_gfp",
+      "metric": "risk",
+      "mean": 24.82034961782407,
+      "sd": 15.881180581013005,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "tir_observed_pct",
+      "mean": 70.91634118537955,
+      "sd": 15.596738008156501,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "tbr70_pct",
+      "mean": 17.25630066058942,
+      "sd": 16.847205263600372,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "tbr54_pct",
+      "mean": 7.7765312806245985,
+      "sd": 10.402035640800827,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "tar180_pct",
+      "mean": 11.827358154031014,
+      "sd": 12.900511638980518,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "tar250_pct",
+      "mean": 0.9532828282828282,
+      "sd": 1.902934380350838,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "sd_mg_dl",
+      "mean": 35.9434784601427,
+      "sd": 10.685594747500458,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "cv_pct",
+      "mean": 31.799027911451184,
+      "sd": 10.864798874679543,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "lbgi",
+      "mean": 4.532449608276993,
+      "sd": 4.43060206685715,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "hbgi",
+      "mean": 2.6994194332170784,
+      "sd": 2.252397032699852,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "retained_ditr",
+      "metric": "risk",
+      "mean": 7.231869041494072,
+      "sd": 3.65045502236177,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "tir_observed_pct",
+      "mean": 95.10732323232322,
+      "sd": 5.535416317145599,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "tbr70_pct",
+      "mean": 1.2268518518518516,
+      "sd": 3.2749055752008984,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "tbr54_pct",
+      "mean": 0.5345117845117844,
+      "sd": 1.6902746752583506,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "tar180_pct",
+      "mean": 3.6658249158249157,
+      "sd": 4.072110771773643,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "sd_mg_dl",
+      "mean": 22.914382417224296,
+      "sd": 6.172249462865311,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "cv_pct",
+      "mean": 18.057914581064516,
+      "sd": 4.828035564667841,
+      "places": 3,
+      "rank": 2
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "lbgi",
+      "mean": 0.5561364293924372,
+      "sd": 0.8198801596775548,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "hbgi",
+      "mean": 1.6564218114793323,
+      "sd": 0.7062693074340413,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "iql_wide",
+      "metric": "risk",
+      "mean": 2.2125582408717697,
+      "sd": 1.1342520583721092,
+      "places": 6,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "tir_observed_pct",
+      "mean": 97.11489898989899,
+      "sd": 4.4949837577212,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "tbr70_pct",
+      "mean": 1.2247474747474747,
+      "sd": 3.4325480551731564,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "tbr54_pct",
+      "mean": 0.3914141414141414,
+      "sd": 1.2377601952679262,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "tar180_pct",
+      "mean": 1.6603535353535352,
+      "sd": 2.5237605097851215,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "tar250_pct",
+      "mean": 0.0,
+      "sd": 0.0,
+      "places": 3,
+      "rank": 1
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "sd_mg_dl",
+      "mean": 22.346187044633822,
+      "sd": 6.124339420940872,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "cv_pct",
+      "mean": 18.113044516421624,
+      "sd": 4.865579929571554,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "lbgi",
+      "mean": 0.49595893234270133,
+      "sd": 0.7127922205710928,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "hbgi",
+      "mean": 1.1629073907694951,
+      "sd": 0.5040461946455495,
+      "places": 3,
+      "rank": 0
+    },
+    {
+      "table": "all",
+      "method": "ppo_world_quantile",
+      "metric": "risk",
+      "mean": 1.6588663231121963,
+      "sd": 0.9994400874350986,
+      "places": 6,
+      "rank": 1
+    }
+  ],
+  "interpretation": {
+    "relative_d06_gate_is_not_sota_definition": true,
+    "sota_does_not_require_every_metric_best": true,
+    "external_comparison_complete_baselines": [
+      "retained_bc",
+      "retained_iql",
+      "iql_wide"
+    ],
+    "external_unique_best_among_ten_metrics": [
+      "tir_observed_pct",
+      "tbr54_pct",
+      "tar180_pct",
+      "sd_mg_dl",
+      "hbgi",
+      "risk"
+    ],
+    "ours_minus_external_complete": {
+      "retained_bc": {
+        "tir_observed_pct": 7.569444444444457,
+        "tbr70_pct": 0.09259259259259278,
+        "tbr54_pct": -0.027356902356902413,
+        "tar180_pct": -7.662037037037037,
+        "tar250_pct": -0.08207070707070706,
+        "sd_mg_dl": -2.333860937552437,
+        "cv_pct": -0.2694482976176076,
+        "lbgi": 0.015154711114830743,
+        "hbgi": -1.6021972574808223,
+        "risk": -1.5870425463659914
+      },
+      "retained_iql": {
+        "tir_observed_pct": 5.340909090909108,
+        "tbr70_pct": -1.2521043771043774,
+        "tbr54_pct": -0.3598484848484849,
+        "tar180_pct": -4.088804713804714,
+        "tar250_pct": -1.1763468013468013,
+        "sd_mg_dl": -2.904294067856082,
+        "cv_pct": -1.9520608138605766,
+        "lbgi": -0.428541828797156,
+        "hbgi": -0.9461816546134987,
+        "risk": -1.374723483410655
+      },
+      "iql_wide": {
+        "tir_observed_pct": 2.007575757575765,
+        "tbr70_pct": -0.002104377104376942,
+        "tbr54_pct": -0.143097643097643,
+        "tar180_pct": -2.0054713804713806,
+        "tar250_pct": 0.0,
+        "sd_mg_dl": -0.5681953725904734,
+        "cv_pct": 0.055129935357108195,
+        "lbgi": -0.060177497049735906,
+        "hbgi": -0.4935144207098372,
+        "risk": -0.5536919177595734
+      }
+    },
+    "incomplete_external_tir_optimistic_upper_bounds": {
+      "retained_td3bc": 55.76599326599327,
+      "retained_rebrac": 53.013468013468014,
+      "retained_fql": 49.54335016835017,
+      "retained_lom": 33.802609427609426,
+      "retained_gfp": 34.20244107744108,
+      "retained_ditr": 71.19107744107744
+    },
+    "field_sota_established": false,
+    "field_sota_reason": "Limited task-adapted comparators, unequal training data/budgets, single training seed and known virtual patients; no matched external-baseline uncertainty analysis.",
+    "new_training_or_simulator_execution": false
+  },
+  "status": "built",
+  "html_sha256": "10473fc508801d1d21f13e327fe937a1110fbf3542dc95591cb9f98b57d85e38",
+  "builder_sha256": "837d4d7c09e057d58407809da248e2ffa0bdc072940b134e9e7ab02f8b845979",
+  "raw_scoring_rerun": false,
+  "all_original_scores_preserved": true
+}

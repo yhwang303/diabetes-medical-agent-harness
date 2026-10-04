@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "numeric_cells_exact": 280,
+  "ranked_and_unranked_cells_verified": 308,
+  "ranking_independently_checked": true,
+  "ties_and_no_second_level_checked": true,
+  "incomplete_rows_have_no_rank_markup": true,
+  "local_links_valid": true,
+  "source_sha256": "b2a0896586d185fe620a461e510c3e64cb3e800ad7b5c1471f2223f69786bde4",
+  "html_sha256": "10473fc508801d1d21f13e327fe937a1110fbf3542dc95591cb9f98b57d85e38",
+  "browser_review": "passed",
+  "browser_viewport": [
+    1280,
+    720
+  ],
+  "browser_sections_checked": [
+    "首页判定与三线表",
+    "外部基线与主方案的粗体/下划线",
+    "全部18方法表及风险/事件/覆盖列"
+  ],
+  "primary_web_sources_rechecked": [
+    "https://proceedings.mlr.press/v267/park25f.html",
+    "https://www.nature.com/articles/s41591-023-02552-9",
+    "https://proceedings.iclr.cc/paper_files/paper/2026/hash/33f131b806a93d376cf0ce1a456464bb-Abstract-Conference.html"
+  ]
+}
